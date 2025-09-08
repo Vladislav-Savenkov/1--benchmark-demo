@@ -1,0 +1,2976 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<CommandSet>
+		<ExcludedCommand>Copy</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаОрганизация" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа организация</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОрганизацияExtendedTooltip" id="162"/>
+			<ChildItems>
+				<InputField name="Организация" id="1">
+					<DataPath>Запись.Организация</DataPath>
+					<ChoiceButton>false</ChoiceButton>
+					<TextEdit>false</TextEdit>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="ОрганизацияExtendedTooltip" id="163"/>
+					<Events>
+						<Event name="Clearing">ОрганизацияОчистка</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="ГруппаНастроекПлатежногоДокумента" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа настроек платежного документа</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа настроек платежного документа</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>TabsOnLeftHorizontal</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаНастроекПлатежногоДокументаExtendedTooltip" id="164"/>
+			<ChildItems>
+				<Page name="ГруппаКвитанции" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Квитанции</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа квитанции</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<VerticalStretch>true</VerticalStretch>
+					<ExtendedTooltip name="ГруппаКвитанцииExtendedTooltip" id="165"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаВыбораФормыКвитанции" id="7">
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа выбора формы квитанции</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаВыбораФормыКвитанцииExtendedTooltip" id="166"/>
+							<ChildItems>
+								<InputField name="ФормаКвитанции" id="5">
+									<DataPath>ФормаКвитанцииПредставление</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Номер формы квитанции</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalStretch>true</HorizontalStretch>
+									<DropListButton>true</DropListButton>
+									<ChoiceButton>false</ChoiceButton>
+									<ListChoiceMode>true</ListChoiceMode>
+									<TextEdit>false</TextEdit>
+									<ChoiceListButton>true</ChoiceListButton>
+									<DropListWidth>50</DropListWidth>
+									<ContextMenu name="ФормаКвитанцииКонтекстноеМеню" id="6"/>
+									<ExtendedTooltip name="ФормаКвитанцииExtendedTooltip" id="167"/>
+									<Events>
+										<Event name="Clearing">ФормаКвитанцииОчистка</Event>
+										<Event name="ChoiceProcessing">ФормаКвитанцииОбработкаВыбора</Event>
+									</Events>
+								</InputField>
+								<Button name="Просмотр" id="8">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ПросмотрФормыКвитанции</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Просмотр</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ПросмотрExtendedTooltip" id="168"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаЗаголовокКвитанции" id="151">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Заголовок квитанции</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаЗаголовокКвитанцииExtendedTooltip" id="169"/>
+							<ChildItems>
+								<CheckBoxField name="ИспользоватьСтандартныйЗаголовок" id="152">
+									<DataPath>Запись.ИспользоватьСтандартныйЗаголовок</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ИспользоватьСтандартныйЗаголовокКонтекстноеМеню" id="153"/>
+									<ExtendedTooltip name="ИспользоватьСтандартныйЗаголовокExtendedTooltip" id="170"/>
+									<Events>
+										<Event name="OnChange">ИспользоватьСтандартныйЗаголовокПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<LabelDecoration name="ДекорацияИспользоватьСтандартныйЗаголовок" id="160">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<TextColor>style:УПЖКХ_ТекстСправочнойНадписи</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Если настройка не установлена, то в квитанции используется указанный ниже текст заголовка (только для платежных документов, в которых предусмотрены заголовки). 
+В противном случае при формировании квитанции будет выведен стандартный заголовок.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияИспользоватьСтандартныйЗаголовокКонтекстноеМеню" id="161"/>
+									<ExtendedTooltip name="ДекорацияИспользоватьСтандартныйЗаголовокExtendedTooltip" id="171"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<Pages name="ГруппаЗаголовкиДополнительныеКонтактыПримечания" id="347">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа заголовки дополнительные контакты примечания</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа заголовки дополнительные контакты примечания</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ГруппаЗаголовкиДополнительныеКонтактыПримечанияРасширеннаяПодсказка" id="348"/>
+							<ChildItems>
+								<Page name="ГруппаЗаголовкиДополнительныеКонтактыПримечанияОсн" id="323">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Для квитанции по основным услугам</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа заголовки дополнительные контакты примечания осн</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ГруппаЗаголовкиДополнительныеКонтактыПримечанияОснРасширеннаяПодсказка" id="324"/>
+									<ChildItems>
+										<InputField name="ЗаголовокОсн" id="154">
+											<DataPath>Запись.ЗаголовокОсн</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Заголовок квитанции</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>Top</TitleLocation>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Height>2</Height>
+											<AutoMaxHeight>false</AutoMaxHeight>
+											<VerticalStretch>false</VerticalStretch>
+											<MultiLine>true</MultiLine>
+											<ContextMenu name="ЗаголовокОснКонтекстноеМеню" id="155"/>
+											<ExtendedTooltip name="ЗаголовокОснExtendedTooltip" id="172"/>
+										</InputField>
+										<InputField name="ДополнительныеКонтактыОрганизацииОсн" id="11">
+											<DataPath>Запись.ДополнительныеКонтактыОрганизацииОсн</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Дополнительные контакты организации, которые могут быть выведены в квитанции</v8:content>
+												</v8:item>
+											</Title>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Height>4</Height>
+											<AutoMaxHeight>false</AutoMaxHeight>
+											<VerticalStretch>false</VerticalStretch>
+											<MultiLine>true</MultiLine>
+											<ContextMenu name="ДополнительныеКонтактыОрганизацииОснКонтекстноеМеню" id="12"/>
+											<ExtendedTooltip name="ДополнительныеКонтактыОрганизацииОснРасширеннаяПодсказка" id="175"/>
+										</InputField>
+										<LabelDecoration name="ДекорацияДополнительныеКонтактыОрганизацииОсн" id="13">
+											<Visible>false</Visible>
+											<TextColor>style:УПЖКХ_ТекстСправочнойНадписи</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Дополнительные контакты организации, которые могут быть выведены в квитанции по основным услугам.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияДополнительныеКонтактыОрганизацииОснКонтекстноеМеню" id="14"/>
+											<ExtendedTooltip name="ДекорацияДополнительныеКонтактыОрганизацииОснРасширеннаяПодсказка" id="176"/>
+										</LabelDecoration>
+										<InputField name="ПримечаниеКвитанцииОсн" id="16">
+											<DataPath>Запись.ПримечаниеКвитанцииОсн</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Примечание - дополнительная информация, которая может быть выведена в нижней части формы квитанции</v8:content>
+												</v8:item>
+											</Title>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Height>4</Height>
+											<AutoMaxHeight>false</AutoMaxHeight>
+											<VerticalStretch>false</VerticalStretch>
+											<MultiLine>true</MultiLine>
+											<ContextMenu name="ПримечаниеКвитанцииОснКонтекстноеМеню" id="17"/>
+											<ExtendedTooltip name="ПримечаниеКвитанцииОснРасширеннаяПодсказка" id="178"/>
+										</InputField>
+										<LabelDecoration name="ДекорацияПримечаниеКвитанцииОсн" id="18">
+											<Visible>false</Visible>
+											<TextColor>style:УПЖКХ_ТекстСправочнойНадписи</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Любая другая информация, которая может быть выведена в нижней части формы квитанции по основным услугам.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияПримечаниеКвитанцииОснКонтекстноеМеню" id="19"/>
+											<ExtendedTooltip name="ДекорацияПримечаниеКвитанцииОснРасширеннаяПодсказка" id="179"/>
+										</LabelDecoration>
+									</ChildItems>
+								</Page>
+								<Page name="ГруппаЗаголовкиДополнительныеКонтактыПримечанияКР" id="325">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Для квитанции по услугам капитального ремонта</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа заголовки дополнительные контакты примечания КР</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ГруппаЗаголовкиДополнительныеКонтактыПримечанияКРРасширеннаяПодсказка" id="326"/>
+									<ChildItems>
+										<InputField name="ЗаголовокКР" id="156">
+											<DataPath>Запись.ЗаголовокКР</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Заголовок квитанции</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>Top</TitleLocation>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Height>2</Height>
+											<AutoMaxHeight>false</AutoMaxHeight>
+											<VerticalStretch>false</VerticalStretch>
+											<MultiLine>true</MultiLine>
+											<ContextMenu name="ЗаголовокКРКонтекстноеМеню" id="157"/>
+											<ExtendedTooltip name="ЗаголовокКРExtendedTooltip" id="173"/>
+										</InputField>
+										<InputField name="ДополнительныеКонтактыОрганизацииКР" id="327">
+											<DataPath>Запись.ДополнительныеКонтактыОрганизацииКР</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Дополнительные контакты организации, которые могут быть выведены в квитанции</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>Top</TitleLocation>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Height>4</Height>
+											<AutoMaxHeight>false</AutoMaxHeight>
+											<VerticalStretch>false</VerticalStretch>
+											<MultiLine>true</MultiLine>
+											<ContextMenu name="ДополнительныеКонтактыОрганизацииКРКонтекстноеМеню" id="328"/>
+											<ExtendedTooltip name="ДополнительныеКонтактыОрганизацииКРРасширеннаяПодсказка" id="329"/>
+										</InputField>
+										<LabelDecoration name="ДекорацияДополнительныеКонтактыОрганизацииКР" id="330">
+											<Visible>false</Visible>
+											<TextColor>style:УПЖКХ_ТекстСправочнойНадписи</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Дополнительные контакты организации, которые могут быть выведены в квитанции по услугам капитального ремонта.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияДополнительныеКонтактыОрганизацииКРКонтекстноеМеню" id="331"/>
+											<ExtendedTooltip name="ДекорацияДополнительныеКонтактыОрганизацииКРРасширеннаяПодсказка" id="332"/>
+										</LabelDecoration>
+										<InputField name="ПримечаниеКвитанцииКР" id="315">
+											<DataPath>Запись.ПримечаниеКвитанцииКР</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Примечание - дополнительная информация, которая может быть выведена в нижней части формы квитанции</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>Top</TitleLocation>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Height>4</Height>
+											<AutoMaxHeight>false</AutoMaxHeight>
+											<VerticalStretch>false</VerticalStretch>
+											<MultiLine>true</MultiLine>
+											<ContextMenu name="ПримечаниеКвитанцииКРКонтекстноеМеню" id="316"/>
+											<ExtendedTooltip name="ПримечаниеКвитанцииКРРасширеннаяПодсказка" id="317"/>
+										</InputField>
+										<LabelDecoration name="ДекорацияПримечаниеКвитанцииКР" id="318">
+											<Visible>false</Visible>
+											<TextColor>style:УПЖКХ_ТекстСправочнойНадписи</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Любая другая информация, которая может быть выведена в нижней части формы квитанции по услугам капитального ремонта.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияПримечаниеКвитанцииКРКонтекстноеМеню" id="319"/>
+											<ExtendedTooltip name="ДекорацияПримечаниеКвитанцииКРРасширеннаяПодсказка" id="320"/>
+										</LabelDecoration>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаШтрихкод" id="20">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Штрихкод</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа штрихкод</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<VerticalStretch>true</VerticalStretch>
+					<ExtendedTooltip name="ГруппаШтрихкодExtendedTooltip" id="180"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаВидШтрихкода" id="80">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа вид штрихкода</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа вид штрихкода</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ChildItemsWidth>Equal</ChildItemsWidth>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаВидШтрихкодаExtendedTooltip" id="181"/>
+							<ChildItems>
+								<InputField name="ВидШтрихкода" id="21">
+									<DataPath>Запись.ВидШтрихкода</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Вид основного штрихкода</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<TextEdit>false</TextEdit>
+									<ContextMenu name="ВидШтрихкодаКонтекстноеМеню" id="22"/>
+									<ExtendedTooltip name="ВидШтрихкодаExtendedTooltip" id="182">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>- Если установлен вид штрихкода "Одномерный", то штрихкод формируется согласно настройкам на закладке "Одномерный".
+- Если установлен вид штрихкода "QR (двумерный)", то штрихкод формируется согласно настройкам на закладке "QR (двумерный)".
+Также в платежных документах предусмотрен одновременный вывод обоих видов штрихкода (подробнее в справочной информации, в разделе "Штрихкод").</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">ВидШтрихкодаПриИзменении</Event>
+										<Event name="Clearing">ВидШтрихкодаОчистка</Event>
+									</Events>
+								</InputField>
+								<InputField name="ВариантОпределенияФорматаШтрихкода" id="35">
+									<DataPath>Запись.ВариантОпределенияФорматаШтрихкода</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Определять формат</v8:content>
+										</v8:item>
+									</Title>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<TextEdit>false</TextEdit>
+									<ContextMenu name="ВариантОпределенияФорматаШтрихкодаКонтекстноеМеню" id="36"/>
+									<ExtendedTooltip name="ВариантОпределенияФорматаШтрихкодаExtendedTooltip" id="189"/>
+									<Events>
+										<Event name="OnChange">ВариантОпределенияФорматаШтрихкодаПриИзменении</Event>
+										<Event name="Clearing">ВариантОпределенияФорматаШтрихкодаОчистка</Event>
+									</Events>
+								</InputField>
+								<LabelDecoration name="ИнструкцияПоНастройкеШтрихкодов" id="435">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Инструкция по настройке штрихкодов</v8:content>
+										</v8:item>
+									</Title>
+									<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+									<Hyperlink>true</Hyperlink>
+									<ContextMenu name="ИнструкцияПоНастройкеШтрихкодовКонтекстноеМеню" id="436"/>
+									<ExtendedTooltip name="ИнструкцияПоНастройкеШтрихкодовРасширеннаяПодсказка" id="437"/>
+									<Events>
+										<Event name="Click">ИнструкцияПоНастройкеШтрихкодовНажатие</Event>
+									</Events>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаQRШК" id="24">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа QRШК</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа QRШК</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаQRШКExtendedTooltip" id="248"/>
+						</UsualGroup>
+						<Pages name="СтраницыНастроекПоВидамШтрихкода" id="349">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страницы настроек по видам штрихкода</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страницы настроек по видам штрихкода</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalStretch>true</HorizontalStretch>
+							<VerticalStretch>true</VerticalStretch>
+							<ExtendedTooltip name="СтраницыНастроекПоВидамШтрихкодаРасширеннаяПодсказка" id="350"/>
+							<ChildItems>
+								<Page name="СтраницаОдномерныйШК" id="351">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Одномерный</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страница одномерный ШК</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="СтраницаОдномерныйШКРасширеннаяПодсказка" id="352"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаОбщихНастроекОдномерногоШК" id="48">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа общих настроек одномерного ШК</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа общих настроек одномерного ШК</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаОбщихНастроекОдномерногоШКExtendedTooltip" id="184"/>
+											<ChildItems>
+												<UsualGroup name="ПодгруппаОбщихНастроекОдномерногоШКЛевая" id="27">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Подгруппа общих настроек одномерного ШК левая</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Подгруппа общих настроек одномерного ШКЛевая</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>Vertical</Group>
+													<Representation>None</Representation>
+													<ChildItemsWidth>LeftNarrowest</ChildItemsWidth>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ПодгруппаОбщихНастроекОдномерногоШКЛеваяExtendedTooltip" id="185"/>
+													<ChildItems>
+														<InputField name="КодОрганизацииДляОдномерногоШКОбщий" id="426">
+															<DataPath>Запись.КодОрганизацииДляОдномерногоШКПоОсн</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Код организации</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="КодОрганизацииДляОдномерногоШКОбщийКонтекстноеМеню" id="427"/>
+															<ExtendedTooltip name="КодОрганизацииДляОдномерногоШКОбщийРасширеннаяПодсказка" id="428"/>
+															<Events>
+																<Event name="OnChange">КодОрганизацииДляОдномерногоШКОбщийПриИзменении</Event>
+															</Events>
+														</InputField>
+														<InputField name="КонстантаОрганизацииДляШтрихКода" id="29">
+															<DataPath>Запись.КонстантаОрганизацииДляШтрихКода</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Константа</v8:content>
+																</v8:item>
+															</Title>
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<HorizontalStretch>true</HorizontalStretch>
+															<ContextMenu name="КонстантаОрганизацииДляШтрихКодаКонтекстноеМеню" id="30"/>
+															<ExtendedTooltip name="КонстантаОрганизацииДляШтрихКодаExtendedTooltip" id="191"/>
+															<Events>
+																<Event name="OnChange">КонстантаОрганизацииДляШтрихКодаПриИзменении</Event>
+															</Events>
+														</InputField>
+														<InputField name="ИдентификаторЛСШтрихкода" id="33">
+															<DataPath>Запись.ИдентификаторЛСШтрихкода</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Определять лицевой счет</v8:content>
+																</v8:item>
+															</Title>
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<HorizontalStretch>true</HorizontalStretch>
+															<ListChoiceMode>true</ListChoiceMode>
+															<TextEdit>false</TextEdit>
+															<ChoiceList>
+																<xr:Item>
+																	<xr:Presentation/>
+																	<xr:CheckState>0</xr:CheckState>
+																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>по коду</v8:content>
+																			</v8:item>
+																		</Presentation>
+																		<Value xsi:type="xs:boolean">false</Value>
+																	</xr:Value>
+																</xr:Item>
+																<xr:Item>
+																	<xr:Presentation/>
+																	<xr:CheckState>0</xr:CheckState>
+																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>по идентификатору</v8:content>
+																			</v8:item>
+																		</Presentation>
+																		<Value xsi:type="xs:boolean">true</Value>
+																	</xr:Value>
+																</xr:Item>
+															</ChoiceList>
+															<ContextMenu name="ИдентификаторЛСШтрихкодаКонтекстноеМеню" id="34"/>
+															<ExtendedTooltip name="ИдентификаторЛСШтрихкодаExtendedTooltip" id="188"/>
+															<Events>
+																<Event name="OnChange">ИдентификаторЛСШтрихкодаПриИзменении</Event>
+																<Event name="Clearing">ИдентификаторЛСШтрихкодаОчистка</Event>
+															</Events>
+														</InputField>
+														<InputField name="РазделительДробнойЧастиСуммы" id="31">
+															<DataPath>Запись.РазделительДробнойЧастиСуммы</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Разд. дроб. части суммы</v8:content>
+																</v8:item>
+															</Title>
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<HorizontalStretch>true</HorizontalStretch>
+															<ListChoiceMode>true</ListChoiceMode>
+															<TextEdit>false</TextEdit>
+															<ChoiceList>
+																<xr:Item>
+																	<xr:Presentation/>
+																	<xr:CheckState>0</xr:CheckState>
+																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>не выводить</v8:content>
+																			</v8:item>
+																		</Presentation>
+																		<Value xsi:type="xs:string">не выводить</Value>
+																	</xr:Value>
+																</xr:Item>
+																<xr:Item>
+																	<xr:Presentation/>
+																	<xr:CheckState>0</xr:CheckState>
+																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content> . (точка)</v8:content>
+																			</v8:item>
+																		</Presentation>
+																		<Value xsi:type="xs:string"> . (точка)</Value>
+																	</xr:Value>
+																</xr:Item>
+																<xr:Item>
+																	<xr:Presentation/>
+																	<xr:CheckState>0</xr:CheckState>
+																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content> , (запятая)</v8:content>
+																			</v8:item>
+																		</Presentation>
+																		<Value xsi:type="xs:string"> , (запятая)</Value>
+																	</xr:Value>
+																</xr:Item>
+															</ChoiceList>
+															<ContextMenu name="РазделительДробнойЧастиСуммыКонтекстноеМеню" id="32"/>
+															<ExtendedTooltip name="РазделительДробнойЧастиСуммыExtendedTooltip" id="187"/>
+															<Events>
+																<Event name="OnChange">РазделительДробнойЧастиСуммыПриИзменении</Event>
+																<Event name="Clearing">РазделительДробнойЧастиСуммыОчистка</Event>
+															</Events>
+														</InputField>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="ПодгруппаОбщихНастроекОдномерногоШКПравая" id="28">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Подгруппа общих настроек одномерного ШК правая</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Подгруппа общих настроек одномерного ШКПравая</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>Vertical</Group>
+													<Representation>None</Representation>
+													<ChildItemsWidth>Equal</ChildItemsWidth>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ПодгруппаОбщихНастроекОдномерногоШКПраваяExtendedTooltip" id="190"/>
+													<ChildItems>
+														<InputField name="ДлинаСуммыШтрихкода" id="37">
+															<DataPath>Запись.ДлинаСуммыШтрихкода</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Длина суммы</v8:content>
+																</v8:item>
+															</Title>
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<HorizontalStretch>true</HorizontalStretch>
+															<ContextMenu name="ДлинаСуммыШтрихкодаКонтекстноеМеню" id="38"/>
+															<ExtendedTooltip name="ДлинаСуммыШтрихкодаExtendedTooltip" id="192"/>
+															<Events>
+																<Event name="OnChange">ДлинаСуммыШтрихкодаПриИзменении</Event>
+															</Events>
+														</InputField>
+														<InputField name="СхемаДляРасчетаКонтрольнойСуммы" id="66">
+															<DataPath>Запись.СхемаДляРасчетаКонтрольнойСуммы</DataPath>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<HorizontalStretch>true</HorizontalStretch>
+															<ListChoiceMode>true</ListChoiceMode>
+															<TextEdit>false</TextEdit>
+															<ChoiceList>
+																<xr:Item>
+																	<xr:Presentation/>
+																	<xr:CheckState>0</xr:CheckState>
+																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Схема №1</v8:content>
+																			</v8:item>
+																		</Presentation>
+																		<Value xsi:type="xs:string">Схема №1</Value>
+																	</xr:Value>
+																</xr:Item>
+																<xr:Item>
+																	<xr:Presentation/>
+																	<xr:CheckState>0</xr:CheckState>
+																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Схема №2</v8:content>
+																			</v8:item>
+																		</Presentation>
+																		<Value xsi:type="xs:string">Схема №2</Value>
+																	</xr:Value>
+																</xr:Item>
+																<xr:Item>
+																	<xr:Presentation/>
+																	<xr:CheckState>0</xr:CheckState>
+																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Схема №3</v8:content>
+																			</v8:item>
+																		</Presentation>
+																		<Value xsi:type="xs:string">Схема №3</Value>
+																	</xr:Value>
+																</xr:Item>
+																<xr:Item>
+																	<xr:Presentation/>
+																	<xr:CheckState>0</xr:CheckState>
+																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Схема №4</v8:content>
+																			</v8:item>
+																		</Presentation>
+																		<Value xsi:type="xs:string">Схема №4</Value>
+																	</xr:Value>
+																</xr:Item>
+															</ChoiceList>
+															<ContextMenu name="СхемаДляРасчетаКонтрольнойСуммыКонтекстноеМеню" id="67"/>
+															<ExtendedTooltip name="СхемаДляРасчетаКонтрольнойСуммыExtendedTooltip" id="241"/>
+															<Events>
+																<Event name="OnChange">СхемаДляРасчетаКонтрольнойСуммыПриИзменении</Event>
+																<Event name="Clearing">СхемаДляРасчетаКонтрольнойСуммыОчистка</Event>
+															</Events>
+														</InputField>
+														<UsualGroup name="ГруппаДлинаИдентификатораШтрихкода" id="360">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа длина идентификатора штрихкода</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа длина идентификатора штрихкода</v8:content>
+																</v8:item>
+															</ToolTip>
+															<Group>Horizontal</Group>
+															<ShowTitle>false</ShowTitle>
+															<ThroughAlign>Use</ThroughAlign>
+															<ExtendedTooltip name="ГруппаДлинаИдентификатораШтрихкодаРасширеннаяПодсказка" id="361"/>
+															<ChildItems>
+																<InputField name="ДлинаИдентификатораШтрихкода" id="39">
+																	<DataPath>Запись.ДлинаИдентификатораШтрихкода</DataPath>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Длина идентификатора</v8:content>
+																		</v8:item>
+																	</Title>
+																	<AutoMaxWidth>false</AutoMaxWidth>
+																	<HorizontalStretch>true</HorizontalStretch>
+																	<ContextMenu name="ДлинаИдентификатораШтрихкодаКонтекстноеМеню" id="40"/>
+																	<ExtendedTooltip name="ДлинаИдентификатораШтрихкодаExtendedTooltip" id="193"/>
+																	<Events>
+																		<Event name="OnChange">ДлинаИдентификатораШтрихкодаПриИзменении</Event>
+																	</Events>
+																</InputField>
+																<Button name="ПроверитьДлинуИдентификатора" id="41">
+																	<Type>UsualButton</Type>
+																	<CommandName>Form.Command.ПроверитьДлинуИдентификатора</CommandName>
+																	<ExtendedTooltip name="ПроверитьДлинуИдентификатораExtendedTooltip" id="194"/>
+																</Button>
+															</ChildItems>
+														</UsualGroup>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаСоставШКиДопНастройки" id="49">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа состав ш ки доп настройки</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа состав ш ки доп настройки</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ChildItemsWidth>LeftWide</ChildItemsWidth>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаСоставШКиДопНастройкиExtendedTooltip" id="195"/>
+											<ChildItems>
+												<Pages name="ГруппаСоставШК" id="50">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа состав ШК</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа состав ШК</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ExtendedTooltip name="ГруппаСоставШКExtendedTooltip" id="196"/>
+													<Events>
+														<Event name="OnCurrentPageChange">ГруппаСоставШКПриСменеСтраницы</Event>
+													</Events>
+													<ChildItems>
+														<Page name="ГруппаСоставШКПоОсн" id="51">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Состав ШК по основным услугам</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа состав ШКПо осн</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ExtendedTooltip name="ГруппаСоставШКПоОснExtendedTooltip" id="197"/>
+															<ChildItems>
+																<InputField name="КодОрганизацииДляОДномерногоШКПоОсн" id="25">
+																	<DataPath>Запись.КодОрганизацииДляОдномерногоШКПоОсн</DataPath>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Код организации</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ContextMenu name="КодОрганизацииДляОДномерногоШКПоОснКонтекстноеМеню" id="26"/>
+																	<ExtendedTooltip name="КодОрганизацииДляОДномерногоШКПоОснРасширеннаяПодсказка" id="186"/>
+																	<Events>
+																		<Event name="OnChange">КодОрганизацииДляОдномерногоШКПоОснПриИзменении</Event>
+																	</Events>
+																</InputField>
+																<UsualGroup name="ГруппаТаблицаСоставШКПоОсн" id="147">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Группа таблица состав ШКПо осн</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ToolTip>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Группа таблица состав ШКПо осн</v8:content>
+																		</v8:item>
+																	</ToolTip>
+																	<Group>Vertical</Group>
+																	<Representation>None</Representation>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="ГруппаТаблицаСоставШКПоОснExtendedTooltip" id="198"/>
+																	<ChildItems>
+																		<Table name="ТаблицаСоставШКПоОсновнымУслугам" id="113">
+																			<Representation>List</Representation>
+																			<AutoMaxWidth>false</AutoMaxWidth>
+																			<AutoMarkIncomplete>true</AutoMarkIncomplete>
+																			<EnableStartDrag>true</EnableStartDrag>
+																			<EnableDrag>true</EnableDrag>
+																			<FileDragMode>AsFile</FileDragMode>
+																			<DataPath>ТаблицаСоставШКПоОсновнымУслугам</DataPath>
+																			<SearchStringLocation>None</SearchStringLocation>
+																			<ViewStatusLocation>None</ViewStatusLocation>
+																			<SearchControlLocation>None</SearchControlLocation>
+																			<RowFilter xsi:nil="true"/>
+																			<ContextMenu name="ТаблицаСоставШКПоОсновнымУслугамКонтекстноеМеню" id="114"/>
+																			<AutoCommandBar name="ТаблицаСоставШКПоОсновнымУслугамКоманднаяПанель" id="115">
+																				<Autofill>false</Autofill>
+																				<ChildItems>
+																					<Button name="ТаблицаСоставШКПоОсновнымУслугамДобавить" id="120">
+																						<Type>CommandBarButton</Type>
+																						<Representation>Picture</Representation>
+																						<CommandName>Form.Item.ТаблицаСоставШКПоОсновнымУслугам.StandardCommand.Add</CommandName>
+																						<ExtendedTooltip name="ТаблицаСоставШКПоОсновнымУслугамДобавитьExtendedTooltip" id="199"/>
+																					</Button>
+																					<Button name="ТаблицаСоставШКПоОсновнымУслугамУдалить" id="121">
+																						<Type>CommandBarButton</Type>
+																						<CommandName>Form.Item.ТаблицаСоставШКПоОсновнымУслугам.StandardCommand.Delete</CommandName>
+																						<ExtendedTooltip name="ТаблицаСоставШКПоОсновнымУслугамУдалитьExtendedTooltip" id="200"/>
+																					</Button>
+																					<Button name="ТаблицаСоставШКПоОсновнымУслугамПереместитьПараметрВверх" id="122">
+																						<Type>CommandBarButton</Type>
+																						<Representation>Picture</Representation>
+																						<CommandName>Form.Command.ПереместитьПараметрШКПоОсновнымУслугамВверх</CommandName>
+																						<Picture>
+																							<xr:Ref>StdPicture.MoveUp</xr:Ref>
+																							<xr:LoadTransparent>true</xr:LoadTransparent>
+																						</Picture>
+																						<ExtendedTooltip name="ТаблицаСоставШКПоОсновнымУслугамПереместитьПараметрВверхExtendedTooltip" id="201"/>
+																					</Button>
+																					<Button name="ТаблицаСоставШКПоОсновнымУслугамПереместитьПараметрВниз" id="123">
+																						<Type>CommandBarButton</Type>
+																						<Representation>Picture</Representation>
+																						<CommandName>Form.Command.ПереместитьПараметрШКПоОсновнымУслугамВниз</CommandName>
+																						<Picture>
+																							<xr:Ref>StdPicture.MoveDown</xr:Ref>
+																							<xr:LoadTransparent>true</xr:LoadTransparent>
+																						</Picture>
+																						<ExtendedTooltip name="ТаблицаСоставШКПоОсновнымУслугамПереместитьПараметрВнизExtendedTooltip" id="202"/>
+																					</Button>
+																					<Button name="ТаблицаСоставШКПоОсновнымУслугамКнопкаСкопироватьСоставКР" id="158">
+																						<Type>CommandBarButton</Type>
+																						<CommandName>Form.Command.СкопироватьСоставКР</CommandName>
+																						<Title>
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Скопировать состав ШК по услугам капремонта</v8:content>
+																							</v8:item>
+																						</Title>
+																						<ExtendedTooltip name="ТаблицаСоставШКПоОсновнымУслугамКнопкаСкопироватьСоставКРExtendedTooltip" id="203"/>
+																					</Button>
+																				</ChildItems>
+																			</AutoCommandBar>
+																			<ExtendedTooltip name="ТаблицаСоставШКПоОсновнымУслугамExtendedTooltip" id="204"/>
+																			<SearchStringAddition name="ТаблицаСоставШКПоОсновнымУслугамSearchString" id="205">
+																				<AdditionSource>
+																					<Item>ТаблицаСоставШКПоОсновнымУслугам</Item>
+																					<Type>SearchStringRepresentation</Type>
+																				</AdditionSource>
+																				<ContextMenu name="ТаблицаСоставШКПоОсновнымУслугамSearchStringContextMenu" id="206"/>
+																				<ExtendedTooltip name="ТаблицаСоставШКПоОсновнымУслугамSearchStringExtendedTooltip" id="207"/>
+																			</SearchStringAddition>
+																			<ViewStatusAddition name="ТаблицаСоставШКПоОсновнымУслугамViewStatus" id="208">
+																				<AdditionSource>
+																					<Item>ТаблицаСоставШКПоОсновнымУслугам</Item>
+																					<Type>ViewStatusRepresentation</Type>
+																				</AdditionSource>
+																				<ContextMenu name="ТаблицаСоставШКПоОсновнымУслугамViewStatusContextMenu" id="209"/>
+																				<ExtendedTooltip name="ТаблицаСоставШКПоОсновнымУслугамViewStatusExtendedTooltip" id="210"/>
+																			</ViewStatusAddition>
+																			<SearchControlAddition name="ТаблицаСоставШКПоОсновнымУслугамSearchControl" id="211">
+																				<AdditionSource>
+																					<Item>ТаблицаСоставШКПоОсновнымУслугам</Item>
+																					<Type>SearchControl</Type>
+																				</AdditionSource>
+																				<ContextMenu name="ТаблицаСоставШКПоОсновнымУслугамSearchControlContextMenu" id="212"/>
+																				<ExtendedTooltip name="ТаблицаСоставШКПоОсновнымУслугамSearchControlExtendedTooltip" id="213"/>
+																			</SearchControlAddition>
+																			<Events>
+																				<Event name="OnEditEnd">ТаблицаСоставШКПоОсновнымУслугамПриОкончанииРедактирования</Event>
+																				<Event name="BeforeEditEnd">ТаблицаСоставШКПоОсновнымУслугамПередОкончаниемРедактирования</Event>
+																				<Event name="OnActivateRow">ТаблицаСоставШКПоОсновнымУслугамПриАктивизацииСтроки</Event>
+																				<Event name="AfterDeleteRow">ТаблицаСоставШКПоОсновнымУслугамПослеУдаления</Event>
+																			</Events>
+																			<ChildItems>
+																				<InputField name="ТаблицаСоставШКПоОсновнымУслугамПараметр" id="116">
+																					<DataPath>ТаблицаСоставШКПоОсновнымУслугам.Параметр</DataPath>
+																					<EditMode>EnterOnInput</EditMode>
+																					<AutoMaxWidth>false</AutoMaxWidth>
+																					<HorizontalStretch>false</HorizontalStretch>
+																					<ListChoiceMode>true</ListChoiceMode>
+																					<ChooseType>false</ChooseType>
+																					<TextEdit>false</TextEdit>
+																					<ChoiceList>
+																						<xr:Item>
+																							<xr:Presentation/>
+																							<xr:CheckState>0</xr:CheckState>
+																							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																								<Presentation>
+																									<v8:item>
+																										<v8:lang>ru</v8:lang>
+																										<v8:content>Код лиц. счета</v8:content>
+																									</v8:item>
+																								</Presentation>
+																								<Value xsi:type="xs:string">КодЛС</Value>
+																							</xr:Value>
+																						</xr:Item>
+																						<xr:Item>
+																							<xr:Presentation/>
+																							<xr:CheckState>0</xr:CheckState>
+																							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																								<Presentation>
+																									<v8:item>
+																										<v8:lang>ru</v8:lang>
+																										<v8:content>Константа</v8:content>
+																									</v8:item>
+																								</Presentation>
+																								<Value xsi:type="xs:string">Константа</Value>
+																							</xr:Value>
+																						</xr:Item>
+																						<xr:Item>
+																							<xr:Presentation/>
+																							<xr:CheckState>0</xr:CheckState>
+																							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																								<Presentation>
+																									<v8:item>
+																										<v8:lang>ru</v8:lang>
+																										<v8:content>Месяц оплаты</v8:content>
+																									</v8:item>
+																								</Presentation>
+																								<Value xsi:type="xs:string">МесяцОплаты</Value>
+																							</xr:Value>
+																						</xr:Item>
+																						<xr:Item>
+																							<xr:Presentation/>
+																							<xr:CheckState>0</xr:CheckState>
+																							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																								<Presentation>
+																									<v8:item>
+																										<v8:lang>ru</v8:lang>
+																										<v8:content>Год оплаты</v8:content>
+																									</v8:item>
+																								</Presentation>
+																								<Value xsi:type="xs:string">ГодОплаты</Value>
+																							</xr:Value>
+																						</xr:Item>
+																						<xr:Item>
+																							<xr:Presentation/>
+																							<xr:CheckState>0</xr:CheckState>
+																							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																								<Presentation>
+																									<v8:item>
+																										<v8:lang>ru</v8:lang>
+																										<v8:content>Сумма к оплате</v8:content>
+																									</v8:item>
+																								</Presentation>
+																								<Value xsi:type="xs:string">СуммаКОплате</Value>
+																							</xr:Value>
+																						</xr:Item>
+																						<xr:Item>
+																							<xr:Presentation/>
+																							<xr:CheckState>0</xr:CheckState>
+																							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																								<Presentation>
+																									<v8:item>
+																										<v8:lang>ru</v8:lang>
+																										<v8:content>Разделитель</v8:content>
+																									</v8:item>
+																								</Presentation>
+																								<Value xsi:type="xs:string">Разделитель</Value>
+																							</xr:Value>
+																						</xr:Item>
+																						<xr:Item>
+																							<xr:Presentation/>
+																							<xr:CheckState>0</xr:CheckState>
+																							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																								<Presentation>
+																									<v8:item>
+																										<v8:lang>ru</v8:lang>
+																										<v8:content>ИНН организации</v8:content>
+																									</v8:item>
+																								</Presentation>
+																								<Value xsi:type="xs:string">ИННОрганизации</Value>
+																							</xr:Value>
+																						</xr:Item>
+																						<xr:Item>
+																							<xr:Presentation/>
+																							<xr:CheckState>0</xr:CheckState>
+																							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																								<Presentation>
+																									<v8:item>
+																										<v8:lang>ru</v8:lang>
+																										<v8:content>Расчетный счет организации</v8:content>
+																									</v8:item>
+																								</Presentation>
+																								<Value xsi:type="xs:string">РасчетныйСчетОрганизации</Value>
+																							</xr:Value>
+																						</xr:Item>
+																						<xr:Item>
+																							<xr:Presentation/>
+																							<xr:CheckState>0</xr:CheckState>
+																							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																								<Presentation>
+																									<v8:item>
+																										<v8:lang>ru</v8:lang>
+																										<v8:content>Контрольная сумма</v8:content>
+																									</v8:item>
+																								</Presentation>
+																								<Value xsi:type="xs:string">КонтрольнаяСумма</Value>
+																							</xr:Value>
+																						</xr:Item>
+																						<xr:Item>
+																							<xr:Presentation/>
+																							<xr:CheckState>0</xr:CheckState>
+																							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																								<Presentation>
+																									<v8:item>
+																										<v8:lang>ru</v8:lang>
+																										<v8:content>Код организации</v8:content>
+																									</v8:item>
+																								</Presentation>
+																								<Value xsi:type="xs:string">КодОрганизации</Value>
+																							</xr:Value>
+																						</xr:Item>
+																					</ChoiceList>
+																					<ChoiceListButton>true</ChoiceListButton>
+																					<ContextMenu name="ТаблицаСоставШКПоОсновнымУслугамПараметрКонтекстноеМеню" id="117"/>
+																					<ExtendedTooltip name="ТаблицаСоставШКПоОсновнымУслугамПараметрExtendedTooltip" id="214"/>
+																					<Events>
+																						<Event name="StartListChoice">ТаблицаСоставШКПоОсновнымУслугамПараметрНачалоВыбораИзСписка</Event>
+																						<Event name="ChoiceProcessing">ТаблицаСоставШКПоОсновнымУслугамПараметрОбработкаВыбора</Event>
+																					</Events>
+																				</InputField>
+																				<InputField name="ТаблицаСоставШКПоОсновнымУслугамДопСвойство" id="118">
+																					<DataPath>ТаблицаСоставШКПоОсновнымУслугам.ДопСвойство</DataPath>
+																					<EditMode>EnterOnInput</EditMode>
+																					<AutoMaxWidth>false</AutoMaxWidth>
+																					<ContextMenu name="ТаблицаСоставШКПоОсновнымУслугамДопСвойствоКонтекстноеМеню" id="119"/>
+																					<ExtendedTooltip name="ТаблицаСоставШКПоОсновнымУслугамДопСвойствоExtendedTooltip" id="215"/>
+																				</InputField>
+																			</ChildItems>
+																		</Table>
+																	</ChildItems>
+																</UsualGroup>
+																<UsualGroup name="ГруппаВнешняяОбработкаОсн" id="95">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Группа внешняя обработка осн</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ToolTip>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Группа внешняя обработка осн</v8:content>
+																		</v8:item>
+																	</ToolTip>
+																	<Group>Vertical</Group>
+																	<Representation>None</Representation>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="ГруппаВнешняяОбработкаОснExtendedTooltip" id="216"/>
+																	<ChildItems>
+																		<InputField name="ВнешняяОбработкаШтрихкодаОсн" id="96">
+																			<DataPath>Запись.ВнешняяОбработкаШтрихкодаОсн</DataPath>
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Внешняя обработка</v8:content>
+																				</v8:item>
+																			</Title>
+																			<ContextMenu name="ВнешняяОбработкаШтрихкодаОснКонтекстноеМеню" id="97"/>
+																			<ExtendedTooltip name="ВнешняяОбработкаШтрихкодаОснExtendedTooltip" id="217"/>
+																			<Events>
+																				<Event name="OnChange">ВнешняяОбработкаШтрихкодаОснПриИзменении</Event>
+																			</Events>
+																		</InputField>
+																	</ChildItems>
+																</UsualGroup>
+															</ChildItems>
+														</Page>
+														<Page name="СтраницаСоставШКПоУслугамКР" id="52">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Состав ШК по услугам капремонта</v8:content>
+																</v8:item>
+															</Title>
+															<ExtendedTooltip name="СтраницаСоставШКПоУслугамКРРасширеннаяПодсказка" id="218"/>
+															<ChildItems>
+																<InputField name="КодОрганизацииДляОдномерногоШКПоУслугамКР" id="423">
+																	<DataPath>Запись.КодОрганизацииДляОдномерногоШКПоУслугамКР</DataPath>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Код организации</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ContextMenu name="КодОрганизацииДляОдномерногоШКПоУслугамКРКонтекстноеМеню" id="424"/>
+																	<ExtendedTooltip name="КодОрганизацииДляОдномерногоШКПоУслугамКРРасширеннаяПодсказка" id="425"/>
+																	<Events>
+																		<Event name="OnChange">КодОрганизацииДляОдномерногоШКПоУслугамКРПриИзменении</Event>
+																	</Events>
+																</InputField>
+																<UsualGroup name="ГруппаСоставШКПоУслугамКР" id="362">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Группа состав ШКПо услугам КР</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ToolTip>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Группа состав ШКПо услугам КР</v8:content>
+																		</v8:item>
+																	</ToolTip>
+																	<Group>Vertical</Group>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="ГруппаСоставШКПоУслугамКРРасширеннаяПодсказка" id="363"/>
+																	<ChildItems>
+																		<UsualGroup name="ГруппаТаблицаСоставШКПоКР" id="148">
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Группа таблица состав ШКПо КР</v8:content>
+																				</v8:item>
+																			</Title>
+																			<ToolTip>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Группа таблица состав ШКПо КР</v8:content>
+																				</v8:item>
+																			</ToolTip>
+																			<Group>Vertical</Group>
+																			<Representation>None</Representation>
+																			<ShowTitle>false</ShowTitle>
+																			<ExtendedTooltip name="ГруппаТаблицаСоставШКПоКРExtendedTooltip" id="219"/>
+																			<ChildItems>
+																				<Table name="ТаблицаСоставШКПоУслугамКапремонта" id="58">
+																					<Representation>List</Representation>
+																					<AutoMaxWidth>false</AutoMaxWidth>
+																					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+																					<EnableStartDrag>true</EnableStartDrag>
+																					<EnableDrag>true</EnableDrag>
+																					<FileDragMode>AsFile</FileDragMode>
+																					<DataPath>ТаблицаСоставШКПоУслугамКапремонта</DataPath>
+																					<SearchStringLocation>None</SearchStringLocation>
+																					<ViewStatusLocation>None</ViewStatusLocation>
+																					<SearchControlLocation>None</SearchControlLocation>
+																					<RowFilter xsi:nil="true"/>
+																					<ContextMenu name="ТаблицаСоставШКПоУслугамКапремонтаКонтекстноеМеню" id="59"/>
+																					<AutoCommandBar name="ТаблицаСоставШКПоУслугамКапремонтаКоманднаяПанель" id="60">
+																						<Autofill>false</Autofill>
+																						<ChildItems>
+																							<Button name="ТаблицаСоставШКПоУслугамКапремонтаДобавить" id="124">
+																								<Type>CommandBarButton</Type>
+																								<Representation>Picture</Representation>
+																								<CommandName>Form.Item.ТаблицаСоставШКПоУслугамКапремонта.StandardCommand.Add</CommandName>
+																								<ExtendedTooltip name="ТаблицаСоставШКПоУслугамКапремонтаДобавитьExtendedTooltip" id="220"/>
+																							</Button>
+																							<Button name="ТаблицаСоставШКПоУслугамКапремонтаУдалить" id="125">
+																								<Type>CommandBarButton</Type>
+																								<CommandName>Form.Item.ТаблицаСоставШКПоУслугамКапремонта.StandardCommand.Delete</CommandName>
+																								<ExtendedTooltip name="ТаблицаСоставШКПоУслугамКапремонтаУдалитьExtendedTooltip" id="221"/>
+																							</Button>
+																							<Button name="ТаблицаСоставШКПоУслугамКапремонтаПереместитьПараметрВверх" id="126">
+																								<Type>CommandBarButton</Type>
+																								<CommandName>Form.Command.ПереместитьПараметрШКПоУслугамКапремонтаВверх</CommandName>
+																								<Picture>
+																									<xr:Ref>StdPicture.MoveUp</xr:Ref>
+																									<xr:LoadTransparent>true</xr:LoadTransparent>
+																								</Picture>
+																								<ExtendedTooltip name="ТаблицаСоставШКПоУслугамКапремонтаПереместитьПараметрВверхExtendedTooltip" id="222"/>
+																							</Button>
+																							<Button name="ТаблицаСоставШКПоУслугамКапремонтаПереместитьПараметрВниз" id="127">
+																								<Type>CommandBarButton</Type>
+																								<CommandName>Form.Command.ПереместитьПараметрШКПоУслугамКапремонтаВниз</CommandName>
+																								<Picture>
+																									<xr:Ref>StdPicture.MoveDown</xr:Ref>
+																									<xr:LoadTransparent>true</xr:LoadTransparent>
+																								</Picture>
+																								<ExtendedTooltip name="ТаблицаСоставШКПоУслугамКапремонтаПереместитьПараметрВнизExtendedTooltip" id="223"/>
+																							</Button>
+																							<Button name="ТаблицаСоставШКПоУслугамКапремонтаКнопкаСкопироватьСоставОсн" id="159">
+																								<Type>CommandBarButton</Type>
+																								<CommandName>Form.Command.СкопироватьСоставОсн</CommandName>
+																								<ExtendedTooltip name="ТаблицаСоставШКПоУслугамКапремонтаКнопкаСкопироватьСоставОснExtendedTooltip" id="224"/>
+																							</Button>
+																						</ChildItems>
+																					</AutoCommandBar>
+																					<ExtendedTooltip name="ТаблицаСоставШКПоУслугамКапремонтаExtendedTooltip" id="225"/>
+																					<SearchStringAddition name="ТаблицаСоставШКПоУслугамКапремонтаSearchString" id="226">
+																						<AdditionSource>
+																							<Item>ТаблицаСоставШКПоУслугамКапремонта</Item>
+																							<Type>SearchStringRepresentation</Type>
+																						</AdditionSource>
+																						<ContextMenu name="ТаблицаСоставШКПоУслугамКапремонтаSearchStringContextMenu" id="227"/>
+																						<ExtendedTooltip name="ТаблицаСоставШКПоУслугамКапремонтаSearchStringExtendedTooltip" id="228"/>
+																					</SearchStringAddition>
+																					<ViewStatusAddition name="ТаблицаСоставШКПоУслугамКапремонтаViewStatus" id="229">
+																						<AdditionSource>
+																							<Item>ТаблицаСоставШКПоУслугамКапремонта</Item>
+																							<Type>ViewStatusRepresentation</Type>
+																						</AdditionSource>
+																						<ContextMenu name="ТаблицаСоставШКПоУслугамКапремонтаViewStatusContextMenu" id="230"/>
+																						<ExtendedTooltip name="ТаблицаСоставШКПоУслугамКапремонтаViewStatusExtendedTooltip" id="231"/>
+																					</ViewStatusAddition>
+																					<SearchControlAddition name="ТаблицаСоставШКПоУслугамКапремонтаSearchControl" id="232">
+																						<AdditionSource>
+																							<Item>ТаблицаСоставШКПоУслугамКапремонта</Item>
+																							<Type>SearchControl</Type>
+																						</AdditionSource>
+																						<ContextMenu name="ТаблицаСоставШКПоУслугамКапремонтаSearchControlContextMenu" id="233"/>
+																						<ExtendedTooltip name="ТаблицаСоставШКПоУслугамКапремонтаSearchControlExtendedTooltip" id="234"/>
+																					</SearchControlAddition>
+																					<Events>
+																						<Event name="OnEditEnd">ТаблицаСоставШКПоУслугамКапремонтаПриОкончанииРедактирования</Event>
+																						<Event name="BeforeEditEnd">ТаблицаСоставШКПоУслугамКапремонтаПередОкончаниемРедактирования</Event>
+																						<Event name="OnActivateRow">ТаблицаСоставШКПоУслугамКапремонтаПриАктивизацииСтроки</Event>
+																						<Event name="AfterDeleteRow">ТаблицаСоставШКПоУслугамКапремонтаПослеУдаления</Event>
+																					</Events>
+																					<ChildItems>
+																						<InputField name="ТаблицаСоставШКПоУслугамКапремонтаПараметр" id="61">
+																							<DataPath>ТаблицаСоставШКПоУслугамКапремонта.Параметр</DataPath>
+																							<EditMode>EnterOnInput</EditMode>
+																							<AutoMaxWidth>false</AutoMaxWidth>
+																							<HorizontalStretch>false</HorizontalStretch>
+																							<ListChoiceMode>true</ListChoiceMode>
+																							<ChooseType>false</ChooseType>
+																							<TextEdit>false</TextEdit>
+																							<ChoiceList>
+																								<xr:Item>
+																									<xr:Presentation/>
+																									<xr:CheckState>0</xr:CheckState>
+																									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																										<Presentation>
+																											<v8:item>
+																												<v8:lang>ru</v8:lang>
+																												<v8:content>Код лиц. счета</v8:content>
+																											</v8:item>
+																										</Presentation>
+																										<Value xsi:type="xs:string">КодЛС</Value>
+																									</xr:Value>
+																								</xr:Item>
+																								<xr:Item>
+																									<xr:Presentation/>
+																									<xr:CheckState>0</xr:CheckState>
+																									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																										<Presentation>
+																											<v8:item>
+																												<v8:lang>ru</v8:lang>
+																												<v8:content>Константа</v8:content>
+																											</v8:item>
+																										</Presentation>
+																										<Value xsi:type="xs:string">Константа</Value>
+																									</xr:Value>
+																								</xr:Item>
+																								<xr:Item>
+																									<xr:Presentation/>
+																									<xr:CheckState>0</xr:CheckState>
+																									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																										<Presentation>
+																											<v8:item>
+																												<v8:lang>ru</v8:lang>
+																												<v8:content>Месяц оплаты</v8:content>
+																											</v8:item>
+																										</Presentation>
+																										<Value xsi:type="xs:string">МесяцОплаты</Value>
+																									</xr:Value>
+																								</xr:Item>
+																								<xr:Item>
+																									<xr:Presentation/>
+																									<xr:CheckState>0</xr:CheckState>
+																									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																										<Presentation>
+																											<v8:item>
+																												<v8:lang>ru</v8:lang>
+																												<v8:content>Год оплаты</v8:content>
+																											</v8:item>
+																										</Presentation>
+																										<Value xsi:type="xs:string">ГодОплаты</Value>
+																									</xr:Value>
+																								</xr:Item>
+																								<xr:Item>
+																									<xr:Presentation/>
+																									<xr:CheckState>0</xr:CheckState>
+																									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																										<Presentation>
+																											<v8:item>
+																												<v8:lang>ru</v8:lang>
+																												<v8:content>Сумма к оплате</v8:content>
+																											</v8:item>
+																										</Presentation>
+																										<Value xsi:type="xs:string">СуммаКОплате</Value>
+																									</xr:Value>
+																								</xr:Item>
+																								<xr:Item>
+																									<xr:Presentation/>
+																									<xr:CheckState>0</xr:CheckState>
+																									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																										<Presentation>
+																											<v8:item>
+																												<v8:lang>ru</v8:lang>
+																												<v8:content>Разделитель</v8:content>
+																											</v8:item>
+																										</Presentation>
+																										<Value xsi:type="xs:string">Разделитель</Value>
+																									</xr:Value>
+																								</xr:Item>
+																								<xr:Item>
+																									<xr:Presentation/>
+																									<xr:CheckState>0</xr:CheckState>
+																									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																										<Presentation>
+																											<v8:item>
+																												<v8:lang>ru</v8:lang>
+																												<v8:content>ИНН организации</v8:content>
+																											</v8:item>
+																										</Presentation>
+																										<Value xsi:type="xs:string">ИННОрганизации</Value>
+																									</xr:Value>
+																								</xr:Item>
+																								<xr:Item>
+																									<xr:Presentation/>
+																									<xr:CheckState>0</xr:CheckState>
+																									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																										<Presentation>
+																											<v8:item>
+																												<v8:lang>ru</v8:lang>
+																												<v8:content>Расчетный счет организации</v8:content>
+																											</v8:item>
+																										</Presentation>
+																										<Value xsi:type="xs:string">РасчетныйСчетОрганизации</Value>
+																									</xr:Value>
+																								</xr:Item>
+																								<xr:Item>
+																									<xr:Presentation/>
+																									<xr:CheckState>0</xr:CheckState>
+																									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																										<Presentation>
+																											<v8:item>
+																												<v8:lang>ru</v8:lang>
+																												<v8:content>Контрольная сумма</v8:content>
+																											</v8:item>
+																										</Presentation>
+																										<Value xsi:type="xs:string">КонтрольнаяСумма</Value>
+																									</xr:Value>
+																								</xr:Item>
+																								<xr:Item>
+																									<xr:Presentation/>
+																									<xr:CheckState>0</xr:CheckState>
+																									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																										<Presentation>
+																											<v8:item>
+																												<v8:lang>ru</v8:lang>
+																												<v8:content>Код организации</v8:content>
+																											</v8:item>
+																										</Presentation>
+																										<Value xsi:type="xs:string">КодОрганизации</Value>
+																									</xr:Value>
+																								</xr:Item>
+																							</ChoiceList>
+																							<ChoiceListButton>true</ChoiceListButton>
+																							<ContextMenu name="ТаблицаСоставШКПоУслугамКапремонтаПараметрКонтекстноеМеню" id="62"/>
+																							<ExtendedTooltip name="ТаблицаСоставШКПоУслугамКапремонтаПараметрExtendedTooltip" id="235"/>
+																							<Events>
+																								<Event name="StartListChoice">ТаблицаСоставШКПоУслугамКапремонтаПараметрНачалоВыбораИзСписка</Event>
+																								<Event name="ChoiceProcessing">ТаблицаСоставШКПоУслугамКапремонтаПараметрОбработкаВыбора</Event>
+																							</Events>
+																						</InputField>
+																						<InputField name="ТаблицаСоставШКПоУслугамКапремонтаДопСвойство" id="111">
+																							<DataPath>ТаблицаСоставШКПоУслугамКапремонта.ДопСвойство</DataPath>
+																							<EditMode>EnterOnInput</EditMode>
+																							<AutoMaxWidth>false</AutoMaxWidth>
+																							<ContextMenu name="ТаблицаСоставШКПоУслугамКапремонтаДопСвойствоКонтекстноеМеню" id="112"/>
+																							<ExtendedTooltip name="ТаблицаСоставШКПоУслугамКапремонтаДопСвойствоExtendedTooltip" id="236"/>
+																						</InputField>
+																					</ChildItems>
+																				</Table>
+																			</ChildItems>
+																		</UsualGroup>
+																		<UsualGroup name="ГруппаВнешняяОбработкаКР" id="141">
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Группа внешняя обработка КР</v8:content>
+																				</v8:item>
+																			</Title>
+																			<ToolTip>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Группа внешняя обработка осн</v8:content>
+																				</v8:item>
+																			</ToolTip>
+																			<Group>Vertical</Group>
+																			<Representation>None</Representation>
+																			<ShowTitle>false</ShowTitle>
+																			<ExtendedTooltip name="ГруппаВнешняяОбработкаКРExtendedTooltip" id="237"/>
+																			<ChildItems>
+																				<InputField name="ВнешняяОбработкаШтрихкодаКР" id="142">
+																					<DataPath>Запись.ВнешняяОбработкаШтрихкодаКР</DataPath>
+																					<Title>
+																						<v8:item>
+																							<v8:lang>ru</v8:lang>
+																							<v8:content>Внешняя обработка</v8:content>
+																						</v8:item>
+																					</Title>
+																					<ContextMenu name="ВнешняяОбработкаШтрихкодаКРКонтекстноеМеню" id="143"/>
+																					<ExtendedTooltip name="ВнешняяОбработкаШтрихкодаКРExtendedTooltip" id="238"/>
+																					<Events>
+																						<Event name="OnChange">ВнешняяОбработкаШтрихкодаКРПриИзменении</Event>
+																					</Events>
+																				</InputField>
+																			</ChildItems>
+																		</UsualGroup>
+																	</ChildItems>
+																</UsualGroup>
+															</ChildItems>
+														</Page>
+													</ChildItems>
+												</Pages>
+												<UsualGroup name="ГруппаСхемаРасчетаКонтрольнойСуммыИПримерШК" id="63">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа схема расчета контрольной суммы и пример ШК</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа схема расчета контрольной суммы и пример ШК</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>Vertical</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаСхемаРасчетаКонтрольнойСуммыИПримерШКExtendedTooltip" id="239"/>
+													<ChildItems>
+														<UsualGroup name="ГруппаПримерШК" id="65">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Пример штрихкода</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа пример ШК</v8:content>
+																</v8:item>
+															</ToolTip>
+															<Group>Vertical</Group>
+															<ExtendedTooltip name="ГруппаПримерШКExtendedTooltip" id="243"/>
+															<ChildItems>
+																<InputField name="ЛицевойСчетШК" id="70">
+																	<DataPath>ЛицевойСчетДляШК</DataPath>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Лицевой счет</v8:content>
+																		</v8:item>
+																	</Title>
+																	<AutoMaxWidth>false</AutoMaxWidth>
+																	<ContextMenu name="ЛицевойСчетШККонтекстноеМеню" id="71"/>
+																	<ExtendedTooltip name="ЛицевойСчетШКExtendedTooltip" id="244"/>
+																	<Events>
+																		<Event name="OnChange">ЛицевойСчетШКПриИзменении</Event>
+																	</Events>
+																</InputField>
+																<InputField name="СуммаДляШК" id="72">
+																	<DataPath>СуммаДляШК</DataPath>
+																	<AutoMaxWidth>false</AutoMaxWidth>
+																	<HorizontalStretch>true</HorizontalStretch>
+																	<ContextMenu name="СуммаДляШККонтекстноеМеню" id="73"/>
+																	<ExtendedTooltip name="СуммаДляШКExtendedTooltip" id="245"/>
+																	<Events>
+																		<Event name="OnChange">СуммаДляШКПриИзменении</Event>
+																	</Events>
+																</InputField>
+																<InputField name="ПримерШтрихкода" id="379">
+																	<DataPath>ПримерШтрихкода</DataPath>
+																	<TitleLocation>None</TitleLocation>
+																	<Width>50</Width>
+																	<TextEdit>false</TextEdit>
+																	<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+																	<InputHint>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>здесь будет выведен пример текста штрихкода</v8:content>
+																		</v8:item>
+																	</InputHint>
+																	<ContextMenu name="ПримерШтрихкодаКонтекстноеМеню" id="380"/>
+																	<ExtendedTooltip name="ПримерШтрихкодаРасширеннаяПодсказка" id="381"/>
+																	<Events>
+																		<Event name="Clearing">ПримерШтрихкодаОчистка</Event>
+																	</Events>
+																</InputField>
+																<LabelDecoration name="ДекорацияДлинаШК" id="74">
+																	<ContextMenu name="ДекорацияДлинаШККонтекстноеМеню" id="75"/>
+																	<ExtendedTooltip name="ДекорацияДлинаШКExtendedTooltip" id="246"/>
+																</LabelDecoration>
+															</ChildItems>
+														</UsualGroup>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</Page>
+								<Page name="СтраницаQRШК" id="353">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>QR (двумерный)</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страница QRШК</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="СтраницаQRШКРасширеннаяПодсказка" id="354"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаДопРеквизитовQRАвтоматически" id="355">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа доп реквизитов QRАвтоматически</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа доп реквизитов QRАвтоматически</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаДопРеквизитовQRАвтоматическиРасширеннаяПодсказка" id="356"/>
+											<ChildItems>
+												<LabelDecoration name="ГруппаДопРеквизитовQRАвтоматическиПодсказка" id="357">
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<TextColor>style:УПЖКХ_ТекстСообщенияИнформации</TextColor>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>QR штрихкод формируется автоматически. Более подробно алгоритм описан в справочной информации.</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="ГруппаДопРеквизитовQRАвтоматическиПодсказкаКонтекстноеМеню" id="358"/>
+													<ExtendedTooltip name="ГруппаДопРеквизитовQRАвтоматическиПодсказкаРасширеннаяПодсказка" id="359"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+										<Pages name="ГруппаДопРеквизитовQRШК" id="82">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа доп реквизитов QRШК</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа доп реквизитов QRШК</v8:content>
+												</v8:item>
+											</ToolTip>
+											<HorizontalStretch>true</HorizontalStretch>
+											<VerticalStretch>true</VerticalStretch>
+											<ExtendedTooltip name="ГруппаДопРеквизитовQRШКExtendedTooltip" id="251"/>
+											<ChildItems>
+												<Page name="ГруппаДопРеквизитовQRШКПоОсновнымУслугам" id="83">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Доп. реквизиты QR ШК по основным услугам</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа доп реквизитов QRШКПо основным услугам</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ExtendedTooltip name="ГруппаДопРеквизитовQRШКПоОсновнымУслугамExtendedTooltip" id="252"/>
+													<ChildItems>
+														<UsualGroup name="ГруппаТаблицаДопРеквизитовQRШКПоОсн" id="149">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа таблица доп реквизитов QRШКПо осн</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа таблица доп реквизитов QRШКПо осн</v8:content>
+																</v8:item>
+															</ToolTip>
+															<Group>Vertical</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаТаблицаДопРеквизитовQRШКПоОснExtendedTooltip" id="253"/>
+															<ChildItems>
+																<InputField name="КодОрганизацииДляQRКодаПоОсн" id="297">
+																	<DataPath>Запись.КодОрганизацииДляQRКодаПоОсн</DataPath>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Код организации</v8:content>
+																		</v8:item>
+																	</Title>
+																	<Width>25</Width>
+																	<HorizontalStretch>false</HorizontalStretch>
+																	<ContextMenu name="КодОрганизацииДляQRКодаПоОснКонтекстноеМеню" id="298"/>
+																	<ExtendedTooltip name="КодОрганизацииДляQRКодаПоОснРасширеннаяПодсказка" id="299"/>
+																</InputField>
+																<InputField name="НаименованиеПлатежаНазначениеПоОсн" id="413">
+																	<DataPath>Запись.НаименованиеПлатежаНазначениеПоОсн</DataPath>
+																	<ToolTipRepresentation>Button</ToolTipRepresentation>
+																	<AutoMaxWidth>false</AutoMaxWidth>
+																	<ContextMenu name="НаименованиеПлатежаНазначениеПоОснКонтекстноеМеню" id="414">
+																		<ChildItems>
+																			<Button name="НаименованиеПлатежаНазначениеПоОснКонтекстноеМенюВыбратьПараметрИзКонтекстногоМеню" id="419">
+																				<Type>CommandBarButton</Type>
+																				<CommandName>Form.Command.ВыбратьПараметрИзКонтекстногоМеню</CommandName>
+																				<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+																				<ExtendedTooltip name="НаименованиеПлатежаНазначениеПоОснКонтекстноеМенюВыбратьПараметрИзКонтекстногоМенюРасширеннаяПодсказка" id="420"/>
+																			</Button>
+																		</ChildItems>
+																	</ContextMenu>
+																	<ExtendedTooltip name="НаименованиеПлатежаНазначениеПоОснРасширеннаяПодсказка" id="415">
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Настройка предназначена для редактирования текста параметра "Purpose". Для вставки параметров в тексте данного поля нажмите правую кнопку мыши и выберите команду "Выбрать параметр", затем из списка выберите параметр – это текстовая константа, которая при формировании QR-штрихкода будет заменена на соответствующее значение.</v8:content>
+																			</v8:item>
+																		</Title>
+																	</ExtendedTooltip>
+																</InputField>
+																<InputField name="КодУслугиДляШтрихКодаПоОсн" id="288">
+																	<DataPath>Запись.КодУслугиДляШтрихКодаПоОсн</DataPath>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Код услуги</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ToolTipRepresentation>Button</ToolTipRepresentation>
+																	<Width>25</Width>
+																	<AutoMaxWidth>false</AutoMaxWidth>
+																	<HorizontalStretch>false</HorizontalStretch>
+																	<ContextMenu name="КодУслугиДляШтрихКодаПоОснКонтекстноеМеню" id="289"/>
+																	<ExtendedTooltip name="КодУслугиДляШтрихКодаПоОснРасширеннаяПодсказка" id="290">
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Значение настройки "Код услуги" соответствует дополнительному реквизиту "Код услуги [serviceName]" по основным услугам. Выводится в QR-штрихкоде, когда выбран данный реквизит в списке дополнительных реквизитов.</v8:content>
+																			</v8:item>
+																		</Title>
+																	</ExtendedTooltip>
+																</InputField>
+																<LabelDecoration name="НастройкаQRКодаПоОснПодсказка" id="438">
+																	<AutoMaxWidth>false</AutoMaxWidth>
+																	<TextColor>style:УПЖКХ_ТекстСообщенияИнформации</TextColor>
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Установите флажки напротив реквизитов, которые необходимо выводить в штрихкоде.</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ContextMenu name="НастройкаQRКодаПоОснПодсказкаКонтекстноеМеню" id="439"/>
+																	<ExtendedTooltip name="НастройкаQRКодаПоОснПодсказкаРасширеннаяПодсказка" id="440"/>
+																</LabelDecoration>
+																<Table name="ДополнительныеРеквизитыQRКодаПоОсн" id="128">
+																	<Representation>List</Representation>
+																	<ChangeRowSet>false</ChangeRowSet>
+																	<ChangeRowOrder>false</ChangeRowOrder>
+																	<HorizontalLines>false</HorizontalLines>
+																	<VerticalLines>false</VerticalLines>
+																	<AutoInsertNewRow>true</AutoInsertNewRow>
+																	<FileDragMode>AsFile</FileDragMode>
+																	<DataPath>ДополнительныеРеквизитыQRКодаПоОсн</DataPath>
+																	<RowPictureDataPath>ДополнительныеРеквизитыQRКодаПоОсн.Picture</RowPictureDataPath>
+																	<CommandSet>
+																		<ExcludedCommand>Add</ExcludedCommand>
+																		<ExcludedCommand>Change</ExcludedCommand>
+																		<ExcludedCommand>Copy</ExcludedCommand>
+																		<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+																		<ExcludedCommand>Delete</ExcludedCommand>
+																		<ExcludedCommand>EndEdit</ExcludedCommand>
+																		<ExcludedCommand>MoveDown</ExcludedCommand>
+																		<ExcludedCommand>MoveUp</ExcludedCommand>
+																		<ExcludedCommand>Pickup</ExcludedCommand>
+																		<ExcludedCommand>SelectAll</ExcludedCommand>
+																		<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+																		<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+																		<ExcludedCommand>SortListAsc</ExcludedCommand>
+																		<ExcludedCommand>SortListDesc</ExcludedCommand>
+																	</CommandSet>
+																	<SearchStringLocation>None</SearchStringLocation>
+																	<ViewStatusLocation>None</ViewStatusLocation>
+																	<SearchControlLocation>None</SearchControlLocation>
+																	<ContextMenu name="ДополнительныеРеквизитыQRКодаПоОснКонтекстноеМеню" id="129"/>
+																	<AutoCommandBar name="ДополнительныеРеквизитыQRКодаПоОснКоманднаяПанель" id="130">
+																		<HorizontalAlign>Right</HorizontalAlign>
+																		<Autofill>false</Autofill>
+																		<ChildItems>
+																			<Button name="ДополнительныеРеквизитыQRКодаПоОсновнымУслугамУстановитьФлажки" id="137">
+																				<Type>CommandBarButton</Type>
+																				<CommandName>Form.Item.ДополнительныеРеквизитыQRКодаПоОсн.StandardCommand.CheckAll</CommandName>
+																				<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+																				<ExtendedTooltip name="ДополнительныеРеквизитыQRКодаПоОсновнымУслугамУстановитьФлажкиExtendedTooltip" id="254"/>
+																			</Button>
+																			<Button name="ДополнительныеРеквизитыQRКодаПоОсновнымУслугамСнятьФлажки" id="138">
+																				<Type>CommandBarButton</Type>
+																				<CommandName>Form.Item.ДополнительныеРеквизитыQRКодаПоОсн.StandardCommand.UncheckAll</CommandName>
+																				<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+																				<ExtendedTooltip name="ДополнительныеРеквизитыQRКодаПоОсновнымУслугамСнятьФлажкиExtendedTooltip" id="255"/>
+																			</Button>
+																		</ChildItems>
+																	</AutoCommandBar>
+																	<ExtendedTooltip name="ДополнительныеРеквизитыQRКодаПоОснExtendedTooltip" id="256"/>
+																	<SearchStringAddition name="ДополнительныеРеквизитыQRКодаПоОснSearchString" id="257">
+																		<AdditionSource>
+																			<Item>ДополнительныеРеквизитыQRКодаПоОсн</Item>
+																			<Type>SearchStringRepresentation</Type>
+																		</AdditionSource>
+																		<ContextMenu name="ДополнительныеРеквизитыQRКодаПоОснSearchStringContextMenu" id="258"/>
+																		<ExtendedTooltip name="ДополнительныеРеквизитыQRКодаПоОснSearchStringExtendedTooltip" id="259"/>
+																	</SearchStringAddition>
+																	<ViewStatusAddition name="ДополнительныеРеквизитыQRКодаПоОснViewStatus" id="260">
+																		<AdditionSource>
+																			<Item>ДополнительныеРеквизитыQRКодаПоОсн</Item>
+																			<Type>ViewStatusRepresentation</Type>
+																		</AdditionSource>
+																		<ContextMenu name="ДополнительныеРеквизитыQRКодаПоОснViewStatusContextMenu" id="261"/>
+																		<ExtendedTooltip name="ДополнительныеРеквизитыQRКодаПоОснViewStatusExtendedTooltip" id="262"/>
+																	</ViewStatusAddition>
+																	<SearchControlAddition name="ДополнительныеРеквизитыQRКодаПоОснSearchControl" id="263">
+																		<AdditionSource>
+																			<Item>ДополнительныеРеквизитыQRКодаПоОсн</Item>
+																			<Type>SearchControl</Type>
+																		</AdditionSource>
+																		<ContextMenu name="ДополнительныеРеквизитыQRКодаПоОснSearchControlContextMenu" id="264"/>
+																		<ExtendedTooltip name="ДополнительныеРеквизитыQRКодаПоОснSearchControlExtendedTooltip" id="265"/>
+																	</SearchControlAddition>
+																	<ChildItems>
+																		<InputField name="ДополнительныеРеквизитыQRКодаПоОсновнымУслугамПредставление" id="131">
+																			<DataPath>ДополнительныеРеквизитыQRКодаПоОсн.Presentation</DataPath>
+																			<ReadOnly>true</ReadOnly>
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Наименование реквизита</v8:content>
+																				</v8:item>
+																			</Title>
+																			<EditMode>EnterOnInput</EditMode>
+																			<ContextMenu name="ДополнительныеРеквизитыQRКодаПоОсновнымУслугамПредставлениеКонтекстноеМеню" id="132"/>
+																			<ExtendedTooltip name="ДополнительныеРеквизитыQRКодаПоОсновнымУслугамПредставлениеExtendedTooltip" id="266"/>
+																		</InputField>
+																		<CheckBoxField name="ДополнительныеРеквизитыQRКодаПоОсновнымУслугамПометка" id="133">
+																			<DataPath>ДополнительныеРеквизитыQRКодаПоОсн.Check</DataPath>
+																			<EditMode>EnterOnInput</EditMode>
+																			<CheckBoxType>Auto</CheckBoxType>
+																			<ContextMenu name="ДополнительныеРеквизитыQRКодаПоОсновнымУслугамПометкаКонтекстноеМеню" id="134"/>
+																			<ExtendedTooltip name="ДополнительныеРеквизитыQRКодаПоОсновнымУслугамПометкаExtendedTooltip" id="267"/>
+																			<Events>
+																				<Event name="OnChange">ДополнительныеРеквизитыQRКодаПоОсновнымУслугамПометкаПриИзменении</Event>
+																			</Events>
+																		</CheckBoxField>
+																	</ChildItems>
+																</Table>
+															</ChildItems>
+														</UsualGroup>
+														<UsualGroup name="ГруппаВнешняяОбработкаQRОсн" id="98">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа внешняя обработка QRОсн</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа внешняя обработка QRОсн</v8:content>
+																</v8:item>
+															</ToolTip>
+															<Group>Vertical</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаВнешняяОбработкаQRОснExtendedTooltip" id="268"/>
+															<ChildItems>
+																<InputField name="ВнешняяОбработкаШтрихкодаQRОсн" id="99">
+																	<DataPath>Запись.ВнешняяОбработкаШтрихкодаQRОсн</DataPath>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Внешняя обработка</v8:content>
+																		</v8:item>
+																	</Title>
+																	<AutoMaxWidth>false</AutoMaxWidth>
+																	<ContextMenu name="ВнешняяОбработкаШтрихкодаQRОснКонтекстноеМеню" id="100"/>
+																	<ExtendedTooltip name="ВнешняяОбработкаШтрихкодаQRОснExtendedTooltip" id="269"/>
+																</InputField>
+															</ChildItems>
+														</UsualGroup>
+													</ChildItems>
+												</Page>
+												<Page name="ГруппаДопРеквизитовQRШКПоУслугамКР" id="84">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Доп. реквизиты QR ШК по услугам капремонта</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа доп реквизитов QRШКПо услугам КР</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ExtendedTooltip name="ГруппаДопРеквизитовQRШКПоУслугамКРExtendedTooltip" id="270"/>
+													<ChildItems>
+														<UsualGroup name="ГруппаТаблицаДопРеквизитовQRШКПоКР" id="150">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа таблица доп реквизитов QRШКПо КР</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа таблица доп реквизитов QRШКПо КР</v8:content>
+																</v8:item>
+															</ToolTip>
+															<Group>Vertical</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаТаблицаДопРеквизитовQRШКПоКРExtendedTooltip" id="271"/>
+															<ChildItems>
+																<InputField name="КодОрганизацииДляQRКодаПоУслугамКР" id="432">
+																	<DataPath>Запись.КодОрганизацииДляQRКодаПоУслугамКР</DataPath>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Код организации</v8:content>
+																		</v8:item>
+																	</Title>
+																	<Width>25</Width>
+																	<HorizontalStretch>false</HorizontalStretch>
+																	<ContextMenu name="КодОрганизацииДляQRКодаПоУслугамКРКонтекстноеМеню" id="433"/>
+																	<ExtendedTooltip name="КодОрганизацииДляQRКодаПоУслугамКРРасширеннаяПодсказка" id="434"/>
+																</InputField>
+																<InputField name="НаименованиеПлатежаНазначениеПоКР" id="416">
+																	<DataPath>Запись.НаименованиеПлатежаНазначениеПоКР</DataPath>
+																	<ToolTipRepresentation>Button</ToolTipRepresentation>
+																	<AutoMaxWidth>false</AutoMaxWidth>
+																	<ContextMenu name="НаименованиеПлатежаНазначениеПоКРКонтекстноеМеню" id="417">
+																		<ChildItems>
+																			<Button name="НаименованиеПлатежаНазначениеПоКРКонтекстноеМенюВыбратьПараметрИзКонтекстногоМеню" id="421">
+																				<Type>CommandBarButton</Type>
+																				<CommandName>Form.Command.ВыбратьПараметрИзКонтекстногоМеню</CommandName>
+																				<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+																				<ExtendedTooltip name="НаименованиеПлатежаНазначениеПоКРКонтекстноеМенюВыбратьПараметрИзКонтекстногоМенюРасширеннаяПодсказка" id="422"/>
+																			</Button>
+																		</ChildItems>
+																	</ContextMenu>
+																	<ExtendedTooltip name="НаименованиеПлатежаНазначениеПоКРРасширеннаяПодсказка" id="418">
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Настройка предназначена для редактирования текста параметра "Purpose". Для вставки параметров в тексте данного поля нажмите правую кнопку мыши и выберите команду "Выбрать параметр", затем из списка выберите параметр – это текстовая константа, которая при формировании QR-штрихкода будет заменена на соответствующее значение.</v8:content>
+																			</v8:item>
+																		</Title>
+																	</ExtendedTooltip>
+																</InputField>
+																<InputField name="КодУслугиДляШтрихКодаПоКР" id="392">
+																	<DataPath>Запись.КодУслугиДляШтрихКодаПоКР</DataPath>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Код услуги</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ToolTipRepresentation>Button</ToolTipRepresentation>
+																	<Width>25</Width>
+																	<AutoMaxWidth>false</AutoMaxWidth>
+																	<HorizontalStretch>false</HorizontalStretch>
+																	<ContextMenu name="КодУслугиДляШтрихКодаПоКРКонтекстноеМеню" id="393"/>
+																	<ExtendedTooltip name="КодУслугиДляШтрихКодаПоКРРасширеннаяПодсказка" id="394">
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Значение настройки "Код услуги" соответствует дополнительному реквизиту "Код услуги [serviceName]" по услугам капитального ремонта. Выводится в QR-штрихкоде, когда выбран данный реквизит в списке дополнительных реквизитов.</v8:content>
+																			</v8:item>
+																		</Title>
+																	</ExtendedTooltip>
+																</InputField>
+																<LabelDecoration name="НастройкаQRКодаПоУслугамКРПодсказка" id="441">
+																	<AutoMaxWidth>false</AutoMaxWidth>
+																	<TextColor>style:УПЖКХ_ТекстСообщенияИнформации</TextColor>
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Установите флажки напротив реквизитов, которые необходимо выводить в штрихкоде.</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ContextMenu name="НастройкаQRКодаПоУслугамКРПодсказкаКонтекстноеМеню" id="442"/>
+																	<ExtendedTooltip name="НастройкаQRКодаПоУслугамКРПодсказкаРасширеннаяПодсказка" id="443"/>
+																</LabelDecoration>
+																<Table name="ДополнительныеРеквизитыQRКодаПоКР" id="90">
+																	<Representation>List</Representation>
+																	<ChangeRowSet>false</ChangeRowSet>
+																	<ChangeRowOrder>false</ChangeRowOrder>
+																	<HorizontalLines>false</HorizontalLines>
+																	<VerticalLines>false</VerticalLines>
+																	<AutoInsertNewRow>true</AutoInsertNewRow>
+																	<FileDragMode>AsFile</FileDragMode>
+																	<DataPath>ДополнительныеРеквизитыQRКодаПоКР</DataPath>
+																	<RowPictureDataPath>ДополнительныеРеквизитыQRКодаПоКР.Picture</RowPictureDataPath>
+																	<CommandSet>
+																		<ExcludedCommand>Add</ExcludedCommand>
+																		<ExcludedCommand>Change</ExcludedCommand>
+																		<ExcludedCommand>Copy</ExcludedCommand>
+																		<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+																		<ExcludedCommand>Delete</ExcludedCommand>
+																		<ExcludedCommand>EndEdit</ExcludedCommand>
+																		<ExcludedCommand>MoveDown</ExcludedCommand>
+																		<ExcludedCommand>MoveUp</ExcludedCommand>
+																		<ExcludedCommand>Pickup</ExcludedCommand>
+																		<ExcludedCommand>SelectAll</ExcludedCommand>
+																		<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+																		<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+																		<ExcludedCommand>SortListAsc</ExcludedCommand>
+																		<ExcludedCommand>SortListDesc</ExcludedCommand>
+																	</CommandSet>
+																	<SearchStringLocation>None</SearchStringLocation>
+																	<ViewStatusLocation>None</ViewStatusLocation>
+																	<SearchControlLocation>None</SearchControlLocation>
+																	<ContextMenu name="ДополнительныеРеквизитыQRКодаПоКРКонтекстноеМеню" id="91"/>
+																	<AutoCommandBar name="ДополнительныеРеквизитыQRКодаПоКРКоманднаяПанель" id="92">
+																		<HorizontalAlign>Right</HorizontalAlign>
+																		<Autofill>false</Autofill>
+																		<ChildItems>
+																			<Button name="ДополнительныеРеквизитыQRКодаПоУслугамКапремонтаУстановитьФлажки" id="139">
+																				<Type>CommandBarButton</Type>
+																				<CommandName>Form.Item.ДополнительныеРеквизитыQRКодаПоКР.StandardCommand.CheckAll</CommandName>
+																				<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+																				<ExtendedTooltip name="ДополнительныеРеквизитыQRКодаПоУслугамКапремонтаУстановитьФлажкиExtendedTooltip" id="272"/>
+																			</Button>
+																			<Button name="ДополнительныеРеквизитыQRКодаПоУслугамКапремонтаСнятьФлажки" id="140">
+																				<Type>CommandBarButton</Type>
+																				<CommandName>Form.Item.ДополнительныеРеквизитыQRКодаПоКР.StandardCommand.UncheckAll</CommandName>
+																				<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+																				<ExtendedTooltip name="ДополнительныеРеквизитыQRКодаПоУслугамКапремонтаСнятьФлажкиExtendedTooltip" id="273"/>
+																			</Button>
+																		</ChildItems>
+																	</AutoCommandBar>
+																	<ExtendedTooltip name="ДополнительныеРеквизитыQRКодаПоКРExtendedTooltip" id="274"/>
+																	<SearchStringAddition name="ДополнительныеРеквизитыQRКодаПоКРSearchString" id="275">
+																		<AdditionSource>
+																			<Item>ДополнительныеРеквизитыQRКодаПоКР</Item>
+																			<Type>SearchStringRepresentation</Type>
+																		</AdditionSource>
+																		<ContextMenu name="ДополнительныеРеквизитыQRКодаПоКРSearchStringContextMenu" id="276"/>
+																		<ExtendedTooltip name="ДополнительныеРеквизитыQRКодаПоКРSearchStringExtendedTooltip" id="277"/>
+																	</SearchStringAddition>
+																	<ViewStatusAddition name="ДополнительныеРеквизитыQRКодаПоКРViewStatus" id="278">
+																		<AdditionSource>
+																			<Item>ДополнительныеРеквизитыQRКодаПоКР</Item>
+																			<Type>ViewStatusRepresentation</Type>
+																		</AdditionSource>
+																		<ContextMenu name="ДополнительныеРеквизитыQRКодаПоКРViewStatusContextMenu" id="279"/>
+																		<ExtendedTooltip name="ДополнительныеРеквизитыQRКодаПоКРViewStatusExtendedTooltip" id="280"/>
+																	</ViewStatusAddition>
+																	<SearchControlAddition name="ДополнительныеРеквизитыQRКодаПоКРSearchControl" id="281">
+																		<AdditionSource>
+																			<Item>ДополнительныеРеквизитыQRКодаПоКР</Item>
+																			<Type>SearchControl</Type>
+																		</AdditionSource>
+																		<ContextMenu name="ДополнительныеРеквизитыQRКодаПоКРSearchControlContextMenu" id="282"/>
+																		<ExtendedTooltip name="ДополнительныеРеквизитыQRКодаПоКРSearchControlExtendedTooltip" id="283"/>
+																	</SearchControlAddition>
+																	<ChildItems>
+																		<InputField name="ДополнительныеРеквизитыQRКодаПоУслугамКапремонтаЗначение" id="93">
+																			<DataPath>ДополнительныеРеквизитыQRКодаПоКР.Value</DataPath>
+																			<ReadOnly>true</ReadOnly>
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Наименование реквизита</v8:content>
+																				</v8:item>
+																			</Title>
+																			<EditMode>EnterOnInput</EditMode>
+																			<ContextMenu name="ДополнительныеРеквизитыQRКодаПоУслугамКапремонтаЗначениеКонтекстноеМеню" id="94"/>
+																			<ExtendedTooltip name="ДополнительныеРеквизитыQRКодаПоУслугамКапремонтаЗначениеExtendedTooltip" id="284"/>
+																		</InputField>
+																		<CheckBoxField name="ДополнительныеРеквизитыQRКодаПоУслугамКапремонтаПометка" id="135">
+																			<DataPath>ДополнительныеРеквизитыQRКодаПоКР.Check</DataPath>
+																			<EditMode>EnterOnInput</EditMode>
+																			<CheckBoxType>Auto</CheckBoxType>
+																			<ContextMenu name="ДополнительныеРеквизитыQRКодаПоУслугамКапремонтаПометкаКонтекстноеМеню" id="136"/>
+																			<ExtendedTooltip name="ДополнительныеРеквизитыQRКодаПоУслугамКапремонтаПометкаExtendedTooltip" id="285"/>
+																			<Events>
+																				<Event name="OnChange">ДополнительныеРеквизитыQRКодаПоУслугамКапремонтаПометкаПриИзменении</Event>
+																			</Events>
+																		</CheckBoxField>
+																	</ChildItems>
+																</Table>
+															</ChildItems>
+														</UsualGroup>
+														<UsualGroup name="ГруппаВнешняяОбработкаQRКР" id="144">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа внешняя обработка QRКР</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа внешняя обработка QR</v8:content>
+																</v8:item>
+															</ToolTip>
+															<Group>Vertical</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаВнешняяОбработкаQRКРExtendedTooltip" id="286"/>
+															<ChildItems>
+																<InputField name="ВнешняяОбработкаШтрихкодаQRКР" id="145">
+																	<DataPath>Запись.ВнешняяОбработкаШтрихкодаQRКР</DataPath>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Внешняя обработка</v8:content>
+																		</v8:item>
+																	</Title>
+																	<AutoMaxWidth>false</AutoMaxWidth>
+																	<ContextMenu name="ВнешняяОбработкаШтрихкодаQRКРКонтекстноеМеню" id="146"/>
+																	<ExtendedTooltip name="ВнешняяОбработкаШтрихкодаQRКРExtendedTooltip" id="287"/>
+																</InputField>
+															</ChildItems>
+														</UsualGroup>
+													</ChildItems>
+												</Page>
+												<Page name="ГруппаНастройкиQRШтрихкода" id="293">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Настройки QR-штрихкода</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа настройки QRШтрихкода</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ExtendedTooltip name="ГруппаНастройкиQRШтрихкодаРасширеннаяПодсказка" id="294"/>
+													<ChildItems>
+														<UsualGroup name="ГруппаФорматКодировкиТекстаQR" id="364">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа формат кодировки текста QR</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа формат кодировки текста QR</v8:content>
+																</v8:item>
+															</ToolTip>
+															<Group>Vertical</Group>
+															<ShowTitle>false</ShowTitle>
+															<ThroughAlign>Use</ThroughAlign>
+															<ExtendedTooltip name="ГруппаФорматКодировкиТекстаQRРасширеннаяПодсказка" id="365"/>
+															<ChildItems>
+																<InputField name="ФорматКодировкиТекстаQR" id="300">
+																	<DataPath>Запись.ФорматКодировкиТекстаQR</DataPath>
+																	<Width>25</Width>
+																	<ListChoiceMode>true</ListChoiceMode>
+																	<TextEdit>false</TextEdit>
+																	<ChoiceList>
+																		<xr:Item>
+																			<xr:Presentation/>
+																			<xr:CheckState>0</xr:CheckState>
+																			<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																				<Presentation>
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>1 (соответствует Windows-1251)</v8:content>
+																					</v8:item>
+																				</Presentation>
+																				<Value xsi:type="xs:decimal">1</Value>
+																			</xr:Value>
+																		</xr:Item>
+																		<xr:Item>
+																			<xr:Presentation/>
+																			<xr:CheckState>0</xr:CheckState>
+																			<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																				<Presentation>
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>2 (соответствует UTF-8)</v8:content>
+																					</v8:item>
+																				</Presentation>
+																				<Value xsi:type="xs:decimal">2</Value>
+																			</xr:Value>
+																		</xr:Item>
+																	</ChoiceList>
+																	<ContextMenu name="ФорматКодировкиТекстаQRКонтекстноеМеню" id="301"/>
+																	<ExtendedTooltip name="ФорматКодировкиТекстаQRРасширеннаяПодсказка" id="302"/>
+																	<Events>
+																		<Event name="Clearing">ФорматКодировкиТекстаQRОчистка</Event>
+																	</Events>
+																</InputField>
+															</ChildItems>
+														</UsualGroup>
+														<UsualGroup name="ГруппаГруппаНастройкиQRШтрихкодаДоп" id="366">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа группа настройки QRШтрихкода доп</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа группа настройки QRШтрихкода доп</v8:content>
+																</v8:item>
+															</ToolTip>
+															<Group>Vertical</Group>
+															<ShowTitle>false</ShowTitle>
+															<ThroughAlign>Use</ThroughAlign>
+															<ExtendedTooltip name="ГруппаГруппаНастройкиQRШтрихкодаДопРасширеннаяПодсказка" id="367"/>
+															<ChildItems>
+																<InputField name="ФорматПериодаОплаты" id="303">
+																	<DataPath>Запись.ФорматПериодаОплаты</DataPath>
+																	<ToolTipRepresentation>Button</ToolTipRepresentation>
+																	<Width>25</Width>
+																	<HorizontalStretch>false</HorizontalStretch>
+																	<ListChoiceMode>true</ListChoiceMode>
+																	<TextEdit>false</TextEdit>
+																	<ChoiceList>
+																		<xr:Item>
+																			<xr:Presentation/>
+																			<xr:CheckState>0</xr:CheckState>
+																			<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																				<Presentation/>
+																				<Value xsi:type="xs:string">ММГГГГ</Value>
+																			</xr:Value>
+																		</xr:Item>
+																		<xr:Item>
+																			<xr:Presentation/>
+																			<xr:CheckState>0</xr:CheckState>
+																			<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																				<Presentation/>
+																				<Value xsi:type="xs:string">ММГГ</Value>
+																			</xr:Value>
+																		</xr:Item>
+																		<xr:Item>
+																			<xr:Presentation/>
+																			<xr:CheckState>0</xr:CheckState>
+																			<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																				<Presentation/>
+																				<Value xsi:type="xs:string">ММГГММГГ</Value>
+																			</xr:Value>
+																		</xr:Item>
+																		<xr:Item>
+																			<xr:Presentation/>
+																			<xr:CheckState>0</xr:CheckState>
+																			<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																				<Presentation/>
+																				<Value xsi:type="xs:string">ММ.ГГГГ</Value>
+																			</xr:Value>
+																		</xr:Item>
+																	</ChoiceList>
+																	<InputHint>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>по умолчанию "ММГГГГ"</v8:content>
+																		</v8:item>
+																	</InputHint>
+																	<ContextMenu name="ФорматПериодаОплатыКонтекстноеМеню" id="304"/>
+																	<ExtendedTooltip name="ФорматПериодаОплатыРасширеннаяПодсказка" id="305">
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Если выбран "ММГГГГ", то период оплаты "январь 2015" будет выведен в формате "012015" (6 цифр).
+Если выбран "ММГГ", то период оплаты "январь 2015" будет выведен в формате "0115" (4 цифры).
+Если выбран "ММГГММГГ", то период оплаты "январь 2015" будет выведен в формате "01150115" (8 цифр).
+Если выбран "ММ.ГГГГ", то период оплаты "январь 2015" будет выведен в формате "01.2015" (7 символов).</v8:content>
+																			</v8:item>
+																		</Title>
+																	</ExtendedTooltip>
+																	<Events>
+																		<Event name="Clearing">ФорматПериодаОплатыОчистка</Event>
+																	</Events>
+																</InputField>
+																<CheckBoxField name="ИсключитьИзАдресаПомещенияСимволыНомерИТочка" id="306">
+																	<DataPath>Запись.ИсключитьИзАдресаПомещенияСимволыНомерИТочка</DataPath>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Исключить из адреса помещения символы "№" и "."(точка)</v8:content>
+																		</v8:item>
+																	</Title>
+																	<TitleLocation>Right</TitleLocation>
+																	<CheckBoxType>Auto</CheckBoxType>
+																	<ContextMenu name="ИсключитьИзАдресаПомещенияСимволыНомерИТочкаКонтекстноеМеню" id="307"/>
+																	<ExtendedTooltip name="ИсключитьИзАдресаПомещенияСимволыНомерИТочкаРасширеннаяПодсказка" id="308"/>
+																</CheckBoxField>
+															</ChildItems>
+														</UsualGroup>
+													</ChildItems>
+												</Page>
+											</ChildItems>
+										</Pages>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаШтрихкодДляОнлайнОплаты" id="368">
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Штрихкод для онлайн-оплаты</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Штрихкод для онлайн-оплаты</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаШтрихкодДляОнлайнОплатыРасширеннаяПодсказка" id="369"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияВыводитьQRштрихкодДляОнлайнОплаты" id="376">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<HorizontalStretch>true</HorizontalStretch>
+							<TextColor>style:УПЖКХ_ТекстСправочнойНадписи</TextColor>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Данные настройки позволяют вывести в платежных документах дополнительный QR-штрихкод для быстрой онлайн-оплаты начислений.
+Подробное описание данной возможности можно посмотреть &lt;link https://www.vdgb-soft.ru/faq/faq_tsj_3_0/vyvod_qr_shtrikhkoda_v_sisteme_citycard/&gt;на нашем сайте&lt;/&gt;.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияВыводитьQRштрихкодДляОнлайнОплатыКонтекстноеМеню" id="377"/>
+							<ExtendedTooltip name="ДекорацияВыводитьQRштрихкодДляОнлайнОплатыРасширеннаяПодсказка" id="378"/>
+						</LabelDecoration>
+						<LabelDecoration name="ГиперссылкаПечатьЛистовкиОбОнлайнОплате" id="395">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<HorizontalStretch>true</HorizontalStretch>
+							<TextColor>style:УПЖКХ_ТекстСправочнойНадписи</TextColor>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;link #ПечатьЛистовкиОбОнлайнОплате&gt;Распечатать информационные листовки&lt;/&gt;, чтобы оповестить жильцов о возможности оплатить начисления онлайн.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ГиперссылкаПечатьЛистовкиОбОнлайнОплатеКонтекстноеМеню" id="396"/>
+							<ExtendedTooltip name="ГиперссылкаПечатьЛистовкиОбОнлайнОплатеРасширеннаяПодсказка" id="397"/>
+							<Events>
+								<Event name="URLProcessing">ГиперссылкаПечатьЛистовкиОбОнлайнОплатеОбработкаНавигационнойСсылки</Event>
+							</Events>
+						</LabelDecoration>
+						<Pages name="НастройкиВыводаШКДляОплатыОнлайн" id="404">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройки вывода ШКДля оплаты онлайн</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройки вывода ШКДля оплаты онлайн</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalStretch>true</HorizontalStretch>
+							<VerticalStretch>true</VerticalStretch>
+							<ExtendedTooltip name="НастройкиВыводаШКДляОплатыОнлайнРасширеннаяПодсказка" id="405"/>
+							<ChildItems>
+								<Page name="НастройкиВыводаШКДляОплатыОнлайнПоОсн" id="406">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Для квитанции по основным услугам</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Настройки вывода ШКДля оплаты онлайн по осн</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="НастройкиВыводаШКДляОплатыОнлайнПоОснРасширеннаяПодсказка" id="407"/>
+									<ChildItems>
+										<CheckBoxField name="ВыводитьQRштрихкодДляОнлайнОплатыПоОсн" id="370">
+											<DataPath>Запись.ВыводитьQRштрихкодДляСитикардПоОсн</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Данная настройка позволяет вывести в платежных документах по основным услугам и в единых платежных документах по основным услугам и услугам капитального ремонта дополнительный QR-штрихкод для быстрой оплаты начислений через систему онлайн-оплаты.</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ВыводитьQRштрихкодДляОнлайнОплатыПоОснКонтекстноеМеню" id="371"/>
+											<ExtendedTooltip name="ВыводитьQRштрихкодДляОнлайнОплатыПоОснРасширеннаяПодсказка" id="372">
+												<TextColor>style:УПЖКХ_ТекстСправочнойНадписи</TextColor>
+												<Title formatted="true"/>
+											</ExtendedTooltip>
+											<Events>
+												<Event name="OnChange">ВыводитьQRштрихкодДляСитикардПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+										<InputField name="КодОрганизацииВСитикардПоОсн" id="373">
+											<DataPath>Запись.КодОрганизацииВСитикардПоОсн</DataPath>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>указывается идентификатор текущей организации в системе онлайн-оплаты по основным услугам. Поле доступно при установленной настройке "Выводить QR-штрихкод для оплаты в системе онлайн-оплаты".</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<AutoMarkIncomplete>true</AutoMarkIncomplete>
+											<ContextMenu name="КодОрганизацииВСитикардПоОснКонтекстноеМеню" id="374"/>
+											<ExtendedTooltip name="КодОрганизацииВСитикардПоОснРасширеннаяПодсказка" id="375"/>
+										</InputField>
+									</ChildItems>
+								</Page>
+								<Page name="НастройкиВыводаШКДляОплатыОнлайнПоКР" id="408">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Для квитанции по услугам капитального ремонта</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Настройки вывода ШКДля оплаты онлайн по КР</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="НастройкиВыводаШКДляОплатыОнлайнПоКРРасширеннаяПодсказка" id="409"/>
+									<ChildItems>
+										<CheckBoxField name="ВыводитьQRштрихкодДляОнлайнОплатыПоКР" id="410">
+											<DataPath>Запись.ВыводитьQRштрихкодДляСитикардПоКР</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Данная настройка позволяет вывести в платежных документах по услугам капитального ремонта дополнительный QR-штрихкод для быстрой оплаты начислений через систему онлайн-оплаты.</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ВыводитьQRштрихкодДляОнлайнОплатыПоКРКонтекстноеМеню" id="411"/>
+											<ExtendedTooltip name="ВыводитьQRштрихкодДляОнлайнОплатыПоКРРасширеннаяПодсказка" id="412">
+												<TextColor>style:УПЖКХ_ТекстСправочнойНадписи</TextColor>
+												<Title formatted="true"/>
+											</ExtendedTooltip>
+											<Events>
+												<Event name="OnChange">ВыводитьQRштрихкодДляСитикардПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+										<InputField name="КодОрганизацииВСитикардПоКр" id="401">
+											<DataPath>Запись.КодОрганизацииВСитикардПоКр</DataPath>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>указывается идентификатор текущей организации в системе онлайн-оплаты по услугам капитального ремонта. Поле доступно при установленной настройке "Выводить QR-штрихкод для оплаты в системе онлайн-оплаты по кап. ремонту".</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<AutoMarkIncomplete>true</AutoMarkIncomplete>
+											<ContextMenu name="КодОрганизацииВСитикардПоКрКонтекстноеМеню" id="402"/>
+											<ExtendedTooltip name="КодОрганизацииВСитикардПоКрРасширеннаяПодсказка" id="403"/>
+										</InputField>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+					</ChildItems>
+				</Page>
+				<Page name="УслугиСОИ" id="382">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Содержание общ. имущества</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Услуги СОИ</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="УслугиСОИРасширеннаяПодсказка" id="383"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаПредставленияУслугиСОИСПримером" id="384">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа представления услуги СОИСПримером</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа представления услуги СОИ с примером</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПредставленияУслугиСОИСПримеромРасширеннаяПодсказка" id="385">
+								<AutoMaxWidth>false</AutoMaxWidth>
+								<HorizontalStretch>true</HorizontalStretch>
+								<Title formatted="true">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>&lt;font Arial&gt;&lt;fontsize 10&gt;&lt;bgcolor #ffffff&gt;&lt;colorstyle 0:ad318875-69aa-4df8-9d3a-57d795b4c98c&gt;В данном поле указывается постфикс, добавляемый к наименованию услуги. &lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 10&gt;&lt;bgcolor #ffffff&gt;&lt;colorstyle 0:ad318875-69aa-4df8-9d3a-57d795b4c98c&gt;Полученное представление будет выводиться в платежных документах в случае, если по услуге есть начисления, которые должны относиться к содержанию общего имущества. &lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;colorstyle 0:ad318875-69aa-4df8-9d3a-57d795b4c98c&gt;
+&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 10&gt;&lt;bgcolor #ffffff&gt;&lt;colorstyle 0:ad318875-69aa-4df8-9d3a-57d795b4c98c&gt;К услугам содержания общего имущества (в соответствии с Постановлением №1498 от 26.12.2016 и письмом Министерства Строительства и ЖКХ РФ от 14.02.2017 г. №4275) будут относиться услуги, для которых в качестве коммунального ресурса установлен один из следующих ресурсов:&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;colorstyle 0:ad318875-69aa-4df8-9d3a-57d795b4c98c&gt;
+&lt;/&gt;&lt;fontsize 10&gt;&lt;colorstyle 0:ad318875-69aa-4df8-9d3a-57d795b4c98c&gt;   &lt;/&gt;&lt;/&gt;&lt;fontsize 10&gt;&lt;colorstyle 0:ad318875-69aa-4df8-9d3a-57d795b4c98c&gt;●&lt;/&gt;&lt;/&gt;&lt;fontsize 10&gt;&lt;colorstyle 0:ad318875-69aa-4df8-9d3a-57d795b4c98c&gt; &lt;/&gt;&lt;/&gt;&lt;bgcolor #ffffff&gt;&lt;font Arial&gt;&lt;fontsize 10&gt;&lt;b&gt;&lt;bgcolor #ffffff&gt;&lt;fontsize 10&gt;&lt;colorstyle 0:ad318875-69aa-4df8-9d3a-57d795b4c98c&gt;Горячая вода;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 10&gt;&lt;b&gt;&lt;bgcolor #ffffff&gt;&lt;fontsize 10&gt;&lt;colorstyle 0:ad318875-69aa-4df8-9d3a-57d795b4c98c&gt; &lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;fontsize 10&gt;&lt;colorstyle 0:ad318875-69aa-4df8-9d3a-57d795b4c98c&gt;
+   ● &lt;/&gt;&lt;/&gt;&lt;font Times New Roman&gt;&lt;fontsize 12&gt;&lt;bgcolor #ffffff&gt;&lt;font Arial&gt;&lt;fontsize 10&gt;&lt;b&gt;&lt;bgcolor #ffffff&gt;&lt;fontsize 10&gt;&lt;colorstyle 0:ad318875-69aa-4df8-9d3a-57d795b4c98c&gt;Холодная вода;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font Times New Roman&gt;&lt;fontsize 12&gt;&lt;b&gt;&lt;bgcolor #ffffff&gt;&lt;fontsize 12&gt;&lt;colorstyle 0:ad318875-69aa-4df8-9d3a-57d795b4c98c&gt; &lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;fontsize 10&gt;&lt;colorstyle 0:ad318875-69aa-4df8-9d3a-57d795b4c98c&gt;
+   ● &lt;/&gt;&lt;/&gt;&lt;font Times New Roman&gt;&lt;fontsize 12&gt;&lt;bgcolor #ffffff&gt;&lt;font Arial&gt;&lt;fontsize 10&gt;&lt;b&gt;&lt;bgcolor #ffffff&gt;&lt;fontsize 10&gt;&lt;colorstyle 0:ad318875-69aa-4df8-9d3a-57d795b4c98c&gt;Отведение сточных вод;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;fontsize 10&gt;&lt;colorstyle 0:ad318875-69aa-4df8-9d3a-57d795b4c98c&gt;
+   ● &lt;/&gt;&lt;/&gt;&lt;font Times New Roman&gt;&lt;fontsize 12&gt;&lt;bgcolor #ffffff&gt;&lt;font Arial&gt;&lt;fontsize 10&gt;&lt;b&gt;&lt;bgcolor #ffffff&gt;&lt;fontsize 10&gt;&lt;colorstyle 0:ad318875-69aa-4df8-9d3a-57d795b4c98c&gt;Электрическая энергия;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;fontsize 10&gt;&lt;colorstyle 0:ad318875-69aa-4df8-9d3a-57d795b4c98c&gt;
+   ● &lt;/&gt;&lt;/&gt;&lt;font Times New Roman&gt;&lt;fontsize 12&gt;&lt;bgcolor #ffffff&gt;&lt;font Arial&gt;&lt;fontsize 10&gt;&lt;b&gt;&lt;bgcolor #ffffff&gt;&lt;fontsize 10&gt;&lt;colorstyle 0:ad318875-69aa-4df8-9d3a-57d795b4c98c&gt;Тепловая энергия.&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font Times New Roman&gt;&lt;fontsize 12&gt;&lt;bgcolor #ffffff&gt;&lt;fontsize 12&gt;&lt;colorstyle 0:ad318875-69aa-4df8-9d3a-57d795b4c98c&gt;          &lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;colorstyle 0:ad318875-69aa-4df8-9d3a-57d795b4c98c&gt;
+&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 10&gt;&lt;bgcolor #ffffff&gt;&lt;colorstyle 0:ad318875-69aa-4df8-9d3a-57d795b4c98c&gt;Назначить услуге соответствующий коммунальный ресурс вы можете в форме элемента справочника "Услуги".&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+							<ChildItems>
+								<InputField name="ПредставлениеУслугСОИ" id="386">
+									<DataPath>Запись.ПредставлениеУслугСОИ</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Постфикс для услуг содержания общего имущества</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Введите представление</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ClearButton>true</ClearButton>
+									<InputHint>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>введите представление</v8:content>
+										</v8:item>
+									</InputHint>
+									<ContextMenu name="ПредставлениеУслугСОИКонтекстноеМеню" id="387"/>
+									<ExtendedTooltip name="ПредставлениеУслугСОИРасширеннаяПодсказка" id="388"/>
+									<Events>
+										<Event name="OnChange">ПредставлениеУслугСОИПриИзменении</Event>
+									</Events>
+								</InputField>
+								<LabelDecoration name="ПримерПредставленияУслугиСОИ" id="389">
+									<Font ref="style:NormalTextFont" bold="false" italic="true" underline="false" strikeout="false" kind="StyleItem"/>
+									<ContextMenu name="ПримерПредставленияУслугиСОИКонтекстноеМеню" id="390"/>
+									<ExtendedTooltip name="ПримерПредставленияУслугиСОИРасширеннаяПодсказка" id="391"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.УПЖКХ_НастройкиФормированияПлатежногоДокумента</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ТаблицаСоставШКПоОсновнымУслугам" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица состав ШК по основным услугам</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Параметр" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Параметр</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДопСвойство" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доп. свойство</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>1</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТаблицаСоставШКПоУслугамКапремонта" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица состав ШКПо услугам капремонта</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Параметр" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Параметр</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДопСвойство" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доп. свойство</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>1</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ЛицевойСчетДляШК" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Лицевой счет для ШК</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.КВП_ЛицевыеСчета</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СуммаДляШК" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма для ШК</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДополнительныеРеквизитыQRКодаПоОсн" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дополнительные реквизиты QRКода по основным услугам</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДополнительныеРеквизитыQRКодаПоКР" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дополнительные реквизиты QRКода по услугам капремонта</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВедетсяРаздельныйУчетПоУслугамКапремонта" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ведется раздельный учет по услугам капремонта</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ФормаКвитанцииПредставление" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Форма квитанции представление</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:Type>cfg:EnumRef.УПЖКХ_ВидыПлатежныхДокументов</v8:Type>
+				<v8:Type>cfg:CatalogRef.ДополнительныеОтчетыИОбработки</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПримерШтрихкода" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пример штрихкода</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection/>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ТаблицаСоставШКПоОсновнымУслугам.Параметр</dcsset:left>
+						<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:string"/>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Текст</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Элементы.ТаблицаСоставШКПоОсновнымУслугам.ТекущиеДанные.Параметр.СписокВыбора.НайтиПоЗначению(Элементы.ТаблицаСоставШКПоОсновнымУслугам.ТекущиеДанные.Параметр).Представление</v8:content>
+							</v8:item>
+						</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="ПросмотрФормыКвитанции" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Просмотр формы квитанции</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Просмотр формы квитанции</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПросмотрФормыКвитанции</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПроверитьДлинуИдентификатора" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить длину идентификатора</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроверитьДлинуИдентификатора</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПереместитьПараметрШКПоОсновнымУслугамВверх" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переместить параметр ШК по основным услугам вверх</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переместить параметр ШК по основным услугам вверх</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПереместитьПараметрШКПоОсновнымУслугамВверх</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПереместитьПараметрШКПоОсновнымУслугамВниз" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переместить параметр ШКПо основным услугам вниз</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переместить параметр ШК по основным услугам вниз</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПереместитьПараметрШКПоОсновнымУслугамВниз</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПереместитьПараметрШКПоУслугамКапремонтаВверх" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переместить параметр ШКПо услугам капремонта вверх</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переместить параметр ШК по услугам капремонта вверх</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПереместитьПараметрШКПоУслугамКапремонтаВверх</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПереместитьПараметрШКПоУслугамКапремонтаВниз" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переместить параметр ШКПо услугам капремонта вниз</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переместить параметр ШК по услугам капремонта вниз</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПереместитьПараметрШКПоУслугамКапремонтаВниз</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СкопироватьСоставОсн" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скопировать состав ШК по основным услугам</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скопировать состав ШК по основным услугам</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СкопироватьСоставОсн</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СкопироватьСоставКР" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скопировать состав ШК по услугам капремонта</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скопировать состав ШК по услугам капремонта</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СкопироватьСоставКР</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВыбратьПараметрИзКонтекстногоМеню" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать параметр</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать параметр из контекстного меню</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыбратьПараметрИзКонтекстногоМеню</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

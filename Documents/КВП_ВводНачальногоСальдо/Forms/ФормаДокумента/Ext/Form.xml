@@ -1,0 +1,937 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаВвестиОстаткиБУ" id="96">
+				<Type>CommandBarButton</Type>
+				<UserVisible>
+					<xr:Common>true</xr:Common>
+					<xr:Value name="Role.АдминистраторСистемы">false</xr:Value>
+					<xr:Value name="Role.Администрирование">false</xr:Value>
+					<xr:Value name="Role.АдминистрированиеЗарплатаКадры">false</xr:Value>
+					<xr:Value name="Role.БазовыеПраваБСП">false</xr:Value>
+					<xr:Value name="Role.БазовыеПраваБП">false</xr:Value>
+					<xr:Value name="Role.БазовыеПраваБРО">false</xr:Value>
+					<xr:Value name="Role.БазовыеПраваБТС">false</xr:Value>
+					<xr:Value name="Role.БазовыеПраваВЕТИС">false</xr:Value>
+					<xr:Value name="Role.БазовыеПраваВнешнихПользователейБСП">false</xr:Value>
+					<xr:Value name="Role.БазовыеПраваГИСМ">false</xr:Value>
+					<xr:Value name="Role.БазовыеПраваЕГАИС">false</xr:Value>
+					<xr:Value name="Role.БазовыеПраваЗарплатаКадры">false</xr:Value>
+					<xr:Value name="Role.БазовыеПраваИПП">false</xr:Value>
+					<xr:Value name="Role.БазовыеПраваЭД">false</xr:Value>
+					<xr:Value name="Role.ВыводНаПринтерФайлБуферОбмена">false</xr:Value>
+					<xr:Value name="Role.ВыводРеестраДокументов">false</xr:Value>
+					<xr:Value name="Role.ВызовОнлайнПоддержки">false</xr:Value>
+					<xr:Value name="Role.ВыполнениеОбменаДокументамиБизнесСеть">false</xr:Value>
+					<xr:Value name="Role.ВыполнениеОбменаОбменСБанками">false</xr:Value>
+					<xr:Value name="Role.ВыполнениеОбменаСКонтрагентами">false</xr:Value>
+					<xr:Value name="89ab9c80-cd3c-43f8-beea-e68215b09760">false</xr:Value>
+					<xr:Value name="Role.ВыполнениеОбменовСЯндексКассой">false</xr:Value>
+					<xr:Value name="Role.ВыполнениеСинхронизацииДанных">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеАдресныхСведений">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеАктовПостановкиНаБалансЕГАИС">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеАктовСписанияЕГАИС">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеАктСверкиВзаиморасчетов">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеАнкетПерсУчета">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеБанков">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеБанковскихСчетов">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеБухгалтерскогоУчетаЗарплаты">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеВариантовОтчетов">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеВетеринарноСопроводительныхДокументовВЕТИС">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеВидовАлкогольнойПродукцииЕГАИС">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеВидовКонтактнойИнформации">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеВнешнихПользователей">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеВозвратовИзРегистра2ЕГАИС">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеВозвратТоваровОтПокупателя">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеВходящихТранспортныхОперацийВЕТИС">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеВходящихТТНЕГАИС">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеВыплаченнойЗарплаты">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеДанныхБухгалтерии">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеДанныхДляНачисленияЗарплаты">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеДанныхСотрудников">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеДанныхФизическихЛицЗарплатаКадры">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеДатЗапретаИзменения">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеДепонированнойЗарплаты">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеДокументовЗакупкиГИСМ">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеДокументовЗарплатаКадры">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеДокументовПоПрямымВыплатамПособийСоциальногоСтрахования">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеДолжностей">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеДополнительныхОтчетовИОбработок">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеДополнительныхРеквизитовИСведений">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеЗаболеванийУсловийРегионализацииВЕТИС">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеЗагрузкиОстатковЕГАИС">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеЗапросовАкцизныхМарокЕГАИС">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеЗапросовСкладскогоЖурналаВЕТИС">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеЗарплатныхПроектов">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеЗначенийСтроковыхРеквизитов">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеИнвентаризацийПродукцииВЕТИС">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеИсходящейСправкиОЗаработке">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеИсходящихТранспортныхОперацийВЕТИС">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеИсходящихТТНЕГАИС">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеКалендарныхГрафиков">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеКлассификатораАлкогольнойПродукцииЕГАИС">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеКлассификатораОрганизацийЕГАИС">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеКонтрагентов">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеКурсовВалют">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеЛицевыхСчетовПоЗарплатнымПроектам">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеЛичныхВариантовОтчетов">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеМаршрутовПодписания">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеМедицинскихОрганизаций">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеНазначенийГрузовВЕТИС">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеНалоговИВзносов">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеНастроекБизнесСеть">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеНастроекБухгалтерии">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеНастроекОбменаСКонтрагентами">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеНастроекОбменСБанками">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеНастроекЭлектронногоВзаимодействия">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеНачисленнойЗарплаты">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеНеразделяемыхДанныхРегламентированнойОтчетности">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеНоменклатуры">false</xr:Value>
+					<xr:Value name="b1d9c8b4-d05c-45c7-8db2-abc84e597700">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеОбменовСЯндексКассой">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеОбменСБанками">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеОбщейБухгалтерскойНСИ">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеОбъединенийЗаписейСкладскогоЖурналаВЕТИС">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеОтчетаОРозничныхПродажах">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеОтчетовЕГАИС">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеПапокИФайлов">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеПередачВРегистр2ЕГАИС">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеПерсУчета">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеПлановОбмена">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеПодключаемогоОборудования">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеПользователей">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеПриходныхКассовыхОрдеров">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеПродукцииВЕТИС">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеПроизводственныхОперацийВЕТИС">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеРазделяемыхДанныхРегламентированнойОтчетности">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеРассылокОтчетов">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеРеализацииТоваровУслуг">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеРозничныхПродаж">false</xr:Value>
+					<xr:Value name="8bc84169-48bc-43d8-8d5f-adc2d90cc0b2">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеСправокЕГАИС">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеСроковОплатыДокументов">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеСчетовПокупателям">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеСчетовФактурВыданных">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеТекстаДополнительныхУсловийВСчетеПокупателю">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеУведомленийОбОтгрузкеМаркированныхТоваровГИСМ">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеУведомленийОПоступленииМаркированныхТоваровГИСМ">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеУведомленийОСписанииКиЗГИСМ">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеУчетныхЗаписейЭлектроннойПочты">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеХозяйствующихСубъектовВЕТИС">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеЦенНоменклатуры">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеЧекКоррекции">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеЧековЕГАИС">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеЧековЕГАИСНаВозврат">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеШтрихкодовУпаковокТоваров">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеЭлектронныхДокументов">false</xr:Value>
+					<xr:Value name="Role.ДобавлениеИзменениеЭлектронныхПодписейИШифрование">false</xr:Value>
+					<xr:Value name="Role.ДоступКВнешнемуИнтерфейсуМонитораОсновныхПоказателей">false</xr:Value>
+					<xr:Value name="Role.ДоступКВнешнемуИнтерфейсуСпискаЗадач">false</xr:Value>
+					<xr:Value name="Role.ЗапросНовойСправкиСПАРКРиски">false</xr:Value>
+					<xr:Value name="Role.ЗапускAutomation">false</xr:Value>
+					<xr:Value name="Role.ЗапускВебКлиента">false</xr:Value>
+					<xr:Value name="Role.ЗапускВнешнегоСоединения">false</xr:Value>
+					<xr:Value name="Role.ЗапускТолстогоКлиента">false</xr:Value>
+					<xr:Value name="Role.ЗапускТонкогоКлиента">false</xr:Value>
+					<xr:Value name="Role.ИзменениеДополнительныхСведений">false</xr:Value>
+					<xr:Value name="Role.ИзменениеМакетовПечатныхФорм">false</xr:Value>
+					<xr:Value name="Role.ИзменениеУчастниковГруппДоступа">false</xr:Value>
+					<xr:Value name="Role.ИнтерактивноеОткрытиеВнешнихОтчетовИОбработок">false</xr:Value>
+					<xr:Value name="Role.ИспользованиеИнформационногоЦентра">false</xr:Value>
+					<xr:Value name="Role.ИспользованиеКомандДосьеКонтрагента">false</xr:Value>
+					<xr:Value name="Role.ИспользованиеМобильногоПриложения">false</xr:Value>
+					<xr:Value name="Role.ИспользованиеМонитораПортала1СИТС">false</xr:Value>
+					<xr:Value name="Role.ИспользованиеОбменаСИнтернетМагазином">false</xr:Value>
+					<xr:Value name="Role.ИспользованиеОбработкиОжидаемаяОплатаОтПокупателей">false</xr:Value>
+					<xr:Value name="Role.ИспользованиеОбработкиПанельОбменВЕТИС">false</xr:Value>
+					<xr:Value name="Role.ИспользованиеПомощникаКорректировкиОстатковЕГАИС">false</xr:Value>
+					<xr:Value name="Role.ИспользованиеСервиса1СТакском">false</xr:Value>
+					<xr:Value name="Role.ИспользованиеСинхронизацииСКалендаремGoogle">false</xr:Value>
+					<xr:Value name="Role.ИспользованиеУниверсальногоОтчета">false</xr:Value>
+					<xr:Value name="Role.ИспользованиеЭлектроннойПодписиВМоделиСервиса">false</xr:Value>
+					<xr:Value name="Role.НастройкаБухгалтерскогоУчетаЗарплаты">false</xr:Value>
+					<xr:Value name="Role.НастройкаВыплаченнойЗарплаты">false</xr:Value>
+					<xr:Value name="Role.НастройкаИОценкаПроизводительности">false</xr:Value>
+					<xr:Value name="Role.НастройкаКадровыхДанных">false</xr:Value>
+					<xr:Value name="Role.НастройкаКлассовУсловийТрудаПоДолжностям">false</xr:Value>
+					<xr:Value name="Role.НастройкаНалогиИВзносы">false</xr:Value>
+					<xr:Value name="Role.НастройкаНалогиИВзносыОбщиеДанные">false</xr:Value>
+					<xr:Value name="Role.НастройкаНачисленияЗарплаты">false</xr:Value>
+					<xr:Value name="Role.НастройкаНачисленияЗарплатыОбщиеДанные">false</xr:Value>
+					<xr:Value name="Role.НастройкаПерсУчета">false</xr:Value>
+					<xr:Value name="Role.НастройкаПерсУчетаОбщиеДанные">false</xr:Value>
+					<xr:Value name="Role.НастройкаСинхронизацииСЕГАИС">false</xr:Value>
+					<xr:Value name="Role.НастройкаСинхронизацииФайлов">false</xr:Value>
+					<xr:Value name="Role.НастройкиОбменаГИСМ">false</xr:Value>
+					<xr:Value name="Role.ОбновлениеКонфигурацииБазыДанных">false</xr:Value>
+					<xr:Value name="Role.ОператорОтправкиОтчетностиЧерезПредставителя">false</xr:Value>
+					<xr:Value name="Role.ОператорОтправкиОтчетностиЧерезПредставителяПереопределяемая">false</xr:Value>
+					<xr:Value name="Role.ОтражениеЗарплатыВБухгалтерскомУчете">false</xr:Value>
+					<xr:Value name="Role.ПередачаДанныхАнонимныйДоступ">false</xr:Value>
+					<xr:Value name="Role.ПодключениеИнтернетПоддержки">false</xr:Value>
+					<xr:Value name="Role.ПодключениеСервисовСопровождения">false</xr:Value>
+					<xr:Value name="Role.ПодсистемаБанкИКасса">false</xr:Value>
+					<xr:Value name="Role.ПодсистемаПродажи">false</xr:Value>
+					<xr:Value name="Role.ПодсистемаСклад">false</xr:Value>
+					<xr:Value name="Role.ПодсистемаСправочники">false</xr:Value>
+					<xr:Value name="Role.ПолучениеОбновленийКлассификаторов">false</xr:Value>
+					<xr:Value name="Role.ПолучениеПлатежнойСсылкиДляЯндексКассы">false</xr:Value>
+					<xr:Value name="Role.ПостановкаКонтрагентовНаМониторингСПАРКРиски">false</xr:Value>
+					<xr:Value name="Role.ПравоИнтерактивногоПереносаГраницыПоследовательности">false</xr:Value>
+					<xr:Value name="Role.ПравоНаЗащищенныйДокументооборотСКонтролирующимиОрганами">false</xr:Value>
+					<xr:Value name="Role.ПросмотрЖурналаРегистрации">false</xr:Value>
+					<xr:Value name="Role.ПросмотрИнформацииОДоступныхОбновленияхПрограммы">false</xr:Value>
+					<xr:Value name="Role.ПросмотрОписанияИзмененийПрограммы">false</xr:Value>
+					<xr:Value name="Role.ПросмотрОтчетаВаловаяПрибыль">false</xr:Value>
+					<xr:Value name="Role.ПросмотрОтчетаДосьеКонтрагента">false</xr:Value>
+					<xr:Value name="Role.ПросмотрОтчетаОстаткиТоваров">false</xr:Value>
+					<xr:Value name="Role.ПросмотрОтчетаПродажи">false</xr:Value>
+					<xr:Value name="Role.ПросмотрОтчетаСчетаНеОплаченныеПокупателями">false</xr:Value>
+					<xr:Value name="Role.ПросмотрПротоколовОтправкиВКонтролирующиеОрганы">false</xr:Value>
+					<xr:Value name="Role.ПросмотрСвязанныеДокументы">false</xr:Value>
+					<xr:Value name="Role.РаботаСЭлектроннойПочтойБП">false</xr:Value>
+					<xr:Value name="Role.РедактированиеНовостей">false</xr:Value>
+					<xr:Value name="Role.РедактированиеПечатныхФорм">false</xr:Value>
+					<xr:Value name="Role.РедактированиеРеквизитовОбъектов">false</xr:Value>
+					<xr:Value name="Role.РежимВсеФункции">false</xr:Value>
+					<xr:Value name="Role.СохранениеДанныхПользователя">false</xr:Value>
+					<xr:Value name="Role.УдаленныйДоступАдминистрированиеИБВМоделиСервиса">false</xr:Value>
+					<xr:Value name="Role.УдаленныйДоступБазоваяФункциональность">false</xr:Value>
+					<xr:Value name="Role.УдаленныйДоступОбменДаннымиВМоделиСервиса">false</xr:Value>
+					<xr:Value name="Role.УдаленныйДоступОбменСообщениями">false</xr:Value>
+					<xr:Value name="Role.УдаленныйДоступПередачаДанных">false</xr:Value>
+					<xr:Value name="Role.УдаленныйДоступСтандартныйИнтерфейсOData">false</xr:Value>
+					<xr:Value name="Role.УдалитьПолныеПраваОбластиДанных">false</xr:Value>
+					<xr:Value name="Role.УправлениеФискальнымУстройством">false</xr:Value>
+					<xr:Value name="Role.УправлениеЭквайринговымТерминалом">false</xr:Value>
+					<xr:Value name="Role.ЧтениеАктовПостановкиНаБалансЕГАИС">false</xr:Value>
+					<xr:Value name="Role.ЧтениеАктовСписанияЕГАИС">false</xr:Value>
+					<xr:Value name="Role.ЧтениеАкцизныхМарокЕГАИС">false</xr:Value>
+					<xr:Value name="Role.ЧтениеАнкетПерсУчета">false</xr:Value>
+					<xr:Value name="Role.ЧтениеБанковскихСчетов">false</xr:Value>
+					<xr:Value name="Role.ЧтениеБухгалтерскогоУчетаЗарплаты">false</xr:Value>
+					<xr:Value name="Role.ЧтениеВариантовОтчетов">false</xr:Value>
+					<xr:Value name="Role.ЧтениеВерсийОбъектов">false</xr:Value>
+					<xr:Value name="Role.ЧтениеВетеринарноСопроводительныхДокументовВЕТИС">false</xr:Value>
+					<xr:Value name="Role.ЧтениеВидыОплатОрганизаций">false</xr:Value>
+					<xr:Value name="Role.ЧтениеВнешнихПользователей">false</xr:Value>
+					<xr:Value name="Role.ЧтениеВозвратовИзРегистра2ЕГАИС">false</xr:Value>
+					<xr:Value name="Role.ЧтениеВозвратТоваровОтПокупателя">false</xr:Value>
+					<xr:Value name="Role.ЧтениеВходящихТранспортныхОперацийВЕТИС">false</xr:Value>
+					<xr:Value name="Role.ЧтениеВходящихТТНЕГАИС">false</xr:Value>
+					<xr:Value name="Role.ЧтениеВыплаченнойЗарплаты">false</xr:Value>
+					<xr:Value name="Role.ЧтениеГлобальныхДополнительныхОтчетовИОбработок">false</xr:Value>
+					<xr:Value name="Role.ЧтениеДанныхБухгалтерии">false</xr:Value>
+					<xr:Value name="Role.ЧтениеДанныхБухгалтерскогоУчета">false</xr:Value>
+					<xr:Value name="Role.ЧтениеДанныхДляНачисленияЗарплаты">false</xr:Value>
+					<xr:Value name="Role.ЧтениеДанныхМонитораРуководителя">false</xr:Value>
+					<xr:Value name="Role.ЧтениеДанныхМониторингБанков">false</xr:Value>
+					<xr:Value name="Role.ЧтениеДанныхПервичныхДокументов">false</xr:Value>
+					<xr:Value name="Role.ЧтениеДанныхРегламентированнойОтчетности">false</xr:Value>
+					<xr:Value name="Role.ЧтениеДанныхСотрудников">false</xr:Value>
+					<xr:Value name="Role.ЧтениеДанныхСПАРКРиски">false</xr:Value>
+					<xr:Value name="Role.ЧтениеДанныхФизическихЛицЗарплатаКадры">false</xr:Value>
+					<xr:Value name="Role.ЧтениеДепонированнойЗарплаты">false</xr:Value>
+					<xr:Value name="Role.ЧтениеДокументовЗакупкиГИСМ">false</xr:Value>
+					<xr:Value name="Role.ЧтениеДокументовЗарплатаКадры">false</xr:Value>
+					<xr:Value name="Role.ЧтениеДокументовПоПрямымВыплатамПособийСоциальногоСтрахования">false</xr:Value>
+					<xr:Value name="Role.ЧтениеДолжностей">false</xr:Value>
+					<xr:Value name="Role.ЧтениеДополнительныхОтчетовИОбработок">false</xr:Value>
+					<xr:Value name="Role.ЧтениеДополнительныхСведений">false</xr:Value>
+					<xr:Value name="Role.ЧтениеЗаболеванийУсловийРегионализацииВЕТИС">false</xr:Value>
+					<xr:Value name="Role.ЧтениеЗагрузкиОстатковЕГАИС">false</xr:Value>
+					<xr:Value name="Role.ЧтениеЗаписейСкладскогоЖурналаВРезервеВЕТИС">false</xr:Value>
+					<xr:Value name="Role.ЧтениеЗапросовАкцизныхМарокЕГАИС">false</xr:Value>
+					<xr:Value name="Role.ЧтениеЗапросовЕГАИС">false</xr:Value>
+					<xr:Value name="Role.ЧтениеЗапросовСкладскогоЖурналаВЕТИС">false</xr:Value>
+					<xr:Value name="Role.ЧтениеЗарплатныхПроектов">false</xr:Value>
+					<xr:Value name="Role.ЧтениеИнвентаризацийПродукцииВЕТИС">false</xr:Value>
+					<xr:Value name="Role.ЧтениеИнформацииОВерсияхОбъектов">false</xr:Value>
+					<xr:Value name="Role.ЧтениеИсходящейСправкиОЗаработке">false</xr:Value>
+					<xr:Value name="Role.ЧтениеИсходящихТранспортныхОперацийВЕТИС">false</xr:Value>
+					<xr:Value name="Role.ЧтениеИсходящихТТНЕГАИС">false</xr:Value>
+					<xr:Value name="Role.ЧтениеКлассификатораАлкогольнойПродукцииЕГАИС">false</xr:Value>
+					<xr:Value name="Role.ЧтениеКлассификатораОрганизацийЕГАИС">false</xr:Value>
+					<xr:Value name="Role.ЧтениеКонтрагентов">false</xr:Value>
+					<xr:Value name="Role.ЧтениеКурсовВалют">false</xr:Value>
+					<xr:Value name="Role.ЧтениеЛицевыхСчетовПоЗарплатнымПроектам">false</xr:Value>
+					<xr:Value name="Role.ЧтениеМаршрутовПодписания">false</xr:Value>
+					<xr:Value name="Role.ЧтениеМедицинскихОрганизаций">false</xr:Value>
+					<xr:Value name="Role.ЧтениеНазначенийГрузовВЕТИС">false</xr:Value>
+					<xr:Value name="Role.ЧтениеНалоговИВзносов">false</xr:Value>
+					<xr:Value name="Role.ЧтениеНастроекБизнесСеть">false</xr:Value>
+					<xr:Value name="Role.ЧтениеНастроекОбменаСКонтрагентами">false</xr:Value>
+					<xr:Value name="Role.ЧтениеНастроекОбменСБанками">false</xr:Value>
+					<xr:Value name="Role.ЧтениеНастроекЭлектронногоВзаимодействия">false</xr:Value>
+					<xr:Value name="Role.ЧтениеНачисленнойЗарплаты">false</xr:Value>
+					<xr:Value name="Role.ЧтениеНовостей">false</xr:Value>
+					<xr:Value name="Role.ЧтениеНовостейРазделов">false</xr:Value>
+					<xr:Value name="Role.ЧтениеНоменклатуры">false</xr:Value>
+					<xr:Value name="01186cc2-f6b4-4465-8c11-ecac5e8374bc">false</xr:Value>
+					<xr:Value name="Role.ЧтениеОбменовСЯндексКассой">false</xr:Value>
+					<xr:Value name="Role.ЧтениеОбменСБанками">false</xr:Value>
+					<xr:Value name="Role.ЧтениеОбщейБухгалтерскойНСИ">false</xr:Value>
+					<xr:Value name="Role.ЧтениеОбъединенийЗаписейСкладскогоЖурналаВЕТИС">false</xr:Value>
+					<xr:Value name="Role.ЧтениеОрганизаций">false</xr:Value>
+					<xr:Value name="Role.ЧтениеОстатковАлкогольнойПродукции">false</xr:Value>
+					<xr:Value name="Role.ЧтениеОстатковПродукцииВЕТИС">false</xr:Value>
+					<xr:Value name="Role.ЧтениеОтчетаОРозничныхПродажах">false</xr:Value>
+					<xr:Value name="Role.ЧтениеОтчетовЕГАИС">false</xr:Value>
+					<xr:Value name="Role.ЧтениеПередачВРегистр2ЕГАИС">false</xr:Value>
+					<xr:Value name="Role.ЧтениеПерсонализированныхДанных">false</xr:Value>
+					<xr:Value name="Role.ЧтениеПерсУчета">false</xr:Value>
+					<xr:Value name="Role.ЧтениеПлановОбмена">false</xr:Value>
+					<xr:Value name="Role.ЧтениеПлановОбменаСМобильнымиПриложениями">false</xr:Value>
+					<xr:Value name="Role.ЧтениеПодключаемогоОборудования">false</xr:Value>
+					<xr:Value name="Role.ЧтениеПриходныхКассовыхОрдеров">false</xr:Value>
+					<xr:Value name="Role.ЧтениеПродукцииВЕТИС">false</xr:Value>
+					<xr:Value name="Role.ЧтениеПроизводственныхОперацийВЕТИС">false</xr:Value>
+					<xr:Value name="Role.ЧтениеРеализацииТоваровУслуг">false</xr:Value>
+					<xr:Value name="Role.ЧтениеРегистрацийВНалоговыхОрганах">false</xr:Value>
+					<xr:Value name="Role.ЧтениеРозничныхПродаж">false</xr:Value>
+					<xr:Value name="Role.ЧтениеСкладов">false</xr:Value>
+					<xr:Value name="Role.ЧтениеСоответствияНоменклатурыВЕТИС">false</xr:Value>
+					<xr:Value name="Role.ЧтениеСпискаЗадач">false</xr:Value>
+					<xr:Value name="Role.ЧтениеСпискаФизическихЛиц">false</xr:Value>
+					<xr:Value name="Role.ЧтениеСправокЕГАИС">false</xr:Value>
+					<xr:Value name="Role.ЧтениеСтатейДвиженияДенежныхСредств">false</xr:Value>
+					<xr:Value name="Role.ЧтениеСчетовПокупателям">false</xr:Value>
+					<xr:Value name="Role.ЧтениеСчетовФактурВыданных">false</xr:Value>
+					<xr:Value name="Role.ЧтениеУведомленийОбОтгрузкеМаркированныхТоваровГИСМ">false</xr:Value>
+					<xr:Value name="Role.ЧтениеУведомленийОПоступленииМаркированныхТоваровГИСМ">false</xr:Value>
+					<xr:Value name="Role.ЧтениеУведомленийОСписанииКиЗГИСМ">false</xr:Value>
+					<xr:Value name="Role.ЧтениеХозяйствующихСубъектовВЕТИС">false</xr:Value>
+					<xr:Value name="Role.ЧтениеЦенНоменклатуры">false</xr:Value>
+					<xr:Value name="Role.ЧтениеЧекКоррекции">false</xr:Value>
+					<xr:Value name="Role.ЧтениеЧековЕГАИС">false</xr:Value>
+					<xr:Value name="Role.ЧтениеЧековЕГАИСНаВозврат">false</xr:Value>
+					<xr:Value name="Role.ЧтениеШаблоновДоговоров">false</xr:Value>
+					<xr:Value name="Role.ЧтениеШтрихкодовУпаковокТоваров">false</xr:Value>
+					<xr:Value name="4e7edc80-a3f6-416f-9208-fa5a2c14d557">false</xr:Value>
+					<xr:Value name="Role.ЧтениеЭлектронныхДокументов">false</xr:Value>
+					<xr:Value name="Role.КВП_УчетВЖКХ_Чтение">false</xr:Value>
+					<xr:Value name="Role.УПЖКХ_ДиспетчерАДС">false</xr:Value>
+					<xr:Value name="Role.УПЖКХ_ПаспортныйСтол">false</xr:Value>
+					<xr:Value name="Role.УПЖКХ_Пользователь">false</xr:Value>
+					<xr:Value name="Role.УПЖКХ_СлужбаРаботыСДолжниками">false</xr:Value>
+					<xr:Value name="Role.смсРассылка">false</xr:Value>
+				</UserVisible>
+				<CommandName>Form.Command.КомандаВвестиОстаткиБУ</CommandName>
+				<ExtendedTooltip name="ФормаВвестиОстаткиБУРасширеннаяПодсказка" id="97"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="41">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаExtendedTooltip" id="52"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаСостояниеДокумента" id="90">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа состояние документа</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа состояние документа</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСостояниеДокументаРасширеннаяПодсказка" id="91"/>
+					<ChildItems>
+						<PictureField name="СостояниеДокумента" id="87">
+							<DataPath>СостояниеДокумента</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<Width>2</Width>
+							<Height>1</Height>
+							<HorizontalStretch>false</HorizontalStretch>
+							<VerticalStretch>false</VerticalStretch>
+							<ValuesPicture>
+								<xr:Ref>CommonPicture.СостоянияДокумента</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</ValuesPicture>
+							<Border width="1">
+								<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+							</Border>
+							<FileDragMode>AsFile</FileDragMode>
+							<ContextMenu name="СостояниеДокументаКонтекстноеМеню" id="88">
+								<Autofill>false</Autofill>
+							</ContextMenu>
+							<ExtendedTooltip name="СостояниеДокументаРасширеннаяПодсказка" id="89"/>
+						</PictureField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаСлева" id="42">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа слева</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа слева</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСлеваExtendedTooltip" id="53"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаНомерДата" id="36">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Номер дата</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Номер дата</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНомерДатаExtendedTooltip" id="54"/>
+							<ChildItems>
+								<InputField name="Номер" id="37">
+									<DataPath>Объект.Number</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<ContextMenu name="НомерКонтекстноеМеню" id="38"/>
+									<ExtendedTooltip name="НомерExtendedTooltip" id="55"/>
+								</InputField>
+								<InputField name="Дата" id="39">
+									<DataPath>Объект.Date</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>от</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДатаКонтекстноеМеню" id="40"/>
+									<ExtendedTooltip name="ДатаExtendedTooltip" id="56"/>
+									<Events>
+										<Event name="OnChange">ДатаПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="Организация" id="5">
+							<DataPath>Объект.Организация</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="6"/>
+							<ExtendedTooltip name="ОрганизацияExtendedTooltip" id="57"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаСправа" id="43">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа справа</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа справа</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСправаExtendedTooltip" id="58"/>
+					<ChildItems>
+						<InputField name="Объект" id="7">
+							<DataPath>Объект.Объект</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<ContextMenu name="ОбъектКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="ОбъектРасширеннаяПодсказка" id="59"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="ЛицевыеСчета" id="19">
+			<Representation>List</Representation>
+			<Footer>true</Footer>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Объект.ЛицевыеСчета</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ЛицевыеСчетаКонтекстноеМеню" id="20"/>
+			<AutoCommandBar name="ЛицевыеСчетаКоманднаяПанель" id="21">
+				<ChildItems>
+					<Popup name="ПодменюЗаполнить" id="92">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Заполнить</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Подменю заполнить</v8:content>
+							</v8:item>
+						</ToolTip>
+						<Picture>
+							<xr:Ref>CommonPicture.Подменю</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ПодменюЗаполнитьРасширеннаяПодсказка" id="93"/>
+						<ChildItems>
+							<Button name="ЛицевыеСчетаКомандаЗаполнить" id="44">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.КомандаЗаполнить</CommandName>
+								<Picture>
+									<xr:Ref>CommonPicture.ЗаполнитьФорму</xr:Ref>
+									<xr:LoadTransparent>true</xr:LoadTransparent>
+								</Picture>
+								<ExtendedTooltip name="ЛицевыеСчетаКомандаЗаполнитьExtendedTooltip" id="60"/>
+							</Button>
+							<Button name="ЛицевыеСчетаКомандаЗаполнитьИспользоватьОтбор" id="94">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.КомандаЗаполнитьСОтбором</CommandName>
+								<Picture>
+									<xr:Ref>CommonPicture.Отборы</xr:Ref>
+									<xr:LoadTransparent>true</xr:LoadTransparent>
+								</Picture>
+								<ExtendedTooltip name="ЛицевыеСчетаКомандаЗаполнитьИспользоватьОтборРасширеннаяПодсказка" id="95"/>
+							</Button>
+						</ChildItems>
+					</Popup>
+					<Popup name="ЛицевыеСчетаГруппаУстановить" id="45">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Установить</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Лицевые счета группа установить</v8:content>
+							</v8:item>
+						</ToolTip>
+						<ExtendedTooltip name="ЛицевыеСчетаГруппаУстановитьExtendedTooltip" id="61"/>
+						<ChildItems>
+							<Button name="ЛицевыеСчетаУстановитьУслугу" id="46">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.УстановитьУслугу</CommandName>
+								<ExtendedTooltip name="ЛицевыеСчетаУстановитьУслугуExtendedTooltip" id="62"/>
+							</Button>
+							<Button name="ЛицевыеСчетаУстановитьМесяцНачисления" id="47">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.УстановитьМесяцНачисления</CommandName>
+								<ExtendedTooltip name="ЛицевыеСчетаУстановитьМесяцНачисленияExtendedTooltip" id="63"/>
+							</Button>
+							<Popup name="ПодменюРазделУчета" id="48">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Раздел учета</v8:content>
+									</v8:item>
+								</Title>
+								<ToolTip>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Подменю раздел учета</v8:content>
+									</v8:item>
+								</ToolTip>
+								<ExtendedTooltip name="ПодменюРазделУчетаРасширеннаяПодсказка" id="64"/>
+								<ChildItems>
+									<Button name="ЛицевыеСчетаУстановитьНачислениеУслуг" id="49">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.УстановитьНачислениеУслуг</CommandName>
+										<ExtendedTooltip name="ЛицевыеСчетаУстановитьНачислениеУслугExtendedTooltip" id="65"/>
+									</Button>
+									<Button name="ЛицевыеСчетаУстановитьЛьготы" id="50">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.УстановитьЛьготы</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Льготы</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ЛицевыеСчетаУстановитьЛьготыExtendedTooltip" id="66"/>
+									</Button>
+									<Button name="ЛицевыеСчетаУстановитьПени" id="51">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.УстановитьПени</CommandName>
+										<ExtendedTooltip name="ЛицевыеСчетаУстановитьПениExtendedTooltip" id="67"/>
+									</Button>
+								</ChildItems>
+							</Popup>
+						</ChildItems>
+					</Popup>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ЛицевыеСчетаExtendedTooltip" id="68"/>
+			<SearchStringAddition name="ЛицевыеСчетаСтрокаПоиска" id="78">
+				<AdditionSource>
+					<Item>ЛицевыеСчета</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЛицевыеСчетаСтрокаПоискаКонтекстноеМеню" id="79"/>
+				<ExtendedTooltip name="ЛицевыеСчетаСтрокаПоискаРасширеннаяПодсказка" id="80"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ЛицевыеСчетаСостояниеПросмотра" id="81">
+				<AdditionSource>
+					<Item>ЛицевыеСчета</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЛицевыеСчетаСостояниеПросмотраКонтекстноеМеню" id="82"/>
+				<ExtendedTooltip name="ЛицевыеСчетаСостояниеПросмотраРасширеннаяПодсказка" id="83"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ЛицевыеСчетаУправлениеПоиском" id="84">
+				<AdditionSource>
+					<Item>ЛицевыеСчета</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ЛицевыеСчетаУправлениеПоискомКонтекстноеМеню" id="85"/>
+				<ExtendedTooltip name="ЛицевыеСчетаУправлениеПоискомРасширеннаяПодсказка" id="86"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="OnEditEnd">ЛицевыеСчетаПриОкончанииРедактирования</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="ЛицевыеСчетаНомерСтроки" id="22">
+					<DataPath>Объект.ЛицевыеСчета.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЛицевыеСчетаНомерСтрокиКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ЛицевыеСчетаНомерСтрокиExtendedTooltip" id="69"/>
+				</LabelField>
+				<InputField name="ЛицевыеСчетаОбъект" id="24">
+					<DataPath>Объект.ЛицевыеСчета.Объект</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЛицевыеСчетаОбъектКонтекстноеМеню" id="25"/>
+					<ExtendedTooltip name="ЛицевыеСчетаОбъектExtendedTooltip" id="70"/>
+				</InputField>
+				<InputField name="ЛицевыеСчетаУслуга" id="26">
+					<DataPath>Объект.ЛицевыеСчета.Услуга</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЛицевыеСчетаУслугаКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ЛицевыеСчетаУслугаExtendedTooltip" id="71"/>
+					<Events>
+						<Event name="OnChange">ЛицевыеСчетаУслугаПриИзменении</Event>
+						<Event name="StartChoice">ЛицевыеСчетаУслугаНачалоВыбора</Event>
+					</Events>
+				</InputField>
+				<InputField name="ЛицевыеСчетаРазделУчета" id="34">
+					<DataPath>Объект.ЛицевыеСчета.РазделУчета</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ChoiceButton>false</ChoiceButton>
+					<ListChoiceMode>true</ListChoiceMode>
+					<ContextMenu name="ЛицевыеСчетаРазделУчетаКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="ЛицевыеСчетаРазделУчетаРасширеннаяПодсказка" id="72"/>
+				</InputField>
+				<InputField name="ЛицевыеСчетаМесяцНачисления" id="30">
+					<DataPath>Объект.ЛицевыеСчета.МесяцНачисления</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЛицевыеСчетаМесяцНачисленияКонтекстноеМеню" id="31"/>
+					<ExtendedTooltip name="ЛицевыеСчетаМесяцНачисленияExtendedTooltip" id="73"/>
+				</InputField>
+				<InputField name="ЛицевыеСчетаМесяцНачисленияСтрока" id="32">
+					<DataPath>Объект.ЛицевыеСчета.МесяцНачисленияСтрока</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Месяц начисления</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ChoiceButton>true</ChoiceButton>
+					<ClearButton>false</ClearButton>
+					<SpinButton>true</SpinButton>
+					<TextEdit>false</TextEdit>
+					<ChoiceButtonPicture>
+						<xr:Ref>StdPicture.InputFieldCalendar</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</ChoiceButtonPicture>
+					<ContextMenu name="ЛицевыеСчетаМесяцНачисленияСтрокаКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="ЛицевыеСчетаМесяцНачисленияСтрокаExtendedTooltip" id="74"/>
+					<Events>
+						<Event name="OnChange">ЛицевыеСчетаМесяцНачисленияСтрокаПриИзменении</Event>
+						<Event name="StartChoice">ЛицевыеСчетаМесяцНачисленияСтрокаНачалоВыбора</Event>
+						<Event name="Tuning">ЛицевыеСчетаМесяцНачисленияСтрокаРегулирование</Event>
+					</Events>
+				</InputField>
+				<InputField name="ЛицевыеСчетаСумма" id="28">
+					<DataPath>Объект.ЛицевыеСчета.Сумма</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<FooterDataPath>Объект.ЛицевыеСчета.TotalСумма</FooterDataPath>
+					<ContextMenu name="ЛицевыеСчетаСуммаКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="ЛицевыеСчетаСуммаExtendedTooltip" id="75"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<InputField name="Ответственный" id="13">
+			<DataPath>Объект.Ответственный</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="ОтветственныйКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ОтветственныйExtendedTooltip" id="76"/>
+		</InputField>
+		<InputField name="Комментарий" id="9">
+			<DataPath>Объект.Комментарий</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="КомментарийExtendedTooltip" id="77"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.КВП_ВводНачальногоСальдо</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="ВидыОпераций" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виды операций</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СостояниеДокумента" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состояние документа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВестиУчетНачисленийПоДобровольномуСтрахованию" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вести учет начислений по добровольному страхованию</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="УслугаДобровольногоСтрахования" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Услуга добровольного страхования</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.КВП_Услуги</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаЗаполнить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда заполнить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаЗаполнить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="УстановитьУслугу" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Услуга</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить услугу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьУслугу</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="УстановитьМесяцНачисления" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Месяц начисления</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить месяц начисления</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьМесяцНачисления</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="УстановитьНачислениеУслуг" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начисление услуг</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить начисление услуг</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьНачислениеУслуг</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="УстановитьЛьготы" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить льготы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить льготы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьЛьготы</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="УстановитьПени" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пени</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить пени</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьПени</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаЗаполнитьСОтбором" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить с отбором</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда заполнить с отбором</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаЗаполнитьСОтбором</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаВвестиОстаткиБУ" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ввести остатки в БУ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда ввести остатки БУ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаВвестиОстаткиБУ</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<CommandBar>
+			<Item>
+				<Command>0:2baf6d7a-12ed-4f22-ad96-92bb31b747ff</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</CommandBar>
+	</CommandInterface>
+</Form>

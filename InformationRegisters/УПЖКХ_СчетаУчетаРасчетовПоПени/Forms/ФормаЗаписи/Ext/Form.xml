@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Счета учета расчетов по пени</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Организация" id="1">
+			<DataPath>Запись.Организация</DataPath>
+			<ClearButton>true</ClearButton>
+			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ОрганизацияExtendedTooltip" id="19"/>
+		</InputField>
+		<InputField name="ВидыВзаиморасчетов" id="3">
+			<DataPath>Запись.ВидВзаиморасчетов</DataPath>
+			<ClearButton>true</ClearButton>
+			<ContextMenu name="ВидыВзаиморасчетовКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="ВидыВзаиморасчетовExtendedTooltip" id="20"/>
+		</InputField>
+		<UsualGroup name="ГруппаСчетаУчета" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Счета учета</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ГруппаСчетаУчетаExtendedTooltip" id="21"/>
+			<ChildItems>
+				<InputField name="СчетУчетаРасчетов" id="5">
+					<DataPath>Запись.СчетУчетаРасчетов</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Счет учета расчетов</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalAlign>Left</HorizontalAlign>
+					<Width>10</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ChoiceButton>true</ChoiceButton>
+					<ChoiceParameters>
+						<app:item name="Отбор.ЗапретитьИспользоватьВПроводках">
+							<app:value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation/>
+								<Value xsi:type="xs:boolean">false</Value>
+							</app:value>
+						</app:item>
+						<app:item name="Отбор.Забалансовый">
+							<app:value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation/>
+								<Value xsi:type="xs:boolean">false</Value>
+							</app:value>
+						</app:item>
+					</ChoiceParameters>
+					<ContextMenu name="СчетУчетаРасчетовКонтекстноеМеню" id="6"/>
+					<ExtendedTooltip name="СчетУчетаРасчетовExtendedTooltip" id="22"/>
+				</InputField>
+				<InputField name="СчетУчетаДоходов" id="9">
+					<DataPath>Запись.СчетУчетаДоходов</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Счет учета доходов</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalAlign>Left</HorizontalAlign>
+					<Width>10</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ChoiceButton>true</ChoiceButton>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ChoiceParameters>
+						<app:item name="Отбор.ЗапретитьИспользоватьВПроводках">
+							<app:value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation/>
+								<Value xsi:type="xs:boolean">false</Value>
+							</app:value>
+						</app:item>
+						<app:item name="Отбор.Забалансовый">
+							<app:value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation/>
+								<Value xsi:type="xs:boolean">false</Value>
+							</app:value>
+						</app:item>
+					</ChoiceParameters>
+					<ContextMenu name="СчетУчетаДоходовКонтекстноеМеню" id="10"/>
+					<ExtendedTooltip name="СчетУчетаДоходовExtendedTooltip" id="24"/>
+					<Events>
+						<Event name="OnChange">СчетУчетаДоходовПриИзменении</Event>
+					</Events>
+				</InputField>
+				<UsualGroup name="ГруппаСубконтоСчетаУчетаДоходов" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Субконто счета учета доходов</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Behavior>Collapsible</Behavior>
+					<CollapsedRepresentationTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Субконто счета учета доходов</v8:content>
+						</v8:item>
+					</CollapsedRepresentationTitle>
+					<Collapsed>true</Collapsed>
+					<ControlRepresentation>Picture</ControlRepresentation>
+					<Representation>None</Representation>
+					<ExtendedTooltip name="ГруппаСубконтоСчетаУчетаДоходовExtendedTooltip" id="25"/>
+					<ChildItems>
+						<InputField name="Субконто1" id="13">
+							<DataPath>Запись.Субконто1</DataPath>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Субконто 1 (БУ)</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ContextMenu name="Субконто1КонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="Субконто1ExtendedTooltip" id="26"/>
+							<Events>
+								<Event name="StartChoice">СубконтоДтНачалоВыбора</Event>
+							</Events>
+						</InputField>
+						<InputField name="Субконто2" id="15">
+							<DataPath>Запись.Субконто2</DataPath>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Субконто 2 (БУ)</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ContextMenu name="Субконто2КонтекстноеМеню" id="16"/>
+							<ExtendedTooltip name="Субконто2ExtendedTooltip" id="27"/>
+							<Events>
+								<Event name="StartChoice">СубконтоДтНачалоВыбора</Event>
+							</Events>
+						</InputField>
+						<InputField name="Субконто3" id="17">
+							<DataPath>Запись.Субконто3</DataPath>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Субконто 3 (БУ)</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ContextMenu name="Субконто3КонтекстноеМеню" id="18"/>
+							<ExtendedTooltip name="Субконто3ExtendedTooltip" id="28"/>
+							<Events>
+								<Event name="StartChoice">СубконтоДтНачалоВыбора</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<InputField name="СчетУчетаРасходов" id="29">
+					<DataPath>Запись.СчетУчетаРасходов</DataPath>
+					<Width>10</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ChoiceParameters>
+						<app:item name="Отбор.ЗапретитьИспользоватьВПроводках">
+							<app:value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation/>
+								<Value xsi:type="xs:boolean">false</Value>
+							</app:value>
+						</app:item>
+						<app:item name="Отбор.Забалансовый">
+							<app:value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation/>
+								<Value xsi:type="xs:boolean">false</Value>
+							</app:value>
+						</app:item>
+					</ChoiceParameters>
+					<ContextMenu name="СчетУчетаРасходовКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="СчетУчетаРасходовРасширеннаяПодсказка" id="31"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.УПЖКХ_СчетаУчетаРасчетовПоПени</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

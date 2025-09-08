@@ -1,0 +1,592 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Нижегородская область: Настройка</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаКнопкаЗаполнить" id="286">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.КомандаЗаполнить</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Заполнить таблицы соответствий</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаКнопкаЗаполнитьРасширеннаяПодсказка" id="287"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="ГруппаТаблицыФормыНастройки" id="66">
+			<ExtendedTooltip name="ГруппаТаблицыФормыНастройкиРасширеннаяПодсказка" id="67"/>
+			<ChildItems>
+				<Page name="ГруппаВидЖилФонда" id="68">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Виды жил. фонда</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа вид жил фонда</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаВидЖилФондаРасширеннаяПодсказка" id="69"/>
+					<ChildItems>
+						<Table name="НижегородскаяОбл_НастройкиВидЖилФонда" id="74">
+							<Representation>List</Representation>
+							<SelectionMode>SingleRow</SelectionMode>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.НижегородскаяОбл_НастройкиВидЖилФонда</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="НижегородскаяОбл_НастройкиВидЖилФондаКонтекстноеМеню" id="75"/>
+							<AutoCommandBar name="НижегородскаяОбл_НастройкиВидЖилФондаКоманднаяПанель" id="76"/>
+							<ExtendedTooltip name="НижегородскаяОбл_НастройкиВидЖилФондаРасширеннаяПодсказка" id="77"/>
+							<SearchStringAddition name="НижегородскаяОбл_НастройкиВидЖилФондаСтрокаПоиска" id="78">
+								<AdditionSource>
+									<Item>НижегородскаяОбл_НастройкиВидЖилФонда</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НижегородскаяОбл_НастройкиВидЖилФондаСтрокаПоискаКонтекстноеМеню" id="81"/>
+								<ExtendedTooltip name="НижегородскаяОбл_НастройкиВидЖилФондаСтрокаПоискаРасширеннаяПодсказка" id="82"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="НижегородскаяОбл_НастройкиВидЖилФондаСостояниеПросмотра" id="83">
+								<AdditionSource>
+									<Item>НижегородскаяОбл_НастройкиВидЖилФонда</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НижегородскаяОбл_НастройкиВидЖилФондаСостояниеПросмотраКонтекстноеМеню" id="86"/>
+								<ExtendedTooltip name="НижегородскаяОбл_НастройкиВидЖилФондаСостояниеПросмотраРасширеннаяПодсказка" id="87"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="НижегородскаяОбл_НастройкиВидЖилФондаУправлениеПоиском" id="88">
+								<AdditionSource>
+									<Item>НижегородскаяОбл_НастройкиВидЖилФонда</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="НижегородскаяОбл_НастройкиВидЖилФондаУправлениеПоискомКонтекстноеМеню" id="91"/>
+								<ExtendedTooltip name="НижегородскаяОбл_НастройкиВидЖилФондаУправлениеПоискомРасширеннаяПодсказка" id="92"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="НижегородскаяОбл_НастройкиВидЖилФондаНомер" id="348">
+									<DataPath>Объект.НижегородскаяОбл_НастройкиВидЖилФонда.Номер</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_НастройкиВидЖилФондаНомерКонтекстноеМеню" id="349"/>
+									<ExtendedTooltip name="НижегородскаяОбл_НастройкиВидЖилФондаНомерРасширеннаяПодсказка" id="350"/>
+								</InputField>
+								<InputField name="НижегородскаяОбл_НастройкиВидЖилФондаИзСправочника" id="351">
+									<DataPath>Объект.НижегородскаяОбл_НастройкиВидЖилФонда.ИзСправочника</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_НастройкиВидЖилФондаИзСправочникаКонтекстноеМеню" id="352"/>
+									<ExtendedTooltip name="НижегородскаяОбл_НастройкиВидЖилФондаИзСправочникаРасширеннаяПодсказка" id="353"/>
+								</InputField>
+								<InputField name="НижегородскаяОбл_НастройкиВидЖилФондаЗначениеВБазе" id="354">
+									<DataPath>Объект.НижегородскаяОбл_НастройкиВидЖилФонда.ЗначениеВБазе</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_НастройкиВидЖилФондаЗначениеВБазеКонтекстноеМеню" id="355"/>
+									<ExtendedTooltip name="НижегородскаяОбл_НастройкиВидЖилФондаЗначениеВБазеРасширеннаяПодсказка" id="356"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаТипыОтоплений" id="182">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Типы отоплений</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа типы отоплений</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаТипыОтопленийРасширеннаяПодсказка" id="183"/>
+					<ChildItems>
+						<Table name="НижегородскаяОбл_НастройкиТипыОтоплений" id="184">
+							<Representation>List</Representation>
+							<SelectionMode>SingleRow</SelectionMode>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.НижегородскаяОбл_НастройкиТипыОтоплений</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="НижегородскаяОбл_НастройкиТипыОтопленийКонтекстноеМеню" id="185"/>
+							<AutoCommandBar name="НижегородскаяОбл_НастройкиТипыОтопленийКоманднаяПанель" id="186"/>
+							<ExtendedTooltip name="НижегородскаяОбл_НастройкиТипыОтопленийРасширеннаяПодсказка" id="187"/>
+							<SearchStringAddition name="НижегородскаяОбл_НастройкиТипыОтопленийСтрокаПоиска" id="188">
+								<AdditionSource>
+									<Item>НижегородскаяОбл_НастройкиТипыОтоплений</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НижегородскаяОбл_НастройкиТипыОтопленийСтрокаПоискаКонтекстноеМеню" id="189"/>
+								<ExtendedTooltip name="НижегородскаяОбл_НастройкиТипыОтопленийСтрокаПоискаРасширеннаяПодсказка" id="190"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="НижегородскаяОбл_НастройкиТипыОтопленийСостояниеПросмотра" id="191">
+								<AdditionSource>
+									<Item>НижегородскаяОбл_НастройкиТипыОтоплений</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НижегородскаяОбл_НастройкиТипыОтопленийСостояниеПросмотраКонтекстноеМеню" id="192"/>
+								<ExtendedTooltip name="НижегородскаяОбл_НастройкиТипыОтопленийСостояниеПросмотраРасширеннаяПодсказка" id="193"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="НижегородскаяОбл_НастройкиТипыОтопленийУправлениеПоиском" id="194">
+								<AdditionSource>
+									<Item>НижегородскаяОбл_НастройкиТипыОтоплений</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="НижегородскаяОбл_НастройкиТипыОтопленийУправлениеПоискомКонтекстноеМеню" id="195"/>
+								<ExtendedTooltip name="НижегородскаяОбл_НастройкиТипыОтопленийУправлениеПоискомРасширеннаяПодсказка" id="196"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="НижегородскаяОбл_НастройкиТипыОтопленийНомер" id="360">
+									<DataPath>Объект.НижегородскаяОбл_НастройкиТипыОтоплений.Номер</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_НастройкиТипыОтопленийНомерКонтекстноеМеню" id="361"/>
+									<ExtendedTooltip name="НижегородскаяОбл_НастройкиТипыОтопленийНомерРасширеннаяПодсказка" id="362"/>
+								</InputField>
+								<InputField name="НижегородскаяОбл_НастройкиТипыОтопленийИзСправочника" id="363">
+									<DataPath>Объект.НижегородскаяОбл_НастройкиТипыОтоплений.ИзСправочника</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_НастройкиТипыОтопленийИзСправочникаКонтекстноеМеню" id="364"/>
+									<ExtendedTooltip name="НижегородскаяОбл_НастройкиТипыОтопленийИзСправочникаРасширеннаяПодсказка" id="365"/>
+								</InputField>
+								<InputField name="НижегородскаяОбл_НастройкиТипыОтопленийЗначениеВБазе" id="366">
+									<DataPath>Объект.НижегородскаяОбл_НастройкиТипыОтоплений.ЗначениеВБазе</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_НастройкиТипыОтопленийЗначениеВБазеКонтекстноеМеню" id="367"/>
+									<ExtendedTooltip name="НижегородскаяОбл_НастройкиТипыОтопленийЗначениеВБазеРасширеннаяПодсказка" id="368"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаВидыПлощадей" id="72">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Виды площадей</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа виды площадей</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаВидыПлощадейРасширеннаяПодсказка" id="73"/>
+					<ChildItems>
+						<Table name="НижегородскаяОбл_НастройкиВидыПлощадей" id="134">
+							<Representation>List</Representation>
+							<SelectionMode>SingleRow</SelectionMode>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.НижегородскаяОбл_НастройкиВидыПлощадей</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="НижегородскаяОбл_НастройкиВидыПлощадейКонтекстноеМеню" id="135"/>
+							<AutoCommandBar name="НижегородскаяОбл_НастройкиВидыПлощадейКоманднаяПанель" id="136"/>
+							<ExtendedTooltip name="НижегородскаяОбл_НастройкиВидыПлощадейРасширеннаяПодсказка" id="137"/>
+							<SearchStringAddition name="НижегородскаяОбл_НастройкиВидыПлощадейСтрокаПоиска" id="138">
+								<AdditionSource>
+									<Item>НижегородскаяОбл_НастройкиВидыПлощадей</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НижегородскаяОбл_НастройкиВидыПлощадейСтрокаПоискаКонтекстноеМеню" id="141"/>
+								<ExtendedTooltip name="НижегородскаяОбл_НастройкиВидыПлощадейСтрокаПоискаРасширеннаяПодсказка" id="142"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="НижегородскаяОбл_НастройкиВидыПлощадейСостояниеПросмотра" id="143">
+								<AdditionSource>
+									<Item>НижегородскаяОбл_НастройкиВидыПлощадей</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НижегородскаяОбл_НастройкиВидыПлощадейСостояниеПросмотраКонтекстноеМеню" id="146"/>
+								<ExtendedTooltip name="НижегородскаяОбл_НастройкиВидыПлощадейСостояниеПросмотраРасширеннаяПодсказка" id="147"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="НижегородскаяОбл_НастройкиВидыПлощадейУправлениеПоиском" id="148">
+								<AdditionSource>
+									<Item>НижегородскаяОбл_НастройкиВидыПлощадей</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="НижегородскаяОбл_НастройкиВидыПлощадейУправлениеПоискомКонтекстноеМеню" id="151"/>
+								<ExtendedTooltip name="НижегородскаяОбл_НастройкиВидыПлощадейУправлениеПоискомРасширеннаяПодсказка" id="152"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="НижегородскаяОбл_НастройкиВидыПлощадейИзСправочника" id="372">
+									<DataPath>Объект.НижегородскаяОбл_НастройкиВидыПлощадей.ИзСправочника</DataPath>
+									<EditMode>Directly</EditMode>
+									<ListChoiceMode>true</ListChoiceMode>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Общая площадь</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">Общая площадь</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Жилая площадь</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">Жилая площадь</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Отапливаемая площадь</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">Отапливаемая площадь</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="НижегородскаяОбл_НастройкиВидыПлощадейИзСправочникаКонтекстноеМеню" id="373"/>
+									<ExtendedTooltip name="НижегородскаяОбл_НастройкиВидыПлощадейИзСправочникаРасширеннаяПодсказка" id="374"/>
+								</InputField>
+								<InputField name="НижегородскаяОбл_НастройкиВидыПлощадейЗначениеВБазе" id="375">
+									<DataPath>Объект.НижегородскаяОбл_НастройкиВидыПлощадей.ЗначениеВБазе</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_НастройкиВидыПлощадейЗначениеВБазеКонтекстноеМеню" id="376"/>
+									<ExtendedTooltip name="НижегородскаяОбл_НастройкиВидыПлощадейЗначениеВБазеРасширеннаяПодсказка" id="377"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаТипыЖилья" id="205">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Типы жилья</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа виды площадей</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаТипыЖильяРасширеннаяПодсказка" id="206"/>
+					<ChildItems>
+						<Table name="НижегородскаяОбл_НастройкиТипыЖилья" id="207">
+							<Representation>List</Representation>
+							<SelectionMode>SingleRow</SelectionMode>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.НижегородскаяОбл_НастройкиТипыЖилья</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="НижегородскаяОбл_НастройкиТипыЖильяКонтекстноеМеню" id="208"/>
+							<AutoCommandBar name="НижегородскаяОбл_НастройкиТипыЖильяКоманднаяПанель" id="209"/>
+							<ExtendedTooltip name="НижегородскаяОбл_НастройкиТипыЖильяРасширеннаяПодсказка" id="210"/>
+							<SearchStringAddition name="НижегородскаяОбл_НастройкиТипыЖильяСтрокаПоиска" id="211">
+								<AdditionSource>
+									<Item>НижегородскаяОбл_НастройкиТипыЖилья</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НижегородскаяОбл_НастройкиТипыЖильяСтрокаПоискаКонтекстноеМеню" id="212"/>
+								<ExtendedTooltip name="НижегородскаяОбл_НастройкиТипыЖильяСтрокаПоискаРасширеннаяПодсказка" id="213"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="НижегородскаяОбл_НастройкиТипыЖильяСостояниеПросмотра" id="214">
+								<AdditionSource>
+									<Item>НижегородскаяОбл_НастройкиТипыЖилья</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НижегородскаяОбл_НастройкиТипыЖильяСостояниеПросмотраКонтекстноеМеню" id="215"/>
+								<ExtendedTooltip name="НижегородскаяОбл_НастройкиТипыЖильяСостояниеПросмотраРасширеннаяПодсказка" id="216"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="НижегородскаяОбл_НастройкиТипыЖильяУправлениеПоиском" id="217">
+								<AdditionSource>
+									<Item>НижегородскаяОбл_НастройкиТипыЖилья</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="НижегородскаяОбл_НастройкиТипыЖильяУправлениеПоискомКонтекстноеМеню" id="218"/>
+								<ExtendedTooltip name="НижегородскаяОбл_НастройкиТипыЖильяУправлениеПоискомРасширеннаяПодсказка" id="219"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="НижегородскаяОбл_НастройкиТипыЖильяНомер" id="381">
+									<DataPath>Объект.НижегородскаяОбл_НастройкиТипыЖилья.Номер</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_НастройкиТипыЖильяНомерКонтекстноеМеню" id="382"/>
+									<ExtendedTooltip name="НижегородскаяОбл_НастройкиТипыЖильяНомерРасширеннаяПодсказка" id="383"/>
+								</InputField>
+								<InputField name="НижегородскаяОбл_НастройкиТипыЖильяИзСправочника" id="384">
+									<DataPath>Объект.НижегородскаяОбл_НастройкиТипыЖилья.ИзСправочника</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_НастройкиТипыЖильяИзСправочникаКонтекстноеМеню" id="385"/>
+									<ExtendedTooltip name="НижегородскаяОбл_НастройкиТипыЖильяИзСправочникаРасширеннаяПодсказка" id="386"/>
+								</InputField>
+								<InputField name="НижегородскаяОбл_НастройкиТипыЖильяЗначениеВБазе" id="387">
+									<DataPath>Объект.НижегородскаяОбл_НастройкиТипыЖилья.ЗначениеВБазе</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_НастройкиТипыЖильяЗначениеВБазеКонтекстноеМеню" id="388"/>
+									<ExtendedTooltip name="НижегородскаяОбл_НастройкиТипыЖильяЗначениеВБазеРасширеннаяПодсказка" id="389"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаУслуги" id="70">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Услуги</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаУслугиРасширеннаяПодсказка" id="71"/>
+					<ChildItems>
+						<Table name="НижегородскаяОбл_НастройкиУслуги" id="104">
+							<Representation>List</Representation>
+							<SelectionMode>SingleRow</SelectionMode>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.НижегородскаяОбл_НастройкиУслуги</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="НижегородскаяОбл_НастройкиУслугиКонтекстноеМеню" id="105"/>
+							<AutoCommandBar name="НижегородскаяОбл_НастройкиУслугиКоманднаяПанель" id="106"/>
+							<ExtendedTooltip name="НижегородскаяОбл_НастройкиУслугиРасширеннаяПодсказка" id="107"/>
+							<SearchStringAddition name="НижегородскаяОбл_НастройкиУслугиСтрокаПоиска" id="108">
+								<AdditionSource>
+									<Item>НижегородскаяОбл_НастройкиУслуги</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НижегородскаяОбл_НастройкиУслугиСтрокаПоискаКонтекстноеМеню" id="111"/>
+								<ExtendedTooltip name="НижегородскаяОбл_НастройкиУслугиСтрокаПоискаРасширеннаяПодсказка" id="112"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="НижегородскаяОбл_НастройкиУслугиСостояниеПросмотра" id="113">
+								<AdditionSource>
+									<Item>НижегородскаяОбл_НастройкиУслуги</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НижегородскаяОбл_НастройкиУслугиСостояниеПросмотраКонтекстноеМеню" id="116"/>
+								<ExtendedTooltip name="НижегородскаяОбл_НастройкиУслугиСостояниеПросмотраРасширеннаяПодсказка" id="117"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="НижегородскаяОбл_НастройкиУслугиУправлениеПоиском" id="118">
+								<AdditionSource>
+									<Item>НижегородскаяОбл_НастройкиУслуги</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="НижегородскаяОбл_НастройкиУслугиУправлениеПоискомКонтекстноеМеню" id="121"/>
+								<ExtendedTooltip name="НижегородскаяОбл_НастройкиУслугиУправлениеПоискомРасширеннаяПодсказка" id="122"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="НижегородскаяОбл_НастройкиУслугиНомер" id="393">
+									<DataPath>Объект.НижегородскаяОбл_НастройкиУслуги.Номер</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_НастройкиУслугиНомерКонтекстноеМеню" id="394"/>
+									<ExtendedTooltip name="НижегородскаяОбл_НастройкиУслугиНомерРасширеннаяПодсказка" id="395"/>
+								</InputField>
+								<InputField name="НижегородскаяОбл_НастройкиУслугиИзСправочника" id="396">
+									<DataPath>Объект.НижегородскаяОбл_НастройкиУслуги.ИзСправочника</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_НастройкиУслугиИзСправочникаКонтекстноеМеню" id="397"/>
+									<ExtendedTooltip name="НижегородскаяОбл_НастройкиУслугиИзСправочникаРасширеннаяПодсказка" id="398"/>
+								</InputField>
+								<InputField name="НижегородскаяОбл_НастройкиУслугиЗначениеВБазе" id="399">
+									<DataPath>Объект.НижегородскаяОбл_НастройкиУслуги.ЗначениеВБазе</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_НастройкиУслугиЗначениеВБазеКонтекстноеМеню" id="400"/>
+									<ExtendedTooltip name="НижегородскаяОбл_НастройкиУслугиЗначениеВБазеРасширеннаяПодсказка" id="401"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаЕдИзмерения" id="228">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ед. измерения</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа виды площадей</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаЕдИзмеренияРасширеннаяПодсказка" id="229"/>
+					<ChildItems>
+						<Table name="НижегородскаяОбл_НастройкиЕдИзмерения" id="230">
+							<Representation>List</Representation>
+							<SelectionMode>SingleRow</SelectionMode>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.НижегородскаяОбл_НастройкиЕдИзмерения</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="НижегородскаяОбл_НастройкиЕдИзмеренияКонтекстноеМеню" id="231"/>
+							<AutoCommandBar name="НижегородскаяОбл_НастройкиЕдИзмеренияКоманднаяПанель" id="232"/>
+							<ExtendedTooltip name="НижегородскаяОбл_НастройкиЕдИзмеренияРасширеннаяПодсказка" id="233"/>
+							<SearchStringAddition name="НижегородскаяОбл_НастройкиЕдИзмеренияСтрокаПоиска" id="234">
+								<AdditionSource>
+									<Item>НижегородскаяОбл_НастройкиЕдИзмерения</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НижегородскаяОбл_НастройкиЕдИзмеренияСтрокаПоискаКонтекстноеМеню" id="235"/>
+								<ExtendedTooltip name="НижегородскаяОбл_НастройкиЕдИзмеренияСтрокаПоискаРасширеннаяПодсказка" id="236"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="НижегородскаяОбл_НастройкиЕдИзмеренияСостояниеПросмотра" id="237">
+								<AdditionSource>
+									<Item>НижегородскаяОбл_НастройкиЕдИзмерения</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НижегородскаяОбл_НастройкиЕдИзмеренияСостояниеПросмотраКонтекстноеМеню" id="238"/>
+								<ExtendedTooltip name="НижегородскаяОбл_НастройкиЕдИзмеренияСостояниеПросмотраРасширеннаяПодсказка" id="239"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="НижегородскаяОбл_НастройкиЕдИзмеренияУправлениеПоиском" id="240">
+								<AdditionSource>
+									<Item>НижегородскаяОбл_НастройкиЕдИзмерения</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="НижегородскаяОбл_НастройкиЕдИзмеренияУправлениеПоискомКонтекстноеМеню" id="241"/>
+								<ExtendedTooltip name="НижегородскаяОбл_НастройкиЕдИзмеренияУправлениеПоискомРасширеннаяПодсказка" id="242"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="НижегородскаяОбл_НастройкиЕдИзмеренияНомер" id="405">
+									<DataPath>Объект.НижегородскаяОбл_НастройкиЕдИзмерения.Номер</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_НастройкиЕдИзмеренияНомерКонтекстноеМеню" id="406"/>
+									<ExtendedTooltip name="НижегородскаяОбл_НастройкиЕдИзмеренияНомерРасширеннаяПодсказка" id="407"/>
+								</InputField>
+								<InputField name="НижегородскаяОбл_НастройкиЕдИзмеренияИзСправочника" id="408">
+									<DataPath>Объект.НижегородскаяОбл_НастройкиЕдИзмерения.ИзСправочника</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_НастройкиЕдИзмеренияИзСправочникаКонтекстноеМеню" id="409"/>
+									<ExtendedTooltip name="НижегородскаяОбл_НастройкиЕдИзмеренияИзСправочникаРасширеннаяПодсказка" id="410"/>
+								</InputField>
+								<InputField name="НижегородскаяОбл_НастройкиЕдИзмеренияЗначениеВБазе" id="411">
+									<DataPath>Объект.НижегородскаяОбл_НастройкиЕдИзмерения.ЗначениеВБазе</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_НастройкиЕдИзмеренияЗначениеВБазеКонтекстноеМеню" id="412"/>
+									<ExtendedTooltip name="НижегородскаяОбл_НастройкиЕдИзмеренияЗначениеВБазеРасширеннаяПодсказка" id="413"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<CommandBar name="ГруппаКоманднаяПанель" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа командная панель</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalLocation>Right</HorizontalLocation>
+			<ExtendedTooltip name="ГруппаКоманднаяПанельРасширеннаяПодсказка" id="29"/>
+			<ChildItems>
+				<Button name="ФормаКомандаСохранить" id="30">
+					<Type>CommandBarButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Form.Command.КомандаСохранить</CommandName>
+					<Picture>
+						<xr:Ref>StdPicture.SaveFile</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ФормаКомандаСохранитьРасширеннаяПодсказка" id="31"/>
+				</Button>
+				<Button name="Закрыть" id="32">
+					<Type>CommandBarButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Form.StandardCommand.Close</CommandName>
+					<ExtendedTooltip name="ЗакрытьРасширеннаяПодсказка" id="33"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.УПЖКХ_ВыгрузкиВОрганыСоцЗащиты</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ИмяКаталогаЗагрузки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя каталога загрузки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>512</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаСохранить" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда сохранить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаСохранить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаЗаполнить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда заполнить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаЗаполнить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

@@ -1,0 +1,1218 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Загрузка кодов зданий по ФИАС</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="ГруппаСтраницыФормы" id="57">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы формы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы формы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаСтраницыФормыРасширеннаяПодсказка" id="58"/>
+			<ChildItems>
+				<Page name="СтраницаВводAPIКлюча" id="59">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ввод API-ключа</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ввод API-ключа</v8:content>
+						</v8:item>
+					</ToolTip>
+					<VerticalAlign>Center</VerticalAlign>
+					<ExtendedTooltip name="СтраницаВводAPIКлючаРасширеннаяПодсказка" id="60"/>
+					<ChildItems>
+						<UsualGroup name="ОбщаяГруппаСтраницыВводаAPIКлюча" id="63">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Общая группа страницы ввода API-ключа</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Общая группа страницы ввода API-ключа</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalStretch>true</HorizontalStretch>
+							<VerticalStretch>false</VerticalStretch>
+							<GroupVerticalAlign>Center</GroupVerticalAlign>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ОбщаяГруппаСтраницыВводаAPIКлючаРасширеннаяПодсказка" id="64"/>
+							<ChildItems>
+								<LabelDecoration name="НадписьПояснениеСтраницаВводаAPIКлюча" id="110">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<HorizontalStretch>true</HorizontalStretch>
+									<TextColor>style:УПЖКХ_ТекстСправочнойНадписи</TextColor>
+									<Title formatted="true">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Механизм загрузки кодов зданий по ФИАС предназначен для автоматического заполнения кодов зданий по ФИАС помощью сервиса "dadata.ru".
+
+Для начала работы с данным механизмом необходимо зарегистрироваться на сайте "dadata.ru" и получить кодовое слово (API-ключ) согласно &lt;link https://vgkh.ru/faq/faq_tsj_3_0/kody_fias/&gt;инструкции&lt;/&gt;.
+</v8:content>
+										</v8:item>
+									</Title>
+									<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+									<ContextMenu name="НадписьПояснениеСтраницаВводаAPIКлючаКонтекстноеМеню" id="111"/>
+									<ExtendedTooltip name="НадписьПояснениеСтраницаВводаAPIКлючаРасширеннаяПодсказка" id="112"/>
+								</LabelDecoration>
+								<UsualGroup name="ГруппаВводAPIКлюча" id="65">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ввод API-ключа</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ввод API-ключа</v8:content>
+										</v8:item>
+									</ToolTip>
+									<HorizontalStretch>true</HorizontalStretch>
+									<Group>Vertical</Group>
+									<HorizontalAlign>Left</HorizontalAlign>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаВводAPIКлючаРасширеннаяПодсказка" id="66"/>
+									<ChildItems>
+										<InputField name="ПолеAPIКлюч" id="67">
+											<DataPath>APIКлюч</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Введите полученный API-ключ</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ПолеAPIКлючКонтекстноеМеню" id="68"/>
+											<ExtendedTooltip name="ПолеAPIКлючРасширеннаяПодсказка" id="69"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаЗагрузкаКодовПоФИАС" id="61">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Загрузка кодов зданий по ФИАС</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Загрузка кодов зданий по ФИАС</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаЗагрузкаКодовПоФИАСРасширеннаяПодсказка" id="62"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаШапкаСтраницыЗагрузкиКодовПоФИАС" id="113">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Шапка страницы загрузки кодов по ФИАС</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Шапка страницы загрузки кодов по ФИАС</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>None</ToolTipRepresentation>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаШапкаСтраницыЗагрузкиКодовПоФИАСРасширеннаяПодсказка" id="114"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаПояснения" id="115">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Пояснения</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Пояснения</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>None</ToolTipRepresentation>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПоясненияРасширеннаяПодсказка" id="116"/>
+									<ChildItems>
+										<LabelDecoration name="ДекорацияЗаполнениеПоОбъектуОбнаруженоНесколькоКодов" id="120">
+											<Visible>false</Visible>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<TextColor>style:ЦветШрифтаОшибки</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Для здания обнаружено несколько кодов по ФИАС. Пожалуйста, выберите подходящий.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияЗаполнениеПоОбъектуОбнаруженоНесколькоКодовКонтекстноеМеню" id="121"/>
+											<ExtendedTooltip name="ДекорацияЗаполнениеПоОбъектуОбнаруженоНесколькоКодовРасширеннаяПодсказка" id="122"/>
+										</LabelDecoration>
+										<LabelDecoration name="ДекорацияЗаполнениеПоОбъектуНеОбнаруженоКодов" id="123">
+											<Visible>false</Visible>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<TextColor>style:ЦветШрифтаОшибки</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Для здания не удалось определить код по ФИАС. Попробуйте вручную изменить адрес здания в поле "Адрес" и нажать на кнопку "Обновить коды здания по ФИАС".</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияЗаполнениеПоОбъектуНеОбнаруженоКодовКонтекстноеМеню" id="124"/>
+											<ExtendedTooltip name="ДекорацияЗаполнениеПоОбъектуНеОбнаруженоКодовРасширеннаяПодсказка" id="125"/>
+										</LabelDecoration>
+										<LabelDecoration name="ДекорацияСостояниеНетОбъектовВТаблице" id="147">
+											<Visible>false</Visible>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<TextColor>style:УПЖКХ_ТекстСправочнойНадписи</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Заполните таблицу зданиями, для которых нужно заполнить коды по ФИАС. Для этого воспользуйтесь меню "Заполнить" (для автоматического заполнения) или кнопкой "Добавить" (для ручного заполнения).</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияСостояниеНетОбъектовВТаблицеКонтекстноеМеню" id="148"/>
+											<ExtendedTooltip name="ДекорацияСостояниеНетОбъектовВТаблицеРасширеннаяПодсказка" id="149"/>
+										</LabelDecoration>
+										<LabelDecoration name="ДекорацияСостояниеНеЗагружалисьКодыФИАС" id="150">
+											<Visible>false</Visible>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<TextColor>style:УПЖКХ_ТекстСправочнойНадписи</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Нажмите на кнопку "Загрузить коды по ФИАС", чтобы загрузить коды по ФИАС для зданий в таблице.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияСостояниеНеЗагружалисьКодыФИАСКонтекстноеМеню" id="151"/>
+											<ExtendedTooltip name="ДекорацияСостояниеНеЗагружалисьКодыФИАСРасширеннаяПодсказка" id="152"/>
+										</LabelDecoration>
+										<LabelDecoration name="ДекорацияСостояниеНеЗагружалисьКодыФИАСПоНекоторымОбъектам" id="153">
+											<Visible>false</Visible>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<TextColor>style:ЦветШрифтаОшибки</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Имеются здания, для которых не выполнялась загрузка кодов по ФИАС. Пожалуйста, загрузите коды по ФИАС повторно.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияСостояниеНеЗагружалисьКодыФИАСПоНекоторымОбъектамКонтекстноеМеню" id="154"/>
+											<ExtendedTooltip name="ДекорацияСостояниеНеЗагружалисьКодыФИАСПоНекоторымОбъектамРасширеннаяПодсказка" id="155"/>
+										</LabelDecoration>
+										<LabelDecoration name="ДекорацияСостояниеНеДляВсехОбъектовЗаполненКодФИАС" id="156">
+											<Visible>false</Visible>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<TextColor>style:ЦветШрифтаОшибки</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Не для всех зданий удалось определить коды по ФИАС. Нажмите на кнопку "Показать здания с незаполненными кодами по ФИАС", чтобы отобрать такие здания и обработать их вручную.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияСостояниеНеДляВсехОбъектовЗаполненКодФИАСКонтекстноеМеню" id="157"/>
+											<ExtendedTooltip name="ДекорацияСостояниеНеДляВсехОбъектовЗаполненКодФИАСРасширеннаяПодсказка" id="158"/>
+										</LabelDecoration>
+										<LabelDecoration name="ДекорацияСостояниеВсеКодыФИАСЗаполненыИГотовыДляСохранения" id="159">
+											<Visible>false</Visible>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<TextColor>style:УПЖКХ_ТекстСправочнойНадписи</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Все коды по ФИАС успешно заполнены. Нажмите на кнопку "Сохранить коды по ФИАС", чтобы сохранить коды по ФИАС зданий.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияСостояниеВсеКодыФИАСЗаполненыИГотовыДляСохраненияКонтекстноеМеню" id="160"/>
+											<ExtendedTooltip name="ДекорацияСостояниеВсеКодыФИАСЗаполненыИГотовыДляСохраненияРасширеннаяПодсказка" id="161"/>
+										</LabelDecoration>
+										<LabelDecoration name="ДекорацияСостояниеСохраненоУспешно" id="162">
+											<Visible>false</Visible>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<TextColor>style:УПЖКХ_ТекстСправочнойНадписи</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Все коды зданий по ФИАС успешно сохранены.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияСостояниеСохраненоУспешноКонтекстноеМеню" id="163"/>
+											<ExtendedTooltip name="ДекорацияСостояниеСохраненоУспешноРасширеннаяПодсказка" id="164"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<CommandBar name="ГруппаКнопкиСтраницыЗагрузки" id="97">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Кнопки страницы загрузки</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Кнопки страницы загрузки</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ГруппаКнопкиСтраницыЗагрузкиРасширеннаяПодсказка" id="98"/>
+									<ChildItems>
+										<Popup name="ГруппаЗаполнить" id="132">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Заполнить</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа заполнить</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Picture>
+												<xr:Ref>CommonPicture.ЗаполнитьФорму</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<BackColor>#FFD700</BackColor>
+											<ExtendedTooltip name="ГруппаЗаполнитьРасширеннаяПодсказка" id="133"/>
+											<ChildItems>
+												<Button name="ТаблицаЗаполнитьЗданиямиБезКодовПоФИАС" id="134">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.КомандаЗаполнитьЗданиямиБезКодовПоФИАС</CommandName>
+													<ExtendedTooltip name="ТаблицаЗаполнитьЗданиямиБезКодовПоФИАСРасширеннаяПодсказка" id="135"/>
+												</Button>
+												<Button name="ТаблицаЗаполнитьВсемиЗданиями" id="136">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.КомандаЗаполнитьВсемиЗданиями</CommandName>
+													<ExtendedTooltip name="ТаблицаЗаполнитьВсемиЗданиямиРасширеннаяПодсказка" id="137"/>
+												</Button>
+											</ChildItems>
+										</Popup>
+										<Button name="КнопкаЗагрузитьКодыПоФИАС" id="138">
+											<Type>CommandBarButton</Type>
+											<Representation>PictureAndText</Representation>
+											<CommandName>Form.Command.КомандаЗагрузитьКодыПоФИАС</CommandName>
+											<Picture>
+												<xr:Ref>CommonPicture.Сформировать</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<ExtendedTooltip name="КнопкаЗагрузитьКодыПоФИАСРасширеннаяПодсказка" id="139"/>
+										</Button>
+										<Button name="КнопкаСохранитьКодыПоФИАС" id="140">
+											<Type>CommandBarButton</Type>
+											<Representation>PictureAndText</Representation>
+											<CommandName>Form.Command.КомандаСохранитьКодыПоФИАС</CommandName>
+											<Picture>
+												<xr:Ref>StdPicture.Write</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<ExtendedTooltip name="КнопкаСохранитьКодыПоФИАСРасширеннаяПодсказка" id="141"/>
+										</Button>
+									</ChildItems>
+								</CommandBar>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ОбщаяГруппаФормыЗагрузки" id="1">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Общая группа формы загрузки</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Общая группа формы загрузки</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ОбщаяГруппаФормыЗагрузкиРасширеннаяПодсказка" id="2"/>
+							<ChildItems>
+								<Table name="ТаблицаОбъектов" id="3">
+									<Representation>List</Representation>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Height>3</Height>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>ТаблицаОбъектов</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ТаблицаОбъектовКонтекстноеМеню" id="4"/>
+									<AutoCommandBar name="ТаблицаОбъектовКоманднаяПанель" id="5">
+										<ChildItems>
+											<Button name="ТаблицаОбъектовКнопкаПоказатьПроблемныеОбъекты" id="165">
+												<Type>CommandBarButton</Type>
+												<Representation>PictureAndText</Representation>
+												<CommandName>Form.Command.КомандаПоказатьПроблемныеОбъекты</CommandName>
+												<Picture>
+													<xr:Ref>CommonPicture.Отборы</xr:Ref>
+													<xr:LoadTransparent>true</xr:LoadTransparent>
+												</Picture>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Показать здания с незаполненными кодами по ФИАС</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="ТаблицаОбъектовКнопкаПоказатьПроблемныеОбъектыРасширеннаяПодсказка" id="166"/>
+											</Button>
+										</ChildItems>
+									</AutoCommandBar>
+									<ExtendedTooltip name="ТаблицаОбъектовРасширеннаяПодсказка" id="6"/>
+									<SearchStringAddition name="ТаблицаОбъектовСтрокаПоиска" id="7">
+										<AdditionSource>
+											<Item>ТаблицаОбъектов</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ТаблицаОбъектовСтрокаПоискаКонтекстноеМеню" id="8"/>
+										<ExtendedTooltip name="ТаблицаОбъектовСтрокаПоискаРасширеннаяПодсказка" id="9"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ТаблицаОбъектовСостояниеПросмотра" id="10">
+										<AdditionSource>
+											<Item>ТаблицаОбъектов</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ТаблицаОбъектовСостояниеПросмотраКонтекстноеМеню" id="11"/>
+										<ExtendedTooltip name="ТаблицаОбъектовСостояниеПросмотраРасширеннаяПодсказка" id="12"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ТаблицаОбъектовУправлениеПоиском" id="13">
+										<AdditionSource>
+											<Item>ТаблицаОбъектов</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ТаблицаОбъектовУправлениеПоискомКонтекстноеМеню" id="14"/>
+										<ExtendedTooltip name="ТаблицаОбъектовУправлениеПоискомРасширеннаяПодсказка" id="15"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="OnEditEnd">ТаблицаОбъектовПриОкончанииРедактирования</Event>
+										<Event name="OnActivateRow">ТаблицаОбъектовПриАктивизацииСтроки</Event>
+										<Event name="AfterDeleteRow">ТаблицаОбъектовПослеУдаления</Event>
+									</Events>
+									<ChildItems>
+										<InputField name="ТаблицаОбъектовПредставлениеАдресаОбъекта" id="167">
+											<DataPath>ТаблицаОбъектов.ПредставлениеАдресаОбъекта</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Здание</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<DropListButton>false</DropListButton>
+											<ChoiceButton>true</ChoiceButton>
+											<ClearButton>false</ClearButton>
+											<SpinButton>false</SpinButton>
+											<OpenButton>true</OpenButton>
+											<CreateButton>false</CreateButton>
+											<ChooseType>false</ChooseType>
+											<IncompleteChoiceMode>OnActivate</IncompleteChoiceMode>
+											<TextEdit>false</TextEdit>
+											<EditTextUpdate>Always</EditTextUpdate>
+											<ContextMenu name="ТаблицаОбъектовПредставлениеАдресаОбъектаКонтекстноеМеню" id="168"/>
+											<ExtendedTooltip name="ТаблицаОбъектовПредставлениеАдресаОбъектаРасширеннаяПодсказка" id="169"/>
+											<Events>
+												<Event name="StartChoice">ТаблицаОбъектовПредставлениеАдресаОбъектаНачалоВыбора</Event>
+												<Event name="Opening">ТаблицаОбъектовПредставлениеАдресаОбъектаОткрытие</Event>
+											</Events>
+										</InputField>
+										<InputField name="ТаблицаОбъектовОбъект" id="16">
+											<DataPath>ТаблицаОбъектов.Объект</DataPath>
+											<Visible>false</Visible>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТаблицаОбъектовОбъектКонтекстноеМеню" id="17"/>
+											<ExtendedTooltip name="ТаблицаОбъектовОбъектРасширеннаяПодсказка" id="18"/>
+										</InputField>
+										<InputField name="ТаблицаОбъектовТекущийКодПоФИАС" id="19">
+											<DataPath>ТаблицаОбъектов.ТекущийКодДомаПоФИАС</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<TextEdit>false</TextEdit>
+											<ContextMenu name="ТаблицаОбъектовТекущийКодПоФИАСКонтекстноеМеню" id="20"/>
+											<ExtendedTooltip name="ТаблицаОбъектовТекущийКодПоФИАСРасширеннаяПодсказка" id="21"/>
+										</InputField>
+										<InputField name="ТаблицаОбъектовНовыйКодПоФИАС" id="22">
+											<DataPath>ТаблицаОбъектов.НовыйКодДомаПоФИАС</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТаблицаОбъектовНовыйКодПоФИАСКонтекстноеМеню" id="23"/>
+											<ExtendedTooltip name="ТаблицаОбъектовНовыйКодПоФИАСРасширеннаяПодсказка" id="24"/>
+											<Events>
+												<Event name="OnChange">ТаблицаОбъектовНовыйКодПоФИАСПриИзменении</Event>
+												<Event name="TextEditEnd">ТаблицаОбъектовНовыйКодДомаПоФИАСОкончаниеВводаТекста</Event>
+											</Events>
+										</InputField>
+										<ColumnGroup name="ТаблицаОбъектовСтатусЗаполненияГруппа" id="176">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Статус заполнения</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Статус заполнения</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>InCell</Group>
+											<ExtendedTooltip name="ТаблицаОбъектовСтатусЗаполненияГруппаРасширеннаяПодсказка" id="177"/>
+											<ChildItems>
+												<PictureField name="ТаблицаОбъектовНовыйКодПоФИАСЗаполнен" id="173">
+													<DataPath>ТаблицаОбъектов.КодДомаПоФИАСЗаполнен</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<EditMode>EnterOnInput</EditMode>
+													<ValuesPicture>
+														<xr:Ref>CommonPicture.ФлажокИКрестик</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</ValuesPicture>
+													<FileDragMode>AsFile</FileDragMode>
+													<ContextMenu name="ТаблицаОбъектовНовыйКодПоФИАСЗаполненКонтекстноеМеню" id="174"/>
+													<ExtendedTooltip name="ТаблицаОбъектовНовыйКодПоФИАСЗаполненРасширеннаяПодсказка" id="175"/>
+												</PictureField>
+												<InputField name="ТаблицаОбъектовСтатусЗаполнения" id="144">
+													<DataPath>ТаблицаОбъектов.СтатусЗаполнения</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<TextEdit>false</TextEdit>
+													<ContextMenu name="ТаблицаОбъектовСтатусЗаполненияКонтекстноеМеню" id="145"/>
+													<ExtendedTooltip name="ТаблицаОбъектовСтатусЗаполненияРасширеннаяПодсказка" id="146"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+									</ChildItems>
+								</Table>
+								<UsualGroup name="ГруппаРаботаСКодамиПоФИАС" id="28">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Работа с кодами по ФИАС</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Работа с кодами по ФИАС</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаРаботаСКодамиПоФИАСРасширеннаяПодсказка" id="29"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаРучноеЗаполнениеАдреса" id="76">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Ручное заполнение адреса</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Ручное заполнение адреса</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаРучноеЗаполнениеАдресаРасширеннаяПодсказка" id="77"/>
+											<ChildItems>
+												<LabelDecoration name="ДекорацияПояснениеПоляПредставленияАдреса" id="170">
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<AutoMaxHeight>false</AutoMaxHeight>
+													<TextColor>style:УПЖКХ_ТекстСправочнойНадписи</TextColor>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Если не удалось найти правильный код по ФИАС, попробуйте вручную изменить адрес объекта учета в поле "Адрес" и нажать на кнопку "Обновить коды здания по ФИАС", чтобы повторить попытку загрузки кодов по ФИАС повторно.</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="ДекорацияПояснениеПоляПредставленияАдресаКонтекстноеМеню" id="171"/>
+													<ExtendedTooltip name="ДекорацияПояснениеПоляПредставленияАдресаРасширеннаяПодсказка" id="172"/>
+												</LabelDecoration>
+												<UsualGroup name="ГруппаРучноеЗаполнениеАдресаГоризонтальная" id="102">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Ручное заполнение адреса горизонтальная</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Ручное заполнение адреса горизонтальная</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>Horizontal</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаРучноеЗаполнениеАдресаГоризонтальнаяРасширеннаяПодсказка" id="103"/>
+													<ChildItems>
+														<InputField name="ПолеПредставлениеТекущегоАдреса" id="30">
+															<DataPath>ПредставлениеТекущегоАдреса</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Адрес</v8:content>
+																</v8:item>
+															</Title>
+															<DropListButton>false</DropListButton>
+															<ChoiceButton>false</ChoiceButton>
+															<ClearButton>false</ClearButton>
+															<SpinButton>false</SpinButton>
+															<OpenButton>false</OpenButton>
+															<CreateButton>false</CreateButton>
+															<ContextMenu name="ПолеПредставлениеТекущегоАдресаКонтекстноеМеню" id="31"/>
+															<ExtendedTooltip name="ПолеПредставлениеТекущегоАдресаРасширеннаяПодсказка" id="32"/>
+															<Events>
+																<Event name="OnChange">ПолеПредставлениеТекущегоАдресаПриИзменении</Event>
+															</Events>
+														</InputField>
+														<Button name="КнопкаОбновитьКодыЗданияПоФИАС" id="78">
+															<Type>UsualButton</Type>
+															<Representation>PictureAndText</Representation>
+															<CommandName>Form.Command.КомандаОбновитьКодыЗданияПоФИАС</CommandName>
+															<Picture>
+																<xr:Ref>CommonPicture.СинхронизацияДанных</xr:Ref>
+																<xr:LoadTransparent>true</xr:LoadTransparent>
+															</Picture>
+															<ExtendedTooltip name="КнопкаОбновитьКодыЗданияПоФИАСРасширеннаяПодсказка" id="79"/>
+														</Button>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="ГруппаКодЗданияПоФИАС" id="108">
+													<Visible>false</Visible>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Код здания по ФИАС</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Код здания по ФИАС</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>Horizontal</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаКодЗданияПоФИАСРасширеннаяПодсказка" id="109"/>
+													<ChildItems>
+														<InputField name="ПолеТекущийКодЗданияПоФИАС" id="99">
+															<DataPath>ТекущийКодДомаПоФИАС</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Код по ФИАС</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="ПолеТекущийКодЗданияПоФИАСКонтекстноеМеню" id="100"/>
+															<ExtendedTooltip name="ПолеТекущийКодЗданияПоФИАСРасширеннаяПодсказка" id="101"/>
+															<Events>
+																<Event name="OnChange">ПолеТекущийКодДомаПоФИАСПриИзменении</Event>
+															</Events>
+														</InputField>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+										<Table name="ТаблицаЗагруженныхКодовПоФИАС" id="33">
+											<Representation>List</Representation>
+											<ChangeRowSet>false</ChangeRowSet>
+											<ChangeRowOrder>false</ChangeRowOrder>
+											<Height>3</Height>
+											<SelectionMode>SingleRow</SelectionMode>
+											<RowSelectionMode>Row</RowSelectionMode>
+											<AutoInsertNewRow>true</AutoInsertNewRow>
+											<EnableStartDrag>true</EnableStartDrag>
+											<EnableDrag>true</EnableDrag>
+											<FileDragMode>AsFile</FileDragMode>
+											<DataPath>ТаблицаКодовЗданияПоФИАС</DataPath>
+											<RowFilter xsi:nil="true"/>
+											<ContextMenu name="ТаблицаЗагруженныхКодовПоФИАСКонтекстноеМеню" id="34"/>
+											<AutoCommandBar name="ТаблицаЗагруженныхКодовПоФИАСКоманднаяПанель" id="35">
+												<Autofill>false</Autofill>
+											</AutoCommandBar>
+											<ExtendedTooltip name="ТаблицаЗагруженныхКодовПоФИАСРасширеннаяПодсказка" id="36"/>
+											<SearchStringAddition name="ТаблицаЗагруженныхКодовПоФИАССтрокаПоиска" id="37">
+												<AdditionSource>
+													<Item>ТаблицаЗагруженныхКодовПоФИАС</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ТаблицаЗагруженныхКодовПоФИАССтрокаПоискаКонтекстноеМеню" id="38"/>
+												<ExtendedTooltip name="ТаблицаЗагруженныхКодовПоФИАССтрокаПоискаРасширеннаяПодсказка" id="39"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="ТаблицаЗагруженныхКодовПоФИАССостояниеПросмотра" id="40">
+												<AdditionSource>
+													<Item>ТаблицаЗагруженныхКодовПоФИАС</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ТаблицаЗагруженныхКодовПоФИАССостояниеПросмотраКонтекстноеМеню" id="41"/>
+												<ExtendedTooltip name="ТаблицаЗагруженныхКодовПоФИАССостояниеПросмотраРасширеннаяПодсказка" id="42"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="ТаблицаЗагруженныхКодовПоФИАСУправлениеПоиском" id="43">
+												<AdditionSource>
+													<Item>ТаблицаЗагруженныхКодовПоФИАС</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="ТаблицаЗагруженныхКодовПоФИАСУправлениеПоискомКонтекстноеМеню" id="44"/>
+												<ExtendedTooltip name="ТаблицаЗагруженныхКодовПоФИАСУправлениеПоискомРасширеннаяПодсказка" id="45"/>
+											</SearchControlAddition>
+											<Events>
+												<Event name="Selection">ТаблицаЗагруженныхКодовПоФИАСВыбор</Event>
+											</Events>
+											<ChildItems>
+												<InputField name="ТаблицаЗагруженныхКадастровыхНомеровАдрес" id="80">
+													<DataPath>ТаблицаКодовЗданияПоФИАС.Адрес</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ChooseType>false</ChooseType>
+													<TextEdit>false</TextEdit>
+													<ContextMenu name="ТаблицаЗагруженныхКадастровыхНомеровАдресКонтекстноеМеню" id="81"/>
+													<ExtendedTooltip name="ТаблицаЗагруженныхКадастровыхНомеровАдресРасширеннаяПодсказка" id="82"/>
+												</InputField>
+												<InputField name="ТаблицаЗагруженныхКадастровыхНомеровКадастровыйНомер" id="46">
+													<DataPath>ТаблицаКодовЗданияПоФИАС.КодДомаПоФИАС</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ChooseType>false</ChooseType>
+													<TextEdit>false</TextEdit>
+													<ContextMenu name="ТаблицаЗагруженныхКадастровыхНомеровКадастровыйНомерКонтекстноеМеню" id="47"/>
+													<ExtendedTooltip name="ТаблицаЗагруженныхКадастровыхНомеровКадастровыйНомерРасширеннаяПодсказка" id="48"/>
+												</InputField>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<ProgressBarField name="ПолеИндикаторПроцесса" id="92">
+							<DataPath>ПройденоПроцентов</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<Representation>Broken</Representation>
+							<ShowPercent>true</ShowPercent>
+							<ContextMenu name="ПолеИндикаторПроцессаКонтекстноеМеню" id="93"/>
+							<ExtendedTooltip name="ПолеИндикаторПроцессаРасширеннаяПодсказка" id="94"/>
+						</ProgressBarField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<UsualGroup name="ГруппаПодвалФормы" id="70">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подвал формы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа подвал формы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Horizontal</Group>
+			<HorizontalAlign>Right</HorizontalAlign>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПодвалФормыРасширеннаяПодсказка" id="71"/>
+			<ChildItems>
+				<Button name="КнопкаДалее" id="72">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.КомандаДалее</CommandName>
+					<ExtendedTooltip name="КнопкаДалееРасширеннаяПодсказка" id="73"/>
+				</Button>
+				<Button name="КнопкаИзменитьAPIКлюч" id="104">
+					<Type>UsualButton</Type>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+					<CommandName>Form.Command.КомандаИзменитьAPIКлюч</CommandName>
+					<ExtendedTooltip name="КнопкаИзменитьAPIКлючРасширеннаяПодсказка" id="105"/>
+				</Button>
+				<Button name="КнопкаОтмена" id="74">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.КомандаОтмена</CommandName>
+					<ExtendedTooltip name="КнопкаОтменаРасширеннаяПодсказка" id="75"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.УПЖКХ_ЗагрузкаКодовЗданийПоФИАС</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ТаблицаОбъектов" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица объектов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Объект" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Объект</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.КВП_Здания</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ТекущийКодДомаПоФИАС" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Текущий код дома по ФИАС</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="НовыйКодДомаПоФИАС" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Новый код дома по ФИАС</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="СтатусЗаполнения" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус заполнения</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="КодДомаПоФИАСЗаполнен" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код дома по ФИАС заполнен</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="КодДомаПоФИАССохранен" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код дома по ФИАС сохранен</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ПредставлениеАдресаОбъекта" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Представление адреса объекта</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТаблицаКодовЗданияПоФИАС" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица кодов здания по ФИАС</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="КодДомаПоФИАС" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код дома по ФИАС</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Адрес" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Адрес</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ПредставлениеТекущегоАдреса" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Представление текущего адреса</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="APIКлюч" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>APIКлюч</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>40</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекущийОбъект" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущий объект</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.КВП_Здания</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПройденоПроцентов" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пройдено процентов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИмеютсяНесохраненныеДанные" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имеются несохраненные данные</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекущийКодДомаПоФИАС" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущий код дома по ФИАС</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПереданныйОбъект" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переданный объект</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.КВП_Здания</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекущийСтатусВыполнения" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущий статус выполнения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="УстановленОтборПроблемныхОбъектов" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установлен отбор проблемных объектов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection/>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ТаблицаОбъектов.КодДомаПоФИАСЗаполнен</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Видимость</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаЗаполнитьЗданиямиБезКодовПоФИАС" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить зданиями без кодов по ФИАС</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить объектами без кодов ФИАС</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаЗаполнитьЗданиямиБезКодовПоФИАС</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаЗаполнитьВсемиЗданиями" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить всеми зданиями</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить всеми зданиями</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаЗаполнитьВсемиЗданиями</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаЗагрузитьКодыПоФИАС" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить коды по ФИАС</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить коды ФИАС</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаЗагрузитьКодыПоФИАС</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаДалее" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Далее</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Далее</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаДалее</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаОтмена" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаОтмена</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаОбновитьКодыЗданияПоФИАС" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить коды здания по ФИАС здания</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить коды ФИАС здания</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаОбновитьКодыЗданияПоФИАС</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаСохранитьКодыПоФИАС" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить коды по ФИАС</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить коды ФИАС</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаСохранитьКодыПоФИАС</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаИзменитьAPIКлюч" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить API-ключ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить API-ключ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаИзменитьAPIКлюч</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаПоказатьПроблемныеОбъекты" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать проблемные объекты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать проблемные объекты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаПоказатьПроблемныеОбъекты</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

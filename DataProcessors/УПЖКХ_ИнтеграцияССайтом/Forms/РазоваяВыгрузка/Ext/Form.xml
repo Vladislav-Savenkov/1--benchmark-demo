@@ -1,0 +1,733 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Разовый обмен данными</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>Top</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<RadioButtonField name="ТумблерВыборПериода" id="77">
+			<DataPath>ОбменЗаАктуальныйПериод</DataPath>
+			<TitleLocation>None</TitleLocation>
+			<RadioButtonType>Tumbler</RadioButtonType>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Обмен за актуальный период</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">0</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Обмен за произвольный период</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">1</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="ТумблерВыборПериодаКонтекстноеМеню" id="78"/>
+			<ExtendedTooltip name="ТумблерВыборПериодаРасширеннаяПодсказка" id="79"/>
+			<Events>
+				<Event name="OnChange">ТумблерВыборПериодаПриИзменении</Event>
+			</Events>
+		</RadioButtonField>
+		<InputField name="НастройкаДоступа" id="1">
+			<DataPath>Объект.НастройкаДоступа</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<HorizontalStretch>false</HorizontalStretch>
+			<ContextMenu name="НастройкаДоступаКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НастройкаДоступаРасширеннаяПодсказка" id="37"/>
+			<Events>
+				<Event name="OnChange">НастройкаДоступаПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="НастройкаОбмена" id="80">
+			<DataPath>Объект.НастройкаОбмена</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка обмена</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalStretch>false</HorizontalStretch>
+			<AutoMarkIncomplete>true</AutoMarkIncomplete>
+			<ContextMenu name="НастройкаОбменаКонтекстноеМеню" id="81"/>
+			<ExtendedTooltip name="НастройкаОбменаРасширеннаяПодсказка" id="82"/>
+			<Events>
+				<Event name="OnChange">НастройкаОбменаПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="МесяцОбменаСтрока" id="6">
+			<DataPath>МесяцОбменаСтрока</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Месяц выгрузки</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalStretch>false</HorizontalStretch>
+			<ChoiceButton>true</ChoiceButton>
+			<SpinButton>true</SpinButton>
+			<ContextMenu name="МесяцОбменаСтрокаКонтекстноеМеню" id="7"/>
+			<ExtendedTooltip name="МесяцОбменаСтрокаРасширеннаяПодсказка" id="38"/>
+			<Events>
+				<Event name="OnChange">МесяцОбменаСтрокаПриИзменении</Event>
+				<Event name="AutoComplete">МесяцОбменаСтрокаАвтоПодбор</Event>
+				<Event name="StartChoice">МесяцОбменаСтрокаНачалоВыбора</Event>
+				<Event name="Tuning">МесяцОбменаСтрокаРегулирование</Event>
+				<Event name="TextEditEnd">МесяцОбменаСтрокаОкончаниеВводаТекста</Event>
+			</Events>
+		</InputField>
+		<LabelDecoration name="ГиперссылкаНаСтраницуНастройкуМногопоточности" id="138">
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Механизм обмена поддерживает многопоточную обработку данных. Нажмите, чтобы перейти к настройке многопоточности</v8:content>
+				</v8:item>
+			</Title>
+			<Hyperlink>true</Hyperlink>
+			<ContextMenu name="ГиперссылкаНаСтраницуНастройкуМногопоточностиКонтекстноеМеню" id="139"/>
+			<ExtendedTooltip name="ГиперссылкаНаСтраницуНастройкуМногопоточностиРасширеннаяПодсказка" id="140"/>
+			<Events>
+				<Event name="Click">ГиперссылкаНаСтраницуНастройкуМногопоточностиНажатие</Event>
+			</Events>
+		</LabelDecoration>
+		<UsualGroup name="ГруппаНастройки" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа настройки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНастройкиРасширеннаяПодсказка" id="39"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаНастройкаВыгрузкаДанныхПоЛС" id="83">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройка выгрузки данных по ЛС</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройка выгрузки данных по ЛС</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Group>Horizontal</Group>
+					<ChildrenAlign>ItemsLeftTitlesLeft</ChildrenAlign>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаНастройкаВыгрузкаДанныхПоЛСРасширеннаяПодсказка" id="84"/>
+					<ChildItems>
+						<CheckBoxField name="ВыгрузкаДанныхПоЛС" id="85">
+							<DataPath>ВыгрузкаДанныхПоЛС</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Выгрузка данных по ЛС</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ВыгрузкаДанныхПоЛСКонтекстноеМеню" id="86"/>
+							<ExtendedTooltip name="ВыгрузкаДанныхПоЛСРасширеннаяПодсказка" id="87"/>
+							<Events>
+								<Event name="OnChange">ВыгрузкаДанныхПоЛСПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаЛицевыеСчета" id="91">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выбор лицевых счетов</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа лицевые счета</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаЛицевыеСчетаРасширеннаяПодсказка" id="92"/>
+					<ChildItems>
+						<CheckBoxField name="УказатьЛицевыеСчета" id="93">
+							<DataPath>УказатьЛицевыеСчета</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="УказатьЛицевыеСчетаКонтекстноеМеню" id="94"/>
+							<ExtendedTooltip name="УказатьЛицевыеСчетаРасширеннаяПодсказка" id="95"/>
+							<Events>
+								<Event name="OnChange">УказатьЛицевыеСчетаПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<UsualGroup name="ГруппаТаблицаЛицевыеСчета" id="96">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Выбор лицевых счетов</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Выбрать лицевые счета</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<ExtendedTooltip name="ГруппаТаблицаЛицевыеСчетаРасширеннаяПодсказка" id="97"/>
+							<ChildItems>
+								<LabelDecoration name="ВыгрузкаПоЛицевымСчетамНадпись" id="98">
+									<TextColor>style:УПЖКХ_ТекстСправочнойНадписи</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Выгрузка будет выполнена только по указанным в данной таблице лицевым счетам.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ВыгрузкаПоЛицевымСчетамНадписьКонтекстноеМеню" id="99"/>
+									<ExtendedTooltip name="ВыгрузкаПоЛицевымСчетамНадписьРасширеннаяПодсказка" id="100"/>
+								</LabelDecoration>
+								<Table name="ЛицевыеСчета" id="101">
+									<Representation>List</Representation>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>ЛицевыеСчета</DataPath>
+									<SearchStringLocation>None</SearchStringLocation>
+									<ViewStatusLocation>None</ViewStatusLocation>
+									<SearchControlLocation>None</SearchControlLocation>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ЛицевыеСчетаКонтекстноеМеню" id="102"/>
+									<AutoCommandBar name="ЛицевыеСчетаКоманднаяПанель" id="103">
+										<ChildItems>
+											<Popup name="ЛицевыеСчетаГруппаЗаполнить" id="123">
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Заполнить</v8:content>
+													</v8:item>
+												</Title>
+												<ToolTip>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Лицевые счета группа заполнить</v8:content>
+													</v8:item>
+												</ToolTip>
+												<Picture>
+													<xr:Ref>CommonPicture.ЗаполнитьФорму</xr:Ref>
+													<xr:LoadTransparent>false</xr:LoadTransparent>
+												</Picture>
+												<CommandSource>Form</CommandSource>
+												<ExtendedTooltip name="ЛицевыеСчетаГруппаЗаполнитьРасширеннаяПодсказка" id="124"/>
+												<ChildItems>
+													<Button name="ЛицевыеСчетаЗаполнитьСОтбором" id="125">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.КомандаЗаполнитьСОтбором</CommandName>
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Автоматически с отбором</v8:content>
+															</v8:item>
+														</Title>
+														<ExtendedTooltip name="ЛицевыеСчетаЗаполнитьСОтборомРасширеннаяПодсказка" id="126"/>
+													</Button>
+													<Button name="ЛицевыеСчетаЗаполнитьПодбором" id="127">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.КомандаЗаполнитьЛСПодбором</CommandName>
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Вручную</v8:content>
+															</v8:item>
+														</Title>
+														<ExtendedTooltip name="ЛицевыеСчетаЗаполнитьПодборомРасширеннаяПодсказка" id="128"/>
+													</Button>
+												</ChildItems>
+											</Popup>
+										</ChildItems>
+									</AutoCommandBar>
+									<ExtendedTooltip name="ЛицевыеСчетаРасширеннаяПодсказка" id="104"/>
+									<SearchStringAddition name="ЛицевыеСчетаСтрокаПоиска" id="105">
+										<AdditionSource>
+											<Item>ЛицевыеСчета</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ЛицевыеСчетаСтрокаПоискаКонтекстноеМеню" id="106"/>
+										<ExtendedTooltip name="ЛицевыеСчетаСтрокаПоискаРасширеннаяПодсказка" id="107"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ЛицевыеСчетаСостояниеПросмотра" id="108">
+										<AdditionSource>
+											<Item>ЛицевыеСчета</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ЛицевыеСчетаСостояниеПросмотраКонтекстноеМеню" id="109"/>
+										<ExtendedTooltip name="ЛицевыеСчетаСостояниеПросмотраРасширеннаяПодсказка" id="110"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ЛицевыеСчетаУправлениеПоиском" id="111">
+										<AdditionSource>
+											<Item>ЛицевыеСчета</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ЛицевыеСчетаУправлениеПоискомКонтекстноеМеню" id="112"/>
+										<ExtendedTooltip name="ЛицевыеСчетаУправлениеПоискомРасширеннаяПодсказка" id="113"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<InputField name="ЛицевыеСчетаЛицевойСчет" id="114">
+											<DataPath>ЛицевыеСчета.ЛицевойСчет</DataPath>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Для выбора лицевого счета начните ввод номера лицевого счета или ФИО ответственного собственника</v8:content>
+												</v8:item>
+											</ToolTip>
+											<EditMode>EnterOnInput</EditMode>
+											<InputHint>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Введите № счета или ФИО ответственного владельца</v8:content>
+												</v8:item>
+											</InputHint>
+											<ContextMenu name="ЛицевыеСчетаЛицевойСчетКонтекстноеМеню" id="115"/>
+											<ExtendedTooltip name="ЛицевыеСчетаЛицевойСчетРасширеннаяПодсказка" id="116"/>
+											<Events>
+												<Event name="OnChange">ЛицевыеСчетаЛицевойСчетПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ЛицевыеСчетаВладелец" id="117">
+											<DataPath>ЛицевыеСчета.Владелец</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ЛицевыеСчетаВладелецКонтекстноеМеню" id="118"/>
+											<ExtendedTooltip name="ЛицевыеСчетаВладелецРасширеннаяПодсказка" id="119"/>
+										</InputField>
+										<InputField name="ЛицевыеСчетаАдрес" id="120">
+											<DataPath>ЛицевыеСчета.Адрес</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ЛицевыеСчетаАдресКонтекстноеМеню" id="121"/>
+											<ExtendedTooltip name="ЛицевыеСчетаАдресРасширеннаяПодсказка" id="122"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<CheckBoxField name="ВыгрузкаЭлектронныхПаспортов" id="135">
+					<DataPath>ВыгрузкаЭлектронныхПаспортов</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выгрузка электронных паспортов домов</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ВыгрузкаЭлектронныхПаспортовКонтекстноеМеню" id="136"/>
+					<ExtendedTooltip name="ВыгрузкаЭлектронныхПаспортовРасширеннаяПодсказка" id="137"/>
+				</CheckBoxField>
+				<CheckBoxField name="ЗагрузкаСведенийОбОплатах" id="129">
+					<DataPath>ЗагрузкаРеестраПлатежей</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Загрузка сведений об оплатах</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ЗагрузкаСведенийОбОплатахКонтекстноеМеню" id="130"/>
+					<ExtendedTooltip name="ЗагрузкаСведенийОбОплатахРасширеннаяПодсказка" id="131"/>
+				</CheckBoxField>
+				<CheckBoxField name="ЗагрузкаСведенийОПоказаниях" id="132">
+					<DataPath>ЗагрузкаПоказанийПУ</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Загрузка сведений о показаниях</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ЗагрузкаСведенийОПоказанияхКонтекстноеМеню" id="133"/>
+					<ExtendedTooltip name="ЗагрузкаСведенийОПоказанияхРасширеннаяПодсказка" id="134"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<CommandBar name="ГруппаКнопки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа кнопки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа кнопки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalLocation>Right</HorizontalLocation>
+			<ExtendedTooltip name="ГруппаКнопкиРасширеннаяПодсказка" id="74"/>
+			<ChildItems>
+				<Button name="ВыполнитьОбмен" id="5">
+					<Type>CommandBarButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<CommandName>Form.Command.КомандаВыполнитьОбмен</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выполнить обмен</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ВыполнитьОбменРасширеннаяПодсказка" id="75"/>
+				</Button>
+				<Button name="КнопкаЗакрыть" id="4">
+					<Type>CommandBarButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Form.StandardCommand.Close</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Закрыть</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="КнопкаЗакрытьРасширеннаяПодсказка" id="76"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.УПЖКХ_ИнтеграцияССайтом</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="МесяцОбмена" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Месяц обмена</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="МесяцОбменаСтрока" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Месяц обмена строка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>20</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="УказатьЛицевыеСчета" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Указать лицевые счета</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЛицевыеСчета" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Лицевые счета</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ЛицевойСчет" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Лицевой счет</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.КВП_ЛицевыеСчета</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Владелец" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Владелец</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+						<v8:Type>cfg:CatalogRef.УПЖКХ_Жильцы</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Адрес" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Адрес</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ПутьКФормеПодбора" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Путь к форме подбора</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТаблицаНастроекВыгрузки" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица настроек выгрузки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Услуга" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Услуга</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:Type>cfg:CatalogRef.КВП_Услуги</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>150</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ВыгружатьНачисления" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выгружать начисления</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ВыгружатьПоказания" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выгружать показания</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ВыгрузкаДанныхПоЛС" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузка данных по ЛС</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗагрузкаПоказанийПУ" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузка показаний ПУ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗагрузкаРеестраПлатежей" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузка реестра платежей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОбменЗаАктуальныйПериод" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обмен за актуальный период</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВыгрузкаЭлектронныхПаспортов" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузка электронных паспортов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗамерыВремениВыполнения_Таймер" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таймер</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаВыполнитьОбмен" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить обмен</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда выполнить обмен</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаВыполнитьОбмен</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаЗаполнитьЛСПодбором" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить л/с подбором</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда заполнить ЛСПодбором</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Find</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаЗаполнитьЛСПодбором</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаЗаполнитьСОтбором" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда заполнить с отбором</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда заполнить с отбором</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаЗаполнитьСОтбором</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

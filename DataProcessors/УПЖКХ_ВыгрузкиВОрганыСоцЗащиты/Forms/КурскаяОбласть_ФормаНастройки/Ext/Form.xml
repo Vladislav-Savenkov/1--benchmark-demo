@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Курская область: Настройка</v8:content>
+		</v8:item>
+	</Title>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="ГруппаНастроек" id="74">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа настроек</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа настроек</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ГруппаНастроекРасширеннаяПодсказка" id="75"/>
+			<ChildItems>
+				<Page name="ГруппаТаблицы" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройка соответствия услуг</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа таблицы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<ExtendedTooltip name="ГруппаТаблицыРасширеннаяПодсказка" id="2"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаУслугиВОСЗН" id="3">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Услуги в ОСЗН</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Услуги в ОСЗН</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<ExtendedTooltip name="ГруппаУслугиВОСЗНРасширеннаяПодсказка" id="4"/>
+							<ChildItems>
+								<Table name="ТаблицаНастроек" id="5">
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>Объект.КурскаяОбласть_УслугиВОСЗН</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ТаблицаНастроекКонтекстноеМеню" id="6"/>
+									<AutoCommandBar name="ТаблицаНастроекКоманднаяПанель" id="7">
+										<ChildItems>
+											<Button name="УслугиВОСЗНКнопкаЗагрузить" id="27">
+												<Type>CommandBarButton</Type>
+												<Representation>PictureAndText</Representation>
+												<CommandName>Form.Command.ЗагрузитьИзФайла</CommandName>
+												<Picture>
+													<xr:Ref>CommonPicture.ЗагрузкаФайла</xr:Ref>
+													<xr:LoadTransparent>true</xr:LoadTransparent>
+												</Picture>
+												<ExtendedTooltip name="УслугиВОСЗНКнопкаЗагрузитьРасширеннаяПодсказка" id="28"/>
+											</Button>
+										</ChildItems>
+									</AutoCommandBar>
+									<ExtendedTooltip name="ТаблицаНастроекРасширеннаяПодсказка" id="8"/>
+									<SearchStringAddition name="ТаблицаНастроекСтрокаПоиска" id="9">
+										<AdditionSource>
+											<Item>ТаблицаНастроек</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ТаблицаНастроекСтрокаПоискаКонтекстноеМеню" id="10"/>
+										<ExtendedTooltip name="ТаблицаНастроекСтрокаПоискаРасширеннаяПодсказка" id="11"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ТаблицаНастроекСостояниеПросмотра" id="12">
+										<AdditionSource>
+											<Item>ТаблицаНастроек</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ТаблицаНастроекСостояниеПросмотраКонтекстноеМеню" id="13"/>
+										<ExtendedTooltip name="ТаблицаНастроекСостояниеПросмотраРасширеннаяПодсказка" id="14"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ТаблицаНастроекУправлениеПоиском" id="15">
+										<AdditionSource>
+											<Item>ТаблицаНастроек</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ТаблицаНастроекУправлениеПоискомКонтекстноеМеню" id="16"/>
+										<ExtendedTooltip name="ТаблицаНастроекУправлениеПоискомРасширеннаяПодсказка" id="17"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="BeforeAddRow">ТаблицаНастроекПередНачаломДобавления</Event>
+										<Event name="BeforeDeleteRow">ТаблицаНастроекПередУдалением</Event>
+										<Event name="BeforeEditEnd">ТаблицаНастроекПередОкончаниемРедактирования</Event>
+										<Event name="OnActivateRow">ТаблицаНастроекПриАктивизацииСтроки</Event>
+										<Event name="AfterDeleteRow">ТаблицаНастроекПослеУдаления</Event>
+									</Events>
+									<ChildItems>
+										<LabelField name="ТаблицаНастроекНомерСтроки" id="65">
+											<DataPath>Объект.КурскаяОбласть_УслугиВОСЗН.LineNumber</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТаблицаНастроекНомерСтрокиКонтекстноеМеню" id="66"/>
+											<ExtendedTooltip name="ТаблицаНастроекНомерСтрокиРасширеннаяПодсказка" id="67"/>
+										</LabelField>
+										<InputField name="ТаблицаНастроекКодУслугиВОСЗН" id="68">
+											<DataPath>Объект.КурскаяОбласть_УслугиВОСЗН.КодУслугиВОСЗН</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТаблицаНастроекКодУслугиВОСЗНКонтекстноеМеню" id="69"/>
+											<ExtendedTooltip name="ТаблицаНастроекКодУслугиВОСЗНРасширеннаяПодсказка" id="70"/>
+										</InputField>
+										<InputField name="ТаблицаНастроекУслугаВОСЗН" id="71">
+											<DataPath>Объект.КурскаяОбласть_УслугиВОСЗН.УслугаВОСЗН</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТаблицаНастроекУслугаВОСЗНКонтекстноеМеню" id="72"/>
+											<ExtendedTooltip name="ТаблицаНастроекУслугаВОСЗНРасширеннаяПодсказка" id="73"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаУслугиВБазе" id="29">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Услуги в базе</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Услуги в базе</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<ExtendedTooltip name="ГруппаУслугиВБазеРасширеннаяПодсказка" id="30"/>
+							<ChildItems>
+								<Table name="ТП_ЖКУ_ВБазе" id="31">
+									<Representation>List</Representation>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>ТП_ЖКУ_ВБазе</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ТП_ЖКУ_ВБазеКонтекстноеМеню" id="32"/>
+									<AutoCommandBar name="ТП_ЖКУ_ВБазеКоманднаяПанель" id="33"/>
+									<ExtendedTooltip name="ТП_ЖКУ_ВБазеРасширеннаяПодсказка" id="34"/>
+									<SearchStringAddition name="ТП_ЖКУ_ВБазеСтрокаПоиска" id="35">
+										<AdditionSource>
+											<Item>ТП_ЖКУ_ВБазе</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ТП_ЖКУ_ВБазеСтрокаПоискаКонтекстноеМеню" id="36"/>
+										<ExtendedTooltip name="ТП_ЖКУ_ВБазеСтрокаПоискаРасширеннаяПодсказка" id="37"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ТП_ЖКУ_ВБазеСостояниеПросмотра" id="38">
+										<AdditionSource>
+											<Item>ТП_ЖКУ_ВБазе</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ТП_ЖКУ_ВБазеСостояниеПросмотраКонтекстноеМеню" id="39"/>
+										<ExtendedTooltip name="ТП_ЖКУ_ВБазеСостояниеПросмотраРасширеннаяПодсказка" id="40"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ТП_ЖКУ_ВБазеУправлениеПоиском" id="41">
+										<AdditionSource>
+											<Item>ТП_ЖКУ_ВБазе</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ТП_ЖКУ_ВБазеУправлениеПоискомКонтекстноеМеню" id="42"/>
+										<ExtendedTooltip name="ТП_ЖКУ_ВБазеУправлениеПоискомРасширеннаяПодсказка" id="43"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="OnEditEnd">ТП_ЖКУ_ВБазеПриОкончанииРедактирования</Event>
+										<Event name="BeforeAddRow">ТП_ЖКУ_ВБазеПередНачаломДобавления</Event>
+										<Event name="BeforeDeleteRow">ТП_ЖКУ_ВБазеПередУдалением</Event>
+										<Event name="BeforeEditEnd">ТП_ЖКУ_ВБазеПередОкончаниемРедактирования</Event>
+										<Event name="OnStartEdit">ТП_ЖКУ_ВБазеПриНачалеРедактирования</Event>
+									</Events>
+									<ChildItems>
+										<InputField name="ТП_ЖКУ_ВБазеУслугаВБазе" id="56">
+											<DataPath>ТП_ЖКУ_ВБазе.УслугаВБазе</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТП_ЖКУ_ВБазеУслугаВБазеКонтекстноеМеню" id="57"/>
+											<ExtendedTooltip name="ТП_ЖКУ_ВБазеУслугаВБазеРасширеннаяПодсказка" id="58"/>
+											<Events>
+												<Event name="StartChoice">ТП_ЖКУ_ВБазеУслугаВБазеНачалоВыбора</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаПрочиеНастройки" id="76">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Прочие настройки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа прочие настройки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаПрочиеНастройкиРасширеннаяПодсказка" id="77"/>
+					<ChildItems>
+						<CheckBoxField name="КодировкаDBF" id="78">
+							<DataPath>Объект.КодировкаDBF</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Кодировка файла загрузки DBF</v8:content>
+								</v8:item>
+							</Title>
+							<CheckBoxType>Tumbler</CheckBoxType>
+							<EditFormat>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>БЛ=DOS; БИ=Windows</v8:content>
+								</v8:item>
+							</EditFormat>
+							<ContextMenu name="КодировкаDBFКонтекстноеМеню" id="79"/>
+							<ExtendedTooltip name="КодировкаDBFРасширеннаяПодсказка" id="80"/>
+						</CheckBoxField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<CommandBar name="ГруппаОсновныеДействияФормы" id="61">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа основные действия формы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа основные действия формы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalLocation>Right</HorizontalLocation>
+			<ExtendedTooltip name="ГруппаОсновныеДействияФормыРасширеннаяПодсказка" id="62"/>
+			<ChildItems>
+				<Button name="КнопкаСохранить" id="63">
+					<Type>CommandBarButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<CommandName>Form.Command.СохранитьДанные</CommandName>
+					<ExtendedTooltip name="КнопкаСохранитьРасширеннаяПодсказка" id="64"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.УПЖКХ_ВыгрузкиВОрганыСоцЗащиты</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ТП_ЖКУ_ВБазе" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ЖКУ в базе</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="УслугаВБазе" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Услуга в базе</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.КВП_Услуги</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗагрузитьИзФайла" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить из файла</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить из файла</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьИзФайла</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СохранитьДанные" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить и закрыть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить данные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СохранитьДанные</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

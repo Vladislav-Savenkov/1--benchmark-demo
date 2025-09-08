@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Заполнение табличной части</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<Customizable>false</Customizable>
+	<CommandBarLocation>None</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>Help</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<UsualGroup name="ГруппаСообщения" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа сообщения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа сообщения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСообщенияРасширеннаяПодсказка" id="10"/>
+			<ChildItems>
+				<LabelDecoration name="НадписьТекстСообщения" id="3">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Табличная часть не пуста. Каким образом следует ее заполнять?</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НадписьТекстСообщенияКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="НадписьТекстСообщенияРасширеннаяПодсказка" id="11"/>
+				</LabelDecoration>
+				<UsualGroup name="ГруппаКнопокСообщения" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа кнопок сообщения</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа кнопок сообщения</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаКнопокСообщенияРасширеннаяПодсказка" id="12"/>
+					<ChildItems>
+						<Button name="КнопкаЗаполнитьСОчисткой" id="5">
+							<Type>UsualButton</Type>
+							<DefaultButton>true</DefaultButton>
+							<Width>19</Width>
+							<CommandName>Form.Command.КомандаЗаполнитьСОчисткой</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Очистить и заполнить</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="КнопкаЗаполнитьСОчисткойРасширеннаяПодсказка" id="13"/>
+						</Button>
+						<Button name="КнопкаЗаполнитьБезОчистки" id="7">
+							<Type>UsualButton</Type>
+							<Width>18</Width>
+							<CommandName>Form.Command.КомандаДозаполнить</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дополнить без очистки</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="КнопкаЗаполнитьБезОчисткиРасширеннаяПодсказка" id="14"/>
+						</Button>
+						<Button name="КнопкаОтмена" id="6">
+							<Type>UsualButton</Type>
+							<Width>18</Width>
+							<CommandName>Form.Command.КомандаОтмена</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отмена</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="КнопкаОтменаРасширеннаяПодсказка" id="15"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<LabelDecoration name="НадписьПояснение" id="8">
+					<TextColor>style:ПоясняющийТекст</TextColor>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>«Очистить и заполнить» - перед заполнением будет выполнена очистка табличной части.
+«Дополнить без очистки» - табличная часть будет дополнена недостающими объектами.
+«Отмена» - отмена операции.</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НадписьПояснениеКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="НадписьПояснениеРасширеннаяПодсказка" id="16"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes/>
+	<Commands>
+		<Command name="КомандаДозаполнить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда дозаполнить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда дозаполнить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаДозаполнить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаЗаполнитьСОчисткой" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда заполнить с очисткой</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда заполнить с очисткой</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаЗаполнитьСОчисткой</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаОтмена" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда отмена</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда отмена</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаОтмена</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

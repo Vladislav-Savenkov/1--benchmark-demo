@@ -1,0 +1,2882 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Интеграция с компанией "Bolid"</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаПолосаПрогресса" id="333">
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ГруппаПолосаПрогрессаРасширеннаяПодсказка" id="334"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаЗаголовкиПолосыПрогресса" id="335">
+					<HorizontalStretch>true</HorizontalStretch>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаЗаголовкиПолосыПрогрессаРасширеннаяПодсказка" id="336"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаНачало" id="337">
+							<HorizontalStretch>true</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ChildItemsWidth>Equal</ChildItemsWidth>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНачалоРасширеннаяПодсказка" id="338"/>
+							<ChildItems>
+								<LabelDecoration name="НадписьНачало" id="339">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<HorizontalStretch>true</HorizontalStretch>
+									<VerticalStretch>false</VerticalStretch>
+									<Font ref="style:NormalTextFont" height="12" kind="StyleItem"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Начало</v8:content>
+										</v8:item>
+									</Title>
+									<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<VerticalAlign>Bottom</VerticalAlign>
+									<ContextMenu name="НадписьНачалоКонтекстноеМеню" id="340"/>
+									<ExtendedTooltip name="НадписьНачалоРасширеннаяПодсказка" id="341"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаРегистрация1" id="342">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа регистрация1</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа регистрация</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ChildItemsWidth>Equal</ChildItemsWidth>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаРегистрация1РасширеннаяПодсказка" id="343"/>
+							<ChildItems>
+								<LabelDecoration name="НадписьРегистрация" id="344">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<HorizontalStretch>true</HorizontalStretch>
+									<VerticalStretch>false</VerticalStretch>
+									<Font ref="style:NormalTextFont" height="12" kind="StyleItem"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Регистрация</v8:content>
+										</v8:item>
+									</Title>
+									<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<VerticalAlign>Bottom</VerticalAlign>
+									<ContextMenu name="НадписьРегистрацияКонтекстноеМеню" id="345"/>
+									<ExtendedTooltip name="НадписьРегистрацияРасширеннаяПодсказка" id="346"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПроверкБД" id="352">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа проверк БД</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа проверк БД</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ChildItemsWidth>Equal</ChildItemsWidth>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПроверкБДРасширеннаяПодсказка" id="353"/>
+							<ChildItems>
+								<LabelDecoration name="НадписьПроверкаБД" id="354">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<HorizontalStretch>true</HorizontalStretch>
+									<VerticalStretch>false</VerticalStretch>
+									<Font ref="style:NormalTextFont" height="12" kind="StyleItem"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Проверка</v8:content>
+										</v8:item>
+									</Title>
+									<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<VerticalAlign>Bottom</VerticalAlign>
+									<ContextMenu name="НадписьПроверкаБДКонтекстноеМеню" id="355"/>
+									<ExtendedTooltip name="НадписьПроверкаБДРасширеннаяПодсказка" id="356"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаНастройка" id="347">
+							<HorizontalStretch>true</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ChildItemsWidth>Equal</ChildItemsWidth>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНастройкаРасширеннаяПодсказка" id="348"/>
+							<ChildItems>
+								<LabelDecoration name="НадписьНастройка" id="349">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<HorizontalStretch>true</HorizontalStretch>
+									<VerticalStretch>false</VerticalStretch>
+									<Font ref="style:NormalTextFont" height="12" kind="StyleItem"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Настройка</v8:content>
+										</v8:item>
+									</Title>
+									<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<VerticalAlign>Bottom</VerticalAlign>
+									<ContextMenu name="НадписьНастройкаКонтекстноеМеню" id="350"/>
+									<ExtendedTooltip name="НадписьНастройкаРасширеннаяПодсказка" id="351"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаЗавершение" id="357">
+							<HorizontalStretch>true</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ChildItemsWidth>Equal</ChildItemsWidth>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаЗавершениеРасширеннаяПодсказка" id="358"/>
+							<ChildItems>
+								<LabelDecoration name="НадписьЗавершение" id="359">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<HorizontalStretch>true</HorizontalStretch>
+									<VerticalStretch>false</VerticalStretch>
+									<Font ref="style:NormalTextFont" height="12" kind="StyleItem"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Завершение</v8:content>
+										</v8:item>
+									</Title>
+									<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<VerticalAlign>Bottom</VerticalAlign>
+									<ContextMenu name="НадписьЗавершениеКонтекстноеМеню" id="360"/>
+									<ExtendedTooltip name="НадписьЗавершениеРасширеннаяПодсказка" id="361"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<ProgressBarField name="ПолеПолосаПрогресса" id="362">
+					<DataPath>ЗначениеПолосыПрогресса</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<ContextMenu name="ПолеПолосаПрогрессаКонтекстноеМеню" id="363"/>
+					<ExtendedTooltip name="ПолеПолосаПрогрессаРасширеннаяПодсказка" id="364"/>
+				</ProgressBarField>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="ПанельОсновная" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Панель основная</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Панель основная</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="ПанельОсновнаяРасширеннаяПодсказка" id="4"/>
+			<ChildItems>
+				<Page name="СтартоваяСтраница" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Стартовая страница</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Стартовая страница</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="СтартоваяСтраницаРасширеннаяПодсказка" id="15"/>
+					<ChildItems>
+						<LabelDecoration name="НадписьЗаголовокГлавная" id="11">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Height>4</Height>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Font ref="sys:DefaultGUIFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Вас приветствует мастер настройки интеграции программного продукта "1С:Учет в управляющих компаниях ЖКХ, ТСЖ и ЖСК" с АСКУЭ "Ресурс" от компании "Bolid".</v8:content>
+								</v8:item>
+							</Title>
+							<VerticalAlign>Center</VerticalAlign>
+							<ContextMenu name="НадписьЗаголовокГлавнаяКонтекстноеМеню" id="12"/>
+							<ExtendedTooltip name="НадписьЗаголовокГлавнаяРасширеннаяПодсказка" id="13"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаСтартовыйТекст" id="64">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа стартовый текст</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа стартовый текст</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСтартовыйТекстРасширеннаяПодсказка" id="65"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияСтартовыйТекст" id="68">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Title formatted="true">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>&lt;link https://bolid.ru/&gt;&lt;fontsize 12&gt;"&lt;/&gt;&lt;fontsize 12&gt;Bolid&lt;/&gt;&lt;fontsize 12&gt;"&lt;/&gt;&lt;/&gt;&lt;fontsize 12&gt; - компания-производитель автоматизированной системы контроля и учета энергоресурсов (АСКУЭ) "Ресурс". АСКУЭ "Ресурс" позволяет хранить, обрабатывать и анализировать информацию с приборов учета ресурсов в режиме реального времени вне зависимости от типа устройства и производителя. Система также позволяет воздействовать на должников путем введения частичного или полного отключения от потребления ЖКУ.
+Узнать подробнее о данных возможностях можно на &lt;/&gt;&lt;link http://resurs.bolid.ru/&gt;&lt;fontsize 12&gt;сайте компании "Bolid"&lt;/&gt;&lt;/&gt;&lt;fontsize 12&gt;.
+
+Настройте обмен данными между АСКУЭ "Ресурс" от компании &lt;/&gt;&lt;link https://bolid.ru/&gt;&lt;fontsize 12&gt;"Bolid"&lt;/&gt;&lt;/&gt;&lt;fontsize 12&gt;, и показания счетчиков будут автоматически загружаться в Вашу программу.
+Узнать подробнее об обмене можно на &lt;/&gt;&lt;link https://vgkh.ru/jsk/jkh/bolid/&gt;&lt;fontsize 12&gt;нашем сайте&lt;/&gt;&lt;/&gt;&lt;fontsize 12&gt;.
+&lt;/&gt;&lt;fontsize 12&gt;Также предлагаем Вам &lt;/&gt;&lt;link https://vgkh.ru/faq-1s-zhkh/rabota_s_priborami_ucheta_3_0/integratsiya-s-oblakom-kompanii-bolid/&gt;&lt;fontsize 12&gt;ознакомиться с инструкцией&lt;/&gt;&lt;/&gt; &lt;fontsize 12&gt;по работе с мастером настройки.&lt;/&gt;</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияСтартовыйТекстКонтекстноеМеню" id="69"/>
+									<ExtendedTooltip name="ДекорацияСтартовыйТекстРасширеннаяПодсказка" id="70"/>
+								</LabelDecoration>
+								<PictureDecoration name="ДекорацияСтартоваяКартинка" id="71">
+									<Width>45</Width>
+									<Height>8</Height>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Декорация стартовая картинка</v8:content>
+										</v8:item>
+									</Title>
+									<PictureSize>AutoSize</PictureSize>
+									<Picture>
+										<xr:Abs>Picture.jpg</xr:Abs>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="ДекорацияСтартоваяКартинкаКонтекстноеМеню" id="72"/>
+									<ExtendedTooltip name="ДекорацияСтартоваяКартинкаРасширеннаяПодсказка" id="73"/>
+								</PictureDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаРегистрации" id="163">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница регистрации</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница регистрации</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаРегистрацииРасширеннаяПодсказка" id="164"/>
+					<ChildItems>
+						<LabelDecoration name="НадписьЗаголовокРегистрация" id="165">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Height>4</Height>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Font ref="sys:DefaultGUIFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Необходимо зарегистрироваться на нашем сервисе или указать имеющиеся учетные данные, если Вы уже регистрировались.</v8:content>
+								</v8:item>
+							</Title>
+							<VerticalAlign>Center</VerticalAlign>
+							<ContextMenu name="НадписьЗаголовокРегистрацияКонтекстноеМеню" id="166"/>
+							<ExtendedTooltip name="НадписьЗаголовокРегистрацияРасширеннаяПодсказка" id="167"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаРегистрация" id="222">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа регистрация</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа регистрация</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаРегистрацияРасширеннаяПодсказка" id="223"/>
+							<ChildItems>
+								<RadioButtonField name="ПолеНовыйИлиИмеющийсяАккаунт" id="168">
+									<DataPath>НовыйИлиИмеющийсяАккаунт</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<RadioButtonType>Tumbler</RadioButtonType>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Зарегистрировать новый аккаунт</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">0</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Использовать имеющийся аккаунт</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">1</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="ПолеНовыйИлиИмеющийсяАккаунтКонтекстноеМеню" id="169"/>
+									<ExtendedTooltip name="ПолеНовыйИлиИмеющийсяАккаунтРасширеннаяПодсказка" id="170">
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<TextColor>style:УПЖКХ_ТекстСправочнойНадписи</TextColor>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Для наших сервисов "ЖКХ: Личный кабинет", "Интеграция с сервисами сбора показаний счетчиков" используется единая учетная запись. Поэтому если Вы уже регистрировались в одном из этих сервисов, просто введите регистрационные данные.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">ПолеНовыйИлиИмеющийсяАккаунтПриИзменении</Event>
+									</Events>
+								</RadioButtonField>
+								<UsualGroup name="ГруппаРегистрации" id="238">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа регистрации</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа регистрации</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаРегистрацииРасширеннаяПодсказка" id="239"/>
+									<ChildItems>
+										<Pages name="СтраницыРегистрацияНовогоАккаунта" id="240">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Страницы регистрация нового аккаунта</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Страницы регистрация нового аккаунта</v8:content>
+												</v8:item>
+											</ToolTip>
+											<PagesRepresentation>None</PagesRepresentation>
+											<ExtendedTooltip name="СтраницыРегистрацияНовогоАккаунтаРасширеннаяПодсказка" id="241"/>
+											<ChildItems>
+												<Page name="ГруппаНовыйАккаунт" id="242">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа новый аккаунт</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа новый аккаунт</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ExtendedTooltip name="ГруппаНовыйАккаунтРасширеннаяПодсказка" id="243"/>
+													<ChildItems>
+														<LabelDecoration name="НадписьЗаголовокРегистрацияНовогоАккаунта" id="171">
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<TextColor>#009646</TextColor>
+															<Font ref="sys:DefaultGUIFont" height="12" kind="WindowsFont"/>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Укажите сведения для регистрации на нашем сервисе</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="НадписьЗаголовокРегистрацияНовогоАккаунтаКонтекстноеМеню" id="172"/>
+															<ExtendedTooltip name="НадписьЗаголовокРегистрацияНовогоАккаунтаРасширеннаяПодсказка" id="173"/>
+														</LabelDecoration>
+														<LabelDecoration name="НадписьРазделительСтраницаРегистрации" id="174">
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<AutoMaxHeight>false</AutoMaxHeight>
+															<ContextMenu name="НадписьРазделительСтраницаРегистрацииКонтекстноеМеню" id="175"/>
+															<ExtendedTooltip name="НадписьРазделительСтраницаРегистрацииРасширеннаяПодсказка" id="176"/>
+														</LabelDecoration>
+														<UsualGroup name="ГруппаЭлектроннойПочты" id="177">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа электронной почты</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTipRepresentation>None</ToolTipRepresentation>
+															<Group>Horizontal</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаЭлектроннойПочтыРасширеннаяПодсказка" id="178"/>
+															<ChildItems>
+																<InputField name="ЭлектроннаяПочта" id="179">
+																	<DataPath>АдресЭлектроннойПочты</DataPath>
+																	<TitleFont ref="sys:DefaultGUIFont" height="10" kind="WindowsFont"/>
+																	<AutoMaxWidth>false</AutoMaxWidth>
+																	<AutoMaxHeight>false</AutoMaxHeight>
+																	<HorizontalStretch>false</HorizontalStretch>
+																	<AutoMarkIncomplete>true</AutoMarkIncomplete>
+																	<ContextMenu name="ЭлектроннаяПочтаКонтекстноеМеню" id="180"/>
+																	<ExtendedTooltip name="ЭлектроннаяПочтаРасширеннаяПодсказка" id="181"/>
+																</InputField>
+																<LabelDecoration name="НадписьКорректностьЭлектроннойПочты" id="182">
+																	<Visible>false</Visible>
+																	<AutoMaxWidth>false</AutoMaxWidth>
+																	<AutoMaxHeight>false</AutoMaxHeight>
+																	<TextColor>style:ПоясняющийОшибкуТекст</TextColor>
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>(Указан некорректный адрес электронной почты)</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ContextMenu name="НадписьКорректностьЭлектроннойПочтыКонтекстноеМеню" id="183"/>
+																	<ExtendedTooltip name="НадписьКорректностьЭлектроннойПочтыРасширеннаяПодсказка" id="184"/>
+																</LabelDecoration>
+															</ChildItems>
+														</UsualGroup>
+														<UsualGroup name="ГруппаЛогина" id="185">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа логина</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTipRepresentation>None</ToolTipRepresentation>
+															<Group>Horizontal</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаЛогинаРасширеннаяПодсказка" id="186"/>
+															<ChildItems>
+																<InputField name="Логин" id="209">
+																	<DataPath>Логин</DataPath>
+																	<AutoMaxWidth>false</AutoMaxWidth>
+																	<AutoMaxHeight>false</AutoMaxHeight>
+																	<HorizontalStretch>false</HorizontalStretch>
+																	<AutoMarkIncomplete>true</AutoMarkIncomplete>
+																	<ContextMenu name="ЛогинКонтекстноеМеню" id="210"/>
+																	<ExtendedTooltip name="ЛогинРасширеннаяПодсказка" id="211"/>
+																</InputField>
+																<LabelDecoration name="НадписьКорректностьЛогина" id="190">
+																	<Visible>false</Visible>
+																	<AutoMaxWidth>false</AutoMaxWidth>
+																	<AutoMaxHeight>false</AutoMaxHeight>
+																	<TextColor>style:ПоясняющийОшибкуТекст</TextColor>
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>(Не заполнен логин)</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ContextMenu name="НадписьКорректностьЛогинаКонтекстноеМеню" id="191"/>
+																	<ExtendedTooltip name="НадписьКорректностьЛогинаРасширеннаяПодсказка" id="192"/>
+																</LabelDecoration>
+															</ChildItems>
+														</UsualGroup>
+														<UsualGroup name="ГруппаПароля" id="193">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа пароля</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTipRepresentation>None</ToolTipRepresentation>
+															<Group>Horizontal</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаПароляРасширеннаяПодсказка" id="194"/>
+															<ChildItems>
+																<InputField name="Пароль" id="195">
+																	<DataPath>Пароль</DataPath>
+																	<TitleFont ref="sys:DefaultGUIFont" height="10" kind="WindowsFont"/>
+																	<AutoMaxWidth>false</AutoMaxWidth>
+																	<AutoMaxHeight>false</AutoMaxHeight>
+																	<HorizontalStretch>false</HorizontalStretch>
+																	<PasswordMode>true</PasswordMode>
+																	<AutoMarkIncomplete>true</AutoMarkIncomplete>
+																	<ContextMenu name="ПарольКонтекстноеМеню" id="196"/>
+																	<ExtendedTooltip name="ПарольРасширеннаяПодсказка" id="197"/>
+																</InputField>
+																<LabelDecoration name="НадписьКорректностьПароля" id="198">
+																	<Visible>false</Visible>
+																	<AutoMaxWidth>false</AutoMaxWidth>
+																	<AutoMaxHeight>false</AutoMaxHeight>
+																	<TextColor>style:ПоясняющийОшибкуТекст</TextColor>
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>(Не заполнен пароль)</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ContextMenu name="НадписьКорректностьПароляКонтекстноеМеню" id="199"/>
+																	<ExtendedTooltip name="НадписьКорректностьПароляРасширеннаяПодсказка" id="200"/>
+																</LabelDecoration>
+															</ChildItems>
+														</UsualGroup>
+														<UsualGroup name="ГруппаПодтвержденияПароля" id="201">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа подтверждения пароля</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTipRepresentation>None</ToolTipRepresentation>
+															<Group>Horizontal</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаПодтвержденияПароляРасширеннаяПодсказка" id="202"/>
+															<ChildItems>
+																<InputField name="ПодтверждениеПароля" id="203">
+																	<DataPath>ПодтверждениеПароля</DataPath>
+																	<TitleFont ref="sys:DefaultGUIFont" height="10" kind="WindowsFont"/>
+																	<AutoMaxWidth>false</AutoMaxWidth>
+																	<AutoMaxHeight>false</AutoMaxHeight>
+																	<HorizontalStretch>false</HorizontalStretch>
+																	<PasswordMode>true</PasswordMode>
+																	<AutoMarkIncomplete>true</AutoMarkIncomplete>
+																	<ContextMenu name="ПодтверждениеПароляКонтекстноеМеню" id="204"/>
+																	<ExtendedTooltip name="ПодтверждениеПароляРасширеннаяПодсказка" id="205"/>
+																</InputField>
+																<LabelDecoration name="НадписьКорректностьПодтвержденногоПароля" id="206">
+																	<Visible>false</Visible>
+																	<AutoMaxWidth>false</AutoMaxWidth>
+																	<AutoMaxHeight>false</AutoMaxHeight>
+																	<TextColor>style:ПоясняющийОшибкуТекст</TextColor>
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>(Пароль не совпадает)</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ContextMenu name="НадписьКорректностьПодтвержденногоПароляКонтекстноеМеню" id="207"/>
+																	<ExtendedTooltip name="НадписьКорректностьПодтвержденногоПароляРасширеннаяПодсказка" id="208"/>
+																</LabelDecoration>
+															</ChildItems>
+														</UsualGroup>
+														<InputField name="Телефон" id="212">
+															<DataPath>Телефон</DataPath>
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<AutoMaxHeight>false</AutoMaxHeight>
+															<HorizontalStretch>false</HorizontalStretch>
+															<ContextMenu name="ТелефонКонтекстноеМеню" id="213"/>
+															<ExtendedTooltip name="ТелефонРасширеннаяПодсказка" id="214"/>
+														</InputField>
+													</ChildItems>
+												</Page>
+												<Page name="ГруппаИмеющийсяАккаунт" id="244">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа имеющийся аккаунт</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа имеющийся аккаунт</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ExtendedTooltip name="ГруппаИмеющийсяАккаунтРасширеннаяПодсказка" id="245"/>
+													<ChildItems>
+														<LabelDecoration name="НадписьЗаголовокПодключениеИмеющегосяАккаунта" id="246">
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<TextColor>#009646</TextColor>
+															<Font ref="sys:DefaultGUIFont" height="12" kind="WindowsFont"/>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Укажите параметры доступа к вашему аккаунту на сервисе</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="НадписьЗаголовокПодключениеИмеющегосяАккаунтаКонтекстноеМеню" id="247"/>
+															<ExtendedTooltip name="НадписьЗаголовокПодключениеИмеющегосяАккаунтаРасширеннаяПодсказка" id="248"/>
+														</LabelDecoration>
+														<LabelDecoration name="НадписьРазделительСтраницаРегистрации3" id="249">
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<AutoMaxHeight>false</AutoMaxHeight>
+															<ContextMenu name="НадписьРазделительСтраницаРегистрации3КонтекстноеМеню" id="250"/>
+															<ExtendedTooltip name="НадписьРазделительСтраницаРегистрации3РасширеннаяПодсказка" id="251"/>
+														</LabelDecoration>
+														<UsualGroup name="ГруппаЭлектроннойПочтыСуществующийАккаунт" id="252">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа электронной почты</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа электронной почты существующий аккаунт</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ToolTipRepresentation>None</ToolTipRepresentation>
+															<Group>Horizontal</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаЭлектроннойПочтыСуществующийАккаунтРасширеннаяПодсказка" id="253"/>
+															<ChildItems>
+																<InputField name="ЭлектроннаяПочтаСуществующийАккаунт" id="254">
+																	<DataPath>АдресЭлектроннойПочтыСуществующийАккаунт</DataPath>
+																	<TitleFont ref="sys:DefaultGUIFont" height="10" kind="WindowsFont"/>
+																	<AutoMaxWidth>false</AutoMaxWidth>
+																	<AutoMaxHeight>false</AutoMaxHeight>
+																	<HorizontalStretch>false</HorizontalStretch>
+																	<AutoMarkIncomplete>true</AutoMarkIncomplete>
+																	<ContextMenu name="ЭлектроннаяПочтаСуществующийАккаунтКонтекстноеМеню" id="255"/>
+																	<ExtendedTooltip name="ЭлектроннаяПочтаСуществующийАккаунтРасширеннаяПодсказка" id="256"/>
+																</InputField>
+																<LabelDecoration name="НадписьКорректностьЭлектроннойПочтыСуществующийАккаунт" id="257">
+																	<Visible>false</Visible>
+																	<AutoMaxWidth>false</AutoMaxWidth>
+																	<AutoMaxHeight>false</AutoMaxHeight>
+																	<TextColor>style:ПоясняющийОшибкуТекст</TextColor>
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>(Указан некорректный адрес электронной почты)</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ContextMenu name="НадписьКорректностьЭлектроннойПочтыСуществующийАккаунтКонтекстноеМеню" id="258"/>
+																	<ExtendedTooltip name="НадписьКорректностьЭлектроннойПочтыСуществующийАккаунтРасширеннаяПодсказка" id="259"/>
+																</LabelDecoration>
+															</ChildItems>
+														</UsualGroup>
+														<UsualGroup name="ГруппаЛогинаСуществующийАккаунт" id="260">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа логина</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа логина существующий аккаунт</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ToolTipRepresentation>None</ToolTipRepresentation>
+															<Group>Horizontal</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаЛогинаСуществующийАккаунтРасширеннаяПодсказка" id="261"/>
+															<ChildItems>
+																<InputField name="ЛогинСуществующийАккаунт" id="262">
+																	<DataPath>ЛогинСуществующийАккаунт</DataPath>
+																	<AutoMaxWidth>false</AutoMaxWidth>
+																	<AutoMaxHeight>false</AutoMaxHeight>
+																	<HorizontalStretch>false</HorizontalStretch>
+																	<AutoMarkIncomplete>true</AutoMarkIncomplete>
+																	<ContextMenu name="ЛогинСуществующийАккаунтКонтекстноеМеню" id="263"/>
+																	<ExtendedTooltip name="ЛогинСуществующийАккаунтРасширеннаяПодсказка" id="264"/>
+																</InputField>
+																<LabelDecoration name="НадписьКорректностьЛогинаСуществующийАккаунт" id="265">
+																	<Visible>false</Visible>
+																	<AutoMaxWidth>false</AutoMaxWidth>
+																	<AutoMaxHeight>false</AutoMaxHeight>
+																	<TextColor>style:ПоясняющийОшибкуТекст</TextColor>
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>(Не заполнен логин)</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ContextMenu name="НадписьКорректностьЛогинаСуществующийАккаунтКонтекстноеМеню" id="266"/>
+																	<ExtendedTooltip name="НадписьКорректностьЛогинаСуществующийАккаунтРасширеннаяПодсказка" id="267"/>
+																</LabelDecoration>
+															</ChildItems>
+														</UsualGroup>
+														<UsualGroup name="ГруппаПароляСуществующийАккаунт" id="268">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа пароля</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа пароля существующий аккаунт</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ToolTipRepresentation>None</ToolTipRepresentation>
+															<Group>Horizontal</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаПароляСуществующийАккаунтРасширеннаяПодсказка" id="269"/>
+															<ChildItems>
+																<InputField name="ПарольСуществующийАккаунт" id="270">
+																	<DataPath>ПарольСуществующийАккаунт</DataPath>
+																	<TitleFont ref="sys:DefaultGUIFont" height="10" kind="WindowsFont"/>
+																	<AutoMaxWidth>false</AutoMaxWidth>
+																	<AutoMaxHeight>false</AutoMaxHeight>
+																	<HorizontalStretch>false</HorizontalStretch>
+																	<PasswordMode>true</PasswordMode>
+																	<AutoMarkIncomplete>true</AutoMarkIncomplete>
+																	<ContextMenu name="ПарольСуществующийАккаунтКонтекстноеМеню" id="271"/>
+																	<ExtendedTooltip name="ПарольСуществующийАккаунтРасширеннаяПодсказка" id="272"/>
+																</InputField>
+																<LabelDecoration name="НадписьКорректностьПароляСуществующийАккаунт" id="273">
+																	<Visible>false</Visible>
+																	<AutoMaxWidth>false</AutoMaxWidth>
+																	<AutoMaxHeight>false</AutoMaxHeight>
+																	<TextColor>style:ПоясняющийОшибкуТекст</TextColor>
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>(Не заполнен пароль)</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ContextMenu name="НадписьКорректностьПароляСуществующийАккаунтКонтекстноеМеню" id="274"/>
+																	<ExtendedTooltip name="НадписьКорректностьПароляСуществующийАккаунтРасширеннаяПодсказка" id="275"/>
+																</LabelDecoration>
+															</ChildItems>
+														</UsualGroup>
+													</ChildItems>
+												</Page>
+											</ChildItems>
+										</Pages>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПредупреждениеОРегистрации" id="224">
+							<Visible>false</Visible>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа предупреждение о регистрации</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа предупреждение о регистрации</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПредупреждениеОРегистрацииРасширеннаяПодсказка" id="225"/>
+							<ChildItems>
+								<LabelDecoration name="СообщениеОСохраненномАккаунте" id="226">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<TextColor>#009646</TextColor>
+									<Font ref="sys:DefaultGUIFont" height="12" kind="WindowsFont"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Вы уже зарегистрированы на нашем сервисе</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="СообщениеОСохраненномАккаунтеКонтекстноеМеню" id="227"/>
+									<ExtendedTooltip name="СообщениеОСохраненномАккаунтеРасширеннаяПодсказка" id="228"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьРазделительСтраницаПредупреждениеОРегистрации" id="229">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<ContextMenu name="НадписьРазделительСтраницаПредупреждениеОРегистрацииКонтекстноеМеню" id="230"/>
+									<ExtendedTooltip name="НадписьРазделительСтраницаПредупреждениеОРегистрацииРасширеннаяПодсказка" id="231"/>
+								</LabelDecoration>
+								<LabelDecoration name="СохраненныйЛогин" id="232">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сохраненный логин</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="СохраненныйЛогинКонтекстноеМеню" id="233"/>
+									<ExtendedTooltip name="СохраненныйЛогинРасширеннаяПодсказка" id="234"/>
+								</LabelDecoration>
+								<LabelDecoration name="СохраненныйАдресЭлектроннойПочты" id="235">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сохраненный адрес электронной почты</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="СохраненныйАдресЭлектроннойПочтыКонтекстноеМеню" id="236"/>
+									<ExtendedTooltip name="СохраненныйАдресЭлектроннойПочтыРасширеннаяПодсказка" id="237"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<Button name="КнопкаУсловияПользованияСервисом" id="215">
+							<Type>Hyperlink</Type>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<CommandName>Form.Command.КомандаУсловияПользованияСервисом</CommandName>
+							<Font ref="sys:DefaultGUIFont" height="10" kind="WindowsFont"/>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Условия пользования сервисом</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="КнопкаУсловияПользованияСервисомРасширеннаяПодсказка" id="216"/>
+						</Button>
+						<UsualGroup name="ГруппаСогласияНаРегистрацию" id="217">
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСогласияНаРегистрациюРасширеннаяПодсказка" id="218"/>
+							<ChildItems>
+								<CheckBoxField name="СогласиеНаРегистрацию" id="219">
+									<DataPath>СогласиеНаРегистрацию</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="СогласиеНаРегистрациюКонтекстноеМеню" id="220"/>
+									<ExtendedTooltip name="СогласиеНаРегистрациюРасширеннаяПодсказка" id="221"/>
+									<Events>
+										<Event name="OnChange">СогласиеНаРегистрациюПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаПодтверждениеРегистрации" id="276">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница подтверждение регистрации</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница подтверждение регистрации</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаПодтверждениеРегистрацииРасширеннаяПодсказка" id="277"/>
+					<ChildItems>
+						<LabelDecoration name="НадписьЗаголовокПодтверждениеРегистрации" id="278">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Height>4</Height>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Font ref="sys:DefaultGUIFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Для завершения создания персональной учетной записи необходимо подтвердить достоверность указанных данных. Для этого на вашу электронную почту отправлено кодовое слово, которое необходимо ввести в соответствующем поле на форме. После этого процесс создания персональной учетной записи будет завершен.</v8:content>
+								</v8:item>
+							</Title>
+							<VerticalAlign>Center</VerticalAlign>
+							<ContextMenu name="НадписьЗаголовокПодтверждениеРегистрацииКонтекстноеМеню" id="279"/>
+							<ExtendedTooltip name="НадписьЗаголовокПодтверждениеРегистрацииРасширеннаяПодсказка" id="280"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаПодтверждениеРегистрации" id="281">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа подтверждение регистрации</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа подтверждение регистрации</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПодтверждениеРегистрацииРасширеннаяПодсказка" id="282"/>
+							<ChildItems>
+								<InputField name="КодовоеСловоДляРегистрации" id="283">
+									<DataPath>КодовоеСловоДляРегистрации</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Кодовое слово</v8:content>
+										</v8:item>
+									</Title>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<HorizontalStretch>false</HorizontalStretch>
+									<AutoMarkIncomplete>true</AutoMarkIncomplete>
+									<ContextMenu name="КодовоеСловоДляРегистрацииКонтекстноеМеню" id="284"/>
+									<ExtendedTooltip name="КодовоеСловоДляРегистрацииРасширеннаяПодсказка" id="285"/>
+								</InputField>
+								<UsualGroup name="ГруппаКодовоеСлово" id="286">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа кодовое слово</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTipRepresentation>None</ToolTipRepresentation>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаКодовоеСловоРасширеннаяПодсказка" id="287"/>
+									<ChildItems>
+										<LabelDecoration name="НадписьКорректностьКодовогоСлова" id="288">
+											<Visible>false</Visible>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<AutoMaxHeight>false</AutoMaxHeight>
+											<TextColor>style:ПоясняющийОшибкуТекст</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>(Кодовое слово не заполнено. Пожалуйста, укажите кодовое слово, отправленное на указанный при регистрации адрес электронной почты)</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="НадписьКорректностьКодовогоСловаКонтекстноеМеню" id="289"/>
+											<ExtendedTooltip name="НадписьКорректностьКодовогоСловаРасширеннаяПодсказка" id="290"/>
+										</LabelDecoration>
+										<LabelDecoration name="СтатусПодтвержднеияРегистрации" id="291">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<AutoMaxHeight>false</AutoMaxHeight>
+											<TextColor>style:РезультатПроблемаЦвет</TextColor>
+											<Font ref="sys:DefaultGUIFont" height="10" kind="WindowsFont"/>
+											<ContextMenu name="СтатусПодтвержднеияРегистрацииКонтекстноеМеню" id="292"/>
+											<ExtendedTooltip name="СтатусПодтвержднеияРегистрацииРасширеннаяПодсказка" id="293"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПовторнаяОтправкаКодовогоСлова" id="294">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Если кодовое слово не получено, отправьте его повторно или укажите другой адрес электронной почты</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа повторная отправка кодового слова</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Width>76</Width>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<ExtendedTooltip name="ГруппаПовторнаяОтправкаКодовогоСловаРасширеннаяПодсказка" id="295"/>
+							<ChildItems>
+								<Button name="КнопкаОтправитьКодовоеСловоПовторно" id="296">
+									<Type>UsualButton</Type>
+									<Representation>PictureAndText</Representation>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<CommandName>Form.Command.КомандаОтправитьКодовоеСловоПовторно</CommandName>
+									<Font ref="sys:DefaultGUIFont" height="10" kind="WindowsFont"/>
+									<Picture>
+										<xr:Ref>StdPicture.Refresh</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<ExtendedTooltip name="КнопкаОтправитьКодовоеСловоПовторноРасширеннаяПодсказка" id="297"/>
+								</Button>
+								<Button name="КнопкаИзменитьEmail" id="298">
+									<Type>UsualButton</Type>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<CommandName>Form.Command.КомандаУказатьДругойEmail</CommandName>
+									<Font ref="sys:DefaultGUIFont" height="10" kind="WindowsFont"/>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Указать другой адрес электронной почты</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="КнопкаИзменитьEmailРасширеннаяПодсказка" id="299"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаИзменениеЭлектроннойПочты" id="300">
+							<Visible>false</Visible>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Изменение электронной почты</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа изменение электронной почты</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<ExtendedTooltip name="ГруппаИзменениеЭлектроннойПочтыРасширеннаяПодсказка" id="301"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаИзменениеПочты" id="302">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа изменение почты</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTipRepresentation>None</ToolTipRepresentation>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаИзменениеПочтыРасширеннаяПодсказка" id="303"/>
+									<ChildItems>
+										<InputField name="ЭлектроннаяПочтаДляИзменения" id="304">
+											<DataPath>АдресЭлектроннойПочтыДляИзменения</DataPath>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<AutoMaxHeight>false</AutoMaxHeight>
+											<HorizontalStretch>false</HorizontalStretch>
+											<Font ref="sys:DefaultGUIFont" height="10" kind="WindowsFont"/>
+											<ContextMenu name="ЭлектроннаяПочтаДляИзмененияКонтекстноеМеню" id="305"/>
+											<ExtendedTooltip name="ЭлектроннаяПочтаДляИзмененияРасширеннаяПодсказка" id="306"/>
+										</InputField>
+										<LabelDecoration name="НадписьКорректностьИзменяемойПочты" id="307">
+											<Visible>false</Visible>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<AutoMaxHeight>false</AutoMaxHeight>
+											<TextColor>style:ПоясняющийОшибкуТекст</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>(Указан некорректный адрес электронной почты)</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="НадписьКорректностьИзменяемойПочтыКонтекстноеМеню" id="308"/>
+											<ExtendedTooltip name="НадписьКорректностьИзменяемойПочтыРасширеннаяПодсказка" id="309"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаКнопкиИзмененияEmail" id="310">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа кнопки изменения email</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаКнопкиИзмененияEmailРасширеннаяПодсказка" id="311"/>
+									<ChildItems>
+										<Button name="КнопкаОтправитьНовыйEmail" id="312">
+											<Type>UsualButton</Type>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<AutoMaxHeight>false</AutoMaxHeight>
+											<CommandName>Form.Command.КомандаОтправитьНовыйEmail</CommandName>
+											<Font ref="sys:DefaultGUIFont" height="10" kind="WindowsFont"/>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сохранить адрес электронной почты</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="КнопкаОтправитьНовыйEmailРасширеннаяПодсказка" id="313"/>
+										</Button>
+										<Button name="КнопкаОтменаИзмененияEmail" id="314">
+											<Type>UsualButton</Type>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<AutoMaxHeight>false</AutoMaxHeight>
+											<CommandName>Form.Command.КомандаОтменаИзмененияEmail</CommandName>
+											<Font ref="sys:DefaultGUIFont" height="10" kind="WindowsFont"/>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отмена</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="КнопкаОтменаИзмененияEmailРасширеннаяПодсказка" id="315"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаПроверкиСведенияВБД" id="33">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница проверки сведения в БД</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница проверки сведения ВБД</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="СтраницаПроверкиСведенияВБДРасширеннаяПодсказка" id="34"/>
+					<ChildItems>
+						<LabelDecoration name="НадписьЗаголовокПроверкаСведенийВБД" id="30">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Height>4</Height>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Font ref="sys:DefaultGUIFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Перед началом обмена данными с системой необходимо убедиться, что в Вашей программе заполнены все необходимые сведения.</v8:content>
+								</v8:item>
+							</Title>
+							<VerticalAlign>Center</VerticalAlign>
+							<ContextMenu name="НадписьЗаголовокПроверкаСведенийВБДКонтекстноеМеню" id="31"/>
+							<ExtendedTooltip name="НадписьЗаголовокПроверкаСведенийВБДРасширеннаяПодсказка" id="32"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаПроверкаИНН" id="38">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Проверьте ИНН организаций</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа проверка ИНН</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПроверкаИННРасширеннаяПодсказка" id="39"/>
+							<ChildItems>
+								<LabelDecoration name="ПояснениеКПроверкеИНН" id="35">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<HorizontalStretch>true</HorizontalStretch>
+									<TextColor>style:УПЖКХ_ТекстСправочнойНадписи</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Для того, чтобы понимать, показания по каким именно счетчикам нужны Вашей организации, должен быть указан её ИНН.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПояснениеКПроверкеИННКонтекстноеМеню" id="36"/>
+									<ExtendedTooltip name="ПояснениеКПроверкеИННРасширеннаяПодсказка" id="37"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПроверкаЗаводскихНомеров" id="40">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Проверьте заводские номера счетчиков</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа проверка заводских номеров</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПроверкаЗаводскихНомеровРасширеннаяПодсказка" id="41"/>
+							<ChildItems>
+								<LabelDecoration name="ПояснениеКПроверкеЗаводскихНомеров" id="42">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<HorizontalStretch>true</HorizontalStretch>
+									<TextColor>style:УПЖКХ_ТекстСправочнойНадписи</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Для корректной загрузки показаний счетчиков в программу должны быть указаны их заводские номера.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПояснениеКПроверкеЗаводскихНомеровКонтекстноеМеню" id="43"/>
+									<ExtendedTooltip name="ПояснениеКПроверкеЗаводскихНомеровРасширеннаяПодсказка" id="44"/>
+								</LabelDecoration>
+								<LabelDecoration name="СведенияОЗаводскихНомерахСчетчиков" id="45">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Hyperlink>true</Hyperlink>
+									<ContextMenu name="СведенияОЗаводскихНомерахСчетчиковКонтекстноеМеню" id="46"/>
+									<ExtendedTooltip name="СведенияОЗаводскихНомерахСчетчиковРасширеннаяПодсказка" id="47"/>
+									<Events>
+										<Event name="Click">СведенияОЗаводскихНомерахСчетчиковНажатие</Event>
+									</Events>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаНастройкиРасписания" id="48">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница настройки расписания</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница настройки расписания</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаНастройкиРасписанияРасширеннаяПодсказка" id="49"/>
+					<ChildItems>
+						<LabelDecoration name="НадписьЗаголовокНастройкаРасписанийОбменов" id="52">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Height>3</Height>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Font ref="sys:DefaultGUIFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Необходимо настроить расписание обмена и программу АРМ "Ресурс".</v8:content>
+								</v8:item>
+							</Title>
+							<VerticalAlign>Center</VerticalAlign>
+							<ContextMenu name="НадписьЗаголовокНастройкаРасписанийОбменовКонтекстноеМеню" id="53"/>
+							<ExtendedTooltip name="НадписьЗаголовокНастройкаРасписанийОбменовРасширеннаяПодсказка" id="54"/>
+						</LabelDecoration>
+						<UsualGroup name="НастройкаРасписания" id="392">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройка расписания</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройка расписания</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="НастройкаРасписанияРасширеннаяПодсказка" id="393"/>
+							<ChildItems>
+								<LabelDecoration name="ПояснениеКНастройкеРасписания" id="55">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<TextColor>style:УПЖКХ_ТекстСправочнойНадписи</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Выполнять обмен данными с системой сбора показаний счетчиков можно в автоматическом режиме. Рекомендуем Вам настроить расписание обмена.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПояснениеКНастройкеРасписанияКонтекстноеМеню" id="56"/>
+									<ExtendedTooltip name="ПояснениеКНастройкеРасписанияРасширеннаяПодсказка" id="57"/>
+								</LabelDecoration>
+								<RadioButtonField name="ВидНастройкиРасписанияОбмена" id="58">
+									<DataPath>ВидНастройкиРасписанияОбмена</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<RadioButtonType>Tumbler</RadioButtonType>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Не использовать</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">0</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>По умолчанию</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">1</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Ручная настройка</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">2</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="ВидНастройкиРасписанияОбменаКонтекстноеМеню" id="59"/>
+									<ExtendedTooltip name="ВидНастройкиРасписанияОбменаРасширеннаяПодсказка" id="60"/>
+									<Events>
+										<Event name="OnChange">ВидНастройкиРасписанияОбменаПриИзменении</Event>
+									</Events>
+								</RadioButtonField>
+								<LabelField name="РасписаниеРегламентногоЗадания" id="61">
+									<DataPath>РасписаниеРегламентногоЗадания</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<HorizontalStretch>true</HorizontalStretch>
+									<Hiperlink>true</Hiperlink>
+									<ContextMenu name="РасписаниеРегламентногоЗаданияКонтекстноеМеню" id="62"/>
+									<ExtendedTooltip name="РасписаниеРегламентногоЗаданияРасширеннаяПодсказка" id="63"/>
+									<Events>
+										<Event name="Click">РасписаниеРегламентногоЗаданияНажатие</Event>
+									</Events>
+								</LabelField>
+							</ChildItems>
+						</UsualGroup>
+						<LabelDecoration name="КартинкаРазделитель" id="399">
+							<ContextMenu name="КартинкаРазделительКонтекстноеМеню" id="400"/>
+							<ExtendedTooltip name="КартинкаРазделительРасширеннаяПодсказка" id="401"/>
+						</LabelDecoration>
+						<UsualGroup name="НастройкаРесурс" id="394">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройка ресурс</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройка ресурс</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="НастройкаРесурсРасширеннаяПодсказка" id="395"/>
+							<ChildItems>
+								<LabelDecoration name="ПояснениеКНастройкеРесурс" id="409">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<TextColor>style:УПЖКХ_ТекстСправочнойНадписи</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Для того, чтобы АРМ "Ресурс" начала передавать в 1С показания по счетчикам, необходимо её настроить (меню "Главное - Сервис - Настройки - 1С"):</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПояснениеКНастройкеРесурсКонтекстноеМеню" id="410"/>
+									<ExtendedTooltip name="ПояснениеКНастройкеРесурсРасширеннаяПодсказка" id="411"/>
+								</LabelDecoration>
+								<UsualGroup name="ГруппаКартинка" id="407">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа картинка</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа картинка</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаКартинкаРасширеннаяПодсказка" id="408"/>
+									<ChildItems>
+										<PictureDecoration name="НастройкаАРМРесурс" id="404">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Настройка АРМ Ресурс</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Abs>Picture.png</xr:Abs>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="НастройкаАРМРесурсКонтекстноеМеню" id="405"/>
+											<ExtendedTooltip name="НастройкаАРМРесурсРасширеннаяПодсказка" id="406"/>
+										</PictureDecoration>
+										<LabelDecoration name="ОписаниеНастройкиРесурс" id="396">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<TextColor>style:УПЖКХ_ТекстСправочнойНадписи</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content> - Установить флаг "Включить автоматическую передачу показаний счетчиков в 1С через облачный сервис"
+ - Указать периодичность передачи показаний
+ - В полях "Имя пользователя 1С" и "Пароль 1С" указать имя пользователя и пароль, который Вы использовали при регистрации на сервисе на этапе "Регистрация"
+ - Указать ИНН Вашей организации.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ОписаниеНастройкиРесурсКонтекстноеМеню" id="397"/>
+											<ExtendedTooltip name="ОписаниеНастройкиРесурсРасширеннаяПодсказка" id="398"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаЗавершенияНастройки" id="74">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница завершения настройки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница завершения настройки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаЗавершенияНастройкиРасширеннаяПодсказка" id="75"/>
+					<ChildItems>
+						<LabelDecoration name="НадписьЗавершениеНастройкиШапка" id="78">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Height>4</Height>
+							<Font ref="sys:DefaultGUIFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Завершение мастера настройки интеграции с АСКУЭ "Ресурс" от компании "Bolid".</v8:content>
+								</v8:item>
+							</Title>
+							<VerticalAlign>Center</VerticalAlign>
+							<ContextMenu name="НадписьЗавершениеНастройкиШапкаКонтекстноеМеню" id="79"/>
+							<ExtendedTooltip name="НадписьЗавершениеНастройкиШапкаРасширеннаяПодсказка" id="80"/>
+						</LabelDecoration>
+						<LabelDecoration name="НадписьЗавершениеНастройки" id="81">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Font ref="sys:DefaultGUIFont" height="10" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Первоначальная настройка интеграции с сервисом завершена.
+&lt;colorstyle -3&gt;
+&lt;/&gt;&lt;colorstyle -3&gt;Для того, чтобы начать пользоваться механизмом интеграции, необходимо оформить подписку. &lt;/&gt;&lt;fontsize 10&gt;&lt;colorstyle -3&gt;Подписка оформляется на определенное количество лицевых счетов. На данный момент у Вас открыто &lt;/&gt;&lt;/&gt;&lt;fontsize 10&gt;&lt;b&gt;&lt;color #008000&gt;#л/с#&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;fontsize 10&gt;&lt;colorstyle -3&gt;.&lt;/&gt;&lt;/&gt;&lt;colorstyle -3&gt; Ознакомиться с ценами можно &lt;/&gt;&lt;link https://vgkh.ru/jsk/jkh/saures&gt;&lt;colorstyle -3&gt;#&lt;/&gt;&lt;/&gt;&lt;link (задается программно)https://vgkh.ru/jsk/jkh/saures&gt;&lt;colorstyle -3&gt;на нашем сайте&lt;/&gt;&lt;/&gt;&lt;link https://vgkh.ru/jsk/jkh/saures&gt;&lt;colorstyle -3&gt;#&lt;/&gt;&lt;/&gt;&lt;colorstyle -3&gt;.&lt;/&gt;&lt;colorstyle -3&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="НадписьЗавершениеНастройкиКонтекстноеМеню" id="82"/>
+							<ExtendedTooltip name="НадписьЗавершениеНастройкиРасширеннаяПодсказка" id="83"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаКонтактнаяИнформация" id="365">
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<HorizontalSpacing>Double</HorizontalSpacing>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<BackColor>style:FormBackColor</BackColor>
+							<ExtendedTooltip name="ГруппаКонтактнаяИнформацияРасширеннаяПодсказка" id="366"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаКонтакты" id="367">
+									<Width>50</Width>
+									<Height>9</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<VerticalStretch>false</VerticalStretch>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<BackColor>#FCF6DE</BackColor>
+									<ExtendedTooltip name="ГруппаКонтактыРасширеннаяПодсказка" id="368"/>
+									<ChildItems>
+										<LabelDecoration name="НадписьЗаголовокКИ" id="369">
+											<Width>50</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Height>4</Height>
+											<AutoMaxHeight>false</AutoMaxHeight>
+											<HorizontalStretch>true</HorizontalStretch>
+											<VerticalStretch>false</VerticalStretch>
+											<Font faceName="Arial" height="10" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+											<Title formatted="true">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>
+&lt;fontsize 10&gt;&lt;b&gt;Для оформления подписки вам необходимо связаться с нами по следующим контактам:&lt;/&gt;&lt;/&gt;
+</v8:content>
+												</v8:item>
+											</Title>
+											<HorizontalAlign>Center</HorizontalAlign>
+											<BackColor>#FCF6DE</BackColor>
+											<ContextMenu name="НадписьЗаголовокКИКонтекстноеМеню" id="370"/>
+											<ExtendedTooltip name="НадписьЗаголовокКИРасширеннаяПодсказка" id="371"/>
+										</LabelDecoration>
+										<FormattedDocumentField name="ПолеКИ" id="372">
+											<DataPath>КонтактнаяИнформацияДокумент</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<TitleLocation>None</TitleLocation>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Height>4</Height>
+											<AutoMaxHeight>false</AutoMaxHeight>
+											<HorizontalStretch>false</HorizontalStretch>
+											<VerticalStretch>false</VerticalStretch>
+											<BackColor>#FCF6DE</BackColor>
+											<BorderColor>#FCF6DE</BorderColor>
+											<Font ref="style:NormalTextFont" height="10" kind="StyleItem"/>
+											<ContextMenu name="ПолеКИКонтекстноеМеню" id="373"/>
+											<ExtendedTooltip name="ПолеКИРасширеннаяПодсказка" id="374"/>
+										</FormattedDocumentField>
+										<LabelDecoration name="НадписьКнопкаСвязатьсяСНами" id="375">
+											<Width>50</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Height>3</Height>
+											<AutoMaxHeight>false</AutoMaxHeight>
+											<HorizontalStretch>true</HorizontalStretch>
+											<VerticalStretch>false</VerticalStretch>
+											<Font faceName="Arial" height="10" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+											<Title formatted="true">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>&lt;link http://www.vdgb-soft.ru/contacts/#feedback&gt;&lt;img 0:91c23a86-d2f1-4759-9689-142c4e02510b/&gt;&lt;/&gt;
+</v8:content>
+												</v8:item>
+											</Title>
+											<HorizontalAlign>Center</HorizontalAlign>
+											<ContextMenu name="НадписьКнопкаСвязатьсяСНамиКонтекстноеМеню" id="376"/>
+											<ExtendedTooltip name="НадписьКнопкаСвязатьсяСНамиРасширеннаяПодсказка" id="377"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаУправленияИнтеграцией" id="89">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница управления интеграцией</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница управления интеграцией</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаУправленияИнтеграциейРасширеннаяПодсказка" id="90"/>
+					<ChildItems>
+						<LabelDecoration name="НадписьЗаголовокУправлениеИнтеграцией" id="86">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Height>4</Height>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Font ref="sys:DefaultGUIFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Управление интеграцией программного продукта "1С:Учет в управляющих компаниях ЖКХ, ТСЖ и ЖСК" с АСКУЭ "Ресурс" от компании "Bolid".</v8:content>
+								</v8:item>
+							</Title>
+							<VerticalAlign>Center</VerticalAlign>
+							<ContextMenu name="НадписьЗаголовокУправлениеИнтеграциейКонтекстноеМеню" id="87"/>
+							<ExtendedTooltip name="НадписьЗаголовокУправлениеИнтеграциейРасширеннаяПодсказка" id="88"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаОбщееОписание" id="91">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа общее описание</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа общее описание</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОбщееОписаниеРасширеннаяПодсказка" id="92"/>
+							<ChildItems>
+								<LabelDecoration name="НадписьРазделительОбОбмене" id="93">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<HorizontalStretch>true</HorizontalStretch>
+									<TextColor>#009646</TextColor>
+									<Font ref="sys:DefaultGUIFont" height="12" kind="WindowsFont"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Об обмене</v8:content>
+										</v8:item>
+									</Title>
+									<Border width="1">
+										<v8ui:style xsi:type="v8ui:ControlBorderType">Underline</v8ui:style>
+									</Border>
+									<ContextMenu name="НадписьРазделительОбОбменеКонтекстноеМеню" id="94"/>
+									<ExtendedTooltip name="НадписьРазделительОбОбменеРасширеннаяПодсказка" id="95"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьОписаниеОбмена" id="96">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Font ref="sys:DefaultGUIFont" height="10" kind="WindowsFont"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Обмен данными с АСКУЭ "Ресурс" от компании "Bolid" позволяет автоматизировать загрузку показаний счетчиков в Вашу программу.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьОписаниеОбменаКонтекстноеМеню" id="97"/>
+									<ExtendedTooltip name="НадписьОписаниеОбменаРасширеннаяПодсказка" id="98"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаСведенияОПодписке" id="316">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сведения о подписке</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа сведения о подписке</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСведенияОПодпискеРасширеннаяПодсказка" id="317"/>
+							<ChildItems>
+								<LabelDecoration name="НадписьРазделительСведенияОПодписке" id="321">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<HorizontalStretch>true</HorizontalStretch>
+									<TextColor>#009646</TextColor>
+									<Font ref="sys:DefaultGUIFont" height="12" kind="WindowsFont"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сведения о подписке на пользование сервисом</v8:content>
+										</v8:item>
+									</Title>
+									<Border width="1">
+										<v8ui:style xsi:type="v8ui:ControlBorderType">Underline</v8ui:style>
+									</Border>
+									<ContextMenu name="НадписьРазделительСведенияОПодпискеКонтекстноеМеню" id="322"/>
+									<ExtendedTooltip name="НадписьРазделительСведенияОПодпискеРасширеннаяПодсказка" id="323"/>
+								</LabelDecoration>
+								<UsualGroup name="ГруппаНеУдалосьПолучитьСведенияОПодписке" id="378">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа не удалось получить сведения о подписке</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа не удалось получить сведения о подписке</v8:content>
+										</v8:item>
+									</ToolTip>
+									<HorizontalSpacing>Half</HorizontalSpacing>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаНеУдалосьПолучитьСведенияОПодпискеРасширеннаяПодсказка" id="379"/>
+									<ChildItems>
+										<LabelDecoration name="НадписьСведенияОПодпискеНеУдалосьПолучить" id="330">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<TextColor>style:УПЖКХ_ТекстСообщенияОПроблемах</TextColor>
+											<Title formatted="true">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Не удалось получить сведения о подписке. Обмен недоступен. &lt;link https://vgkh.ru/contacts/&gt;Свяжитесь с нами&lt;/&gt;, пожалуйста.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="НадписьСведенияОПодпискеНеУдалосьПолучитьКонтекстноеМеню" id="331"/>
+											<ExtendedTooltip name="НадписьСведенияОПодпискеНеУдалосьПолучитьРасширеннаяПодсказка" id="332"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаПодпискаНеОформлена" id="380">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа подписка не оформлена</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа подписка не оформлена</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПодпискаНеОформленаРасширеннаяПодсказка" id="381"/>
+									<ChildItems>
+										<LabelDecoration name="НадписьСведенияОПодпискеНеОформлена" id="318">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<TextColor>style:УПЖКХ_ТекстСообщенияОПроблемах</TextColor>
+											<Title formatted="true">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Подписка не оформлена, обмен недоступен. &lt;link https://vgkh.ru/contacts/&gt;Свяжитесь с нами&lt;/&gt; для оформления подписки.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="НадписьСведенияОПодпискеНеОформленаКонтекстноеМеню" id="319"/>
+											<ExtendedTooltip name="НадписьСведенияОПодпискеНеОформленаРасширеннаяПодсказка" id="320"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаПодискаСкороЗакончится" id="382">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа подиска скоро закончится</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа подиска скоро закончится</v8:content>
+										</v8:item>
+									</ToolTip>
+									<HorizontalSpacing>Half</HorizontalSpacing>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПодискаСкороЗакончитсяРасширеннаяПодсказка" id="383"/>
+									<ChildItems>
+										<LabelDecoration name="НадписьСведенияОПодпискеСкороЗакончится" id="324">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<TextColor>style:УПЖКХ_ТекстСообщенияОПроблемах</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Подписка действует до [Дата].[ТипПодписки]</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="НадписьСведенияОПодпискеСкороЗакончитсяКонтекстноеМеню" id="325"/>
+											<ExtendedTooltip name="НадписьСведенияОПодпискеСкороЗакончитсяРасширеннаяПодсказка" id="326"/>
+										</LabelDecoration>
+										<LabelDecoration name="НадписьСведенияОПодпискеСкороЗакончитсяСсылка" id="384">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<TextColor>style:УПЖКХ_ТекстСообщенияОПроблемах</TextColor>
+											<Title formatted="true">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>&lt;link https://vgkh.ru/contacts/&gt;Свяжитесь с нами&lt;/&gt; для продления подписки.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="НадписьСведенияОПодпискеСкороЗакончитсяСсылкаКонтекстноеМеню" id="385"/>
+											<ExtendedTooltip name="НадписьСведенияОПодпискеСкороЗакончитсяСсылкаРасширеннаяПодсказка" id="386"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаПодпискаОформлена" id="387">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа подписка оформлена</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа подписка оформлена</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПодпискаОформленаРасширеннаяПодсказка" id="388"/>
+									<ChildItems>
+										<LabelDecoration name="НадписьСведенияОПодпискеОформлена" id="327">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Подписка оформлена.[ТипПодписки] Действует до [Дата].</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="НадписьСведенияОПодпискеОформленаКонтекстноеМеню" id="328"/>
+											<ExtendedTooltip name="НадписьСведенияОПодпискеОформленаРасширеннаяПодсказка" id="329"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаНастройкаОбмена" id="99">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа настройка обмена</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа настройка обмена</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНастройкаОбменаРасширеннаяПодсказка" id="100"/>
+							<ChildItems>
+								<LabelDecoration name="НадписьРазделительНастройка" id="101">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<HorizontalStretch>true</HorizontalStretch>
+									<TextColor>#009646</TextColor>
+									<Font ref="sys:DefaultGUIFont" height="12" kind="WindowsFont"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Настройка обмена</v8:content>
+										</v8:item>
+									</Title>
+									<Border width="1">
+										<v8ui:style xsi:type="v8ui:ControlBorderType">Underline</v8ui:style>
+									</Border>
+									<ContextMenu name="НадписьРазделительНастройкаКонтекстноеМеню" id="102"/>
+									<ExtendedTooltip name="НадписьРазделительНастройкаРасширеннаяПодсказка" id="103"/>
+								</LabelDecoration>
+								<UsualGroup name="ГруппаИзменитьРасписаниеОбмена" id="128">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа изменить расписание обмена</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа изменить расписание обмена</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаИзменитьРасписаниеОбменаРасширеннаяПодсказка" id="129"/>
+									<ChildItems>
+										<PictureDecoration name="КартинкаИзменитьРасписаниеОбмена" id="125">
+											<Width>2</Width>
+											<Height>1</Height>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Картинка изменить расписание обмена</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTipRepresentation>None</ToolTipRepresentation>
+											<Picture>
+												<xr:Ref>CommonPicture.ПрочиеПользовательскиеНастройки</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="КартинкаИзменитьРасписаниеОбменаКонтекстноеМеню" id="126"/>
+											<ExtendedTooltip name="КартинкаИзменитьРасписаниеОбменаРасширеннаяПодсказка" id="127"/>
+										</PictureDecoration>
+										<Button name="КнопкаИзменитьРасписаниеОбмена" id="104">
+											<Type>Hyperlink</Type>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<AutoMaxHeight>false</AutoMaxHeight>
+											<CommandName>Form.Command.КомандаИзменитьРасписаниеОбмена</CommandName>
+											<TextColor>style:FormTextColor</TextColor>
+											<Font ref="sys:DefaultGUIFont" height="10" kind="WindowsFont"/>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Изменить расписание обмена</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="КнопкаИзменитьРасписаниеОбменаРасширеннаяПодсказка" id="105"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаУправлениеОбменом" id="106">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Управление обменом</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Управление обменами</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>None</ToolTipRepresentation>
+							<Group>Vertical</Group>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаУправлениеОбменомРасширеннаяПодсказка" id="107"/>
+							<ChildItems>
+								<LabelDecoration name="НадписьРазделительУправлениеОбменом" id="108">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<HorizontalStretch>true</HorizontalStretch>
+									<TextColor>#009646</TextColor>
+									<Font ref="sys:DefaultGUIFont" height="12" kind="WindowsFont"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Управление обменом</v8:content>
+										</v8:item>
+									</Title>
+									<Border width="1">
+										<v8ui:style xsi:type="v8ui:ControlBorderType">Underline</v8ui:style>
+									</Border>
+									<ContextMenu name="НадписьРазделительУправлениеОбменомКонтекстноеМеню" id="109"/>
+									<ExtendedTooltip name="НадписьРазделительУправлениеОбменомРасширеннаяПодсказка" id="110"/>
+								</LabelDecoration>
+								<UsualGroup name="ГруппаРазовыеОбменыДанными" id="111">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Разовые обмены данными</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Разовые обмены данными</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>None</ToolTipRepresentation>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаРазовыеОбменыДаннымиРасширеннаяПодсказка" id="112"/>
+									<ChildItems>
+										<Button name="КнопкаВыполнитьРазовыйОбмен" id="133">
+											<Type>UsualButton</Type>
+											<Representation>PictureAndText</Representation>
+											<CommandName>Form.Command.КомандаВыполнитьРазовыйОбменДанными</CommandName>
+											<Picture>
+												<xr:Ref>CommonPicture.СинхронизацияДанных</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Выполнить разовый обмен данными</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="КнопкаВыполнитьРазовыйОбменРасширеннаяПодсказка" id="134"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаЖурналОбмена" id="118">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Журнал обмена</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Журнал обмена</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>None</ToolTipRepresentation>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаЖурналОбменаРасширеннаяПодсказка" id="119"/>
+									<ChildItems>
+										<PictureDecoration name="КартинкаЖурналОбмена" id="120">
+											<Width>2</Width>
+											<Height>1</Height>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Журнал обмена</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTipRepresentation>None</ToolTipRepresentation>
+											<Picture>
+												<xr:Ref>CommonPicture.ПолучениеНовостейЕжедневно</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="КартинкаЖурналОбменаКонтекстноеМеню" id="121"/>
+											<ExtendedTooltip name="КартинкаЖурналОбменаРасширеннаяПодсказка" id="122"/>
+										</PictureDecoration>
+										<Button name="КнопкаЖурналОбмена" id="123">
+											<Type>Hyperlink</Type>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<AutoMaxHeight>false</AutoMaxHeight>
+											<CommandName>Form.Command.КомандаОткрытьЖурналОбмена</CommandName>
+											<TextColor>style:FormTextColor</TextColor>
+											<Font ref="sys:DefaultGUIFont" height="10" kind="WindowsFont"/>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Журнал обмена</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="КнопкаЖурналОбменаРасширеннаяПодсказка" id="124"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаДополнительно" id="135">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дополнительно</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дополнительно</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>None</ToolTipRepresentation>
+							<Group>Vertical</Group>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаДополнительноРасширеннаяПодсказка" id="136"/>
+						</UsualGroup>
+						<UsualGroup name="ГруппаСправочнаяИнформация" id="147">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Справочная информация</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Справочная информация</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>None</ToolTipRepresentation>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСправочнаяИнформацияРасширеннаяПодсказка" id="148"/>
+							<ChildItems>
+								<LabelDecoration name="НадписьРазделительСправочнаяИнформация" id="149">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<HorizontalStretch>true</HorizontalStretch>
+									<TextColor>#009646</TextColor>
+									<Font ref="sys:DefaultGUIFont" height="12" kind="WindowsFont"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Справочная информация</v8:content>
+										</v8:item>
+									</Title>
+									<Border width="1">
+										<v8ui:style xsi:type="v8ui:ControlBorderType">Underline</v8ui:style>
+									</Border>
+									<ContextMenu name="НадписьРазделительСправочнаяИнформацияКонтекстноеМеню" id="150"/>
+									<ExtendedTooltip name="НадписьРазделительСправочнаяИнформацияРасширеннаяПодсказка" id="151"/>
+								</LabelDecoration>
+								<Button name="КнопкаОткрытьСтраницуСОписаниемСервиса" id="152">
+									<Type>Hyperlink</Type>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<CommandName>Form.Command.КомандаОткрытьСтраницуСОписанием</CommandName>
+									<Font ref="sys:DefaultGUIFont" height="10" kind="WindowsFont"/>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Перейти на страницу с описанием АСКУЭ "Ресурс" от компании "Bolid".</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="КнопкаОткрытьСтраницуСОписаниемСервисаРасширеннаяПодсказка" id="153"/>
+								</Button>
+								<Button name="КнопкаОткрытьФАК" id="159">
+									<Type>Hyperlink</Type>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<CommandName>Form.Command.КомандаОткрытьФАК</CommandName>
+									<Font ref="sys:DefaultGUIFont" height="10" kind="WindowsFont"/>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Открыть инструкцию по настройке обмена в 1С.</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="КнопкаОткрытьФАКРасширеннаяПодсказка" id="160"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<UsualGroup name="ПанельПодвал" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Панель подвал</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Панель подвал</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ПанельПодвалРасширеннаяПодсказка" id="8"/>
+			<ChildItems>
+				<LabelDecoration name="НадписьПодвалДалее" id="19">
+					<Height>2</Height>
+					<Font ref="sys:DefaultGUIFont" faceName="Arial" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Нажмите кнопку "Далее" для продолжения.</v8:content>
+						</v8:item>
+					</Title>
+					<VerticalAlign>Bottom</VerticalAlign>
+					<ContextMenu name="НадписьПодвалДалееКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="НадписьПодвалДалееРасширеннаяПодсказка" id="21"/>
+				</LabelDecoration>
+				<LabelDecoration name="НадписьПодвалЗавершение" id="389">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Height>2</Height>
+					<Font ref="sys:DefaultGUIFont" faceName="Arial" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Нажмите кнопку "Завершить настройку" для завершения настройки и перехода к форме управления обменом.</v8:content>
+						</v8:item>
+					</Title>
+					<VerticalAlign>Bottom</VerticalAlign>
+					<ContextMenu name="НадписьПодвалЗавершениеКонтекстноеМеню" id="390"/>
+					<ExtendedTooltip name="НадписьПодвалЗавершениеРасширеннаяПодсказка" id="391"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ПанельНавигации" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Панель навигации</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Панель навигации</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>false</HorizontalStretch>
+			<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+			<Group>AlwaysHorizontal</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ПанельНавигацииРасширеннаяПодсказка" id="6"/>
+			<ChildItems>
+				<Button name="КнопкаНазад" id="24">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.КомандаНазад</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;&lt; Назад</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="КнопкаНазадРасширеннаяПодсказка" id="25"/>
+				</Button>
+				<Button name="КнопкаОтмена" id="26">
+					<Type>UsualButton</Type>
+					<CommandName>Form.StandardCommand.Close</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отмена</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="КнопкаОтменаРасширеннаяПодсказка" id="27"/>
+				</Button>
+				<Button name="КнопкаДалее" id="22">
+					<Type>UsualButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<CommandName>Form.Command.КомандаДалее</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Далее &gt;&gt;</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="КнопкаДалееРасширеннаяПодсказка" id="23"/>
+				</Button>
+				<UsualGroup name="ГруппаЧастоЗадаваемыеВопросы" id="161">
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа часто задаваемые вопросы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаЧастоЗадаваемыеВопросыРасширеннаяПодсказка" id="162"/>
+				</UsualGroup>
+				<Button name="Справка" id="412">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Form.StandardCommand.Help</CommandName>
+					<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+					<ExtendedTooltip name="СправкаРасширеннаяПодсказка" id="413"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.УПЖКХ_ИнтеграцияССервисомСбораПоказанийСчетчиковБолид</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ТекущаяСтраница" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущая страница</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.УПЖКХ_СтраницыИнтеграцииССервисомСбораПоказанийСчетчиков</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВсегоСчетчиков" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Всего счетчиков</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СчетчикиБезЗаводскихНомеров" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Счетчики без заводских номеров</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СведенияОбИНН" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сведения об ИНН</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ОрганизацияСсылка" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Организация ссылка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИННЗаполнен" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ИННЗаполнен</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ОрганизацияНаименование" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Организация наименование</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="КодОрганизации" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код организации</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ВсегоСчетчиковБезЗаводскихНомеров" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Всего счетчиков без заводских номеров</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВидНастройкиРасписанияОбмена" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид настройки расписания обмена</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РегламентноеЗаданиеОбмена" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Регламентное задание обмена</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:UUID</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РасписаниеРегламентногоЗаданияПоУмолчанию" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расписание регламентного задания по умолчанию</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ВыполнятьОбменПоРасписанию" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнять обмен по расписанию</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РасписаниеРегламентногоЗадания" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расписание регламентного задания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НовыйИлиИмеющийсяАккаунт" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Новый или имеющийся аккаунт</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресЭлектроннойПочты" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес электронной почты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Логин" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Логин</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Пароль" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пароль</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПодтверждениеПароля" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подтверждение пароля</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Телефон" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Телефон</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СогласиеНаРегистрацию" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>С условиями пользования сервисом согласен</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресЭлектроннойПочтыСуществующийАккаунт" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес электронной почты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЛогинСуществующийАккаунт" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Логин</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПарольСуществующийАккаунт" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пароль</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КодовоеСловоДляРегистрации" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кодовое слово для регистрации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресЭлектроннойПочтыДляИзменения" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес электронной почты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПользовательУжеИмеетАккаунт" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пользователь уже имеет аккаунт</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НаличиеПодписки" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наличие подписки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СрокОкончанияДействияПодписки" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Срок окончания действия подписки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗначениеПолосыПрогресса" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Значение полосы прогресса</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СледующаяСтраница" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Следующая страница</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.УПЖКХ_СтраницыИнтеграцииССервисомСбораПоказанийСчетчиков</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КонтактнаяИнформацияДокумент" id="30">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контактная информация документ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:fd="http://v8.1c.ru/8.2/data/formatted-document">fd:FormattedDocument</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаДалее" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Далее &gt;&gt;</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Далее</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаДалее</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаНазад" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>&lt;&lt; Назад</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Назад</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаНазад</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаИзменитьРасписаниеОбмена" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда изменить расписание обмена</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить расписание обмена</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаИзменитьРасписаниеОбмена</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаВыполнитьРазовыйОбменДанными" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда выполнить разовый обмен данными</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить разовый обмен данными</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаВыполнитьРазовыйОбменДанными</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаОткрытьЖурналОбмена" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда открыть журнал обмена</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть журнал обмена</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаОткрытьЖурналОбмена</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаОткрытьСтраницуСОписанием" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда открыть страницу с описанием</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть статью на сайте</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаОткрытьСтраницуСОписанием</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаОткрытьФАК" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть ФАК</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда открыть ФАК</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаОткрытьФАК</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаУсловияПользованияСервисом" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Условия пользования сервисом</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Условия пользования сервисом</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаУсловияПользованияСервисом</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаОтправитьКодовоеСловоПовторно" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить кодовое слово повторно</v8:content>
+				</v8:item>
+			</Title>
+			<Action>КомандаОтправитьКодовоеСловоПовторно</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаУказатьДругойEmail" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда указать другой email</v8:content>
+				</v8:item>
+			</Title>
+			<Action>КомандаУказатьДругойEmail</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаОтправитьНовыйEmail" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда отправить новый email</v8:content>
+				</v8:item>
+			</Title>
+			<Action>КомандаОтправитьНовыйEmail</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаОтменаИзмененияEmail" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда отмена изменения email</v8:content>
+				</v8:item>
+			</Title>
+			<Action>КомандаОтменаИзмененияEmail</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

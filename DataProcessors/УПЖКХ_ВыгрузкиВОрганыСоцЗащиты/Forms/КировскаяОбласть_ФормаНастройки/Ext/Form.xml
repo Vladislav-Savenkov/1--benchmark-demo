@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Кировская область: Настройки выгрузки</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="ГруппаОсновнаяПанель" id="58">
+			<ExtendedTooltip name="ГруппаОсновнаяПанельРасширеннаяПодсказка" id="59"/>
+			<ChildItems>
+				<Page name="НастройкаСоответствияЛК" id="26">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Соответствие льготных категорий</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="НастройкаСоответствияЛКРасширеннаяПодсказка" id="27"/>
+					<ChildItems>
+						<Table name="КировскаяОбласть_СоответствиеЛьготныхКатегорий" id="36">
+							<Representation>List</Representation>
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.КировскаяОбласть_СоответствиеЛьготныхКатегорий</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="КировскаяОбласть_СоответствиеЛьготныхКатегорийКонтекстноеМеню" id="37"/>
+							<AutoCommandBar name="КировскаяОбласть_СоответствиеЛьготныхКатегорийКоманднаяПанель" id="38"/>
+							<ExtendedTooltip name="КировскаяОбласть_СоответствиеЛьготныхКатегорийРасширеннаяПодсказка" id="39"/>
+							<SearchStringAddition name="КировскаяОбласть_СоответствиеЛьготныхКатегорийСтрокаПоиска" id="40">
+								<AdditionSource>
+									<Item>КировскаяОбласть_СоответствиеЛьготныхКатегорий</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="КировскаяОбласть_СоответствиеЛьготныхКатегорийСтрокаПоискаКонтекстноеМеню" id="41"/>
+								<ExtendedTooltip name="КировскаяОбласть_СоответствиеЛьготныхКатегорийСтрокаПоискаРасширеннаяПодсказка" id="42"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="КировскаяОбласть_СоответствиеЛьготныхКатегорийСостояниеПросмотра" id="43">
+								<AdditionSource>
+									<Item>КировскаяОбласть_СоответствиеЛьготныхКатегорий</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="КировскаяОбласть_СоответствиеЛьготныхКатегорийСостояниеПросмотраКонтекстноеМеню" id="44"/>
+								<ExtendedTooltip name="КировскаяОбласть_СоответствиеЛьготныхКатегорийСостояниеПросмотраРасширеннаяПодсказка" id="45"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="КировскаяОбласть_СоответствиеЛьготныхКатегорийУправлениеПоиском" id="46">
+								<AdditionSource>
+									<Item>КировскаяОбласть_СоответствиеЛьготныхКатегорий</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="КировскаяОбласть_СоответствиеЛьготныхКатегорийУправлениеПоискомКонтекстноеМеню" id="47"/>
+								<ExtendedTooltip name="КировскаяОбласть_СоответствиеЛьготныхКатегорийУправлениеПоискомРасширеннаяПодсказка" id="48"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="BeforeAddRow">КировскаяОбласть_СоответствиеЛьготныхКатегорийПередНачаломДобавления</Event>
+								<Event name="BeforeDeleteRow">КировскаяОбласть_СоответствиеЛьготныхКатегорийПередУдалением</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="КировскаяОбласть_СоответствиеЛьготныхКатегорийВидБюджета" id="102">
+									<DataPath>Объект.КировскаяОбласть_СоответствиеЛьготныхКатегорий.ВидБюджета</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ListChoiceMode>true</ListChoiceMode>
+									<TextEdit>false</TextEdit>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation/>
+												<Value xsi:type="xs:string">Федеральный</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation/>
+												<Value xsi:type="xs:string">Областной</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="КировскаяОбласть_СоответствиеЛьготныхКатегорийВидБюджетаКонтекстноеМеню" id="103"/>
+									<ExtendedTooltip name="КировскаяОбласть_СоответствиеЛьготныхКатегорийВидБюджетаРасширеннаяПодсказка" id="104"/>
+								</InputField>
+								<InputField name="КировскаяОбласть_СоответствиеЛьготныхКатегорийКодЛьготнойКатегорииВОСЗН" id="90">
+									<DataPath>Объект.КировскаяОбласть_СоответствиеЛьготныхКатегорий.КодЛьготнойКатегорииВОСЗН</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КировскаяОбласть_СоответствиеЛьготныхКатегорийКодЛьготнойКатегорииВОСЗНКонтекстноеМеню" id="91"/>
+									<ExtendedTooltip name="КировскаяОбласть_СоответствиеЛьготныхКатегорийКодЛьготнойКатегорииВОСЗНРасширеннаяПодсказка" id="92"/>
+								</InputField>
+								<InputField name="КировскаяОбласть_СоответствиеЛьготныхКатегорийЛьготнаяКатегорияВБазе" id="87">
+									<DataPath>Объект.КировскаяОбласть_СоответствиеЛьготныхКатегорий.ЛьготнаяКатегорияВБазе</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КировскаяОбласть_СоответствиеЛьготныхКатегорийЛьготнаяКатегорияВБазеКонтекстноеМеню" id="88"/>
+									<ExtendedTooltip name="КировскаяОбласть_СоответствиеЛьготныхКатегорийЛьготнаяКатегорияВБазеРасширеннаяПодсказка" id="89"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="НастройкиСоответствияУслуг" id="60">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Соответствие услуг</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="НастройкиСоответствияУслугРасширеннаяПодсказка" id="61"/>
+					<ChildItems>
+						<Table name="КировскаяОбласть_ТаблицаКодовУслуг" id="62">
+							<Representation>List</Representation>
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.КировскаяОбласть_ТаблицаКодовУслуг</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="КировскаяОбласть_ТаблицаКодовУслугКонтекстноеМеню" id="63"/>
+							<AutoCommandBar name="КировскаяОбласть_ТаблицаКодовУслугКоманднаяПанель" id="64"/>
+							<ExtendedTooltip name="КировскаяОбласть_ТаблицаКодовУслугРасширеннаяПодсказка" id="65"/>
+							<SearchStringAddition name="КировскаяОбласть_ТаблицаКодовУслугСтрокаПоиска" id="66">
+								<AdditionSource>
+									<Item>КировскаяОбласть_ТаблицаКодовУслуг</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="КировскаяОбласть_ТаблицаКодовУслугСтрокаПоискаКонтекстноеМеню" id="67"/>
+								<ExtendedTooltip name="КировскаяОбласть_ТаблицаКодовУслугСтрокаПоискаРасширеннаяПодсказка" id="68"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="КировскаяОбласть_ТаблицаКодовУслугСостояниеПросмотра" id="69">
+								<AdditionSource>
+									<Item>КировскаяОбласть_ТаблицаКодовУслуг</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="КировскаяОбласть_ТаблицаКодовУслугСостояниеПросмотраКонтекстноеМеню" id="70"/>
+								<ExtendedTooltip name="КировскаяОбласть_ТаблицаКодовУслугСостояниеПросмотраРасширеннаяПодсказка" id="71"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="КировскаяОбласть_ТаблицаКодовУслугУправлениеПоиском" id="72">
+								<AdditionSource>
+									<Item>КировскаяОбласть_ТаблицаКодовУслуг</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="КировскаяОбласть_ТаблицаКодовУслугУправлениеПоискомКонтекстноеМеню" id="73"/>
+								<ExtendedTooltip name="КировскаяОбласть_ТаблицаКодовУслугУправлениеПоискомРасширеннаяПодсказка" id="74"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="BeforeAddRow">КировскаяОбласть_ТаблицаКодовУслугПередНачаломДобавления</Event>
+								<Event name="BeforeDeleteRow">КировскаяОбласть_ТаблицаКодовУслугПередУдалением</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="КировскаяОбласть_ТаблицаКодовУслугКодОСЗН" id="99">
+									<DataPath>Объект.КировскаяОбласть_ТаблицаКодовУслуг.КодОСЗН</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КировскаяОбласть_ТаблицаКодовУслугКодОСЗНКонтекстноеМеню" id="100"/>
+									<ExtendedTooltip name="КировскаяОбласть_ТаблицаКодовУслугКодОСЗНРасширеннаяПодсказка" id="101"/>
+								</InputField>
+								<InputField name="КировскаяОбласть_ТаблицаКодовУслугУслуга" id="96">
+									<DataPath>Объект.КировскаяОбласть_ТаблицаКодовУслуг.Услуга</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КировскаяОбласть_ТаблицаКодовУслугУслугаКонтекстноеМеню" id="97"/>
+									<ExtendedTooltip name="КировскаяОбласть_ТаблицаКодовУслугУслугаРасширеннаяПодсказка" id="98"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<CommandBar name="ГруппаКоманднаяПанель" id="30">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа командная панель</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalLocation>Right</HorizontalLocation>
+			<ExtendedTooltip name="ГруппаКоманднаяПанельРасширеннаяПодсказка" id="31"/>
+			<ChildItems>
+				<Button name="ФормаКомандаСохранить" id="32">
+					<Type>CommandBarButton</Type>
+					<Representation>PictureAndText</Representation>
+					<DefaultButton>true</DefaultButton>
+					<DefaultItem>true</DefaultItem>
+					<CommandName>Form.Command.КомандаСохранить</CommandName>
+					<Picture>
+						<xr:Ref>StdPicture.SaveFile</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ФормаКомандаСохранитьРасширеннаяПодсказка" id="33"/>
+				</Button>
+				<Button name="Закрыть" id="34">
+					<Type>CommandBarButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Form.StandardCommand.Close</CommandName>
+					<ExtendedTooltip name="ЗакрытьРасширеннаяПодсказка" id="35"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.УПЖКХ_ВыгрузкиВОрганыСоцЗащиты</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаСохранить" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда сохранить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаСохранить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

@@ -1,0 +1,585 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Тамбовская область: Настройка</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="ГруппаСтраницыФормы" id="94">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы формы</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="ГруппаСтраницыФормыРасширеннаяПодсказка" id="95"/>
+			<ChildItems>
+				<Page name="ГруппаНастройкиУслуг" id="96">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройка соответствия услуг</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаНастройкиУслугРасширеннаяПодсказка" id="97"/>
+					<ChildItems>
+						<InputField name="ФайлЗагрузкиУслуг" id="88">
+							<DataPath>ФайлЗагрузкиУслуг</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ChoiceButton>true</ChoiceButton>
+							<OpenButton>true</OpenButton>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="ФайлЗагрузкиУслугКонтекстноеМеню" id="89"/>
+							<ExtendedTooltip name="ФайлЗагрузкиУслугРасширеннаяПодсказка" id="90"/>
+							<Events>
+								<Event name="StartChoice">ФайлЗагрузкиУслугНачалоВыбора</Event>
+								<Event name="Opening">ФайлЗагрузкиУслугОткрытие</Event>
+							</Events>
+						</InputField>
+						<UsualGroup name="ГруппаТаблицыФормы" id="34">
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаТаблицыФормыРасширеннаяПодсказка" id="35"/>
+							<ChildItems>
+								<Table name="ТамбовскаяОбласть_ЖКУ" id="277">
+									<Representation>List</Representation>
+									<ChangeRowSet>false</ChangeRowSet>
+									<ChangeRowOrder>false</ChangeRowOrder>
+									<SelectionMode>SingleRow</SelectionMode>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>Объект.ТамбовскаяОбласть_ЖКУ</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ТамбовскаяОбласть_ЖКУКонтекстноеМеню" id="278"/>
+									<AutoCommandBar name="ТамбовскаяОбласть_ЖКУКоманднаяПанель" id="279">
+										<ChildItems>
+											<Button name="ТамбовскаяОбласть_ЖКУКомандаЗаполнитьУслуги" id="299">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.КомандаЗаполнитьУслуги</CommandName>
+												<ExtendedTooltip name="ТамбовскаяОбласть_ЖКУКомандаЗаполнитьУслугиРасширеннаяПодсказка" id="300"/>
+											</Button>
+										</ChildItems>
+									</AutoCommandBar>
+									<ExtendedTooltip name="ТамбовскаяОбласть_ЖКУРасширеннаяПодсказка" id="280"/>
+									<SearchStringAddition name="ТамбовскаяОбласть_ЖКУСтрокаПоиска" id="281">
+										<AdditionSource>
+											<Item>ТамбовскаяОбласть_ЖКУ</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ТамбовскаяОбласть_ЖКУСтрокаПоискаКонтекстноеМеню" id="282"/>
+										<ExtendedTooltip name="ТамбовскаяОбласть_ЖКУСтрокаПоискаРасширеннаяПодсказка" id="283"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ТамбовскаяОбласть_ЖКУСостояниеПросмотра" id="284">
+										<AdditionSource>
+											<Item>ТамбовскаяОбласть_ЖКУ</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ТамбовскаяОбласть_ЖКУСостояниеПросмотраКонтекстноеМеню" id="285"/>
+										<ExtendedTooltip name="ТамбовскаяОбласть_ЖКУСостояниеПросмотраРасширеннаяПодсказка" id="286"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ТамбовскаяОбласть_ЖКУУправлениеПоиском" id="287">
+										<AdditionSource>
+											<Item>ТамбовскаяОбласть_ЖКУ</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ТамбовскаяОбласть_ЖКУУправлениеПоискомКонтекстноеМеню" id="288"/>
+										<ExtendedTooltip name="ТамбовскаяОбласть_ЖКУУправлениеПоискомРасширеннаяПодсказка" id="289"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="BeforeAddRow">ТамбовскаяОбласть_ЖКУПередНачаломДобавления</Event>
+										<Event name="BeforeDeleteRow">ТамбовскаяОбласть_ЖКУПередУдалением</Event>
+										<Event name="OnActivateRow">ТомскаяОбласть_ЖКУПриАктивизацииСтроки</Event>
+									</Events>
+									<ChildItems>
+										<InputField name="ТамбовскаяОбласть_ЖКУcode" id="372">
+											<DataPath>Объект.ТамбовскаяОбласть_ЖКУ.code</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="ТамбовскаяОбласть_ЖКУcodeКонтекстноеМеню" id="373"/>
+											<ExtendedTooltip name="ТамбовскаяОбласть_ЖКУcodeРасширеннаяПодсказка" id="374"/>
+										</InputField>
+										<InputField name="ТамбовскаяОбласть_ЖКУname" id="375">
+											<DataPath>Объект.ТамбовскаяОбласть_ЖКУ.name</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТамбовскаяОбласть_ЖКУnameКонтекстноеМеню" id="376"/>
+											<ExtendedTooltip name="ТамбовскаяОбласть_ЖКУnameРасширеннаяПодсказка" id="377"/>
+										</InputField>
+										<CheckBoxField name="ТамбовскаяОбласть_ЖКУУслугаОДН" id="378">
+											<DataPath>Объект.ТамбовскаяОбласть_ЖКУ.УслугаОДН</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ТамбовскаяОбласть_ЖКУУслугаОДНКонтекстноеМеню" id="379"/>
+											<ExtendedTooltip name="ТамбовскаяОбласть_ЖКУУслугаОДНРасширеннаяПодсказка" id="380"/>
+											<Events>
+												<Event name="OnChange">ТамбовскаяОбласть_ЖКУУслугаОДНПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+									</ChildItems>
+								</Table>
+								<Table name="ТП_УслугаВБазе" id="66">
+									<Representation>List</Representation>
+									<SelectionMode>SingleRow</SelectionMode>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>ТП_УслугаВБазе</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ТП_УслугаВБазеКонтекстноеМеню" id="67"/>
+									<AutoCommandBar name="ТП_УслугаВБазеКоманднаяПанель" id="68"/>
+									<ExtendedTooltip name="ТП_УслугаВБазеРасширеннаяПодсказка" id="69"/>
+									<SearchStringAddition name="ТП_УслугаВБазеСтрокаПоиска" id="70">
+										<AdditionSource>
+											<Item>ТП_УслугаВБазе</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ТП_УслугаВБазеСтрокаПоискаКонтекстноеМеню" id="73"/>
+										<ExtendedTooltip name="ТП_УслугаВБазеСтрокаПоискаРасширеннаяПодсказка" id="74"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ТП_УслугаВБазеСостояниеПросмотра" id="75">
+										<AdditionSource>
+											<Item>ТП_УслугаВБазе</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ТП_УслугаВБазеСостояниеПросмотраКонтекстноеМеню" id="78"/>
+										<ExtendedTooltip name="ТП_УслугаВБазеСостояниеПросмотраРасширеннаяПодсказка" id="79"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ТП_УслугаВБазеУправлениеПоиском" id="80">
+										<AdditionSource>
+											<Item>ТП_УслугаВБазе</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ТП_УслугаВБазеУправлениеПоискомКонтекстноеМеню" id="83"/>
+										<ExtendedTooltip name="ТП_УслугаВБазеУправлениеПоискомРасширеннаяПодсказка" id="84"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="OnEditEnd">ТП_УслугаВБазеПриОкончанииРедактирования</Event>
+										<Event name="BeforeAddRow">ТП_УслугаВБазеПередНачаломДобавления</Event>
+										<Event name="BeforeDeleteRow">ТП_УслугаВБазеПередУдалением</Event>
+										<Event name="BeforeEditEnd">ТП_УслугаВБазеПередОкончаниемРедактирования</Event>
+										<Event name="OnStartEdit">ТП_УслугаВБазеПриНачалеРедактирования</Event>
+									</Events>
+									<ChildItems>
+										<InputField name="ТП_УслугаВБазеУслугаВБазе" id="91">
+											<DataPath>ТП_УслугаВБазе.УслугаВБазе</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТП_УслугаВБазеУслугаВБазеКонтекстноеМеню" id="92"/>
+											<ExtendedTooltip name="ТП_УслугаВБазеУслугаВБазеРасширеннаяПодсказка" id="93"/>
+											<Events>
+												<Event name="StartChoice">ТП_УслугаВБазеУслугаВБазеНачалоВыбора</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаЛьготныеКатегории" id="187">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройка соответствия льготных категорий</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаЛьготныеКатегорииРасширеннаяПодсказка" id="188"/>
+					<ChildItems>
+						<InputField name="ФайлЗагрузкиЛьготныхКатегорий" id="334">
+							<DataPath>ФайлЗагрузкиЛьготныхКатегорий</DataPath>
+							<ChoiceButton>true</ChoiceButton>
+							<OpenButton>true</OpenButton>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="ФайлЗагрузкиЛьготныхКатегорийКонтекстноеМеню" id="335"/>
+							<ExtendedTooltip name="ФайлЗагрузкиЛьготныхКатегорийРасширеннаяПодсказка" id="336"/>
+							<Events>
+								<Event name="StartChoice">ФайлЗагрузкиЛьготныхКатегорийНачалоВыбора</Event>
+								<Event name="Opening">ФайлЗагрузкиЛьготныхКатегорийОткрытие</Event>
+							</Events>
+						</InputField>
+						<Table name="ТамбовскаяОбласть_ЛьготныеКатегории" id="301">
+							<Representation>List</Representation>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.ТамбовскаяОбласть_ЛьготныеКатегории</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ТамбовскаяОбласть_ЛьготныеКатегорииКонтекстноеМеню" id="302"/>
+							<AutoCommandBar name="ТамбовскаяОбласть_ЛьготныеКатегорииКоманднаяПанель" id="303">
+								<ChildItems>
+									<Button name="ТамбовскаяОбласть_ЛьготныеКатегорииКомандаЗагрузитьИзФайлаЛьготныеКатегории" id="332">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.КомандаЗагрузитьИзФайлаЛьготныеКатегории</CommandName>
+										<ExtendedTooltip name="ТамбовскаяОбласть_ЛьготныеКатегорииКомандаЗагрузитьИзФайлаЛьготныеКатегорииРасширеннаяПодсказка" id="333"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ТамбовскаяОбласть_ЛьготныеКатегорииРасширеннаяПодсказка" id="304"/>
+							<SearchStringAddition name="ТамбовскаяОбласть_ЛьготныеКатегорииСтрокаПоиска" id="305">
+								<AdditionSource>
+									<Item>ТамбовскаяОбласть_ЛьготныеКатегории</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТамбовскаяОбласть_ЛьготныеКатегорииСтрокаПоискаКонтекстноеМеню" id="306"/>
+								<ExtendedTooltip name="ТамбовскаяОбласть_ЛьготныеКатегорииСтрокаПоискаРасширеннаяПодсказка" id="307"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТамбовскаяОбласть_ЛьготныеКатегорииСостояниеПросмотра" id="308">
+								<AdditionSource>
+									<Item>ТамбовскаяОбласть_ЛьготныеКатегории</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТамбовскаяОбласть_ЛьготныеКатегорииСостояниеПросмотраКонтекстноеМеню" id="309"/>
+								<ExtendedTooltip name="ТамбовскаяОбласть_ЛьготныеКатегорииСостояниеПросмотраРасширеннаяПодсказка" id="310"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТамбовскаяОбласть_ЛьготныеКатегорииУправлениеПоиском" id="311">
+								<AdditionSource>
+									<Item>ТамбовскаяОбласть_ЛьготныеКатегории</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТамбовскаяОбласть_ЛьготныеКатегорииУправлениеПоискомКонтекстноеМеню" id="312"/>
+								<ExtendedTooltip name="ТамбовскаяОбласть_ЛьготныеКатегорииУправлениеПоискомРасширеннаяПодсказка" id="313"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="ТамбовскаяОбласть_ЛьготныеКатегорииКодКатегории" id="384">
+									<DataPath>Объект.ТамбовскаяОбласть_ЛьготныеКатегории.КодКатегории</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТамбовскаяОбласть_ЛьготныеКатегорииКодКатегорииКонтекстноеМеню" id="385"/>
+									<ExtendedTooltip name="ТамбовскаяОбласть_ЛьготныеКатегорииКодКатегорииРасширеннаяПодсказка" id="386"/>
+								</InputField>
+								<InputField name="ТамбовскаяОбласть_ЛьготныеКатегорииНаименованиеКатегории" id="387">
+									<DataPath>Объект.ТамбовскаяОбласть_ЛьготныеКатегории.НаименованиеКатегории</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТамбовскаяОбласть_ЛьготныеКатегорииНаименованиеКатегорииКонтекстноеМеню" id="388"/>
+									<ExtendedTooltip name="ТамбовскаяОбласть_ЛьготныеКатегорииНаименованиеКатегорииРасширеннаяПодсказка" id="389"/>
+								</InputField>
+								<CheckBoxField name="ТамбовскаяОбласть_ЛьготныеКатегорииОтноситсяКМногодетнымСемьям" id="390">
+									<DataPath>Объект.ТамбовскаяОбласть_ЛьготныеКатегории.ОтноситсяКМногодетнымСемьям</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ТамбовскаяОбласть_ЛьготныеКатегорииОтноситсяКМногодетнымСемьямКонтекстноеМеню" id="391"/>
+									<ExtendedTooltip name="ТамбовскаяОбласть_ЛьготныеКатегорииОтноситсяКМногодетнымСемьямРасширеннаяПодсказка" id="392"/>
+								</CheckBoxField>
+								<InputField name="ТамбовскаяОбласть_ЛьготныеКатегорииКодЗакона" id="393">
+									<DataPath>Объект.ТамбовскаяОбласть_ЛьготныеКатегории.КодЗакона</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТамбовскаяОбласть_ЛьготныеКатегорииКодЗаконаКонтекстноеМеню" id="394"/>
+									<ExtendedTooltip name="ТамбовскаяОбласть_ЛьготныеКатегорииКодЗаконаРасширеннаяПодсказка" id="395"/>
+								</InputField>
+								<InputField name="ТамбовскаяОбласть_ЛьготныеКатегорииКодРеестра" id="396">
+									<DataPath>Объект.ТамбовскаяОбласть_ЛьготныеКатегории.КодРеестра</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТамбовскаяОбласть_ЛьготныеКатегорииКодРеестраКонтекстноеМеню" id="397"/>
+									<ExtendedTooltip name="ТамбовскаяОбласть_ЛьготныеКатегорииКодРеестраРасширеннаяПодсказка" id="398"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаДопНастройки" id="340">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дополнительные настройки</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<ExtendedTooltip name="ГруппаДопНастройкиРасширеннаяПодсказка" id="341"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаНастройкиУслугиОтопления" id="408">
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНастройкиУслугиОтопленияРасширеннаяПодсказка" id="409"/>
+							<ChildItems>
+								<LabelDecoration name="НадписьПояснениеУслугиОтопления" id="405">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<HorizontalStretch>true</HorizontalStretch>
+									<TextColor>style:УПЖКХ_ТекстСправочнойНадписи</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Необходимо указать код в ОСЗН, который присвоен услуге "Отопление". В выгружаемых данных по такой услуге в поле "Объем услуги" будет выгружаться размер отапливаемой площади, а не реальный объем начисленной услуги.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьПояснениеУслугиОтопленияКонтекстноеМеню" id="406"/>
+									<ExtendedTooltip name="НадписьПояснениеУслугиОтопленияРасширеннаяПодсказка" id="407"/>
+								</LabelDecoration>
+								<InputField name="КодУслугиОтопления" id="342">
+									<DataPath>КодУслугиОтопления</DataPath>
+									<ContextMenu name="КодУслугиОтопленияКонтекстноеМеню" id="343"/>
+									<ExtendedTooltip name="КодУслугиОтопленияРасширеннаяПодсказка" id="344"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКодыУслугОСЗН" id="367">
+							<Group>Vertical</Group>
+							<Representation>StrongSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКодыУслугОСЗНРасширеннаяПодсказка" id="368"/>
+							<ChildItems>
+								<LabelDecoration name="НадписьПояснение" id="364">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<HorizontalStretch>true</HorizontalStretch>
+									<TextColor>style:УПЖКХ_ТекстСправочнойНадписи</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>В данной таблице указываются коды услуг в ОСЗН для которых необходимо расчитывать нормы по следующей формуле:
+Кол-во зарегистрированных - Размер нормы
+1 чел. - 33
+2 чел. - 21
+3 чел. и более - 18</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьПояснениеКонтекстноеМеню" id="365"/>
+									<ExtendedTooltip name="НадписьПояснениеРасширеннаяПодсказка" id="366"/>
+								</LabelDecoration>
+								<Table name="ТамбовскаяОбласть_КодыУслугДляРасчетаНорматива" id="345">
+									<Representation>List</Representation>
+									<TitleHeight>1</TitleHeight>
+									<ChangeRowOrder>false</ChangeRowOrder>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>Объект.ТамбовскаяОбласть_КодыУслугДляРасчетаНорматива</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ТамбовскаяОбласть_КодыУслугДляРасчетаНормативаКонтекстноеМеню" id="346"/>
+									<AutoCommandBar name="ТамбовскаяОбласть_КодыУслугДляРасчетаНормативаКоманднаяПанель" id="347"/>
+									<ExtendedTooltip name="ТамбовскаяОбласть_КодыУслугДляРасчетаНормативаРасширеннаяПодсказка" id="348"/>
+									<SearchStringAddition name="ТамбовскаяОбласть_КодыУслугДляРасчетаНормативаСтрокаПоиска" id="349">
+										<AdditionSource>
+											<Item>ТамбовскаяОбласть_КодыУслугДляРасчетаНорматива</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ТамбовскаяОбласть_КодыУслугДляРасчетаНормативаСтрокаПоискаКонтекстноеМеню" id="350"/>
+										<ExtendedTooltip name="ТамбовскаяОбласть_КодыУслугДляРасчетаНормативаСтрокаПоискаРасширеннаяПодсказка" id="351"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ТамбовскаяОбласть_КодыУслугДляРасчетаНормативаСостояниеПросмотра" id="352">
+										<AdditionSource>
+											<Item>ТамбовскаяОбласть_КодыУслугДляРасчетаНорматива</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ТамбовскаяОбласть_КодыУслугДляРасчетаНормативаСостояниеПросмотраКонтекстноеМеню" id="353"/>
+										<ExtendedTooltip name="ТамбовскаяОбласть_КодыУслугДляРасчетаНормативаСостояниеПросмотраРасширеннаяПодсказка" id="354"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ТамбовскаяОбласть_КодыУслугДляРасчетаНормативаУправлениеПоиском" id="355">
+										<AdditionSource>
+											<Item>ТамбовскаяОбласть_КодыУслугДляРасчетаНорматива</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ТамбовскаяОбласть_КодыУслугДляРасчетаНормативаУправлениеПоискомКонтекстноеМеню" id="356"/>
+										<ExtendedTooltip name="ТамбовскаяОбласть_КодыУслугДляРасчетаНормативаУправлениеПоискомРасширеннаяПодсказка" id="357"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<InputField name="ТамбовскаяОбласть_КодыУслугДляРасчетаНормативаКодУслугиВОСЗН" id="402">
+											<DataPath>Объект.ТамбовскаяОбласть_КодыУслугДляРасчетаНорматива.КодУслугиВОСЗН</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТамбовскаяОбласть_КодыУслугДляРасчетаНормативаКодУслугиВОСЗНКонтекстноеМеню" id="403"/>
+											<ExtendedTooltip name="ТамбовскаяОбласть_КодыУслугДляРасчетаНормативаКодУслугиВОСЗНРасширеннаяПодсказка" id="404"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<CommandBar name="ГруппаКоманднаяПанель" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа командная панель</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalLocation>Right</HorizontalLocation>
+			<ExtendedTooltip name="ГруппаКоманднаяПанельРасширеннаяПодсказка" id="29"/>
+			<ChildItems>
+				<Button name="ФормаКомандаСохранить" id="30">
+					<Type>CommandBarButton</Type>
+					<Representation>PictureAndText</Representation>
+					<DefaultButton>true</DefaultButton>
+					<CommandName>Form.Command.КомандаСохранить</CommandName>
+					<Picture>
+						<xr:Ref>StdPicture.SaveFile</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ФормаКомандаСохранитьРасширеннаяПодсказка" id="31"/>
+				</Button>
+				<Button name="Закрыть" id="32">
+					<Type>CommandBarButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Form.StandardCommand.Close</CommandName>
+					<ExtendedTooltip name="ЗакрытьРасширеннаяПодсказка" id="33"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.УПЖКХ_ВыгрузкиВОрганыСоцЗащиты</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ФайлЗагрузкиУслуг" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Файл загрузки услуг</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>512</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ТП_УслугаВБазе" id="2">
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="УслугаВБазе" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Услуга в базе</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.КВП_Услуги</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ПризнакУдаления" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Признак удаления</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПредыдущаяУслуга" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предыдущая услуга</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.КВП_Услуги</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ФайлЗагрузкиЛьготныхКатегорий" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Файл загрузки льготных категорий</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>512</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="КодУслугиОтопления" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код в ОСЗН для услуги "Отопление"</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>10</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="РасширениеПодключено" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расширение подключено</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаЗаполнитьУслуги" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить из файла</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>CommonPicture.ЗагрузкаФайла</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаЗаполнитьУслуги</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаСохранить" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда сохранить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаСохранить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаЗагрузитьИзФайлаЛьготныеКатегории" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить из файла</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>CommonPicture.ЗагрузкаФайла</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаЗагрузитьИзФайлаЛьготныеКатегории</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

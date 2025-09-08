@@ -1,0 +1,343 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Печать памяток с параметрами доступа</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="КнопкаСформировать" id="23">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<AutoMaxWidth>false</AutoMaxWidth>
+				<AutoMaxHeight>false</AutoMaxHeight>
+				<CommandName>Form.Command.КомандаСформироватьПамятки</CommandName>
+				<ExtendedTooltip name="КнопкаСформироватьРасширеннаяПодсказка" id="24"/>
+			</Button>
+			<Button name="КнопкаПечать" id="34">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<Enabled>false</Enabled>
+				<AutoMaxWidth>false</AutoMaxWidth>
+				<AutoMaxHeight>false</AutoMaxHeight>
+				<CommandName>Form.Item.РезультатПечати.StandardCommand.PrintImmediately</CommandName>
+				<Picture>
+					<xr:Ref>StdPicture.PrintImmediately</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Печать</v8:content>
+					</v8:item>
+				</Title>
+				<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="КнопкаПечатьРасширеннаяПодсказка" id="35"/>
+			</Button>
+			<Button name="КнопкаРедактироватьМакет" id="36">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<AutoMaxWidth>false</AutoMaxWidth>
+				<AutoMaxHeight>false</AutoMaxHeight>
+				<CommandName>Form.Command.КомандаРедактироватьМакет</CommandName>
+				<Picture>
+					<xr:Ref>CommonPicture.РедактироватьМакет</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Редактировать шаблон памятки</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="КнопкаРедактироватьМакетРасширеннаяПодсказка" id="37"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<RadioButtonField name="НастройкаПечати" id="1">
+			<DataPath>НастройкаПечати</DataPath>
+			<TitleLocation>None</TitleLocation>
+			<RadioButtonType>Tumbler</RadioButtonType>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Печатать памятки по всем лицевым счетам</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">0</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Печатать по выбранным лицевым счетам</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">1</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="НастройкаПечатиКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НастройкаПечатиРасширеннаяПодсказка" id="3"/>
+			<Events>
+				<Event name="OnChange">НастройкаПечатиПриИзменении</Event>
+			</Events>
+		</RadioButtonField>
+		<UsualGroup name="ГруппаНастройкиИРезультат" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа настройки и результат</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки и результат</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНастройкиИРезультатРасширеннаяПодсказка" id="28"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаНастройки" id="32">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа настройки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<VerticalStretch>true</VerticalStretch>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаНастройкиРасширеннаяПодсказка" id="33"/>
+					<ChildItems>
+						<Table name="ТаблицаЛС" id="4">
+							<Representation>List</Representation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>ТаблицаЛС</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ТаблицаЛСКонтекстноеМеню" id="5"/>
+							<AutoCommandBar name="ТаблицаЛСКоманднаяПанель" id="6">
+								<ChildItems>
+									<Button name="ТаблицаЛСКнопкаЗаполнитьСОтбором" id="25">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<AutoMaxHeight>false</AutoMaxHeight>
+										<CommandName>Form.Command.КомандаЗаполнитьСОтбором</CommandName>
+										<ExtendedTooltip name="ТаблицаЛСКнопкаЗаполнитьСОтборомРасширеннаяПодсказка" id="26"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ТаблицаЛСРасширеннаяПодсказка" id="7"/>
+							<SearchStringAddition name="ТаблицаЛССтрокаПоиска" id="8">
+								<AdditionSource>
+									<Item>ТаблицаЛС</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаЛССтрокаПоискаКонтекстноеМеню" id="9"/>
+								<ExtendedTooltip name="ТаблицаЛССтрокаПоискаРасширеннаяПодсказка" id="10"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТаблицаЛССостояниеПросмотра" id="11">
+								<AdditionSource>
+									<Item>ТаблицаЛС</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаЛССостояниеПросмотраКонтекстноеМеню" id="12"/>
+								<ExtendedTooltip name="ТаблицаЛССостояниеПросмотраРасширеннаяПодсказка" id="13"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТаблицаЛСУправлениеПоиском" id="14">
+								<AdditionSource>
+									<Item>ТаблицаЛС</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаЛСУправлениеПоискомКонтекстноеМеню" id="15"/>
+								<ExtendedTooltip name="ТаблицаЛСУправлениеПоискомРасширеннаяПодсказка" id="16"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnChange">ТаблицаЛСПриИзменении</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="ТаблицаЛСЛицевойСчет" id="17">
+									<DataPath>ТаблицаЛС.ЛицевойСчет</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<ContextMenu name="ТаблицаЛСЛицевойСчетКонтекстноеМеню" id="18"/>
+									<ExtendedTooltip name="ТаблицаЛСЛицевойСчетРасширеннаяПодсказка" id="19"/>
+									<Events>
+										<Event name="ChoiceProcessing">ТаблицаЛСЛицевойСчетОбработкаВыбора</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+				<SpreadSheetDocumentField name="РезультатПечати" id="20">
+					<DataPath>РезультатПечати</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<VerticalScrollBar>true</VerticalScrollBar>
+					<HorizontalScrollBar>true</HorizontalScrollBar>
+					<ContextMenu name="РезультатПечатиКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="РезультатПечатиРасширеннаяПодсказка" id="22"/>
+				</SpreadSheetDocumentField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.УПЖКХ_ИнтеграцияСМобильнымПриложением</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="НастройкаПечати" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка печати</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТаблицаЛС" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица ЛС</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ЛицевойСчет" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Лицевой счет</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.КВП_ЛицевыеСчета</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="РезультатПечати" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результат печати</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПутьКФормеПодбора" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Путь к форме подбора</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаЗаполнитьСОтбором" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить с отбором</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить с отбором</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ЗаполнитьФорму</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаЗаполнитьСОтбором</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаСформироватьПамятки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать памятки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать памятки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаСформироватьПамятки</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаРедактироватьМакет" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Редактировать макет</v8:content>
+				</v8:item>
+			</Title>
+			<Action>КомандаРедактироватьМакет</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

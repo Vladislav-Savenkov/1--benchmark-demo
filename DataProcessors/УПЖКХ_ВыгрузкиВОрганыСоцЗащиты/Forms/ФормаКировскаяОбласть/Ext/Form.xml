@@ -1,0 +1,661 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Кировская область: Выгрузка в ОСЗН</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаКомандаНастройка" id="1">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.КомандаНастройка</CommandName>
+				<Picture>
+					<xr:Ref>CommonPicture.Настройка</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Настройка</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаКомандаНастройкаРасширеннаяПодсказка" id="2"/>
+			</Button>
+			<Button name="ФормаКомандаЗаполнить" id="3">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.КомандаЗаполнить</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Заполнить</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаКомандаЗаполнитьРасширеннаяПодсказка" id="4"/>
+			</Button>
+			<Button name="ФормаКомандаВыгрузить" id="5">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.КомандаВыгрузить</CommandName>
+				<Picture>
+					<xr:Ref>CommonPicture.ВыгрузитьФайлСертификата</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Выгрузить</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаКомандаВыгрузитьРасширеннаяПодсказка" id="6"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="8"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаШапкаСлева" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шапка слева</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шапка слева</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<United>false</United>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаШапкаСлеваРасширеннаяПодсказка" id="10"/>
+					<ChildItems>
+						<InputField name="ПериодСтрокой" id="11">
+							<DataPath>ПериодСтрокой</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Период</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ChoiceButton>true</ChoiceButton>
+							<SpinButton>true</SpinButton>
+							<ChoiceButtonPicture>
+								<xr:Ref>StdPicture.InputFieldCalendar</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</ChoiceButtonPicture>
+							<ContextMenu name="ПериодСтрокойКонтекстноеМеню" id="12"/>
+							<ExtendedTooltip name="ПериодСтрокойExtendedTooltip" id="13"/>
+							<Events>
+								<Event name="OnChange">ПериодСтрокойПриИзменении</Event>
+								<Event name="AutoComplete">ПериодСтрокойАвтоПодбор</Event>
+								<Event name="StartChoice">ПериодСтрокойНачалоВыбора</Event>
+								<Event name="Tuning">ПериодСтрокойРегулирование</Event>
+								<Event name="TextEditEnd">ПериодСтрокойОкончаниеВводаТекста</Event>
+							</Events>
+						</InputField>
+						<InputField name="Организация" id="14">
+							<DataPath>Объект.Организация</DataPath>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="15"/>
+							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="16"/>
+						</InputField>
+						<RadioButtonField name="ВидБюджета" id="632">
+							<DataPath>ВидБюджета</DataPath>
+							<RadioButtonType>Tumbler</RadioButtonType>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xs:string">Федеральный</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xs:string">Областной</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="ВидБюджетаКонтекстноеМеню" id="633"/>
+							<ExtendedTooltip name="ВидБюджетаРасширеннаяПодсказка" id="634"/>
+						</RadioButtonField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаШапкаСправа" id="17">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шапка справа</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<United>false</United>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаШапкаСправаРасширеннаяПодсказка" id="18"/>
+					<ChildItems>
+						<RadioButtonField name="КодировкаФайла" id="518">
+							<DataPath>КодировкаФайла</DataPath>
+							<RadioButtonType>Tumbler</RadioButtonType>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>DOS</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">0</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Windows</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">1</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="КодировкаФайлаКонтекстноеМеню" id="519"/>
+							<ExtendedTooltip name="КодировкаФайлаРасширеннаяПодсказка" id="520"/>
+						</RadioButtonField>
+						<InputField name="КаталогВыгрузки" id="430">
+							<DataPath>КаталогВыгрузки</DataPath>
+							<ChoiceButton>true</ChoiceButton>
+							<OpenButton>true</OpenButton>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="КаталогВыгрузкиКонтекстноеМеню" id="431"/>
+							<ExtendedTooltip name="КаталогВыгрузкиРасширеннаяПодсказка" id="432"/>
+							<Events>
+								<Event name="StartChoice">КаталогВыгрузкиНачалоВыбора</Event>
+								<Event name="Opening">КаталогВыгрузкиОткрытие</Event>
+							</Events>
+						</InputField>
+						<InputField name="Услуги" id="635">
+							<DataPath>Услуги</DataPath>
+							<ListChoiceMode>true</ListChoiceMode>
+							<TextEdit>false</TextEdit>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>все услуги</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">ВсеУслуги</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>услуги, кроме капитального ремонта</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">УслугиКромеКапитальногоРемонта</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>услуги капитального ремонта</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">УслугиКапитальногоРемонта</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="УслугиКонтекстноеМеню" id="636"/>
+							<ExtendedTooltip name="УслугиРасширеннаяПодсказка" id="637"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="КировскаяОбласть_ТаблицаВыгрузки" id="433">
+			<Representation>List</Representation>
+			<Footer>true</Footer>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Объект.КировскаяОбласть_ТаблицаВыгрузки</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="КировскаяОбласть_ТаблицаВыгрузкиКонтекстноеМеню" id="434"/>
+			<AutoCommandBar name="КировскаяОбласть_ТаблицаВыгрузкиКоманднаяПанель" id="435"/>
+			<ExtendedTooltip name="КировскаяОбласть_ТаблицаВыгрузкиРасширеннаяПодсказка" id="436"/>
+			<SearchStringAddition name="КировскаяОбласть_ТаблицаВыгрузкиСтрокаПоиска" id="437">
+				<AdditionSource>
+					<Item>КировскаяОбласть_ТаблицаВыгрузки</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="КировскаяОбласть_ТаблицаВыгрузкиСтрокаПоискаКонтекстноеМеню" id="438"/>
+				<ExtendedTooltip name="КировскаяОбласть_ТаблицаВыгрузкиСтрокаПоискаРасширеннаяПодсказка" id="439"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="КировскаяОбласть_ТаблицаВыгрузкиСостояниеПросмотра" id="440">
+				<AdditionSource>
+					<Item>КировскаяОбласть_ТаблицаВыгрузки</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="КировскаяОбласть_ТаблицаВыгрузкиСостояниеПросмотраКонтекстноеМеню" id="441"/>
+				<ExtendedTooltip name="КировскаяОбласть_ТаблицаВыгрузкиСостояниеПросмотраРасширеннаяПодсказка" id="442"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="КировскаяОбласть_ТаблицаВыгрузкиУправлениеПоиском" id="443">
+				<AdditionSource>
+					<Item>КировскаяОбласть_ТаблицаВыгрузки</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="КировскаяОбласть_ТаблицаВыгрузкиУправлениеПоискомКонтекстноеМеню" id="444"/>
+				<ExtendedTooltip name="КировскаяОбласть_ТаблицаВыгрузкиУправлениеПоискомРасширеннаяПодсказка" id="445"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="КировскаяОбласть_ТаблицаВыгрузкиНомерСтроки" id="536">
+					<DataPath>Объект.КировскаяОбласть_ТаблицаВыгрузки.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КировскаяОбласть_ТаблицаВыгрузкиНомерСтрокиКонтекстноеМеню" id="537"/>
+					<ExtendedTooltip name="КировскаяОбласть_ТаблицаВыгрузкиНомерСтрокиРасширеннаяПодсказка" id="538"/>
+				</LabelField>
+				<InputField name="КировскаяОбласть_ТаблицаВыгрузкиЛицевойСчет" id="539">
+					<DataPath>Объект.КировскаяОбласть_ТаблицаВыгрузки.LS</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КировскаяОбласть_ТаблицаВыгрузкиЛицевойСчетКонтекстноеМеню" id="540"/>
+					<ExtendedTooltip name="КировскаяОбласть_ТаблицаВыгрузкиЛицевойСчетРасширеннаяПодсказка" id="541"/>
+				</InputField>
+				<InputField name="КировскаяОбласть_ТаблицаВыгрузкиПроживающий" id="542">
+					<DataPath>Объект.КировскаяОбласть_ТаблицаВыгрузки.Проживающий</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КировскаяОбласть_ТаблицаВыгрузкиПроживающийКонтекстноеМеню" id="543"/>
+					<ExtendedTooltip name="КировскаяОбласть_ТаблицаВыгрузкиПроживающийРасширеннаяПодсказка" id="544"/>
+				</InputField>
+				<InputField name="КировскаяОбласть_ТаблицаВыгрузкиЛьготнаяКатегория" id="545">
+					<DataPath>Объект.КировскаяОбласть_ТаблицаВыгрузки.ЛьготнаяКатегория</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КировскаяОбласть_ТаблицаВыгрузкиЛьготнаяКатегорияКонтекстноеМеню" id="546"/>
+					<ExtendedTooltip name="КировскаяОбласть_ТаблицаВыгрузкиЛьготнаяКатегорияРасширеннаяПодсказка" id="547"/>
+				</InputField>
+				<InputField name="КировскаяОбласть_ТаблицаВыгрузкиУслуга" id="548">
+					<DataPath>Объект.КировскаяОбласть_ТаблицаВыгрузки.Услуга</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КировскаяОбласть_ТаблицаВыгрузкиУслугаКонтекстноеМеню" id="549"/>
+					<ExtendedTooltip name="КировскаяОбласть_ТаблицаВыгрузкиУслугаРасширеннаяПодсказка" id="550"/>
+				</InputField>
+				<InputField name="КировскаяОбласть_ТаблицаВыгрузкиFAMIL" id="551">
+					<DataPath>Объект.КировскаяОбласть_ТаблицаВыгрузки.FAMIL</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КировскаяОбласть_ТаблицаВыгрузкиFAMILКонтекстноеМеню" id="552"/>
+					<ExtendedTooltip name="КировскаяОбласть_ТаблицаВыгрузкиFAMILРасширеннаяПодсказка" id="553"/>
+				</InputField>
+				<InputField name="КировскаяОбласть_ТаблицаВыгрузкиIMJA" id="554">
+					<DataPath>Объект.КировскаяОбласть_ТаблицаВыгрузки.IMJA</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КировскаяОбласть_ТаблицаВыгрузкиIMJAКонтекстноеМеню" id="555"/>
+					<ExtendedTooltip name="КировскаяОбласть_ТаблицаВыгрузкиIMJAРасширеннаяПодсказка" id="556"/>
+				</InputField>
+				<InputField name="КировскаяОбласть_ТаблицаВыгрузкиOTCH" id="557">
+					<DataPath>Объект.КировскаяОбласть_ТаблицаВыгрузки.OTCH</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КировскаяОбласть_ТаблицаВыгрузкиOTCHКонтекстноеМеню" id="558"/>
+					<ExtendedTooltip name="КировскаяОбласть_ТаблицаВыгрузкиOTCHРасширеннаяПодсказка" id="559"/>
+				</InputField>
+				<InputField name="КировскаяОбласть_ТаблицаВыгрузкиDROG" id="560">
+					<DataPath>Объект.КировскаяОбласть_ТаблицаВыгрузки.DROG</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КировскаяОбласть_ТаблицаВыгрузкиDROGКонтекстноеМеню" id="561"/>
+					<ExtendedTooltip name="КировскаяОбласть_ТаблицаВыгрузкиDROGРасширеннаяПодсказка" id="562"/>
+				</InputField>
+				<InputField name="КировскаяОбласть_ТаблицаВыгрузкиNNASP" id="563">
+					<DataPath>Объект.КировскаяОбласть_ТаблицаВыгрузки.NNASP</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КировскаяОбласть_ТаблицаВыгрузкиNNASPКонтекстноеМеню" id="564"/>
+					<ExtendedTooltip name="КировскаяОбласть_ТаблицаВыгрузкиNNASPРасширеннаяПодсказка" id="565"/>
+				</InputField>
+				<InputField name="КировскаяОбласть_ТаблицаВыгрузкиNYLIC" id="566">
+					<DataPath>Объект.КировскаяОбласть_ТаблицаВыгрузки.NYLIC</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КировскаяОбласть_ТаблицаВыгрузкиNYLICКонтекстноеМеню" id="567"/>
+					<ExtendedTooltip name="КировскаяОбласть_ТаблицаВыгрузкиNYLICРасширеннаяПодсказка" id="568"/>
+				</InputField>
+				<InputField name="КировскаяОбласть_ТаблицаВыгрузкиNDOM" id="569">
+					<DataPath>Объект.КировскаяОбласть_ТаблицаВыгрузки.NDOM</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КировскаяОбласть_ТаблицаВыгрузкиNDOMКонтекстноеМеню" id="570"/>
+					<ExtendedTooltip name="КировскаяОбласть_ТаблицаВыгрузкиNDOMРасширеннаяПодсказка" id="571"/>
+				</InputField>
+				<InputField name="КировскаяОбласть_ТаблицаВыгрузкиNKORP" id="572">
+					<DataPath>Объект.КировскаяОбласть_ТаблицаВыгрузки.NKORP</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КировскаяОбласть_ТаблицаВыгрузкиNKORPКонтекстноеМеню" id="573"/>
+					<ExtendedTooltip name="КировскаяОбласть_ТаблицаВыгрузкиNKORPРасширеннаяПодсказка" id="574"/>
+				</InputField>
+				<InputField name="КировскаяОбласть_ТаблицаВыгрузкиNKW" id="575">
+					<DataPath>Объект.КировскаяОбласть_ТаблицаВыгрузки.NKW</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КировскаяОбласть_ТаблицаВыгрузкиNKWКонтекстноеМеню" id="576"/>
+					<ExtendedTooltip name="КировскаяОбласть_ТаблицаВыгрузкиNKWРасширеннаяПодсказка" id="577"/>
+				</InputField>
+				<InputField name="КировскаяОбласть_ТаблицаВыгрузкиKODU" id="578">
+					<DataPath>Объект.КировскаяОбласть_ТаблицаВыгрузки.KODU</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КировскаяОбласть_ТаблицаВыгрузкиKODUКонтекстноеМеню" id="579"/>
+					<ExtendedTooltip name="КировскаяОбласть_ТаблицаВыгрузкиKODUРасширеннаяПодсказка" id="580"/>
+				</InputField>
+				<InputField name="КировскаяОбласть_ТаблицаВыгрузкиSUML1" id="581">
+					<DataPath>Объект.КировскаяОбласть_ТаблицаВыгрузки.SUML1</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<FooterDataPath>Объект.КировскаяОбласть_ТаблицаВыгрузки.TotalSUML1</FooterDataPath>
+					<ContextMenu name="КировскаяОбласть_ТаблицаВыгрузкиSUML1КонтекстноеМеню" id="582"/>
+					<ExtendedTooltip name="КировскаяОбласть_ТаблицаВыгрузкиSUML1РасширеннаяПодсказка" id="583"/>
+				</InputField>
+				<InputField name="КировскаяОбласть_ТаблицаВыгрузкиSOB" id="584">
+					<DataPath>Объект.КировскаяОбласть_ТаблицаВыгрузки.SOB</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КировскаяОбласть_ТаблицаВыгрузкиSOBКонтекстноеМеню" id="585"/>
+					<ExtendedTooltip name="КировскаяОбласть_ТаблицаВыгрузкиSOBРасширеннаяПодсказка" id="586"/>
+				</InputField>
+				<InputField name="КировскаяОбласть_ТаблицаВыгрузкиKOLZ" id="587">
+					<DataPath>Объект.КировскаяОбласть_ТаблицаВыгрузки.KOLZ</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КировскаяОбласть_ТаблицаВыгрузкиKOLZКонтекстноеМеню" id="588"/>
+					<ExtendedTooltip name="КировскаяОбласть_ТаблицаВыгрузкиKOLZРасширеннаяПодсказка" id="589"/>
+				</InputField>
+				<InputField name="КировскаяОбласть_ТаблицаВыгрузкиZADOLJ" id="590">
+					<DataPath>Объект.КировскаяОбласть_ТаблицаВыгрузки.ZADOLJ</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КировскаяОбласть_ТаблицаВыгрузкиZADOLJКонтекстноеМеню" id="591"/>
+					<ExtendedTooltip name="КировскаяОбласть_ТаблицаВыгрузкиZADOLJРасширеннаяПодсказка" id="592"/>
+				</InputField>
+				<InputField name="КировскаяОбласть_ТаблицаВыгрузкиZADOLJ_C" id="593">
+					<DataPath>Объект.КировскаяОбласть_ТаблицаВыгрузки.ZADOLJ_C</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КировскаяОбласть_ТаблицаВыгрузкиZADOLJ_CКонтекстноеМеню" id="594"/>
+					<ExtendedTooltip name="КировскаяОбласть_ТаблицаВыгрузкиZADOLJ_CРасширеннаяПодсказка" id="595"/>
+				</InputField>
+				<InputField name="КировскаяОбласть_ТаблицаВыгрузкиZADOLJ_PO" id="596">
+					<DataPath>Объект.КировскаяОбласть_ТаблицаВыгрузки.ZADOLJ_PO</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КировскаяОбласть_ТаблицаВыгрузкиZADOLJ_POКонтекстноеМеню" id="597"/>
+					<ExtendedTooltip name="КировскаяОбласть_ТаблицаВыгрузкиZADOLJ_POРасширеннаяПодсказка" id="598"/>
+				</InputField>
+				<InputField name="КировскаяОбласть_ТаблицаВыгрузкиAKT" id="599">
+					<DataPath>Объект.КировскаяОбласть_ТаблицаВыгрузки.AKT</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КировскаяОбласть_ТаблицаВыгрузкиAKTКонтекстноеМеню" id="600"/>
+					<ExtendedTooltip name="КировскаяОбласть_ТаблицаВыгрузкиAKTРасширеннаяПодсказка" id="601"/>
+				</InputField>
+				<InputField name="КировскаяОбласть_ТаблицаВыгрузкиOGRN" id="602">
+					<DataPath>Объект.КировскаяОбласть_ТаблицаВыгрузки.OGRN</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КировскаяОбласть_ТаблицаВыгрузкиOGRNКонтекстноеМеню" id="603"/>
+					<ExtendedTooltip name="КировскаяОбласть_ТаблицаВыгрузкиOGRNРасширеннаяПодсказка" id="604"/>
+				</InputField>
+				<InputField name="КировскаяОбласть_ТаблицаВыгрузкиSHORTNAME" id="605">
+					<DataPath>Объект.КировскаяОбласть_ТаблицаВыгрузки.SHORTNAME</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КировскаяОбласть_ТаблицаВыгрузкиSHORTNAMEКонтекстноеМеню" id="606"/>
+					<ExtendedTooltip name="КировскаяОбласть_ТаблицаВыгрузкиSHORTNAMEРасширеннаяПодсказка" id="607"/>
+				</InputField>
+				<InputField name="КировскаяОбласть_ТаблицаВыгрузкиDATUPR_C" id="608">
+					<DataPath>Объект.КировскаяОбласть_ТаблицаВыгрузки.DATUPR_C</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КировскаяОбласть_ТаблицаВыгрузкиDATUPR_CКонтекстноеМеню" id="609"/>
+					<ExtendedTooltip name="КировскаяОбласть_ТаблицаВыгрузкиDATUPR_CРасширеннаяПодсказка" id="610"/>
+				</InputField>
+				<InputField name="КировскаяОбласть_ТаблицаВыгрузкиDATUPR_PO" id="611">
+					<DataPath>Объект.КировскаяОбласть_ТаблицаВыгрузки.DATUPR_PO</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КировскаяОбласть_ТаблицаВыгрузкиDATUPR_POКонтекстноеМеню" id="612"/>
+					<ExtendedTooltip name="КировскаяОбласть_ТаблицаВыгрузкиDATUPR_POРасширеннаяПодсказка" id="613"/>
+				</InputField>
+				<InputField name="КировскаяОбласть_ТаблицаВыгрузкиSUM_ZADOLJ" id="614">
+					<DataPath>Объект.КировскаяОбласть_ТаблицаВыгрузки.SUM_ZADOLJ</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КировскаяОбласть_ТаблицаВыгрузкиSUM_ZADOLJКонтекстноеМеню" id="615"/>
+					<ExtendedTooltip name="КировскаяОбласть_ТаблицаВыгрузкиSUM_ZADOLJРасширеннаяПодсказка" id="616"/>
+				</InputField>
+				<InputField name="КировскаяОбласть_ТаблицаВыгрузкиKOD_USLUGI" id="617">
+					<DataPath>Объект.КировскаяОбласть_ТаблицаВыгрузки.KOD_USLUGI</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КировскаяОбласть_ТаблицаВыгрузкиKOD_USLUGIКонтекстноеМеню" id="618"/>
+					<ExtendedTooltip name="КировскаяОбласть_ТаблицаВыгрузкиKOD_USLUGIРасширеннаяПодсказка" id="619"/>
+				</InputField>
+				<InputField name="КировскаяОбласть_ТаблицаВыгрузкиFIAS_ID" id="620">
+					<DataPath>Объект.КировскаяОбласть_ТаблицаВыгрузки.FIAS_ID</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КировскаяОбласть_ТаблицаВыгрузкиFIAS_IDКонтекстноеМеню" id="621"/>
+					<ExtendedTooltip name="КировскаяОбласть_ТаблицаВыгрузкиFIAS_IDРасширеннаяПодсказка" id="622"/>
+				</InputField>
+				<InputField name="КировскаяОбласть_ТаблицаВыгрузкиLGMYLIST" id="623">
+					<DataPath>Объект.КировскаяОбласть_ТаблицаВыгрузки.LGMYLIST</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КировскаяОбласть_ТаблицаВыгрузкиLGMYLISTКонтекстноеМеню" id="624"/>
+					<ExtendedTooltip name="КировскаяОбласть_ТаблицаВыгрузкиLGMYLISTРасширеннаяПодсказка" id="625"/>
+				</InputField>
+				<InputField name="КировскаяОбласть_ТаблицаВыгрузкиNEP_MES_C" id="626">
+					<DataPath>Объект.КировскаяОбласть_ТаблицаВыгрузки.NEP_MES_C</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КировскаяОбласть_ТаблицаВыгрузкиNEP_MES_CКонтекстноеМеню" id="627"/>
+					<ExtendedTooltip name="КировскаяОбласть_ТаблицаВыгрузкиNEP_MES_CРасширеннаяПодсказка" id="628"/>
+				</InputField>
+				<InputField name="КировскаяОбласть_ТаблицаВыгрузкиNEP_MES_PO" id="629">
+					<DataPath>Объект.КировскаяОбласть_ТаблицаВыгрузки.NEP_MES_PO</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КировскаяОбласть_ТаблицаВыгрузкиNEP_MES_POКонтекстноеМеню" id="630"/>
+					<ExtendedTooltip name="КировскаяОбласть_ТаблицаВыгрузкиNEP_MES_POРасширеннаяПодсказка" id="631"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.УПЖКХ_ВыгрузкиВОрганыСоцЗащиты</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ПериодСтрокой" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период строкой</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>15</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<View>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.ДобавлениеИзменениеДанныхФизическихЛицЗарплатаКадры">true</xr:Value>
+				<xr:Value name="Role.ПолныеПрава">true</xr:Value>
+				<xr:Value name="Role.ЧтениеДанныхФизическихЛицЗарплатаКадры">true</xr:Value>
+			</View>
+			<Edit>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.ДобавлениеИзменениеДанныхФизическихЛицЗарплатаКадры">true</xr:Value>
+				<xr:Value name="Role.ПолныеПрава">true</xr:Value>
+				<xr:Value name="Role.ЧтениеДанныхФизическихЛицЗарплатаКадры">true</xr:Value>
+			</Edit>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="КаталогВыгрузки" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Каталог выгрузки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>512</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="КодировкаФайла" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кодировка файла</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВидБюджета" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид бюджета</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>11</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Услуги" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Услуги</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>35</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаНастройка" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Настройка</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаНастройка</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаЗаполнить" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ЗаполнитьФорму</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаЗаполнить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаВыгрузить" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ВыгрузитьФайлСертификата</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаВыгрузить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

@@ -1,0 +1,569 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Республика Бурятия: Выгрузка в ОСЗН</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаПанельКоманд" id="130">
+			<Height>1</Height>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПанельКомандРасширеннаяПодсказка" id="131"/>
+			<ChildItems>
+				<Button name="СправочнаяИнформация" id="134">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<DefaultItem>true</DefaultItem>
+					<Height>1</Height>
+					<CommandName>Form.Command.КомандаСправочнаяИнформация</CommandName>
+					<BackColor>#FFFF99</BackColor>
+					<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+					<ExtendedTooltip name="СправочнаяИнформацияРасширеннаяПодсказка" id="135"/>
+				</Button>
+				<Button name="Настройка" id="126">
+					<Type>UsualButton</Type>
+					<DefaultItem>true</DefaultItem>
+					<CommandName>Form.Command.КомандаНастройка</CommandName>
+					<BackColor>#FFFF99</BackColor>
+					<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройка</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="НастройкаРасширеннаяПодсказка" id="127"/>
+				</Button>
+				<CommandBar name="ГруппаЕще" id="136">
+					<ExtendedTooltip name="ГруппаЕщеРасширеннаяПодсказка" id="137"/>
+					<ChildItems>
+						<Button name="ИзменитьФорму" id="138">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+							<ExtendedTooltip name="ИзменитьФормуРасширеннаяПодсказка" id="139"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаШапка" id="1">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаЛевая" id="3">
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаЛеваяРасширеннаяПодсказка" id="4"/>
+					<ChildItems>
+						<InputField name="ПериодСтрокой" id="5">
+							<DataPath>ПериодСтрокой</DataPath>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сведения об инвалидности действуют с</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ChoiceButton>true</ChoiceButton>
+							<SpinButton>true</SpinButton>
+							<ChoiceButtonPicture>
+								<xr:Ref>StdPicture.InputFieldCalendar</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</ChoiceButtonPicture>
+							<ContextMenu name="ПериодСтрокойКонтекстноеМеню" id="6"/>
+							<ExtendedTooltip name="ПериодСтрокойExtendedTooltip" id="7"/>
+							<Events>
+								<Event name="OnChange">ПериодСтрокойПриИзменении</Event>
+								<Event name="AutoComplete">ПериодСтрокойАвтоПодбор</Event>
+								<Event name="StartChoice">ПериодСтрокойНачалоВыбора</Event>
+								<Event name="Tuning">ПериодСтрокойРегулирование</Event>
+								<Event name="TextEditEnd">ПериодСтрокойОкончаниеВводаТекста</Event>
+							</Events>
+						</InputField>
+						<InputField name="Организация" id="13">
+							<DataPath>Объект.Организация</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Организация</v8:content>
+								</v8:item>
+							</Title>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<AutoChoiceIncomplete>true</AutoChoiceIncomplete>
+							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="15"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПравая" id="11">
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПраваяРасширеннаяПодсказка" id="12"/>
+					<ChildItems>
+						<InputField name="КодОрганизации" id="19">
+							<DataPath>Объект.КодОрганизации</DataPath>
+							<EditFormat>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧН=0; ЧГ=0</v8:content>
+								</v8:item>
+							</EditFormat>
+							<ContextMenu name="КодОрганизацииКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="КодОрганизацииРасширеннаяПодсказка" id="21"/>
+						</InputField>
+						<InputField name="ВыводЛицевыхСчетов" id="32">
+							<DataPath>Объект.ВыводЛицевыхСчетов</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<ListChoiceMode>true</ListChoiceMode>
+							<ChooseType>false</ChooseType>
+							<TextEdit>false</TextEdit>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>идентификатор</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">Идентификатор</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>код</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">Код</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>наименование</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">Наименование</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>наименование (только цифры)</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">ЦифрыНаименования</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="ВыводЛицевыхСчетовКонтекстноеМеню" id="33"/>
+							<ExtendedTooltip name="ВыводЛицевыхСчетовРасширеннаяПодсказка" id="34"/>
+							<Events>
+								<Event name="Clearing">ВыводЛицевыхСчетовОчистка</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="РеспубликаБурятия_ТаблицаВыгрузки" id="35">
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Объект.РеспубликаБурятия_ТаблицаВыгрузки</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="РеспубликаБурятия_ТаблицаВыгрузкиКонтекстноеМеню" id="36"/>
+			<AutoCommandBar name="РеспубликаБурятия_ТаблицаВыгрузкиКоманднаяПанель" id="37">
+				<ChildItems>
+					<Button name="Заполнить" id="128">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.КомандаЗаполнить</CommandName>
+						<ExtendedTooltip name="ЗаполнитьРасширеннаяПодсказка" id="129"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="РеспубликаБурятия_ТаблицаВыгрузкиРасширеннаяПодсказка" id="38"/>
+			<SearchStringAddition name="РеспубликаБурятия_ТаблицаВыгрузкиСтрокаПоиска" id="39">
+				<AdditionSource>
+					<Item>РеспубликаБурятия_ТаблицаВыгрузки</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="РеспубликаБурятия_ТаблицаВыгрузкиСтрокаПоискаКонтекстноеМеню" id="40"/>
+				<ExtendedTooltip name="РеспубликаБурятия_ТаблицаВыгрузкиСтрокаПоискаРасширеннаяПодсказка" id="41"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="РеспубликаБурятия_ТаблицаВыгрузкиСостояниеПросмотра" id="42">
+				<AdditionSource>
+					<Item>РеспубликаБурятия_ТаблицаВыгрузки</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="РеспубликаБурятия_ТаблицаВыгрузкиСостояниеПросмотраКонтекстноеМеню" id="43"/>
+				<ExtendedTooltip name="РеспубликаБурятия_ТаблицаВыгрузкиСостояниеПросмотраРасширеннаяПодсказка" id="44"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="РеспубликаБурятия_ТаблицаВыгрузкиУправлениеПоиском" id="45">
+				<AdditionSource>
+					<Item>РеспубликаБурятия_ТаблицаВыгрузки</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="РеспубликаБурятия_ТаблицаВыгрузкиУправлениеПоискомКонтекстноеМеню" id="46"/>
+				<ExtendedTooltip name="РеспубликаБурятия_ТаблицаВыгрузкиУправлениеПоискомРасширеннаяПодсказка" id="47"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="РеспубликаБурятия_ТаблицаВыгрузкиНомерСтроки" id="48">
+					<DataPath>Объект.РеспубликаБурятия_ТаблицаВыгрузки.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<FixingInTable>Left</FixingInTable>
+					<ContextMenu name="РеспубликаБурятия_ТаблицаВыгрузкиНомерСтрокиКонтекстноеМеню" id="49"/>
+					<ExtendedTooltip name="РеспубликаБурятия_ТаблицаВыгрузкиНомерСтрокиРасширеннаяПодсказка" id="50"/>
+				</LabelField>
+				<InputField name="РеспубликаБурятия_ТаблицаВыгрузкиЛицевойСчет" id="51">
+					<DataPath>Объект.РеспубликаБурятия_ТаблицаВыгрузки.ЛицевойСчет</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<FixingInTable>Left</FixingInTable>
+					<ContextMenu name="РеспубликаБурятия_ТаблицаВыгрузкиЛицевойСчетКонтекстноеМеню" id="52"/>
+					<ExtendedTooltip name="РеспубликаБурятия_ТаблицаВыгрузкиЛицевойСчетРасширеннаяПодсказка" id="53"/>
+				</InputField>
+				<InputField name="РеспубликаБурятия_ТаблицаВыгрузкиNJ" id="54">
+					<DataPath>Объект.РеспубликаБурятия_ТаблицаВыгрузки.NJ</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РеспубликаБурятия_ТаблицаВыгрузкиNJКонтекстноеМеню" id="55"/>
+					<ExtendedTooltip name="РеспубликаБурятия_ТаблицаВыгрузкиNJРасширеннаяПодсказка" id="56"/>
+				</InputField>
+				<InputField name="РеспубликаБурятия_ТаблицаВыгрузкиLS" id="57">
+					<DataPath>Объект.РеспубликаБурятия_ТаблицаВыгрузки.LS</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РеспубликаБурятия_ТаблицаВыгрузкиLSКонтекстноеМеню" id="58"/>
+					<ExtendedTooltip name="РеспубликаБурятия_ТаблицаВыгрузкиLSРасширеннаяПодсказка" id="59"/>
+				</InputField>
+				<InputField name="РеспубликаБурятия_ТаблицаВыгрузкиFAM" id="60">
+					<DataPath>Объект.РеспубликаБурятия_ТаблицаВыгрузки.FAM</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РеспубликаБурятия_ТаблицаВыгрузкиFAMКонтекстноеМеню" id="61"/>
+					<ExtendedTooltip name="РеспубликаБурятия_ТаблицаВыгрузкиFAMРасширеннаяПодсказка" id="62"/>
+				</InputField>
+				<InputField name="РеспубликаБурятия_ТаблицаВыгрузкиIMIA" id="63">
+					<DataPath>Объект.РеспубликаБурятия_ТаблицаВыгрузки.IMIA</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РеспубликаБурятия_ТаблицаВыгрузкиIMIAКонтекстноеМеню" id="64"/>
+					<ExtendedTooltip name="РеспубликаБурятия_ТаблицаВыгрузкиIMIAРасширеннаяПодсказка" id="65"/>
+				</InputField>
+				<InputField name="РеспубликаБурятия_ТаблицаВыгрузкиOTCH" id="66">
+					<DataPath>Объект.РеспубликаБурятия_ТаблицаВыгрузки.OTCH</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РеспубликаБурятия_ТаблицаВыгрузкиOTCHКонтекстноеМеню" id="67"/>
+					<ExtendedTooltip name="РеспубликаБурятия_ТаблицаВыгрузкиOTCHРасширеннаяПодсказка" id="68"/>
+				</InputField>
+				<InputField name="РеспубликаБурятия_ТаблицаВыгрузкиDATNACH" id="69">
+					<DataPath>Объект.РеспубликаБурятия_ТаблицаВыгрузки.DATNACH</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РеспубликаБурятия_ТаблицаВыгрузкиDATNACHКонтекстноеМеню" id="70"/>
+					<ExtendedTooltip name="РеспубликаБурятия_ТаблицаВыгрузкиDATNACHРасширеннаяПодсказка" id="71"/>
+				</InputField>
+				<InputField name="РеспубликаБурятия_ТаблицаВыгрузкиSOSTSEM" id="72">
+					<DataPath>Объект.РеспубликаБурятия_ТаблицаВыгрузки.SOSTSEM</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РеспубликаБурятия_ТаблицаВыгрузкиSOSTSEMКонтекстноеМеню" id="73"/>
+					<ExtendedTooltip name="РеспубликаБурятия_ТаблицаВыгрузкиSOSTSEMРасширеннаяПодсказка" id="74"/>
+				</InputField>
+				<InputField name="РеспубликаБурятия_ТаблицаВыгрузкиZHILPLOS" id="75">
+					<DataPath>Объект.РеспубликаБурятия_ТаблицаВыгрузки.ZHILPLOS</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РеспубликаБурятия_ТаблицаВыгрузкиZHILPLOSКонтекстноеМеню" id="76"/>
+					<ExtendedTooltip name="РеспубликаБурятия_ТаблицаВыгрузкиZHILPLOSРасширеннаяПодсказка" id="77"/>
+				</InputField>
+				<InputField name="РеспубликаБурятия_ТаблицаВыгрузкиTAR4" id="78">
+					<DataPath>Объект.РеспубликаБурятия_ТаблицаВыгрузки.TAR4</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РеспубликаБурятия_ТаблицаВыгрузкиTAR4КонтекстноеМеню" id="79"/>
+					<ExtendedTooltip name="РеспубликаБурятия_ТаблицаВыгрузкиTAR4РасширеннаяПодсказка" id="80"/>
+				</InputField>
+				<InputField name="РеспубликаБурятия_ТаблицаВыгрузкиPOTR4" id="81">
+					<DataPath>Объект.РеспубликаБурятия_ТаблицаВыгрузки.POTR4</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РеспубликаБурятия_ТаблицаВыгрузкиPOTR4КонтекстноеМеню" id="82"/>
+					<ExtendedTooltip name="РеспубликаБурятия_ТаблицаВыгрузкиPOTR4РасширеннаяПодсказка" id="83"/>
+				</InputField>
+				<InputField name="РеспубликаБурятия_ТаблицаВыгрузкиSUM4" id="84">
+					<DataPath>Объект.РеспубликаБурятия_ТаблицаВыгрузки.SUM4</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РеспубликаБурятия_ТаблицаВыгрузкиSUM4КонтекстноеМеню" id="85"/>
+					<ExtendedTooltip name="РеспубликаБурятия_ТаблицаВыгрузкиSUM4РасширеннаяПодсказка" id="86"/>
+				</InputField>
+				<InputField name="РеспубликаБурятия_ТаблицаВыгрузкиOPL4" id="87">
+					<DataPath>Объект.РеспубликаБурятия_ТаблицаВыгрузки.OPL4</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РеспубликаБурятия_ТаблицаВыгрузкиOPL4КонтекстноеМеню" id="88"/>
+					<ExtendedTooltip name="РеспубликаБурятия_ТаблицаВыгрузкиOPL4РасширеннаяПодсказка" id="89"/>
+				</InputField>
+				<InputField name="РеспубликаБурятия_ТаблицаВыгрузкиTAR5" id="90">
+					<DataPath>Объект.РеспубликаБурятия_ТаблицаВыгрузки.TAR5</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РеспубликаБурятия_ТаблицаВыгрузкиTAR5КонтекстноеМеню" id="91"/>
+					<ExtendedTooltip name="РеспубликаБурятия_ТаблицаВыгрузкиTAR5РасширеннаяПодсказка" id="92"/>
+				</InputField>
+				<InputField name="РеспубликаБурятия_ТаблицаВыгрузкиPOTR5" id="93">
+					<DataPath>Объект.РеспубликаБурятия_ТаблицаВыгрузки.POTR5</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РеспубликаБурятия_ТаблицаВыгрузкиPOTR5КонтекстноеМеню" id="94"/>
+					<ExtendedTooltip name="РеспубликаБурятия_ТаблицаВыгрузкиPOTR5РасширеннаяПодсказка" id="95"/>
+				</InputField>
+				<InputField name="РеспубликаБурятия_ТаблицаВыгрузкиSUM5" id="96">
+					<DataPath>Объект.РеспубликаБурятия_ТаблицаВыгрузки.SUM5</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РеспубликаБурятия_ТаблицаВыгрузкиSUM5КонтекстноеМеню" id="97"/>
+					<ExtendedTooltip name="РеспубликаБурятия_ТаблицаВыгрузкиSUM5РасширеннаяПодсказка" id="98"/>
+				</InputField>
+				<InputField name="РеспубликаБурятия_ТаблицаВыгрузкиOPL5" id="99">
+					<DataPath>Объект.РеспубликаБурятия_ТаблицаВыгрузки.OPL5</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РеспубликаБурятия_ТаблицаВыгрузкиOPL5КонтекстноеМеню" id="100"/>
+					<ExtendedTooltip name="РеспубликаБурятия_ТаблицаВыгрузкиOPL5РасширеннаяПодсказка" id="101"/>
+				</InputField>
+				<InputField name="РеспубликаБурятия_ТаблицаВыгрузкиTAR6" id="102">
+					<DataPath>Объект.РеспубликаБурятия_ТаблицаВыгрузки.TAR6</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РеспубликаБурятия_ТаблицаВыгрузкиTAR6КонтекстноеМеню" id="103"/>
+					<ExtendedTooltip name="РеспубликаБурятия_ТаблицаВыгрузкиTAR6РасширеннаяПодсказка" id="104"/>
+				</InputField>
+				<InputField name="РеспубликаБурятия_ТаблицаВыгрузкиPOTR6" id="105">
+					<DataPath>Объект.РеспубликаБурятия_ТаблицаВыгрузки.POTR6</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РеспубликаБурятия_ТаблицаВыгрузкиPOTR6КонтекстноеМеню" id="106"/>
+					<ExtendedTooltip name="РеспубликаБурятия_ТаблицаВыгрузкиPOTR6РасширеннаяПодсказка" id="107"/>
+				</InputField>
+				<InputField name="РеспубликаБурятия_ТаблицаВыгрузкиSUM6" id="108">
+					<DataPath>Объект.РеспубликаБурятия_ТаблицаВыгрузки.SUM6</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РеспубликаБурятия_ТаблицаВыгрузкиSUM6КонтекстноеМеню" id="109"/>
+					<ExtendedTooltip name="РеспубликаБурятия_ТаблицаВыгрузкиSUM6РасширеннаяПодсказка" id="110"/>
+				</InputField>
+				<InputField name="РеспубликаБурятия_ТаблицаВыгрузкиOPL6" id="111">
+					<DataPath>Объект.РеспубликаБурятия_ТаблицаВыгрузки.OPL6</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РеспубликаБурятия_ТаблицаВыгрузкиOPL6КонтекстноеМеню" id="112"/>
+					<ExtendedTooltip name="РеспубликаБурятия_ТаблицаВыгрузкиOPL6РасширеннаяПодсказка" id="113"/>
+				</InputField>
+				<InputField name="РеспубликаБурятия_ТаблицаВыгрузкиTAR9" id="114">
+					<DataPath>Объект.РеспубликаБурятия_ТаблицаВыгрузки.TAR9</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РеспубликаБурятия_ТаблицаВыгрузкиTAR9КонтекстноеМеню" id="115"/>
+					<ExtendedTooltip name="РеспубликаБурятия_ТаблицаВыгрузкиTAR9РасширеннаяПодсказка" id="116"/>
+				</InputField>
+				<InputField name="РеспубликаБурятия_ТаблицаВыгрузкиPOTR9" id="117">
+					<DataPath>Объект.РеспубликаБурятия_ТаблицаВыгрузки.POTR9</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РеспубликаБурятия_ТаблицаВыгрузкиPOTR9КонтекстноеМеню" id="118"/>
+					<ExtendedTooltip name="РеспубликаБурятия_ТаблицаВыгрузкиPOTR9РасширеннаяПодсказка" id="119"/>
+				</InputField>
+				<InputField name="РеспубликаБурятия_ТаблицаВыгрузкиSUM9" id="120">
+					<DataPath>Объект.РеспубликаБурятия_ТаблицаВыгрузки.SUM9</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РеспубликаБурятия_ТаблицаВыгрузкиSUM9КонтекстноеМеню" id="121"/>
+					<ExtendedTooltip name="РеспубликаБурятия_ТаблицаВыгрузкиSUM9РасширеннаяПодсказка" id="122"/>
+				</InputField>
+				<InputField name="РеспубликаБурятия_ТаблицаВыгрузкиOPL9" id="123">
+					<DataPath>Объект.РеспубликаБурятия_ТаблицаВыгрузки.OPL9</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РеспубликаБурятия_ТаблицаВыгрузкиOPL9КонтекстноеМеню" id="124"/>
+					<ExtendedTooltip name="РеспубликаБурятия_ТаблицаВыгрузкиOPL9РасширеннаяПодсказка" id="125"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<UsualGroup name="ГруппаФайлВыгрузки" id="22">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаФайлВыгрузкиРасширеннаяПодсказка" id="23"/>
+			<ChildItems>
+				<InputField name="ИмяКаталогаВыгрузки" id="16">
+					<DataPath>Объект.ИмяКаталогаВыгрузки</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Каталог выгрузки</v8:content>
+						</v8:item>
+					</Title>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<ChoiceButton>true</ChoiceButton>
+					<OpenButton>true</OpenButton>
+					<TextEdit>false</TextEdit>
+					<ContextMenu name="ИмяКаталогаВыгрузкиКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ИмяКаталогаВыгрузкиРасширеннаяПодсказка" id="18"/>
+					<Events>
+						<Event name="StartChoice">ИмяКаталогаВыгрузкиНачалоВыбора</Event>
+						<Event name="Opening">ИмяКаталогаВыгрузкиОткрытие</Event>
+					</Events>
+				</InputField>
+				<Button name="Выгрузить" id="30">
+					<Type>UsualButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<CommandName>Form.Command.КомандаВыгрузить</CommandName>
+					<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					<ExtendedTooltip name="ВыгрузитьРасширеннаяПодсказка" id="31"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.УПЖКХ_ВыгрузкиВОрганыСоцЗащиты</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ПериодСтрокой" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>15</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВыводЛицевыхСчетов" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>В поле «LS» выводить</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>20</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаНастройка" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка выгрузки/загрузки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Настройка</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаНастройка</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаВыгрузить" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить в файл</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ВыгрузитьФайлСертификата</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаВыгрузить</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаЗаполнить" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить таблицу выгрузки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ЗаполнитьФорму</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаЗаполнить</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаСправочнаяИнформация" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инструкция</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инструкция по настройке и эксплуатации выгрузки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.FormHelp</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаСправочнаяИнформация</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

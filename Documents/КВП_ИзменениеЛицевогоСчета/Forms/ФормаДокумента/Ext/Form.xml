@@ -1,0 +1,2266 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="86">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ChildItemsWidth>LeftNarrow</ChildItemsWidth>
+			<ShowTitle>false</ShowTitle>
+			<ThroughAlign>Use</ThroughAlign>
+			<ExtendedTooltip name="ГруппаШапкаExtendedTooltip" id="191"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаСлева" id="87">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа слева</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа слева</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ThroughAlign>Use</ThroughAlign>
+					<ExtendedTooltip name="ГруппаСлеваExtendedTooltip" id="192"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаНомерДата" id="88">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Номер дата</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Номер дата</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНомерДатаExtendedTooltip" id="193"/>
+							<ChildItems>
+								<PictureField name="СостояниеДокумента" id="296">
+									<DataPath>СостояниеДокумента</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<Width>2</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<VerticalStretch>false</VerticalStretch>
+									<ValuesPicture>
+										<xr:Ref>CommonPicture.СостоянияДокумента</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</ValuesPicture>
+									<Border width="1">
+										<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+									</Border>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="СостояниеДокументаКонтекстноеМеню" id="297">
+										<Autofill>false</Autofill>
+									</ContextMenu>
+									<ExtendedTooltip name="СостояниеДокументаРасширеннаяПодсказка" id="298"/>
+								</PictureField>
+								<InputField name="Номер" id="89">
+									<DataPath>Объект.Number</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>30</MaxWidth>
+									<ContextMenu name="НомерКонтекстноеМеню" id="90"/>
+									<ExtendedTooltip name="НомерExtendedTooltip" id="194"/>
+								</InputField>
+								<InputField name="Дата" id="91">
+									<DataPath>Объект.Date</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>от</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДатаКонтекстноеМеню" id="92"/>
+									<ExtendedTooltip name="ДатаExtendedTooltip" id="195"/>
+									<Events>
+										<Event name="OnChange">ДатаПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="ЛицевойСчет" id="5">
+							<DataPath>Объект.ЛицевойСчет</DataPath>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Для выбора лицевого счета начните ввод номера лицевого счета или ФИО ответственного собственника</v8:content>
+								</v8:item>
+							</ToolTip>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>60</MaxWidth>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<InputHint>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Начните вводить № счета или ФИО ответственного</v8:content>
+								</v8:item>
+							</InputHint>
+							<ContextMenu name="ЛицевойСчетКонтекстноеМеню" id="6"/>
+							<ExtendedTooltip name="ЛицевойСчетExtendedTooltip" id="196"/>
+							<Events>
+								<Event name="OnChange">ЛицевойСчетПриИзменении</Event>
+							</Events>
+						</InputField>
+						<LabelDecoration name="СсылкаПроверкаЧленовТСЖ" id="307">
+							<Visible>false</Visible>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>60</MaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Не забудьте проверить членство собственников в ТСЖ и отредактировать его при необходимости.</v8:content>
+								</v8:item>
+							</Title>
+							<Hyperlink>true</Hyperlink>
+							<ContextMenu name="СсылкаПроверкаЧленовТСЖКонтекстноеМеню" id="308"/>
+							<ExtendedTooltip name="СсылкаПроверкаЧленовТСЖРасширеннаяПодсказка" id="309"/>
+							<Events>
+								<Event name="Click">СсылкаПроверкаЧленовТСЖНажатие</Event>
+							</Events>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаДопПараметров" id="100">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа доп параметров</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа доп параметров</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ThroughAlign>Use</ThroughAlign>
+							<ExtendedTooltip name="ГруппаДопПараметровExtendedTooltip" id="197"/>
+							<ChildItems>
+								<InputField name="КоличествоПроживающих" id="101">
+									<DataPath>Объект.КоличествоПроживающих</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Проживает</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КоличествоПроживающихКонтекстноеМеню" id="102"/>
+									<ExtendedTooltip name="КоличествоПроживающихExtendedTooltip" id="198"/>
+								</InputField>
+								<InputField name="КоличествоЗарегистрированных" id="103">
+									<DataPath>Объект.КоличествоЗарегистрированных</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Зарегистрировано</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КоличествоЗарегистрированныхКонтекстноеМеню" id="104"/>
+									<ExtendedTooltip name="КоличествоЗарегистрированныхExtendedTooltip" id="199"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаСправа" id="96">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа справа</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа справа</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСправаExtendedTooltip" id="200"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаВидОперации" id="294">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа вид операции</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа вид операции</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<BackColor>style:ФонУправляющегоПоля</BackColor>
+							<ExtendedTooltip name="ГруппаВидОперацииРасширеннаяПодсказка" id="295"/>
+							<ChildItems>
+								<InputField name="ВидОперации" id="187">
+									<DataPath>Объект.ВидОперации</DataPath>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<ListChoiceMode>true</ListChoiceMode>
+									<AutoMarkIncomplete>true</AutoMarkIncomplete>
+									<ChooseType>false</ChooseType>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation/>
+												<Value xsi:type="xr:DesignTimeRef">Enum.УПЖКХ_ВидыОперацийИзмененияЛицевыхСчетов.EnumValue.ИзменениеДанныхОЖильцах</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation/>
+												<Value xsi:type="xr:DesignTimeRef">Enum.УПЖКХ_ВидыОперацийИзмененияЛицевыхСчетов.EnumValue.ИзменениеОтветственногоСобственника</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation/>
+												<Value xsi:type="xr:DesignTimeRef">Enum.УПЖКХ_ВидыОперацийИзмененияЛицевыхСчетов.EnumValue.ПродажаИПрочиеИзменения</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="ВидОперацииКонтекстноеМеню" id="188"/>
+									<ExtendedTooltip name="ВидОперацииExtendedTooltip" id="201"/>
+									<Events>
+										<Event name="OnChange">ВидОперацииПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="ВидИзменения" id="19">
+							<DataPath>Объект.ВидИзменения</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<ListChoiceMode>true</ListChoiceMode>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xr:DesignTimeRef">Enum.УПЖКХ_ВидыОперацийИзменениеДанныхОЖильцах.EnumValue.Регистрация</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xr:DesignTimeRef">Enum.УПЖКХ_ВидыОперацийИзменениеДанныхОЖильцах.EnumValue.СнятиеСРегистрации</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xr:DesignTimeRef">Enum.УПЖКХ_ВидыОперацийИзменениеДанныхОЖильцах.EnumValue.Присутствие</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xr:DesignTimeRef">Enum.УПЖКХ_ВидыОперацийИзменениеДанныхОЖильцах.EnumValue.Отсутствие</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="ВидИзмененияКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="ВидИзмененияExtendedTooltip" id="202"/>
+							<Events>
+								<Event name="OnChange">ВидИзмененияПриИзменении</Event>
+								<Event name="StartChoice">ВидИзмененияНачалоВыбора</Event>
+								<Event name="ChoiceProcessing">ВидИзмененияОбработкаВыбора</Event>
+							</Events>
+						</InputField>
+						<UsualGroup name="ГруппаУказыватьПроживающих" id="299">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа указывать проживающих</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа указывать проживающих</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаУказыватьПроживающихРасширеннаяПодсказка" id="300"/>
+							<ChildItems>
+								<CheckBoxField name="УказатьПроживающих" id="98">
+									<DataPath>УказатьПроживающих</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="УказатьПроживающихКонтекстноеМеню" id="99"/>
+									<ExtendedTooltip name="УказатьПроживающихExtendedTooltip" id="203"/>
+									<Events>
+										<Event name="OnChange">УказатьПроживающихПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<LabelDecoration name="НадписьЗаполнениеСпискаЖильцов" id="105">
+									<Width>1</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<HorizontalStretch>true</HorizontalStretch>
+									<TextColor>style:УПЖКХ_ТекстСправочнойНадписи</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Внимание! Заполнение таблицы жильцов не является обязательным, а введенные в нее данные не изменяют количество жильцов на лицевом счете. При этом изменение количества жильцов производится на дату документа по значениям, введенным в полях «Проживает» и «Зарегистрировано».</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьЗаполнениеСпискаЖильцовКонтекстноеМеню" id="106"/>
+									<ExtendedTooltip name="НадписьЗаполнениеСпискаЖильцовExtendedTooltip" id="204"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="ПанельИзмененияЛС" id="107">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Панель изменения ЛС</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Панель изменения ЛС</v8:content>
+				</v8:item>
+			</ToolTip>
+			<VerticalStretch>true</VerticalStretch>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="ПанельИзмененияЛСExtendedTooltip" id="205"/>
+			<ChildItems>
+				<Page name="ДанныеОЖильцах" id="108">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Данные о жильцах</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Данные о жильцах</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ДанныеОЖильцахExtendedTooltip" id="206"/>
+					<ChildItems>
+						<Table name="Главная" id="39">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.Главная</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ГлавнаяКонтекстноеМеню" id="40"/>
+							<AutoCommandBar name="ГлавнаяКоманднаяПанель" id="41"/>
+							<ExtendedTooltip name="ГлавнаяExtendedTooltip" id="207"/>
+							<SearchStringAddition name="ГлавнаяСтрокаПоиска" id="267">
+								<AdditionSource>
+									<Item>Главная</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ГлавнаяСтрокаПоискаКонтекстноеМеню" id="268"/>
+								<ExtendedTooltip name="ГлавнаяСтрокаПоискаРасширеннаяПодсказка" id="269"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ГлавнаяСостояниеПросмотра" id="270">
+								<AdditionSource>
+									<Item>Главная</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ГлавнаяСостояниеПросмотраКонтекстноеМеню" id="271"/>
+								<ExtendedTooltip name="ГлавнаяСостояниеПросмотраРасширеннаяПодсказка" id="272"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ГлавнаяУправлениеПоиском" id="273">
+								<AdditionSource>
+									<Item>Главная</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ГлавнаяУправлениеПоискомКонтекстноеМеню" id="274"/>
+								<ExtendedTooltip name="ГлавнаяУправлениеПоискомРасширеннаяПодсказка" id="275"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ГлавнаяВыбор</Event>
+								<Event name="BeforeAddRow">ГлавнаяПередНачаломДобавления</Event>
+								<Event name="BeforeDeleteRow">ГлавнаяПередУдалением</Event>
+								<Event name="BeforeEditEnd">ГлавнаяПередОкончаниемРедактирования</Event>
+								<Event name="OnActivateRow">ГлавнаяПриАктивизацииСтроки</Event>
+								<Event name="BeforeRowChange">ГлавнаяПередНачаломИзменения</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="ГлавнаяНомерСтроки" id="42">
+									<DataPath>Объект.Главная.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ГлавнаяНомерСтрокиКонтекстноеМеню" id="43"/>
+									<ExtendedTooltip name="ГлавнаяНомерСтрокиExtendedTooltip" id="208"/>
+								</LabelField>
+								<InputField name="ГлавнаяПроживающий" id="44">
+									<DataPath>Объект.Главная.Проживающий</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Жилец</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<CreateButton>false</CreateButton>
+									<ChoiceParameterLinks>
+										<xr:Link>
+											<xr:Name>Отбор.Владелец</xr:Name>
+											<xr:DataPath xsi:type="xs:string">Объект.ЛицевойСчет</xr:DataPath>
+											<xr:ValueChange>DontChange</xr:ValueChange>
+										</xr:Link>
+									</ChoiceParameterLinks>
+									<ContextMenu name="ГлавнаяПроживающийКонтекстноеМеню" id="45"/>
+									<ExtendedTooltip name="ГлавнаяПроживающийExtendedTooltip" id="209"/>
+									<Events>
+										<Event name="OnChange">ГлавнаяПроживающийПриИзменении</Event>
+										<Event name="StartChoice">ГлавнаяПроживающийНачалоВыбора</Event>
+										<Event name="ChoiceProcessing">ГлавнаяПроживающийОбработкаВыбора</Event>
+									</Events>
+								</InputField>
+								<InputField name="ГлавнаяСтепеньРодства" id="64">
+									<DataPath>Объект.Главная.СтепеньРодства</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ГлавнаяСтепеньРодстваКонтекстноеМеню" id="65"/>
+									<ExtendedTooltip name="ГлавнаяСтепеньРодстваExtendedTooltip" id="210"/>
+								</InputField>
+								<CheckBoxField name="ГлавнаяЗарегистрирован" id="50">
+									<DataPath>Объект.Главная.Зарегистрирован</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Зарегистрирован</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ГлавнаяЗарегистрированКонтекстноеМеню" id="51"/>
+									<ExtendedTooltip name="ГлавнаяЗарегистрированРасширеннаяПодсказка" id="211"/>
+								</CheckBoxField>
+								<CheckBoxField name="ГлавнаяПроживает" id="48">
+									<DataPath>Объект.Главная.Проживает</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ГлавнаяПроживаетКонтекстноеМеню" id="49"/>
+									<ExtendedTooltip name="ГлавнаяПроживаетExtendedTooltip" id="212"/>
+								</CheckBoxField>
+								<ColumnGroup name="ДатаРегистрации" id="128">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дата регистрации</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дата регистрации</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ДатаРегистрацииExtendedTooltip" id="213"/>
+									<ChildItems>
+										<InputField name="ГлавнаяДатаРегистрации" id="62">
+											<DataPath>Объект.Главная.ДатаРегистрации</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Дата регистрации / снятия с регистрации</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ГлавнаяДатаРегистрацииКонтекстноеМеню" id="63"/>
+											<ExtendedTooltip name="ГлавнаяДатаРегистрацииExtendedTooltip" id="214"/>
+											<Events>
+												<Event name="OnChange">ПриИзмененииПериодаПроживанияРегистрации</Event>
+											</Events>
+										</InputField>
+										<InputField name="ГлавнаяДатаОтменыИзменения" id="60">
+											<DataPath>Объект.Главная.ДатаОтменыИзменения</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Дата отмены изменения</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ГлавнаяДатаОтменыИзмененияКонтекстноеМеню" id="61"/>
+											<ExtendedTooltip name="ГлавнаяДатаОтменыИзмененияExtendedTooltip" id="215"/>
+											<Events>
+												<Event name="OnChange">ПриИзмененииПериодаПроживанияРегистрации</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<CheckBoxField name="ГлавнаяСобственник" id="46">
+									<DataPath>Объект.Главная.Собственник</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ГлавнаяСобственникКонтекстноеМеню" id="47"/>
+									<ExtendedTooltip name="ГлавнаяСобственникExtendedTooltip" id="216"/>
+									<Events>
+										<Event name="OnChange">ГлавнаяСобственникПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<InputField name="ГлавнаяСведенияОСобственности" id="301">
+									<DataPath>Объект.Главная.СведенияОСобственности</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<CellHyperlink>true</CellHyperlink>
+									<TextColor>style:УПЖКХ_ЦветГиперссылки</TextColor>
+									<ContextMenu name="ГлавнаяСведенияОСобственностиКонтекстноеМеню" id="302"/>
+									<ExtendedTooltip name="ГлавнаяСведенияОСобственностиРасширеннаяПодсказка" id="303"/>
+								</InputField>
+								<InputField name="ГлавнаяДоляСобственностиСтр" id="129">
+									<DataPath>Объект.Главная.ДоляСобственностиСтр</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Доля собственности</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<TextEdit>false</TextEdit>
+									<ContextMenu name="ГлавнаяДоляСобственностиСтрКонтекстноеМеню" id="130"/>
+									<ExtendedTooltip name="ГлавнаяДоляСобственностиСтрExtendedTooltip" id="217"/>
+								</InputField>
+								<CheckBoxField name="ГлавнаяВладелецЕдинственногоЖилья" id="52">
+									<DataPath>Объект.Главная.ВладелецЕдинственногоЖилья</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ГлавнаяВладелецЕдинственногоЖильяКонтекстноеМеню" id="53"/>
+									<ExtendedTooltip name="ГлавнаяВладелецЕдинственногоЖильяExtendedTooltip" id="218"/>
+								</CheckBoxField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаОтветственный" id="110">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ответственный</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ответственный</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаОтветственныйExtendedTooltip" id="226"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаОтветственныйПредыдущиеДанные" id="118">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Предыдущие данные</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа договоры предыдущие данные</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<ExtendedTooltip name="ГруппаОтветственныйПредыдущиеДанныеExtendedTooltip" id="227"/>
+							<ChildItems>
+								<InputField name="ПредОтветственный" id="124">
+									<DataPath>ПредОтветственный</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<OpenButton>true</OpenButton>
+									<ContextMenu name="ПредОтветственныйКонтекстноеМеню" id="125"/>
+									<ExtendedTooltip name="ПредОтветственныйExtendedTooltip" id="228"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаОтветственныйНовыеДанные" id="123">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Новые данные</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа договоры новые данные</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<ExtendedTooltip name="ГруппаОтветственныйНовыеДанныеExtendedTooltip" id="229"/>
+							<ChildItems>
+								<InputField name="ОтветственныйСобственник" id="126">
+									<DataPath>Объект.ОтветственныйСобственник</DataPath>
+									<ClearButton>true</ClearButton>
+									<OpenButton>true</OpenButton>
+									<CreateButton>false</CreateButton>
+									<AutoMarkIncomplete>true</AutoMarkIncomplete>
+									<ChoiceParameterLinks>
+										<xr:Link>
+											<xr:Name>Отбор.Владелец</xr:Name>
+											<xr:DataPath xsi:type="xs:string">Объект.ЛицевойСчет</xr:DataPath>
+											<xr:ValueChange>Clear</xr:ValueChange>
+										</xr:Link>
+									</ChoiceParameterLinks>
+									<ContextMenu name="ОтветственныйСобственникКонтекстноеМеню" id="127"/>
+									<ExtendedTooltip name="ОтветственныйСобственникExtendedTooltip" id="230"/>
+									<Events>
+										<Event name="OnChange">ОтветственныйСобственникПриИзменении</Event>
+										<Event name="StartChoice">ОтветственныйСобственникНачалоВыбора</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<Table name="РодственныеСвязи" id="75">
+							<Representation>List</Representation>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.РодственныеСвязи</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="РодственныеСвязиКонтекстноеМеню" id="76"/>
+							<AutoCommandBar name="РодственныеСвязиКоманднаяПанель" id="77"/>
+							<ExtendedTooltip name="РодственныеСвязиExtendedTooltip" id="231"/>
+							<SearchStringAddition name="РодственныеСвязиСтрокаПоиска" id="276">
+								<AdditionSource>
+									<Item>РодственныеСвязи</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="РодственныеСвязиСтрокаПоискаКонтекстноеМеню" id="277"/>
+								<ExtendedTooltip name="РодственныеСвязиСтрокаПоискаРасширеннаяПодсказка" id="278"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="РодственныеСвязиСостояниеПросмотра" id="279">
+								<AdditionSource>
+									<Item>РодственныеСвязи</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="РодственныеСвязиСостояниеПросмотраКонтекстноеМеню" id="280"/>
+								<ExtendedTooltip name="РодственныеСвязиСостояниеПросмотраРасширеннаяПодсказка" id="281"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="РодственныеСвязиУправлениеПоиском" id="282">
+								<AdditionSource>
+									<Item>РодственныеСвязи</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="РодственныеСвязиУправлениеПоискомКонтекстноеМеню" id="283"/>
+								<ExtendedTooltip name="РодственныеСвязиУправлениеПоискомРасширеннаяПодсказка" id="284"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="РодственныеСвязиНомерСтроки" id="78">
+									<DataPath>Объект.РодственныеСвязи.LineNumber</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РодственныеСвязиНомерСтрокиКонтекстноеМеню" id="79"/>
+									<ExtendedTooltip name="РодственныеСвязиНомерСтрокиExtendedTooltip" id="232"/>
+								</LabelField>
+								<InputField name="РодственныеСвязиЖилец" id="80">
+									<DataPath>Объект.РодственныеСвязи.Жилец</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РодственныеСвязиЖилецКонтекстноеМеню" id="81"/>
+									<ExtendedTooltip name="РодственныеСвязиЖилецExtendedTooltip" id="233"/>
+								</InputField>
+								<InputField name="РодственныеСвязиСтепеньРодстваТекущий" id="82">
+									<DataPath>Объект.РодственныеСвязи.СтепеньРодстваТекущий</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РодственныеСвязиСтепеньРодстваТекущийКонтекстноеМеню" id="83"/>
+									<ExtendedTooltip name="РодственныеСвязиСтепеньРодстваТекущийExtendedTooltip" id="234"/>
+								</InputField>
+								<InputField name="РодственныеСвязиСтепеньРодстваНовый" id="84">
+									<DataPath>Объект.РодственныеСвязи.СтепеньРодстваНовый</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РодственныеСвязиСтепеньРодстваНовыйКонтекстноеМеню" id="85"/>
+									<ExtendedTooltip name="РодственныеСвязиСтепеньРодстваНовыйExtendedTooltip" id="235"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="Продажа" id="111">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Продажа</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Продажа</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ПродажаExtendedTooltip" id="236"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаПродажаШапка" id="141">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа продажа шапка</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа продажа шапка</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ChildItemsWidth>LeftNarrow</ChildItemsWidth>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПродажаШапкаExtendedTooltip" id="237"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаПродажаСлева" id="139">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа продажа слева</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа продажа слева</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПродажаСлеваExtendedTooltip" id="238"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаОтветственныйСобственник" id="136">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Указать в качестве ответственного собственника</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа ответственный собственник</v8:content>
+												</v8:item>
+											</ToolTip>
+											<HorizontalStretch>true</HorizontalStretch>
+											<Group>Vertical</Group>
+											<Representation>StrongSeparation</Representation>
+											<ExtendedTooltip name="ГруппаОтветственныйСобственникExtendedTooltip" id="239"/>
+											<ChildItems>
+												<RadioButtonField name="ТипВладельца" id="137">
+													<DataPath>ТипВладельца</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<RadioButtonType>Auto</RadioButtonType>
+													<ColumnsCount>1</ColumnsCount>
+													<ChoiceList>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Одного из жильцов</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:decimal">0</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Контрагента</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:decimal">1</Value>
+															</xr:Value>
+														</xr:Item>
+													</ChoiceList>
+													<ContextMenu name="ТипВладельцаКонтекстноеМеню" id="138"/>
+													<ExtendedTooltip name="ТипВладельцаExtendedTooltip" id="240"/>
+													<Events>
+														<Event name="OnChange">ТипВладельцаПриИзменении</Event>
+													</Events>
+												</RadioButtonField>
+												<InputField name="КонтрагентОтветственный" id="142">
+													<DataPath>Объект.Контрагент</DataPath>
+													<TitleLocation>Left</TitleLocation>
+													<Width>29</Width>
+													<HorizontalStretch>false</HorizontalStretch>
+													<AutoMarkIncomplete>true</AutoMarkIncomplete>
+													<ContextMenu name="КонтрагентОтветственныйКонтекстноеМеню" id="143"/>
+													<ExtendedTooltip name="КонтрагентОтветственныйExtendedTooltip" id="242"/>
+													<Events>
+														<Event name="OnChange">КонтрагентОтветственныйПриИзменении</Event>
+													</Events>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаПродажаСправа" id="140">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа продажа справа</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа продажа справа</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПродажаСправаExtendedTooltip" id="241"/>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<Table name="ГлавнаяПродажа" id="148">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.Главная</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ГлавнаяПродажаКонтекстноеМеню" id="149"/>
+							<AutoCommandBar name="ГлавнаяПродажаКоманднаяПанель" id="150">
+								<ChildItems>
+									<Button name="ГлавнаяПродажаУстановитьОтветственного" id="190">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.УстановитьОтветственного</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Ответственный</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ГлавнаяПродажаУстановитьОтветственногоExtendedTooltip" id="245"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ГлавнаяПродажаExtendedTooltip" id="246"/>
+							<SearchStringAddition name="ГлавнаяПродажаСтрокаПоиска" id="285">
+								<AdditionSource>
+									<Item>ГлавнаяПродажа</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ГлавнаяПродажаСтрокаПоискаКонтекстноеМеню" id="286"/>
+								<ExtendedTooltip name="ГлавнаяПродажаСтрокаПоискаРасширеннаяПодсказка" id="287"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ГлавнаяПродажаСостояниеПросмотра" id="288">
+								<AdditionSource>
+									<Item>ГлавнаяПродажа</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ГлавнаяПродажаСостояниеПросмотраКонтекстноеМеню" id="289"/>
+								<ExtendedTooltip name="ГлавнаяПродажаСостояниеПросмотраРасширеннаяПодсказка" id="290"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ГлавнаяПродажаУправлениеПоиском" id="291">
+								<AdditionSource>
+									<Item>ГлавнаяПродажа</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ГлавнаяПродажаУправлениеПоискомКонтекстноеМеню" id="292"/>
+								<ExtendedTooltip name="ГлавнаяПродажаУправлениеПоискомРасширеннаяПодсказка" id="293"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ГлавнаяВыбор</Event>
+								<Event name="BeforeAddRow">ГлавнаяПередНачаломДобавления</Event>
+								<Event name="BeforeDeleteRow">ГлавнаяПередУдалением</Event>
+								<Event name="BeforeEditEnd">ГлавнаяПередОкончаниемРедактирования</Event>
+								<Event name="OnActivateRow">ГлавнаяПриАктивизацииСтроки</Event>
+								<Event name="BeforeRowChange">ГлавнаяПередНачаломИзменения</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="ГлавнаяПродажаНомерСтроки" id="151">
+									<DataPath>Объект.Главная.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ГлавнаяПродажаНомерСтрокиКонтекстноеМеню" id="152"/>
+									<ExtendedTooltip name="ГлавнаяПродажаНомерСтрокиExtendedTooltip" id="247"/>
+								</LabelField>
+								<InputField name="ГлавнаяПродажаПроживающий" id="153">
+									<DataPath>Объект.Главная.Проживающий</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Жилец</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ChoiceParameterLinks>
+										<xr:Link>
+											<xr:Name>Отбор.Владелец</xr:Name>
+											<xr:DataPath xsi:type="xs:string">Объект.ЛицевойСчет</xr:DataPath>
+											<xr:ValueChange>DontChange</xr:ValueChange>
+										</xr:Link>
+									</ChoiceParameterLinks>
+									<ContextMenu name="ГлавнаяПродажаПроживающийКонтекстноеМеню" id="154"/>
+									<ExtendedTooltip name="ГлавнаяПродажаПроживающийExtendedTooltip" id="248"/>
+									<Events>
+										<Event name="OnChange">ГлавнаяПроживающийПриИзменении</Event>
+										<Event name="ChoiceProcessing">ГлавнаяПроживающийОбработкаВыбора</Event>
+									</Events>
+								</InputField>
+								<InputField name="ГлавнаяПродажаСтепеньРодства" id="173">
+									<DataPath>Объект.Главная.СтепеньРодства</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ГлавнаяПродажаСтепеньРодстваКонтекстноеМеню" id="174"/>
+									<ExtendedTooltip name="ГлавнаяПродажаСтепеньРодстваExtendedTooltip" id="249"/>
+								</InputField>
+								<CheckBoxField name="ГлавнаяПродажаЗарегистрирован" id="159">
+									<DataPath>Объект.Главная.Зарегистрирован</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Зарегистрирован</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ГлавнаяПродажаЗарегистрированКонтекстноеМеню" id="160"/>
+									<ExtendedTooltip name="ГлавнаяПродажаЗарегистрированРасширеннаяПодсказка" id="250"/>
+								</CheckBoxField>
+								<ColumnGroup name="ГлавнаяПродажаГруппаРегистрация" id="183">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Главная продажа группа регистрация</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Главная продажа группа регистрация</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ГлавнаяПродажаГруппаРегистрацияExtendedTooltip" id="251"/>
+									<ChildItems>
+										<InputField name="ГлавнаяПродажаДатаРегистрации" id="171">
+											<DataPath>Объект.Главная.ДатаРегистрации</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ГлавнаяПродажаДатаРегистрацииКонтекстноеМеню" id="172"/>
+											<ExtendedTooltip name="ГлавнаяПродажаДатаРегистрацииExtendedTooltip" id="252"/>
+											<Events>
+												<Event name="OnChange">ПродажаПриИзмененииПериодаПроживанияРегистрации</Event>
+											</Events>
+										</InputField>
+										<InputField name="ГлавнаяПродажаДатаОтменыИзменения" id="169">
+											<DataPath>Объект.Главная.ДатаОтменыИзменения</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ГлавнаяПродажаДатаОтменыИзмененияКонтекстноеМеню" id="170"/>
+											<ExtendedTooltip name="ГлавнаяПродажаДатаОтменыИзмененияExtendedTooltip" id="253"/>
+											<Events>
+												<Event name="OnChange">ПродажаПриИзмененииПериодаПроживанияРегистрации</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<CheckBoxField name="ГлавнаяПродажаПроживает" id="157">
+									<DataPath>Объект.Главная.Проживает</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ГлавнаяПродажаПроживаетКонтекстноеМеню" id="158"/>
+									<ExtendedTooltip name="ГлавнаяПродажаПроживаетExtendedTooltip" id="254"/>
+								</CheckBoxField>
+								<ColumnGroup name="ГлавнаяПродажаГруппаЗаселение" id="184">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Главная продажа группа заселение</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Главная продажа группа заселение</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ГлавнаяПродажаГруппаЗаселениеExtendedTooltip" id="255"/>
+									<ChildItems>
+										<InputField name="ГлавнаяПродажаДатаЗаселения" id="179">
+											<DataPath>Объект.Главная.ДатаЗаселения</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ГлавнаяПродажаДатаЗаселенияКонтекстноеМеню" id="180"/>
+											<ExtendedTooltip name="ГлавнаяПродажаДатаЗаселенияExtendedTooltip" id="256"/>
+											<Events>
+												<Event name="OnChange">ПродажаПриИзмененииПериодаПроживанияРегистрации</Event>
+											</Events>
+										</InputField>
+										<InputField name="ГлавнаяПродажаДатаВыбытия" id="181">
+											<DataPath>Объект.Главная.ДатаВыбытия</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ГлавнаяПродажаДатаВыбытияКонтекстноеМеню" id="182"/>
+											<ExtendedTooltip name="ГлавнаяПродажаДатаВыбытияExtendedTooltip" id="257"/>
+											<Events>
+												<Event name="OnChange">ПродажаПриИзмененииПериодаПроживанияРегистрации</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<CheckBoxField name="ГлавнаяПродажаСобственник" id="155">
+									<DataPath>Объект.Главная.Собственник</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ГлавнаяПродажаСобственникКонтекстноеМеню" id="156"/>
+									<ExtendedTooltip name="ГлавнаяПродажаСобственникExtendedTooltip" id="258"/>
+									<Events>
+										<Event name="OnChange">ГлавнаяПродажаСобственникПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<InputField name="ГлавнаяПродажаСведенияОСобственности" id="304">
+									<DataPath>Объект.Главная.СведенияОСобственности</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CellHyperlink>true</CellHyperlink>
+									<TextColor>style:УПЖКХ_ЦветГиперссылки</TextColor>
+									<ContextMenu name="ГлавнаяПродажаСведенияОСобственностиКонтекстноеМеню" id="305"/>
+									<ExtendedTooltip name="ГлавнаяПродажаСведенияОСобственностиРасширеннаяПодсказка" id="306"/>
+								</InputField>
+								<InputField name="ГлавнаяПродажаДоляСобственностиСтр" id="185">
+									<DataPath>Объект.Главная.ДоляСобственностиСтр</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Доля собственности</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<TextEdit>false</TextEdit>
+									<ContextMenu name="ГлавнаяПродажаДоляСобственностиСтрКонтекстноеМеню" id="186"/>
+									<ExtendedTooltip name="ГлавнаяПродажаДоляСобственностиСтрExtendedTooltip" id="259"/>
+								</InputField>
+								<CheckBoxField name="ГлавнаяПродажаВладелецЕдинственногоЖилья" id="161">
+									<DataPath>Объект.Главная.ВладелецЕдинственногоЖилья</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ГлавнаяПродажаВладелецЕдинственногоЖильяКонтекстноеМеню" id="162"/>
+									<ExtendedTooltip name="ГлавнаяПродажаВладелецЕдинственногоЖильяExtendedTooltip" id="260"/>
+								</CheckBoxField>
+								<InputField name="ГлавнаяПродажаДополнительнаяПлощадь" id="163">
+									<DataPath>Объект.Главная.ДополнительнаяПлощадь</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ГлавнаяПродажаДополнительнаяПлощадьКонтекстноеМеню" id="164"/>
+									<ExtendedTooltip name="ГлавнаяПродажаДополнительнаяПлощадьExtendedTooltip" id="261"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<UsualGroup name="ГруппаЛегенды" id="131">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа легенды</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа легенды</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаЛегендыExtendedTooltip" id="262"/>
+			<ChildItems>
+				<PictureDecoration name="НадписьЦветНедоступнойСтроки" id="132">
+					<Width>2</Width>
+					<Height>1</Height>
+					<TextColor>web:Gainsboro</TextColor>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Надпись цвет недоступной строки</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>CommonPicture.Информация</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="НадписьЦветНедоступнойСтрокиКонтекстноеМеню" id="133"/>
+					<ExtendedTooltip name="НадписьЦветНедоступнойСтрокиExtendedTooltip" id="263"/>
+				</PictureDecoration>
+				<LabelField name="НадписьРасшифровки" id="134">
+					<DataPath>НадписьРасшифровки</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>true</HorizontalStretch>
+					<ContextMenu name="НадписьРасшифровкиКонтекстноеМеню" id="135"/>
+					<ExtendedTooltip name="НадписьРасшифровкиExtendedTooltip" id="264"/>
+				</LabelField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Ответственный" id="13">
+			<DataPath>Объект.Ответственный</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="ОтветственныйКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ОтветственныйExtendedTooltip" id="265"/>
+		</InputField>
+		<InputField name="Комментарий" id="9">
+			<DataPath>Объект.Комментарий</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="КомментарийExtendedTooltip" id="266"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.КВП_ИзменениеЛицевогоСчета</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+			<Columns>
+				<AdditionalColumns table="Объект.Главная">
+					<Column name="ДоляСобственностиСтр" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Доля собственности стр</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="СведенияОСобственности" id="2">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Сведения о собственности</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>50</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+			</Columns>
+		</Attribute>
+		<Attribute name="УказатьПроживающих" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Указать проживающих</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПредКонтрагент" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагент</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПредДоговор" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Договор</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ДоговорыКонтрагентов</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПредОтветственный" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ответственный собственник, наниматель</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+				<v8:Type>cfg:CatalogRef.УПЖКХ_Жильцы</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НадписьРасшифровки" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Надпись расшифровки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТипВладельца" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип владельца</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="мУказыватьКоличествоПрожИЗарегЧислами" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>М указывать количество прож и зарег числами</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="мПредыдущийВидИзмененияДанныхОЖильцах" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>М предыдущий вид изменения данных о жильцах</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.УПЖКХ_ВидыОперацийИзменениеДанныхОЖильцах</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="мУпрощенныйВариантУчетаСобственников" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>М упрощенный вариант учета собственников</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПредОтветственныйФизЛицо" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пред ответственный физ лицо</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ФизическиеЛица</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СведенияОСобственности" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сведения о собственности</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Жилец" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Жилец</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.УПЖКХ_Жильцы</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Собственник" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Собственник</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ВладелецЕдинственногоЖилья" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Владелец единственного жилья</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ДополнительнаяПлощадь" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дополнительная площадь</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДоляСобственностиЧислитель" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доля собственности числитель</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>7</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДоляСобственностиЗнаменатель" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доля собственности знаменатель</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>7</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="СостояниеДокумента" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состояние документа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СведенияОСобственностиПриУпрощенномУчете" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сведения о собственности при упрощенном учете</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Жилец" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Жилец</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.УПЖКХ_Жильцы</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ФизЛицо" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Физ лицо</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ФизическиеЛица</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ЯвляетсяЧленомТСЖ" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Является членом ТСЖ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="БылСобственником" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Был собственником</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="СписокДокументовТСЖ" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список документов ТСЖ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СведенияОСобственностиБылиОтредактированы" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сведения о собственности были отредактированы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользуетсяФункционалТСЖ" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Используется функционал ТСЖ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ГлавнаяДоляСобственностиСтр</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ГлавнаяСведенияОСобственности</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.ВидОперации</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.УПЖКХ_ВидыОперацийИзмененияЛицевыхСчетов.ИзменениеДанныхОЖильцах</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.ВидИзменения</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.УПЖКХ_ВидыОперацийИзменениеДанныхОЖильцах.Регистрация</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ГлавнаяСобственник</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ГлавнаяСведенияОСобственности</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.ВидОперации</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.УПЖКХ_ВидыОперацийИзмененияЛицевыхСчетов.ИзменениеДанныхОЖильцах</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.ВидИзменения</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.УПЖКХ_ВидыОперацийИзменениеДанныхОЖильцах.Регистрация</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">мУпрощенныйВариантУчетаСобственников</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ГлавнаяПроживающий</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ГлавнаяСобственник</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ГлавнаяВладелецЕдинственногоЖилья</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ГлавнаяСведенияОСобственности</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.ВидОперации</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.УПЖКХ_ВидыОперацийИзмененияЛицевыхСчетов.ИзменениеДанныхОЖильцах</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.ВидИзменения</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.УПЖКХ_ВидыОперацийИзменениеДанныхОЖильцах.Регистрация</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.Главная.ДанныеПоЖильцуОПроживанииИлиСобственностиУжеБылиВведеныРанее</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ГлавнаяПроживающий</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ГлавнаяНомерСтроки</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ГлавнаяСтепеньРодства</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ГлавнаяДатаРегистрации</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ГлавнаяДатаОтменыИзменения</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ГлавнаяДоляСобственностиСтр</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ГлавнаяЗарегистрирован</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ГлавнаяПроживает</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ГлавнаяСобственник</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ГлавнаяВладелецЕдинственногоЖилья</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ГлавнаяСведенияОСобственности</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.ВидОперации</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.УПЖКХ_ВидыОперацийИзмененияЛицевыхСчетов.ИзменениеДанныхОЖильцах</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.Главная.ДанныеПоЖильцуОПроживанииИлиСобственностиУжеБылиВведеныРанее</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>OrGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ВидИзменения</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.УПЖКХ_ВидыОперацийИзменениеДанныхОЖильцах.Регистрация</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ВидИзменения</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.УПЖКХ_ВидыОперацийИзменениеДанныхОЖильцах.Присутствие</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:Gainsboro</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ГлавнаяСтепеньРодства</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.ВидОперации</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.УПЖКХ_ВидыОперацийИзмененияЛицевыхСчетов.ИзменениеДанныхОЖильцах</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.Главная.ДанныеПоЖильцуОПроживанииИлиСобственностиУжеБылиВведеныРанее</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.Главная.Проживающий</dcsset:left>
+						<dcsset:comparisonType>Filled</dcsset:comparisonType>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.Главная.Проживающий</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:Field">Объект.ОтветственныйСобственник</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>OrGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ВидИзменения</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.УПЖКХ_ВидыОперацийИзменениеДанныхОЖильцах.Регистрация</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ВидИзменения</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.УПЖКХ_ВидыОперацийИзменениеДанныхОЖильцах.Присутствие</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Текст</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Ответственный собственник, наниматель</v8:content>
+							</v8:item>
+						</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ГлавнаяЗарегистрирован</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ГлавнаяСтепеньРодства</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ГлавнаяДатаРегистрации</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ГлавнаяДатаОтменыИзменения</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.ВидОперации</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.УПЖКХ_ВидыОперацийИзмененияЛицевыхСчетов.ИзменениеДанныхОЖильцах</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.ВидИзменения</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.УПЖКХ_ВидыОперацийИзменениеДанныхОЖильцах.Регистрация</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.Главная.ДанныеПоЖильцуОПроживанииИлиСобственностиУжеБылиВведеныРанее</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.Главная.СтатусЖильцаКакСобственника</dcsset:left>
+						<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.Главная.СтатусЖильцаКакСобственника</dcsset:left>
+						<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">1</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ГлавнаяВладелецЕдинственногоЖилья</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ГлавнаяСобственник</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ГлавнаяДоляСобственностиСтр</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ГлавнаяПроживающий</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ГлавнаяСведенияОСобственности</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.ВидОперации</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.УПЖКХ_ВидыОперацийИзмененияЛицевыхСчетов.ИзменениеДанныхОЖильцах</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>OrGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ВидИзменения</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.УПЖКХ_ВидыОперацийИзменениеДанныхОЖильцах.СнятиеСРегистрации</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ВидИзменения</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.УПЖКХ_ВидыОперацийИзменениеДанныхОЖильцах.Отсутствие</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ГлавнаяВладелецЕдинственногоЖилья</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ГлавнаяСобственник</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ГлавнаяДоляСобственностиСтр</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ГлавнаяСведенияОСобственности</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.ВидОперации</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.УПЖКХ_ВидыОперацийИзмененияЛицевыхСчетов.ИзменениеДанныхОЖильцах</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.ВидИзменения</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.УПЖКХ_ВидыОперацийИзменениеДанныхОЖильцах.Присутствие</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ГлавнаяПроживает</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ГлавнаяСтепеньРодства</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ГлавнаяДатаРегистрации</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ГлавнаяДатаОтменыИзменения</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ГлавнаяПроживающий</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ГлавнаяСобственник</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ГлавнаяСведенияОСобственности</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.ВидОперации</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.УПЖКХ_ВидыОперацийИзмененияЛицевыхСчетов.ИзменениеДанныхОЖильцах</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.ВидИзменения</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.УПЖКХ_ВидыОперацийИзменениеДанныхОЖильцах.Присутствие</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.Главная.ДанныеПоЖильцуОПроживанииИлиСобственностиУжеБылиВведеныРанее</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ГлавнаяПродажаСобственник</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ГлавнаяПродажаДоляСобственностиСтр</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ГлавнаяПродажаСведенияОСобственности</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.ВидОперации</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.УПЖКХ_ВидыОперацийИзмененияЛицевыхСчетов.ПродажаИПрочиеИзменения</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">мУпрощенныйВариантУчетаСобственников</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ГлавнаяПродажаПроживающий</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ГлавнаяПродажаНомерСтроки</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ГлавнаяПродажаСтепеньРодства</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ГлавнаяПродажаДатаРегистрации</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ГлавнаяПродажаДатаОтменыИзменения</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ГлавнаяПродажаДоляСобственностиСтр</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ГлавнаяПродажаЗарегистрирован</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ГлавнаяПродажаПроживает</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ГлавнаяПродажаСобственник</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ГлавнаяПродажаВладелецЕдинственногоЖилья</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ГлавнаяПродажаДатаЗаселения</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ГлавнаяПродажаДатаВыбытия</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ГлавнаяПродажаДополнительнаяПлощадь</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ГлавнаяПродажаСведенияОСобственности</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.ВидОперации</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.УПЖКХ_ВидыОперацийИзмененияЛицевыхСчетов.ПродажаИПрочиеИзменения</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.Главная.ДанныеПоЖильцуОПроживанииИлиСобственностиУжеБылиВведеныРанее</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:Gainsboro</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ГлавнаяПродажаСтепеньРодства</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.ВидОперации</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.УПЖКХ_ВидыОперацийИзмененияЛицевыхСчетов.ПродажаИПрочиеИзменения</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.Главная.Проживающий</dcsset:left>
+						<dcsset:comparisonType>Filled</dcsset:comparisonType>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.Главная.Проживающий</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:Field">Объект.ОтветственныйСобственник</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Шрифт</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Текст</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Ответственный собственник, наниматель</v8:content>
+							</v8:item>
+						</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>РодственныеСвязиСтепеньРодстваТекущий</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.РодственныеСвязи.Жилец</dcsset:left>
+						<dcsset:comparisonType>Filled</dcsset:comparisonType>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.РодственныеСвязи.Жилец</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:Field">ПредОтветственныйФизЛицо</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Текст</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Ответственный собственник, наниматель</v8:content>
+							</v8:item>
+						</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:use>false</dcsset:use>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ГлавнаяДатаРегистрации</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ГлавнаяДатаОтменыИзменения</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.ВидОперации</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.УПЖКХ_ВидыОперацийИзмененияЛицевыхСчетов.ИзменениеДанныхОЖильцах</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>OrGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemGroup">
+							<dcsset:groupType>AndGroup</dcsset:groupType>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">Объект.ВидИзменения</dcsset:left>
+								<dcsset:comparisonType>Equal</dcsset:comparisonType>
+								<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.УПЖКХ_ВидыОперацийИзменениеДанныхОЖильцах.СнятиеСРегистрации</dcsset:right>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">Объект.Главная.Зарегистрирован</dcsset:left>
+								<dcsset:comparisonType>Equal</dcsset:comparisonType>
+								<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+							</dcsset:item>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemGroup">
+							<dcsset:groupType>AndGroup</dcsset:groupType>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">Объект.ВидИзменения</dcsset:left>
+								<dcsset:comparisonType>Equal</dcsset:comparisonType>
+								<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.УПЖКХ_ВидыОперацийИзменениеДанныхОЖильцах.Отсутствие</dcsset:right>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">Объект.Главная.Проживает</dcsset:left>
+								<dcsset:comparisonType>Equal</dcsset:comparisonType>
+								<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+							</dcsset:item>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ГлавнаяСведенияОСобственности</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.ВидОперации</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.УПЖКХ_ВидыОперацийИзмененияЛицевыхСчетов.ИзменениеДанныхОЖильцах</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.Главная.ДанныеПоЖильцуОПроживанииИлиСобственностиУжеБылиВведеныРанее</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.Главная.СведенияОСобственности</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:string">Указать сведения</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Текст</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType"/>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="УстановитьОтветственного" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить ответственного</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить ответственного</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьОтветственного</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<CommandBar>
+			<Item>
+				<Command>0:2baf6d7a-12ed-4f22-ad96-92bb31b747ff</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</CommandBar>
+	</CommandInterface>
+</Form>

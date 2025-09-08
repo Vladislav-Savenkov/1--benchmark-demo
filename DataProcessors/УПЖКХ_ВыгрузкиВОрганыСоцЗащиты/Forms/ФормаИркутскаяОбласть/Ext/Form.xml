@@ -1,0 +1,1323 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Иркутская область: Выгрузка в ОСЗН</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаКомандаНастройка" id="7">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.КомандаНастройка</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>1. Настройка</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаКомандаНастройкаРасширеннаяПодсказка" id="8"/>
+			</Button>
+			<Button name="ФормаКомандаЗагрузить" id="21">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.КомандаЗагрузить</CommandName>
+				<Picture>
+					<xr:Ref>CommonPicture.ЗагрузкаФайла</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>2. Загрузить из файла(ов)</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаКомандаЗагрузитьРасширеннаяПодсказка" id="22"/>
+			</Button>
+			<Button name="ФормаКомандаЗаполнить" id="23">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.КомандаЗаполнить</CommandName>
+				<Picture>
+					<xr:Ref>CommonPicture.ЗагрузитьДанныеИзФайла</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>3. Заполнить данными из базы</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаКомандаЗаполнитьРасширеннаяПодсказка" id="24"/>
+			</Button>
+			<Button name="ФормаКомандаВыгрузить" id="25">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.КомандаВыгрузить</CommandName>
+				<Picture>
+					<xr:Ref>CommonPicture.ВыгрузитьФайлСертификата</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>4. Выгрузить в файл(ы)</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаКомандаВыгрузитьРасширеннаяПодсказка" id="26"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаОсновныеНастройки" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа основные настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа основные настройки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОсновныеНастройкиРасширеннаяПодсказка" id="10"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаНастроекЛевая" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа настроек левая</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа настроек левая</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<United>false</United>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаНастроекЛеваяРасширеннаяПодсказка" id="12"/>
+					<ChildItems>
+						<InputField name="ПериодСтрокой" id="4">
+							<DataPath>ПериодСтрокой</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Месяц выгрузки</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ChoiceButton>true</ChoiceButton>
+							<SpinButton>true</SpinButton>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ChoiceButtonPicture>
+								<xr:Ref>StdPicture.InputFieldCalendar</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</ChoiceButtonPicture>
+							<ContextMenu name="ПериодСтрокойКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="ПериодСтрокойExtendedTooltip" id="6"/>
+							<Events>
+								<Event name="OnChange">ПериодСтрокойПриИзменении</Event>
+								<Event name="AutoComplete">ПериодСтрокойАвтоПодбор</Event>
+								<Event name="StartChoice">ПериодСтрокойНачалоВыбора</Event>
+								<Event name="Tuning">ПериодСтрокойРегулирование</Event>
+								<Event name="TextEditEnd">ПериодСтрокойОкончаниеВводаТекста</Event>
+							</Events>
+						</InputField>
+						<InputField name="Организация" id="1">
+							<DataPath>Объект.Организация</DataPath>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="3"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаНастроекПравая" id="13">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа настроек правая</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа настроек правая</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<United>false</United>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаНастроекПраваяРасширеннаяПодсказка" id="14"/>
+					<ChildItems>
+						<InputField name="РеестрЛСПоЖКУ" id="15">
+							<DataPath>РеестрЛСПоЖКУ</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Реестр л/с по ЖКУ</v8:content>
+								</v8:item>
+							</Title>
+							<ChoiceButton>true</ChoiceButton>
+							<OpenButton>true</OpenButton>
+							<TextEdit>false</TextEdit>
+							<ContextMenu name="РеестрЛСПоЖКУКонтекстноеМеню" id="16"/>
+							<ExtendedTooltip name="РеестрЛСПоЖКУРасширеннаяПодсказка" id="17"/>
+							<Events>
+								<Event name="StartChoice">РеестрЛСПоЖКУНачалоВыбора</Event>
+								<Event name="Opening">РеестрЛСПоЖКУОткрытие</Event>
+							</Events>
+						</InputField>
+						<InputField name="РеестрЛСПоКапРемонт" id="18">
+							<DataPath>РеестрЛСПоКапРемонт</DataPath>
+							<ChoiceButton>true</ChoiceButton>
+							<OpenButton>true</OpenButton>
+							<TextEdit>false</TextEdit>
+							<ContextMenu name="РеестрЛСПоКапРемонтКонтекстноеМеню" id="19"/>
+							<ExtendedTooltip name="РеестрЛСПоКапРемонтРасширеннаяПодсказка" id="20"/>
+							<Events>
+								<Event name="StartChoice">РеестрЛСПоКапРемонтНачалоВыбора</Event>
+								<Event name="Opening">РеестрЛСПоКапРемонтОткрытие</Event>
+							</Events>
+						</InputField>
+						<InputField name="РеестрЛСПоТКО" id="305">
+							<DataPath>РеестрЛСПоТКО</DataPath>
+							<ChoiceButton>true</ChoiceButton>
+							<OpenButton>true</OpenButton>
+							<TextEdit>false</TextEdit>
+							<ContextMenu name="РеестрЛСПоТКОКонтекстноеМеню" id="306"/>
+							<ExtendedTooltip name="РеестрЛСПоТКОРасширеннаяПодсказка" id="307"/>
+							<Events>
+								<Event name="StartChoice">РеестрЛСПоТКОНачалоВыбора</Event>
+								<Event name="Opening">РеестрЛСПоТКООткрытие</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="ГруппаРеестрыЛС" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа реестры ЛС</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа реестры ЛС</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ГруппаРеестрыЛСРасширеннаяПодсказка" id="28"/>
+			<ChildItems>
+				<Page name="РеестрЖКУ" id="29">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Реестр ЖКУ</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Реестр ЖКУ</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="РеестрЖКУРасширеннаяПодсказка" id="30"/>
+					<ChildItems>
+						<Table name="ИркутскаяОбласть_РеестрЖКУ" id="33">
+							<Footer>true</Footer>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.ИркутскаяОбласть_РеестрЖКУ</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ИркутскаяОбласть_РеестрЖКУКонтекстноеМеню" id="34"/>
+							<AutoCommandBar name="ИркутскаяОбласть_РеестрЖКУКоманднаяПанель" id="35">
+								<ChildItems>
+									<Button name="ИркутскаяОбласть_РеестрЖКУКнопкаОплаченоЗаЖКУ" id="236">
+										<Type>CommandBarHyperlink</Type>
+										<SkipOnInput>true</SkipOnInput>
+										<Enabled>false</Enabled>
+										<CommandName>Form.Command.КомандаВыгрузить</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Всего оплачено за ЖКУ:</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTipRepresentation>None</ToolTipRepresentation>
+										<ExtendedTooltip name="ИркутскаяОбласть_РеестрЖКУКнопкаОплаченоЗаЖКУРасширеннаяПодсказка" id="237"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ИркутскаяОбласть_РеестрЖКУРасширеннаяПодсказка" id="36"/>
+							<SearchStringAddition name="ИркутскаяОбласть_РеестрЖКУСтрокаПоиска" id="37">
+								<AdditionSource>
+									<Item>ИркутскаяОбласть_РеестрЖКУ</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ИркутскаяОбласть_РеестрЖКУСтрокаПоискаКонтекстноеМеню" id="38"/>
+								<ExtendedTooltip name="ИркутскаяОбласть_РеестрЖКУСтрокаПоискаРасширеннаяПодсказка" id="39"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ИркутскаяОбласть_РеестрЖКУСостояниеПросмотра" id="40">
+								<AdditionSource>
+									<Item>ИркутскаяОбласть_РеестрЖКУ</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ИркутскаяОбласть_РеестрЖКУСостояниеПросмотраКонтекстноеМеню" id="41"/>
+								<ExtendedTooltip name="ИркутскаяОбласть_РеестрЖКУСостояниеПросмотраРасширеннаяПодсказка" id="42"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ИркутскаяОбласть_РеестрЖКУУправлениеПоиском" id="43">
+								<AdditionSource>
+									<Item>ИркутскаяОбласть_РеестрЖКУ</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ИркутскаяОбласть_РеестрЖКУУправлениеПоискомКонтекстноеМеню" id="44"/>
+								<ExtendedTooltip name="ИркутскаяОбласть_РеестрЖКУУправлениеПоискомРасширеннаяПодсказка" id="45"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<ColumnGroup name="ИркутскаяОбласть_РеестрЖКУГруппаФиксируемыеКолонки" id="240">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Иркутская область реестр ЖКУГруппа фиксируемые колонки</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Иркутская область реестр ЖКУГруппа фиксируемые колонки</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<FixingInTable>Left</FixingInTable>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрЖКУГруппаФиксируемыеКолонкиРасширеннаяПодсказка" id="241"/>
+									<ChildItems>
+										<LabelField name="ИркутскаяОбласть_РеестрЖКУНомерСтроки" id="46">
+											<DataPath>Объект.ИркутскаяОбласть_РеестрЖКУ.LineNumber</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ИркутскаяОбласть_РеестрЖКУНомерСтрокиКонтекстноеМеню" id="47"/>
+											<ExtendedTooltip name="ИркутскаяОбласть_РеестрЖКУНомерСтрокиРасширеннаяПодсказка" id="48"/>
+										</LabelField>
+										<InputField name="ИркутскаяОбласть_РеестрЖКУЛицевойСчет" id="49">
+											<DataPath>Объект.ИркутскаяОбласть_РеестрЖКУ.ЛицевойСчет</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<AutoMarkIncomplete>true</AutoMarkIncomplete>
+											<ContextMenu name="ИркутскаяОбласть_РеестрЖКУЛицевойСчетКонтекстноеМеню" id="50"/>
+											<ExtendedTooltip name="ИркутскаяОбласть_РеестрЖКУЛицевойСчетРасширеннаяПодсказка" id="51"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<InputField name="ИркутскаяОбласть_РеестрЖКУTOWN" id="52">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрЖКУ.TOWN</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИркутскаяОбласть_РеестрЖКУTOWNКонтекстноеМеню" id="53"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрЖКУTOWNРасширеннаяПодсказка" id="54"/>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрЖКУSTREET" id="55">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрЖКУ.STREET</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИркутскаяОбласть_РеестрЖКУSTREETКонтекстноеМеню" id="56"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрЖКУSTREETРасширеннаяПодсказка" id="57"/>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрЖКУHOUSE" id="58">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрЖКУ.HOUSE</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИркутскаяОбласть_РеестрЖКУHOUSEКонтекстноеМеню" id="59"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрЖКУHOUSEРасширеннаяПодсказка" id="60"/>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрЖКУHOUSING" id="61">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрЖКУ.HOUSING</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИркутскаяОбласть_РеестрЖКУHOUSINGКонтекстноеМеню" id="62"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрЖКУHOUSINGРасширеннаяПодсказка" id="63"/>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрЖКУFLAT" id="64">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрЖКУ.FLAT</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИркутскаяОбласть_РеестрЖКУFLATКонтекстноеМеню" id="65"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрЖКУFLATРасширеннаяПодсказка" id="66"/>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрЖКУPER_MONTH" id="67">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрЖКУ.PER_MONTH</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИркутскаяОбласть_РеестрЖКУPER_MONTHКонтекстноеМеню" id="68"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрЖКУPER_MONTHРасширеннаяПодсказка" id="69"/>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрЖКУPER_YEAR" id="70">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрЖКУ.PER_YEAR</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИркутскаяОбласть_РеестрЖКУPER_YEARКонтекстноеМеню" id="71"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрЖКУPER_YEARРасширеннаяПодсказка" id="72"/>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрЖКУACCOUNT" id="73">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрЖКУ.ACCOUNT</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИркутскаяОбласть_РеестрЖКУACCOUNTКонтекстноеМеню" id="74"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрЖКУACCOUNTРасширеннаяПодсказка" id="75"/>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрЖКУRG_COUNT" id="76">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрЖКУ.RG_COUNT</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterHorizontalAlign>Right</FooterHorizontalAlign>
+									<ContextMenu name="ИркутскаяОбласть_РеестрЖКУRG_COUNTКонтекстноеМеню" id="77"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрЖКУRG_COUNTРасширеннаяПодсказка" id="78"/>
+									<Events>
+										<Event name="OnChange">ПересчитатьИтогиПоКолонке</Event>
+									</Events>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрЖКУFT_COUNT" id="79">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрЖКУ.FT_COUNT</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterHorizontalAlign>Right</FooterHorizontalAlign>
+									<ContextMenu name="ИркутскаяОбласть_РеестрЖКУFT_COUNTКонтекстноеМеню" id="80"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрЖКУFT_COUNTРасширеннаяПодсказка" id="81"/>
+									<Events>
+										<Event name="OnChange">ПересчитатьИтогиПоКолонке</Event>
+									</Events>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрЖКУOWNERSHP" id="82">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрЖКУ.OWNERSHP</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИркутскаяОбласть_РеестрЖКУOWNERSHPКонтекстноеМеню" id="83"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрЖКУOWNERSHPРасширеннаяПодсказка" id="84"/>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрЖКУSQUARE" id="85">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрЖКУ.SQUARE</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterHorizontalAlign>Right</FooterHorizontalAlign>
+									<ContextMenu name="ИркутскаяОбласть_РеестрЖКУSQUAREКонтекстноеМеню" id="86"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрЖКУSQUAREРасширеннаяПодсказка" id="87"/>
+									<Events>
+										<Event name="OnChange">ПересчитатьИтогиПоКолонке</Event>
+									</Events>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрЖКУACRUAL1" id="88">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрЖКУ.ACRUAL1</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterHorizontalAlign>Right</FooterHorizontalAlign>
+									<ContextMenu name="ИркутскаяОбласть_РеестрЖКУACRUAL1КонтекстноеМеню" id="89"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрЖКУACRUAL1РасширеннаяПодсказка" id="90"/>
+									<Events>
+										<Event name="OnChange">ПересчитатьИтогиПоКолонке</Event>
+									</Events>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрЖКУTARIFF1" id="91">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрЖКУ.TARIFF1</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИркутскаяОбласть_РеестрЖКУTARIFF1КонтекстноеМеню" id="92"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрЖКУTARIFF1РасширеннаяПодсказка" id="93"/>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрЖКУACRUAL2" id="94">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрЖКУ.ACRUAL2</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterHorizontalAlign>Right</FooterHorizontalAlign>
+									<ContextMenu name="ИркутскаяОбласть_РеестрЖКУACRUAL2КонтекстноеМеню" id="95"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрЖКУACRUAL2РасширеннаяПодсказка" id="96"/>
+									<Events>
+										<Event name="OnChange">ПересчитатьИтогиПоКолонке</Event>
+									</Events>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрЖКУTARIFF2" id="97">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрЖКУ.TARIFF2</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИркутскаяОбласть_РеестрЖКУTARIFF2КонтекстноеМеню" id="98"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрЖКУTARIFF2РасширеннаяПодсказка" id="99"/>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрЖКУNORM2" id="100">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрЖКУ.NORM2</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИркутскаяОбласть_РеестрЖКУNORM2КонтекстноеМеню" id="101"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрЖКУNORM2РасширеннаяПодсказка" id="102"/>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрЖКУNORM18" id="103">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрЖКУ.NORM18</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИркутскаяОбласть_РеестрЖКУNORM18КонтекстноеМеню" id="104"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрЖКУNORM18РасширеннаяПодсказка" id="105"/>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрЖКУACRUAL3" id="106">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрЖКУ.ACRUAL3</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterHorizontalAlign>Right</FooterHorizontalAlign>
+									<ContextMenu name="ИркутскаяОбласть_РеестрЖКУACRUAL3КонтекстноеМеню" id="107"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрЖКУACRUAL3РасширеннаяПодсказка" id="108"/>
+									<Events>
+										<Event name="OnChange">ПересчитатьИтогиПоКолонке</Event>
+									</Events>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрЖКУACRUAL4" id="109">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрЖКУ.ACRUAL4</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterHorizontalAlign>Right</FooterHorizontalAlign>
+									<ContextMenu name="ИркутскаяОбласть_РеестрЖКУACRUAL4КонтекстноеМеню" id="110"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрЖКУACRUAL4РасширеннаяПодсказка" id="111"/>
+									<Events>
+										<Event name="OnChange">ПересчитатьИтогиПоКолонке</Event>
+									</Events>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрЖКУTARIFF4" id="112">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрЖКУ.TARIFF4</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИркутскаяОбласть_РеестрЖКУTARIFF4КонтекстноеМеню" id="113"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрЖКУTARIFF4РасширеннаяПодсказка" id="114"/>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрЖКУNORM4" id="115">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрЖКУ.NORM4</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИркутскаяОбласть_РеестрЖКУNORM4КонтекстноеМеню" id="116"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрЖКУNORM4РасширеннаяПодсказка" id="117"/>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрЖКУACRUAL5" id="118">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрЖКУ.ACRUAL5</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterHorizontalAlign>Right</FooterHorizontalAlign>
+									<ContextMenu name="ИркутскаяОбласть_РеестрЖКУACRUAL5КонтекстноеМеню" id="119"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрЖКУACRUAL5РасширеннаяПодсказка" id="120"/>
+									<Events>
+										<Event name="OnChange">ПересчитатьИтогиПоКолонке</Event>
+									</Events>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрЖКУTARIFF12" id="121">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрЖКУ.TARIFF12</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИркутскаяОбласть_РеестрЖКУTARIFF12КонтекстноеМеню" id="122"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрЖКУTARIFF12РасширеннаяПодсказка" id="123"/>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрЖКУNORM12" id="124">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрЖКУ.NORM12</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИркутскаяОбласть_РеестрЖКУNORM12КонтекстноеМеню" id="125"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрЖКУNORM12РасширеннаяПодсказка" id="126"/>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрЖКУACRUAL6" id="127">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрЖКУ.ACRUAL6</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterHorizontalAlign>Right</FooterHorizontalAlign>
+									<ContextMenu name="ИркутскаяОбласть_РеестрЖКУACRUAL6КонтекстноеМеню" id="128"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрЖКУACRUAL6РасширеннаяПодсказка" id="129"/>
+									<Events>
+										<Event name="OnChange">ПересчитатьИтогиПоКолонке</Event>
+									</Events>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрЖКУTARIFF6" id="130">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрЖКУ.TARIFF6</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИркутскаяОбласть_РеестрЖКУTARIFF6КонтекстноеМеню" id="131"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрЖКУTARIFF6РасширеннаяПодсказка" id="132"/>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрЖКУNORM6" id="133">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрЖКУ.NORM6</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИркутскаяОбласть_РеестрЖКУNORM6КонтекстноеМеню" id="134"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрЖКУNORM6РасширеннаяПодсказка" id="135"/>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрЖКУACRUAL7" id="136">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрЖКУ.ACRUAL7</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterHorizontalAlign>Right</FooterHorizontalAlign>
+									<ContextMenu name="ИркутскаяОбласть_РеестрЖКУACRUAL7КонтекстноеМеню" id="137"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрЖКУACRUAL7РасширеннаяПодсказка" id="138"/>
+									<Events>
+										<Event name="OnChange">ПересчитатьИтогиПоКолонке</Event>
+									</Events>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрЖКУACRUAL8" id="139">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрЖКУ.ACRUAL8</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterHorizontalAlign>Right</FooterHorizontalAlign>
+									<ContextMenu name="ИркутскаяОбласть_РеестрЖКУACRUAL8КонтекстноеМеню" id="140"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрЖКУACRUAL8РасширеннаяПодсказка" id="141"/>
+									<Events>
+										<Event name="OnChange">ПересчитатьИтогиПоКолонке</Event>
+									</Events>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрЖКУTARIFF8" id="142">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрЖКУ.TARIFF8</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИркутскаяОбласть_РеестрЖКУTARIFF8КонтекстноеМеню" id="143"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрЖКУTARIFF8РасширеннаяПодсказка" id="144"/>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрЖКУNORM8" id="145">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрЖКУ.NORM8</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИркутскаяОбласть_РеестрЖКУNORM8КонтекстноеМеню" id="146"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрЖКУNORM8РасширеннаяПодсказка" id="147"/>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрЖКУACRUAL35" id="148">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрЖКУ.ACRUAL35</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterHorizontalAlign>Right</FooterHorizontalAlign>
+									<ContextMenu name="ИркутскаяОбласть_РеестрЖКУACRUAL35КонтекстноеМеню" id="149"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрЖКУACRUAL35РасширеннаяПодсказка" id="150"/>
+									<Events>
+										<Event name="OnChange">ПересчитатьИтогиПоКолонке</Event>
+									</Events>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрЖКУACRUAL9" id="151">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрЖКУ.ACRUAL9</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterHorizontalAlign>Right</FooterHorizontalAlign>
+									<ContextMenu name="ИркутскаяОбласть_РеестрЖКУACRUAL9КонтекстноеМеню" id="152"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрЖКУACRUAL9РасширеннаяПодсказка" id="153"/>
+									<Events>
+										<Event name="OnChange">ПересчитатьИтогиПоКолонке</Event>
+									</Events>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрЖКУTARIFF9_KUB" id="154">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрЖКУ.TARIFF9_KUB</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИркутскаяОбласть_РеестрЖКУTARIFF9_KUBКонтекстноеМеню" id="155"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрЖКУTARIFF9_KUBРасширеннаяПодсказка" id="156"/>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрЖКУTARIFF9_GKL" id="157">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрЖКУ.TARIFF9_GKL</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИркутскаяОбласть_РеестрЖКУTARIFF9_GKLКонтекстноеМеню" id="158"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрЖКУTARIFF9_GKLРасширеннаяПодсказка" id="159"/>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрЖКУNORM9_KUB" id="160">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрЖКУ.NORM9_KUB</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИркутскаяОбласть_РеестрЖКУNORM9_KUBКонтекстноеМеню" id="161"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрЖКУNORM9_KUBРасширеннаяПодсказка" id="162"/>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрЖКУNORM9_GKAL" id="163">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрЖКУ.NORM9_GKAL</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИркутскаяОбласть_РеестрЖКУNORM9_GKALКонтекстноеМеню" id="164"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрЖКУNORM9_GKALРасширеннаяПодсказка" id="165"/>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрЖКУACRUAL10" id="166">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрЖКУ.ACRUAL10</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterHorizontalAlign>Right</FooterHorizontalAlign>
+									<ContextMenu name="ИркутскаяОбласть_РеестрЖКУACRUAL10КонтекстноеМеню" id="167"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрЖКУACRUAL10РасширеннаяПодсказка" id="168"/>
+									<Events>
+										<Event name="OnChange">ПересчитатьИтогиПоКолонке</Event>
+									</Events>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрЖКУACRUAL11" id="169">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрЖКУ.ACRUAL11</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterHorizontalAlign>Right</FooterHorizontalAlign>
+									<ContextMenu name="ИркутскаяОбласть_РеестрЖКУACRUAL11КонтекстноеМеню" id="170"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрЖКУACRUAL11РасширеннаяПодсказка" id="171"/>
+									<Events>
+										<Event name="OnChange">ПересчитатьИтогиПоКолонке</Event>
+									</Events>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрЖКУTARIFF11" id="172">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрЖКУ.TARIFF11</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИркутскаяОбласть_РеестрЖКУTARIFF11КонтекстноеМеню" id="173"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрЖКУTARIFF11РасширеннаяПодсказка" id="174"/>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрЖКУNORM46" id="175">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрЖКУ.NORM46</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИркутскаяОбласть_РеестрЖКУNORM46КонтекстноеМеню" id="176"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрЖКУNORM46РасширеннаяПодсказка" id="177"/>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрЖКУDBT_MONT" id="178">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрЖКУ.DBT_MONT</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИркутскаяОбласть_РеестрЖКУDBT_MONTКонтекстноеМеню" id="179"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрЖКУDBT_MONTРасширеннаяПодсказка" id="180"/>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрЖКУTOWN_Исх" id="230">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрЖКУ.TOWN_Исх</DataPath>
+									<Visible>false</Visible>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИркутскаяОбласть_РеестрЖКУTOWN_ИсхКонтекстноеМеню" id="231"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрЖКУTOWN_ИсхРасширеннаяПодсказка" id="232"/>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрЖКУSTREET_Исх" id="233">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрЖКУ.STREET_Исх</DataPath>
+									<Visible>false</Visible>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИркутскаяОбласть_РеестрЖКУSTREET_ИсхКонтекстноеМеню" id="234"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрЖКУSTREET_ИсхРасширеннаяПодсказка" id="235"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="РеестрКапремонт" id="31">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Реестр капремонт</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Реестр капремонт</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="РеестрКапремонтРасширеннаяПодсказка" id="32"/>
+					<ChildItems>
+						<Table name="ИркутскаяОбласть_РеестрКапремонт" id="181">
+							<Footer>true</Footer>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.ИркутскаяОбласть_РеестрКапремонт</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ИркутскаяОбласть_РеестрКапремонтКонтекстноеМеню" id="182"/>
+							<AutoCommandBar name="ИркутскаяОбласть_РеестрКапремонтКоманднаяПанель" id="183">
+								<ChildItems>
+									<Button name="ИркутскаяОбласть_РеестрКапремонтКнопкаОплаченоЗаКР" id="238">
+										<Type>CommandBarHyperlink</Type>
+										<Enabled>false</Enabled>
+										<CommandName>Form.Command.КомандаВыгрузить</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Всего оплачено за капремонт:</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTipRepresentation>None</ToolTipRepresentation>
+										<ExtendedTooltip name="ИркутскаяОбласть_РеестрКапремонтКнопкаОплаченоЗаКРРасширеннаяПодсказка" id="239"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ИркутскаяОбласть_РеестрКапремонтРасширеннаяПодсказка" id="184"/>
+							<SearchStringAddition name="ИркутскаяОбласть_РеестрКапремонтСтрокаПоиска" id="185">
+								<AdditionSource>
+									<Item>ИркутскаяОбласть_РеестрКапремонт</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ИркутскаяОбласть_РеестрКапремонтСтрокаПоискаКонтекстноеМеню" id="186"/>
+								<ExtendedTooltip name="ИркутскаяОбласть_РеестрКапремонтСтрокаПоискаРасширеннаяПодсказка" id="187"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ИркутскаяОбласть_РеестрКапремонтСостояниеПросмотра" id="188">
+								<AdditionSource>
+									<Item>ИркутскаяОбласть_РеестрКапремонт</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ИркутскаяОбласть_РеестрКапремонтСостояниеПросмотраКонтекстноеМеню" id="189"/>
+								<ExtendedTooltip name="ИркутскаяОбласть_РеестрКапремонтСостояниеПросмотраРасширеннаяПодсказка" id="190"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ИркутскаяОбласть_РеестрКапремонтУправлениеПоиском" id="191">
+								<AdditionSource>
+									<Item>ИркутскаяОбласть_РеестрКапремонт</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ИркутскаяОбласть_РеестрКапремонтУправлениеПоискомКонтекстноеМеню" id="192"/>
+								<ExtendedTooltip name="ИркутскаяОбласть_РеестрКапремонтУправлениеПоискомРасширеннаяПодсказка" id="193"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<ColumnGroup name="ИркутскаяОбласть_РеестрКапремонтГруппаФиксируемыеКолонки" id="242">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Иркутская область реестр капремонт группа фиксируемые колонки</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Иркутская область реестр капремонт группа фиксируемые колонки</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<FixingInTable>Left</FixingInTable>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрКапремонтГруппаФиксируемыеКолонкиРасширеннаяПодсказка" id="243"/>
+									<ChildItems>
+										<LabelField name="ИркутскаяОбласть_РеестрКапремонтНомерСтроки" id="194">
+											<DataPath>Объект.ИркутскаяОбласть_РеестрКапремонт.LineNumber</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ИркутскаяОбласть_РеестрКапремонтНомерСтрокиКонтекстноеМеню" id="195"/>
+											<ExtendedTooltip name="ИркутскаяОбласть_РеестрКапремонтНомерСтрокиРасширеннаяПодсказка" id="196"/>
+										</LabelField>
+										<InputField name="ИркутскаяОбласть_РеестрКапремонтЛицевойСчет" id="197">
+											<DataPath>Объект.ИркутскаяОбласть_РеестрКапремонт.ЛицевойСчет</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<AutoMarkIncomplete>true</AutoMarkIncomplete>
+											<ContextMenu name="ИркутскаяОбласть_РеестрКапремонтЛицевойСчетКонтекстноеМеню" id="198"/>
+											<ExtendedTooltip name="ИркутскаяОбласть_РеестрКапремонтЛицевойСчетРасширеннаяПодсказка" id="199"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<InputField name="ИркутскаяОбласть_РеестрКапремонтACCOUNT" id="200">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрКапремонт.ACCOUNT</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИркутскаяОбласть_РеестрКапремонтACCOUNTКонтекстноеМеню" id="201"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрКапремонтACCOUNTРасширеннаяПодсказка" id="202"/>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрКапремонтTOWN" id="203">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрКапремонт.TOWN</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИркутскаяОбласть_РеестрКапремонтTOWNКонтекстноеМеню" id="204"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрКапремонтTOWNРасширеннаяПодсказка" id="205"/>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрКапремонтSTREET" id="206">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрКапремонт.STREET</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИркутскаяОбласть_РеестрКапремонтSTREETКонтекстноеМеню" id="207"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрКапремонтSTREETРасширеннаяПодсказка" id="208"/>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрКапремонтHOUSE" id="209">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрКапремонт.HOUSE</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИркутскаяОбласть_РеестрКапремонтHOUSEКонтекстноеМеню" id="210"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрКапремонтHOUSEРасширеннаяПодсказка" id="211"/>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрКапремонтHOUSING" id="212">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрКапремонт.HOUSING</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИркутскаяОбласть_РеестрКапремонтHOUSINGКонтекстноеМеню" id="213"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрКапремонтHOUSINGРасширеннаяПодсказка" id="214"/>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрКапремонтFLAT" id="215">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрКапремонт.FLAT</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИркутскаяОбласть_РеестрКапремонтFLATКонтекстноеМеню" id="216"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрКапремонтFLATРасширеннаяПодсказка" id="217"/>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрКапремонтSQUARE" id="218">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрКапремонт.SQUARE</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterHorizontalAlign>Right</FooterHorizontalAlign>
+									<ContextMenu name="ИркутскаяОбласть_РеестрКапремонтSQUAREКонтекстноеМеню" id="219"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрКапремонтSQUAREРасширеннаяПодсказка" id="220"/>
+									<Events>
+										<Event name="OnChange">ПересчитатьИтогиПоКолонке</Event>
+									</Events>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрКапремонтPAYMENT" id="221">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрКапремонт.PAYMENT</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterHorizontalAlign>Right</FooterHorizontalAlign>
+									<ContextMenu name="ИркутскаяОбласть_РеестрКапремонтPAYMENTКонтекстноеМеню" id="222"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрКапремонтPAYMENTРасширеннаяПодсказка" id="223"/>
+									<Events>
+										<Event name="OnChange">ПересчитатьИтогиПоКолонке</Event>
+									</Events>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрКапремонтMIN_PAY" id="224">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрКапремонт.MIN_PAY</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИркутскаяОбласть_РеестрКапремонтMIN_PAYКонтекстноеМеню" id="225"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрКапремонтMIN_PAYРасширеннаяПодсказка" id="226"/>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрКапремонтNUM_MONTHS" id="227">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрКапремонт.NUM_MONTHS</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИркутскаяОбласть_РеестрКапремонтNUM_MONTHSКонтекстноеМеню" id="228"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрКапремонтNUM_MONTHSРасширеннаяПодсказка" id="229"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="РеестрТКО" id="244">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Реестр ТКО</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Реестр по обращению с твердыми коммунальными отходами</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="РеестрТКОРасширеннаяПодсказка" id="245"/>
+					<ChildItems>
+						<Table name="ИркутскаяОбласть_РеестрТКО" id="246">
+							<Footer>true</Footer>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.ИркутскаяОбласть_РеестрТКО</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ИркутскаяОбласть_РеестрТКОКонтекстноеМеню" id="247"/>
+							<AutoCommandBar name="ИркутскаяОбласть_РеестрТКОКоманднаяПанель" id="248">
+								<ChildItems>
+									<Button name="ИркутскаяОбласть_РеестрТКОКнопкаОплаченоЗаТКО" id="298">
+										<Type>CommandBarHyperlink</Type>
+										<SkipOnInput>true</SkipOnInput>
+										<Enabled>false</Enabled>
+										<CommandName>Form.Command.КомандаВыгрузить</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Всего оплачено за ТКО:</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTipRepresentation>None</ToolTipRepresentation>
+										<ExtendedTooltip name="ИркутскаяОбласть_РеестрТКОКнопкаОплаченоЗаТКОРасширеннаяПодсказка" id="299"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ИркутскаяОбласть_РеестрТКОРасширеннаяПодсказка" id="249"/>
+							<SearchStringAddition name="ИркутскаяОбласть_РеестрТКОСтрокаПоиска" id="250">
+								<AdditionSource>
+									<Item>ИркутскаяОбласть_РеестрТКО</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ИркутскаяОбласть_РеестрТКОСтрокаПоискаКонтекстноеМеню" id="251"/>
+								<ExtendedTooltip name="ИркутскаяОбласть_РеестрТКОСтрокаПоискаРасширеннаяПодсказка" id="252"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ИркутскаяОбласть_РеестрТКОСостояниеПросмотра" id="253">
+								<AdditionSource>
+									<Item>ИркутскаяОбласть_РеестрТКО</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ИркутскаяОбласть_РеестрТКОСостояниеПросмотраКонтекстноеМеню" id="254"/>
+								<ExtendedTooltip name="ИркутскаяОбласть_РеестрТКОСостояниеПросмотраРасширеннаяПодсказка" id="255"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ИркутскаяОбласть_РеестрТКОУправлениеПоиском" id="256">
+								<AdditionSource>
+									<Item>ИркутскаяОбласть_РеестрТКО</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ИркутскаяОбласть_РеестрТКОУправлениеПоискомКонтекстноеМеню" id="257"/>
+								<ExtendedTooltip name="ИркутскаяОбласть_РеестрТКОУправлениеПоискомРасширеннаяПодсказка" id="258"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<ColumnGroup name="ИркутскаяОбласть_РеестрТКОГруппаФиксируемыеКолонки" id="300">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Иркутская область реестр ТКОГруппа фиксируемые колонки</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Иркутская область реестр ТКОГруппа фиксируемые колонки</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<FixingInTable>Left</FixingInTable>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрТКОГруппаФиксируемыеКолонкиРасширеннаяПодсказка" id="301"/>
+									<ChildItems>
+										<LabelField name="ИркутскаяОбласть_РеестрТКОНомерСтроки" id="259">
+											<DataPath>Объект.ИркутскаяОбласть_РеестрТКО.LineNumber</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ИркутскаяОбласть_РеестрТКОНомерСтрокиКонтекстноеМеню" id="260"/>
+											<ExtendedTooltip name="ИркутскаяОбласть_РеестрТКОНомерСтрокиРасширеннаяПодсказка" id="261"/>
+										</LabelField>
+										<InputField name="ИркутскаяОбласть_РеестрТКОЛицевойСчет" id="302">
+											<DataPath>Объект.ИркутскаяОбласть_РеестрТКО.ЛицевойСчет</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ИркутскаяОбласть_РеестрТКОЛицевойСчетКонтекстноеМеню" id="303"/>
+											<ExtendedTooltip name="ИркутскаяОбласть_РеестрТКОЛицевойСчетРасширеннаяПодсказка" id="304"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<InputField name="ИркутскаяОбласть_РеестрТКОACCOUNT" id="262">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрТКО.ACCOUNT</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИркутскаяОбласть_РеестрТКОACCOUNTКонтекстноеМеню" id="263"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрТКОACCOUNTРасширеннаяПодсказка" id="264"/>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрТКОTOWN" id="265">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрТКО.TOWN</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИркутскаяОбласть_РеестрТКОTOWNКонтекстноеМеню" id="266"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрТКОTOWNРасширеннаяПодсказка" id="267"/>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрТКОSTREET" id="268">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрТКО.STREET</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИркутскаяОбласть_РеестрТКОSTREETКонтекстноеМеню" id="269"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрТКОSTREETРасширеннаяПодсказка" id="270"/>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрТКОHOUSE" id="271">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрТКО.HOUSE</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИркутскаяОбласть_РеестрТКОHOUSEКонтекстноеМеню" id="272"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрТКОHOUSEРасширеннаяПодсказка" id="273"/>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрТКОHOUSING" id="274">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрТКО.HOUSING</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИркутскаяОбласть_РеестрТКОHOUSINGКонтекстноеМеню" id="275"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрТКОHOUSINGРасширеннаяПодсказка" id="276"/>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрТКОFLAT" id="277">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрТКО.FLAT</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИркутскаяОбласть_РеестрТКОFLATКонтекстноеМеню" id="278"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрТКОFLATРасширеннаяПодсказка" id="279"/>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрТКОRG_COUNT" id="280">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрТКО.RG_COUNT</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterHorizontalAlign>Right</FooterHorizontalAlign>
+									<ContextMenu name="ИркутскаяОбласть_РеестрТКОRG_COUNTКонтекстноеМеню" id="281"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрТКОRG_COUNTРасширеннаяПодсказка" id="282"/>
+									<Events>
+										<Event name="OnChange">ПересчитатьИтогиПоКолонке</Event>
+									</Events>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрТКОFT_COUNT" id="283">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрТКО.FT_COUNT</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterHorizontalAlign>Right</FooterHorizontalAlign>
+									<ContextMenu name="ИркутскаяОбласть_РеестрТКОFT_COUNTКонтекстноеМеню" id="284"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрТКОFT_COUNTРасширеннаяПодсказка" id="285"/>
+									<Events>
+										<Event name="OnChange">ПересчитатьИтогиПоКолонке</Event>
+									</Events>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрТКОPAYMENT" id="286">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрТКО.PAYMENT</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterHorizontalAlign>Right</FooterHorizontalAlign>
+									<ContextMenu name="ИркутскаяОбласть_РеестрТКОPAYMENTКонтекстноеМеню" id="287"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрТКОPAYMENTРасширеннаяПодсказка" id="288"/>
+									<Events>
+										<Event name="OnChange">ПересчитатьИтогиПоКолонке</Event>
+									</Events>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрТКОTARIFF13" id="289">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрТКО.TARIFF13</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИркутскаяОбласть_РеестрТКОTARIFF13КонтекстноеМеню" id="290"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрТКОTARIFF13РасширеннаяПодсказка" id="291"/>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрТКОNORM13" id="292">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрТКО.NORM13</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИркутскаяОбласть_РеестрТКОNORM13КонтекстноеМеню" id="293"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрТКОNORM13РасширеннаяПодсказка" id="294"/>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_РеестрТКОDBT_MONT" id="295">
+									<DataPath>Объект.ИркутскаяОбласть_РеестрТКО.DBT_MONT</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИркутскаяОбласть_РеестрТКОDBT_MONTКонтекстноеМеню" id="296"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_РеестрТКОDBT_MONTРасширеннаяПодсказка" id="297"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.УПЖКХ_ВыгрузкиВОрганыСоцЗащиты</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ПериодСтрокой" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период строкой</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>15</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<View>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.ДобавлениеИзменениеДанныхФизическихЛицЗарплатаКадры">true</xr:Value>
+				<xr:Value name="Role.ПолныеПрава">true</xr:Value>
+				<xr:Value name="Role.ЧтениеДанныхФизическихЛицЗарплатаКадры">true</xr:Value>
+			</View>
+			<Edit>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.ДобавлениеИзменениеДанныхФизическихЛицЗарплатаКадры">true</xr:Value>
+				<xr:Value name="Role.ПолныеПрава">true</xr:Value>
+				<xr:Value name="Role.ЧтениеДанныхФизическихЛицЗарплатаКадры">true</xr:Value>
+			</Edit>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="РеестрЛСПоЖКУ" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реестр л/с по ЖКУ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РеестрЛСПоКапРемонт" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реестр л/с по капитальному ремонту</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СпособИдентификацииЛС" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Способ идентификации ЛС</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="РеквизитЛСДляИдентификации" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реквизит ЛС для идентификации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>20</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ФорматЗагружаемогоВыгружаемогоФайлаЖКУ" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Формат загружаемого/выгружаемого файла</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="КодировкаФайлаDBFЖКУ" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кодировка файла DBFЖКУ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ФорматЗагружаемогоВыгружаемогоФайлаКапремонт" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Формат загружаемого/выгружаемого файла</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="КодировкаФайлаDBFКапремонт" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кодировка файла DBFКапремонт</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ТипРеестра" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип реестра</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>10</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КоличествоДнейСледующегоМесяцаВТеченииКоторыхМожноОплатитьНачисленияЗаМесяцВыгрузки" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество дней следующего месяца в течении которых можно оплатить начисления за месяц выгрузки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>2</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КодировкаФайлаDBFТКО" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кодировка файла DBFТКО</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="РеестрЛСПоТКО" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реестр л/с по ТКО</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаНастройка" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Настройка</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаНастройка</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаЗагрузить" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда загрузить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда загрузить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаЗагрузить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаЗаполнить" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда заполнить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда заполнить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаЗаполнить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаВыгрузить" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда выгрузить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда выгрузить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаВыгрузить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

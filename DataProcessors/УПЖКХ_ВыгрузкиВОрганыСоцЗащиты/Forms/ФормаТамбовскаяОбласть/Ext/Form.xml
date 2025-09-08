@@ -1,0 +1,1166 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Тамбовская область: Выгрузка в ОСЗН</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаКомандаНастройка" id="1">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.КомандаНастройка</CommandName>
+				<Picture>
+					<xr:Ref>CommonPicture.Настройка</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Настройка</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаКомандаНастройкаРасширеннаяПодсказка" id="2"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="8"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаШапкаСлева" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шапка слева</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шапка слева</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаШапкаСлеваРасширеннаяПодсказка" id="10"/>
+					<ChildItems>
+						<InputField name="ПериодСтрокой" id="11">
+							<DataPath>ПериодСтрокой</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Период</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ChoiceButton>true</ChoiceButton>
+							<SpinButton>true</SpinButton>
+							<ChoiceButtonPicture>
+								<xr:Ref>StdPicture.InputFieldCalendar</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</ChoiceButtonPicture>
+							<ContextMenu name="ПериодСтрокойКонтекстноеМеню" id="12"/>
+							<ExtendedTooltip name="ПериодСтрокойExtendedTooltip" id="13"/>
+							<Events>
+								<Event name="OnChange">ПериодСтрокойПриИзменении</Event>
+								<Event name="AutoComplete">ПериодСтрокойАвтоПодбор</Event>
+								<Event name="StartChoice">ПериодСтрокойНачалоВыбора</Event>
+								<Event name="Tuning">ПериодСтрокойРегулирование</Event>
+								<Event name="TextEditEnd">ПериодСтрокойОкончаниеВводаТекста</Event>
+							</Events>
+						</InputField>
+						<InputField name="Организация" id="14">
+							<DataPath>Объект.Организация</DataPath>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="15"/>
+							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="16"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаШапкаСправа" id="17">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шапка справа</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шапка справа</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаШапкаСправаРасширеннаяПодсказка" id="18"/>
+					<ChildItems>
+						<InputField name="КодОрганизации" id="19">
+							<DataPath>КодОрганизации</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Код организации</v8:content>
+								</v8:item>
+							</Title>
+							<Wrap>false</Wrap>
+							<ChoiceFoldersAndItems>Folders</ChoiceFoldersAndItems>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="КодОрганизацииКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="КодОрганизацииРасширеннаяПодсказка" id="21"/>
+						</InputField>
+						<InputField name="ВидОтапливаемойПлощади" id="208">
+							<DataPath>ВидОтапливаемойПлощади</DataPath>
+							<ChoiceButton>true</ChoiceButton>
+							<OpenButton>false</OpenButton>
+							<ContextMenu name="ВидОтапливаемойПлощадиКонтекстноеМеню" id="209"/>
+							<ExtendedTooltip name="ВидОтапливаемойПлощадиРасширеннаяПодсказка" id="210"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="ГруппаСтраницыВыгрузки" id="211">
+			<ExtendedTooltip name="ГруппаСтраницыВыгрузкиРасширеннаяПодсказка" id="212"/>
+			<ChildItems>
+				<Page name="ТаблицаВыгрузкиНачислений" id="213">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Таблица выгрузки начислений</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Таблица выгрузки начислений</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ТаблицаВыгрузкиНачисленийРасширеннаяПодсказка" id="214"/>
+					<ChildItems>
+						<InputField name="КаталогЗагрузкиНачислений" id="350">
+							<DataPath>КаталогЗагрузкиНачислений</DataPath>
+							<ChoiceButton>true</ChoiceButton>
+							<OpenButton>true</OpenButton>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="КаталогЗагрузкиНачисленийКонтекстноеМеню" id="351"/>
+							<ExtendedTooltip name="КаталогЗагрузкиНачисленийРасширеннаяПодсказка" id="352"/>
+							<Events>
+								<Event name="StartChoice">КаталогЗагрузкиНачисленийНачалоВыбора</Event>
+								<Event name="Opening">КаталогЗагрузкиНачисленийОткрытие</Event>
+							</Events>
+						</InputField>
+						<InputField name="КаталогВыгрузкиНачислений" id="353">
+							<DataPath>КаталогВыгрузкиНачислений</DataPath>
+							<ChoiceButton>true</ChoiceButton>
+							<OpenButton>true</OpenButton>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="КаталогВыгрузкиНачисленийКонтекстноеМеню" id="354"/>
+							<ExtendedTooltip name="КаталогВыгрузкиНачисленийРасширеннаяПодсказка" id="355"/>
+							<Events>
+								<Event name="StartChoice">КаталогВыгрузкиНачисленийНачалоВыбора</Event>
+								<Event name="Opening">КаталогВыгрузкиНачисленийОткрытие</Event>
+							</Events>
+						</InputField>
+						<Table name="ТамбовскаяОбласть_ТаблицаНачислений" id="217">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.ТамбовскаяОбласть_ТаблицаНачислений</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ТамбовскаяОбласть_ТаблицаНачисленийКонтекстноеМеню" id="218"/>
+							<AutoCommandBar name="ТамбовскаяОбласть_ТаблицаНачисленийКоманднаяПанель" id="219">
+								<ChildItems>
+									<Button name="ФормаКомандаЗаполнить" id="3">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Command.КомандаЗаполнить</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Заполнить</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ФормаКомандаЗаполнитьРасширеннаяПодсказка" id="4"/>
+									</Button>
+									<Button name="ФормаКомандаВыгрузить" id="5">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Command.КомандаВыгрузить</CommandName>
+										<Picture>
+											<xr:Ref>CommonPicture.ВыгрузитьФайлСертификата</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Выгрузить</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ФормаКомандаВыгрузитьРасширеннаяПодсказка" id="6"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ТамбовскаяОбласть_ТаблицаНачисленийРасширеннаяПодсказка" id="220"/>
+							<SearchStringAddition name="ТамбовскаяОбласть_ТаблицаНачисленийСтрокаПоиска" id="221">
+								<AdditionSource>
+									<Item>ТамбовскаяОбласть_ТаблицаНачислений</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТамбовскаяОбласть_ТаблицаНачисленийСтрокаПоискаКонтекстноеМеню" id="222"/>
+								<ExtendedTooltip name="ТамбовскаяОбласть_ТаблицаНачисленийСтрокаПоискаРасширеннаяПодсказка" id="223"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТамбовскаяОбласть_ТаблицаНачисленийСостояниеПросмотра" id="224">
+								<AdditionSource>
+									<Item>ТамбовскаяОбласть_ТаблицаНачислений</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТамбовскаяОбласть_ТаблицаНачисленийСостояниеПросмотраКонтекстноеМеню" id="225"/>
+								<ExtendedTooltip name="ТамбовскаяОбласть_ТаблицаНачисленийСостояниеПросмотраРасширеннаяПодсказка" id="226"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТамбовскаяОбласть_ТаблицаНачисленийУправлениеПоиском" id="227">
+								<AdditionSource>
+									<Item>ТамбовскаяОбласть_ТаблицаНачислений</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТамбовскаяОбласть_ТаблицаНачисленийУправлениеПоискомКонтекстноеМеню" id="228"/>
+								<ExtendedTooltip name="ТамбовскаяОбласть_ТаблицаНачисленийУправлениеПоискомРасширеннаяПодсказка" id="229"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ТамбовскаяОбласть_ТаблицаНачисленийНомерСтроки" id="415">
+									<DataPath>Объект.ТамбовскаяОбласть_ТаблицаНачислений.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТамбовскаяОбласть_ТаблицаНачисленийНомерСтрокиКонтекстноеМеню" id="416"/>
+									<ExtendedTooltip name="ТамбовскаяОбласть_ТаблицаНачисленийНомерСтрокиРасширеннаяПодсказка" id="417"/>
+								</LabelField>
+								<InputField name="ТамбовскаяОбласть_ТаблицаНачисленийNPD" id="418">
+									<DataPath>Объект.ТамбовскаяОбласть_ТаблицаНачислений.NPD</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТамбовскаяОбласть_ТаблицаНачисленийNPDКонтекстноеМеню" id="419"/>
+									<ExtendedTooltip name="ТамбовскаяОбласть_ТаблицаНачисленийNPDРасширеннаяПодсказка" id="420"/>
+								</InputField>
+								<InputField name="ТамбовскаяОбласть_ТаблицаНачисленийЛицевойСчет" id="544">
+									<DataPath>Объект.ТамбовскаяОбласть_ТаблицаНачислений.ЛицевойСчет</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТамбовскаяОбласть_ТаблицаНачисленийЛицевойСчетКонтекстноеМеню" id="545"/>
+									<ExtendedTooltip name="ТамбовскаяОбласть_ТаблицаНачисленийЛицевойСчетРасширеннаяПодсказка" id="546"/>
+								</InputField>
+								<InputField name="ТамбовскаяОбласть_ТаблицаНачисленийFAM" id="421">
+									<DataPath>Объект.ТамбовскаяОбласть_ТаблицаНачислений.FAM</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТамбовскаяОбласть_ТаблицаНачисленийFAMКонтекстноеМеню" id="422"/>
+									<ExtendedTooltip name="ТамбовскаяОбласть_ТаблицаНачисленийFAMРасширеннаяПодсказка" id="423"/>
+								</InputField>
+								<InputField name="ТамбовскаяОбласть_ТаблицаНачисленийIM" id="424">
+									<DataPath>Объект.ТамбовскаяОбласть_ТаблицаНачислений.IM</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТамбовскаяОбласть_ТаблицаНачисленийIMКонтекстноеМеню" id="425"/>
+									<ExtendedTooltip name="ТамбовскаяОбласть_ТаблицаНачисленийIMРасширеннаяПодсказка" id="426"/>
+								</InputField>
+								<InputField name="ТамбовскаяОбласть_ТаблицаНачисленийOT" id="427">
+									<DataPath>Объект.ТамбовскаяОбласть_ТаблицаНачислений.OT</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТамбовскаяОбласть_ТаблицаНачисленийOTКонтекстноеМеню" id="428"/>
+									<ExtendedTooltip name="ТамбовскаяОбласть_ТаблицаНачисленийOTРасширеннаяПодсказка" id="429"/>
+								</InputField>
+								<InputField name="ТамбовскаяОбласть_ТаблицаНачисленийPIN" id="430">
+									<DataPath>Объект.ТамбовскаяОбласть_ТаблицаНачислений.PIN</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТамбовскаяОбласть_ТаблицаНачисленийPINКонтекстноеМеню" id="431"/>
+									<ExtendedTooltip name="ТамбовскаяОбласть_ТаблицаНачисленийPINРасширеннаяПодсказка" id="432"/>
+								</InputField>
+								<InputField name="ТамбовскаяОбласть_ТаблицаНачисленийRG" id="433">
+									<DataPath>Объект.ТамбовскаяОбласть_ТаблицаНачислений.RG</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТамбовскаяОбласть_ТаблицаНачисленийRGКонтекстноеМеню" id="434"/>
+									<ExtendedTooltip name="ТамбовскаяОбласть_ТаблицаНачисленийRGРасширеннаяПодсказка" id="435"/>
+								</InputField>
+								<InputField name="ТамбовскаяОбласть_ТаблицаНачисленийNSP" id="436">
+									<DataPath>Объект.ТамбовскаяОбласть_ТаблицаНачислений.NSP</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТамбовскаяОбласть_ТаблицаНачисленийNSPКонтекстноеМеню" id="437"/>
+									<ExtendedTooltip name="ТамбовскаяОбласть_ТаблицаНачисленийNSPРасширеннаяПодсказка" id="438"/>
+								</InputField>
+								<InputField name="ТамбовскаяОбласть_ТаблицаНачисленийULC" id="439">
+									<DataPath>Объект.ТамбовскаяОбласть_ТаблицаНачислений.ULC</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТамбовскаяОбласть_ТаблицаНачисленийULCКонтекстноеМеню" id="440"/>
+									<ExtendedTooltip name="ТамбовскаяОбласть_ТаблицаНачисленийULCРасширеннаяПодсказка" id="441"/>
+								</InputField>
+								<InputField name="ТамбовскаяОбласть_ТаблицаНачисленийDOM" id="442">
+									<DataPath>Объект.ТамбовскаяОбласть_ТаблицаНачислений.DOM</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТамбовскаяОбласть_ТаблицаНачисленийDOMКонтекстноеМеню" id="443"/>
+									<ExtendedTooltip name="ТамбовскаяОбласть_ТаблицаНачисленийDOMРасширеннаяПодсказка" id="444"/>
+								</InputField>
+								<InputField name="ТамбовскаяОбласть_ТаблицаНачисленийKOR" id="445">
+									<DataPath>Объект.ТамбовскаяОбласть_ТаблицаНачислений.KOR</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТамбовскаяОбласть_ТаблицаНачисленийKORКонтекстноеМеню" id="446"/>
+									<ExtendedTooltip name="ТамбовскаяОбласть_ТаблицаНачисленийKORРасширеннаяПодсказка" id="447"/>
+								</InputField>
+								<InputField name="ТамбовскаяОбласть_ТаблицаНачисленийKVR" id="448">
+									<DataPath>Объект.ТамбовскаяОбласть_ТаблицаНачислений.KVR</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТамбовскаяОбласть_ТаблицаНачисленийKVRКонтекстноеМеню" id="449"/>
+									<ExtendedTooltip name="ТамбовскаяОбласть_ТаблицаНачисленийKVRРасширеннаяПодсказка" id="450"/>
+								</InputField>
+								<InputField name="ТамбовскаяОбласть_ТаблицаНачисленийSERIES" id="451">
+									<DataPath>Объект.ТамбовскаяОбласть_ТаблицаНачислений.SERIES</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТамбовскаяОбласть_ТаблицаНачисленийSERIESКонтекстноеМеню" id="452"/>
+									<ExtendedTooltip name="ТамбовскаяОбласть_ТаблицаНачисленийSERIESРасширеннаяПодсказка" id="453"/>
+								</InputField>
+								<InputField name="ТамбовскаяОбласть_ТаблицаНачисленийNDOC" id="454">
+									<DataPath>Объект.ТамбовскаяОбласть_ТаблицаНачислений.NDOC</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТамбовскаяОбласть_ТаблицаНачисленийNDOCКонтекстноеМеню" id="455"/>
+									<ExtendedTooltip name="ТамбовскаяОбласть_ТаблицаНачисленийNDOCРасширеннаяПодсказка" id="456"/>
+								</InputField>
+								<InputField name="ТамбовскаяОбласть_ТаблицаНачисленийACCOUNT" id="457">
+									<DataPath>Объект.ТамбовскаяОбласть_ТаблицаНачислений.ACCOUNT</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТамбовскаяОбласть_ТаблицаНачисленийACCOUNTКонтекстноеМеню" id="458"/>
+									<ExtendedTooltip name="ТамбовскаяОбласть_ТаблицаНачисленийACCOUNTРасширеннаяПодсказка" id="459"/>
+								</InputField>
+								<InputField name="ТамбовскаяОбласть_ТаблицаНачисленийOKS" id="460">
+									<DataPath>Объект.ТамбовскаяОбласть_ТаблицаНачислений.OKS</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТамбовскаяОбласть_ТаблицаНачисленийOKSКонтекстноеМеню" id="461"/>
+									<ExtendedTooltip name="ТамбовскаяОбласть_ТаблицаНачисленийOKSРасширеннаяПодсказка" id="462"/>
+								</InputField>
+								<InputField name="ТамбовскаяОбласть_ТаблицаНачисленийKOLIG" id="463">
+									<DataPath>Объект.ТамбовскаяОбласть_ТаблицаНачислений.KOLIG</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТамбовскаяОбласть_ТаблицаНачисленийKOLIGКонтекстноеМеню" id="464"/>
+									<ExtendedTooltip name="ТамбовскаяОбласть_ТаблицаНачисленийKOLIGРасширеннаяПодсказка" id="465"/>
+								</InputField>
+								<InputField name="ТамбовскаяОбласть_ТаблицаНачисленийKOLLGTP" id="466">
+									<DataPath>Объект.ТамбовскаяОбласть_ТаблицаНачислений.KOLLGTP</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТамбовскаяОбласть_ТаблицаНачисленийKOLLGTPКонтекстноеМеню" id="467"/>
+									<ExtendedTooltip name="ТамбовскаяОбласть_ТаблицаНачисленийKOLLGTPРасширеннаяПодсказка" id="468"/>
+								</InputField>
+								<InputField name="ТамбовскаяОбласть_ТаблицаНачисленийKOLZR" id="469">
+									<DataPath>Объект.ТамбовскаяОбласть_ТаблицаНачислений.KOLZR</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТамбовскаяОбласть_ТаблицаНачисленийKOLZRКонтекстноеМеню" id="470"/>
+									<ExtendedTooltip name="ТамбовскаяОбласть_ТаблицаНачисленийKOLZRРасширеннаяПодсказка" id="471"/>
+								</InputField>
+								<InputField name="ТамбовскаяОбласть_ТаблицаНачисленийKOLPR" id="472">
+									<DataPath>Объект.ТамбовскаяОбласть_ТаблицаНачислений.KOLPR</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТамбовскаяОбласть_ТаблицаНачисленийKOLPRКонтекстноеМеню" id="473"/>
+									<ExtendedTooltip name="ТамбовскаяОбласть_ТаблицаНачисленийKOLPRРасширеннаяПодсказка" id="474"/>
+								</InputField>
+								<InputField name="ТамбовскаяОбласть_ТаблицаНачисленийКодУслугиВОСЗН" id="547">
+									<DataPath>Объект.ТамбовскаяОбласть_ТаблицаНачислений.КодУслугиВОСЗН</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТамбовскаяОбласть_ТаблицаНачисленийКодУслугиВОСЗНКонтекстноеМеню" id="548"/>
+									<ExtendedTooltip name="ТамбовскаяОбласть_ТаблицаНачисленийКодУслугиВОСЗНРасширеннаяПодсказка" id="549"/>
+								</InputField>
+								<InputField name="ТамбовскаяОбласть_ТаблицаНачисленийUNIT" id="541">
+									<DataPath>Объект.ТамбовскаяОбласть_ТаблицаНачислений.UNIT</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТамбовскаяОбласть_ТаблицаНачисленийUNITКонтекстноеМеню" id="542"/>
+									<ExtendedTooltip name="ТамбовскаяОбласть_ТаблицаНачисленийUNITРасширеннаяПодсказка" id="543"/>
+								</InputField>
+								<InputField name="ТамбовскаяОбласть_ТаблицаНачисленийTARIF" id="475">
+									<DataPath>Объект.ТамбовскаяОбласть_ТаблицаНачислений.TARIF</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТамбовскаяОбласть_ТаблицаНачисленийTARIFКонтекстноеМеню" id="476"/>
+									<ExtendedTooltip name="ТамбовскаяОбласть_ТаблицаНачисленийTARIFРасширеннаяПодсказка" id="477"/>
+								</InputField>
+								<InputField name="ТамбовскаяОбласть_ТаблицаНачисленийNORM" id="478">
+									<DataPath>Объект.ТамбовскаяОбласть_ТаблицаНачислений.NORM</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТамбовскаяОбласть_ТаблицаНачисленийNORMКонтекстноеМеню" id="479"/>
+									<ExtendedTooltip name="ТамбовскаяОбласть_ТаблицаНачисленийNORMРасширеннаяПодсказка" id="480"/>
+								</InputField>
+								<InputField name="ТамбовскаяОбласть_ТаблицаНачисленийVOLUME" id="481">
+									<DataPath>Объект.ТамбовскаяОбласть_ТаблицаНачислений.VOLUME</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТамбовскаяОбласть_ТаблицаНачисленийVOLUMEКонтекстноеМеню" id="482"/>
+									<ExtendedTooltip name="ТамбовскаяОбласть_ТаблицаНачисленийVOLUMEРасширеннаяПодсказка" id="483"/>
+								</InputField>
+								<InputField name="ТамбовскаяОбласть_ТаблицаНачисленийKODK" id="484">
+									<DataPath>Объект.ТамбовскаяОбласть_ТаблицаНачислений.KODK</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТамбовскаяОбласть_ТаблицаНачисленийKODKКонтекстноеМеню" id="485"/>
+									<ExtendedTooltip name="ТамбовскаяОбласть_ТаблицаНачисленийKODKРасширеннаяПодсказка" id="486"/>
+								</InputField>
+								<InputField name="ТамбовскаяОбласть_ТаблицаНачисленийG_PL" id="487">
+									<DataPath>Объект.ТамбовскаяОбласть_ТаблицаНачислений.G_PL</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТамбовскаяОбласть_ТаблицаНачисленийG_PLКонтекстноеМеню" id="488"/>
+									<ExtendedTooltip name="ТамбовскаяОбласть_ТаблицаНачисленийG_PLРасширеннаяПодсказка" id="489"/>
+								</InputField>
+								<InputField name="ТамбовскаяОбласть_ТаблицаНачисленийO_PL" id="490">
+									<DataPath>Объект.ТамбовскаяОбласть_ТаблицаНачислений.O_PL</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТамбовскаяОбласть_ТаблицаНачисленийO_PLКонтекстноеМеню" id="491"/>
+									<ExtendedTooltip name="ТамбовскаяОбласть_ТаблицаНачисленийO_PLРасширеннаяПодсказка" id="492"/>
+								</InputField>
+								<InputField name="ТамбовскаяОбласть_ТаблицаНачисленийH_PL" id="493">
+									<DataPath>Объект.ТамбовскаяОбласть_ТаблицаНачислений.H_PL</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТамбовскаяОбласть_ТаблицаНачисленийH_PLКонтекстноеМеню" id="494"/>
+									<ExtendedTooltip name="ТамбовскаяОбласть_ТаблицаНачисленийH_PLРасширеннаяПодсказка" id="495"/>
+								</InputField>
+								<InputField name="ТамбовскаяОбласть_ТаблицаНачисленийROOMS" id="496">
+									<DataPath>Объект.ТамбовскаяОбласть_ТаблицаНачислений.ROOMS</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТамбовскаяОбласть_ТаблицаНачисленийROOMSКонтекстноеМеню" id="497"/>
+									<ExtendedTooltip name="ТамбовскаяОбласть_ТаблицаНачисленийROOMSРасширеннаяПодсказка" id="498"/>
+								</InputField>
+								<InputField name="ТамбовскаяОбласть_ТаблицаНачисленийEL_PL" id="532">
+									<DataPath>Объект.ТамбовскаяОбласть_ТаблицаНачислений.EL_PL</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТамбовскаяОбласть_ТаблицаНачисленийEL_PLКонтекстноеМеню" id="533"/>
+									<ExtendedTooltip name="ТамбовскаяОбласть_ТаблицаНачисленийEL_PLРасширеннаяПодсказка" id="534"/>
+								</InputField>
+								<InputField name="ТамбовскаяОбласть_ТаблицаНачисленийEL_VN" id="535">
+									<DataPath>Объект.ТамбовскаяОбласть_ТаблицаНачислений.EL_VN</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТамбовскаяОбласть_ТаблицаНачисленийEL_VNКонтекстноеМеню" id="536"/>
+									<ExtendedTooltip name="ТамбовскаяОбласть_ТаблицаНачисленийEL_VNРасширеннаяПодсказка" id="537"/>
+								</InputField>
+								<InputField name="ТамбовскаяОбласть_ТаблицаНачисленийCHTYPE" id="499">
+									<DataPath>Объект.ТамбовскаяОбласть_ТаблицаНачислений.CHTYPE</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТамбовскаяОбласть_ТаблицаНачисленийCHTYPEКонтекстноеМеню" id="500"/>
+									<ExtendedTooltip name="ТамбовскаяОбласть_ТаблицаНачисленийCHTYPEРасширеннаяПодсказка" id="501"/>
+								</InputField>
+								<InputField name="ТамбовскаяОбласть_ТаблицаНачисленийMETERS" id="502">
+									<DataPath>Объект.ТамбовскаяОбласть_ТаблицаНачислений.METERS</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТамбовскаяОбласть_ТаблицаНачисленийMETERSКонтекстноеМеню" id="503"/>
+									<ExtendedTooltip name="ТамбовскаяОбласть_ТаблицаНачисленийMETERSРасширеннаяПодсказка" id="504"/>
+								</InputField>
+								<InputField name="ТамбовскаяОбласть_ТаблицаНачисленийPERCENT" id="505">
+									<DataPath>Объект.ТамбовскаяОбласть_ТаблицаНачислений.PERCENT</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТамбовскаяОбласть_ТаблицаНачисленийPERCENTКонтекстноеМеню" id="506"/>
+									<ExtendedTooltip name="ТамбовскаяОбласть_ТаблицаНачисленийPERCENTРасширеннаяПодсказка" id="507"/>
+								</InputField>
+								<InputField name="ТамбовскаяОбласть_ТаблицаНачисленийSUMN" id="508">
+									<DataPath>Объект.ТамбовскаяОбласть_ТаблицаНачислений.SUMN</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТамбовскаяОбласть_ТаблицаНачисленийSUMNКонтекстноеМеню" id="509"/>
+									<ExtendedTooltip name="ТамбовскаяОбласть_ТаблицаНачисленийSUMNРасширеннаяПодсказка" id="510"/>
+								</InputField>
+								<InputField name="ТамбовскаяОбласть_ТаблицаНачисленийSUM" id="511">
+									<DataPath>Объект.ТамбовскаяОбласть_ТаблицаНачислений.SUM</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТамбовскаяОбласть_ТаблицаНачисленийSUMКонтекстноеМеню" id="512"/>
+									<ExtendedTooltip name="ТамбовскаяОбласть_ТаблицаНачисленийSUMРасширеннаяПодсказка" id="513"/>
+								</InputField>
+								<InputField name="ТамбовскаяОбласть_ТаблицаНачисленийKMS" id="514">
+									<DataPath>Объект.ТамбовскаяОбласть_ТаблицаНачислений.KMS</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТамбовскаяОбласть_ТаблицаНачисленийKMSКонтекстноеМеню" id="515"/>
+									<ExtendedTooltip name="ТамбовскаяОбласть_ТаблицаНачисленийKMSРасширеннаяПодсказка" id="516"/>
+								</InputField>
+								<InputField name="ТамбовскаяОбласть_ТаблицаНачисленийGOD" id="517">
+									<DataPath>Объект.ТамбовскаяОбласть_ТаблицаНачислений.GOD</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТамбовскаяОбласть_ТаблицаНачисленийGODКонтекстноеМеню" id="518"/>
+									<ExtendedTooltip name="ТамбовскаяОбласть_ТаблицаНачисленийGODРасширеннаяПодсказка" id="519"/>
+								</InputField>
+								<InputField name="ТамбовскаяОбласть_ТаблицаНачисленийPER" id="520">
+									<DataPath>Объект.ТамбовскаяОбласть_ТаблицаНачислений.PER</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТамбовскаяОбласть_ТаблицаНачисленийPERКонтекстноеМеню" id="521"/>
+									<ExtendedTooltip name="ТамбовскаяОбласть_ТаблицаНачисленийPERРасширеннаяПодсказка" id="522"/>
+								</InputField>
+								<InputField name="ТамбовскаяОбласть_ТаблицаНачисленийOPLPOMES" id="523">
+									<DataPath>Объект.ТамбовскаяОбласть_ТаблицаНачислений.OPLPOMES</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТамбовскаяОбласть_ТаблицаНачисленийOPLPOMESКонтекстноеМеню" id="524"/>
+									<ExtendedTooltip name="ТамбовскаяОбласть_ТаблицаНачисленийOPLPOMESРасширеннаяПодсказка" id="525"/>
+								</InputField>
+								<InputField name="ТамбовскаяОбласть_ТаблицаНачисленийOPLPOGOD" id="526">
+									<DataPath>Объект.ТамбовскаяОбласть_ТаблицаНачислений.OPLPOGOD</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТамбовскаяОбласть_ТаблицаНачисленийOPLPOGODКонтекстноеМеню" id="527"/>
+									<ExtendedTooltip name="ТамбовскаяОбласть_ТаблицаНачисленийOPLPOGODРасширеннаяПодсказка" id="528"/>
+								</InputField>
+								<InputField name="ТамбовскаяОбласть_ТаблицаНачисленийDAYS" id="529">
+									<DataPath>Объект.ТамбовскаяОбласть_ТаблицаНачислений.DAYS</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТамбовскаяОбласть_ТаблицаНачисленийDAYSКонтекстноеМеню" id="530"/>
+									<ExtendedTooltip name="ТамбовскаяОбласть_ТаблицаНачисленийDAYSРасширеннаяПодсказка" id="531"/>
+								</InputField>
+								<InputField name="ТамбовскаяОбласть_ТаблицаНачисленийDOLG" id="538">
+									<DataPath>Объект.ТамбовскаяОбласть_ТаблицаНачислений.DOLG</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТамбовскаяОбласть_ТаблицаНачисленийDOLGКонтекстноеМеню" id="539"/>
+									<ExtendedTooltip name="ТамбовскаяОбласть_ТаблицаНачисленийDOLGРасширеннаяПодсказка" id="540"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ТаблицаЗагрузкиЛьгот" id="215">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Таблица загрузки льгот</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Таблица загрузки льгот</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ТаблицаЗагрузкиЛьготРасширеннаяПодсказка" id="216"/>
+					<ChildItems>
+						<InputField name="КаталогЗагрузкиЛьгот" id="356">
+							<DataPath>КаталогЗагрузкиЛьгот</DataPath>
+							<ChoiceButton>true</ChoiceButton>
+							<OpenButton>true</OpenButton>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="КаталогЗагрузкиЛьготКонтекстноеМеню" id="357"/>
+							<ExtendedTooltip name="КаталогЗагрузкиЛьготРасширеннаяПодсказка" id="358"/>
+							<Events>
+								<Event name="StartChoice">КаталогЗагрузкиЛьготНачалоВыбора</Event>
+								<Event name="Opening">КаталогЗагрузкиЛьготОткрытие</Event>
+							</Events>
+						</InputField>
+						<Table name="птТамбовскаяОбласть_ТаблицаДляЗагрузки" id="359">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>птТамбовскаяОбласть_ТаблицаДляЗагрузки</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="птТамбовскаяОбласть_ТаблицаДляЗагрузкиКонтекстноеМеню" id="360"/>
+							<AutoCommandBar name="птТамбовскаяОбласть_ТаблицаДляЗагрузкиКоманднаяПанель" id="361">
+								<ChildItems>
+									<Button name="птТамбовскаяОбласть_ТаблицаДляЗагрузкиКомандаЗаполнитьЗагрузкуЛьгот" id="405">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.КомандаЗаполнитьЗагрузкуЛьгот</CommandName>
+										<ExtendedTooltip name="птТамбовскаяОбласть_ТаблицаДляЗагрузкиКомандаЗаполнитьЗагрузкуЛьготРасширеннаяПодсказка" id="406"/>
+									</Button>
+									<Button name="птТамбовскаяОбласть_ТаблицаДляЗагрузкиКомандаЗаписатьВДокумент" id="407">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.КомандаЗаписатьВДокумент</CommandName>
+										<ExtendedTooltip name="птТамбовскаяОбласть_ТаблицаДляЗагрузкиКомандаЗаписатьВДокументРасширеннаяПодсказка" id="408"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="птТамбовскаяОбласть_ТаблицаДляЗагрузкиРасширеннаяПодсказка" id="362"/>
+							<SearchStringAddition name="птТамбовскаяОбласть_ТаблицаДляЗагрузкиСтрокаПоиска" id="363">
+								<AdditionSource>
+									<Item>птТамбовскаяОбласть_ТаблицаДляЗагрузки</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="птТамбовскаяОбласть_ТаблицаДляЗагрузкиСтрокаПоискаКонтекстноеМеню" id="364"/>
+								<ExtendedTooltip name="птТамбовскаяОбласть_ТаблицаДляЗагрузкиСтрокаПоискаРасширеннаяПодсказка" id="365"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="птТамбовскаяОбласть_ТаблицаДляЗагрузкиСостояниеПросмотра" id="366">
+								<AdditionSource>
+									<Item>птТамбовскаяОбласть_ТаблицаДляЗагрузки</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="птТамбовскаяОбласть_ТаблицаДляЗагрузкиСостояниеПросмотраКонтекстноеМеню" id="367"/>
+								<ExtendedTooltip name="птТамбовскаяОбласть_ТаблицаДляЗагрузкиСостояниеПросмотраРасширеннаяПодсказка" id="368"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="птТамбовскаяОбласть_ТаблицаДляЗагрузкиУправлениеПоиском" id="369">
+								<AdditionSource>
+									<Item>птТамбовскаяОбласть_ТаблицаДляЗагрузки</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="птТамбовскаяОбласть_ТаблицаДляЗагрузкиУправлениеПоискомКонтекстноеМеню" id="370"/>
+								<ExtendedTooltip name="птТамбовскаяОбласть_ТаблицаДляЗагрузкиУправлениеПоискомРасширеннаяПодсказка" id="371"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="птТамбовскаяОбласть_ТаблицаДляЗагрузкиЛицевойСчет" id="372">
+									<DataPath>птТамбовскаяОбласть_ТаблицаДляЗагрузки.ЛицевойСчет</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="птТамбовскаяОбласть_ТаблицаДляЗагрузкиЛицевойСчетКонтекстноеМеню" id="373"/>
+									<ExtendedTooltip name="птТамбовскаяОбласть_ТаблицаДляЗагрузкиЛицевойСчетРасширеннаяПодсказка" id="374"/>
+								</InputField>
+								<InputField name="птТамбовскаяОбласть_ТаблицаДляЗагрузкиЛьготник" id="399">
+									<DataPath>птТамбовскаяОбласть_ТаблицаДляЗагрузки.Льготник</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="птТамбовскаяОбласть_ТаблицаДляЗагрузкиЛьготникКонтекстноеМеню" id="400"/>
+									<ExtendedTooltip name="птТамбовскаяОбласть_ТаблицаДляЗагрузкиЛьготникРасширеннаяПодсказка" id="401"/>
+								</InputField>
+								<InputField name="птТамбовскаяОбласть_ТаблицаДляЗагрузкиNSP" id="381">
+									<DataPath>птТамбовскаяОбласть_ТаблицаДляЗагрузки.NSP</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="птТамбовскаяОбласть_ТаблицаДляЗагрузкиNSPКонтекстноеМеню" id="382"/>
+									<ExtendedTooltip name="птТамбовскаяОбласть_ТаблицаДляЗагрузкиNSPРасширеннаяПодсказка" id="383"/>
+								</InputField>
+								<InputField name="птТамбовскаяОбласть_ТаблицаДляЗагрузкиULC" id="384">
+									<DataPath>птТамбовскаяОбласть_ТаблицаДляЗагрузки.ULC</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="птТамбовскаяОбласть_ТаблицаДляЗагрузкиULCКонтекстноеМеню" id="385"/>
+									<ExtendedTooltip name="птТамбовскаяОбласть_ТаблицаДляЗагрузкиULCРасширеннаяПодсказка" id="386"/>
+								</InputField>
+								<InputField name="птТамбовскаяОбласть_ТаблицаДляЗагрузкиDOM" id="387">
+									<DataPath>птТамбовскаяОбласть_ТаблицаДляЗагрузки.DOM</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="птТамбовскаяОбласть_ТаблицаДляЗагрузкиDOMКонтекстноеМеню" id="388"/>
+									<ExtendedTooltip name="птТамбовскаяОбласть_ТаблицаДляЗагрузкиDOMРасширеннаяПодсказка" id="389"/>
+								</InputField>
+								<InputField name="птТамбовскаяОбласть_ТаблицаДляЗагрузкиKOR" id="390">
+									<DataPath>птТамбовскаяОбласть_ТаблицаДляЗагрузки.KOR</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="птТамбовскаяОбласть_ТаблицаДляЗагрузкиKORКонтекстноеМеню" id="391"/>
+									<ExtendedTooltip name="птТамбовскаяОбласть_ТаблицаДляЗагрузкиKORРасширеннаяПодсказка" id="392"/>
+								</InputField>
+								<InputField name="птТамбовскаяОбласть_ТаблицаДляЗагрузкиKVR" id="393">
+									<DataPath>птТамбовскаяОбласть_ТаблицаДляЗагрузки.KVR</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="птТамбовскаяОбласть_ТаблицаДляЗагрузкиKVRКонтекстноеМеню" id="394"/>
+									<ExtendedTooltip name="птТамбовскаяОбласть_ТаблицаДляЗагрузкиKVRРасширеннаяПодсказка" id="395"/>
+								</InputField>
+								<InputField name="птТамбовскаяОбласть_ТаблицаДляЗагрузкиACCOUNT" id="396">
+									<DataPath>птТамбовскаяОбласть_ТаблицаДляЗагрузки.ACCOUNT</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="птТамбовскаяОбласть_ТаблицаДляЗагрузкиACCOUNTКонтекстноеМеню" id="397"/>
+									<ExtendedTooltip name="птТамбовскаяОбласть_ТаблицаДляЗагрузкиACCOUNTРасширеннаяПодсказка" id="398"/>
+								</InputField>
+								<InputField name="птТамбовскаяОбласть_ТаблицаДляЗагрузкиKODK" id="378">
+									<DataPath>птТамбовскаяОбласть_ТаблицаДляЗагрузки.KODK</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="птТамбовскаяОбласть_ТаблицаДляЗагрузкиKODKКонтекстноеМеню" id="379"/>
+									<ExtendedTooltip name="птТамбовскаяОбласть_ТаблицаДляЗагрузкиKODKРасширеннаяПодсказка" id="380"/>
+								</InputField>
+								<InputField name="птТамбовскаяОбласть_ТаблицаДляЗагрузкиКодУслугиВОСЗН" id="412">
+									<DataPath>птТамбовскаяОбласть_ТаблицаДляЗагрузки.КодУслугиВОСЗН</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="птТамбовскаяОбласть_ТаблицаДляЗагрузкиКодУслугиВОСЗНКонтекстноеМеню" id="413"/>
+									<ExtendedTooltip name="птТамбовскаяОбласть_ТаблицаДляЗагрузкиКодУслугиВОСЗНРасширеннаяПодсказка" id="414"/>
+								</InputField>
+								<InputField name="птТамбовскаяОбласть_ТаблицаДляЗагрузкиSUM" id="375">
+									<DataPath>птТамбовскаяОбласть_ТаблицаДляЗагрузки.SUM</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="птТамбовскаяОбласть_ТаблицаДляЗагрузкиSUMКонтекстноеМеню" id="376"/>
+									<ExtendedTooltip name="птТамбовскаяОбласть_ТаблицаДляЗагрузкиSUMРасширеннаяПодсказка" id="377"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<InputField name="ДокументНачислениеУслугВСторонейПрограмме" id="402">
+							<DataPath>ДокументНачислениеУслугВСторонейПрограмме</DataPath>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Документ "Начисление услуг в сторонней программе"</v8:content>
+								</v8:item>
+							</ToolTip>
+							<DropListButton>false</DropListButton>
+							<ChoiceButton>true</ChoiceButton>
+							<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+							<ClearButton>true</ClearButton>
+							<OpenButton>true</OpenButton>
+							<ContextMenu name="ДокументНачислениеУслугВСторонейПрограммеКонтекстноеМеню" id="403"/>
+							<ExtendedTooltip name="ДокументНачислениеУслугВСторонейПрограммеРасширеннаяПодсказка" id="404"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.УПЖКХ_ВыгрузкиВОрганыСоцЗащиты</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ПериодСтрокой" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период строкой</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>15</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<View>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.ДобавлениеИзменениеДанныхФизическихЛицЗарплатаКадры">true</xr:Value>
+				<xr:Value name="Role.ПолныеПрава">true</xr:Value>
+				<xr:Value name="Role.ЧтениеДанныхФизическихЛицЗарплатаКадры">true</xr:Value>
+			</View>
+			<Edit>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.ДобавлениеИзменениеДанныхФизическихЛицЗарплатаКадры">true</xr:Value>
+				<xr:Value name="Role.ПолныеПрава">true</xr:Value>
+				<xr:Value name="Role.ЧтениеДанныхФизическихЛицЗарплатаКадры">true</xr:Value>
+			</Edit>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="КаталогЗагрузкиЛьгот" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Каталог загрузки льгот</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>512</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="КодОрганизации" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код организации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>20</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="КаталогВыгрузкиНачислений" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Каталог выгрузки начислений</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>512</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ВидОтапливаемойПлощади" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид отапливаемой площади</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.УПЖКХ_ВидыПлощадей</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="КаталогЗагрузкиНачислений" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Каталог загрузки начислений</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>512</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ФайлЗагрузкиУслуг" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Файл загрузки услуг</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>512</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ФайлЗагрузкиЛьготныхКатегорий" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Файл загрузки льготных категорий</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>512</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ДокументНачислениеУслугВСторонейПрограмме" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начисление услуг</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DocumentRef.УПЖКХ_НачислениеУслугВСтороннейПрограмме</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="птТамбовскаяОбласть_ТаблицаДляЗагрузки" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тамбовская область, таблица для загрузки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ЛицевойСчет" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Лицевой счет в базе</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.КВП_ЛицевыеСчета</v8:Type>
+					</Type>
+				</Column>
+				<Column name="SUM" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма льготы</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>9</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="KODK" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код льготной категории</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>2</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="NSP" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Населенный пункт</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>30</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ULC" id="13">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Улица</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>30</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="DOM" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дом</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>7</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="KOR" id="15">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Корпус</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>5</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="KVR" id="16">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Квартира</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>5</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ACCOUNT" id="17">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идентификатор лицевого счета</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>15</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Льготник" id="18">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Льготник</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.УПЖКХ_Жильцы</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ДоговорКонтрагента" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Договор контрагента</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ДоговорыКонтрагентов</v8:Type>
+					</Type>
+				</Column>
+				<Column name="КодУслугиВОСЗН" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код услуги ВОСЗН</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>10</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="КодУслугиОтопления" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код в ОСЗН для услуги "Отопление"</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>10</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="РасширениеПодключено" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расширение подключено</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаНастройка" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Настройка</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаНастройка</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаЗаполнить" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ЗаполнитьФорму</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаЗаполнить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаВыгрузить" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ВыгрузитьФайлСертификата</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаВыгрузить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаЗаполнитьЗагрузкуЛьгот" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ЗаполнитьФорму</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаЗаполнитьЗагрузкуЛьгот</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаЗаписатьВДокумент" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать документ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать документ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Write</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаЗаписатьВДокумент</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

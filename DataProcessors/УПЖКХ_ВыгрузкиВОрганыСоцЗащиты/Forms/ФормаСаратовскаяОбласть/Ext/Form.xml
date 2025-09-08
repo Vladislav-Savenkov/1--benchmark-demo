@@ -1,0 +1,992 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Саратовская область: Выгрузка в ОСЗН</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаКомандаНастройка" id="1">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.КомандаНастройка</CommandName>
+				<ExtendedTooltip name="ФормаКомандаНастройкаРасширеннаяПодсказка" id="2"/>
+			</Button>
+			<Button name="ТаблицаВыгрузкиКомандаЗагрузить" id="200">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.КомандаЗагрузить</CommandName>
+				<ExtendedTooltip name="ТаблицаВыгрузкиКомандаЗагрузитьРасширеннаяПодсказка" id="201"/>
+			</Button>
+			<Button name="ТаблицаВыгрузкиКомандаЗаполнить" id="202">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.КомандаЗаполнить</CommandName>
+				<ExtendedTooltip name="ТаблицаВыгрузкиКомандаЗаполнитьРасширеннаяПодсказка" id="203"/>
+			</Button>
+			<Button name="КомандаВыгрузить" id="25">
+				<Type>CommandBarButton</Type>
+				<DefaultItem>true</DefaultItem>
+				<CommandName>Form.Command.КомандаВыгрузить</CommandName>
+				<ExtendedTooltip name="КомандаВыгрузитьРасширеннаяПодсказка" id="26"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="4"/>
+			<ChildItems>
+				<InputField name="ПериодСтрокой" id="5">
+					<DataPath>ПериодСтрокой</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Период</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сведения об инвалидности действуют с</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ChoiceButton>true</ChoiceButton>
+					<SpinButton>true</SpinButton>
+					<TextEdit>false</TextEdit>
+					<ChoiceButtonPicture>
+						<xr:Ref>StdPicture.InputFieldCalendar</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</ChoiceButtonPicture>
+					<ContextMenu name="ПериодСтрокойКонтекстноеМеню" id="6"/>
+					<ExtendedTooltip name="ПериодСтрокойExtendedTooltip" id="7"/>
+					<Events>
+						<Event name="OnChange">ПериодСтрокойПриИзменении</Event>
+						<Event name="AutoComplete">ПериодСтрокойАвтоПодбор</Event>
+						<Event name="StartChoice">ПериодСтрокойНачалоВыбора</Event>
+						<Event name="Tuning">ПериодСтрокойРегулирование</Event>
+						<Event name="TextEditEnd">ПериодСтрокойОкончаниеВводаТекста</Event>
+					</Events>
+				</InputField>
+				<UsualGroup name="ГруппаГруппировка" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа группировка</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа группировка</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаГруппировкаРасширеннаяПодсказка" id="9"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаЛевая" id="10">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа левая</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа левая</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаЛеваяРасширеннаяПодсказка" id="11"/>
+							<ChildItems>
+								<InputField name="Организация" id="12">
+									<DataPath>Объект.Организация</DataPath>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<TextEdit>false</TextEdit>
+									<ContextMenu name="ОрганизацияКонтекстноеМеню" id="13"/>
+									<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="14"/>
+								</InputField>
+								<InputField name="ИмяФайлаЗагрузки" id="99">
+									<DataPath>Объект.ИмяФайлаЗагрузки</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Входящий ZIP</v8:content>
+										</v8:item>
+									</Title>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<ChoiceButton>true</ChoiceButton>
+									<OpenButton>true</OpenButton>
+									<ContextMenu name="ИмяФайлаЗагрузкиКонтекстноеМеню" id="100"/>
+									<ExtendedTooltip name="ИмяФайлаЗагрузкиРасширеннаяПодсказка" id="101"/>
+									<Events>
+										<Event name="StartChoice">ИмяФайлаЗагрузкиНачалоВыбора</Event>
+										<Event name="Opening">ИмяФайлаЗагрузкиОткрытие</Event>
+									</Events>
+								</InputField>
+								<InputField name="ИмяКаталогаВыгрузки" id="15">
+									<DataPath>Объект.ИмяКаталогаВыгрузки</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Католог выгрузки</v8:content>
+										</v8:item>
+									</Title>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<ChoiceButton>true</ChoiceButton>
+									<OpenButton>true</OpenButton>
+									<TextEdit>false</TextEdit>
+									<ContextMenu name="ИмяКаталогаВыгрузкиКонтекстноеМеню" id="16"/>
+									<ExtendedTooltip name="ИмяКаталогаВыгрузкиРасширеннаяПодсказка" id="17"/>
+									<Events>
+										<Event name="StartChoice">ИмяКаталогаВыгрузкиНачалоВыбора</Event>
+										<Event name="Opening">ИмяКаталогаВыгрузкиОткрытие</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПравая" id="18">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа правая</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа правая</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПраваяРасширеннаяПодсказка" id="19"/>
+							<ChildItems>
+								<InputField name="КодОрганизации" id="20">
+									<DataPath>Объект.КодОрганизации</DataPath>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧГ=0</v8:content>
+										</v8:item>
+									</EditFormat>
+									<ContextMenu name="КодОрганизацииКонтекстноеМеню" id="21"/>
+									<ExtendedTooltip name="КодОрганизацииРасширеннаяПодсказка" id="22"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="СтраницыТаблицВыгрузки" id="333">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы таблиц выгрузки</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="СтраницыТаблицВыгрузкиРасширеннаяПодсказка" id="334"/>
+			<ChildItems>
+				<Page name="ГруппаСведенияОНачислениях" id="335">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сведения о начислениях</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаСведенияОНачисленияхРасширеннаяПодсказка" id="336"/>
+					<ChildItems>
+						<Table name="ТаблицаВыгрузки" id="130">
+							<Representation>List</Representation>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузки</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ТаблицаВыгрузкиКонтекстноеМеню" id="131"/>
+							<AutoCommandBar name="ТаблицаВыгрузкиКоманднаяПанель" id="132"/>
+							<ExtendedTooltip name="ТаблицаВыгрузкиРасширеннаяПодсказка" id="133"/>
+							<SearchStringAddition name="ТаблицаВыгрузкиСтрокаПоиска" id="134">
+								<AdditionSource>
+									<Item>ТаблицаВыгрузки</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаВыгрузкиСтрокаПоискаКонтекстноеМеню" id="137"/>
+								<ExtendedTooltip name="ТаблицаВыгрузкиСтрокаПоискаРасширеннаяПодсказка" id="138"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТаблицаВыгрузкиСостояниеПросмотра" id="139">
+								<AdditionSource>
+									<Item>ТаблицаВыгрузки</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаВыгрузкиСостояниеПросмотраКонтекстноеМеню" id="142"/>
+								<ExtendedTooltip name="ТаблицаВыгрузкиСостояниеПросмотраРасширеннаяПодсказка" id="143"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТаблицаВыгрузкиУправлениеПоиском" id="144">
+								<AdditionSource>
+									<Item>ТаблицаВыгрузки</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаВыгрузкиУправлениеПоискомКонтекстноеМеню" id="147"/>
+								<ExtendedTooltip name="ТаблицаВыгрузкиУправлениеПоискомРасширеннаяПодсказка" id="148"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ТаблицаВыгрузкиНомерСтроки" id="493">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузки.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаВыгрузкиНомерСтрокиКонтекстноеМеню" id="494"/>
+									<ExtendedTooltip name="ТаблицаВыгрузкиНомерСтрокиРасширеннаяПодсказка" id="495"/>
+								</LabelField>
+								<InputField name="ТаблицаВыгрузкиНОМЕР_ЖП" id="496">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузки.НОМЕР_ЖП</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаВыгрузкиНОМЕР_ЖПКонтекстноеМеню" id="497"/>
+									<ExtendedTooltip name="ТаблицаВыгрузкиНОМЕР_ЖПРасширеннаяПодсказка" id="498"/>
+								</InputField>
+								<InputField name="ТаблицаВыгрузкиЛИЦ_СЧ" id="499">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузки.ЛИЦ_СЧ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаВыгрузкиЛИЦ_СЧКонтекстноеМеню" id="500"/>
+									<ExtendedTooltip name="ТаблицаВыгрузкиЛИЦ_СЧРасширеннаяПодсказка" id="501"/>
+								</InputField>
+								<InputField name="ТаблицаВыгрузкиРАЙОН" id="502">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузки.РАЙОН</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаВыгрузкиРАЙОНКонтекстноеМеню" id="503"/>
+									<ExtendedTooltip name="ТаблицаВыгрузкиРАЙОНРасширеннаяПодсказка" id="504"/>
+								</InputField>
+								<InputField name="ТаблицаВыгрузкиНАС_П_ТИП" id="505">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузки.НАС_П_ТИП</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаВыгрузкиНАС_П_ТИПКонтекстноеМеню" id="506"/>
+									<ExtendedTooltip name="ТаблицаВыгрузкиНАС_П_ТИПРасширеннаяПодсказка" id="507"/>
+								</InputField>
+								<InputField name="ТаблицаВыгрузкиНАС_П_НАИМ" id="508">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузки.НАС_П_НАИМ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаВыгрузкиНАС_П_НАИМКонтекстноеМеню" id="509"/>
+									<ExtendedTooltip name="ТаблицаВыгрузкиНАС_П_НАИМРасширеннаяПодсказка" id="510"/>
+								</InputField>
+								<InputField name="ТаблицаВыгрузкиУЛ_ТИП" id="511">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузки.УЛ_ТИП</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаВыгрузкиУЛ_ТИПКонтекстноеМеню" id="512"/>
+									<ExtendedTooltip name="ТаблицаВыгрузкиУЛ_ТИПРасширеннаяПодсказка" id="513"/>
+								</InputField>
+								<InputField name="ТаблицаВыгрузкиУЛ_НАИМ" id="514">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузки.УЛ_НАИМ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаВыгрузкиУЛ_НАИМКонтекстноеМеню" id="515"/>
+									<ExtendedTooltip name="ТаблицаВыгрузкиУЛ_НАИМРасширеннаяПодсказка" id="516"/>
+								</InputField>
+								<InputField name="ТаблицаВыгрузкиДОМ" id="517">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузки.ДОМ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаВыгрузкиДОМКонтекстноеМеню" id="518"/>
+									<ExtendedTooltip name="ТаблицаВыгрузкиДОМРасширеннаяПодсказка" id="519"/>
+								</InputField>
+								<InputField name="ТаблицаВыгрузкиКОРПУС" id="520">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузки.КОРПУС</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаВыгрузкиКОРПУСКонтекстноеМеню" id="521"/>
+									<ExtendedTooltip name="ТаблицаВыгрузкиКОРПУСРасширеннаяПодсказка" id="522"/>
+								</InputField>
+								<InputField name="ТаблицаВыгрузкиКВАРТИРА" id="523">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузки.КВАРТИРА</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаВыгрузкиКВАРТИРАКонтекстноеМеню" id="524"/>
+									<ExtendedTooltip name="ТаблицаВыгрузкиКВАРТИРАРасширеннаяПодсказка" id="525"/>
+								</InputField>
+								<InputField name="ТаблицаВыгрузкиКОМНАТА" id="526">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузки.КОМНАТА</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаВыгрузкиКОМНАТАКонтекстноеМеню" id="527"/>
+									<ExtendedTooltip name="ТаблицаВыгрузкиКОМНАТАРасширеннаяПодсказка" id="528"/>
+								</InputField>
+								<InputField name="ТаблицаВыгрузкиМЕСЯЦ" id="529">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузки.МЕСЯЦ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаВыгрузкиМЕСЯЦКонтекстноеМеню" id="530"/>
+									<ExtendedTooltip name="ТаблицаВыгрузкиМЕСЯЦРасширеннаяПодсказка" id="531"/>
+								</InputField>
+								<InputField name="ТаблицаВыгрузкиПРИЗ_ЖП" id="532">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузки.ПРИЗ_ЖП</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаВыгрузкиПРИЗ_ЖПКонтекстноеМеню" id="533"/>
+									<ExtendedTooltip name="ТаблицаВыгрузкиПРИЗ_ЖПРасширеннаяПодсказка" id="534"/>
+								</InputField>
+								<InputField name="ТаблицаВыгрузкиПРИЗ_ЛС" id="535">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузки.ПРИЗ_ЛС</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаВыгрузкиПРИЗ_ЛСКонтекстноеМеню" id="536"/>
+									<ExtendedTooltip name="ТаблицаВыгрузкиПРИЗ_ЛСРасширеннаяПодсказка" id="537"/>
+								</InputField>
+								<InputField name="ТаблицаВыгрузкиНАЧИСЛЕНИЯ" id="538">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузки.НАЧИСЛЕНИЯ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаВыгрузкиНАЧИСЛЕНИЯКонтекстноеМеню" id="539"/>
+									<ExtendedTooltip name="ТаблицаВыгрузкиНАЧИСЛЕНИЯРасширеннаяПодсказка" id="540"/>
+								</InputField>
+								<InputField name="ТаблицаВыгрузкиПРЕКРАЩ_УСЛ" id="541">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузки.ПРЕКРАЩ_УСЛ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаВыгрузкиПРЕКРАЩ_УСЛКонтекстноеМеню" id="542"/>
+									<ExtendedTooltip name="ТаблицаВыгрузкиПРЕКРАЩ_УСЛРасширеннаяПодсказка" id="543"/>
+								</InputField>
+								<InputField name="ТаблицаВыгрузкиУСЛУГА" id="544">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузки.УСЛУГА</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаВыгрузкиУСЛУГАКонтекстноеМеню" id="545"/>
+									<ExtendedTooltip name="ТаблицаВыгрузкиУСЛУГАРасширеннаяПодсказка" id="546"/>
+								</InputField>
+								<InputField name="ТаблицаВыгрузкиКОЛ_ПРОЖ" id="547">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузки.КОЛ_ПРОЖ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаВыгрузкиКОЛ_ПРОЖКонтекстноеМеню" id="548"/>
+									<ExtendedTooltip name="ТаблицаВыгрузкиКОЛ_ПРОЖРасширеннаяПодсказка" id="549"/>
+								</InputField>
+								<InputField name="ТаблицаВыгрузкиКОЛ_СОБСТ" id="550">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузки.КОЛ_СОБСТ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаВыгрузкиКОЛ_СОБСТКонтекстноеМеню" id="551"/>
+									<ExtendedTooltip name="ТаблицаВыгрузкиКОЛ_СОБСТРасширеннаяПодсказка" id="552"/>
+								</InputField>
+								<InputField name="ТаблицаВыгрузкиЛ_СЧ_ИЗМ" id="553">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузки.Л_СЧ_ИЗМ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаВыгрузкиЛ_СЧ_ИЗМКонтекстноеМеню" id="554"/>
+									<ExtendedTooltip name="ТаблицаВыгрузкиЛ_СЧ_ИЗМРасширеннаяПодсказка" id="555"/>
+								</InputField>
+								<InputField name="ТаблицаВыгрузкиЛ_СЧ_ИЗМ_Д" id="556">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузки.Л_СЧ_ИЗМ_Д</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаВыгрузкиЛ_СЧ_ИЗМ_ДКонтекстноеМеню" id="557"/>
+									<ExtendedTooltip name="ТаблицаВыгрузкиЛ_СЧ_ИЗМ_ДРасширеннаяПодсказка" id="558"/>
+								</InputField>
+								<InputField name="ТаблицаВыгрузкиЛПУ" id="559">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузки.ЛПУ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаВыгрузкиЛПУКонтекстноеМеню" id="560"/>
+									<ExtendedTooltip name="ТаблицаВыгрузкиЛПУРасширеннаяПодсказка" id="561"/>
+								</InputField>
+								<InputField name="ТаблицаВыгрузкиЛПУ_Х_ВОДА" id="562">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузки.ЛПУ_Х_ВОДА</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаВыгрузкиЛПУ_Х_ВОДАКонтекстноеМеню" id="563"/>
+									<ExtendedTooltip name="ТаблицаВыгрузкиЛПУ_Х_ВОДАРасширеннаяПодсказка" id="564"/>
+								</InputField>
+								<InputField name="ТаблицаВыгрузкиЛПУ_Г_ВОДА" id="565">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузки.ЛПУ_Г_ВОДА</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаВыгрузкиЛПУ_Г_ВОДАКонтекстноеМеню" id="566"/>
+									<ExtendedTooltip name="ТаблицаВыгрузкиЛПУ_Г_ВОДАРасширеннаяПодсказка" id="567"/>
+								</InputField>
+								<InputField name="ТаблицаВыгрузкиЛПУ_ГАЗ" id="568">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузки.ЛПУ_ГАЗ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаВыгрузкиЛПУ_ГАЗКонтекстноеМеню" id="569"/>
+									<ExtendedTooltip name="ТаблицаВыгрузкиЛПУ_ГАЗРасширеннаяПодсказка" id="570"/>
+								</InputField>
+								<InputField name="ТаблицаВыгрузкиЛПУ_ОТОПЛ" id="571">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузки.ЛПУ_ОТОПЛ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаВыгрузкиЛПУ_ОТОПЛКонтекстноеМеню" id="572"/>
+									<ExtendedTooltip name="ТаблицаВыгрузкиЛПУ_ОТОПЛРасширеннаяПодсказка" id="573"/>
+								</InputField>
+								<InputField name="ТаблицаВыгрузкиЛПУ_ЭЛЕКТ" id="574">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузки.ЛПУ_ЭЛЕКТ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаВыгрузкиЛПУ_ЭЛЕКТКонтекстноеМеню" id="575"/>
+									<ExtendedTooltip name="ТаблицаВыгрузкиЛПУ_ЭЛЕКТРасширеннаяПодсказка" id="576"/>
+								</InputField>
+								<InputField name="ТаблицаВыгрузкиОПУ" id="577">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузки.ОПУ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаВыгрузкиОПУКонтекстноеМеню" id="578"/>
+									<ExtendedTooltip name="ТаблицаВыгрузкиОПУРасширеннаяПодсказка" id="579"/>
+								</InputField>
+								<InputField name="ТаблицаВыгрузкиОПУ_Х_ВОДА" id="580">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузки.ОПУ_Х_ВОДА</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаВыгрузкиОПУ_Х_ВОДАКонтекстноеМеню" id="581"/>
+									<ExtendedTooltip name="ТаблицаВыгрузкиОПУ_Х_ВОДАРасширеннаяПодсказка" id="582"/>
+								</InputField>
+								<InputField name="ТаблицаВыгрузкиОПУ_Г_ВОДА" id="583">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузки.ОПУ_Г_ВОДА</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаВыгрузкиОПУ_Г_ВОДАКонтекстноеМеню" id="584"/>
+									<ExtendedTooltip name="ТаблицаВыгрузкиОПУ_Г_ВОДАРасширеннаяПодсказка" id="585"/>
+								</InputField>
+								<InputField name="ТаблицаВыгрузкиОПУ_ГАЗ" id="586">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузки.ОПУ_ГАЗ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаВыгрузкиОПУ_ГАЗКонтекстноеМеню" id="587"/>
+									<ExtendedTooltip name="ТаблицаВыгрузкиОПУ_ГАЗРасширеннаяПодсказка" id="588"/>
+								</InputField>
+								<InputField name="ТаблицаВыгрузкиОПУ_ОТОПЛ" id="589">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузки.ОПУ_ОТОПЛ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаВыгрузкиОПУ_ОТОПЛКонтекстноеМеню" id="590"/>
+									<ExtendedTooltip name="ТаблицаВыгрузкиОПУ_ОТОПЛРасширеннаяПодсказка" id="591"/>
+								</InputField>
+								<InputField name="ТаблицаВыгрузкиОПУ_ЭЛЕКТ" id="592">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузки.ОПУ_ЭЛЕКТ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаВыгрузкиОПУ_ЭЛЕКТКонтекстноеМеню" id="593"/>
+									<ExtendedTooltip name="ТаблицаВыгрузкиОПУ_ЭЛЕКТРасширеннаяПодсказка" id="594"/>
+								</InputField>
+								<InputField name="ТаблицаВыгрузкиПЛИТА" id="595">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузки.ПЛИТА</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаВыгрузкиПЛИТАКонтекстноеМеню" id="596"/>
+									<ExtendedTooltip name="ТаблицаВыгрузкиПЛИТАРасширеннаяПодсказка" id="597"/>
+								</InputField>
+								<InputField name="ТаблицаВыгрузкиЭТАЖНОСТЬ" id="598">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузки.ЭТАЖНОСТЬ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаВыгрузкиЭТАЖНОСТЬКонтекстноеМеню" id="599"/>
+									<ExtendedTooltip name="ТаблицаВыгрузкиЭТАЖНОСТЬРасширеннаяПодсказка" id="600"/>
+								</InputField>
+								<InputField name="ТаблицаВыгрузкиЛИФТ" id="601">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузки.ЛИФТ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаВыгрузкиЛИФТКонтекстноеМеню" id="602"/>
+									<ExtendedTooltip name="ТаблицаВыгрузкиЛИФТРасширеннаяПодсказка" id="603"/>
+								</InputField>
+								<InputField name="ТаблицаВыгрузкиКОМН" id="604">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузки.КОМН</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаВыгрузкиКОМНКонтекстноеМеню" id="605"/>
+									<ExtendedTooltip name="ТаблицаВыгрузкиКОМНРасширеннаяПодсказка" id="606"/>
+								</InputField>
+								<InputField name="ТаблицаВыгрузкиS" id="607">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузки.S</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаВыгрузкиSКонтекстноеМеню" id="608"/>
+									<ExtendedTooltip name="ТаблицаВыгрузкиSРасширеннаяПодсказка" id="609"/>
+								</InputField>
+								<InputField name="ТаблицаВыгрузкиS_ОТАПЛ" id="610">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузки.S_ОТАПЛ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаВыгрузкиS_ОТАПЛКонтекстноеМеню" id="611"/>
+									<ExtendedTooltip name="ТаблицаВыгрузкиS_ОТАПЛРасширеннаяПодсказка" id="612"/>
+								</InputField>
+								<InputField name="ТаблицаВыгрузкиЛицевойСчет" id="613">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузки.ЛицевойСчет</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаВыгрузкиЛицевойСчетКонтекстноеМеню" id="614"/>
+									<ExtendedTooltip name="ТаблицаВыгрузкиЛицевойСчетРасширеннаяПодсказка" id="615"/>
+								</InputField>
+								<InputField name="ТаблицаВыгрузкиЛицевойСчетНаименование" id="616">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузки.ЛицевойСчетНаименование</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаВыгрузкиЛицевойСчетНаименованиеКонтекстноеМеню" id="617"/>
+									<ExtendedTooltip name="ТаблицаВыгрузкиЛицевойСчетНаименованиеРасширеннаяПодсказка" id="618"/>
+								</InputField>
+								<InputField name="ТаблицаВыгрузкиОрганизация" id="619">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузки.Организация</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаВыгрузкиОрганизацияКонтекстноеМеню" id="620"/>
+									<ExtendedTooltip name="ТаблицаВыгрузкиОрганизацияРасширеннаяПодсказка" id="621"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаСведенияОбОплатах" id="337">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сведения об оплатах</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаСведенияОбОплатахРасширеннаяПодсказка" id="338"/>
+					<ChildItems>
+						<Table name="СаратовскаяОбласть_ТаблицаВыгрузкиОплат" id="339">
+							<Representation>List</Representation>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузкиОплат</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатКонтекстноеМеню" id="340"/>
+							<AutoCommandBar name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатКоманднаяПанель" id="341"/>
+							<ExtendedTooltip name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатРасширеннаяПодсказка" id="342"/>
+							<SearchStringAddition name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатСтрокаПоиска" id="343">
+								<AdditionSource>
+									<Item>СаратовскаяОбласть_ТаблицаВыгрузкиОплат</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатСтрокаПоискаКонтекстноеМеню" id="344"/>
+								<ExtendedTooltip name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатСтрокаПоискаРасширеннаяПодсказка" id="345"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатСостояниеПросмотра" id="346">
+								<AdditionSource>
+									<Item>СаратовскаяОбласть_ТаблицаВыгрузкиОплат</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатСостояниеПросмотраКонтекстноеМеню" id="347"/>
+								<ExtendedTooltip name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатСостояниеПросмотраРасширеннаяПодсказка" id="348"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУправлениеПоиском" id="349">
+								<AdditionSource>
+									<Item>СаратовскаяОбласть_ТаблицаВыгрузкиОплат</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУправлениеПоискомКонтекстноеМеню" id="350"/>
+								<ExtendedTooltip name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУправлениеПоискомРасширеннаяПодсказка" id="351"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатНомерСтроки" id="622">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузкиОплат.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатНомерСтрокиКонтекстноеМеню" id="623"/>
+									<ExtendedTooltip name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатНомерСтрокиРасширеннаяПодсказка" id="624"/>
+								</LabelField>
+								<InputField name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатНОМЕР_ЖП" id="625">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузкиОплат.НОМЕР_ЖП</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатНОМЕР_ЖПКонтекстноеМеню" id="626"/>
+									<ExtendedTooltip name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатНОМЕР_ЖПРасширеннаяПодсказка" id="627"/>
+								</InputField>
+								<InputField name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатЛИЦ_СЧ" id="628">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузкиОплат.ЛИЦ_СЧ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатЛИЦ_СЧКонтекстноеМеню" id="629"/>
+									<ExtendedTooltip name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатЛИЦ_СЧРасширеннаяПодсказка" id="630"/>
+								</InputField>
+								<InputField name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатРАЙОН" id="631">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузкиОплат.РАЙОН</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатРАЙОНКонтекстноеМеню" id="632"/>
+									<ExtendedTooltip name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатРАЙОНРасширеннаяПодсказка" id="633"/>
+								</InputField>
+								<InputField name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатНАС_П_ТИП" id="634">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузкиОплат.НАС_П_ТИП</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатНАС_П_ТИПКонтекстноеМеню" id="635"/>
+									<ExtendedTooltip name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатНАС_П_ТИПРасширеннаяПодсказка" id="636"/>
+								</InputField>
+								<InputField name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатНАС_П_НАИМ" id="637">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузкиОплат.НАС_П_НАИМ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатНАС_П_НАИМКонтекстноеМеню" id="638"/>
+									<ExtendedTooltip name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатНАС_П_НАИМРасширеннаяПодсказка" id="639"/>
+								</InputField>
+								<InputField name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУЛ_ТИП" id="640">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузкиОплат.УЛ_ТИП</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУЛ_ТИПКонтекстноеМеню" id="641"/>
+									<ExtendedTooltip name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУЛ_ТИПРасширеннаяПодсказка" id="642"/>
+								</InputField>
+								<InputField name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУЛ_НАИМ" id="643">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузкиОплат.УЛ_НАИМ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУЛ_НАИМКонтекстноеМеню" id="644"/>
+									<ExtendedTooltip name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУЛ_НАИМРасширеннаяПодсказка" id="645"/>
+								</InputField>
+								<InputField name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатДОМ" id="646">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузкиОплат.ДОМ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатДОМКонтекстноеМеню" id="647"/>
+									<ExtendedTooltip name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатДОМРасширеннаяПодсказка" id="648"/>
+								</InputField>
+								<InputField name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатКОРПУС" id="649">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузкиОплат.КОРПУС</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатКОРПУСКонтекстноеМеню" id="650"/>
+									<ExtendedTooltip name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатКОРПУСРасширеннаяПодсказка" id="651"/>
+								</InputField>
+								<InputField name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатКВАРТИРА" id="652">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузкиОплат.КВАРТИРА</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатКВАРТИРАКонтекстноеМеню" id="653"/>
+									<ExtendedTooltip name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатКВАРТИРАРасширеннаяПодсказка" id="654"/>
+								</InputField>
+								<InputField name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатКОМНАТА" id="655">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузкиОплат.КОМНАТА</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатКОМНАТАКонтекстноеМеню" id="656"/>
+									<ExtendedTooltip name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатКОМНАТАРасширеннаяПодсказка" id="657"/>
+								</InputField>
+								<InputField name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатМЕСЯЦ" id="658">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузкиОплат.МЕСЯЦ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатМЕСЯЦКонтекстноеМеню" id="659"/>
+									<ExtendedTooltip name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатМЕСЯЦРасширеннаяПодсказка" id="660"/>
+								</InputField>
+								<InputField name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатПРИЗ_ЖП" id="661">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузкиОплат.ПРИЗ_ЖП</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатПРИЗ_ЖПКонтекстноеМеню" id="662"/>
+									<ExtendedTooltip name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатПРИЗ_ЖПРасширеннаяПодсказка" id="663"/>
+								</InputField>
+								<InputField name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатПРИЗ_ЛС" id="664">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузкиОплат.ПРИЗ_ЛС</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатПРИЗ_ЛСКонтекстноеМеню" id="665"/>
+									<ExtendedTooltip name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатПРИЗ_ЛСРасширеннаяПодсказка" id="666"/>
+								</InputField>
+								<InputField name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатДОЛГ" id="667">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузкиОплат.ДОЛГ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатДОЛГКонтекстноеМеню" id="668"/>
+									<ExtendedTooltip name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатДОЛГРасширеннаяПодсказка" id="669"/>
+								</InputField>
+								<InputField name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатАВАНС" id="670">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузкиОплат.АВАНС</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатАВАНСКонтекстноеМеню" id="671"/>
+									<ExtendedTooltip name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатАВАНСРасширеннаяПодсказка" id="672"/>
+								</InputField>
+								<InputField name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатОПЛАТА" id="673">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузкиОплат.ОПЛАТА</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатОПЛАТАКонтекстноеМеню" id="674"/>
+									<ExtendedTooltip name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатОПЛАТАРасширеннаяПодсказка" id="675"/>
+								</InputField>
+								<InputField name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ121" id="676">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузкиОплат.УСЛ121</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ121КонтекстноеМеню" id="677"/>
+									<ExtendedTooltip name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ121РасширеннаяПодсказка" id="678"/>
+								</InputField>
+								<InputField name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ122" id="679">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузкиОплат.УСЛ122</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ122КонтекстноеМеню" id="680"/>
+									<ExtendedTooltip name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ122РасширеннаяПодсказка" id="681"/>
+								</InputField>
+								<InputField name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ123" id="682">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузкиОплат.УСЛ123</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ123КонтекстноеМеню" id="683"/>
+									<ExtendedTooltip name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ123РасширеннаяПодсказка" id="684"/>
+								</InputField>
+								<InputField name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ124" id="685">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузкиОплат.УСЛ124</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ124КонтекстноеМеню" id="686"/>
+									<ExtendedTooltip name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ124РасширеннаяПодсказка" id="687"/>
+								</InputField>
+								<InputField name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ260" id="688">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузкиОплат.УСЛ260</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ260КонтекстноеМеню" id="689"/>
+									<ExtendedTooltip name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ260РасширеннаяПодсказка" id="690"/>
+								</InputField>
+								<InputField name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ250" id="691">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузкиОплат.УСЛ250</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ250КонтекстноеМеню" id="692"/>
+									<ExtendedTooltip name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ250РасширеннаяПодсказка" id="693"/>
+								</InputField>
+								<InputField name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ101" id="694">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузкиОплат.УСЛ101</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ101КонтекстноеМеню" id="695"/>
+									<ExtendedTooltip name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ101РасширеннаяПодсказка" id="696"/>
+								</InputField>
+								<InputField name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ102" id="697">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузкиОплат.УСЛ102</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ102КонтекстноеМеню" id="698"/>
+									<ExtendedTooltip name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ102РасширеннаяПодсказка" id="699"/>
+								</InputField>
+								<InputField name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ141" id="700">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузкиОплат.УСЛ141</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ141КонтекстноеМеню" id="701"/>
+									<ExtendedTooltip name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ141РасширеннаяПодсказка" id="702"/>
+								</InputField>
+								<InputField name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ142" id="703">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузкиОплат.УСЛ142</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ142КонтекстноеМеню" id="704"/>
+									<ExtendedTooltip name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ142РасширеннаяПодсказка" id="705"/>
+								</InputField>
+								<InputField name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ240" id="706">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузкиОплат.УСЛ240</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ240КонтекстноеМеню" id="707"/>
+									<ExtendedTooltip name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ240РасширеннаяПодсказка" id="708"/>
+								</InputField>
+								<InputField name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ230" id="709">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузкиОплат.УСЛ230</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ230КонтекстноеМеню" id="710"/>
+									<ExtendedTooltip name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ230РасширеннаяПодсказка" id="711"/>
+								</InputField>
+								<InputField name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ151" id="712">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузкиОплат.УСЛ151</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ151КонтекстноеМеню" id="713"/>
+									<ExtendedTooltip name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ151РасширеннаяПодсказка" id="714"/>
+								</InputField>
+								<InputField name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ152" id="715">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузкиОплат.УСЛ152</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ152КонтекстноеМеню" id="716"/>
+									<ExtendedTooltip name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ152РасширеннаяПодсказка" id="717"/>
+								</InputField>
+								<InputField name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ210" id="718">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузкиОплат.УСЛ210</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ210КонтекстноеМеню" id="719"/>
+									<ExtendedTooltip name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ210РасширеннаяПодсказка" id="720"/>
+								</InputField>
+								<InputField name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ10" id="721">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузкиОплат.УСЛ10</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ10КонтекстноеМеню" id="722"/>
+									<ExtendedTooltip name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ10РасширеннаяПодсказка" id="723"/>
+								</InputField>
+								<InputField name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛEST" id="724">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузкиОплат.УСЛEST</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛESTКонтекстноеМеню" id="725"/>
+									<ExtendedTooltip name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛESTРасширеннаяПодсказка" id="726"/>
+								</InputField>
+								<InputField name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ220" id="727">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузкиОплат.УСЛ220</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ220КонтекстноеМеню" id="728"/>
+									<ExtendedTooltip name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ220РасширеннаяПодсказка" id="729"/>
+								</InputField>
+								<InputField name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ133" id="730">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузкиОплат.УСЛ133</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ133КонтекстноеМеню" id="731"/>
+									<ExtendedTooltip name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ133РасширеннаяПодсказка" id="732"/>
+								</InputField>
+								<InputField name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ156" id="733">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузкиОплат.УСЛ156</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ156КонтекстноеМеню" id="734"/>
+									<ExtendedTooltip name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ156РасширеннаяПодсказка" id="735"/>
+								</InputField>
+								<InputField name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ131" id="736">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузкиОплат.УСЛ131</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ131КонтекстноеМеню" id="737"/>
+									<ExtendedTooltip name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ131РасширеннаяПодсказка" id="738"/>
+								</InputField>
+								<InputField name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ132" id="739">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузкиОплат.УСЛ132</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ132КонтекстноеМеню" id="740"/>
+									<ExtendedTooltip name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ132РасширеннаяПодсказка" id="741"/>
+								</InputField>
+								<InputField name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ134" id="742">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузкиОплат.УСЛ134</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ134КонтекстноеМеню" id="743"/>
+									<ExtendedTooltip name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ134РасширеннаяПодсказка" id="744"/>
+								</InputField>
+								<InputField name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ270" id="745">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузкиОплат.УСЛ270</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ270КонтекстноеМеню" id="746"/>
+									<ExtendedTooltip name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ270РасширеннаяПодсказка" id="747"/>
+								</InputField>
+								<InputField name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ111" id="748">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузкиОплат.УСЛ111</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ111КонтекстноеМеню" id="749"/>
+									<ExtendedTooltip name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ111РасширеннаяПодсказка" id="750"/>
+								</InputField>
+								<InputField name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ112" id="751">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузкиОплат.УСЛ112</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ112КонтекстноеМеню" id="752"/>
+									<ExtendedTooltip name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатУСЛ112РасширеннаяПодсказка" id="753"/>
+								</InputField>
+								<InputField name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатЛицевойСчет" id="754">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузкиОплат.ЛицевойСчет</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатЛицевойСчетКонтекстноеМеню" id="755"/>
+									<ExtendedTooltip name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатЛицевойСчетРасширеннаяПодсказка" id="756"/>
+								</InputField>
+								<InputField name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатЛицевойСчетНаименование" id="757">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузкиОплат.ЛицевойСчетНаименование</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатЛицевойСчетНаименованиеКонтекстноеМеню" id="758"/>
+									<ExtendedTooltip name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатЛицевойСчетНаименованиеРасширеннаяПодсказка" id="759"/>
+								</InputField>
+								<InputField name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатОрганизация" id="760">
+									<DataPath>Объект.СаратовскаяОбласть_ТаблицаВыгрузкиОплат.Организация</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатОрганизацияКонтекстноеМеню" id="761"/>
+									<ExtendedTooltip name="СаратовскаяОбласть_ТаблицаВыгрузкиОплатОрганизацияРасширеннаяПодсказка" id="762"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.УПЖКХ_ВыгрузкиВОрганыСоцЗащиты</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ПериодСтрокой" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период строкой</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>15</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<View>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.ДобавлениеИзменениеДанныхФизическихЛицЗарплатаКадры">true</xr:Value>
+				<xr:Value name="Role.ПолныеПрава">true</xr:Value>
+				<xr:Value name="Role.ЧтениеДанныхФизическихЛицЗарплатаКадры">true</xr:Value>
+			</View>
+			<Edit>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.ДобавлениеИзменениеДанныхФизическихЛицЗарплатаКадры">true</xr:Value>
+				<xr:Value name="Role.ПолныеПрава">true</xr:Value>
+				<xr:Value name="Role.ЧтениеДанныхФизическихЛицЗарплатаКадры">true</xr:Value>
+			</Edit>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="НеУчитыватьВНаименованииЛСПодстрокуЛС" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Не учитывать в наименовании лицевого счета подстроку "л/с №"</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаНастройка" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка параметров выгрузки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Настройка</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаНастройка</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаВыгрузить" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить все в ZIP</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ВыгрузитьФайлСертификата</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаВыгрузить</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаЗагрузить" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить все из файла</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить данные из ZIP-файла</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ЗагрузитьФайлСертификата</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаЗагрузить</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаЗаполнить" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить начисления и оплаты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ЗаполнитьФорму</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаЗаполнить</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

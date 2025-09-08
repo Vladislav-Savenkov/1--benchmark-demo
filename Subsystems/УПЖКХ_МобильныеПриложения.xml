@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Subsystem uuid="68ce2ded-43d3-40e7-a145-54d127a09779">
+		<Properties>
+			<Name>УПЖКХ_МобильныеПриложения</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Мобильные приложения</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<Explanation/>
+			<Picture>
+				<xr:Ref>CommonPicture.УПЖКХ_GooglePlay</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.УПЖКХ_СписокЗаконовЖКХ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Организации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.КВП_Здания</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.УПЖКХ_НастройкиВыгрузкиДляМобильногоПриложения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.КВП_НачислениеУслуг</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.КВП_РегистрацияОплаты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.УПЖКХ_ВводПоказанийСчетчика</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.КВП_СводнаяВедомость</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.КВП_ОтчетПоОплате</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОборотноСальдоваяВедомостьПоСчету</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.УПЖКХ_ИнтеграцияСМобильнымПриложениемВзаимодействиеСБазой</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.УПЖКХ_ИнтеграцияСМобильнымПриложениемВзаимодействиеССервером</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.УПЖКХ_ОбменДаннымиСМобильнымПриложением</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ОТР_ПараметрыАккаунтаИнтернетСервисов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.УПЖКХ_РежимРаботыМеханизмаИнтеграцииСМобильнымПриложением</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.УПЖКХ_ТокенДляСоединенияССервисамиРарус</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.УПЖКХ_НастройкаАвтоматическогоОбменаДаннымиСМобильнымПриложением</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.УПЖКХ_СохраняемыеСтраницыСервисаМобильногоПриложенияЖКХ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.УПЖКХ_РежимРаботыИнтеграцииСМобильнымПриложением</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.УПЖКХ_ВидыРегламентныхЗаданийИнтеграцииСМобильнымПриложением</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.УПЖКХ_ВидыОбменаСМобильнымПриложением</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.УПЖКХ_ИнтеграцияСМобильнымПриложением</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.УПЖКХ_ИдентификаторыЛицевыхСчетовВМобильномПриложении</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.УПЖКХ_ЖурналОбменаСМобильнымПриложением</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.УПЖКХ_ПросмотрXML</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.УПЖКХ_НастройкиУпрощеннойАДС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ОТР_ЧастоЗадаваемыеВопросы</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

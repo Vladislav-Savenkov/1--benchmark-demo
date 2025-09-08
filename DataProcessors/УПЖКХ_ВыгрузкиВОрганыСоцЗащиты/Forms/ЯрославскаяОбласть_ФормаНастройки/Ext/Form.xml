@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Ярославская область: Настройка</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаСохранитьНастройки" id="36">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.СохранитьНастройки</CommandName>
+				<ExtendedTooltip name="ФормаСохранитьНастройкиРасширеннаяПодсказка" id="37"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="ГруппаНастроек" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа настроек</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа настроек</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ГруппаНастроекРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<Page name="ГруппаСоответствиеУслуг" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Соответствия услуг</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа соответствие услуг</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаСоответствиеУслугРасширеннаяПодсказка" id="4"/>
+					<ChildItems>
+						<Table name="СоответствияУслуг" id="5">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.ЯрославскаяОбласть_СоответствияУслуг</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="СоответствияУслугКонтекстноеМеню" id="6"/>
+							<AutoCommandBar name="СоответствияУслугКоманднаяПанель" id="7"/>
+							<ExtendedTooltip name="СоответствияУслугРасширеннаяПодсказка" id="8"/>
+							<SearchStringAddition name="СоответствияУслугСтрокаПоиска" id="9">
+								<AdditionSource>
+									<Item>СоответствияУслуг</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СоответствияУслугСтрокаПоискаКонтекстноеМеню" id="12"/>
+								<ExtendedTooltip name="СоответствияУслугСтрокаПоискаРасширеннаяПодсказка" id="13"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СоответствияУслугСостояниеПросмотра" id="14">
+								<AdditionSource>
+									<Item>СоответствияУслуг</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СоответствияУслугСостояниеПросмотраКонтекстноеМеню" id="17"/>
+								<ExtendedTooltip name="СоответствияУслугСостояниеПросмотраРасширеннаяПодсказка" id="18"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СоответствияУслугУправлениеПоиском" id="19">
+								<AdditionSource>
+									<Item>СоответствияУслуг</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СоответствияУслугУправлениеПоискомКонтекстноеМеню" id="22"/>
+								<ExtendedTooltip name="СоответствияУслугУправлениеПоискомРасширеннаяПодсказка" id="23"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="СоответствияУслугКодУслугиПоЛьготам" id="71">
+									<DataPath>Объект.ЯрославскаяОбласть_СоответствияУслуг.КодУслугиПоЛьготам</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СоответствияУслугКодУслугиПоЛьготамКонтекстноеМеню" id="72"/>
+									<ExtendedTooltip name="СоответствияУслугКодУслугиПоЛьготамРасширеннаяПодсказка" id="73"/>
+								</InputField>
+								<InputField name="СоответствияУслугКодУслугиПоСубсидиям" id="74">
+									<DataPath>Объект.ЯрославскаяОбласть_СоответствияУслуг.КодУслугиПоСубсидиям</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СоответствияУслугКодУслугиПоСубсидиямКонтекстноеМеню" id="75"/>
+									<ExtendedTooltip name="СоответствияУслугКодУслугиПоСубсидиямРасширеннаяПодсказка" id="76"/>
+								</InputField>
+								<InputField name="СоответствияУслугУслуга" id="68">
+									<DataPath>Объект.ЯрославскаяОбласть_СоответствияУслуг.Услуга</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СоответствияУслугУслугаКонтекстноеМеню" id="69"/>
+									<ExtendedTooltip name="СоответствияУслугУслугаРасширеннаяПодсказка" id="70"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаКоммунальныеУслуги" id="38">
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Коммунальные услуги</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа коммунальные услуги</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаКоммунальныеУслугиРасширеннаяПодсказка" id="39"/>
+					<ChildItems>
+						<Table name="КоммунальныеУслуги" id="40">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.ЯрославскаяОбласть_КоммунальныеУслуги</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="КоммунальныеУслугиКонтекстноеМеню" id="41"/>
+							<AutoCommandBar name="КоммунальныеУслугиКоманднаяПанель" id="42"/>
+							<ExtendedTooltip name="КоммунальныеУслугиРасширеннаяПодсказка" id="43"/>
+							<SearchStringAddition name="КоммунальныеУслугиСтрокаПоиска" id="44">
+								<AdditionSource>
+									<Item>КоммунальныеУслуги</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="КоммунальныеУслугиСтрокаПоискаКонтекстноеМеню" id="47"/>
+								<ExtendedTooltip name="КоммунальныеУслугиСтрокаПоискаРасширеннаяПодсказка" id="48"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="КоммунальныеУслугиСостояниеПросмотра" id="49">
+								<AdditionSource>
+									<Item>КоммунальныеУслуги</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="КоммунальныеУслугиСостояниеПросмотраКонтекстноеМеню" id="52"/>
+								<ExtendedTooltip name="КоммунальныеУслугиСостояниеПросмотраРасширеннаяПодсказка" id="53"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="КоммунальныеУслугиУправлениеПоиском" id="54">
+								<AdditionSource>
+									<Item>КоммунальныеУслуги</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="КоммунальныеУслугиУправлениеПоискомКонтекстноеМеню" id="57"/>
+								<ExtendedTooltip name="КоммунальныеУслугиУправлениеПоискомРасширеннаяПодсказка" id="58"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="КоммунальныеУслугиУслуга" id="80">
+									<DataPath>Объект.ЯрославскаяОбласть_КоммунальныеУслуги.Услуга</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КоммунальныеУслугиУслугаКонтекстноеМеню" id="81"/>
+									<ExtendedTooltip name="КоммунальныеУслугиУслугаРасширеннаяПодсказка" id="82"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаСоответствиеЛьготныхКатегорий" id="83">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Соответствия льготных категорий</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа соответствие льготных категорий</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаСоответствиеЛьготныхКатегорийРасширеннаяПодсказка" id="84"/>
+					<ChildItems>
+						<Table name="ЯрославскаяОбласть_СоответствияЛьготныхКатегорий" id="85">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.ЯрославскаяОбласть_СоответствияЛьготныхКатегорий</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ЯрославскаяОбласть_СоответствияЛьготныхКатегорийКонтекстноеМеню" id="86"/>
+							<AutoCommandBar name="ЯрославскаяОбласть_СоответствияЛьготныхКатегорийКоманднаяПанель" id="87">
+								<ChildItems>
+									<Button name="ЯрославскаяОбласть_СоответствияЛьготныхКатегорийКомандаЗаполнитьКодыЛьготныхКатегорий" id="107">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.КомандаЗаполнитьКодыЛьготныхКатегорий</CommandName>
+										<ExtendedTooltip name="ЯрославскаяОбласть_СоответствияЛьготныхКатегорийКомандаЗаполнитьКодыЛьготныхКатегорийРасширеннаяПодсказка" id="108"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ЯрославскаяОбласть_СоответствияЛьготныхКатегорийРасширеннаяПодсказка" id="88"/>
+							<SearchStringAddition name="ЯрославскаяОбласть_СоответствияЛьготныхКатегорийСтрокаПоиска" id="89">
+								<AdditionSource>
+									<Item>ЯрославскаяОбласть_СоответствияЛьготныхКатегорий</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЯрославскаяОбласть_СоответствияЛьготныхКатегорийСтрокаПоискаКонтекстноеМеню" id="90"/>
+								<ExtendedTooltip name="ЯрославскаяОбласть_СоответствияЛьготныхКатегорийСтрокаПоискаРасширеннаяПодсказка" id="91"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ЯрославскаяОбласть_СоответствияЛьготныхКатегорийСостояниеПросмотра" id="92">
+								<AdditionSource>
+									<Item>ЯрославскаяОбласть_СоответствияЛьготныхКатегорий</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЯрославскаяОбласть_СоответствияЛьготныхКатегорийСостояниеПросмотраКонтекстноеМеню" id="93"/>
+								<ExtendedTooltip name="ЯрославскаяОбласть_СоответствияЛьготныхКатегорийСостояниеПросмотраРасширеннаяПодсказка" id="94"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ЯрославскаяОбласть_СоответствияЛьготныхКатегорийУправлениеПоиском" id="95">
+								<AdditionSource>
+									<Item>ЯрославскаяОбласть_СоответствияЛьготныхКатегорий</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ЯрославскаяОбласть_СоответствияЛьготныхКатегорийУправлениеПоискомКонтекстноеМеню" id="96"/>
+								<ExtendedTooltip name="ЯрославскаяОбласть_СоответствияЛьготныхКатегорийУправлениеПоискомРасширеннаяПодсказка" id="97"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="BeforeEditEnd">ЯрославскаяОбласть_СоответствияЛьготныхКатегорийПередОкончаниемРедактирования</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="ЯрославскаяОбласть_СоответствияЛьготныхКатегорийКодЛьготнойКатегории" id="115">
+									<DataPath>Объект.ЯрославскаяОбласть_СоответствияЛьготныхКатегорий.КодЛьготнойКатегории</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ЯрославскаяОбласть_СоответствияЛьготныхКатегорийКодЛьготнойКатегорииКонтекстноеМеню" id="116"/>
+									<ExtendedTooltip name="ЯрославскаяОбласть_СоответствияЛьготныхКатегорийКодЛьготнойКатегорииРасширеннаяПодсказка" id="117"/>
+								</InputField>
+								<InputField name="ЯрославскаяОбласть_СоответствияЛьготныхКатегорийЛьготнаяКатегория" id="112">
+									<DataPath>Объект.ЯрославскаяОбласть_СоответствияЛьготныхКатегорий.ЛьготнаяКатегория</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ЯрославскаяОбласть_СоответствияЛьготныхКатегорийЛьготнаяКатегорияКонтекстноеМеню" id="113"/>
+									<ExtendedTooltip name="ЯрославскаяОбласть_СоответствияЛьготныхКатегорийЛьготнаяКатегорияРасширеннаяПодсказка" id="114"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.УПЖКХ_ВыгрузкиВОрганыСоцЗащиты</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СохранитьНастройки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить настройки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СохранитьНастройки</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаЗаполнитьКодыЛьготныхКатегорий" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить коды льготных категорий</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаЗаполнитьКодыЛьготныхКатегорий</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

@@ -1,0 +1,1167 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Приморский край: Выгрузка в ОСЗН</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="СправочнаяИнформация" id="106">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<DefaultItem>true</DefaultItem>
+				<Height>1</Height>
+				<CommandName>Form.Command.КомандаСправочнаяИнформация</CommandName>
+				<BackColor>#FFFF99</BackColor>
+				<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>1. Инструкция</v8:content>
+					</v8:item>
+				</Title>
+				<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="СправочнаяИнформацияРасширеннаяПодсказка" id="107"/>
+			</Button>
+			<Button name="ФормаКнопкаНастройка" id="16">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.КомандаНастройка</CommandName>
+				<BackColor>#FFFF99</BackColor>
+				<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+				<Picture>
+					<xr:Ref>CommonPicture.Настройка</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>2. Настройка</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаКнопкаНастройкаРасширеннаяПодсказка" id="17"/>
+			</Button>
+			<Button name="ФормаКомандаЗагрузитьИзФайла" id="18">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.КомандаЗагрузитьИзФайла</CommandName>
+				<BackColor>#FFFF99</BackColor>
+				<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>3. Загрузить данные из файла обмена</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаКомандаЗагрузитьИзФайлаРасширеннаяПодсказка" id="19"/>
+			</Button>
+			<Button name="ФормаКомандаЗаполнитьДанныеОНачислениях" id="20">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.КомандаЗаполнитьДанныеОНачислениях</CommandName>
+				<BackColor>#FFFF99</BackColor>
+				<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>4. Заполнить сведения о начислениях</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаКомандаЗаполнитьДанныеОНачисленияхРасширеннаяПодсказка" id="21"/>
+			</Button>
+			<Button name="ФормаКомандаВыгрузитьВФайл" id="22">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.КомандаВыгрузитьВФайл</CommandName>
+				<BackColor>#FFFF99</BackColor>
+				<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>5. Выгрузить в файл обмена</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаКомандаВыгрузитьВФайлРасширеннаяПодсказка" id="23"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаОсновныеНастройки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа основные настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа основные настройки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОсновныеНастройкиРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаОсновныеНастройкиЛеваяПодгруппа" id="3">
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа основные настройки левая подгруппа</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаОсновныеНастройкиЛеваяПодгруппаРасширеннаяПодсказка" id="4"/>
+					<ChildItems>
+						<InputField name="ПериодСтрокой" id="5">
+							<DataPath>ПериодСтрокой</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Месяц выгрузки</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Месяц, за который необходимо выгрузить данные</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ChoiceButton>true</ChoiceButton>
+							<SpinButton>true</SpinButton>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ChoiceButtonPicture>
+								<xr:Ref>StdPicture.InputFieldCalendar</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</ChoiceButtonPicture>
+							<ContextMenu name="ПериодСтрокойКонтекстноеМеню" id="6"/>
+							<ExtendedTooltip name="ПериодСтрокойExtendedTooltip" id="7"/>
+							<Events>
+								<Event name="OnChange">ПериодСтрокойПриИзменении</Event>
+								<Event name="AutoComplete">ПериодСтрокойАвтоПодбор</Event>
+								<Event name="StartChoice">ПериодСтрокойНачалоВыбора</Event>
+								<Event name="Tuning">ПериодСтрокойРегулирование</Event>
+								<Event name="TextEditEnd">ПериодСтрокойОкончаниеВводаТекста</Event>
+							</Events>
+						</InputField>
+						<InputField name="Организация" id="8">
+							<DataPath>Объект.Организация</DataPath>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Организация по которой будет произведена выгрузка</v8:content>
+								</v8:item>
+							</ToolTip>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="9"/>
+							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="10"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаОсновныеНастройкиПраваяПодгруппа" id="11">
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа основные настройки левая подгруппа</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаОсновныеНастройкиПраваяПодгруппаРасширеннаяПодсказка" id="12"/>
+					<ChildItems>
+						<InputField name="ФайлОбмена" id="13">
+							<DataPath>ФайлОбмена</DataPath>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Файл обмена, который предоставила ОСЗН</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ChoiceButton>true</ChoiceButton>
+							<OpenButton>true</OpenButton>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<TextEdit>false</TextEdit>
+							<ContextMenu name="ФайлОбменаКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="ФайлОбменаРасширеннаяПодсказка" id="15"/>
+							<Events>
+								<Event name="StartChoice">ФайлОбменаНачалоВыбора</Event>
+								<Event name="Opening">ФайлОбменаОткрытие</Event>
+							</Events>
+						</InputField>
+						<InputField name="КодОрганизации" id="103">
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>РР – буквенно-цифровой код Организации. Определяется Учреждением. Должен быть уникальным в данном муниципальном образовании. Коды из диапазона «00» - «10» выделяются Организациям, предоставляющим услуги в масштабе области.</v8:content>
+								</v8:item>
+							</ToolTip>
+							<MaxWidth>5</MaxWidth>
+							<EditFormat>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧГ=0</v8:content>
+								</v8:item>
+							</EditFormat>
+							<ContextMenu name="КодОрганизацииКонтекстноеМеню" id="104"/>
+							<ExtendedTooltip name="КодОрганизацииРасширеннаяПодсказка" id="105"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="ПриморскийКрай_ТаблицаВыгрузки" id="24">
+			<Representation>List</Representation>
+			<ChangeRowSet>false</ChangeRowSet>
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>ПриморскийКрай_ТаблицаВыгрузки</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ПриморскийКрай_ТаблицаВыгрузкиКонтекстноеМеню" id="25"/>
+			<AutoCommandBar name="ПриморскийКрай_ТаблицаВыгрузкиКоманднаяПанель" id="26">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ПриморскийКрай_ТаблицаВыгрузкиРасширеннаяПодсказка" id="27"/>
+			<SearchStringAddition name="ПриморскийКрай_ТаблицаВыгрузкиСтрокаПоиска" id="28">
+				<AdditionSource>
+					<Item>ПриморскийКрай_ТаблицаВыгрузки</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПриморскийКрай_ТаблицаВыгрузкиСтрокаПоискаКонтекстноеМеню" id="29"/>
+				<ExtendedTooltip name="ПриморскийКрай_ТаблицаВыгрузкиСтрокаПоискаРасширеннаяПодсказка" id="30"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ПриморскийКрай_ТаблицаВыгрузкиСостояниеПросмотра" id="31">
+				<AdditionSource>
+					<Item>ПриморскийКрай_ТаблицаВыгрузки</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПриморскийКрай_ТаблицаВыгрузкиСостояниеПросмотраКонтекстноеМеню" id="32"/>
+				<ExtendedTooltip name="ПриморскийКрай_ТаблицаВыгрузкиСостояниеПросмотраРасширеннаяПодсказка" id="33"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ПриморскийКрай_ТаблицаВыгрузкиУправлениеПоиском" id="34">
+				<AdditionSource>
+					<Item>ПриморскийКрай_ТаблицаВыгрузки</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ПриморскийКрай_ТаблицаВыгрузкиУправлениеПоискомКонтекстноеМеню" id="35"/>
+				<ExtendedTooltip name="ПриморскийКрай_ТаблицаВыгрузкиУправлениеПоискомРасширеннаяПодсказка" id="36"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="ПриморскийКрай_ТаблицаВыгрузкиЛицевойСчет" id="100">
+					<DataPath>ПриморскийКрай_ТаблицаВыгрузки.ЛицевойСчет</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Лицевой счет в базе</v8:content>
+						</v8:item>
+					</Title>
+					<TitleTextColor>style:FormTextColor</TitleTextColor>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ContextMenu name="ПриморскийКрай_ТаблицаВыгрузкиЛицевойСчетКонтекстноеМеню" id="101"/>
+					<ExtendedTooltip name="ПриморскийКрай_ТаблицаВыгрузкиЛицевойСчетРасширеннаяПодсказка" id="102"/>
+				</InputField>
+				<InputField name="ПриморскийКрай_ТаблицаВыгрузкиLS" id="37">
+					<DataPath>ПриморскийКрай_ТаблицаВыгрузки.LS</DataPath>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер лицевого счета поставщика ЖКУ</v8:content>
+						</v8:item>
+					</ToolTip>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПриморскийКрай_ТаблицаВыгрузкиLSКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="ПриморскийКрай_ТаблицаВыгрузкиLSРасширеннаяПодсказка" id="39"/>
+				</InputField>
+				<InputField name="ПриморскийКрай_ТаблицаВыгрузкиNP" id="40">
+					<DataPath>ПриморскийКрай_ТаблицаВыгрузки.NP</DataPath>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование населенного пункта </v8:content>
+						</v8:item>
+					</ToolTip>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПриморскийКрай_ТаблицаВыгрузкиNPКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="ПриморскийКрай_ТаблицаВыгрузкиNPРасширеннаяПодсказка" id="42"/>
+				</InputField>
+				<InputField name="ПриморскийКрай_ТаблицаВыгрузкиUL" id="43">
+					<DataPath>ПриморскийКрай_ТаблицаВыгрузки.UL</DataPath>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Улица</v8:content>
+						</v8:item>
+					</ToolTip>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПриморскийКрай_ТаблицаВыгрузкиULКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="ПриморскийКрай_ТаблицаВыгрузкиULРасширеннаяПодсказка" id="45"/>
+				</InputField>
+				<InputField name="ПриморскийКрай_ТаблицаВыгрузкиDOM" id="46">
+					<DataPath>ПриморскийКрай_ТаблицаВыгрузки.DOM</DataPath>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дом</v8:content>
+						</v8:item>
+					</ToolTip>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПриморскийКрай_ТаблицаВыгрузкиDOMКонтекстноеМеню" id="47"/>
+					<ExtendedTooltip name="ПриморскийКрай_ТаблицаВыгрузкиDOMРасширеннаяПодсказка" id="48"/>
+				</InputField>
+				<InputField name="ПриморскийКрай_ТаблицаВыгрузкиKOR" id="49">
+					<DataPath>ПриморскийКрай_ТаблицаВыгрузки.KOR</DataPath>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Корпус</v8:content>
+						</v8:item>
+					</ToolTip>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПриморскийКрай_ТаблицаВыгрузкиKORКонтекстноеМеню" id="50"/>
+					<ExtendedTooltip name="ПриморскийКрай_ТаблицаВыгрузкиKORРасширеннаяПодсказка" id="51"/>
+				</InputField>
+				<InputField name="ПриморскийКрай_ТаблицаВыгрузкиKV" id="52">
+					<DataPath>ПриморскийКрай_ТаблицаВыгрузки.KV</DataPath>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Квартира</v8:content>
+						</v8:item>
+					</ToolTip>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПриморскийКрай_ТаблицаВыгрузкиKVКонтекстноеМеню" id="53"/>
+					<ExtendedTooltip name="ПриморскийКрай_ТаблицаВыгрузкиKVРасширеннаяПодсказка" id="54"/>
+				</InputField>
+				<InputField name="ПриморскийКрай_ТаблицаВыгрузкиKOM" id="55">
+					<DataPath>ПриморскийКрай_ТаблицаВыгрузки.KOM</DataPath>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комната</v8:content>
+						</v8:item>
+					</ToolTip>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПриморскийКрай_ТаблицаВыгрузкиKOMКонтекстноеМеню" id="56"/>
+					<ExtendedTooltip name="ПриморскийКрай_ТаблицаВыгрузкиKOMРасширеннаяПодсказка" id="57"/>
+				</InputField>
+				<InputField name="ПриморскийКрай_ТаблицаВыгрузкиGKU" id="58">
+					<DataPath>ПриморскийКрай_ТаблицаВыгрузки.GKU</DataPath>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование ЖКУ</v8:content>
+						</v8:item>
+					</ToolTip>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПриморскийКрай_ТаблицаВыгрузкиGKUКонтекстноеМеню" id="59"/>
+					<ExtendedTooltip name="ПриморскийКрай_ТаблицаВыгрузкиGKUРасширеннаяПодсказка" id="60"/>
+				</InputField>
+				<InputField name="ПриморскийКрай_ТаблицаВыгрузкиPL" id="61">
+					<DataPath>ПриморскийКрай_ТаблицаВыгрузки.PL</DataPath>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Общая площадь жилого помещения</v8:content>
+						</v8:item>
+					</ToolTip>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПриморскийКрай_ТаблицаВыгрузкиPLКонтекстноеМеню" id="62"/>
+					<ExtendedTooltip name="ПриморскийКрай_ТаблицаВыгрузкиPLРасширеннаяПодсказка" id="63"/>
+				</InputField>
+				<InputField name="ПриморскийКрай_ТаблицаВыгрузкиKOLP" id="64">
+					<DataPath>ПриморскийКрай_ТаблицаВыгрузки.KOLP</DataPath>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Количество зарегистрированных граждан</v8:content>
+						</v8:item>
+					</ToolTip>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПриморскийКрай_ТаблицаВыгрузкиKOLPКонтекстноеМеню" id="65"/>
+					<ExtendedTooltip name="ПриморскийКрай_ТаблицаВыгрузкиKOLPРасширеннаяПодсказка" id="66"/>
+				</InputField>
+				<InputField name="ПриморскийКрай_ТаблицаВыгрузкиNORM" id="67">
+					<DataPath>ПриморскийКрай_ТаблицаВыгрузки.NORM</DataPath>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Общая площадь жилого помещения</v8:content>
+						</v8:item>
+					</ToolTip>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПриморскийКрай_ТаблицаВыгрузкиNORMКонтекстноеМеню" id="68"/>
+					<ExtendedTooltip name="ПриморскийКрай_ТаблицаВыгрузкиNORMРасширеннаяПодсказка" id="69"/>
+				</InputField>
+				<InputField name="ПриморскийКрай_ТаблицаВыгрузкиFAKTP" id="70">
+					<DataPath>ПриморскийКрай_ТаблицаВыгрузки.FAKTP</DataPath>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Общая сумма начислений, с учетом перерасчетов за месяц  (в рублях)</v8:content>
+						</v8:item>
+					</ToolTip>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПриморскийКрай_ТаблицаВыгрузкиFAKTPКонтекстноеМеню" id="71"/>
+					<ExtendedTooltip name="ПриморскийКрай_ТаблицаВыгрузкиFAKTPРасширеннаяПодсказка" id="72"/>
+				</InputField>
+				<InputField name="ПриморскийКрай_ТаблицаВыгрузкиFAKTPER" id="73">
+					<DataPath>ПриморскийКрай_ТаблицаВыгрузки.FAKTPER</DataPath>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Фактическое потребление ЖКУ с учетом перерасчета (в квадратных метрах или кубах, или кВт)</v8:content>
+						</v8:item>
+					</ToolTip>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПриморскийКрай_ТаблицаВыгрузкиFAKTPERКонтекстноеМеню" id="74"/>
+					<ExtendedTooltip name="ПриморскийКрай_ТаблицаВыгрузкиFAKTPERРасширеннаяПодсказка" id="75"/>
+				</InputField>
+				<InputField name="ПриморскийКрай_ТаблицаВыгрузкиTARIF" id="76">
+					<DataPath>ПриморскийКрай_ТаблицаВыгрузки.TARIF</DataPath>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Установленный тариф на ЖКУ</v8:content>
+						</v8:item>
+					</ToolTip>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПриморскийКрай_ТаблицаВыгрузкиTARIFКонтекстноеМеню" id="77"/>
+					<ExtendedTooltip name="ПриморскийКрай_ТаблицаВыгрузкиTARIFРасширеннаяПодсказка" id="78"/>
+				</InputField>
+				<InputField name="ПриморскийКрай_ТаблицаВыгрузкиDATEP" id="79">
+					<DataPath>ПриморскийКрай_ТаблицаВыгрузки.DATEP</DataPath>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Первое число месяца, на который требуется предоставить данные</v8:content>
+						</v8:item>
+					</ToolTip>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПриморскийКрай_ТаблицаВыгрузкиDATEPКонтекстноеМеню" id="80"/>
+					<ExtendedTooltip name="ПриморскийКрай_ТаблицаВыгрузкиDATEPРасширеннаяПодсказка" id="81"/>
+				</InputField>
+				<InputField name="ПриморскийКрай_ТаблицаВыгрузкиPRIZN" id="82">
+					<DataPath>ПриморскийКрай_ТаблицаВыгрузки.PRIZN</DataPath>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>0 – Если поставщик ЖКУ не корректировал строку, 1 – если корректировки были внесены</v8:content>
+						</v8:item>
+					</ToolTip>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПриморскийКрай_ТаблицаВыгрузкиPRIZNКонтекстноеМеню" id="83"/>
+					<ExtendedTooltip name="ПриморскийКрай_ТаблицаВыгрузкиPRIZNРасширеннаяПодсказка" id="84"/>
+				</InputField>
+				<InputField name="ПриморскийКрай_ТаблицаВыгрузкиPRIM" id="85">
+					<DataPath>ПриморскийКрай_ТаблицаВыгрузки.PRIM</DataPath>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Заполняется поставщиком ЖКУ при наличии дополнительных сведений</v8:content>
+						</v8:item>
+					</ToolTip>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПриморскийКрай_ТаблицаВыгрузкиPRIMКонтекстноеМеню" id="86"/>
+					<ExtendedTooltip name="ПриморскийКрай_ТаблицаВыгрузкиPRIMРасширеннаяПодсказка" id="87"/>
+				</InputField>
+				<InputField name="ПриморскийКрай_ТаблицаВыгрузкиPRU" id="88">
+					<DataPath>ПриморскийКрай_ТаблицаВыгрузки.PKU</DataPath>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер ПКУ гражданина на которого сделана заявка</v8:content>
+						</v8:item>
+					</ToolTip>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПриморскийКрай_ТаблицаВыгрузкиPRUКонтекстноеМеню" id="89"/>
+					<ExtendedTooltip name="ПриморскийКрай_ТаблицаВыгрузкиPRUРасширеннаяПодсказка" id="90"/>
+				</InputField>
+				<InputField name="ПриморскийКрай_ТаблицаВыгрузкиMESD" id="91">
+					<DataPath>ПриморскийКрай_ТаблицаВыгрузки.MESD</DataPath>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Количество месяцев задолженности за ЖКУ, возникшей с 01.07.2015г. </v8:content>
+						</v8:item>
+					</ToolTip>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПриморскийКрай_ТаблицаВыгрузкиMESDКонтекстноеМеню" id="92"/>
+					<ExtendedTooltip name="ПриморскийКрай_ТаблицаВыгрузкиMESDРасширеннаяПодсказка" id="93"/>
+				</InputField>
+				<InputField name="ПриморскийКрай_ТаблицаВыгрузкиRESTRDOLG" id="94">
+					<DataPath>ПриморскийКрай_ТаблицаВыгрузки.RESTRDOLG</DataPath>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>0 - при отсутствии соглашения о  реструктуризации долга,
+1 - при наличии соглашения о реструктуризации долга
+</v8:content>
+						</v8:item>
+					</ToolTip>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПриморскийКрай_ТаблицаВыгрузкиRESTRDOLGКонтекстноеМеню" id="95"/>
+					<ExtendedTooltip name="ПриморскийКрай_ТаблицаВыгрузкиRESTRDOLGРасширеннаяПодсказка" id="96"/>
+				</InputField>
+				<InputField name="ПриморскийКрай_ТаблицаВыгрузкиKODTEROTDE" id="97">
+					<DataPath>ПриморскийКрай_ТаблицаВыгрузки.KODTEROTDE</DataPath>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код территориального отдела</v8:content>
+						</v8:item>
+					</ToolTip>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПриморскийКрай_ТаблицаВыгрузкиKODTEROTDEКонтекстноеМеню" id="98"/>
+					<ExtendedTooltip name="ПриморскийКрай_ТаблицаВыгрузкиKODTEROTDEРасширеннаяПодсказка" id="99"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.УПЖКХ_ВыгрузкиВОрганыСоцЗащиты</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ФайлОбмена" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Файл обмена</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПриморскийКрай_ТаблицаВыгрузки" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Приморский край таблица выгрузки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="LS" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер счета</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="NP" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Населенный пункт</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>75</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="UL" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Улица</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="DOM" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дом</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>10</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="KOR" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Корпус</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>10</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="KV" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Квартира</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>10</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="KOM" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комната</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>10</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="GKU" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЖКУ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>150</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="PL" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Площадь</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>6</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="KOLP" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Кол-во проживающих</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>2</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="NORM" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Норматив</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>12</v8:Digits>
+							<v8:FractionDigits>4</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="FAKTP" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма к оплате</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>12</v8:Digits>
+							<v8:FractionDigits>4</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="FAKTPER" id="13">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Фактическое потребление ЖКУ с учетом перерасчета предыдущего периода</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>12</v8:Digits>
+							<v8:FractionDigits>4</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="TARIF" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Установленный тариф</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>12</v8:Digits>
+							<v8:FractionDigits>4</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="DATEP" id="15">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="PRIZN" id="16">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Признак корректировки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>1</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="PRIM" id="17">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Примечание</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>200</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="PKU" id="18">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер ПКУ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>20</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="MESD" id="19">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Количество месяцев долга</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>3</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="RESTRDOLG" id="20">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наличие соглашение о реструктуризации долга</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>1</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="KODTEROTDE" id="21">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код территориального отдела</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>2</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЛицевойСчет" id="22">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Лицевой счет</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.КВП_ЛицевыеСчета</v8:Type>
+					</Type>
+				</Column>
+				<Column name="НаселенныйПункт" id="23">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Населенный пункт</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>75</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Улица" id="24">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Улица</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Помещение" id="25">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Помещение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.УПЖКХ_Помещения</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ПериодСтрокой" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период строкой</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>15</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<View>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.ДобавлениеИзменениеДанныхФизическихЛицЗарплатаКадры">true</xr:Value>
+				<xr:Value name="Role.ПолныеПрава">true</xr:Value>
+				<xr:Value name="Role.ЧтениеДанныхФизическихЛицЗарплатаКадры">true</xr:Value>
+			</View>
+			<Edit>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.ДобавлениеИзменениеДанныхФизическихЛицЗарплатаКадры">true</xr:Value>
+				<xr:Value name="Role.ПолныеПрава">true</xr:Value>
+				<xr:Value name="Role.ЧтениеДанныхФизическихЛицЗарплатаКадры">true</xr:Value>
+			</Edit>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ПриморскийКрай_СоответствиеУслуг" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Приморский край соответствие услуг</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="GKU" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>GKU</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="УслугаВБазе" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Услуга в базе</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.КВП_Услуги</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ТипУслуги" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип услуги</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>28</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ПриморскийКрай_УслугиВОСЗН" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Приморский край услуги в ОСЗН</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="GKU" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>GKU</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="КаталогВыгрузки" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Каталог выгрузки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаНастройка" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда настройка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка соответствия услуг</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаНастройка</Action>
+		</Command>
+		<Command name="КомандаЗагрузитьИзФайла" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда загрузить из файла</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузка сведений из файла обмена</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ЗагрузкаФайла</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаЗагрузитьИзФайла</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаЗаполнитьДанныеОНачислениях" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда заполнить данные о начислениях</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнение данными о начислениях из информационной базы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ЗаполнитьФорму</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаЗаполнитьДанныеОНачислениях</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаВыгрузитьВФайл" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда выгрузить в файл</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузка сведений в файл</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ВыгрузитьФайлСертификата</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаВыгрузитьВФайл</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаСправочнаяИнформация" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инструкция</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инструкция по настройке и эксплуатации выгрузки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.FormHelp</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаСправочнаяИнформация</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

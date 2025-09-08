@@ -1,0 +1,543 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Владимирская область: Выгрузка в ОСЗН</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаКомандаНастройка" id="1">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.КомандаНастройка</CommandName>
+				<Picture>
+					<xr:Ref>CommonPicture.Настройка</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Настройка</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаКомандаНастройкаРасширеннаяПодсказка" id="2"/>
+			</Button>
+			<Button name="ФормаКомандаЗагрузитьИзФайла" id="208">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.КомандаЗагрузитьИзФайла</CommandName>
+				<ExtendedTooltip name="ФормаКомандаЗагрузитьИзФайлаРасширеннаяПодсказка" id="209"/>
+			</Button>
+			<Button name="ФормаКомандаВыгрузить" id="5">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.КомандаВыгрузить</CommandName>
+				<Picture>
+					<xr:Ref>CommonPicture.ВыгрузитьФайлСертификата</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="ФормаКомандаВыгрузитьРасширеннаяПодсказка" id="6"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="8"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаШапкаСлева" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шапка слева</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шапка слева</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаШапкаСлеваРасширеннаяПодсказка" id="10"/>
+					<ChildItems>
+						<InputField name="ПериодСтрокой" id="11">
+							<DataPath>ПериодСтрокой</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Период</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ChoiceButton>true</ChoiceButton>
+							<SpinButton>true</SpinButton>
+							<ChoiceButtonPicture>
+								<xr:Ref>StdPicture.InputFieldCalendar</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</ChoiceButtonPicture>
+							<ContextMenu name="ПериодСтрокойКонтекстноеМеню" id="12"/>
+							<ExtendedTooltip name="ПериодСтрокойExtendedTooltip" id="13"/>
+							<Events>
+								<Event name="OnChange">ПериодСтрокойПриИзменении</Event>
+								<Event name="AutoComplete">ПериодСтрокойАвтоПодбор</Event>
+								<Event name="StartChoice">ПериодСтрокойНачалоВыбора</Event>
+								<Event name="Tuning">ПериодСтрокойРегулирование</Event>
+								<Event name="TextEditEnd">ПериодСтрокойОкончаниеВводаТекста</Event>
+							</Events>
+						</InputField>
+						<InputField name="Организация" id="14">
+							<DataPath>Объект.Организация</DataPath>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="15"/>
+							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="16"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаШапкаСправа" id="17">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шапка справа</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шапка справа</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаШапкаСправаРасширеннаяПодсказка" id="18"/>
+					<ChildItems>
+						<InputField name="ИмяФайлаЗагрузки" id="210">
+							<DataPath>ИмяФайлаЗагрузки</DataPath>
+							<ChoiceButton>true</ChoiceButton>
+							<OpenButton>true</OpenButton>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="ИмяФайлаЗагрузкиКонтекстноеМеню" id="211"/>
+							<ExtendedTooltip name="ИмяФайлаЗагрузкиРасширеннаяПодсказка" id="212"/>
+							<Events>
+								<Event name="StartChoice">ИмяФайлаЗагрузкиНачалоВыбора</Event>
+								<Event name="Opening">ИмяФайлаЗагрузкиОткрытие</Event>
+							</Events>
+						</InputField>
+						<InputField name="КаталогВыгрузки" id="22">
+							<DataPath>КаталогВыгрузки</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Каталог выгрузки</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<ChoiceButton>true</ChoiceButton>
+							<OpenButton>true</OpenButton>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="КаталогВыгрузкиКонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="КаталогВыгрузкиРасширеннаяПодсказка" id="24"/>
+							<Events>
+								<Event name="StartChoice">ИмяКаталогаЗагрузкиНачалоВыбора</Event>
+								<Event name="Opening">ИмяКаталогаЗагрузкиОткрытие</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="ВладимирскаяОбласть_ТаблицаДанных" id="213">
+			<Representation>List</Representation>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Объект.ВладимирскаяОбласть_ТаблицаДанных</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ВладимирскаяОбласть_ТаблицаДанныхКонтекстноеМеню" id="214"/>
+			<AutoCommandBar name="ВладимирскаяОбласть_ТаблицаДанныхКоманднаяПанель" id="215"/>
+			<ExtendedTooltip name="ВладимирскаяОбласть_ТаблицаДанныхРасширеннаяПодсказка" id="216"/>
+			<SearchStringAddition name="ВладимирскаяОбласть_ТаблицаДанныхСтрокаПоиска" id="217">
+				<AdditionSource>
+					<Item>ВладимирскаяОбласть_ТаблицаДанных</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ВладимирскаяОбласть_ТаблицаДанныхСтрокаПоискаКонтекстноеМеню" id="218"/>
+				<ExtendedTooltip name="ВладимирскаяОбласть_ТаблицаДанныхСтрокаПоискаРасширеннаяПодсказка" id="219"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ВладимирскаяОбласть_ТаблицаДанныхСостояниеПросмотра" id="220">
+				<AdditionSource>
+					<Item>ВладимирскаяОбласть_ТаблицаДанных</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ВладимирскаяОбласть_ТаблицаДанныхСостояниеПросмотраКонтекстноеМеню" id="221"/>
+				<ExtendedTooltip name="ВладимирскаяОбласть_ТаблицаДанныхСостояниеПросмотраРасширеннаяПодсказка" id="222"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ВладимирскаяОбласть_ТаблицаДанныхУправлениеПоиском" id="223">
+				<AdditionSource>
+					<Item>ВладимирскаяОбласть_ТаблицаДанных</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ВладимирскаяОбласть_ТаблицаДанныхУправлениеПоискомКонтекстноеМеню" id="224"/>
+				<ExtendedTooltip name="ВладимирскаяОбласть_ТаблицаДанныхУправлениеПоискомРасширеннаяПодсказка" id="225"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ВладимирскаяОбласть_ТаблицаДанныхНомерСтроки" id="226">
+					<DataPath>Объект.ВладимирскаяОбласть_ТаблицаДанных.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ВладимирскаяОбласть_ТаблицаДанныхНомерСтрокиКонтекстноеМеню" id="227"/>
+					<ExtendedTooltip name="ВладимирскаяОбласть_ТаблицаДанныхНомерСтрокиРасширеннаяПодсказка" id="228"/>
+				</LabelField>
+				<InputField name="ВладимирскаяОбласть_ТаблицаДанныхЛицевойСчет" id="301">
+					<DataPath>Объект.ВладимирскаяОбласть_ТаблицаДанных.ЛицевойСчет</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ВладимирскаяОбласть_ТаблицаДанныхЛицевойСчетКонтекстноеМеню" id="302"/>
+					<ExtendedTooltip name="ВладимирскаяОбласть_ТаблицаДанныхЛицевойСчетРасширеннаяПодсказка" id="303"/>
+				</InputField>
+				<InputField name="ВладимирскаяОбласть_ТаблицаДанныхL_ORG" id="229">
+					<DataPath>Объект.ВладимирскаяОбласть_ТаблицаДанных.L_ORG</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ВладимирскаяОбласть_ТаблицаДанныхL_ORGКонтекстноеМеню" id="230"/>
+					<ExtendedTooltip name="ВладимирскаяОбласть_ТаблицаДанныхL_ORGРасширеннаяПодсказка" id="231"/>
+				</InputField>
+				<InputField name="ВладимирскаяОбласть_ТаблицаДанныхL_SHET" id="232">
+					<DataPath>Объект.ВладимирскаяОбласть_ТаблицаДанных.L_SHET</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ВладимирскаяОбласть_ТаблицаДанныхL_SHETКонтекстноеМеню" id="233"/>
+					<ExtendedTooltip name="ВладимирскаяОбласть_ТаблицаДанныхL_SHETРасширеннаяПодсказка" id="234"/>
+				</InputField>
+				<InputField name="ВладимирскаяОбласть_ТаблицаДанныхL_SHET_ORG" id="235">
+					<DataPath>Объект.ВладимирскаяОбласть_ТаблицаДанных.L_SHET_ORG</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ВладимирскаяОбласть_ТаблицаДанныхL_SHET_ORGКонтекстноеМеню" id="236"/>
+					<ExtendedTooltip name="ВладимирскаяОбласть_ТаблицаДанныхL_SHET_ORGРасширеннаяПодсказка" id="237"/>
+				</InputField>
+				<InputField name="ВладимирскаяОбласть_ТаблицаДанныхNSP" id="238">
+					<DataPath>Объект.ВладимирскаяОбласть_ТаблицаДанных.NSP</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ВладимирскаяОбласть_ТаблицаДанныхNSPКонтекстноеМеню" id="239"/>
+					<ExtendedTooltip name="ВладимирскаяОбласть_ТаблицаДанныхNSPРасширеннаяПодсказка" id="240"/>
+				</InputField>
+				<InputField name="ВладимирскаяОбласть_ТаблицаДанныхULC" id="241">
+					<DataPath>Объект.ВладимирскаяОбласть_ТаблицаДанных.ULC</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ВладимирскаяОбласть_ТаблицаДанныхULCКонтекстноеМеню" id="242"/>
+					<ExtendedTooltip name="ВладимирскаяОбласть_ТаблицаДанныхULCРасширеннаяПодсказка" id="243"/>
+				</InputField>
+				<InputField name="ВладимирскаяОбласть_ТаблицаДанныхDOM" id="244">
+					<DataPath>Объект.ВладимирскаяОбласть_ТаблицаДанных.DOM</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ВладимирскаяОбласть_ТаблицаДанныхDOMКонтекстноеМеню" id="245"/>
+					<ExtendedTooltip name="ВладимирскаяОбласть_ТаблицаДанныхDOMРасширеннаяПодсказка" id="246"/>
+				</InputField>
+				<InputField name="ВладимирскаяОбласть_ТаблицаДанныхKOR" id="247">
+					<DataPath>Объект.ВладимирскаяОбласть_ТаблицаДанных.KOR</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ВладимирскаяОбласть_ТаблицаДанныхKORКонтекстноеМеню" id="248"/>
+					<ExtendedTooltip name="ВладимирскаяОбласть_ТаблицаДанныхKORРасширеннаяПодсказка" id="249"/>
+				</InputField>
+				<InputField name="ВладимирскаяОбласть_ТаблицаДанныхKVR" id="250">
+					<DataPath>Объект.ВладимирскаяОбласть_ТаблицаДанных.KVR</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ВладимирскаяОбласть_ТаблицаДанныхKVRКонтекстноеМеню" id="251"/>
+					<ExtendedTooltip name="ВладимирскаяОбласть_ТаблицаДанныхKVRРасширеннаяПодсказка" id="252"/>
+				</InputField>
+				<InputField name="ВладимирскаяОбласть_ТаблицаДанныхKODORG" id="253">
+					<DataPath>Объект.ВладимирскаяОбласть_ТаблицаДанных.KODORG</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ВладимирскаяОбласть_ТаблицаДанныхKODORGКонтекстноеМеню" id="254"/>
+					<ExtendedTooltip name="ВладимирскаяОбласть_ТаблицаДанныхKODORGРасширеннаяПодсказка" id="255"/>
+				</InputField>
+				<InputField name="ВладимирскаяОбласть_ТаблицаДанныхKODUSL" id="256">
+					<DataPath>Объект.ВладимирскаяОбласть_ТаблицаДанных.KODUSL</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ВладимирскаяОбласть_ТаблицаДанныхKODUSLКонтекстноеМеню" id="257"/>
+					<ExtendedTooltip name="ВладимирскаяОбласть_ТаблицаДанныхKODUSLРасширеннаяПодсказка" id="258"/>
+				</InputField>
+				<InputField name="ВладимирскаяОбласть_ТаблицаДанныхVIDUSL" id="259">
+					<DataPath>Объект.ВладимирскаяОбласть_ТаблицаДанных.VIDUSL</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ВладимирскаяОбласть_ТаблицаДанныхVIDUSLКонтекстноеМеню" id="260"/>
+					<ExtendedTooltip name="ВладимирскаяОбласть_ТаблицаДанныхVIDUSLРасширеннаяПодсказка" id="261"/>
+				</InputField>
+				<InputField name="ВладимирскаяОбласть_ТаблицаДанныхUSL_OPL" id="262">
+					<DataPath>Объект.ВладимирскаяОбласть_ТаблицаДанных.USL_OPL</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ВладимирскаяОбласть_ТаблицаДанныхUSL_OPLКонтекстноеМеню" id="263"/>
+					<ExtendedTooltip name="ВладимирскаяОбласть_ТаблицаДанныхUSL_OPLРасширеннаяПодсказка" id="264"/>
+				</InputField>
+				<CheckBoxField name="ВладимирскаяОбласть_ТаблицаДанныхPRIZN_OBR" id="265">
+					<DataPath>Объект.ВладимирскаяОбласть_ТаблицаДанных.PRIZN_OBR</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ВладимирскаяОбласть_ТаблицаДанныхPRIZN_OBRКонтекстноеМеню" id="266"/>
+					<ExtendedTooltip name="ВладимирскаяОбласть_ТаблицаДанныхPRIZN_OBRРасширеннаяПодсказка" id="267"/>
+				</CheckBoxField>
+				<InputField name="ВладимирскаяОбласть_ТаблицаДанныхS_TOTAL" id="268">
+					<DataPath>Объект.ВладимирскаяОбласть_ТаблицаДанных.S_TOTAL</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ВладимирскаяОбласть_ТаблицаДанныхS_TOTALКонтекстноеМеню" id="269"/>
+					<ExtendedTooltip name="ВладимирскаяОбласть_ТаблицаДанныхS_TOTALРасширеннаяПодсказка" id="270"/>
+				</InputField>
+				<InputField name="ВладимирскаяОбласть_ТаблицаДанныхGIL_FOND" id="271">
+					<DataPath>Объект.ВладимирскаяОбласть_ТаблицаДанных.GIL_FOND</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ВладимирскаяОбласть_ТаблицаДанныхGIL_FONDКонтекстноеМеню" id="272"/>
+					<ExtendedTooltip name="ВладимирскаяОбласть_ТаблицаДанныхGIL_FONDРасширеннаяПодсказка" id="273"/>
+				</InputField>
+				<CheckBoxField name="ВладимирскаяОбласть_ТаблицаДанныхPRIVAT" id="274">
+					<DataPath>Объект.ВладимирскаяОбласть_ТаблицаДанных.PRIVAT</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ВладимирскаяОбласть_ТаблицаДанныхPRIVATКонтекстноеМеню" id="275"/>
+					<ExtendedTooltip name="ВладимирскаяОбласть_ТаблицаДанныхPRIVATРасширеннаяПодсказка" id="276"/>
+				</CheckBoxField>
+				<InputField name="ВладимирскаяОбласть_ТаблицаДанныхN_VSEGO" id="277">
+					<DataPath>Объект.ВладимирскаяОбласть_ТаблицаДанных.N_VSEGO</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ВладимирскаяОбласть_ТаблицаДанныхN_VSEGOКонтекстноеМеню" id="278"/>
+					<ExtendedTooltip name="ВладимирскаяОбласть_ТаблицаДанныхN_VSEGOРасширеннаяПодсказка" id="279"/>
+				</InputField>
+				<InputField name="ВладимирскаяОбласть_ТаблицаДанныхN_FAKT" id="280">
+					<DataPath>Объект.ВладимирскаяОбласть_ТаблицаДанных.N_FAKT</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ВладимирскаяОбласть_ТаблицаДанныхN_FAKTКонтекстноеМеню" id="281"/>
+					<ExtendedTooltip name="ВладимирскаяОбласть_ТаблицаДанныхN_FAKTРасширеннаяПодсказка" id="282"/>
+				</InputField>
+				<InputField name="ВладимирскаяОбласть_ТаблицаДанныхED_TAR" id="283">
+					<DataPath>Объект.ВладимирскаяОбласть_ТаблицаДанных.ED_TAR</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ВладимирскаяОбласть_ТаблицаДанныхED_TARКонтекстноеМеню" id="284"/>
+					<ExtendedTooltip name="ВладимирскаяОбласть_ТаблицаДанныхED_TARРасширеннаяПодсказка" id="285"/>
+				</InputField>
+				<InputField name="ВладимирскаяОбласть_ТаблицаДанныхED_IZM" id="286">
+					<DataPath>Объект.ВладимирскаяОбласть_ТаблицаДанных.ED_IZM</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ВладимирскаяОбласть_ТаблицаДанныхED_IZMКонтекстноеМеню" id="287"/>
+					<ExtendedTooltip name="ВладимирскаяОбласть_ТаблицаДанныхED_IZMРасширеннаяПодсказка" id="288"/>
+				</InputField>
+				<InputField name="ВладимирскаяОбласть_ТаблицаДанныхTAR" id="289">
+					<DataPath>Объект.ВладимирскаяОбласть_ТаблицаДанных.TAR</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ВладимирскаяОбласть_ТаблицаДанныхTARКонтекстноеМеню" id="290"/>
+					<ExtendedTooltip name="ВладимирскаяОбласть_ТаблицаДанныхTARРасширеннаяПодсказка" id="291"/>
+				</InputField>
+				<InputField name="ВладимирскаяОбласть_ТаблицаДанныхDATE_S" id="292">
+					<DataPath>Объект.ВладимирскаяОбласть_ТаблицаДанных.DATE_S</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ВладимирскаяОбласть_ТаблицаДанныхDATE_SКонтекстноеМеню" id="293"/>
+					<ExtendedTooltip name="ВладимирскаяОбласть_ТаблицаДанныхDATE_SРасширеннаяПодсказка" id="294"/>
+				</InputField>
+				<InputField name="ВладимирскаяОбласть_ТаблицаДанныхPRIM" id="295">
+					<DataPath>Объект.ВладимирскаяОбласть_ТаблицаДанных.PRIM</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ВладимирскаяОбласть_ТаблицаДанныхPRIMКонтекстноеМеню" id="296"/>
+					<ExtendedTooltip name="ВладимирскаяОбласть_ТаблицаДанныхPRIMРасширеннаяПодсказка" id="297"/>
+				</InputField>
+				<InputField name="ВладимирскаяОбласть_ТаблицаДанныхDOLG_S" id="298">
+					<DataPath>Объект.ВладимирскаяОбласть_ТаблицаДанных.DOLG_S</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ВладимирскаяОбласть_ТаблицаДанныхDOLG_SКонтекстноеМеню" id="299"/>
+					<ExtendedTooltip name="ВладимирскаяОбласть_ТаблицаДанныхDOLG_SРасширеннаяПодсказка" id="300"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.УПЖКХ_ВыгрузкиВОрганыСоцЗащиты</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ПериодСтрокой" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период строкой</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>15</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<View>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.ДобавлениеИзменениеДанныхФизическихЛицЗарплатаКадры">true</xr:Value>
+				<xr:Value name="Role.ПолныеПрава">true</xr:Value>
+				<xr:Value name="Role.ЧтениеДанныхФизическихЛицЗарплатаКадры">true</xr:Value>
+			</View>
+			<Edit>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.ДобавлениеИзменениеДанныхФизическихЛицЗарплатаКадры">true</xr:Value>
+				<xr:Value name="Role.ПолныеПрава">true</xr:Value>
+				<xr:Value name="Role.ЧтениеДанныхФизическихЛицЗарплатаКадры">true</xr:Value>
+			</Edit>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ИмяФайлаЗагрузки" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Файл загрузки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>512</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КаталогВыгрузки" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Каталог выгрузки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>512</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ФайлЗагрузкиНаселенныхПунктов" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Файл загрузки населенных пунктов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>512</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ФайлЗагрузкиУлиц" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Файл загрузки улиц</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>512</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ФайлЗагрузкиУслуг" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Файл загрузки услуг</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>512</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаНастройка" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Настройка</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаНастройка</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаВыгрузить" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ВыгрузитьФайлСертификата</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаВыгрузить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаЗагрузитьИзФайла" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ЗаполнитьФорму</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаЗагрузитьИзФайла</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

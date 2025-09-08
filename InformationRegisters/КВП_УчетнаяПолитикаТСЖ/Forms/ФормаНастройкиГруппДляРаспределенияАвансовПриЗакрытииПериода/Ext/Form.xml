@@ -1,0 +1,527 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Форма настройки групп услуг для распределения авансов при закрытии периода</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<CommandBar name="ОсновнаяКоманднаяПанель" id="59">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Основная командная панель</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Основная командная панель</v8:content>
+				</v8:item>
+			</ToolTip>
+			<CommandSource>Item.СоставГруппУслугДляРаспределенияАвансов</CommandSource>
+			<ExtendedTooltip name="ОсновнаяКоманднаяПанельРасширеннаяПодсказка" id="60"/>
+		</CommandBar>
+		<UsualGroup name="ГруппаОграниченияРаспределенияАвансов" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа ограничения распределения авансов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа ограничения распределения авансов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ChildItemsWidth>LeftWide</ChildItemsWidth>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОграниченияРаспределенияАвансовРасширеннаяПодсказка" id="26"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаГруппыУслугДляРаспределенияАвансов" id="88">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа группы услуг для распределения авансов</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа группы услуг для распределения авансов</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ChildItemsWidth>LeftWidest</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаГруппыУслугДляРаспределенияАвансовРасширеннаяПодсказка" id="89"/>
+					<ChildItems>
+						<Table name="СоставГруппУслугДляРаспределенияАвансов" id="4">
+							<Representation>List</Representation>
+							<TitleLocation>Top</TitleLocation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>СоставГруппУслугДляРаспределенияАвансов</DataPath>
+							<CommandSet>
+								<ExcludedCommand>MoveDown</ExcludedCommand>
+								<ExcludedCommand>MoveUp</ExcludedCommand>
+							</CommandSet>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Редактирование состава групп услуг осуществляется в таблице "Состав групп услуг".
+В каждой строке настройки нужно задать наименование группы и услугу, которая к ней относится.
+Добавить новую услугу в группу можно копированием строки.</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="СоставГруппУслугДляРаспределенияАвансовКонтекстноеМеню" id="5"/>
+							<AutoCommandBar name="СоставГруппУслугДляРаспределенияАвансовКоманднаяПанель" id="6">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СоставГруппУслугДляРаспределенияАвансовРасширеннаяПодсказка" id="7"/>
+							<SearchStringAddition name="СоставГруппУслугДляРаспределенияАвансовСтрокаПоиска" id="8">
+								<AdditionSource>
+									<Item>СоставГруппУслугДляРаспределенияАвансов</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СоставГруппУслугДляРаспределенияАвансовСтрокаПоискаКонтекстноеМеню" id="9"/>
+								<ExtendedTooltip name="СоставГруппУслугДляРаспределенияАвансовСтрокаПоискаРасширеннаяПодсказка" id="10"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СоставГруппУслугДляРаспределенияАвансовСостояниеПросмотра" id="11">
+								<AdditionSource>
+									<Item>СоставГруппУслугДляРаспределенияАвансов</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СоставГруппУслугДляРаспределенияАвансовСостояниеПросмотраКонтекстноеМеню" id="12"/>
+								<ExtendedTooltip name="СоставГруппУслугДляРаспределенияАвансовСостояниеПросмотраРасширеннаяПодсказка" id="13"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СоставГруппУслугДляРаспределенияАвансовУправлениеПоиском" id="14">
+								<AdditionSource>
+									<Item>СоставГруппУслугДляРаспределенияАвансов</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СоставГруппУслугДляРаспределенияАвансовУправлениеПоискомКонтекстноеМеню" id="15"/>
+								<ExtendedTooltip name="СоставГруппУслугДляРаспределенияАвансовУправлениеПоискомРасширеннаяПодсказка" id="16"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnEditEnd">СоставГруппУслугДляРаспределенияАвансовПриОкончанииРедактирования</Event>
+								<Event name="BeforeAddRow">СоставГруппУслугДляРаспределенияАвансовПередНачаломДобавления</Event>
+								<Event name="BeforeDeleteRow">СоставГруппУслугДляРаспределенияАвансовПередУдалением</Event>
+								<Event name="BeforeEditEnd">СоставГруппУслугДляРаспределенияАвансовПередОкончаниемРедактирования</Event>
+								<Event name="OnStartEdit">СоставГруппУслугДляРаспределенияАвансовПриНачалеРедактирования</Event>
+								<Event name="AfterDeleteRow">СоставГруппУслугДляРаспределенияАвансовПослеУдаления</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="СоставГруппУслугДляРаспределенияАвансовГруппаОграничения" id="17">
+									<DataPath>СоставГруппУслугДляРаспределенияАвансов.ГруппаОграничения</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа ограничения</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СоставГруппУслугДляРаспределенияАвансовГруппаОграниченияКонтекстноеМеню" id="18"/>
+									<ExtendedTooltip name="СоставГруппУслугДляРаспределенияАвансовГруппаОграниченияРасширеннаяПодсказка" id="19"/>
+								</InputField>
+								<InputField name="СоставГруппУслугДляРаспределенияАвансовУслуга" id="20">
+									<DataPath>СоставГруппУслугДляРаспределенияАвансов.Услуга</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Услуга</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+									<ContextMenu name="СоставГруппУслугДляРаспределенияАвансовУслугаКонтекстноеМеню" id="21"/>
+									<ExtendedTooltip name="СоставГруппУслугДляРаспределенияАвансовУслугаРасширеннаяПодсказка" id="22"/>
+								</InputField>
+								<InputField name="СоставГруппУслугДляРаспределенияАвансовКоличествоУслуг" id="76">
+									<DataPath>СоставГруппУслугДляРаспределенияАвансов.КоличествоУслуг</DataPath>
+									<Visible>false</Visible>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СоставГруппУслугДляРаспределенияАвансовКоличествоУслугКонтекстноеМеню" id="77"/>
+									<ExtendedTooltip name="СоставГруппУслугДляРаспределенияАвансовКоличествоУслугРасширеннаяПодсказка" id="78"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаСоставГруппУслугДляРаспределенияАвансов" id="90">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа состав групп услуг для распределения авансов</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа состав групп услуг для распределения авансов</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСоставГруппУслугДляРаспределенияАвансовРасширеннаяПодсказка" id="91"/>
+					<ChildItems>
+						<Table name="ГруппыУслугДляРаспределенияАвансов" id="27">
+							<Representation>List</Representation>
+							<TitleLocation>Top</TitleLocation>
+							<ReadOnly>true</ReadOnly>
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>ГруппыУслугДляРаспределенияАвансов</DataPath>
+							<BackColor>style:FormBackColor</BackColor>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ГруппыУслугДляРаспределенияАвансовКонтекстноеМеню" id="28"/>
+							<AutoCommandBar name="ГруппыУслугДляРаспределенияАвансовКоманднаяПанель" id="29">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ГруппыУслугДляРаспределенияАвансовРасширеннаяПодсказка" id="30"/>
+							<SearchStringAddition name="ГруппыУслугДляРаспределенияАвансовСтрокаПоиска" id="31">
+								<AdditionSource>
+									<Item>ГруппыУслугДляРаспределенияАвансов</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ГруппыУслугДляРаспределенияАвансовСтрокаПоискаКонтекстноеМеню" id="32"/>
+								<ExtendedTooltip name="ГруппыУслугДляРаспределенияАвансовСтрокаПоискаРасширеннаяПодсказка" id="33"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ГруппыУслугДляРаспределенияАвансовСостояниеПросмотра" id="34">
+								<AdditionSource>
+									<Item>ГруппыУслугДляРаспределенияАвансов</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ГруппыУслугДляРаспределенияАвансовСостояниеПросмотраКонтекстноеМеню" id="35"/>
+								<ExtendedTooltip name="ГруппыУслугДляРаспределенияАвансовСостояниеПросмотраРасширеннаяПодсказка" id="36"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ГруппыУслугДляРаспределенияАвансовУправлениеПоиском" id="37">
+								<AdditionSource>
+									<Item>ГруппыУслугДляРаспределенияАвансов</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ГруппыУслугДляРаспределенияАвансовУправлениеПоискомКонтекстноеМеню" id="38"/>
+								<ExtendedTooltip name="ГруппыУслугДляРаспределенияАвансовУправлениеПоискомРасширеннаяПодсказка" id="39"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="ГруппыУслугДляРаспределенияАвансовГруппаОграничения" id="40">
+									<DataPath>ГруппыУслугДляРаспределенияАвансов.ГруппаОграничения</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ГруппыУслугДляРаспределенияАвансовГруппаОграниченияКонтекстноеМеню" id="41"/>
+									<ExtendedTooltip name="ГруппыУслугДляРаспределенияАвансовГруппаОграниченияРасширеннаяПодсказка" id="42"/>
+								</InputField>
+								<InputField name="ГруппыУслугДляРаспределенияАвансовКоличествоУслуг" id="43">
+									<DataPath>ГруппыУслугДляРаспределенияАвансов.КоличествоУслуг</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Количество услуг</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧН=0</v8:content>
+										</v8:item>
+									</Format>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧН=0</v8:content>
+										</v8:item>
+									</EditFormat>
+									<ContextMenu name="ГруппыУслугДляРаспределенияАвансовКоличествоУслугКонтекстноеМеню" id="44"/>
+									<ExtendedTooltip name="ГруппыУслугДляРаспределенияАвансовКоличествоУслугРасширеннаяПодсказка" id="45"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<LabelDecoration name="ДекорацияСправкаОСоставеГруппОграничения" id="92">
+			<HorizontalStretch>true</HorizontalStretch>
+			<TextColor>style:УПЖКХ_ТекстСправочнойНадписи</TextColor>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состав групп услуг, определенный в данных настройках используется для ограничения распределения авансов по услугам при закрытии периода по начислениям ЖКХ, а именно:
+- если услуга входит в одну из групп ограничения, то аванс по данной услуге распределяется только на услуги, которые входят в в заданную группу ограничения;
+- если услуга не входит ни в одну из групп ограничения, то аванс по данной услуге распределяется только на услуги, которые не входят ни в одну из заданных групп ограничения.</v8:content>
+				</v8:item>
+			</Title>
+			<VerticalAlign>Top</VerticalAlign>
+			<ContextMenu name="ДекорацияСправкаОСоставеГруппОграниченияКонтекстноеМеню" id="93"/>
+			<ExtendedTooltip name="ДекорацияСправкаОСоставеГруппОграниченияРасширеннаяПодсказка" id="94"/>
+		</LabelDecoration>
+		<UsualGroup name="ГруппаНастроекКапремонта" id="46">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа настроек капремонта</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа настроек капремонта</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ChildItemsWidth>LeftWide</ChildItemsWidth>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНастроекКапремонтаРасширеннаяПодсказка" id="47"/>
+			<ChildItems>
+				<LabelDecoration name="ДекорацияНастройкиУчетаПоКР" id="53">
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Редактирование состава группы услуг капитального ремонта доступно в &lt;colorstyle 0:f94a706e-2b02-4a24-902f-ea08dcd46c2c&gt;&lt;link http://www.ya.ru&gt;Настройках учета по услугам капремонта&lt;/&gt;&lt;/&gt;.</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияНастройкиУчетаПоКРКонтекстноеМеню" id="54"/>
+					<ExtendedTooltip name="ДекорацияНастройкиУчетаПоКРРасширеннаяПодсказка" id="55"/>
+					<Events>
+						<Event name="URLProcessing">ДекорацияНастройкиУчетаПоКРОбработкаНавигационнойСсылки</Event>
+					</Events>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<CommandBar name="ГруппаПодвалФормы" id="79">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа подвал формы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа подвал формы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalLocation>Right</HorizontalLocation>
+			<ExtendedTooltip name="ГруппаПодвалФормыРасширеннаяПодсказка" id="80"/>
+			<ChildItems>
+				<Button name="КнопкаСохранитьИЗакрыть" id="81">
+					<Type>CommandBarButton</Type>
+					<Representation>PictureAndText</Representation>
+					<DefaultButton>true</DefaultButton>
+					<CommandName>Form.Command.СохранитьИЗакрыть</CommandName>
+					<ExtendedTooltip name="КнопкаСохранитьИЗакрытьРасширеннаяПодсказка" id="82"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="СоставГруппУслугДляРаспределенияАвансов" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состав групп услуг</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ГруппаОграничения" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа ограничения</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Услуга" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Услуга</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.КВП_Услуги</v8:Type>
+					</Type>
+				</Column>
+				<Column name="КоличествоУслуг" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Количество услуг</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>1</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ГруппыУслугДляРаспределенияАвансов" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сводная информация по группам услуг</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ГруппаОграничения" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа ограничения</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="КоличествоУслуг" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Количество услуг</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>3</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="Организация" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="мГруппаУслугПоКапитальномуРемонту" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Капитальный ремонт</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>50</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="мСтруктураНастроекКапРемонта" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Структура настроек кап ремонта</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>СоставГруппУслугДляРаспределенияАвансовГруппаОграничения</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>СоставГруппУслугДляРаспределенияАвансовУслуга</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">СоставГруппУслугДляРаспределенияАвансов.ГруппаОграничения</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:string">Капитальный ремонт</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:FormBackColor</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:НедоступныеДанныеЦвет</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="СохранитьИЗакрыть" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить и закрыть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить и закрыть</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СохранитьИЗакрыть</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

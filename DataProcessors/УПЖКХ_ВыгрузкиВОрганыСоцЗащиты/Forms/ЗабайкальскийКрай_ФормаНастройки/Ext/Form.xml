@@ -1,0 +1,378 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Забайкальский край: Настройка выгрузки</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="ГруппаСтраницыФормы" id="94">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы формы</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="ГруппаСтраницыФормыРасширеннаяПодсказка" id="95"/>
+			<ChildItems>
+				<Page name="ГруппаНастройкиУслуг" id="96">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки формата загрузки/выгрузки и соответствия услуг</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаНастройкиУслугРасширеннаяПодсказка" id="97"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияПояснениеНстройкиОсновныхПолей" id="334">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>true</HorizontalStretch>
+							<TextColor>style:УПЖКХ_ТекстСправочнойНадписи</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Для корректной загрузки данных из файла и корректной выгрузки данных в файл формата DBF установите соответствие наименования некоторых полей файла загрузки формата DBF номерам этих полей. Необходимо указать номер соответствующего поля по порядку в файле загрузки.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияПояснениеНстройкиОсновныхПолейКонтекстноеМеню" id="335"/>
+							<ExtendedTooltip name="ДекорацияПояснениеНстройкиОсновныхПолейРасширеннаяПодсказка" id="336"/>
+						</LabelDecoration>
+						<InputField name="НомерПоляКоличествоМесяцевДолга" id="340">
+							<DataPath>НомерПоляКоличествоМесяцевДолга</DataPath>
+							<ContextMenu name="НомерПоляКоличествоМесяцевДолгаКонтекстноеМеню" id="341"/>
+							<ExtendedTooltip name="НомерПоляКоличествоМесяцевДолгаРасширеннаяПодсказка" id="342"/>
+							<Events>
+								<Event name="TextEditEnd">НомерПоляКоличествоМесяцевДолгаОкончаниеВводаТекста</Event>
+							</Events>
+						</InputField>
+						<InputField name="НомерПоляНаличиеЗадолженности" id="343">
+							<DataPath>НомерПоляНаличиеЗадолженности</DataPath>
+							<ContextMenu name="НомерПоляНаличиеЗадолженностиКонтекстноеМеню" id="344"/>
+							<ExtendedTooltip name="НомерПоляНаличиеЗадолженностиРасширеннаяПодсказка" id="345"/>
+							<Events>
+								<Event name="TextEditEnd">НомерПоляНаличиеЗадолженностиОкончаниеВводаТекста</Event>
+							</Events>
+						</InputField>
+						<LabelDecoration name="ДекорацияПояснениеНстройкиОсновныхПолей1" id="337">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>true</HorizontalStretch>
+							<TextColor>style:УПЖКХ_ТекстСправочнойНадписи</TextColor>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>В указанный номер поля "Наличие счетчика" будут выгружены данные о наличии прибора учета по текущей услуге ОСЗН.
+В указанный номер поля "Объем потребления" будут выгружены данные об объемах фактического потребления по текущей услуге ОСЗН.
+В указанный номер поля "Сумма оплаты" будут выгружены данные о начисленных суммах по текущей услуге ОСЗН.
+&lt;b&gt;
+ВНИМАНИЕ!
+Номера полей выгрузки не должны совпадать между собой, не должны совпадать номерам основных полей загрузки (номера 1 - 5) и не &lt;/&gt;&lt;font Arial&gt;&lt;fontsize 10&gt;&lt;b&gt;&lt;bgcolor #ffffff&gt;&lt;color #1c55ae&gt;должны совпадать с номерами полей, указанных выше. Между номерами полей не должны быть разрывы. Например, у нас 3 услуги в ОСЗН (ГВС, ХВС и Водоотведение). Номера полей с 1 по 5 уже заняты основными полями. Значит доступны номера полей с 6 и далее до максимального номера поля из файла загрузки (разрыва после номера 5 не должно быть и номер не должен превышать максимального номера поля файла загрузки). Так как для каждой услуги у нас по 3 набора колонок, то допустим что для услуги ГВС мы заполним номера полей как 6, 7 и 8. Для услуги ХВС заполним номера полей 9, 10, 11. И для услуги Водоотведения заполним номера полей 12, 13 и 14. А для полей "Количество месяцев долга" и "Наличие задолженности" соответственно будут номера 15 и 16. (если поле наличие счетчика по Водоотведению заполнять и выводить не нужно, то просто не заполняем для него номер поля, но при этом для полей &lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 10&gt;&lt;b&gt;&lt;bgcolor #ffffff&gt;&lt;color #1c55ae&gt;"Количество месяцев долга" и "Наличие задолженности" соответственно необходимо установить номера 14 и 15&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 10&gt;&lt;b&gt;&lt;bgcolor #ffffff&gt;&lt;color #1c55ae&gt;).&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияПояснениеНстройкиОсновныхПолей1КонтекстноеМеню" id="338"/>
+							<ExtendedTooltip name="ДекорацияПояснениеНстройкиОсновныхПолей1РасширеннаяПодсказка" id="339"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаТаблицыФормы" id="34">
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаТаблицыФормыРасширеннаяПодсказка" id="35"/>
+							<ChildItems>
+								<Table name="ЗабайкальскийКрай_ЖКУ" id="277">
+									<Representation>List</Representation>
+									<SkipOnInput>true</SkipOnInput>
+									<ChangeRowOrder>false</ChangeRowOrder>
+									<SelectionMode>SingleRow</SelectionMode>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>Объект.ЗабайкальскийКрай_ЖКУ</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ЗабайкальскийКрай_ЖКУКонтекстноеМеню" id="278"/>
+									<AutoCommandBar name="ЗабайкальскийКрай_ЖКУКоманднаяПанель" id="279"/>
+									<ExtendedTooltip name="ЗабайкальскийКрай_ЖКУРасширеннаяПодсказка" id="280"/>
+									<SearchStringAddition name="ЗабайкальскийКрай_ЖКУСтрокаПоиска" id="281">
+										<AdditionSource>
+											<Item>ЗабайкальскийКрай_ЖКУ</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ЗабайкальскийКрай_ЖКУСтрокаПоискаКонтекстноеМеню" id="282"/>
+										<ExtendedTooltip name="ЗабайкальскийКрай_ЖКУСтрокаПоискаРасширеннаяПодсказка" id="283"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ЗабайкальскийКрай_ЖКУСостояниеПросмотра" id="284">
+										<AdditionSource>
+											<Item>ЗабайкальскийКрай_ЖКУ</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ЗабайкальскийКрай_ЖКУСостояниеПросмотраКонтекстноеМеню" id="285"/>
+										<ExtendedTooltip name="ЗабайкальскийКрай_ЖКУСостояниеПросмотраРасширеннаяПодсказка" id="286"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ЗабайкальскийКрай_ЖКУУправлениеПоиском" id="287">
+										<AdditionSource>
+											<Item>ЗабайкальскийКрай_ЖКУ</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ЗабайкальскийКрай_ЖКУУправлениеПоискомКонтекстноеМеню" id="288"/>
+										<ExtendedTooltip name="ЗабайкальскийКрай_ЖКУУправлениеПоискомРасширеннаяПодсказка" id="289"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="OnActivateRow">ЗабайкальскийКрай_ЖКУПриАктивизацииСтроки</Event>
+									</Events>
+									<ChildItems>
+										<LabelField name="ЗабайкальскийКрай_ЖКУНомерСтроки" id="346">
+											<DataPath>Объект.ЗабайкальскийКрай_ЖКУ.LineNumber</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ЗабайкальскийКрай_ЖКУНомерСтрокиКонтекстноеМеню" id="347"/>
+											<ExtendedTooltip name="ЗабайкальскийКрай_ЖКУНомерСтрокиРасширеннаяПодсказка" id="348"/>
+										</LabelField>
+										<InputField name="ЗабайкальскийКрай_ЖКУname" id="349">
+											<DataPath>Объект.ЗабайкальскийКрай_ЖКУ.name</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ЗабайкальскийКрай_ЖКУnameКонтекстноеМеню" id="350"/>
+											<ExtendedTooltip name="ЗабайкальскийКрай_ЖКУnameРасширеннаяПодсказка" id="351"/>
+											<Events>
+												<Event name="OnChange">ЗабайкальскийКрай_ЖКУnameПриИзменении</Event>
+											</Events>
+										</InputField>
+										<ColumnGroup name="ЗабайкальскийКрай_ЖКУГруппа" id="308">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Номера полей в файле загрузки/выгрузки:</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Horizontal</Group>
+											<ShowInHeader>true</ShowInHeader>
+											<ExtendedTooltip name="ЗабайкальскийКрай_ЖКУГруппаРасширеннаяПодсказка" id="309"/>
+											<ChildItems>
+												<InputField name="ЗабайкальскийКрай_ЖКУНомерПоляНаличияСчетчика" id="352">
+													<DataPath>Объект.ЗабайкальскийКрай_ЖКУ.НомерПоляНаличияСчетчика</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ЗабайкальскийКрай_ЖКУНомерПоляНаличияСчетчикаКонтекстноеМеню" id="353"/>
+													<ExtendedTooltip name="ЗабайкальскийКрай_ЖКУНомерПоляНаличияСчетчикаРасширеннаяПодсказка" id="354"/>
+													<Events>
+														<Event name="OnChange">ЗабайкальскийКрай_ЖКУНомерПоляНаличияСчетчикаПриИзменении</Event>
+														<Event name="TextEditEnd">ЗабайкальскийКрай_ЖКУНомерПоляНаличияСчетчикаОкончаниеВводаТекста</Event>
+													</Events>
+												</InputField>
+												<InputField name="ЗабайкальскийКрай_ЖКУНомерПоляОбъемПотребления" id="355">
+													<DataPath>Объект.ЗабайкальскийКрай_ЖКУ.НомерПоляОбъемПотребления</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ЗабайкальскийКрай_ЖКУНомерПоляОбъемПотребленияКонтекстноеМеню" id="356"/>
+													<ExtendedTooltip name="ЗабайкальскийКрай_ЖКУНомерПоляОбъемПотребленияРасширеннаяПодсказка" id="357"/>
+													<Events>
+														<Event name="OnChange">ЗабайкальскийКрай_ЖКУНомерПоляОбъемПотребленияПриИзменении</Event>
+														<Event name="TextEditEnd">ЗабайкальскийКрай_ЖКУНомерПоляОбъемПотребленияОкончаниеВводаТекста</Event>
+													</Events>
+												</InputField>
+												<InputField name="ЗабайкальскийКрай_ЖКУНомерПоляСуммаОплаты" id="358">
+													<DataPath>Объект.ЗабайкальскийКрай_ЖКУ.НомерПоляСуммаОплаты</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ЗабайкальскийКрай_ЖКУНомерПоляСуммаОплатыКонтекстноеМеню" id="359"/>
+													<ExtendedTooltip name="ЗабайкальскийКрай_ЖКУНомерПоляСуммаОплатыРасширеннаяПодсказка" id="360"/>
+													<Events>
+														<Event name="OnChange">ЗабайкальскийКрай_ЖКУНомерПоляСуммаОплатыПриИзменении</Event>
+														<Event name="TextEditEnd">ЗабайкальскийКрай_ЖКУНомерПоляСуммаОплатыОкончаниеВводаТекста</Event>
+													</Events>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+									</ChildItems>
+								</Table>
+								<Table name="ТП_УслугаВБазе" id="66">
+									<Representation>List</Representation>
+									<SelectionMode>SingleRow</SelectionMode>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>ТП_УслугаВБазе</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ТП_УслугаВБазеКонтекстноеМеню" id="67"/>
+									<AutoCommandBar name="ТП_УслугаВБазеКоманднаяПанель" id="68"/>
+									<ExtendedTooltip name="ТП_УслугаВБазеРасширеннаяПодсказка" id="69"/>
+									<SearchStringAddition name="ТП_УслугаВБазеСтрокаПоиска" id="70">
+										<AdditionSource>
+											<Item>ТП_УслугаВБазе</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ТП_УслугаВБазеСтрокаПоискаКонтекстноеМеню" id="73"/>
+										<ExtendedTooltip name="ТП_УслугаВБазеСтрокаПоискаРасширеннаяПодсказка" id="74"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ТП_УслугаВБазеСостояниеПросмотра" id="75">
+										<AdditionSource>
+											<Item>ТП_УслугаВБазе</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ТП_УслугаВБазеСостояниеПросмотраКонтекстноеМеню" id="78"/>
+										<ExtendedTooltip name="ТП_УслугаВБазеСостояниеПросмотраРасширеннаяПодсказка" id="79"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ТП_УслугаВБазеУправлениеПоиском" id="80">
+										<AdditionSource>
+											<Item>ТП_УслугаВБазе</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ТП_УслугаВБазеУправлениеПоискомКонтекстноеМеню" id="83"/>
+										<ExtendedTooltip name="ТП_УслугаВБазеУправлениеПоискомРасширеннаяПодсказка" id="84"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="OnEditEnd">ТП_УслугаВБазеПриОкончанииРедактирования</Event>
+										<Event name="BeforeAddRow">ТП_УслугаВБазеПередНачаломДобавления</Event>
+										<Event name="BeforeDeleteRow">ТП_УслугаВБазеПередУдалением</Event>
+										<Event name="BeforeEditEnd">ТП_УслугаВБазеПередОкончаниемРедактирования</Event>
+										<Event name="OnStartEdit">ТП_УслугаВБазеПриНачалеРедактирования</Event>
+									</Events>
+									<ChildItems>
+										<InputField name="ТП_УслугаВБазеУслугаВБазе" id="91">
+											<DataPath>ТП_УслугаВБазе.УслугаВБазе</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТП_УслугаВБазеУслугаВБазеКонтекстноеМеню" id="92"/>
+											<ExtendedTooltip name="ТП_УслугаВБазеУслугаВБазеРасширеннаяПодсказка" id="93"/>
+											<Events>
+												<Event name="StartChoice">ТП_УслугаВБазеУслугаВБазеНачалоВыбора</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<CommandBar name="ГруппаКоманднаяПанель" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа командная панель</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalLocation>Right</HorizontalLocation>
+			<ExtendedTooltip name="ГруппаКоманднаяПанельРасширеннаяПодсказка" id="29"/>
+			<ChildItems>
+				<Button name="ФормаКомандаСохранить" id="30">
+					<Type>CommandBarButton</Type>
+					<Representation>PictureAndText</Representation>
+					<DefaultButton>true</DefaultButton>
+					<CommandName>Form.Command.КомандаСохранить</CommandName>
+					<Picture>
+						<xr:Ref>StdPicture.SaveFile</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ФормаКомандаСохранитьРасширеннаяПодсказка" id="31"/>
+				</Button>
+				<Button name="Закрыть" id="32">
+					<Type>CommandBarButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Form.StandardCommand.Close</CommandName>
+					<ExtendedTooltip name="ЗакрытьРасширеннаяПодсказка" id="33"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.УПЖКХ_ВыгрузкиВОрганыСоцЗащиты</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ТП_УслугаВБазе" id="2">
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="УслугаВБазе" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Услуга в базе</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.КВП_Услуги</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ПризнакУдаления" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Признак удаления</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПредыдущаяУслуга" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предыдущая услуга</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.КВП_Услуги</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НомерПоляКоличествоМесяцевДолга" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер поля "Количество месяцев долга"</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НомерПоляНаличиеЗадолженности" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер поля "Наличие задолженности"</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаСохранить" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда сохранить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаСохранить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

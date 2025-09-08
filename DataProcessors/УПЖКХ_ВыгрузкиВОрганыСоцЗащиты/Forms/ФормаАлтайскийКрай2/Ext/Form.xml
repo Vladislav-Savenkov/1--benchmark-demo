@@ -1,0 +1,578 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Алтайский край (вариант 2): Выгрузка в ОСЗН</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаКнопкаНастройка" id="560">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.КомандаНастройка</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Настройка</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаКнопкаНастройкаРасширеннаяПодсказка" id="561"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="75">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="76"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаЛевая" id="44">
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаЛеваяРасширеннаяПодсказка" id="45"/>
+					<ChildItems>
+						<InputField name="ПериодСтрокой" id="339">
+							<DataPath>ПериодСтрокой</DataPath>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сведения об инвалидности действуют с</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ChoiceButton>true</ChoiceButton>
+							<SpinButton>true</SpinButton>
+							<ChoiceButtonPicture>
+								<xr:Ref>StdPicture.InputFieldCalendar</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</ChoiceButtonPicture>
+							<ContextMenu name="ПериодСтрокойКонтекстноеМеню" id="340"/>
+							<ExtendedTooltip name="ПериодСтрокойExtendedTooltip" id="341"/>
+							<Events>
+								<Event name="OnChange">ПериодСтрокойПриИзменении</Event>
+								<Event name="AutoComplete">ПериодСтрокойАвтоПодбор</Event>
+								<Event name="StartChoice">ПериодСтрокойНачалоВыбора</Event>
+								<Event name="Tuning">ПериодСтрокойРегулирование</Event>
+								<Event name="TextEditEnd">ПериодСтрокойОкончаниеВводаТекста</Event>
+							</Events>
+						</InputField>
+						<InputField name="Организация" id="1">
+							<DataPath>Объект.Организация</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Организация</v8:content>
+								</v8:item>
+							</Title>
+							<AutoChoiceIncomplete>true</AutoChoiceIncomplete>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="33"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаРаботаСФайлами" id="46">
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаРаботаСФайламиРасширеннаяПодсказка" id="47"/>
+					<ChildItems>
+						<InputField name="ИмяФайлаЗагрузки" id="465">
+							<DataPath>Объект.ИмяФайлаЗагрузки</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Выберите файл *.dbf</v8:content>
+								</v8:item>
+							</Title>
+							<ChoiceButton>true</ChoiceButton>
+							<OpenButton>true</OpenButton>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="ИмяФайлаЗагрузкиКонтекстноеМеню" id="466"/>
+							<ExtendedTooltip name="ИмяФайлаЗагрузкиРасширеннаяПодсказка" id="467"/>
+							<Events>
+								<Event name="StartChoice">ИмяФайлаЗагрузкиНачалоВыбора</Event>
+								<Event name="Opening">ИмяФайлаЗагрузкиОткрытие</Event>
+							</Events>
+						</InputField>
+						<InputField name="ИмяКаталогаВыгрузки" id="470">
+							<DataPath>Объект.ИмяКаталогаВыгрузки</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Каталог выгрузки</v8:content>
+								</v8:item>
+							</Title>
+							<ChoiceButton>true</ChoiceButton>
+							<OpenButton>true</OpenButton>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="ИмяКаталогаВыгрузкиКонтекстноеМеню" id="471"/>
+							<ExtendedTooltip name="ИмяКаталогаВыгрузкиРасширеннаяПодсказка" id="472"/>
+							<Events>
+								<Event name="StartChoice">КаталогВыгрузкиНачалоВыбора</Event>
+								<Event name="Opening">КаталогВыгрузкиОткрытие</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаЛьготники" id="361">
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаЛьготникиРасширеннаяПодсказка" id="362"/>
+			<ChildItems>
+				<Table name="Льготники" id="363">
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>Объект.АлтайскийКрай_Льготники2</DataPath>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ЛьготникиКонтекстноеМеню" id="364"/>
+					<AutoCommandBar name="ЛьготникиКоманднаяПанель" id="365">
+						<ChildItems>
+							<Button name="КомандаЗагрузить" id="562">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.КомандаЗагрузить</CommandName>
+								<ExtendedTooltip name="КомандаЗагрузитьРасширеннаяПодсказка" id="563"/>
+							</Button>
+							<Button name="КомандаЗаполнить" id="463">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.КомандаЗаполнить</CommandName>
+								<ExtendedTooltip name="КомандаЗаполнитьРасширеннаяПодсказка" id="464"/>
+							</Button>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ЛьготникиРасширеннаяПодсказка" id="366"/>
+					<SearchStringAddition name="ЛьготникиСтрокаПоиска" id="367">
+						<AdditionSource>
+							<Item>Льготники</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ЛьготникиСтрокаПоискаКонтекстноеМеню" id="368"/>
+						<ExtendedTooltip name="ЛьготникиСтрокаПоискаРасширеннаяПодсказка" id="369"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ЛьготникиСостояниеПросмотра" id="370">
+						<AdditionSource>
+							<Item>Льготники</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ЛьготникиСостояниеПросмотраКонтекстноеМеню" id="371"/>
+						<ExtendedTooltip name="ЛьготникиСостояниеПросмотраРасширеннаяПодсказка" id="372"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ЛьготникиУправлениеПоиском" id="373">
+						<AdditionSource>
+							<Item>Льготники</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ЛьготникиУправлениеПоискомКонтекстноеМеню" id="374"/>
+						<ExtendedTooltip name="ЛьготникиУправлениеПоискомРасширеннаяПодсказка" id="375"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<LabelField name="ЛьготникиНомерСтроки" id="473">
+							<DataPath>Объект.АлтайскийКрай_Льготники2.LineNumber</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<FixingInTable>Left</FixingInTable>
+							<ContextMenu name="ЛьготникиНомерСтрокиКонтекстноеМеню" id="474"/>
+							<ExtendedTooltip name="ЛьготникиНомерСтрокиРасширеннаяПодсказка" id="475"/>
+						</LabelField>
+						<InputField name="ЛьготникиПроживающий" id="567">
+							<DataPath>Объект.АлтайскийКрай_Льготники2.Проживающий</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Льготник в Базе</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<FixingInTable>Left</FixingInTable>
+							<QuickChoice>true</QuickChoice>
+							<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+							<ContextMenu name="ЛьготникиПроживающийКонтекстноеМеню" id="568"/>
+							<ExtendedTooltip name="ЛьготникиПроживающийРасширеннаяПодсказка" id="569"/>
+							<Events>
+								<Event name="StartChoice">ЛьготникиПроживающийНачалоВыбора</Event>
+								<Event name="ChoiceProcessing">ЛьготникиПроживающийОбработкаВыбора</Event>
+							</Events>
+						</InputField>
+						<InputField name="ЛьготникиЛицевойСчет" id="570">
+							<DataPath>Объект.АлтайскийКрай_Льготники2.ЛицевойСчет</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Лицевой счет в Базе</v8:content>
+								</v8:item>
+							</Title>
+							<FixingInTable>Left</FixingInTable>
+							<QuickChoice>true</QuickChoice>
+							<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+							<ContextMenu name="ЛьготникиЛицевойСчетКонтекстноеМеню" id="571"/>
+							<ExtendedTooltip name="ЛьготникиЛицевойСчетРасширеннаяПодсказка" id="572"/>
+							<Events>
+								<Event name="StartChoice">ЛьготникиЛицевойСчетНачалоВыбора</Event>
+								<Event name="ChoiceProcessing">ЛьготникиЛицевойСчетОбработкаВыбора</Event>
+							</Events>
+						</InputField>
+						<InputField name="ЛьготникиLCHET" id="476">
+							<DataPath>Объект.АлтайскийКрай_Льготники2.LCHET</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<Format>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧН=0; ЧГ=0</v8:content>
+								</v8:item>
+							</Format>
+							<EditFormat>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧН=0; ЧГ=0</v8:content>
+								</v8:item>
+							</EditFormat>
+							<ContextMenu name="ЛьготникиLCHETКонтекстноеМеню" id="477"/>
+							<ExtendedTooltip name="ЛьготникиLCHETРасширеннаяПодсказка" id="478"/>
+						</InputField>
+						<InputField name="ЛьготникиPERS_NUM" id="479">
+							<DataPath>Объект.АлтайскийКрай_Льготники2.PERS_NUM</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ЛьготникиPERS_NUMКонтекстноеМеню" id="480"/>
+							<ExtendedTooltip name="ЛьготникиPERS_NUMРасширеннаяПодсказка" id="481"/>
+						</InputField>
+						<InputField name="ЛьготникиFAMILY" id="482">
+							<DataPath>Объект.АлтайскийКрай_Льготники2.FAMILY</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ЛьготникиFAMILYКонтекстноеМеню" id="483"/>
+							<ExtendedTooltip name="ЛьготникиFAMILYРасширеннаяПодсказка" id="484"/>
+						</InputField>
+						<InputField name="ЛьготникиNAME" id="485">
+							<DataPath>Объект.АлтайскийКрай_Льготники2.NAME</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ЛьготникиNAMEКонтекстноеМеню" id="486"/>
+							<ExtendedTooltip name="ЛьготникиNAMEРасширеннаяПодсказка" id="487"/>
+						</InputField>
+						<InputField name="ЛьготникиFATHER" id="488">
+							<DataPath>Объект.АлтайскийКрай_Льготники2.FATHER</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ЛьготникиFATHERКонтекстноеМеню" id="489"/>
+							<ExtendedTooltip name="ЛьготникиFATHERРасширеннаяПодсказка" id="490"/>
+						</InputField>
+						<InputField name="ЛьготникиDROGD" id="491">
+							<DataPath>Объект.АлтайскийКрай_Льготники2.DROGD</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ЛьготникиDROGDКонтекстноеМеню" id="492"/>
+							<ExtendedTooltip name="ЛьготникиDROGDРасширеннаяПодсказка" id="493"/>
+						</InputField>
+						<InputField name="ЛьготникиRAION" id="494">
+							<DataPath>Объект.АлтайскийКрай_Льготники2.RAION</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ЛьготникиRAIONКонтекстноеМеню" id="495"/>
+							<ExtendedTooltip name="ЛьготникиRAIONРасширеннаяПодсказка" id="496"/>
+						</InputField>
+						<InputField name="ЛьготникиPUNKT" id="497">
+							<DataPath>Объект.АлтайскийКрай_Льготники2.PUNKT</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ЛьготникиPUNKTКонтекстноеМеню" id="498"/>
+							<ExtendedTooltip name="ЛьготникиPUNKTРасширеннаяПодсказка" id="499"/>
+						</InputField>
+						<InputField name="ЛьготникиSTREET" id="500">
+							<DataPath>Объект.АлтайскийКрай_Льготники2.STREET</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ЛьготникиSTREETКонтекстноеМеню" id="501"/>
+							<ExtendedTooltip name="ЛьготникиSTREETРасширеннаяПодсказка" id="502"/>
+						</InputField>
+						<InputField name="ЛьготникиHOUSE" id="503">
+							<DataPath>Объект.АлтайскийКрай_Льготники2.HOUSE</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ЛьготникиHOUSEКонтекстноеМеню" id="504"/>
+							<ExtendedTooltip name="ЛьготникиHOUSEРасширеннаяПодсказка" id="505"/>
+						</InputField>
+						<InputField name="ЛьготникиKORP" id="506">
+							<DataPath>Объект.АлтайскийКрай_Льготники2.KORP</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ЛьготникиKORPКонтекстноеМеню" id="507"/>
+							<ExtendedTooltip name="ЛьготникиKORPРасширеннаяПодсказка" id="508"/>
+						</InputField>
+						<InputField name="ЛьготникиFLAT" id="509">
+							<DataPath>Объект.АлтайскийКрай_Льготники2.FLAT</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ЛьготникиFLATКонтекстноеМеню" id="510"/>
+							<ExtendedTooltip name="ЛьготникиFLATРасширеннаяПодсказка" id="511"/>
+						</InputField>
+						<InputField name="ЛьготникиKOD_LGT1" id="512">
+							<DataPath>Объект.АлтайскийКрай_Льготники2.KOD_LGT1</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ЛьготникиKOD_LGT1КонтекстноеМеню" id="513"/>
+							<ExtendedTooltip name="ЛьготникиKOD_LGT1РасширеннаяПодсказка" id="514"/>
+						</InputField>
+						<InputField name="ЛьготникиLGOT1" id="515">
+							<DataPath>Объект.АлтайскийКрай_Льготники2.LGOT1</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ЛьготникиLGOT1КонтекстноеМеню" id="516"/>
+							<ExtendedTooltip name="ЛьготникиLGOT1РасширеннаяПодсказка" id="517"/>
+						</InputField>
+						<InputField name="ЛьготникиKOD_LGT2" id="518">
+							<DataPath>Объект.АлтайскийКрай_Льготники2.KOD_LGT2</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ЛьготникиKOD_LGT2КонтекстноеМеню" id="519"/>
+							<ExtendedTooltip name="ЛьготникиKOD_LGT2РасширеннаяПодсказка" id="520"/>
+						</InputField>
+						<InputField name="ЛьготникиLGOT2" id="521">
+							<DataPath>Объект.АлтайскийКрай_Льготники2.LGOT2</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ЛьготникиLGOT2КонтекстноеМеню" id="522"/>
+							<ExtendedTooltip name="ЛьготникиLGOT2РасширеннаяПодсказка" id="523"/>
+						</InputField>
+						<InputField name="ЛьготникиUSLUGA" id="524">
+							<DataPath>Объект.АлтайскийКрай_Льготники2.USLUGA</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ЛьготникиUSLUGAКонтекстноеМеню" id="525"/>
+							<ExtendedTooltip name="ЛьготникиUSLUGAРасширеннаяПодсказка" id="526"/>
+						</InputField>
+						<InputField name="ЛьготникиLCPRED" id="527">
+							<DataPath>Объект.АлтайскийКрай_Льготники2.LCPRED</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ЛьготникиLCPREDКонтекстноеМеню" id="528"/>
+							<ExtendedTooltip name="ЛьготникиLCPREDРасширеннаяПодсказка" id="529"/>
+						</InputField>
+						<InputField name="ЛьготникиPL_OB" id="530">
+							<DataPath>Объект.АлтайскийКрай_Льготники2.PL_OB</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ЛьготникиPL_OBКонтекстноеМеню" id="531"/>
+							<ExtendedTooltip name="ЛьготникиPL_OBРасширеннаяПодсказка" id="532"/>
+						</InputField>
+						<InputField name="ЛьготникиKL_PR" id="533">
+							<DataPath>Объект.АлтайскийКрай_Льготники2.KL_PR</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ЛьготникиKL_PRКонтекстноеМеню" id="534"/>
+							<ExtendedTooltip name="ЛьготникиKL_PRРасширеннаяПодсказка" id="535"/>
+						</InputField>
+						<InputField name="ЛьготникиKL_SEM" id="536">
+							<DataPath>Объект.АлтайскийКрай_Льготники2.KL_SEM</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ЛьготникиKL_SEMКонтекстноеМеню" id="537"/>
+							<ExtendedTooltip name="ЛьготникиKL_SEMРасширеннаяПодсказка" id="538"/>
+						</InputField>
+						<InputField name="ЛьготникиPSUMMA" id="539">
+							<DataPath>Объект.АлтайскийКрай_Льготники2.PSUMMA</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ЛьготникиPSUMMAКонтекстноеМеню" id="540"/>
+							<ExtendedTooltip name="ЛьготникиPSUMMAРасширеннаяПодсказка" id="541"/>
+						</InputField>
+						<InputField name="ЛьготникиLSUMMA" id="542">
+							<DataPath>Объект.АлтайскийКрай_Льготники2.LSUMMA</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ЛьготникиLSUMMAКонтекстноеМеню" id="543"/>
+							<ExtendedTooltip name="ЛьготникиLSUMMAРасширеннаяПодсказка" id="544"/>
+						</InputField>
+						<InputField name="ЛьготникиDBEG" id="545">
+							<DataPath>Объект.АлтайскийКрай_Льготники2.DBEG</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ЛьготникиDBEGКонтекстноеМеню" id="546"/>
+							<ExtendedTooltip name="ЛьготникиDBEGРасширеннаяПодсказка" id="547"/>
+						</InputField>
+						<InputField name="ЛьготникиDEND" id="548">
+							<DataPath>Объект.АлтайскийКрай_Льготники2.DEND</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ЛьготникиDENDКонтекстноеМеню" id="549"/>
+							<ExtendedTooltip name="ЛьготникиDENDРасширеннаяПодсказка" id="550"/>
+						</InputField>
+						<InputField name="ЛьготникиDSTART" id="551">
+							<DataPath>Объект.АлтайскийКрай_Льготники2.DSTART</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ЛьготникиDSTARTКонтекстноеМеню" id="552"/>
+							<ExtendedTooltip name="ЛьготникиDSTARTРасширеннаяПодсказка" id="553"/>
+						</InputField>
+						<InputField name="ЛьготникиDSTOP" id="554">
+							<DataPath>Объект.АлтайскийКрай_Льготники2.DSTOP</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ЛьготникиDSTOPКонтекстноеМеню" id="555"/>
+							<ExtendedTooltip name="ЛьготникиDSTOPРасширеннаяПодсказка" id="556"/>
+						</InputField>
+						<InputField name="ЛьготникиKL_KOM" id="557">
+							<DataPath>Объект.АлтайскийКрай_Льготники2.KL_KOM</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ЛьготникиKL_KOMКонтекстноеМеню" id="558"/>
+							<ExtendedTooltip name="ЛьготникиKL_KOMРасширеннаяПодсказка" id="559"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+		<CommandBar name="ГруппаКоманднаяПанель" id="468">
+			<HorizontalLocation>Right</HorizontalLocation>
+			<ExtendedTooltip name="ГруппаКоманднаяПанельРасширеннаяПодсказка" id="469"/>
+			<ChildItems>
+				<Button name="Выгрузить" id="25">
+					<Type>CommandBarButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<CommandName>Form.Command.КомандаВыгрузить</CommandName>
+					<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					<ExtendedTooltip name="ВыгрузитьРасширеннаяПодсказка" id="29"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.УПЖКХ_ВыгрузкиВОрганыСоцЗащиты</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ПериодСтрокой" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>15</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РасширениеПодключено" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расширение подключено</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>Льготники</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>OrGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.АлтайскийКрай_Льготники2.Проживающий</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.УПЖКХ_Жильцы.ПустаяСсылка</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.АлтайскийКрай_Льготники2.ЛицевойСчет</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.КВП_ЛицевыеСчета.ПустаяСсылка</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:Gainsboro</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаВыгрузить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить в файл</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ВыгрузитьФайлСертификата</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаВыгрузить</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаЗаполнить" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.GenerateReport</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаЗаполнить</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаНастройка" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Настройка</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаНастройка</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаЗагрузить" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить из файла</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить табличную часть данными из файла</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ЗагрузитьФайлСертификата</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаЗагрузить</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

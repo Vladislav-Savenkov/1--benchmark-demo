@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="30">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ChildItemsWidth>LeftNarrow</ChildItemsWidth>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаExtendedTooltip" id="41"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаСлева" id="31">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа слева</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа слева</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСлеваExtendedTooltip" id="42"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаНомерДата" id="32">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Номер дата</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Номер дата</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНомерДатаExtendedTooltip" id="43"/>
+							<ChildItems>
+								<InputField name="Номер" id="33">
+									<DataPath>Объект.Number</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<ContextMenu name="НомерКонтекстноеМеню" id="34"/>
+									<ExtendedTooltip name="НомерExtendedTooltip" id="44"/>
+								</InputField>
+								<InputField name="Дата" id="35">
+									<DataPath>Объект.Date</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>от</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДатаКонтекстноеМеню" id="36"/>
+									<ExtendedTooltip name="ДатаExtendedTooltip" id="45"/>
+									<Events>
+										<Event name="OnChange">ДатаПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="Организация" id="5">
+							<DataPath>Объект.Организация</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="6"/>
+							<ExtendedTooltip name="ОрганизацияExtendedTooltip" id="46"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаСправа" id="40">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа справа</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа справа</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСправаExtendedTooltip" id="47"/>
+					<ChildItems>
+						<InputField name="ВидОперации" id="7">
+							<DataPath>Объект.ВидОперации</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<ContextMenu name="ВидОперацииКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="ВидОперацииExtendedTooltip" id="48"/>
+							<Events>
+								<Event name="OnChange">ВидОперацииПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ВладелецПарковочногоМеста" id="9">
+							<DataPath>Объект.ВладелецПарковочногоМеста</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Владелец места</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="ВладелецПарковочногоМестаКонтекстноеМеню" id="10"/>
+							<ExtendedTooltip name="ВладелецПарковочногоМестаExtendedTooltip" id="49"/>
+						</InputField>
+						<InputField name="Паркинг" id="11">
+							<DataPath>Объект.Паркинг</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Парковка</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ChoiceParameters>
+								<app:item name="Отбор.ТипСооружения">
+									<app:value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xr:DesignTimeRef">Enum.УПЖКХ_ТипСооружения.EnumValue.Паркинг</Value>
+									</app:value>
+								</app:item>
+							</ChoiceParameters>
+							<ContextMenu name="ПаркингКонтекстноеМеню" id="12"/>
+							<ExtendedTooltip name="ПаркингExtendedTooltip" id="50"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="ПарковочныеМеста" id="17">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Объект.ПарковочныеМеста</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ПарковочныеМестаКонтекстноеМеню" id="18"/>
+			<AutoCommandBar name="ПарковочныеМестаКоманднаяПанель" id="19"/>
+			<ExtendedTooltip name="ПарковочныеМестаExtendedTooltip" id="51"/>
+			<SearchStringAddition name="ПарковочныеМестаСтрокаПоиска" id="59">
+				<AdditionSource>
+					<Item>ПарковочныеМеста</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПарковочныеМестаСтрокаПоискаКонтекстноеМеню" id="60"/>
+				<ExtendedTooltip name="ПарковочныеМестаСтрокаПоискаРасширеннаяПодсказка" id="61"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ПарковочныеМестаСостояниеПросмотра" id="62">
+				<AdditionSource>
+					<Item>ПарковочныеМеста</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПарковочныеМестаСостояниеПросмотраКонтекстноеМеню" id="63"/>
+				<ExtendedTooltip name="ПарковочныеМестаСостояниеПросмотраРасширеннаяПодсказка" id="64"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ПарковочныеМестаУправлениеПоиском" id="65">
+				<AdditionSource>
+					<Item>ПарковочныеМеста</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ПарковочныеМестаУправлениеПоискомКонтекстноеМеню" id="66"/>
+				<ExtendedTooltip name="ПарковочныеМестаУправлениеПоискомРасширеннаяПодсказка" id="67"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ПарковочныеМестаНомерСтроки" id="20">
+					<DataPath>Объект.ПарковочныеМеста.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПарковочныеМестаНомерСтрокиКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ПарковочныеМестаНомерСтрокиExtendedTooltip" id="52"/>
+				</LabelField>
+				<InputField name="ПарковочныеМестаПарковочноеМесто" id="22">
+					<DataPath>Объект.ПарковочныеМеста.ПарковочноеМесто</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ChoiceParameterLinks>
+						<xr:Link>
+							<xr:Name>Отбор.Владелец</xr:Name>
+							<xr:DataPath xsi:type="xs:string">Объект.Паркинг</xr:DataPath>
+							<xr:ValueChange>Clear</xr:ValueChange>
+						</xr:Link>
+					</ChoiceParameterLinks>
+					<ChoiceParameters>
+						<app:item name="ПараметрОтборТипПомещения">
+							<app:value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation/>
+								<Value xsi:type="xr:DesignTimeRef">Enum.КВП_ТипыПомещений.EnumValue.Автоместо</Value>
+							</app:value>
+						</app:item>
+					</ChoiceParameters>
+					<ContextMenu name="ПарковочныеМестаПарковочноеМестоКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ПарковочныеМестаПарковочноеМестоExtendedTooltip" id="53"/>
+				</InputField>
+				<InputField name="ПарковочныеМестаСостояниеМеста" id="24">
+					<DataPath>Объект.ПарковочныеМеста.СостояниеМеста</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПарковочныеМестаСостояниеМестаКонтекстноеМеню" id="25"/>
+					<ExtendedTooltip name="ПарковочныеМестаСостояниеМестаExtendedTooltip" id="54"/>
+				</InputField>
+				<InputField name="ПарковочныеМестаДатаНачала" id="26">
+					<DataPath>Объект.ПарковочныеМеста.ДатаНачала</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПарковочныеМестаДатаНачалаКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ПарковочныеМестаДатаНачалаExtendedTooltip" id="55"/>
+				</InputField>
+				<InputField name="ПарковочныеМестаДатаОкончания" id="28">
+					<DataPath>Объект.ПарковочныеМеста.ДатаОкончания</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПарковочныеМестаДатаОкончанияКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="ПарковочныеМестаДатаОкончанияExtendedTooltip" id="56"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<InputField name="Комментарий" id="13">
+			<DataPath>Объект.Комментарий</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="КомментарийExtendedTooltip" id="57"/>
+		</InputField>
+		<InputField name="Ответственный" id="15">
+			<DataPath>Объект.Ответственный</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="ОтветственныйКонтекстноеМеню" id="16"/>
+			<ExtendedTooltip name="ОтветственныйExtendedTooltip" id="58"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.КВП_УдалитьУправлениеПарковочнымиМестами</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+	<CommandInterface>
+		<CommandBar>
+			<Item>
+				<Command>0:2baf6d7a-12ed-4f22-ad96-92bb31b747ff</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</CommandBar>
+	</CommandInterface>
+</Form>

@@ -1,0 +1,421 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+		<ExcludedCommand>Help</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="Сохранить" id="23">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.Сохранить</CommandName>
+				<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="СохранитьРасширеннаяПодсказка" id="24"/>
+			</Button>
+			<Button name="Закрыть" id="22">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Закрыть</v8:content>
+					</v8:item>
+				</Title>
+				<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ЗакрытьРасширеннаяПодсказка" id="25"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="Страницы" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="26"/>
+			<ChildItems>
+				<Page name="СтраницаСоответствиеУслуг" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Соответствие услуг</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница соответствие услуг</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаСоответствиеУслугРасширеннаяПодсказка" id="27"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаСоответствиеУслуг" id="10">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройка соответствия услуг (Разделы 1, 2, 3):</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа соответствие услуг</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ExtendedTooltip name="ГруппаСоответствиеУслугРасширеннаяПодсказка" id="28"/>
+							<ChildItems>
+								<Table name="ТаблицаСоответствияУслуг" id="3">
+									<Representation>List</Representation>
+									<CommandBarLocation>None</CommandBarLocation>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>ТаблицаСоответствияУслуг</DataPath>
+									<SearchStringLocation>None</SearchStringLocation>
+									<ViewStatusLocation>None</ViewStatusLocation>
+									<SearchControlLocation>None</SearchControlLocation>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ТаблицаСоответствияУслугКонтекстноеМеню" id="4"/>
+									<AutoCommandBar name="ТаблицаСоответствияУслугКоманднаяПанель" id="5"/>
+									<ExtendedTooltip name="ТаблицаСоответствияУслугРасширеннаяПодсказка" id="29"/>
+									<SearchStringAddition name="ТаблицаСоответствияУслугСтрокаПоиска" id="30">
+										<AdditionSource>
+											<Item>ТаблицаСоответствияУслуг</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ТаблицаСоответствияУслугСтрокаПоискаКонтекстноеМеню" id="31"/>
+										<ExtendedTooltip name="ТаблицаСоответствияУслугСтрокаПоискаРасширеннаяПодсказка" id="32"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ТаблицаСоответствияУслугСостояниеПросмотра" id="33">
+										<AdditionSource>
+											<Item>ТаблицаСоответствияУслуг</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ТаблицаСоответствияУслугСостояниеПросмотраКонтекстноеМеню" id="34"/>
+										<ExtendedTooltip name="ТаблицаСоответствияУслугСостояниеПросмотраРасширеннаяПодсказка" id="35"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ТаблицаСоответствияУслугУправлениеПоиском" id="36">
+										<AdditionSource>
+											<Item>ТаблицаСоответствияУслуг</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ТаблицаСоответствияУслугУправлениеПоискомКонтекстноеМеню" id="37"/>
+										<ExtendedTooltip name="ТаблицаСоответствияУслугУправлениеПоискомРасширеннаяПодсказка" id="38"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<InputField name="ТаблицаСоответствияУслугВидУслугиПредставление" id="6">
+											<DataPath>ТаблицаСоответствияУслуг.ВидУслугиПредставление</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Вид услуги</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТаблицаСоответствияУслугВидУслугиПредставлениеКонтекстноеМеню" id="7"/>
+											<ExtendedTooltip name="ТаблицаСоответствияУслугВидУслугиПредставлениеРасширеннаяПодсказка" id="39"/>
+										</InputField>
+										<InputField name="ТаблицаСоответствияУслугСписокУслуг" id="8">
+											<DataPath>ТаблицаСоответствияУслуг.СписокУслуг</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТаблицаСоответствияУслугСписокУслугКонтекстноеМеню" id="9"/>
+											<ExtendedTooltip name="ТаблицаСоответствияУслугСписокУслугРасширеннаяПодсказка" id="40"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаСоответствияЖилищныхУслуг" id="11">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройка соответствия жилищных услуг (Раздел 3):</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа соответствия жилищных услуг</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ExtendedTooltip name="ГруппаСоответствияЖилищныхУслугРасширеннаяПодсказка" id="41"/>
+							<ChildItems>
+								<Table name="ТаблицаСоответствияУслугЖилищные" id="12">
+									<Representation>List</Representation>
+									<CommandBarLocation>None</CommandBarLocation>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>ТаблицаСоответствияУслугЖилищные</DataPath>
+									<SearchStringLocation>None</SearchStringLocation>
+									<ViewStatusLocation>None</ViewStatusLocation>
+									<SearchControlLocation>None</SearchControlLocation>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ТаблицаСоответствияУслугЖилищныеКонтекстноеМеню" id="13"/>
+									<AutoCommandBar name="ТаблицаСоответствияУслугЖилищныеКоманднаяПанель" id="14"/>
+									<ExtendedTooltip name="ТаблицаСоответствияУслугЖилищныеРасширеннаяПодсказка" id="42"/>
+									<SearchStringAddition name="ТаблицаСоответствияУслугЖилищныеСтрокаПоиска" id="43">
+										<AdditionSource>
+											<Item>ТаблицаСоответствияУслугЖилищные</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ТаблицаСоответствияУслугЖилищныеСтрокаПоискаКонтекстноеМеню" id="44"/>
+										<ExtendedTooltip name="ТаблицаСоответствияУслугЖилищныеСтрокаПоискаРасширеннаяПодсказка" id="45"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ТаблицаСоответствияУслугЖилищныеСостояниеПросмотра" id="46">
+										<AdditionSource>
+											<Item>ТаблицаСоответствияУслугЖилищные</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ТаблицаСоответствияУслугЖилищныеСостояниеПросмотраКонтекстноеМеню" id="47"/>
+										<ExtendedTooltip name="ТаблицаСоответствияУслугЖилищныеСостояниеПросмотраРасширеннаяПодсказка" id="48"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ТаблицаСоответствияУслугЖилищныеУправлениеПоиском" id="49">
+										<AdditionSource>
+											<Item>ТаблицаСоответствияУслугЖилищные</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ТаблицаСоответствияУслугЖилищныеУправлениеПоискомКонтекстноеМеню" id="50"/>
+										<ExtendedTooltip name="ТаблицаСоответствияУслугЖилищныеУправлениеПоискомРасширеннаяПодсказка" id="51"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<InputField name="ТаблицаСоответствияУслугЖилищныеВидУслугиПредставление" id="15">
+											<DataPath>ТаблицаСоответствияУслугЖилищные.ВидУслугиПредставление</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Вид услуги</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТаблицаСоответствияУслугЖилищныеВидУслугиПредставлениеКонтекстноеМеню" id="16"/>
+											<ExtendedTooltip name="ТаблицаСоответствияУслугЖилищныеВидУслугиПредставлениеРасширеннаяПодсказка" id="52"/>
+										</InputField>
+										<InputField name="ТаблицаСоответствияУслугЖилищныеСписокУслуг" id="17">
+											<DataPath>ТаблицаСоответствияУслугЖилищные.СписокУслуг</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТаблицаСоответствияУслугЖилищныеСписокУслугКонтекстноеМеню" id="18"/>
+											<ExtendedTooltip name="ТаблицаСоответствияУслугЖилищныеСписокУслугРасширеннаяПодсказка" id="53"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаПрочие" id="19">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница прочие</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница прочие</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаПрочиеРасширеннаяПодсказка" id="54"/>
+					<ChildItems>
+						<InputField name="СоциальнаяНормаНаЧеловека" id="20">
+							<DataPath>СоциальнаяНормаНаЧеловека</DataPath>
+							<ChoiceButton>true</ChoiceButton>
+							<ContextMenu name="СоциальнаяНормаНаЧеловекаКонтекстноеМеню" id="21"/>
+							<ExtendedTooltip name="СоциальнаяНормаНаЧеловекаРасширеннаяПодсказка" id="55"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="СоциальнаяНормаНаЧеловека" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Социальная норма на человека</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ТаблицаСоответствияУслуг" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица соответствия услуг</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Columns>
+				<Column name="ВидУслуги" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид услуги</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ВидУслугиПредставление" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид услуги представление</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="СписокУслуг" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Список услуг</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8:ValueListType</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТаблицаСоответствияУслугЖилищные" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица соответствия услуг жилищные</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Columns>
+				<Column name="ВидУслуги" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид услуги</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ВидУслугиПредставление" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид услуги представление</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="СписокУслуг" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Список услуг</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8:ValueListType</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="НеВыводитьВопросПередЗакрытием" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Не выводить вопрос перед закрытием</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Сохранить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Сохранить</Action>
+		</Command>
+	</Commands>
+</Form>

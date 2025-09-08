@@ -1,0 +1,432 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnWriteAtServer">ПриЗаписиНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="УчетнаяЗапись" id="44">
+			<DataPath>НаборКонстант.УПЖКХ_УчетнаяЗаписьРассылкиКвитанций</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Учетная запись</v8:content>
+				</v8:item>
+			</Title>
+			<InputHint>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>по умолчанию системная учетная запись</v8:content>
+				</v8:item>
+			</InputHint>
+			<ContextMenu name="УчетнаяЗаписьКонтекстноеМеню" id="45"/>
+			<ExtendedTooltip name="УчетнаяЗаписьРасширеннаяПодсказка" id="46"/>
+		</InputField>
+		<UsualGroup name="ГруппаКаталогСохраненияКвитанцийДляОтправкиНаСервере" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа каталог сохранения квитанций для отправки на сервере</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа каталог сохранения квитанций для отправки на сервере</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКаталогСохраненияКвитанцийДляОтправкиНаСервереРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<RadioButtonField name="ВариантСохраненияКвитанций" id="27">
+					<DataPath>ВариантКаталогаСохраненияКвитанций</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сохранять квитанции в каталог</v8:content>
+						</v8:item>
+					</Title>
+					<RadioButtonType>Tumbler</RadioButtonType>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Временных файлов</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xr:DesignTimeRef">Enum.УПЖКХ_ВариантыСохраненияФайлов.EnumValue.КаталогВременныхФайлов</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Указанный пользователем</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xr:DesignTimeRef">Enum.УПЖКХ_ВариантыСохраненияФайлов.EnumValue.КаталогУказанныйПользователем</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="ВариантСохраненияКвитанцийКонтекстноеМеню" id="28"/>
+					<ExtendedTooltip name="ВариантСохраненияКвитанцийРасширеннаяПодсказка" id="29"/>
+					<Events>
+						<Event name="OnChange">ВариантСохраненияКаталогаПриИзменении</Event>
+					</Events>
+				</RadioButtonField>
+				<InputField name="КаталогСохраненияКвитанций" id="49">
+					<DataPath>КаталогСохраненияКвитанций</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Укажите каталог</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+					<ChoiceButton>true</ChoiceButton>
+					<ContextMenu name="КаталогСохраненияКвитанцийКонтекстноеМеню" id="50"/>
+					<ExtendedTooltip name="КаталогСохраненияКвитанцийРасширеннаяПодсказка" id="51"/>
+					<Events>
+						<Event name="OnChange">КаталогСохраненияКвитанцийПриИзменении</Event>
+						<Event name="StartChoice">КаталогСохраненияКвитанцийНачалоВыбора</Event>
+					</Events>
+				</InputField>
+				<InputField name="КаталогВременныхФайлов" id="64">
+					<DataPath>КаталогВременныхФайлов</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<ContextMenu name="КаталогВременныхФайловКонтекстноеМеню" id="65"/>
+					<ExtendedTooltip name="КаталогВременныхФайловРасширеннаяПодсказка" id="66"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаИнтервалМеждуОтправкамиКвитанцийВСекундах" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа интервал между отправками квитанций в секундах</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа интервал между отправками квитанций в секундах</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаИнтервалМеждуОтправкамиКвитанцийВСекундахРасширеннаяПодсказка" id="23"/>
+			<ChildItems>
+				<InputField name="ИнтервалМеждуОтправкамиКвитанцийВСекундах" id="6">
+					<DataPath>ИнтервалМеждуОтправкамиКвитанцийВСекундах</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Задержка при отправке</v8:content>
+						</v8:item>
+					</Title>
+					<Width>6</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="ИнтервалМеждуОтправкамиКвитанцийВСекундахКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="ИнтервалМеждуОтправкамиКвитанцийВСекундахРасширеннаяПодсказка" id="8"/>
+				</InputField>
+				<LabelDecoration name="ДекорацияВСекундах" id="24">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>сек.</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияВСекундахКонтекстноеМеню" id="25"/>
+					<ExtendedTooltip name="ДекорацияВСекундахРасширеннаяПодсказка" id="26"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаСодержаниеЭлектронногоПисьма" id="70">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Содержание электронного письма</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа содержание электронного письма</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ГруппаСодержаниеЭлектронногоПисьмаРасширеннаяПодсказка" id="71"/>
+			<ChildItems>
+				<CheckBoxField name="ОтправлятьВПисьмеСведенияОбОрганизации" id="67">
+					<DataPath>ОтправлятьВПисьмеСведенияОбОрганизации</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Почтовые сервисы рекомендуют для улучшения качества массовой рассылки
+включать сведения об организации в тело письма.</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОтправлятьВПисьмеСведенияОбОрганизацииКонтекстноеМеню" id="68"/>
+					<ExtendedTooltip name="ОтправлятьВПисьмеСведенияОбОрганизацииРасширеннаяПодсказка" id="69">
+						<AutoMaxWidth>false</AutoMaxWidth>
+						<MaxWidth>50</MaxWidth>
+					</ExtendedTooltip>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаТестоваяРассылкаКвитанций" id="42">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки тестовой рассылки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа тестовая рассылка квитанций</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Collapsed>true</Collapsed>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<ExtendedTooltip name="ГруппаТестоваяРассылкаКвитанцийРасширеннаяПодсказка" id="43"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаПараметрыТестовойОтправкиКвитанций" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа параметры тестовой отправки квитанций</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа параметры тестовой отправки квитанций</v8:content>
+						</v8:item>
+					</ToolTip>
+					<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПараметрыТестовойОтправкиКвитанцийРасширеннаяПодсказка" id="15"/>
+					<ChildItems>
+						<InputField name="АдресТестовойОтправкиКвитанций" id="16">
+							<DataPath>ЭлектронныйАдресПолучателяТестовойРассылки</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>E-mail получателя</v8:content>
+								</v8:item>
+							</Title>
+							<InputHint>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>example@server.ru</v8:content>
+								</v8:item>
+							</InputHint>
+							<ContextMenu name="АдресТестовойОтправкиКвитанцийКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="АдресТестовойОтправкиКвитанцийРасширеннаяПодсказка" id="18"/>
+						</InputField>
+						<InputField name="КоличествоТестовыхПисемДляОтправки" id="19">
+							<DataPath>КоличествоПисемВТестовойРассылке</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Количество писем</v8:content>
+								</v8:item>
+							</Title>
+							<Width>6</Width>
+							<ContextMenu name="КоличествоТестовыхПисемДляОтправкиКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="КоличествоТестовыхПисемДляОтправкиРасширеннаяПодсказка" id="21"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаКоманднаяПанель" id="30">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа командная панель</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа командная панель</v8:content>
+				</v8:item>
+			</ToolTip>
+			<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+			<HorizontalAlign>Right</HorizontalAlign>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКоманднаяПанельРасширеннаяПодсказка" id="31"/>
+			<ChildItems>
+				<Button name="ОК" id="32">
+					<Type>UsualButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<CommandName>Form.StandardCommand.WriteAndClose</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ОК</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ОКРасширеннаяПодсказка" id="33"/>
+				</Button>
+				<Button name="Отмена" id="47">
+					<Type>UsualButton</Type>
+					<CommandName>Form.StandardCommand.Cancel</CommandName>
+					<ExtendedTooltip name="ОтменаРасширеннаяПодсказка" id="48"/>
+				</Button>
+				<Button name="Справка" id="52">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Form.StandardCommand.Help</CommandName>
+					<Picture>
+						<xr:Ref>StdPicture.FormHelp</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="СправкаРасширеннаяПодсказка" id="53"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="КаталогСохраненияКвитанций" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Каталог сохранения квитанций</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="НаборКонстант" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Набор констант</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ConstantsSet</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ВариантКаталогаСохраненияКвитанций" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вариант каталога сохранения квитанций</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.УПЖКХ_ВариантыСохраненияФайлов</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ИнтервалМеждуОтправкамиКвитанцийВСекундах" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Интервал между отправками квитанций в секундах</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="КоличествоПисемВТестовойРассылке" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество писем в тестовой рассылке</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ЭлектронныйАдресПолучателяТестовойРассылки" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Электронный адрес получателя тестовой рассылки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="КаталогВременныхФайлов" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Каталог временных файлов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОтправлятьВПисьмеСведенияОбОрганизации" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправлять в письме сведения об организации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>

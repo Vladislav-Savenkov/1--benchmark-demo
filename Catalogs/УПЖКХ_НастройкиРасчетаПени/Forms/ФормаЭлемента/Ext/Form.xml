@@ -1,0 +1,487 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Наименование" id="3">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="36"/>
+		</InputField>
+		<InputField name="ВариантОплатыПени" id="13">
+			<DataPath>Объект.ВариантОплатыПени</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="ВариантОплатыПениКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ВариантОплатыПениРасширеннаяПодсказка" id="47"/>
+		</InputField>
+		<UsualGroup name="ГруппаДатаНачалаУчетаНачислений" id="32">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа дата начала учета начислений</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа дата начала учета начислений</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаДатаНачалаУчетаНачисленийРасширеннаяПодсказка" id="48"/>
+			<ChildItems>
+				<InputField name="МесяцНачалаУчетаНачисленийПредставление" id="30">
+					<DataPath>МесяцНачалаУчетаНачисленийПредставление</DataPath>
+					<Width>15</Width>
+					<ChoiceButton>true</ChoiceButton>
+					<SpinButton>true</SpinButton>
+					<ContextMenu name="МесяцНачалаУчетаНачисленийПредставлениеКонтекстноеМеню" id="31"/>
+					<ExtendedTooltip name="МесяцНачалаУчетаНачисленийПредставлениеРасширеннаяПодсказка" id="49"/>
+					<Events>
+						<Event name="OnChange">МесяцНачалаУчетаНачисленийПредставлениеПриИзменении</Event>
+						<Event name="AutoComplete">МесяцНачалаУчетаНачисленийПредставлениеАвтоПодбор</Event>
+						<Event name="StartChoice">МесяцНачалаУчетаНачисленийПредставлениеНачалоВыбора</Event>
+						<Event name="Tuning">МесяцНачалаУчетаНачисленийПредставлениеРегулирование</Event>
+						<Event name="TextEditEnd">МесяцНачалаУчетаНачисленийПредставлениеОкончаниеВводаТекста</Event>
+					</Events>
+				</InputField>
+				<LabelDecoration name="НадписьОписаниеДатаНачалаУчетаНачислений" id="33">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<TextColor>style:УПЖКХ_ТекстСправочнойНадписи</TextColor>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Месяц, начиная с которого необходимо получать начисления для расчета пени. 
+Если не указан, то ограничения начислений по периоду для расчета пени не будет.</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НадписьОписаниеДатаНачалаУчетаНачисленийКонтекстноеМеню" id="34"/>
+					<ExtendedTooltip name="НадписьОписаниеДатаНачалаУчетаНачисленийРасширеннаяПодсказка" id="50"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<CheckBoxField name="НачислятьПениНаЗакрытыеЛицевыеСчета" id="95">
+			<DataPath>Объект.НачислятьПениНаЗакрытыеЛицевыеСчета</DataPath>
+			<TitleLocation>Right</TitleLocation>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>При установке данного флажка, начисление пени будет производиться также и на закрытые лицевые счета</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ToolTipRepresentation>Button</ToolTipRepresentation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="НачислятьПениНаЗакрытыеЛицевыеСчетаКонтекстноеМеню" id="96"/>
+			<ExtendedTooltip name="НачислятьПениНаЗакрытыеЛицевыеСчетаРасширеннаяПодсказка" id="97"/>
+		</CheckBoxField>
+		<UsualGroup name="МетодыРасчетаПени" id="101">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Методы расчета пени</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Методы расчета пени</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ToolTipRepresentation>None</ToolTipRepresentation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="МетодыРасчетаПениРасширеннаяПодсказка" id="102"/>
+			<ChildItems>
+				<CheckBoxField name="ИспользоватьПроцентнуюСтавку" id="5">
+					<DataPath>Объект.ИспользоватьПроцентнуюСтавку</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основание расчета пени</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Left</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Tumbler</CheckBoxType>
+					<EditFormat>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>БЛ='Ключевая ставка ЦБ РФ'; БИ='Процентная ставка'</v8:content>
+						</v8:item>
+					</EditFormat>
+					<ContextMenu name="ИспользоватьПроцентнуюСтавкуКонтекстноеМеню" id="6"/>
+					<ExtendedTooltip name="ИспользоватьПроцентнуюСтавкуРасширеннаяПодсказка" id="38"/>
+					<Events>
+						<Event name="OnChange">ИспользоватьПроцентнуюСтавкуПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<LabelDecoration name="РазмерКлючевойСтавкиЦБРФ" id="98">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Размер ключевой ставки Центрального банка РФ</v8:content>
+						</v8:item>
+					</Title>
+					<Hyperlink>true</Hyperlink>
+					<ContextMenu name="РазмерКлючевойСтавкиЦБРФКонтекстноеМеню" id="99"/>
+					<ExtendedTooltip name="РазмерКлючевойСтавкиЦБРФРасширеннаяПодсказка" id="100"/>
+					<Events>
+						<Event name="Click">РазмерКлючевойСтавкиЦБРФНажатие</Event>
+					</Events>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="СтавкиПени" id="51">
+			<TitleLocation>Top</TitleLocation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Объект.СтавкиПени</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>График расчета пени</v8:content>
+				</v8:item>
+			</Title>
+			<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+			<CommandSet>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>MoveDown</ExcludedCommand>
+				<ExcludedCommand>MoveUp</ExcludedCommand>
+				<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+				<ExcludedCommand>SortListAsc</ExcludedCommand>
+				<ExcludedCommand>SortListDesc</ExcludedCommand>
+			</CommandSet>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="СтавкиПениКонтекстноеМеню" id="52"/>
+			<AutoCommandBar name="СтавкиПениКоманднаяПанель" id="53"/>
+			<ExtendedTooltip name="СтавкиПениРасширеннаяПодсказка" id="54"/>
+			<SearchStringAddition name="СтавкиПениСтрокаПоиска" id="55">
+				<AdditionSource>
+					<Item>СтавкиПени</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СтавкиПениСтрокаПоискаКонтекстноеМеню" id="56"/>
+				<ExtendedTooltip name="СтавкиПениСтрокаПоискаРасширеннаяПодсказка" id="57"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СтавкиПениСостояниеПросмотра" id="58">
+				<AdditionSource>
+					<Item>СтавкиПени</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СтавкиПениСостояниеПросмотраКонтекстноеМеню" id="59"/>
+				<ExtendedTooltip name="СтавкиПениСостояниеПросмотраРасширеннаяПодсказка" id="60"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СтавкиПениУправлениеПоиском" id="61">
+				<AdditionSource>
+					<Item>СтавкиПени</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СтавкиПениУправлениеПоискомКонтекстноеМеню" id="62"/>
+				<ExtendedTooltip name="СтавкиПениУправлениеПоискомРасширеннаяПодсказка" id="63"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="BeforeDeleteRow">СтавкиПениПередУдалением</Event>
+				<Event name="BeforeRowChange">СтавкиПениПередНачаломИзменения</Event>
+				<Event name="OnStartEdit">СтавкиПениПриНачалеРедактирования</Event>
+				<Event name="AfterDeleteRow">СтавкиПениПослеУдаления</Event>
+			</Events>
+			<ChildItems>
+				<ColumnGroup name="ИнтервалыПериода" id="84">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дни периода действия ставки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Интервалы периода</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<ShowInHeader>true</ShowInHeader>
+					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+					<ExtendedTooltip name="ИнтервалыПериодаРасширеннаяПодсказка" id="85"/>
+					<ChildItems>
+						<InputField name="СтавкиПениНадписьПериодС" id="86">
+							<DataPath>Объект.СтавкиПени.НадписьПериодС</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<HorizontalAlign>Center</HorizontalAlign>
+							<EditMode>EnterOnInput</EditMode>
+							<ShowInHeader>false</ShowInHeader>
+							<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+							<FooterHorizontalAlign>Center</FooterHorizontalAlign>
+							<Width>5</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="СтавкиПениНадписьПериодСКонтекстноеМеню" id="87"/>
+							<ExtendedTooltip name="СтавкиПениНадписьПериодСРасширеннаяПодсказка" id="88"/>
+						</InputField>
+						<InputField name="СтавкиПениДеньСоСрокаОплаты" id="67">
+							<DataPath>Объект.СтавкиПени.ДеньСоСрокаОплаты</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Номер дня просрочки оплаты, с которого будет действовать установленная ставка</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalAlign>Center</HorizontalAlign>
+							<EditMode>EnterOnInput</EditMode>
+							<ShowInHeader>false</ShowInHeader>
+							<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+							<FooterHorizontalAlign>Center</FooterHorizontalAlign>
+							<Width>10</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<SpinButton>true</SpinButton>
+							<ContextMenu name="СтавкиПениДеньСоСрокаОплатыКонтекстноеМеню" id="68"/>
+							<ExtendedTooltip name="СтавкиПениДеньСоСрокаОплатыРасширеннаяПодсказка" id="69"/>
+							<Events>
+								<Event name="OnChange">СтавкиПениДеньСоСрокаОплатыПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="СтавкиПениНадписьПериодПо" id="89">
+							<DataPath>Объект.СтавкиПени.НадписьПериодПо</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<HorizontalAlign>Center</HorizontalAlign>
+							<EditMode>EnterOnInput</EditMode>
+							<ShowInHeader>false</ShowInHeader>
+							<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+							<FooterHorizontalAlign>Center</FooterHorizontalAlign>
+							<Width>5</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="СтавкиПениНадписьПериодПоКонтекстноеМеню" id="90"/>
+							<ExtendedTooltip name="СтавкиПениНадписьПериодПоРасширеннаяПодсказка" id="91"/>
+						</InputField>
+						<InputField name="СтавкиПениКонецИнтервала" id="92">
+							<DataPath>Объект.СтавкиПени.КонецИнтервала</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<HorizontalAlign>Center</HorizontalAlign>
+							<EditMode>EnterOnInput</EditMode>
+							<ShowInHeader>false</ShowInHeader>
+							<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+							<FooterHorizontalAlign>Center</FooterHorizontalAlign>
+							<Width>15</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="СтавкиПениКонецИнтервалаКонтекстноеМеню" id="93"/>
+							<ExtendedTooltip name="СтавкиПениКонецИнтервалаРасширеннаяПодсказка" id="94"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<InputField name="СтавкиПениДоляСтавкиРефинансирования" id="81">
+					<DataPath>Объект.СтавкиПени.ДоляСтавкиРефинансирования</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доля ключевой ставки ЦБ РФ</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalAlign>Right</HorizontalAlign>
+					<EditMode>EnterOnInput</EditMode>
+					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+					<ContextMenu name="СтавкиПениДоляСтавкиРефинансированияКонтекстноеМеню" id="82"/>
+					<ExtendedTooltip name="СтавкиПениДоляСтавкиРефинансированияРасширеннаяПодсказка" id="83"/>
+				</InputField>
+				<InputField name="СтавкиПениПроцентнаяСтавкаПени" id="76">
+					<DataPath>Объект.СтавкиПени.ПроцентнаяСтавкаПени</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Процентная ставка пени, % / день</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalAlign>Right</HorizontalAlign>
+					<EditMode>EnterOnInput</EditMode>
+					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+					<ContextMenu name="СтавкиПениПроцентнаяСтавкаПениКонтекстноеМеню" id="77"/>
+					<ExtendedTooltip name="СтавкиПениПроцентнаяСтавкаПениРасширеннаяПодсказка" id="78"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.УПЖКХ_НастройкиРасчетаПени</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<Columns>
+				<AdditionalColumns table="Объект.СтавкиПени">
+					<Column name="ДоляСтавкиРефинансирования" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Доля ставки рефинансирования</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="НадписьПериодС" id="2">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Надпись период с</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>2</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="НадписьПериодПо" id="3">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Надпись период по</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>2</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+					<Column name="КонецИнтервала" id="4">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Конец интервала</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>16</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+			</Columns>
+		</Attribute>
+		<Attribute name="ИспользуетсяРегламентноеЗаданиеОбновленияКлючевойСтавкиЦБ" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Используется регламентное задание обновления ключевой ставки ЦБ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="МесяцНачалаУчетаНачисленийПредставление" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Месяц начала учета начислений</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>70</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>СтавкиПениНадписьПериодС</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.СтавкиПени.НадписьПериодС</dcsset:left>
+						<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Текст</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>с</v8:content>
+							</v8:item>
+						</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>СтавкиПениНадписьПериодПо</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.СтавкиПени.НадписьПериодПо</dcsset:left>
+						<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Текст</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>по</v8:content>
+							</v8:item>
+						</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>СтавкиПениДеньСоСрокаОплаты</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.СтавкиПени.НомерСтроки</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">1</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+</Form>

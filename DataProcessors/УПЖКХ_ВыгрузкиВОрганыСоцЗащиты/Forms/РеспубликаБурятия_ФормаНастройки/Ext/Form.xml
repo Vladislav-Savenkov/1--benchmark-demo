@@ -1,0 +1,406 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Республика Бурятия: Настройка</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаПанельКоманд" id="129">
+			<Height>1</Height>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПанельКомандРасширеннаяПодсказка" id="130"/>
+			<ChildItems>
+				<Button name="СправочнаяИнформация" id="131">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<DefaultItem>true</DefaultItem>
+					<Height>1</Height>
+					<CommandName>Form.Command.КомандаСправочнаяИнформация</CommandName>
+					<BackColor>#FFFF99</BackColor>
+					<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+					<ExtendedTooltip name="СправочнаяИнформацияРасширеннаяПодсказка" id="132"/>
+				</Button>
+				<CommandBar name="ГруппаЕще" id="133">
+					<ExtendedTooltip name="ГруппаЕщеРасширеннаяПодсказка" id="134"/>
+					<ChildItems>
+						<Button name="ИзменитьФорму" id="135">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+							<ExtendedTooltip name="ИзменитьФормуРасширеннаяПодсказка" id="136"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаТаблицы" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа таблицы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа таблицы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ChildItemsWidth>LeftWide</ChildItemsWidth>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаТаблицыРасширеннаяПодсказка" id="6"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаУслугиВОСЗН" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Услуги в ОСЗН</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Услуги в ОСЗН</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<ExtendedTooltip name="ГруппаУслугиВОСЗНРасширеннаяПодсказка" id="8"/>
+					<ChildItems>
+						<Table name="ТаблицаНастроек" id="9">
+							<SelectionMode>SingleRow</SelectionMode>
+							<RowSelectionMode>Row</RowSelectionMode>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.РеспубликаБурятия_ТаблицаНастроек</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ТаблицаНастроекКонтекстноеМеню" id="10">
+								<Autofill>false</Autofill>
+							</ContextMenu>
+							<AutoCommandBar name="ТаблицаНастроекКоманднаяПанель" id="11">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="КомандаОбновитьСписокУслуг" id="31">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.КомандаОбновитьСписокУслуг</CommandName>
+										<ExtendedTooltip name="КомандаОбновитьСписокУслугРасширеннаяПодсказка" id="32"/>
+									</Button>
+									<Button name="КомандаИспользоватьФиксированныйТариф" id="97">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.КомандаИспользоватьФиксированныйТариф</CommandName>
+										<ExtendedTooltip name="КомандаИспользоватьФиксированныйТарифРасширеннаяПодсказка" id="98"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ТаблицаНастроекРасширеннаяПодсказка" id="12"/>
+							<SearchStringAddition name="ТаблицаНастроекСтрокаПоиска" id="13">
+								<AdditionSource>
+									<Item>ТаблицаНастроек</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаНастроекСтрокаПоискаКонтекстноеМеню" id="14"/>
+								<ExtendedTooltip name="ТаблицаНастроекСтрокаПоискаРасширеннаяПодсказка" id="15"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТаблицаНастроекСостояниеПросмотра" id="16">
+								<AdditionSource>
+									<Item>ТаблицаНастроек</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаНастроекСостояниеПросмотраКонтекстноеМеню" id="17"/>
+								<ExtendedTooltip name="ТаблицаНастроекСостояниеПросмотраРасширеннаяПодсказка" id="18"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТаблицаНастроекУправлениеПоиском" id="19">
+								<AdditionSource>
+									<Item>ТаблицаНастроек</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаНастроекУправлениеПоискомКонтекстноеМеню" id="20"/>
+								<ExtendedTooltip name="ТаблицаНастроекУправлениеПоискомРасширеннаяПодсказка" id="21"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="BeforeAddRow">ТаблицаНастроекПередНачаломДобавления</Event>
+								<Event name="BeforeDeleteRow">ТаблицаНастроекПередУдалением</Event>
+								<Event name="OnActivateRow">ТаблицаНастроекПриАктивизацииСтроки</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="КодУслугиВОСЗН" id="83">
+									<DataPath>Объект.РеспубликаБурятия_ТаблицаНастроек.КодУслугиВОСЗН</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КодУслугиВОСЗНКонтекстноеМеню" id="84"/>
+									<ExtendedTooltip name="КодУслугиВОСЗНРасширеннаяПодсказка" id="85"/>
+								</InputField>
+								<InputField name="УслугаВОСЗН" id="86">
+									<DataPath>Объект.РеспубликаБурятия_ТаблицаНастроек.УслугаВОСЗН</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="УслугаВОСЗНКонтекстноеМеню" id="87"/>
+									<ExtendedTooltip name="УслугаВОСЗНРасширеннаяПодсказка" id="88"/>
+								</InputField>
+								<InputField name="ФиксированныйТариф" id="94">
+									<DataPath>Объект.РеспубликаБурятия_ТаблицаНастроек.ФиксированныйТариф</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧДЦ=2; ЧН=0,00</v8:content>
+										</v8:item>
+									</Format>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧДЦ=2; ЧН=0,00</v8:content>
+										</v8:item>
+									</EditFormat>
+									<ContextMenu name="ФиксированныйТарифКонтекстноеМеню" id="95"/>
+									<ExtendedTooltip name="ФиксированныйТарифРасширеннаяПодсказка" id="96"/>
+									<Events>
+										<Event name="OnChange">ФиксированныйТарифПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаУслугиВБазе" id="33">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Услуги в базе</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Услуги в базе</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<ExtendedTooltip name="ГруппаУслугиВБазеРасширеннаяПодсказка" id="34"/>
+					<ChildItems>
+						<Table name="ТП_ЖКУ_ВБазе" id="35">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>ТП_ЖКУ_ВБазе</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ТП_ЖКУ_ВБазеКонтекстноеМеню" id="36"/>
+							<AutoCommandBar name="ТП_ЖКУ_ВБазеКоманднаяПанель" id="37"/>
+							<ExtendedTooltip name="ТП_ЖКУ_ВБазеРасширеннаяПодсказка" id="38"/>
+							<SearchStringAddition name="ТП_ЖКУ_ВБазеСтрокаПоиска" id="39">
+								<AdditionSource>
+									<Item>ТП_ЖКУ_ВБазе</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТП_ЖКУ_ВБазеСтрокаПоискаКонтекстноеМеню" id="40"/>
+								<ExtendedTooltip name="ТП_ЖКУ_ВБазеСтрокаПоискаРасширеннаяПодсказка" id="41"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТП_ЖКУ_ВБазеСостояниеПросмотра" id="42">
+								<AdditionSource>
+									<Item>ТП_ЖКУ_ВБазе</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТП_ЖКУ_ВБазеСостояниеПросмотраКонтекстноеМеню" id="43"/>
+								<ExtendedTooltip name="ТП_ЖКУ_ВБазеСостояниеПросмотраРасширеннаяПодсказка" id="44"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТП_ЖКУ_ВБазеУправлениеПоиском" id="45">
+								<AdditionSource>
+									<Item>ТП_ЖКУ_ВБазе</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТП_ЖКУ_ВБазеУправлениеПоискомКонтекстноеМеню" id="46"/>
+								<ExtendedTooltip name="ТП_ЖКУ_ВБазеУправлениеПоискомРасширеннаяПодсказка" id="47"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnEditEnd">ТП_ЖКУ_ВБазеПриОкончанииРедактирования</Event>
+								<Event name="BeforeAddRow">ТП_ЖКУ_ВБазеПередНачаломДобавления</Event>
+								<Event name="BeforeDeleteRow">ТП_ЖКУ_ВБазеПередУдалением</Event>
+								<Event name="BeforeEditEnd">ТП_ЖКУ_ВБазеПередОкончаниемРедактирования</Event>
+								<Event name="OnStartEdit">ТП_ЖКУ_ВБазеПриНачалеРедактирования</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="ТП_ЖКУ_ВБазеУслугаВБазе" id="89">
+									<DataPath>ТП_ЖКУ_ВБазе.УслугаВБазе</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<QuickChoice>true</QuickChoice>
+									<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+									<ContextMenu name="ТП_ЖКУ_ВБазеУслугаВБазеКонтекстноеМеню" id="90"/>
+									<ExtendedTooltip name="ТП_ЖКУ_ВБазеУслугаВБазеРасширеннаяПодсказка" id="91"/>
+									<Events>
+										<Event name="StartChoice">ТП_ЖКУ_ВБазеУслугаВБазеНачалоВыбора</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<CommandBar name="ГруппаОсновныеДействияФормы" id="76">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа основные действия формы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа основные действия формы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalLocation>Right</HorizontalLocation>
+			<ExtendedTooltip name="ГруппаОсновныеДействияФормыРасширеннаяПодсказка" id="77"/>
+			<ChildItems>
+				<Button name="КнопкаСохранить" id="78">
+					<Type>CommandBarButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<CommandName>Form.Command.КомандаСохранить</CommandName>
+					<ExtendedTooltip name="КнопкаСохранитьРасширеннаяПодсказка" id="79"/>
+				</Button>
+				<Button name="Закрыть" id="92">
+					<Type>CommandBarButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Form.StandardCommand.Close</CommandName>
+					<ExtendedTooltip name="ЗакрытьРасширеннаяПодсказка" id="93"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.УПЖКХ_ВыгрузкиВОрганыСоцЗащиты</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ТП_ЖКУ_ВБазе" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Услуга в базе</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="УслугаВБазе" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Услуга в базе</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.КВП_Услуги</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаСохранить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить и закрыть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить и закрыть</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.SaveReportSettings</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаСохранить</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаОбновитьСписокУслуг" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить список услуг</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить список услуг</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаОбновитьСписокУслуг</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаИспользоватьФиксированныйТариф" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать фиксированный тариф</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать фиксированный тариф</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.НетРискаПроверки</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаИспользоватьФиксированныйТариф</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаСправочнаяИнформация" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инструкция</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инструкция по настройке и эксплуатации выгрузки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.FormHelp</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаСправочнаяИнформация</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

@@ -1,0 +1,911 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Калужская область: Выгрузка в ОСЗН</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаЗагрузить" id="105">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+				<CommandName>Form.Command.Загрузить</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>1. Загрузить из файла</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаЗагрузитьРасширеннаяПодсказка" id="106"/>
+			</Button>
+			<Button name="ФормаКомандаНастройка" id="100">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+				<CommandName>Form.Command.КомандаНастройка</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>2. Настройка</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаКомандаНастройкаРасширеннаяПодсказка" id="101"/>
+			</Button>
+			<Button name="ФормаЗаполнить" id="182">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+				<CommandName>Form.Command.Заполнить</CommandName>
+				<Picture>
+					<xr:Ref>CommonPicture.ЗаполнитьФорму</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>3. Заполнить данными из базы</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаЗаполнитьРасширеннаяПодсказка" id="183"/>
+			</Button>
+			<Button name="ФормаВыгрузить" id="184">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+				<CommandName>Form.Command.Выгрузить</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>4. Выгрузить в файл</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаВыгрузитьРасширеннаяПодсказка" id="185"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="КомандыВыгрузки" id="186">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команды выгрузки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команды выгрузки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="КомандыВыгрузкиРасширеннаяПодсказка" id="187"/>
+		</UsualGroup>
+		<UsualGroup name="Группа1" id="267">
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="268"/>
+			<ChildItems>
+				<UsualGroup name="Шапка" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шапка</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ШапкаРасширеннаяПодсказка" id="2"/>
+					<ChildItems>
+						<InputField name="ПериодСтрокой" id="102">
+							<DataPath>ПериодСтрокой</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отчетный период</v8:content>
+								</v8:item>
+							</Title>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<ChoiceButton>true</ChoiceButton>
+							<SpinButton>true</SpinButton>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ChoiceButtonPicture>
+								<xr:Ref>StdPicture.InputFieldCalendar</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</ChoiceButtonPicture>
+							<ContextMenu name="ПериодСтрокойКонтекстноеМеню" id="103"/>
+							<ExtendedTooltip name="ПериодСтрокойРасширеннаяПодсказка" id="104"/>
+							<Events>
+								<Event name="OnChange">ПериодСтрокойПриИзменении</Event>
+								<Event name="AutoComplete">ПериодСтрокойАвтоПодбор</Event>
+								<Event name="StartChoice">ПериодСтрокойНачалоВыбора</Event>
+								<Event name="Tuning">ПериодСтрокойРегулирование</Event>
+								<Event name="TextEditEnd">ПериодСтрокойОкончаниеВводаТекста</Event>
+							</Events>
+						</InputField>
+						<InputField name="Организация" id="10">
+							<DataPath>Объект.Организация</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>20</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="12"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа2" id="269">
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="270"/>
+					<ChildItems>
+						<InputField name="ИмяФайлаЗагрузки" id="15">
+							<DataPath>ИмяФайлаЗагрузки</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<ChoiceButton>true</ChoiceButton>
+							<ClearButton>true</ClearButton>
+							<OpenButton>true</OpenButton>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="ИмяФайлаЗагрузкиКонтекстноеМеню" id="16"/>
+							<ExtendedTooltip name="ИмяФайлаЗагрузкиРасширеннаяПодсказка" id="17"/>
+							<Events>
+								<Event name="StartChoice">ИмяФайлаЗагрузкиНачалоВыбора</Event>
+								<Event name="Opening">ИмяФайлаЗагрузкиОткрытие</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="КО_ТаблицаВыгрузки" id="188">
+			<Representation>List</Representation>
+			<ChangeRowSet>false</ChangeRowSet>
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>КО_ТаблицаВыгрузки</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="КО_ТаблицаВыгрузкиКонтекстноеМеню" id="189"/>
+			<AutoCommandBar name="КО_ТаблицаВыгрузкиКоманднаяПанель" id="190"/>
+			<ExtendedTooltip name="КО_ТаблицаВыгрузкиРасширеннаяПодсказка" id="191"/>
+			<SearchStringAddition name="КО_ТаблицаВыгрузкиСтрокаПоиска" id="192">
+				<AdditionSource>
+					<Item>КО_ТаблицаВыгрузки</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="КО_ТаблицаВыгрузкиСтрокаПоискаКонтекстноеМеню" id="193"/>
+				<ExtendedTooltip name="КО_ТаблицаВыгрузкиСтрокаПоискаРасширеннаяПодсказка" id="194"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="КО_ТаблицаВыгрузкиСостояниеПросмотра" id="195">
+				<AdditionSource>
+					<Item>КО_ТаблицаВыгрузки</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="КО_ТаблицаВыгрузкиСостояниеПросмотраКонтекстноеМеню" id="196"/>
+				<ExtendedTooltip name="КО_ТаблицаВыгрузкиСостояниеПросмотраРасширеннаяПодсказка" id="197"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="КО_ТаблицаВыгрузкиУправлениеПоиском" id="198">
+				<AdditionSource>
+					<Item>КО_ТаблицаВыгрузки</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="КО_ТаблицаВыгрузкиУправлениеПоискомКонтекстноеМеню" id="199"/>
+				<ExtendedTooltip name="КО_ТаблицаВыгрузкиУправлениеПоискомРасширеннаяПодсказка" id="200"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="КО_ТаблицаВыгрузкиID" id="210">
+					<DataPath>КО_ТаблицаВыгрузки.ID</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КО_ТаблицаВыгрузкиIDКонтекстноеМеню" id="211"/>
+					<ExtendedTooltip name="КО_ТаблицаВыгрузкиIDРасширеннаяПодсказка" id="212"/>
+				</InputField>
+				<InputField name="КО_ТаблицаВыгрузкиPKU" id="213">
+					<DataPath>КО_ТаблицаВыгрузки.PKU</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КО_ТаблицаВыгрузкиPKUКонтекстноеМеню" id="214"/>
+					<ExtendedTooltip name="КО_ТаблицаВыгрузкиPKUРасширеннаяПодсказка" id="215"/>
+				</InputField>
+				<InputField name="КО_ТаблицаВыгрузкиFRA_REG_ID" id="216">
+					<DataPath>КО_ТаблицаВыгрузки.FRA_REG_ID</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КО_ТаблицаВыгрузкиFRA_REG_IDКонтекстноеМеню" id="217"/>
+					<ExtendedTooltip name="КО_ТаблицаВыгрузкиFRA_REG_IDРасширеннаяПодсказка" id="218"/>
+				</InputField>
+				<InputField name="КО_ТаблицаВыгрузкиPOSEL" id="219">
+					<DataPath>КО_ТаблицаВыгрузки.POSEL</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КО_ТаблицаВыгрузкиPOSELКонтекстноеМеню" id="220"/>
+					<ExtendedTooltip name="КО_ТаблицаВыгрузкиPOSELРасширеннаяПодсказка" id="221"/>
+				</InputField>
+				<InputField name="КО_ТаблицаВыгрузкиNASP" id="222">
+					<DataPath>КО_ТаблицаВыгрузки.NASP</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КО_ТаблицаВыгрузкиNASPКонтекстноеМеню" id="223"/>
+					<ExtendedTooltip name="КО_ТаблицаВыгрузкиNASPРасширеннаяПодсказка" id="224"/>
+				</InputField>
+				<InputField name="КО_ТаблицаВыгрузкиYLIC" id="225">
+					<DataPath>КО_ТаблицаВыгрузки.YLIC</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КО_ТаблицаВыгрузкиYLICКонтекстноеМеню" id="226"/>
+					<ExtendedTooltip name="КО_ТаблицаВыгрузкиYLICРасширеннаяПодсказка" id="227"/>
+				</InputField>
+				<InputField name="КО_ТаблицаВыгрузкиNDOM" id="228">
+					<DataPath>КО_ТаблицаВыгрузки.NDOM</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КО_ТаблицаВыгрузкиNDOMКонтекстноеМеню" id="229"/>
+					<ExtendedTooltip name="КО_ТаблицаВыгрузкиNDOMРасширеннаяПодсказка" id="230"/>
+				</InputField>
+				<InputField name="КО_ТаблицаВыгрузкиNKORP" id="231">
+					<DataPath>КО_ТаблицаВыгрузки.NKORP</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КО_ТаблицаВыгрузкиNKORPКонтекстноеМеню" id="232"/>
+					<ExtendedTooltip name="КО_ТаблицаВыгрузкиNKORPРасширеннаяПодсказка" id="233"/>
+				</InputField>
+				<InputField name="КО_ТаблицаВыгрузкиNKW" id="234">
+					<DataPath>КО_ТаблицаВыгрузки.NKW</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КО_ТаблицаВыгрузкиNKWКонтекстноеМеню" id="235"/>
+					<ExtendedTooltip name="КО_ТаблицаВыгрузкиNKWРасширеннаяПодсказка" id="236"/>
+				</InputField>
+				<InputField name="КО_ТаблицаВыгрузкиLCHET" id="237">
+					<DataPath>КО_ТаблицаВыгрузки.LCHET</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КО_ТаблицаВыгрузкиLCHETКонтекстноеМеню" id="238"/>
+					<ExtendedTooltip name="КО_ТаблицаВыгрузкиLCHETРасширеннаяПодсказка" id="239"/>
+				</InputField>
+				<InputField name="КО_ТаблицаВыгрузкиСоответствующийЛицевойСчет" id="201">
+					<DataPath>КО_ТаблицаВыгрузки.СоответствующийЛицевойСчет</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КО_ТаблицаВыгрузкиСоответствующийЛицевойСчетКонтекстноеМеню" id="202"/>
+					<ExtendedTooltip name="КО_ТаблицаВыгрузкиСоответствующийЛицевойСчетРасширеннаяПодсказка" id="203"/>
+					<Events>
+						<Event name="OnChange">КО_ТаблицаВыгрузкиСоответствующийЛицевойСчетПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="КО_ТаблицаВыгрузкиKOLZR" id="240">
+					<DataPath>КО_ТаблицаВыгрузки.KOLZR</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КО_ТаблицаВыгрузкиKOLZRКонтекстноеМеню" id="241"/>
+					<ExtendedTooltip name="КО_ТаблицаВыгрузкиKOLZRРасширеннаяПодсказка" id="242"/>
+				</InputField>
+				<InputField name="КО_ТаблицаВыгрузкиDATN" id="243">
+					<DataPath>КО_ТаблицаВыгрузки.DATN</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КО_ТаблицаВыгрузкиDATNКонтекстноеМеню" id="244"/>
+					<ExtendedTooltip name="КО_ТаблицаВыгрузкиDATNРасширеннаяПодсказка" id="245"/>
+				</InputField>
+				<InputField name="КО_ТаблицаВыгрузкиDATA_N" id="246">
+					<DataPath>КО_ТаблицаВыгрузки.DATA_N</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КО_ТаблицаВыгрузкиDATA_NКонтекстноеМеню" id="247"/>
+					<ExtendedTooltip name="КО_ТаблицаВыгрузкиDATA_NРасширеннаяПодсказка" id="248"/>
+				</InputField>
+				<InputField name="КО_ТаблицаВыгрузкиDATA_D" id="249">
+					<DataPath>КО_ТаблицаВыгрузки.DATA_D</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КО_ТаблицаВыгрузкиDATA_DКонтекстноеМеню" id="250"/>
+					<ExtendedTooltip name="КО_ТаблицаВыгрузкиDATA_DРасширеннаяПодсказка" id="251"/>
+				</InputField>
+				<InputField name="КО_ТаблицаВыгрузкиSUMOPL" id="252">
+					<DataPath>КО_ТаблицаВыгрузки.SUMOPL</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КО_ТаблицаВыгрузкиSUMOPLКонтекстноеМеню" id="253"/>
+					<ExtendedTooltip name="КО_ТаблицаВыгрузкиSUMOPLРасширеннаяПодсказка" id="254"/>
+				</InputField>
+				<InputField name="КО_ТаблицаВыгрузкиSUMNCH" id="255">
+					<DataPath>КО_ТаблицаВыгрузки.SUMNCH</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КО_ТаблицаВыгрузкиSUMNCHКонтекстноеМеню" id="256"/>
+					<ExtendedTooltip name="КО_ТаблицаВыгрузкиSUMNCHРасширеннаяПодсказка" id="257"/>
+				</InputField>
+				<InputField name="КО_ТаблицаВыгрузкиSUMDOLG" id="258">
+					<DataPath>КО_ТаблицаВыгрузки.SUMDOLG</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КО_ТаблицаВыгрузкиSUMDOLGКонтекстноеМеню" id="259"/>
+					<ExtendedTooltip name="КО_ТаблицаВыгрузкиSUMDOLGРасширеннаяПодсказка" id="260"/>
+				</InputField>
+				<InputField name="КО_ТаблицаВыгрузкиKOLDOLG" id="261">
+					<DataPath>КО_ТаблицаВыгрузки.KOLDOLG</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КО_ТаблицаВыгрузкиKOLDOLGКонтекстноеМеню" id="262"/>
+					<ExtendedTooltip name="КО_ТаблицаВыгрузкиKOLDOLGРасширеннаяПодсказка" id="263"/>
+				</InputField>
+				<InputField name="КО_ТаблицаВыгрузкиDOP_INF" id="264">
+					<DataPath>КО_ТаблицаВыгрузки.DOP_INF</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КО_ТаблицаВыгрузкиDOP_INFКонтекстноеМеню" id="265"/>
+					<ExtendedTooltip name="КО_ТаблицаВыгрузкиDOP_INFРасширеннаяПодсказка" id="266"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.УПЖКХ_ВыгрузкиВОрганыСоцЗащиты</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ПериодСтрокой" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период строкой</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>15</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="КО_ТаблицаВыгрузки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Калужская область таблица выгрузки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="СоответствующийЛицевойСчет" id="20">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Лицевой счет</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.КВП_ЛицевыеСчета</v8:Type>
+					</Type>
+				</Column>
+				<Column name="НаселенныйПункт" id="21">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Населенный пункт</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="НаименованиеУлицы" id="22">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование улицы</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ID" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ID</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>11</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="PKU" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>PKU</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>11</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="FRA_REG_ID" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>FRA_REG_ID</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>11</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="POSEL" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>POSEL</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>30</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="NASP" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>NASP</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="YLIC" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>YLIC</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="NDOM" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>NDOM</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>6</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="NKORP" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>NKORP</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>3</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="NKW" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>NKW</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>3</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="LCHET" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>LCHET</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>24</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="KOLZR" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>KOLZR</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>2</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="DATN" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>DATN</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="DATA_N" id="13">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>DATA_N</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="DATA_D" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>DATA_D</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="SUMOPL" id="15">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>SUMOPL</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>12</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="SUMNCH" id="16">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>SUMNCH</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>12</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="SUMDOLG" id="17">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>SUMDOLG</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>12</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="KOLDOLG" id="18">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>KOLDOLG</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>3</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="DOP_INF" id="19">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>DOP INF</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТаблицаКодовУслугИзФайла" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица кодов услуг из файла</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="КодУслуги" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код услуги</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>4</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="НаименованиеУслугиВФайле" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование услуги в файле</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="АдресДобавляемыеРеквизитыТаблицыЗагрузки" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес добавляемые реквизиты таблицы загрузки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КоличествоУслугТаблицыЗагрузки" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество услуг таблицы загрузки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>2</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИмяФайлаЗагрузки" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя файла загрузки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КаталогВыгрузки" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Каталог выгрузки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>КО_ТаблицаВыгрузки</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">КО_ТаблицаВыгрузки.СоответствующийЛицевойСчет</dcsset:left>
+						<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>Текст</dcscor:parameter>
+						<dcscor:value xsi:nil="true"/>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаНастройка" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть форму настройки сответствия услуг</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Настройка</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаНастройка</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Загрузить" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить танные в табличную часть из файла ОСЗН</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ЗагрузитьДанныеИзФайла</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Загрузить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Заполнить" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить табличную часть данными о начислениях</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Заполнить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Выгрузить" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить полученные данные в dbf-файл</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ВыгрузитьФайлСертификата</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Выгрузить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

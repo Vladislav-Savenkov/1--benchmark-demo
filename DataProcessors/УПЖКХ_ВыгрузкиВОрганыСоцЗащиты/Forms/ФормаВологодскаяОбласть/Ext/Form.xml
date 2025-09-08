@@ -1,0 +1,825 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Выгрузка в ОСЗН по Вологодской области</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаКомандаНастройка" id="1">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.КомандаНастройка</CommandName>
+				<Picture>
+					<xr:Ref>CommonPicture.Настройка</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Настройка</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаКомандаНастройкаРасширеннаяПодсказка" id="2"/>
+			</Button>
+			<Button name="ФормаКомандаЗаполнить" id="3">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.КомандаЗаполнить</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Заполнить</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаКомандаЗаполнитьРасширеннаяПодсказка" id="4"/>
+			</Button>
+			<Button name="ФормаКомандаВыгрузить" id="5">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.КомандаВыгрузить</CommandName>
+				<Picture>
+					<xr:Ref>CommonPicture.ВыгрузитьФайлСертификата</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Выгрузить</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаКомандаВыгрузитьРасширеннаяПодсказка" id="6"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="8"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаШапкаСлева" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шапка слева</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шапка слева</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаШапкаСлеваРасширеннаяПодсказка" id="10"/>
+					<ChildItems>
+						<InputField name="ПериодСтрокой" id="11">
+							<DataPath>ПериодСтрокой</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Период</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сведения об инвалидности действуют с</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ChoiceButton>true</ChoiceButton>
+							<SpinButton>true</SpinButton>
+							<ChoiceButtonPicture>
+								<xr:Ref>StdPicture.InputFieldCalendar</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</ChoiceButtonPicture>
+							<ContextMenu name="ПериодСтрокойКонтекстноеМеню" id="12"/>
+							<ExtendedTooltip name="ПериодСтрокойExtendedTooltip" id="13"/>
+							<Events>
+								<Event name="OnChange">ПериодСтрокойПриИзменении</Event>
+								<Event name="AutoComplete">ПериодСтрокойАвтоПодбор</Event>
+								<Event name="StartChoice">ПериодСтрокойНачалоВыбора</Event>
+								<Event name="Tuning">ПериодСтрокойРегулирование</Event>
+								<Event name="TextEditEnd">ПериодСтрокойОкончаниеВводаТекста</Event>
+							</Events>
+						</InputField>
+						<InputField name="Организация" id="14">
+							<DataPath>Объект.Организация</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="15"/>
+							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="16"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаШапкаСправа" id="17">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шапка справа</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шапка справа</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаШапкаСправаРасширеннаяПодсказка" id="18"/>
+					<ChildItems>
+						<InputField name="ИмяФайлаЗагрузки" id="22">
+							<DataPath>ИмяФайлаЗагрузки</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Файл загрузки</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<ChoiceButton>true</ChoiceButton>
+							<OpenButton>true</OpenButton>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="ИмяФайлаЗагрузкиКонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="ИмяФайлаЗагрузкиРасширеннаяПодсказка" id="24"/>
+							<Events>
+								<Event name="StartChoice">ИмяФайлаЗагрузкиНачалоВыбора</Event>
+								<Event name="Opening">ИмяФайлаЗагрузкиОткрытие</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ПанельВыгрузки" id="25">
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ПанельВыгрузкиРасширеннаяПодсказка" id="26"/>
+			<ChildItems>
+				<Table name="ВологодскаяОбласть_ТаблицаНачислений" id="27">
+					<Representation>List</Representation>
+					<SelectionMode>SingleRow</SelectionMode>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений</DataPath>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийКонтекстноеМеню" id="28"/>
+					<AutoCommandBar name="ВологодскаяОбласть_ТаблицаНачисленийКоманднаяПанель" id="29"/>
+					<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийРасширеннаяПодсказка" id="30"/>
+					<SearchStringAddition name="ВологодскаяОбласть_ТаблицаНачисленийСтрокаПоиска" id="31">
+						<AdditionSource>
+							<Item>ВологодскаяОбласть_ТаблицаНачислений</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийСтрокаПоискаКонтекстноеМеню" id="32"/>
+						<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийСтрокаПоискаРасширеннаяПодсказка" id="33"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ВологодскаяОбласть_ТаблицаНачисленийСостояниеПросмотра" id="34">
+						<AdditionSource>
+							<Item>ВологодскаяОбласть_ТаблицаНачислений</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийСостояниеПросмотраКонтекстноеМеню" id="35"/>
+						<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийСостояниеПросмотраРасширеннаяПодсказка" id="36"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ВологодскаяОбласть_ТаблицаНачисленийУправлениеПоиском" id="37">
+						<AdditionSource>
+							<Item>ВологодскаяОбласть_ТаблицаНачислений</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийУправлениеПоискомКонтекстноеМеню" id="38"/>
+						<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийУправлениеПоискомРасширеннаяПодсказка" id="39"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<LabelField name="ВологодскаяОбласть_ТаблицаНачисленийНомерСтроки" id="40">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.LineNumber</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийНомерСтрокиКонтекстноеМеню" id="41"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийНомерСтрокиРасширеннаяПодсказка" id="42"/>
+						</LabelField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийKod_r" id="43">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.Kod_r</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийKod_rКонтекстноеМеню" id="44"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийKod_rРасширеннаяПодсказка" id="45"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийLchet" id="46">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.Lchet</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийLchetКонтекстноеМеню" id="47"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийLchetРасширеннаяПодсказка" id="48"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийSnils" id="49">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.Snils</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийSnilsКонтекстноеМеню" id="50"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийSnilsРасширеннаяПодсказка" id="51"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийЛицевойСчет" id="52">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.ЛицевойСчет</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийЛицевойСчетКонтекстноеМеню" id="53"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийЛицевойСчетРасширеннаяПодсказка" id="54"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийNchet" id="55">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.Nchet</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийNchetКонтекстноеМеню" id="56"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийNchetРасширеннаяПодсказка" id="57"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийFam" id="58">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.Fam</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийFamКонтекстноеМеню" id="59"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийFamРасширеннаяПодсказка" id="60"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийIm" id="61">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.Im</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийImКонтекстноеМеню" id="62"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийImРасширеннаяПодсказка" id="63"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийOt" id="64">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.Ot</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийOtКонтекстноеМеню" id="65"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийOtРасширеннаяПодсказка" id="66"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийD_rogd" id="67">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.D_rogd</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийD_rogdКонтекстноеМеню" id="68"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийD_rogdРасширеннаяПодсказка" id="69"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийPost" id="70">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.Post</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийPostКонтекстноеМеню" id="71"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийPostРасширеннаяПодсказка" id="72"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийHouse" id="79">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.House</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийHouseКонтекстноеМеню" id="80"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийHouseРасширеннаяПодсказка" id="81"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийKorp" id="82">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.Korp</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийKorpКонтекстноеМеню" id="83"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийKorpРасширеннаяПодсказка" id="84"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийFlat" id="85">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.Flat</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийFlatКонтекстноеМеню" id="86"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийFlatРасширеннаяПодсказка" id="87"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийN_room" id="88">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.N_room</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийN_roomКонтекстноеМеню" id="89"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийN_roomРасширеннаяПодсказка" id="90"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийK_Flat" id="91">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.K_Flat</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийK_FlatКонтекстноеМеню" id="92"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийK_FlatРасширеннаяПодсказка" id="93"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийВидСобственности" id="94">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.ВидСобственности</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийВидСобственностиКонтекстноеМеню" id="95"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийВидСобственностиРасширеннаяПодсказка" id="96"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийQ_Room" id="97">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.Q_Room</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийQ_RoomКонтекстноеМеню" id="98"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийQ_RoomРасширеннаяПодсказка" id="99"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийS_Flat" id="100">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.S_Flat</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийS_FlatКонтекстноеМеню" id="101"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийS_FlatРасширеннаяПодсказка" id="102"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийQ_Proj" id="103">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.Q_Proj</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийQ_ProjКонтекстноеМеню" id="104"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийQ_ProjРасширеннаяПодсказка" id="105"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийЛьготнаяКатегория" id="109">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.ЛьготнаяКатегория</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийЛьготнаяКатегорияКонтекстноеМеню" id="110"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийЛьготнаяКатегорияРасширеннаяПодсказка" id="111"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийKat_Lg" id="112">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.Kat_Lg</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийKat_LgКонтекстноеМеню" id="113"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийKat_LgРасширеннаяПодсказка" id="114"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийPriznak" id="115">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.Priznak</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийPriznakКонтекстноеМеню" id="116"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийPriznakРасширеннаяПодсказка" id="117"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийD_Pravo" id="118">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.D_Pravo</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийD_PravoКонтекстноеМеню" id="119"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийD_PravoРасширеннаяПодсказка" id="120"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийOrg_plat" id="121">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.Org_plat</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийOrg_platКонтекстноеМеню" id="122"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийOrg_platРасширеннаяПодсказка" id="123"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийPeriod" id="124">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.Period</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийPeriodКонтекстноеМеню" id="125"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийPeriodРасширеннаяПодсказка" id="126"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийC" id="127">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.C</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийCКонтекстноеМеню" id="128"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийCРасширеннаяПодсказка" id="129"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийDO" id="130">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.DO</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийDOКонтекстноеМеню" id="131"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийDOРасширеннаяПодсказка" id="132"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийK_USL1" id="133">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.K_USL1</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийK_USL1КонтекстноеМеню" id="134"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийK_USL1РасширеннаяПодсказка" id="135"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийSUMMA1" id="136">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.SUMMA1</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийSUMMA1КонтекстноеМеню" id="137"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийSUMMA1РасширеннаяПодсказка" id="138"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийK_USL2" id="139">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.K_USL2</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийK_USL2КонтекстноеМеню" id="140"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийK_USL2РасширеннаяПодсказка" id="141"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийSUMMA2" id="142">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.SUMMA2</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийSUMMA2КонтекстноеМеню" id="143"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийSUMMA2РасширеннаяПодсказка" id="144"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийK_USL3" id="145">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.K_USL3</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийK_USL3КонтекстноеМеню" id="146"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийK_USL3РасширеннаяПодсказка" id="147"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийSUMMA3" id="148">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.SUMMA3</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийSUMMA3КонтекстноеМеню" id="149"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийSUMMA3РасширеннаяПодсказка" id="150"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийK_USL4" id="151">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.K_USL4</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийK_USL4КонтекстноеМеню" id="152"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийK_USL4РасширеннаяПодсказка" id="153"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийSUMMA4" id="154">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.SUMMA4</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийSUMMA4КонтекстноеМеню" id="155"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийSUMMA4РасширеннаяПодсказка" id="156"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийK_USL5" id="157">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.K_USL5</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийK_USL5КонтекстноеМеню" id="158"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийK_USL5РасширеннаяПодсказка" id="159"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийSUMMA5" id="160">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.SUMMA5</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийSUMMA5КонтекстноеМеню" id="161"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийSUMMA5РасширеннаяПодсказка" id="162"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийK_USL6" id="163">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.K_USL6</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийK_USL6КонтекстноеМеню" id="164"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийK_USL6РасширеннаяПодсказка" id="165"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийSUMMA6" id="166">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.SUMMA6</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийSUMMA6КонтекстноеМеню" id="167"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийSUMMA6РасширеннаяПодсказка" id="168"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийK_USL7" id="169">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.K_USL7</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийK_USL7КонтекстноеМеню" id="170"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийK_USL7РасширеннаяПодсказка" id="171"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийSUMMA7" id="172">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.SUMMA7</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийSUMMA7КонтекстноеМеню" id="173"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийSUMMA7РасширеннаяПодсказка" id="174"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийK_USL8" id="175">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.K_USL8</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийK_USL8КонтекстноеМеню" id="176"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийK_USL8РасширеннаяПодсказка" id="177"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийSUMMA8" id="178">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.SUMMA8</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийSUMMA8КонтекстноеМеню" id="179"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийSUMMA8РасширеннаяПодсказка" id="180"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийK_USL9" id="181">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.K_USL9</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийK_USL9КонтекстноеМеню" id="182"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийK_USL9РасширеннаяПодсказка" id="183"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийSUMMA9" id="184">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.SUMMA9</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийSUMMA9КонтекстноеМеню" id="185"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийSUMMA9РасширеннаяПодсказка" id="186"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийK_USL10" id="187">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.K_USL10</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийK_USL10КонтекстноеМеню" id="188"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийK_USL10РасширеннаяПодсказка" id="189"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийSUMMA10" id="190">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.SUMMA10</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийSUMMA10КонтекстноеМеню" id="191"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийSUMMA10РасширеннаяПодсказка" id="192"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийK_USL11" id="193">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.K_USL11</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийK_USL11КонтекстноеМеню" id="194"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийK_USL11РасширеннаяПодсказка" id="195"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийSUMMA11" id="196">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.SUMMA11</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийSUMMA11КонтекстноеМеню" id="197"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийSUMMA11РасширеннаяПодсказка" id="198"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийK_USL12" id="199">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.K_USL12</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийK_USL12КонтекстноеМеню" id="200"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийK_USL12РасширеннаяПодсказка" id="201"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийSUMMA12" id="202">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.SUMMA12</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийSUMMA12КонтекстноеМеню" id="203"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийSUMMA12РасширеннаяПодсказка" id="204"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийK_USL13" id="205">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.K_USL13</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийK_USL13КонтекстноеМеню" id="206"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийK_USL13РасширеннаяПодсказка" id="207"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийSUMMA13" id="208">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.SUMMA13</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийSUMMA13КонтекстноеМеню" id="209"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийSUMMA13РасширеннаяПодсказка" id="210"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийK_USL14" id="211">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.K_USL14</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийK_USL14КонтекстноеМеню" id="212"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийK_USL14РасширеннаяПодсказка" id="213"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийSUMMA14" id="214">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.SUMMA14</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийSUMMA14КонтекстноеМеню" id="215"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийSUMMA14РасширеннаяПодсказка" id="216"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийK_USL15" id="217">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.K_USL15</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийK_USL15КонтекстноеМеню" id="218"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийK_USL15РасширеннаяПодсказка" id="219"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийSUMMA15" id="220">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.SUMMA15</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийSUMMA15КонтекстноеМеню" id="221"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийSUMMA15РасширеннаяПодсказка" id="222"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийK_USL16" id="223">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.K_USL16</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийK_USL16КонтекстноеМеню" id="224"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийK_USL16РасширеннаяПодсказка" id="225"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийSUMMA16" id="226">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.SUMMA16</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийSUMMA16КонтекстноеМеню" id="227"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийSUMMA16РасширеннаяПодсказка" id="228"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийK_USL17" id="229">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.K_USL17</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийK_USL17КонтекстноеМеню" id="230"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийK_USL17РасширеннаяПодсказка" id="231"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийSUMMA17" id="232">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.SUMMA17</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийSUMMA17КонтекстноеМеню" id="233"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийSUMMA17РасширеннаяПодсказка" id="234"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийK_USL18" id="235">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.K_USL18</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийK_USL18КонтекстноеМеню" id="236"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийK_USL18РасширеннаяПодсказка" id="237"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийSUMMA18" id="238">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.SUMMA18</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийSUMMA18КонтекстноеМеню" id="239"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийSUMMA18РасширеннаяПодсказка" id="240"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийK_USL19" id="241">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.K_USL19</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийK_USL19КонтекстноеМеню" id="242"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийK_USL19РасширеннаяПодсказка" id="243"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийSUMMA19" id="244">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.SUMMA19</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийSUMMA19КонтекстноеМеню" id="245"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийSUMMA19РасширеннаяПодсказка" id="246"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийK_USL20" id="247">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.K_USL20</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийK_USL20КонтекстноеМеню" id="248"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийK_USL20РасширеннаяПодсказка" id="249"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийSUMMA20" id="250">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.SUMMA20</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийSUMMA20КонтекстноеМеню" id="251"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийSUMMA20РасширеннаяПодсказка" id="252"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийP_Dolg" id="253">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.P_Dolg</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийP_DolgКонтекстноеМеню" id="254"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийP_DolgРасширеннаяПодсказка" id="255"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийSumma_D" id="256">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.Summa_D</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийSumma_DКонтекстноеМеню" id="257"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийSumma_DРасширеннаяПодсказка" id="258"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийLc_id" id="259">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.Lc_id</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийLc_idКонтекстноеМеню" id="260"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийLc_idРасширеннаяПодсказка" id="261"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийpunkt_nm" id="262">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.punkt_nm</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийpunkt_nmКонтекстноеМеню" id="263"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийpunkt_nmРасширеннаяПодсказка" id="264"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийstreet_nm" id="265">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.street_nm</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийstreet_nmКонтекстноеМеню" id="266"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийstreet_nmРасширеннаяПодсказка" id="267"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийN_Upr" id="268">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.N_Upr</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийN_UprКонтекстноеМеню" id="269"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийN_UprРасширеннаяПодсказка" id="270"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийK_CODE" id="271">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.K_CODE</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийK_CODEКонтекстноеМеню" id="272"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийK_CODEРасширеннаяПодсказка" id="273"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийQ_EdkJ" id="274">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.Q_EdkJ</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийQ_EdkJКонтекстноеМеню" id="275"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийQ_EdkJРасширеннаяПодсказка" id="276"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийQ_EdkK" id="277">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.Q_EdkK</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийQ_EdkKКонтекстноеМеню" id="278"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийQ_EdkKРасширеннаяПодсказка" id="279"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийQ_IJD" id="280">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.Q_IJD</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийQ_IJDКонтекстноеМеню" id="281"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийQ_IJDРасширеннаяПодсказка" id="282"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийQ_OUT" id="283">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.Q_OUT</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийQ_OUTКонтекстноеМеню" id="284"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийQ_OUTРасширеннаяПодсказка" id="285"/>
+						</InputField>
+						<InputField name="ВологодскаяОбласть_ТаблицаНачисленийF_CODE" id="523">
+							<DataPath>Объект.ВологодскаяОбласть_ТаблицаНачислений.F_CODE</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВологодскаяОбласть_ТаблицаНачисленийF_CODEКонтекстноеМеню" id="524"/>
+							<ExtendedTooltip name="ВологодскаяОбласть_ТаблицаНачисленийF_CODEРасширеннаяПодсказка" id="525"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.УПЖКХ_ВыгрузкиВОрганыСоцЗащиты</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ПериодСтрокой" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период строкой</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>15</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<View>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.ДобавлениеИзменениеДанныхФизическихЛицЗарплатаКадры">true</xr:Value>
+				<xr:Value name="Role.ПолныеПрава">true</xr:Value>
+				<xr:Value name="Role.ЧтениеДанныхФизическихЛицЗарплатаКадры">true</xr:Value>
+			</View>
+			<Edit>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.ДобавлениеИзменениеДанныхФизическихЛицЗарплатаКадры">true</xr:Value>
+				<xr:Value name="Role.ПолныеПрава">true</xr:Value>
+				<xr:Value name="Role.ЧтениеДанныхФизическихЛицЗарплатаКадры">true</xr:Value>
+			</Edit>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ИмяФайлаЗагрузки" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя файла загрузки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>512</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаНастройка" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Настройка</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаНастройка</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаЗаполнить" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ЗаполнитьФорму</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаЗаполнить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаВыгрузить" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ВыгрузитьФайлСертификата</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаВыгрузить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

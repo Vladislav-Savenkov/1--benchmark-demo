@@ -1,0 +1,2337 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Мастер обеспечения заявок АДС</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="ПанельОсновная" id="42">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Панель основная</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Панель основная</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="ПанельОсновнаяРасширеннаяПодсказка" id="43"/>
+			<ChildItems>
+				<Page name="Этап1" id="44">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Этап1</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Этап1</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="Этап1РасширеннаяПодсказка" id="45"/>
+					<ChildItems>
+						<LabelDecoration name="НадписьПодборЗаявок" id="46">
+							<Height>2</Height>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Этап 1: Подбор заявок</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="НадписьПодборЗаявокКонтекстноеМеню" id="47"/>
+							<ExtendedTooltip name="НадписьПодборЗаявокРасширеннаяПодсказка" id="48"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаПериод" id="35">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа период</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Заявка попадает в период обеспечения, если ее время, удобное заказчику для выполнения работ, входит в интервал обеспечения.</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПериодРасширеннаяПодсказка" id="36"/>
+							<ChildItems>
+								<InputField name="ПериодНачало" id="1">
+									<DataPath>Объект.ПериодНачало</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Период обеспечения с</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПериодНачалоКонтекстноеМеню" id="2"/>
+									<ExtendedTooltip name="ПериодНачалоРасширеннаяПодсказка" id="3"/>
+									<Events>
+										<Event name="OnChange">ПериодНачалоПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ПериодОкончание" id="4">
+									<DataPath>Объект.ПериодОкончание</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>по</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПериодОкончаниеКонтекстноеМеню" id="5"/>
+									<ExtendedTooltip name="ПериодОкончаниеРасширеннаяПодсказка" id="6"/>
+									<Events>
+										<Event name="OnChange">ПериодОкончаниеПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="Организация" id="10">
+							<DataPath>Объект.Организация</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="12"/>
+							<Events>
+								<Event name="OnChange">ОрганизацияПриИзменении</Event>
+							</Events>
+						</InputField>
+						<UsualGroup name="ГруппаМастерСклад" id="256">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа мастер склад</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа мастер склад</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаМастерСкладРасширеннаяПодсказка" id="257"/>
+							<ChildItems>
+								<InputField name="Мастер" id="7">
+									<DataPath>Объект.Мастер</DataPath>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ответственный за выполнение заявки.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="МастерКонтекстноеМеню" id="8"/>
+									<ExtendedTooltip name="МастерРасширеннаяПодсказка" id="9"/>
+									<Events>
+										<Event name="OnChange">МастерПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="Склад" id="13">
+							<DataPath>Объект.Склад</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Склад мастера определяется по ответственному лицу склада, которое устанавливается в форме справочника "Склады".</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СкладКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="СкладРасширеннаяПодсказка" id="15"/>
+						</InputField>
+						<UsualGroup name="ГруппаТаблицаЗаявок" id="258">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Список заявок мастера, которые необходимо обеспечить материалами</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа таблица заявок</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="ГруппаТаблицаЗаявокРасширеннаяПодсказка" id="259"/>
+							<ChildItems>
+								<Table name="ТаблицаЗаявок" id="16">
+									<Representation>List</Representation>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>Объект.ТаблицаЗаявок</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ТаблицаЗаявокКонтекстноеМеню" id="17"/>
+									<AutoCommandBar name="ТаблицаЗаявокКоманднаяПанель" id="18">
+										<Autofill>false</Autofill>
+										<ChildItems>
+											<Button name="ТаблицаЗаявокВыделитьВсе" id="63">
+												<Type>CommandBarButton</Type>
+												<Representation>Picture</Representation>
+												<CommandName>Form.Command.ТаблицаЗаявокВыделитьВсе</CommandName>
+												<Picture>
+													<xr:Ref>StdPicture.CheckAll</xr:Ref>
+													<xr:LoadTransparent>true</xr:LoadTransparent>
+												</Picture>
+												<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+												<ExtendedTooltip name="ТаблицаЗаявокВыделитьВсеРасширеннаяПодсказка" id="64"/>
+											</Button>
+											<Button name="ТаблицаЗаявокСнятьВсе" id="65">
+												<Type>CommandBarButton</Type>
+												<Representation>Picture</Representation>
+												<CommandName>Form.Command.ТаблицаЗаявокСнятьВсе</CommandName>
+												<Picture>
+													<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+													<xr:LoadTransparent>true</xr:LoadTransparent>
+												</Picture>
+												<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+												<ExtendedTooltip name="ТаблицаЗаявокСнятьВсеРасширеннаяПодсказка" id="66"/>
+											</Button>
+											<Button name="ЗаполнитьЗаявки" id="37">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ПодобратьЗаявки</CommandName>
+												<ExtendedTooltip name="ЗаполнитьЗаявкиРасширеннаяПодсказка" id="38"/>
+											</Button>
+										</ChildItems>
+									</AutoCommandBar>
+									<ExtendedTooltip name="ТаблицаЗаявокРасширеннаяПодсказка" id="19"/>
+									<SearchStringAddition name="ТаблицаЗаявокСтрокаПоиска" id="20">
+										<AdditionSource>
+											<Item>ТаблицаЗаявок</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ТаблицаЗаявокСтрокаПоискаКонтекстноеМеню" id="21"/>
+										<ExtendedTooltip name="ТаблицаЗаявокСтрокаПоискаРасширеннаяПодсказка" id="22"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ТаблицаЗаявокСостояниеПросмотра" id="23">
+										<AdditionSource>
+											<Item>ТаблицаЗаявок</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ТаблицаЗаявокСостояниеПросмотраКонтекстноеМеню" id="24"/>
+										<ExtendedTooltip name="ТаблицаЗаявокСостояниеПросмотраРасширеннаяПодсказка" id="25"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ТаблицаЗаявокУправлениеПоиском" id="26">
+										<AdditionSource>
+											<Item>ТаблицаЗаявок</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ТаблицаЗаявокУправлениеПоискомКонтекстноеМеню" id="27"/>
+										<ExtendedTooltip name="ТаблицаЗаявокУправлениеПоискомРасширеннаяПодсказка" id="28"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="BeforeAddRow">ТаблицаЗаявокПередНачаломДобавления</Event>
+										<Event name="BeforeDeleteRow">ТаблицаЗаявокПередУдалением</Event>
+									</Events>
+									<ChildItems>
+										<CheckBoxField name="ТаблицаЗаявокИспользовать" id="39">
+											<DataPath>Объект.ТаблицаЗаявок.Использовать</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content> </v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ТаблицаЗаявокИспользоватьКонтекстноеМеню" id="40"/>
+											<ExtendedTooltip name="ТаблицаЗаявокИспользоватьРасширеннаяПодсказка" id="41"/>
+											<Events>
+												<Event name="OnChange">ТаблицаЗаявокИспользоватьПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+										<InputField name="ТаблицаЗаявокЗаявка" id="32">
+											<DataPath>Объект.ТаблицаЗаявок.Заявка</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<DropListButton>false</DropListButton>
+											<ChoiceButton>false</ChoiceButton>
+											<CreateButton>false</CreateButton>
+											<TextEdit>false</TextEdit>
+											<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+											<ContextMenu name="ТаблицаЗаявокЗаявкаКонтекстноеМеню" id="33"/>
+											<ExtendedTooltip name="ТаблицаЗаявокЗаявкаРасширеннаяПодсказка" id="34"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+								<UsualGroup name="ГруппаИтоги" id="307">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа итоги</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа итоги</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<BackColor>style:ИтогиФонГруппы</BackColor>
+									<ExtendedTooltip name="ГруппаИтогиРасширеннаяПодсказка" id="308"/>
+									<ChildItems>
+										<InputField name="ИтогиВыбраноЗаявок" id="304">
+											<DataPath>ВыбраноЗаявок</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<ContextMenu name="ИтогиВыбраноЗаявокКонтекстноеМеню" id="305"/>
+											<ExtendedTooltip name="ИтогиВыбраноЗаявокРасширеннаяПодсказка" id="306"/>
+										</InputField>
+										<LabelDecoration name="ДекорацияОкончаниеТекста" id="309">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>заявки</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияОкончаниеТекстаКонтекстноеМеню" id="310"/>
+											<ExtendedTooltip name="ДекорацияОкончаниеТекстаРасширеннаяПодсказка" id="311"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="Этап2" id="67">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Этап2</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Этап2</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="Этап2РасширеннаяПодсказка" id="68"/>
+					<ChildItems>
+						<LabelDecoration name="НадписьОбеспечениеЗаявок" id="69">
+							<Height>2</Height>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Этап 2: Обеспечение заявок материалами</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="НадписьОбеспечениеЗаявокКонтекстноеМеню" id="70"/>
+							<ExtendedTooltip name="НадписьОбеспечениеЗаявокРасширеннаяПодсказка" id="71"/>
+						</LabelDecoration>
+						<Button name="ПоказатьСписокОтобранныхЗаявок" id="274">
+							<Type>Hyperlink</Type>
+							<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+							<CommandName>Form.Command.ПоказатьСписокОтобранныхЗаявок</CommandName>
+							<ExtendedTooltip name="ПоказатьСписокОтобранныхЗаявокРасширеннаяПодсказка" id="275"/>
+						</Button>
+						<Pages name="ГруппаСтраницыВторогоЭтапа" id="72">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа страницы второго этапа</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа страницы второго этапа</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ГруппаСтраницыВторогоЭтапаРасширеннаяПодсказка" id="73"/>
+							<ChildItems>
+								<Page name="СтраницаОбеспечениеЗаявок" id="74">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Обеспечение заявок материалами</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страница обеспечение заявок</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<ExtendedTooltip name="СтраницаОбеспечениеЗаявокРасширеннаяПодсказка" id="75"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаЛевая" id="314">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа левая</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа левая</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаЛеваяРасширеннаяПодсказка" id="315"/>
+											<ChildItems>
+												<UsualGroup name="ГруппаТаблицаМатериалов" id="150">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Материалы, требующиеся мастеру для выполнения его заявок</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Материалы</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ExtendedTooltip name="ГруппаТаблицаМатериаловРасширеннаяПодсказка" id="151"/>
+													<ChildItems>
+														<CommandBar name="Группа2" id="338">
+															<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="339"/>
+															<ChildItems>
+																<Popup name="ПодменюЗаполнить" id="302">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Заполнить недостающие материалы</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ToolTip>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Заполнить недостающие материалы</v8:content>
+																		</v8:item>
+																	</ToolTip>
+																	<ToolTipRepresentation>Button</ToolTipRepresentation>
+																	<Picture>
+																		<xr:Ref>CommonPicture.ЗаполнитьФорму</xr:Ref>
+																		<xr:LoadTransparent>true</xr:LoadTransparent>
+																	</Picture>
+																	<ExtendedTooltip name="ПодменюЗаполнитьРасширеннаяПодсказка" id="303"/>
+																	<ChildItems>
+																		<ButtonGroup name="ГруппаКнопок" id="340">
+																			<ToolTip>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Группа кнопок</v8:content>
+																				</v8:item>
+																			</ToolTip>
+																			<ExtendedTooltip name="ГруппаКнопокРасширеннаяПодсказка" id="341"/>
+																			<ChildItems>
+																				<Button name="ТаблицаТребуемыхМатериаловЗаполнитьСвободнымиОстатками" id="268">
+																					<Type>CommandBarButton</Type>
+																					<CommandName>Form.Command.ЗаполнитьСвободнымиОстатками</CommandName>
+																					<Title>
+																						<v8:item>
+																							<v8:lang>ru</v8:lang>
+																							<v8:content>Имеющимися свободными остатками</v8:content>
+																						</v8:item>
+																					</Title>
+																					<ExtendedTooltip name="ТаблицаТребуемыхМатериаловЗаполнитьСвободнымиОстаткамиРасширеннаяПодсказка" id="269"/>
+																				</Button>
+																				<Button name="ТаблицаТребуемыхМатериаловЗаполнитьЗакрываемыеЗаявки" id="270">
+																					<Type>CommandBarButton</Type>
+																					<CommandName>Form.Command.ЗаполнитьЗакрываемыеЗаявки</CommandName>
+																					<Title>
+																						<v8:item>
+																							<v8:lang>ru</v8:lang>
+																							<v8:content>Только по заявкам, которые можно полностью обеспечить</v8:content>
+																						</v8:item>
+																					</Title>
+																					<ExtendedTooltip name="ТаблицаТребуемыхМатериаловЗаполнитьЗакрываемыеЗаявкиРасширеннаяПодсказка" id="271"/>
+																				</Button>
+																			</ChildItems>
+																		</ButtonGroup>
+																		<Button name="ТаблицаТребуемыхМатериаловПоказатьПодсказкуАвтозаполнения" id="312">
+																			<Type>CommandBarButton</Type>
+																			<CommandName>Form.Command.ПоказатьПодсказкуАвтозаполнения</CommandName>
+																			<TextColor>style:УПЖКХ_ЦветГиперссылки</TextColor>
+																			<ExtendedTooltip name="ТаблицаТребуемыхМатериаловПоказатьПодсказкуАвтозаполненияРасширеннаяПодсказка" id="313"/>
+																		</Button>
+																	</ChildItems>
+																</Popup>
+																<Button name="ТаблицаТребуемыхМатериаловОбновитьТаблицуМатериалов" id="272">
+																	<Type>CommandBarButton</Type>
+																	<Representation>PictureAndText</Representation>
+																	<CommandName>Form.Command.ОбновитьТаблицуМатериалов</CommandName>
+																	<Picture>
+																		<xr:Ref>StdPicture.Refresh</xr:Ref>
+																		<xr:LoadTransparent>true</xr:LoadTransparent>
+																	</Picture>
+																	<ExtendedTooltip name="ТаблицаТребуемыхМатериаловОбновитьТаблицуМатериаловРасширеннаяПодсказка" id="273"/>
+																</Button>
+															</ChildItems>
+														</CommandBar>
+														<Table name="ТаблицаТребуемыхМатериалов" id="202">
+															<Representation>List</Representation>
+															<AutoInsertNewRow>true</AutoInsertNewRow>
+															<EnableStartDrag>true</EnableStartDrag>
+															<EnableDrag>true</EnableDrag>
+															<FileDragMode>AsFile</FileDragMode>
+															<DataPath>ТаблицаТребуемыхМатериалов</DataPath>
+															<RowPictureDataPath>ТаблицаТребуемыхМатериалов.ПризнакВозможностиОбеспечить</RowPictureDataPath>
+															<RowsPicture>
+																<xr:Ref>CommonPicture.УПЖКХ_СостоянияОбеспеченияЗаявокАДСМатериалами</xr:Ref>
+																<xr:LoadTransparent>false</xr:LoadTransparent>
+															</RowsPicture>
+															<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+															<RowFilter xsi:nil="true"/>
+															<ContextMenu name="ТаблицаТребуемыхМатериаловКонтекстноеМеню" id="203"/>
+															<AutoCommandBar name="ТаблицаТребуемыхМатериаловКоманднаяПанель" id="204">
+																<Autofill>false</Autofill>
+															</AutoCommandBar>
+															<ExtendedTooltip name="ТаблицаТребуемыхМатериаловРасширеннаяПодсказка" id="205">
+																<AutoMaxWidth>false</AutoMaxWidth>
+																<HorizontalStretch>true</HorizontalStretch>
+																<TextColor>style:УПЖКХ_ТекстСправочнойНадписи</TextColor>
+															</ExtendedTooltip>
+															<SearchStringAddition name="ТаблицаТребуемыхМатериаловСтрокаПоиска" id="206">
+																<AdditionSource>
+																	<Item>ТаблицаТребуемыхМатериалов</Item>
+																	<Type>SearchStringRepresentation</Type>
+																</AdditionSource>
+																<ContextMenu name="ТаблицаТребуемыхМатериаловСтрокаПоискаКонтекстноеМеню" id="207"/>
+																<ExtendedTooltip name="ТаблицаТребуемыхМатериаловСтрокаПоискаРасширеннаяПодсказка" id="208"/>
+															</SearchStringAddition>
+															<ViewStatusAddition name="ТаблицаТребуемыхМатериаловСостояниеПросмотра" id="209">
+																<AdditionSource>
+																	<Item>ТаблицаТребуемыхМатериалов</Item>
+																	<Type>ViewStatusRepresentation</Type>
+																</AdditionSource>
+																<ContextMenu name="ТаблицаТребуемыхМатериаловСостояниеПросмотраКонтекстноеМеню" id="210"/>
+																<ExtendedTooltip name="ТаблицаТребуемыхМатериаловСостояниеПросмотраРасширеннаяПодсказка" id="211"/>
+															</ViewStatusAddition>
+															<SearchControlAddition name="ТаблицаТребуемыхМатериаловУправлениеПоиском" id="212">
+																<AdditionSource>
+																	<Item>ТаблицаТребуемыхМатериалов</Item>
+																	<Type>SearchControl</Type>
+																</AdditionSource>
+																<ContextMenu name="ТаблицаТребуемыхМатериаловУправлениеПоискомКонтекстноеМеню" id="213"/>
+																<ExtendedTooltip name="ТаблицаТребуемыхМатериаловУправлениеПоискомРасширеннаяПодсказка" id="214"/>
+															</SearchControlAddition>
+															<Events>
+																<Event name="BeforeAddRow">ТаблицаТребуемыхМатериаловПередНачаломДобавления</Event>
+																<Event name="BeforeDeleteRow">ТаблицаТребуемыхМатериаловПередУдалением</Event>
+																<Event name="OnActivateRow">ТаблицаТребуемыхМатериаловПриАктивизацииСтроки</Event>
+															</Events>
+															<ChildItems>
+																<InputField name="ТаблицаТребуемыхМатериаловНоменклатура" id="215">
+																	<DataPath>ТаблицаТребуемыхМатериалов.Номенклатура</DataPath>
+																	<ReadOnly>true</ReadOnly>
+																	<EditMode>EnterOnInput</EditMode>
+																	<ContextMenu name="ТаблицаТребуемыхМатериаловНоменклатураКонтекстноеМеню" id="216"/>
+																	<ExtendedTooltip name="ТаблицаТребуемыхМатериаловНоменклатураРасширеннаяПодсказка" id="217"/>
+																</InputField>
+																<InputField name="ТаблицаТребуемыхМатериаловЕдиницаИзмерения" id="218">
+																	<DataPath>ТаблицаТребуемыхМатериалов.ЕдиницаИзмерения</DataPath>
+																	<ReadOnly>true</ReadOnly>
+																	<EditMode>EnterOnInput</EditMode>
+																	<ContextMenu name="ТаблицаТребуемыхМатериаловЕдиницаИзмеренияКонтекстноеМеню" id="219"/>
+																	<ExtendedTooltip name="ТаблицаТребуемыхМатериаловЕдиницаИзмеренияРасширеннаяПодсказка" id="220"/>
+																</InputField>
+																<InputField name="ТаблицаТребуемыхМатериаловНеобходимо" id="221">
+																	<DataPath>ТаблицаТребуемыхМатериалов.Необходимо</DataPath>
+																	<ReadOnly>true</ReadOnly>
+																	<EditMode>EnterOnInput</EditMode>
+																	<ContextMenu name="ТаблицаТребуемыхМатериаловНеобходимоКонтекстноеМеню" id="222"/>
+																	<ExtendedTooltip name="ТаблицаТребуемыхМатериаловНеобходимоРасширеннаяПодсказка" id="223"/>
+																</InputField>
+																<InputField name="ТаблицаТребуемыхМатериаловВНаличии" id="224">
+																	<DataPath>ТаблицаТребуемыхМатериалов.ВНаличии</DataPath>
+																	<ReadOnly>true</ReadOnly>
+																	<EditMode>EnterOnInput</EditMode>
+																	<ContextMenu name="ТаблицаТребуемыхМатериаловВНаличииКонтекстноеМеню" id="225"/>
+																	<ExtendedTooltip name="ТаблицаТребуемыхМатериаловВНаличииРасширеннаяПодсказка" id="226"/>
+																</InputField>
+																<InputField name="ТаблицаТребуемыхМатериаловНедостаток" id="227">
+																	<DataPath>ТаблицаТребуемыхМатериалов.Недостаток</DataPath>
+																	<ReadOnly>true</ReadOnly>
+																	<EditMode>EnterOnInput</EditMode>
+																	<ContextMenu name="ТаблицаТребуемыхМатериаловНедостатокКонтекстноеМеню" id="228"/>
+																	<ExtendedTooltip name="ТаблицаТребуемыхМатериаловНедостатокРасширеннаяПодсказка" id="229"/>
+																</InputField>
+																<InputField name="ТаблицаТребуемыхМатериаловИмеетсяНаСкладах" id="230">
+																	<DataPath>ТаблицаТребуемыхМатериалов.ИмеетсяНаСкладах</DataPath>
+																	<ReadOnly>true</ReadOnly>
+																	<EditMode>EnterOnInput</EditMode>
+																	<ContextMenu name="ТаблицаТребуемыхМатериаловИмеетсяНаСкладахКонтекстноеМеню" id="231"/>
+																	<ExtendedTooltip name="ТаблицаТребуемыхМатериаловИмеетсяНаСкладахРасширеннаяПодсказка" id="232"/>
+																</InputField>
+																<InputField name="ТаблицаТребуемыхМатериаловПолучить" id="233">
+																	<DataPath>ТаблицаТребуемыхМатериалов.Получить</DataPath>
+																	<EditMode>EnterOnInput</EditMode>
+																	<ContextMenu name="ТаблицаТребуемыхМатериаловПолучитьКонтекстноеМеню" id="234"/>
+																	<ExtendedTooltip name="ТаблицаТребуемыхМатериаловПолучитьРасширеннаяПодсказка" id="235"/>
+																	<Events>
+																		<Event name="OnChange">ТаблицаТребуемыхМатериаловПолучитьПриИзменении</Event>
+																	</Events>
+																</InputField>
+															</ChildItems>
+														</Table>
+														<UsualGroup name="ГруппаЛегенда" id="300">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа легенда</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Легенда таблицы</v8:content>
+																</v8:item>
+															</ToolTip>
+															<Group>Horizontal</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаЛегендаРасширеннаяПодсказка" id="301"/>
+															<ChildItems>
+																<UsualGroup name="ГруппаЛегендыЗеленый" id="294">
+																	<ToolTip>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Легенда таблицы</v8:content>
+																		</v8:item>
+																	</ToolTip>
+																	<Group>Horizontal</Group>
+																	<Representation>None</Representation>
+																	<United>false</United>
+																	<ShowTitle>false</ShowTitle>
+																	<ThroughAlign>DontUse</ThroughAlign>
+																	<ExtendedTooltip name="ГруппаЛегендыЗеленыйРасширеннаяПодсказка" id="295"/>
+																	<ChildItems>
+																		<PictureDecoration name="КартинкаЗеленый" id="282">
+																			<Width>2</Width>
+																			<Picture>
+																				<xr:Ref>CommonPicture.ОперацияВыполненаУспешно</xr:Ref>
+																				<xr:LoadTransparent>true</xr:LoadTransparent>
+																			</Picture>
+																			<FileDragMode>AsFile</FileDragMode>
+																			<ContextMenu name="КартинкаЗеленыйКонтекстноеМеню" id="283"/>
+																			<ExtendedTooltip name="КартинкаЗеленыйРасширеннаяПодсказка" id="284"/>
+																		</PictureDecoration>
+																		<LabelDecoration name="ПояснениеЛегендаЗеленый" id="276">
+																			<TextColor>#008000</TextColor>
+																			<Title formatted="false">
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Материалов на складе мастера достаточно.</v8:content>
+																				</v8:item>
+																			</Title>
+																			<ContextMenu name="ПояснениеЛегендаЗеленыйКонтекстноеМеню" id="277"/>
+																			<ExtendedTooltip name="ПояснениеЛегендаЗеленыйРасширеннаяПодсказка" id="278"/>
+																		</LabelDecoration>
+																	</ChildItems>
+																</UsualGroup>
+																<UsualGroup name="ГруппаЛегендыСиний" id="296">
+																	<ToolTip>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Легенда таблицы</v8:content>
+																		</v8:item>
+																	</ToolTip>
+																	<Group>Horizontal</Group>
+																	<Representation>None</Representation>
+																	<United>false</United>
+																	<ShowTitle>false</ShowTitle>
+																	<ThroughAlign>DontUse</ThroughAlign>
+																	<ExtendedTooltip name="ГруппаЛегендыСинийРасширеннаяПодсказка" id="297"/>
+																	<ChildItems>
+																		<PictureDecoration name="КартинкаСиний" id="285">
+																			<Width>2</Width>
+																			<Picture>
+																				<xr:Ref>CommonPicture.ОперациюНеобходимоПовторить</xr:Ref>
+																				<xr:LoadTransparent>true</xr:LoadTransparent>
+																			</Picture>
+																			<FileDragMode>AsFile</FileDragMode>
+																			<ContextMenu name="КартинкаСинийКонтекстноеМеню" id="286"/>
+																			<ExtendedTooltip name="КартинкаСинийРасширеннаяПодсказка" id="287"/>
+																		</PictureDecoration>
+																		<LabelDecoration name="ПояснениеЛегендаСиний" id="279">
+																			<TextColor>web:CadetBlue</TextColor>
+																			<Title formatted="false">
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Материалов на складе мастера недостаточно, но их можно получить с прочих складов.</v8:content>
+																				</v8:item>
+																			</Title>
+																			<ContextMenu name="ПояснениеЛегендаСинийКонтекстноеМеню" id="280"/>
+																			<ExtendedTooltip name="ПояснениеЛегендаСинийРасширеннаяПодсказка" id="281"/>
+																		</LabelDecoration>
+																	</ChildItems>
+																</UsualGroup>
+																<UsualGroup name="ГруппаЛегендыКрасный" id="298">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Группа легенды красный</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ToolTip>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Легенда таблицы</v8:content>
+																		</v8:item>
+																	</ToolTip>
+																	<Group>Horizontal</Group>
+																	<Representation>None</Representation>
+																	<United>false</United>
+																	<ShowTitle>false</ShowTitle>
+																	<ThroughAlign>DontUse</ThroughAlign>
+																	<ExtendedTooltip name="ГруппаЛегендыКрасныйРасширеннаяПодсказка" id="299"/>
+																	<ChildItems>
+																		<PictureDecoration name="КартинкаКрасный" id="288">
+																			<Width>2</Width>
+																			<Picture>
+																				<xr:Ref>CommonPicture.ОперацияВыполненаСОшибками</xr:Ref>
+																				<xr:LoadTransparent>true</xr:LoadTransparent>
+																			</Picture>
+																			<FileDragMode>AsFile</FileDragMode>
+																			<ContextMenu name="КартинкаКрасныйКонтекстноеМеню" id="289"/>
+																			<ExtendedTooltip name="КартинкаКрасныйРасширеннаяПодсказка" id="290"/>
+																		</PictureDecoration>
+																		<LabelDecoration name="ПояснениеЛегендаКрасный" id="291">
+																			<TextColor>web:LightCoral</TextColor>
+																			<Title formatted="false">
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Остатков материалов на складе мастера и прочих складах недостаточно.</v8:content>
+																				</v8:item>
+																			</Title>
+																			<ContextMenu name="ПояснениеЛегендаКрасныйКонтекстноеМеню" id="292"/>
+																			<ExtendedTooltip name="ПояснениеЛегендаКрасныйРасширеннаяПодсказка" id="293"/>
+																		</LabelDecoration>
+																	</ChildItems>
+																</UsualGroup>
+															</ChildItems>
+														</UsualGroup>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="ГруппаТаблицаНаличияНаСкладах" id="252">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Остатки текущего материала на прочих складах</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа таблица наличия на складах</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ExtendedTooltip name="ГруппаТаблицаНаличияНаСкладахРасширеннаяПодсказка" id="253"/>
+													<ChildItems>
+														<Table name="ТаблицаНаличияНаСкладах" id="177">
+															<Representation>List</Representation>
+															<AutoInsertNewRow>true</AutoInsertNewRow>
+															<EnableStartDrag>true</EnableStartDrag>
+															<EnableDrag>true</EnableDrag>
+															<FileDragMode>AsFile</FileDragMode>
+															<DataPath>ТаблицаНаличияНаСкладах</DataPath>
+															<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+															<RowFilter xsi:nil="true"/>
+															<ContextMenu name="ТаблицаНаличияНаСкладахКонтекстноеМеню" id="178"/>
+															<AutoCommandBar name="ТаблицаНаличияНаСкладахКоманднаяПанель" id="179">
+																<Autofill>false</Autofill>
+															</AutoCommandBar>
+															<ExtendedTooltip name="ТаблицаНаличияНаСкладахРасширеннаяПодсказка" id="180">
+																<AutoMaxWidth>false</AutoMaxWidth>
+																<HorizontalStretch>true</HorizontalStretch>
+																<TextColor>style:УПЖКХ_ТекстСправочнойНадписи</TextColor>
+															</ExtendedTooltip>
+															<SearchStringAddition name="ТаблицаНаличияНаСкладахСтрокаПоиска" id="181">
+																<AdditionSource>
+																	<Item>ТаблицаНаличияНаСкладах</Item>
+																	<Type>SearchStringRepresentation</Type>
+																</AdditionSource>
+																<ContextMenu name="ТаблицаНаличияНаСкладахСтрокаПоискаКонтекстноеМеню" id="182"/>
+																<ExtendedTooltip name="ТаблицаНаличияНаСкладахСтрокаПоискаРасширеннаяПодсказка" id="183"/>
+															</SearchStringAddition>
+															<ViewStatusAddition name="ТаблицаНаличияНаСкладахСостояниеПросмотра" id="184">
+																<AdditionSource>
+																	<Item>ТаблицаНаличияНаСкладах</Item>
+																	<Type>ViewStatusRepresentation</Type>
+																</AdditionSource>
+																<ContextMenu name="ТаблицаНаличияНаСкладахСостояниеПросмотраКонтекстноеМеню" id="185"/>
+																<ExtendedTooltip name="ТаблицаНаличияНаСкладахСостояниеПросмотраРасширеннаяПодсказка" id="186"/>
+															</ViewStatusAddition>
+															<SearchControlAddition name="ТаблицаНаличияНаСкладахУправлениеПоиском" id="187">
+																<AdditionSource>
+																	<Item>ТаблицаНаличияНаСкладах</Item>
+																	<Type>SearchControl</Type>
+																</AdditionSource>
+																<ContextMenu name="ТаблицаНаличияНаСкладахУправлениеПоискомКонтекстноеМеню" id="188"/>
+																<ExtendedTooltip name="ТаблицаНаличияНаСкладахУправлениеПоискомРасширеннаяПодсказка" id="189"/>
+															</SearchControlAddition>
+															<Events>
+																<Event name="BeforeAddRow">ТаблицаНаличияНаСкладахПередНачаломДобавления</Event>
+																<Event name="BeforeDeleteRow">ТаблицаНаличияНаСкладахПередУдалением</Event>
+																<Event name="OnActivateRow">ТаблицаНаличияНаСкладахПриАктивизацииСтроки</Event>
+															</Events>
+															<ChildItems>
+																<InputField name="ТаблицаНаличияНаСкладахСклад" id="190">
+																	<DataPath>ТаблицаНаличияНаСкладах.Склад</DataPath>
+																	<ReadOnly>true</ReadOnly>
+																	<EditMode>EnterOnInput</EditMode>
+																	<ContextMenu name="ТаблицаНаличияНаСкладахСкладКонтекстноеМеню" id="191"/>
+																	<ExtendedTooltip name="ТаблицаНаличияНаСкладахСкладРасширеннаяПодсказка" id="192"/>
+																</InputField>
+																<InputField name="ТаблицаНаличияНаСкладахМастер" id="263">
+																	<DataPath>ТаблицаНаличияНаСкладах.Мастер</DataPath>
+																	<ReadOnly>true</ReadOnly>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Ответственное лицо</v8:content>
+																		</v8:item>
+																	</Title>
+																	<EditMode>EnterOnInput</EditMode>
+																	<ContextMenu name="ТаблицаНаличияНаСкладахМастерКонтекстноеМеню" id="264"/>
+																	<ExtendedTooltip name="ТаблицаНаличияНаСкладахМастерРасширеннаяПодсказка" id="265"/>
+																</InputField>
+																<InputField name="ТаблицаНаличияНаСкладахВНаличии" id="193">
+																	<DataPath>ТаблицаНаличияНаСкладах.ВНаличии</DataPath>
+																	<ReadOnly>true</ReadOnly>
+																	<EditMode>EnterOnInput</EditMode>
+																	<ContextMenu name="ТаблицаНаличияНаСкладахВНаличииКонтекстноеМеню" id="194"/>
+																	<ExtendedTooltip name="ТаблицаНаличияНаСкладахВНаличииРасширеннаяПодсказка" id="195"/>
+																</InputField>
+																<InputField name="ТаблицаНаличияНаСкладахСвободно" id="199">
+																	<DataPath>ТаблицаНаличияНаСкладах.Свободно</DataPath>
+																	<ReadOnly>true</ReadOnly>
+																	<EditMode>EnterOnInput</EditMode>
+																	<ContextMenu name="ТаблицаНаличияНаСкладахСвободноКонтекстноеМеню" id="200"/>
+																	<ExtendedTooltip name="ТаблицаНаличияНаСкладахСвободноРасширеннаяПодсказка" id="201"/>
+																</InputField>
+																<InputField name="ТаблицаНаличияНаСкладахПолучить" id="196">
+																	<DataPath>ТаблицаНаличияНаСкладах.Получить</DataPath>
+																	<EditMode>EnterOnInput</EditMode>
+																	<ContextMenu name="ТаблицаНаличияНаСкладахПолучитьКонтекстноеМеню" id="197"/>
+																	<ExtendedTooltip name="ТаблицаНаличияНаСкладахПолучитьРасширеннаяПодсказка" id="198"/>
+																	<Events>
+																		<Event name="OnChange">ТаблицаНаличияНаСкладахПолучитьПриИзменении</Event>
+																	</Events>
+																</InputField>
+															</ChildItems>
+														</Table>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаПравая" id="316">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа правая</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа правая</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаПраваяРасширеннаяПодсказка" id="317"/>
+											<ChildItems>
+												<UsualGroup name="ГруппаЗаявки" id="154">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Заявки мастера
+ 
+ </v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа заявки</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ExtendedTooltip name="ГруппаЗаявкиРасширеннаяПодсказка" id="155"/>
+													<ChildItems>
+														<Table name="ТаблицаЗаявокМатериала" id="156">
+															<Representation>List</Representation>
+															<SelectionMode>SingleRow</SelectionMode>
+															<AutoInsertNewRow>true</AutoInsertNewRow>
+															<EnableStartDrag>true</EnableStartDrag>
+															<EnableDrag>true</EnableDrag>
+															<FileDragMode>AsFile</FileDragMode>
+															<DataPath>ТаблицаЗаявокМатериала</DataPath>
+															<RowPictureDataPath>ТаблицаЗаявокМатериала.ЗаявкаОбеспечена</RowPictureDataPath>
+															<RowsPicture>
+																<xr:Ref>CommonPicture.ОперацияВыполненаСОшибками</xr:Ref>
+																<xr:LoadTransparent>true</xr:LoadTransparent>
+															</RowsPicture>
+															<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+															<RowFilter xsi:nil="true"/>
+															<ContextMenu name="ТаблицаЗаявокМатериалаКонтекстноеМеню" id="157"/>
+															<AutoCommandBar name="ТаблицаЗаявокМатериалаКоманднаяПанель" id="158">
+																<Autofill>false</Autofill>
+															</AutoCommandBar>
+															<ExtendedTooltip name="ТаблицаЗаявокМатериалаРасширеннаяПодсказка" id="159">
+																<AutoMaxWidth>false</AutoMaxWidth>
+																<HorizontalStretch>true</HorizontalStretch>
+																<TextColor>style:УПЖКХ_ТекстСправочнойНадписи</TextColor>
+															</ExtendedTooltip>
+															<SearchStringAddition name="ТаблицаЗаявокМатериалаСтрокаПоиска" id="160">
+																<AdditionSource>
+																	<Item>ТаблицаЗаявокМатериала</Item>
+																	<Type>SearchStringRepresentation</Type>
+																</AdditionSource>
+																<ContextMenu name="ТаблицаЗаявокМатериалаСтрокаПоискаКонтекстноеМеню" id="161"/>
+																<ExtendedTooltip name="ТаблицаЗаявокМатериалаСтрокаПоискаРасширеннаяПодсказка" id="162"/>
+															</SearchStringAddition>
+															<ViewStatusAddition name="ТаблицаЗаявокМатериалаСостояниеПросмотра" id="163">
+																<AdditionSource>
+																	<Item>ТаблицаЗаявокМатериала</Item>
+																	<Type>ViewStatusRepresentation</Type>
+																</AdditionSource>
+																<ContextMenu name="ТаблицаЗаявокМатериалаСостояниеПросмотраКонтекстноеМеню" id="164"/>
+																<ExtendedTooltip name="ТаблицаЗаявокМатериалаСостояниеПросмотраРасширеннаяПодсказка" id="165"/>
+															</ViewStatusAddition>
+															<SearchControlAddition name="ТаблицаЗаявокМатериалаУправлениеПоиском" id="166">
+																<AdditionSource>
+																	<Item>ТаблицаЗаявокМатериала</Item>
+																	<Type>SearchControl</Type>
+																</AdditionSource>
+																<ContextMenu name="ТаблицаЗаявокМатериалаУправлениеПоискомКонтекстноеМеню" id="167"/>
+																<ExtendedTooltip name="ТаблицаЗаявокМатериалаУправлениеПоискомРасширеннаяПодсказка" id="168"/>
+															</SearchControlAddition>
+															<Events>
+																<Event name="Selection">ТаблицаЗаявокМатериалаВыбор</Event>
+																<Event name="BeforeAddRow">ТаблицаЗаявокМатериалаПередНачаломДобавления</Event>
+																<Event name="BeforeDeleteRow">ТаблицаЗаявокМатериалаПередУдалением</Event>
+															</Events>
+															<ChildItems>
+																<InputField name="ТаблицаЗаявокМатериалаЗаявка" id="169">
+																	<DataPath>ТаблицаЗаявокМатериала.Заявка</DataPath>
+																	<ReadOnly>true</ReadOnly>
+																	<EditMode>EnterOnInput</EditMode>
+																	<DropListButton>false</DropListButton>
+																	<ChoiceButton>false</ChoiceButton>
+																	<OpenButton>false</OpenButton>
+																	<CreateButton>false</CreateButton>
+																	<TextEdit>false</TextEdit>
+																	<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+																	<ContextMenu name="ТаблицаЗаявокМатериалаЗаявкаКонтекстноеМеню" id="170"/>
+																	<ExtendedTooltip name="ТаблицаЗаявокМатериалаЗаявкаРасширеннаяПодсказка" id="171"/>
+																</InputField>
+																<InputField name="ТаблицаЗаявокМатериалаНеобходимоеКоличествоМатериала" id="172">
+																	<DataPath>ТаблицаЗаявокМатериала.Необходимо</DataPath>
+																	<ReadOnly>true</ReadOnly>
+																	<EditMode>EnterOnInput</EditMode>
+																	<ContextMenu name="ТаблицаЗаявокМатериалаНеобходимоеКоличествоМатериалаКонтекстноеМеню" id="173"/>
+																	<ExtendedTooltip name="ТаблицаЗаявокМатериалаНеобходимоеКоличествоМатериалаРасширеннаяПодсказка" id="174"/>
+																</InputField>
+															</ChildItems>
+														</Table>
+														<UsualGroup name="ГруппаЛегендаЗаявокМастера" id="318">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа легенда заявок мастера</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа легенда заявок мастера</v8:content>
+																</v8:item>
+															</ToolTip>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаЛегендаЗаявокМастераРасширеннаяПодсказка" id="319"/>
+															<ChildItems>
+																<PictureDecoration name="КартинкаКрасныйЗнак" id="342">
+																	<Width>2</Width>
+																	<Picture>
+																		<xr:Ref>CommonPicture.ОперацияВыполненаСОшибками</xr:Ref>
+																		<xr:LoadTransparent>true</xr:LoadTransparent>
+																	</Picture>
+																	<FileDragMode>AsFile</FileDragMode>
+																	<ContextMenu name="КартинкаКрасныйЗнакКонтекстноеМеню" id="343"/>
+																	<ExtendedTooltip name="КартинкаКрасныйЗнакРасширеннаяПодсказка" id="344"/>
+																</PictureDecoration>
+																<LabelDecoration name="ЛегендаТаблицыЗаявокМастера" id="328">
+																	<TextColor>web:LightCoral</TextColor>
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Заявку мастера невозможно полностью обеспечить материалами (при автоматическом заполнении по заявкам).</v8:content>
+																		</v8:item>
+																	</Title>
+																	<TitleHeight>2</TitleHeight>
+																	<ContextMenu name="ЛегендаТаблицыЗаявокМастераКонтекстноеМеню" id="329"/>
+																	<ExtendedTooltip name="ЛегендаТаблицыЗаявокМастераРасширеннаяПодсказка" id="330"/>
+																</LabelDecoration>
+															</ChildItems>
+														</UsualGroup>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="ГруппаТаблицаЗаявокПрочихМастеров" id="254">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Заявки мастеров прочих складов</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа таблица заявок прочих мастеров</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ExtendedTooltip name="ГруппаТаблицаЗаявокПрочихМастеровРасширеннаяПодсказка" id="255"/>
+													<ChildItems>
+														<Table name="ТаблицаЗаявокПрочихМастеров" id="236">
+															<Representation>List</Representation>
+															<AutoInsertNewRow>true</AutoInsertNewRow>
+															<EnableStartDrag>true</EnableStartDrag>
+															<EnableDrag>true</EnableDrag>
+															<FileDragMode>AsFile</FileDragMode>
+															<DataPath>ТаблицаЗаявокПрочихМастеров</DataPath>
+															<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+															<RowFilter xsi:nil="true"/>
+															<ContextMenu name="ТаблицаЗаявокПрочихМастеровКонтекстноеМеню" id="237"/>
+															<AutoCommandBar name="ТаблицаЗаявокПрочихМастеровКоманднаяПанель" id="238">
+																<Autofill>false</Autofill>
+															</AutoCommandBar>
+															<ExtendedTooltip name="ТаблицаЗаявокПрочихМастеровРасширеннаяПодсказка" id="239">
+																<AutoMaxWidth>false</AutoMaxWidth>
+																<HorizontalStretch>true</HorizontalStretch>
+																<TextColor>style:УПЖКХ_ТекстСправочнойНадписи</TextColor>
+															</ExtendedTooltip>
+															<SearchStringAddition name="ТаблицаЗаявокПрочихМастеровСтрокаПоиска" id="240">
+																<AdditionSource>
+																	<Item>ТаблицаЗаявокПрочихМастеров</Item>
+																	<Type>SearchStringRepresentation</Type>
+																</AdditionSource>
+																<ContextMenu name="ТаблицаЗаявокПрочихМастеровСтрокаПоискаКонтекстноеМеню" id="241"/>
+																<ExtendedTooltip name="ТаблицаЗаявокПрочихМастеровСтрокаПоискаРасширеннаяПодсказка" id="242"/>
+															</SearchStringAddition>
+															<ViewStatusAddition name="ТаблицаЗаявокПрочихМастеровСостояниеПросмотра" id="243">
+																<AdditionSource>
+																	<Item>ТаблицаЗаявокПрочихМастеров</Item>
+																	<Type>ViewStatusRepresentation</Type>
+																</AdditionSource>
+																<ContextMenu name="ТаблицаЗаявокПрочихМастеровСостояниеПросмотраКонтекстноеМеню" id="244"/>
+																<ExtendedTooltip name="ТаблицаЗаявокПрочихМастеровСостояниеПросмотраРасширеннаяПодсказка" id="245"/>
+															</ViewStatusAddition>
+															<SearchControlAddition name="ТаблицаЗаявокПрочихМастеровУправлениеПоиском" id="246">
+																<AdditionSource>
+																	<Item>ТаблицаЗаявокПрочихМастеров</Item>
+																	<Type>SearchControl</Type>
+																</AdditionSource>
+																<ContextMenu name="ТаблицаЗаявокПрочихМастеровУправлениеПоискомКонтекстноеМеню" id="247"/>
+																<ExtendedTooltip name="ТаблицаЗаявокПрочихМастеровУправлениеПоискомРасширеннаяПодсказка" id="248"/>
+															</SearchControlAddition>
+															<Events>
+																<Event name="BeforeAddRow">ТаблицаЗаявокПрочихМастеровПередНачаломДобавления</Event>
+																<Event name="BeforeDeleteRow">ТаблицаЗаявокПрочихМастеровПередУдалением</Event>
+															</Events>
+															<ChildItems>
+																<InputField name="ТаблицаЗаявокПрочихМастеровЗаявка" id="249">
+																	<DataPath>ТаблицаЗаявокПрочихМастеров.Заявка</DataPath>
+																	<EditMode>EnterOnInput</EditMode>
+																	<DropListButton>false</DropListButton>
+																	<ChoiceButton>false</ChoiceButton>
+																	<CreateButton>false</CreateButton>
+																	<TextEdit>false</TextEdit>
+																	<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+																	<ContextMenu name="ТаблицаЗаявокПрочихМастеровЗаявкаКонтекстноеМеню" id="250"/>
+																	<ExtendedTooltip name="ТаблицаЗаявокПрочихМастеровЗаявкаРасширеннаяПодсказка" id="251"/>
+																</InputField>
+															</ChildItems>
+														</Table>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</Page>
+								<Page name="СтраницаДокументыПеремещения" id="95">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Документы перемещения</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страница документы перемещения</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="СтраницаДокументыПеремещенияРасширеннаяПодсказка" id="96"/>
+									<ChildItems>
+										<Table name="ТаблицаДокументовПеремещения" id="97">
+											<Representation>List</Representation>
+											<AutoInsertNewRow>true</AutoInsertNewRow>
+											<EnableStartDrag>true</EnableStartDrag>
+											<EnableDrag>true</EnableDrag>
+											<FileDragMode>AsFile</FileDragMode>
+											<DataPath>ТаблицаДокументовПеремещения</DataPath>
+											<RowFilter xsi:nil="true"/>
+											<ContextMenu name="ТаблицаДокументовПеремещенияКонтекстноеМеню" id="98"/>
+											<AutoCommandBar name="ТаблицаДокументовПеремещенияКоманднаяПанель" id="99">
+												<Autofill>false</Autofill>
+											</AutoCommandBar>
+											<ExtendedTooltip name="ТаблицаДокументовПеремещенияРасширеннаяПодсказка" id="100"/>
+											<SearchStringAddition name="ТаблицаДокументовПеремещенияСтрокаПоиска" id="101">
+												<AdditionSource>
+													<Item>ТаблицаДокументовПеремещения</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ТаблицаДокументовПеремещенияСтрокаПоискаКонтекстноеМеню" id="102"/>
+												<ExtendedTooltip name="ТаблицаДокументовПеремещенияСтрокаПоискаРасширеннаяПодсказка" id="103"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="ТаблицаДокументовПеремещенияСостояниеПросмотра" id="104">
+												<AdditionSource>
+													<Item>ТаблицаДокументовПеремещения</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ТаблицаДокументовПеремещенияСостояниеПросмотраКонтекстноеМеню" id="105"/>
+												<ExtendedTooltip name="ТаблицаДокументовПеремещенияСостояниеПросмотраРасширеннаяПодсказка" id="106"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="ТаблицаДокументовПеремещенияУправлениеПоиском" id="107">
+												<AdditionSource>
+													<Item>ТаблицаДокументовПеремещения</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="ТаблицаДокументовПеремещенияУправлениеПоискомКонтекстноеМеню" id="108"/>
+												<ExtendedTooltip name="ТаблицаДокументовПеремещенияУправлениеПоискомРасширеннаяПодсказка" id="109"/>
+											</SearchControlAddition>
+											<Events>
+												<Event name="BeforeAddRow">ТаблицаДокументовПеремещенияПередНачаломДобавления</Event>
+												<Event name="BeforeDeleteRow">ТаблицаДокументовПеремещенияПередУдалением</Event>
+											</Events>
+											<ChildItems>
+												<InputField name="ТаблицаДокументовПеремещенияДокументПеремещения" id="110">
+													<DataPath>ТаблицаДокументовПеремещения.ДокументПеремещения</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<DropListButton>false</DropListButton>
+													<ChoiceButton>false</ChoiceButton>
+													<CreateButton>false</CreateButton>
+													<TextEdit>false</TextEdit>
+													<ContextMenu name="ТаблицаДокументовПеремещенияДокументПеремещенияКонтекстноеМеню" id="111"/>
+													<ExtendedTooltip name="ТаблицаДокументовПеремещенияДокументПеремещенияРасширеннаяПодсказка" id="112"/>
+												</InputField>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<UsualGroup name="РамкаПанелиНавигации" id="49">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Рамка панели навигации</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Рамка панели навигации</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="РамкаПанелиНавигацииExtendedTooltip" id="50"/>
+			<ChildItems>
+				<Pages name="ПанельНавигации" id="51">
+					<EnableContentChange>true</EnableContentChange>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Панель навигации</v8:content>
+						</v8:item>
+					</Title>
+					<PagesRepresentation>None</PagesRepresentation>
+					<ExtendedTooltip name="ПанельНавигацииExtendedTooltip" id="52"/>
+					<ChildItems>
+						<Page name="СтраницаНавигацииНачало" id="53">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страница навигации начало</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страница навигации начало</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<ExtendedTooltip name="СтраницаНавигацииНачалоExtendedTooltip" id="54"/>
+							<ChildItems>
+								<CommandBar name="КоманднаяПанельНавигации" id="55">
+									<EnableContentChange>true</EnableContentChange>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Командная панель навигации</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Командная панель навигации</v8:content>
+										</v8:item>
+									</ToolTip>
+									<HorizontalLocation>Right</HorizontalLocation>
+									<ExtendedTooltip name="КоманднаяПанельНавигацииРасширеннаяПодсказка" id="56"/>
+									<ChildItems>
+										<Button name="КомандаНазад" id="57">
+											<Type>CommandBarButton</Type>
+											<Enabled>false</Enabled>
+											<CommandName>Form.Command.КомандаНазад</CommandName>
+											<ExtendedTooltip name="КомандаНазадExtendedTooltip" id="58"/>
+										</Button>
+										<Button name="КомандаДалее" id="59">
+											<Type>CommandBarButton</Type>
+											<DefaultItem>true</DefaultItem>
+											<CommandName>Form.Command.КомандаДалее</CommandName>
+											<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+											<ExtendedTooltip name="КомандаДалееExtendedTooltip" id="60"/>
+										</Button>
+										<Button name="СформироватьДокументы" id="266">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.СформироватьДокументы</CommandName>
+											<ExtendedTooltip name="СформироватьДокументыРасширеннаяПодсказка" id="267"/>
+										</Button>
+										<Button name="ФормаСправка" id="61">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.StandardCommand.Help</CommandName>
+											<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+											<ExtendedTooltip name="ФормаСправкаРасширеннаяПодсказка" id="62"/>
+										</Button>
+									</ChildItems>
+								</CommandBar>
+							</ChildItems>
+						</Page>
+					</ChildItems>
+				</Pages>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.УПЖКХ_МастерОбеспеченияЗаявокАДС</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Columns>
+				<AdditionalColumns table="Объект.ТаблицаЗаявок">
+					<Column name="Использовать" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content> </v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:boolean</v8:Type>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТаблицаДокументовПеремещения" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица документов перемещения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ДокументПеремещения" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ перемещения</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:DocumentRef.ПеремещениеТоваров</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТаблицаЗаявокМатериала" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица заявок материала</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Заявка" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Заявка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:DocumentRef.КВП_ЗаявкаНаВыполнениеРабот</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Необходимо" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Необходимо</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЗаявкаОбеспечена" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Заявка обеспечена</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>1</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТаблицаНаличияНаСкладах" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица наличия на складах</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Склад" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Склад</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Склады</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ВНаличии" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>В наличии</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Получить" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Получить</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Свободно" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Свободно</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Номенклатура" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номенклатура</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Мастер" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Мастер</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ФизическиеЛица</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ОбщийСклад" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Общий склад</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="мПериодНачало" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период начало</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="мПериодОкончание" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период окончание</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПолнаяТаблицаТребуемыхМатериалов" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Полная таблица требуемых материалов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Номенклатура" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номенклатура</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ЕдиницаИзмерения" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Единица измерения</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.КлассификаторЕдиницИзмерения</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Необходимо" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Необходимо</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Заявка" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Заявка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:DocumentRef.КВП_ЗаявкаНаВыполнениеРабот</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Склад" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Склад</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Склады</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Мастер" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Мастер</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ФизическиеЛица</v8:Type>
+					</Type>
+				</Column>
+				<Column name="СкладПрочегоМастера" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Склад прочего мастера</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ЗаявкаОбработана" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Заявка обработана</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ЗаявкаОбеспечена" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Заявка обеспечена</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>1</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ВедетсяУчетПоСкладам" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ведется учет по складам</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПолнаяТаблицаОстатковМатериалов" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Полная таблица остатков материалов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Номенклатура" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номенклатура</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ВНаличии" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>В наличии</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Склад" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Склад</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Склады</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Мастер" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Мастер</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ФизическиеЛица</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Получить" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Получить</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="СчетУчета" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Счет учета</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:ChartOfAccountsRef.Хозрасчетный</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Свободно" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Свободно</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="СкладПрочегоМастера" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Склад прочего мастера</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Занято" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Занято</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ОбщийСклад" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Общий склад</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТаблицаТребуемыхМатериалов" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица требуемых материалов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Номенклатура" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номенклатура</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ЕдиницаИзмерения" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Единица измерения</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.КлассификаторЕдиницИзмерения</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Необходимо" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Необходимо</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ВНаличии" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>В наличии</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Недостаток" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Недостаток</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИмеетсяНаСкладах" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имеется на складах</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Получить" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Получить</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИмеетсяНаСкладахВсего" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имеется на складах всего</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПризнакВозможностиОбеспечить" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Признак возможности обеспечить (0 - невозможно обеспечить; 1 - возможно обеспечить; 2 - материалов достаточно).</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>1</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТаблицаЗаявокПрочихМастеров" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица заявок прочих мастеров</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Заявка" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Заявка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:DocumentRef.КВП_ЗаявкаНаВыполнениеРабот</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ВыбраноЗаявок" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Всего к обеспечению</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ТаблицаТребуемыхМатериаловНедостаток</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ТаблицаТребуемыхМатериалов.Недостаток</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Текст</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>-</v8:content>
+							</v8:item>
+						</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ТаблицаТребуемыхМатериаловНоменклатура</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ТаблицаТребуемыхМатериаловЕдиницаИзмерения</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ТаблицаТребуемыхМатериаловНеобходимо</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ТаблицаТребуемыхМатериаловВНаличии</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ТаблицаТребуемыхМатериаловНедостаток</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ТаблицаТребуемыхМатериаловИмеетсяНаСкладах</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ТаблицаТребуемыхМатериаловПолучить</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ТаблицаТребуемыхМатериалов.Необходимо</dcsset:left>
+						<dcsset:comparisonType>LessOrEqual</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:Field">ТаблицаТребуемыхМатериалов.ВНаличии</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:ЦветФонаУдачнойОтправки</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#008000</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ТаблицаТребуемыхМатериаловНоменклатура</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ТаблицаТребуемыхМатериаловЕдиницаИзмерения</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ТаблицаТребуемыхМатериаловНеобходимо</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ТаблицаТребуемыхМатериаловВНаличии</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ТаблицаТребуемыхМатериаловНедостаток</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ТаблицаТребуемыхМатериаловИмеетсяНаСкладах</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ТаблицаТребуемыхМатериаловПолучить</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>AndGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ТаблицаТребуемыхМатериалов.Необходимо</dcsset:left>
+							<dcsset:comparisonType>Greater</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:Field">ТаблицаТребуемыхМатериалов.ВНаличии</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ТаблицаТребуемыхМатериалов.Необходимо</dcsset:left>
+							<dcsset:comparisonType>LessOrEqual</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:Field">ТаблицаТребуемыхМатериалов.ИмеетсяНаСкладахВсего</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#CCFFFF</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:CadetBlue</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ТаблицаТребуемыхМатериаловНоменклатура</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ТаблицаТребуемыхМатериаловЕдиницаИзмерения</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ТаблицаТребуемыхМатериаловНеобходимо</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ТаблицаТребуемыхМатериаловВНаличии</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ТаблицаТребуемыхМатериаловНедостаток</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ТаблицаТребуемыхМатериаловИмеетсяНаСкладах</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ТаблицаТребуемыхМатериаловПолучить</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>AndGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ТаблицаТребуемыхМатериалов.Необходимо</dcsset:left>
+							<dcsset:comparisonType>Greater</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:Field">ТаблицаТребуемыхМатериалов.ВНаличии</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ТаблицаТребуемыхМатериалов.Необходимо</dcsset:left>
+							<dcsset:comparisonType>Greater</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:Field">ТаблицаТребуемыхМатериалов.ИмеетсяНаСкладахВсего</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:ЦветФонаОшибкиОтправки</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:LightCoral</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ТаблицаЗаявокМатериалаЗаявка</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ТаблицаЗаявокМатериалаНеобходимоеКоличествоМатериала</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>AndGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ТаблицаЗаявокМатериала.ЗаявкаОбеспечена</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:ЦветФонаОшибкиОтправки</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:LightCoral</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="ПодобратьЗаявки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить список заявок</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подобрать заявки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПодобратьЗаявки</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаДалее" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Далее &gt;&gt;</v8:content>
+				</v8:item>
+			</Title>
+			<Action>КомандаДалее</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаНазад" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>&lt;&lt; Назад</v8:content>
+				</v8:item>
+			</Title>
+			<Action>КомандаНазад</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ТаблицаЗаявокВыделитьВсе" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица заявок выделить все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица заявок выделить все</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ТаблицаЗаявокВыделитьВсе</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ТаблицаЗаявокСнятьВсе" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица заявок снять все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица заявок снять все</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ТаблицаЗаявокСнятьВсе</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СформироватьДокументы" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать документы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать документы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаСформироватьДокументы</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗаполнитьСвободнымиОстатками" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить свободными остатками</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить свободными остатками</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаЗаполнитьСвободнымиОстатками</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗаполнитьЗакрываемыеЗаявки" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить закрываемые заявки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить закрываемые заявки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаЗаполнитьЗакрываемыеЗаявки</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОбновитьТаблицуМатериалов" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить таблицу материалов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОбновитьТаблицуМатериалов</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПоказатьСписокОтобранныхЗаявок" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обеспечение 0 заявок</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать список отобранных заявок</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПоказатьСписокОтобранныхЗаявок</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПоказатьПодсказкуАвтозаполнения" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Информация по автозаполнению</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать подсказку автозаполнения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Подсказка</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПоказатьПодсказкуАвтозаполнения</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

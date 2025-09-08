@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Дата" id="3">
+			<DataPath>Объект.Date</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДатаКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="47"/>
+		</InputField>
+		<InputField name="Организация" id="5">
+			<DataPath>Объект.Организация</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="48"/>
+		</InputField>
+		<InputField name="ФизическоеЛицо" id="7">
+			<DataPath>Объект.ФизическоеЛицо</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="ФизическоеЛицоКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ФизическоеЛицоРасширеннаяПодсказка" id="49"/>
+			<Events>
+				<Event name="OnChange">ФизическоеЛицоПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="Фамилия" id="9">
+			<DataPath>Объект.Фамилия</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="ФамилияКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="ФамилияРасширеннаяПодсказка" id="50"/>
+		</InputField>
+		<InputField name="Имя" id="11">
+			<DataPath>Объект.Имя</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="ИмяКонтекстноеМеню" id="12"/>
+			<ExtendedTooltip name="ИмяРасширеннаяПодсказка" id="51"/>
+		</InputField>
+		<InputField name="Отчество" id="13">
+			<DataPath>Объект.Отчество</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="ОтчествоКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ОтчествоРасширеннаяПодсказка" id="52"/>
+		</InputField>
+		<UsualGroup name="ГруппаИзменитьФИО" id="43">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа изменить ФИО</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа изменить ФИО</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаИзменитьФИОРасширеннаяПодсказка" id="53"/>
+			<ChildItems>
+				<CheckBoxField name="ИзменитьПредставлениеФИО" id="39">
+					<DataPath>ИзменитьПредставлениеФИО</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ИзменитьПредставлениеФИОКонтекстноеМеню" id="40"/>
+					<ExtendedTooltip name="ИзменитьПредставлениеФИОРасширеннаяПодсказка" id="54"/>
+					<Events>
+						<Event name="OnChange">ИзменитьПредставлениеФИОПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<LabelDecoration name="НадписьИзмениеПредставленияФИО" id="41">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Height>2</Height>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<TextColor>style:УПЖКХ_ТекстСообщенияОПроблемах</TextColor>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Внимание! Будут изменены наименования в справочниках.
+Отмена этого действия будет возможна только вручную!</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НадписьИзмениеПредставленияФИОКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="НадписьИзмениеПредставленияФИОРасширеннаяПодсказка" id="55"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="ПредставлениеФИО" id="44">
+			<DataPath>ПредставлениеФИО</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ListChoiceMode>true</ListChoiceMode>
+			<ContextMenu name="ПредставлениеФИОКонтекстноеМеню" id="45"/>
+			<ExtendedTooltip name="ПредставлениеФИОРасширеннаяПодсказка" id="56"/>
+			<Events>
+				<Event name="OnChange">ПредставлениеФИОПриИзменении</Event>
+				<Event name="StartChoice">ПредставлениеФИОНачалоВыбора</Event>
+			</Events>
+		</InputField>
+		<InputField name="ВидДокумента" id="15">
+			<DataPath>Объект.ВидДокумента</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="ВидДокументаКонтекстноеМеню" id="16"/>
+			<ExtendedTooltip name="ВидДокументаРасширеннаяПодсказка" id="57"/>
+		</InputField>
+		<InputField name="СерияДокумента" id="17">
+			<DataPath>Объект.СерияДокумента</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Серия</v8:content>
+				</v8:item>
+			</Title>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="СерияДокументаКонтекстноеМеню" id="18"/>
+			<ExtendedTooltip name="СерияДокументаРасширеннаяПодсказка" id="58"/>
+		</InputField>
+		<InputField name="НомерДокумента" id="19">
+			<DataPath>Объект.НомерДокумента</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер</v8:content>
+				</v8:item>
+			</Title>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="НомерДокументаКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="НомерДокументаРасширеннаяПодсказка" id="59"/>
+		</InputField>
+		<InputField name="ДатаВыдачиДокумента" id="21">
+			<DataPath>Объект.ДатаВыдачиДокумента</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата выдачи</v8:content>
+				</v8:item>
+			</Title>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДатаВыдачиДокументаКонтекстноеМеню" id="22"/>
+			<ExtendedTooltip name="ДатаВыдачиДокументаРасширеннаяПодсказка" id="60"/>
+		</InputField>
+		<InputField name="КемВыданДокумент" id="23">
+			<DataPath>Объект.КемВыданДокумент</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кем выдан</v8:content>
+				</v8:item>
+			</Title>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ChoiceButton>true</ChoiceButton>
+			<ContextMenu name="КемВыданДокументКонтекстноеМеню" id="24"/>
+			<ExtendedTooltip name="КемВыданДокументРасширеннаяПодсказка" id="61"/>
+			<Events>
+				<Event name="StartChoice">КемВыданДокументНачалоВыбора</Event>
+			</Events>
+		</InputField>
+		<InputField name="КодПодразделения" id="25">
+			<DataPath>Объект.КодПодразделения</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код подразделения</v8:content>
+				</v8:item>
+			</Title>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="КодПодразделенияКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="КодПодразделенияРасширеннаяПодсказка" id="62"/>
+		</InputField>
+		<UsualGroup name="ГруппаПодвал" id="46">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа подвал</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа подвал</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПодвалРасширеннаяПодсказка" id="63"/>
+			<ChildItems>
+				<InputField name="ПричинаИзменения" id="27">
+					<DataPath>Объект.ПричинаИзменения</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<ContextMenu name="ПричинаИзмененияКонтекстноеМеню" id="28"/>
+					<ExtendedTooltip name="ПричинаИзмененияРасширеннаяПодсказка" id="64"/>
+				</InputField>
+				<InputField name="Ответственный" id="31">
+					<DataPath>Объект.Ответственный</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<ContextMenu name="ОтветственныйКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="ОтветственныйРасширеннаяПодсказка" id="65"/>
+				</InputField>
+				<InputField name="Комментарий" id="29">
+					<DataPath>Объект.Комментарий</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<ContextMenu name="КомментарийКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="66"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.КВП_ИзменениеПаспортныхДанных</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="ИзменитьПредставлениеФИО" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить представление ФИО</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПредставлениеФИО" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Представление ФИО</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>50</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекущееФизЛицо" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущее физ лицо</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ФизическиеЛица</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>

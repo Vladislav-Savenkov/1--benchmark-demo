@@ -1,0 +1,705 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Нижегородская область: Выгрузка в ОСЗН</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаКомандаНастройка" id="1">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.КомандаНастройка</CommandName>
+				<Picture>
+					<xr:Ref>CommonPicture.Настройка</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Настройка</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаКомандаНастройкаРасширеннаяПодсказка" id="2"/>
+			</Button>
+			<Button name="ФормаКомандаЗаполнить" id="3">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.КомандаЗаполнить</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Заполнить</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаКомандаЗаполнитьРасширеннаяПодсказка" id="4"/>
+			</Button>
+			<Button name="ФормаКомандаВыгрузить" id="5">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.КомандаВыгрузить</CommandName>
+				<Picture>
+					<xr:Ref>CommonPicture.ВыгрузитьФайлСертификата</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Выгрузить</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаКомандаВыгрузитьРасширеннаяПодсказка" id="6"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="8"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаШапкаСлева" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шапка слева</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаШапкаСлеваРасширеннаяПодсказка" id="10"/>
+					<ChildItems>
+						<InputField name="ПериодСтрокой" id="11">
+							<DataPath>ПериодСтрокой</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Период</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ChoiceButton>true</ChoiceButton>
+							<SpinButton>true</SpinButton>
+							<ChoiceButtonPicture>
+								<xr:Ref>StdPicture.InputFieldCalendar</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</ChoiceButtonPicture>
+							<ContextMenu name="ПериодСтрокойКонтекстноеМеню" id="12"/>
+							<ExtendedTooltip name="ПериодСтрокойExtendedTooltip" id="13"/>
+							<Events>
+								<Event name="OnChange">ПериодСтрокойПриИзменении</Event>
+								<Event name="AutoComplete">ПериодСтрокойАвтоПодбор</Event>
+								<Event name="StartChoice">ПериодСтрокойНачалоВыбора</Event>
+								<Event name="Tuning">ПериодСтрокойРегулирование</Event>
+								<Event name="TextEditEnd">ПериодСтрокойОкончаниеВводаТекста</Event>
+							</Events>
+						</InputField>
+						<InputField name="Организация" id="14">
+							<DataPath>Объект.Организация</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="15"/>
+							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="16"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаШапкаСправа" id="17">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шапка справа</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаШапкаСправаРасширеннаяПодсказка" id="18"/>
+					<ChildItems>
+						<InputField name="ИмяКаталогаЗагрузки" id="205">
+							<DataPath>ИмяКаталогаЗагрузки</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<ChoiceButton>true</ChoiceButton>
+							<OpenButton>true</OpenButton>
+							<ContextMenu name="ИмяКаталогаЗагрузкиКонтекстноеМеню" id="206"/>
+							<ExtendedTooltip name="ИмяКаталогаЗагрузкиРасширеннаяПодсказка" id="207"/>
+							<Events>
+								<Event name="StartChoice">ИмяКаталогаЗагрузкиНачалоВыбора</Event>
+								<Event name="Opening">ИмяКаталогаЗагрузкиОткрытие</Event>
+							</Events>
+						</InputField>
+						<InputField name="ИмяКаталогаВыгрузки" id="208">
+							<DataPath>ИмяКаталогаВыгрузки</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<ChoiceButton>true</ChoiceButton>
+							<OpenButton>true</OpenButton>
+							<ContextMenu name="ИмяКаталогаВыгрузкиКонтекстноеМеню" id="209"/>
+							<ExtendedTooltip name="ИмяКаталогаВыгрузкиРасширеннаяПодсказка" id="210"/>
+							<Events>
+								<Event name="StartChoice">ИмяКаталогаВыгрузкиНачалоВыбора</Event>
+								<Event name="Opening">ИмяКаталогаВыгрузкиОткрытие</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="ГруппаПанельВыгрузки" id="211">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа панель выгрузки</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="ГруппаПанельВыгрузкиРасширеннаяПодсказка" id="212"/>
+			<ChildItems>
+				<Page name="ГруппаРеестрПолучателейЕДК" id="213">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Реестр получателей ЕДК</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаРеестрПолучателейЕДКРасширеннаяПодсказка" id="214"/>
+					<ChildItems>
+						<Table name="НижегородскаяОбл_РеестраПолучателейЕДК" id="27">
+							<Representation>List</Representation>
+							<SelectionMode>SingleRow</SelectionMode>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.НижегородскаяОбл_РеестраПолучателейЕДК</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="НижегородскаяОбл_РеестраПолучателейЕДККонтекстноеМеню" id="28"/>
+							<AutoCommandBar name="НижегородскаяОбл_РеестраПолучателейЕДККоманднаяПанель" id="29"/>
+							<ExtendedTooltip name="НижегородскаяОбл_РеестраПолучателейЕДКРасширеннаяПодсказка" id="30"/>
+							<SearchStringAddition name="НижегородскаяОбл_РеестраПолучателейЕДКСтрокаПоиска" id="31">
+								<AdditionSource>
+									<Item>НижегородскаяОбл_РеестраПолучателейЕДК</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НижегородскаяОбл_РеестраПолучателейЕДКСтрокаПоискаКонтекстноеМеню" id="34"/>
+								<ExtendedTooltip name="НижегородскаяОбл_РеестраПолучателейЕДКСтрокаПоискаРасширеннаяПодсказка" id="35"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="НижегородскаяОбл_РеестраПолучателейЕДКСостояниеПросмотра" id="36">
+								<AdditionSource>
+									<Item>НижегородскаяОбл_РеестраПолучателейЕДК</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НижегородскаяОбл_РеестраПолучателейЕДКСостояниеПросмотраКонтекстноеМеню" id="39"/>
+								<ExtendedTooltip name="НижегородскаяОбл_РеестраПолучателейЕДКСостояниеПросмотраРасширеннаяПодсказка" id="40"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="НижегородскаяОбл_РеестраПолучателейЕДКУправлениеПоиском" id="41">
+								<AdditionSource>
+									<Item>НижегородскаяОбл_РеестраПолучателейЕДК</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="НижегородскаяОбл_РеестраПолучателейЕДКУправлениеПоискомКонтекстноеМеню" id="44"/>
+								<ExtendedTooltip name="НижегородскаяОбл_РеестраПолучателейЕДКУправлениеПоискомРасширеннаяПодсказка" id="45"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="НижегородскаяОбл_РеестраПолучателейЕДКНомерСтроки" id="392">
+									<DataPath>Объект.НижегородскаяОбл_РеестраПолучателейЕДК.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_РеестраПолучателейЕДКНомерСтрокиКонтекстноеМеню" id="393"/>
+									<ExtendedTooltip name="НижегородскаяОбл_РеестраПолучателейЕДКНомерСтрокиРасширеннаяПодсказка" id="394"/>
+								</LabelField>
+								<InputField name="НижегородскаяОбл_РеестраПолучателейЕДКD_uch" id="395">
+									<DataPath>Объект.НижегородскаяОбл_РеестраПолучателейЕДК.D_uch</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_РеестраПолучателейЕДКD_uchКонтекстноеМеню" id="396"/>
+									<ExtendedTooltip name="НижегородскаяОбл_РеестраПолучателейЕДКD_uchРасширеннаяПодсказка" id="397"/>
+								</InputField>
+								<InputField name="НижегородскаяОбл_РеестраПолучателейЕДКCod_rs" id="398">
+									<DataPath>Объект.НижегородскаяОбл_РеестраПолучателейЕДК.Cod_rs</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_РеестраПолучателейЕДКCod_rsКонтекстноеМеню" id="399"/>
+									<ExtendedTooltip name="НижегородскаяОбл_РеестраПолучателейЕДКCod_rsРасширеннаяПодсказка" id="400"/>
+								</InputField>
+								<InputField name="НижегородскаяОбл_РеестраПолучателейЕДКPolis" id="401">
+									<DataPath>Объект.НижегородскаяОбл_РеестраПолучателейЕДК.Polis</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_РеестраПолучателейЕДКPolisКонтекстноеМеню" id="402"/>
+									<ExtendedTooltip name="НижегородскаяОбл_РеестраПолучателейЕДКPolisРасширеннаяПодсказка" id="403"/>
+								</InputField>
+								<InputField name="НижегородскаяОбл_РеестраПолучателейЕДКFam" id="404">
+									<DataPath>Объект.НижегородскаяОбл_РеестраПолучателейЕДК.Fam</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_РеестраПолучателейЕДКFamКонтекстноеМеню" id="405"/>
+									<ExtendedTooltip name="НижегородскаяОбл_РеестраПолучателейЕДКFamРасширеннаяПодсказка" id="406"/>
+								</InputField>
+								<InputField name="НижегородскаяОбл_РеестраПолучателейЕДКImja" id="407">
+									<DataPath>Объект.НижегородскаяОбл_РеестраПолучателейЕДК.Imja</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_РеестраПолучателейЕДКImjaКонтекстноеМеню" id="408"/>
+									<ExtendedTooltip name="НижегородскаяОбл_РеестраПолучателейЕДКImjaРасширеннаяПодсказка" id="409"/>
+								</InputField>
+								<InputField name="НижегородскаяОбл_РеестраПолучателейЕДКOtch" id="410">
+									<DataPath>Объект.НижегородскаяОбл_РеестраПолучателейЕДК.Otch</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_РеестраПолучателейЕДКOtchКонтекстноеМеню" id="411"/>
+									<ExtendedTooltip name="НижегородскаяОбл_РеестраПолучателейЕДКOtchРасширеннаяПодсказка" id="412"/>
+								</InputField>
+								<InputField name="НижегородскаяОбл_РеестраПолучателейЕДКN_adr" id="413">
+									<DataPath>Объект.НижегородскаяОбл_РеестраПолучателейЕДК.N_adr</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_РеестраПолучателейЕДКN_adrКонтекстноеМеню" id="414"/>
+									<ExtendedTooltip name="НижегородскаяОбл_РеестраПолучателейЕДКN_adrРасширеннаяПодсказка" id="415"/>
+								</InputField>
+								<InputField name="НижегородскаяОбл_РеестраПолучателейЕДКGor" id="416">
+									<DataPath>Объект.НижегородскаяОбл_РеестраПолучателейЕДК.Gor</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_РеестраПолучателейЕДКGorКонтекстноеМеню" id="417"/>
+									<ExtendedTooltip name="НижегородскаяОбл_РеестраПолучателейЕДКGorРасширеннаяПодсказка" id="418"/>
+								</InputField>
+								<InputField name="НижегородскаяОбл_РеестраПолучателейЕДКUlica" id="419">
+									<DataPath>Объект.НижегородскаяОбл_РеестраПолучателейЕДК.Ulica</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_РеестраПолучателейЕДКUlicaКонтекстноеМеню" id="420"/>
+									<ExtendedTooltip name="НижегородскаяОбл_РеестраПолучателейЕДКUlicaРасширеннаяПодсказка" id="421"/>
+								</InputField>
+								<InputField name="НижегородскаяОбл_РеестраПолучателейЕДКDom" id="422">
+									<DataPath>Объект.НижегородскаяОбл_РеестраПолучателейЕДК.Dom</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_РеестраПолучателейЕДКDomКонтекстноеМеню" id="423"/>
+									<ExtendedTooltip name="НижегородскаяОбл_РеестраПолучателейЕДКDomРасширеннаяПодсказка" id="424"/>
+								</InputField>
+								<InputField name="НижегородскаяОбл_РеестраПолучателейЕДКKorpus" id="425">
+									<DataPath>Объект.НижегородскаяОбл_РеестраПолучателейЕДК.Korpus</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_РеестраПолучателейЕДКKorpusКонтекстноеМеню" id="426"/>
+									<ExtendedTooltip name="НижегородскаяОбл_РеестраПолучателейЕДКKorpusРасширеннаяПодсказка" id="427"/>
+								</InputField>
+								<InputField name="НижегородскаяОбл_РеестраПолучателейЕДКKvart" id="428">
+									<DataPath>Объект.НижегородскаяОбл_РеестраПолучателейЕДК.Kvart</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_РеестраПолучателейЕДКKvartКонтекстноеМеню" id="429"/>
+									<ExtendedTooltip name="НижегородскаяОбл_РеестраПолучателейЕДКKvartРасширеннаяПодсказка" id="430"/>
+								</InputField>
+								<InputField name="НижегородскаяОбл_РеестраПолучателейЕДКKv_dop" id="431">
+									<DataPath>Объект.НижегородскаяОбл_РеестраПолучателейЕДК.Kv_dop</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_РеестраПолучателейЕДКKv_dopКонтекстноеМеню" id="432"/>
+									<ExtendedTooltip name="НижегородскаяОбл_РеестраПолучателейЕДКKv_dopРасширеннаяПодсказка" id="433"/>
+								</InputField>
+								<InputField name="НижегородскаяОбл_РеестраПолучателейЕДКSp_kat" id="434">
+									<DataPath>Объект.НижегородскаяОбл_РеестраПолучателейЕДК.Sp_kat</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_РеестраПолучателейЕДКSp_katКонтекстноеМеню" id="435"/>
+									<ExtendedTooltip name="НижегородскаяОбл_РеестраПолучателейЕДКSp_katРасширеннаяПодсказка" id="436"/>
+								</InputField>
+								<InputField name="НижегородскаяОбл_РеестраПолучателейЕДКKat_fix" id="437">
+									<DataPath>Объект.НижегородскаяОбл_РеестраПолучателейЕДК.Kat_fix</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_РеестраПолучателейЕДКKat_fixКонтекстноеМеню" id="438"/>
+									<ExtendedTooltip name="НижегородскаяОбл_РеестраПолучателейЕДКKat_fixРасширеннаяПодсказка" id="439"/>
+								</InputField>
+								<InputField name="НижегородскаяОбл_РеестраПолучателейЕДКPr_zakr" id="440">
+									<DataPath>Объект.НижегородскаяОбл_РеестраПолучателейЕДК.Pr_zakr</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_РеестраПолучателейЕДКPr_zakrКонтекстноеМеню" id="441"/>
+									<ExtendedTooltip name="НижегородскаяОбл_РеестраПолучателейЕДКPr_zakrРасширеннаяПодсказка" id="442"/>
+								</InputField>
+								<InputField name="НижегородскаяОбл_РеестраПолучателейЕДКN_lsch" id="443">
+									<DataPath>Объект.НижегородскаяОбл_РеестраПолучателейЕДК.N_lsch</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_РеестраПолучателейЕДКN_lschКонтекстноеМеню" id="444"/>
+									<ExtendedTooltip name="НижегородскаяОбл_РеестраПолучателейЕДКN_lschРасширеннаяПодсказка" id="445"/>
+								</InputField>
+								<InputField name="НижегородскаяОбл_РеестраПолучателейЕДКPrich" id="446">
+									<DataPath>Объект.НижегородскаяОбл_РеестраПолучателейЕДК.Prich</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_РеестраПолучателейЕДКPrichКонтекстноеМеню" id="447"/>
+									<ExtendedTooltip name="НижегородскаяОбл_РеестраПолучателейЕДКPrichРасширеннаяПодсказка" id="448"/>
+								</InputField>
+								<InputField name="НижегородскаяОбл_РеестраПолучателейЕДКGil_f" id="449">
+									<DataPath>Объект.НижегородскаяОбл_РеестраПолучателейЕДК.Gil_f</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_РеестраПолучателейЕДКGil_fКонтекстноеМеню" id="450"/>
+									<ExtendedTooltip name="НижегородскаяОбл_РеестраПолучателейЕДКGil_fРасширеннаяПодсказка" id="451"/>
+								</InputField>
+								<InputField name="НижегородскаяОбл_РеестраПолучателейЕДКO_tot" id="452">
+									<DataPath>Объект.НижегородскаяОбл_РеестраПолучателейЕДК.O_tot</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_РеестраПолучателейЕДКO_totКонтекстноеМеню" id="453"/>
+									<ExtendedTooltip name="НижегородскаяОбл_РеестраПолучателейЕДКO_totРасширеннаяПодсказка" id="454"/>
+								</InputField>
+								<InputField name="НижегородскаяОбл_РеестраПолучателейЕДКPl_o" id="455">
+									<DataPath>Объект.НижегородскаяОбл_РеестраПолучателейЕДК.Pl_o</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_РеестраПолучателейЕДКPl_oКонтекстноеМеню" id="456"/>
+									<ExtendedTooltip name="НижегородскаяОбл_РеестраПолучателейЕДКPl_oРасширеннаяПодсказка" id="457"/>
+								</InputField>
+								<InputField name="НижегородскаяОбл_РеестраПолучателейЕДКPl_t" id="458">
+									<DataPath>Объект.НижегородскаяОбл_РеестраПолучателейЕДК.Pl_t</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_РеестраПолучателейЕДКPl_tКонтекстноеМеню" id="459"/>
+									<ExtendedTooltip name="НижегородскаяОбл_РеестраПолучателейЕДКPl_tРасширеннаяПодсказка" id="460"/>
+								</InputField>
+								<InputField name="НижегородскаяОбл_РеестраПолучателейЕДКPl_g" id="461">
+									<DataPath>Объект.НижегородскаяОбл_РеестраПолучателейЕДК.Pl_g</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_РеестраПолучателейЕДКPl_gКонтекстноеМеню" id="462"/>
+									<ExtendedTooltip name="НижегородскаяОбл_РеестраПолучателейЕДКPl_gРасширеннаяПодсказка" id="463"/>
+								</InputField>
+								<InputField name="НижегородскаяОбл_РеестраПолучателейЕДКK_giv" id="464">
+									<DataPath>Объект.НижегородскаяОбл_РеестраПолучателейЕДК.K_giv</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_РеестраПолучателейЕДКK_givКонтекстноеМеню" id="465"/>
+									<ExtendedTooltip name="НижегородскаяОбл_РеестраПолучателейЕДКK_givРасширеннаяПодсказка" id="466"/>
+								</InputField>
+								<InputField name="НижегородскаяОбл_РеестраПолучателейЕДКK_vub" id="467">
+									<DataPath>Объект.НижегородскаяОбл_РеестраПолучателейЕДК.K_Vub</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_РеестраПолучателейЕДКK_vubКонтекстноеМеню" id="468"/>
+									<ExtendedTooltip name="НижегородскаяОбл_РеестраПолучателейЕДКK_vubРасширеннаяПодсказка" id="469"/>
+								</InputField>
+								<InputField name="НижегородскаяОбл_РеестраПолучателейЕДКK_vpr" id="470">
+									<DataPath>Объект.НижегородскаяОбл_РеестраПолучателейЕДК.K_vpr</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_РеестраПолучателейЕДКK_vprКонтекстноеМеню" id="471"/>
+									<ExtendedTooltip name="НижегородскаяОбл_РеестраПолучателейЕДКK_vprРасширеннаяПодсказка" id="472"/>
+								</InputField>
+								<InputField name="НижегородскаяОбл_РеестраПолучателейЕДКK_polr" id="473">
+									<DataPath>Объект.НижегородскаяОбл_РеестраПолучателейЕДК.K_polr</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_РеестраПолучателейЕДКK_polrКонтекстноеМеню" id="474"/>
+									<ExtendedTooltip name="НижегородскаяОбл_РеестраПолучателейЕДКK_polrРасширеннаяПодсказка" id="475"/>
+								</InputField>
+								<InputField name="НижегородскаяОбл_РеестраПолучателейЕДКPr_w1p" id="476">
+									<DataPath>Объект.НижегородскаяОбл_РеестраПолучателейЕДК.Pr_w1p</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_РеестраПолучателейЕДКPr_w1pКонтекстноеМеню" id="477"/>
+									<ExtendedTooltip name="НижегородскаяОбл_РеестраПолучателейЕДКPr_w1pРасширеннаяПодсказка" id="478"/>
+								</InputField>
+								<InputField name="НижегородскаяОбл_РеестраПолучателейЕДКPrv2005" id="479">
+									<DataPath>Объект.НижегородскаяОбл_РеестраПолучателейЕДК.Prv2005</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_РеестраПолучателейЕДКPrv2005КонтекстноеМеню" id="480"/>
+									<ExtendedTooltip name="НижегородскаяОбл_РеестраПолучателейЕДКPrv2005РасширеннаяПодсказка" id="481"/>
+								</InputField>
+								<InputField name="НижегородскаяОбл_РеестраПолучателейЕДКId_type" id="482">
+									<DataPath>Объект.НижегородскаяОбл_РеестраПолучателейЕДК.Id_type</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_РеестраПолучателейЕДКId_typeКонтекстноеМеню" id="483"/>
+									<ExtendedTooltip name="НижегородскаяОбл_РеестраПолучателейЕДКId_typeРасширеннаяПодсказка" id="484"/>
+								</InputField>
+								<InputField name="НижегородскаяОбл_РеестраПолучателейЕДКId_recalc" id="485">
+									<DataPath>Объект.НижегородскаяОбл_РеестраПолучателейЕДК.Id_recalc</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_РеестраПолучателейЕДКId_recalcКонтекстноеМеню" id="486"/>
+									<ExtendedTooltip name="НижегородскаяОбл_РеестраПолучателейЕДКId_recalcРасширеннаяПодсказка" id="487"/>
+								</InputField>
+								<InputField name="НижегородскаяОбл_РеестраПолучателейЕДКD_begr" id="488">
+									<DataPath>Объект.НижегородскаяОбл_РеестраПолучателейЕДК.D_begr</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_РеестраПолучателейЕДКD_begrКонтекстноеМеню" id="489"/>
+									<ExtendedTooltip name="НижегородскаяОбл_РеестраПолучателейЕДКD_begrРасширеннаяПодсказка" id="490"/>
+								</InputField>
+								<InputField name="НижегородскаяОбл_РеестраПолучателейЕДКD_endr" id="491">
+									<DataPath>Объект.НижегородскаяОбл_РеестраПолучателейЕДК.D_endr</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_РеестраПолучателейЕДКD_endrКонтекстноеМеню" id="492"/>
+									<ExtendedTooltip name="НижегородскаяОбл_РеестраПолучателейЕДКD_endrРасширеннаяПодсказка" id="493"/>
+								</InputField>
+								<InputField name="НижегородскаяОбл_РеестраПолучателейЕДКK_org" id="494">
+									<DataPath>Объект.НижегородскаяОбл_РеестраПолучателейЕДК.K_org</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_РеестраПолучателейЕДКK_orgКонтекстноеМеню" id="495"/>
+									<ExtendedTooltip name="НижегородскаяОбл_РеестраПолучателейЕДКK_orgРасширеннаяПодсказка" id="496"/>
+								</InputField>
+								<InputField name="НижегородскаяОбл_РеестраПолучателейЕДКK_regi" id="497">
+									<DataPath>Объект.НижегородскаяОбл_РеестраПолучателейЕДК.K_regi</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_РеестраПолучателейЕДКK_regiКонтекстноеМеню" id="498"/>
+									<ExtendedTooltip name="НижегородскаяОбл_РеестраПолучателейЕДКK_regiРасширеннаяПодсказка" id="499"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаДополнительныеПараметры" id="215">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дополнительные параметры</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаДополнительныеПараметрыРасширеннаяПодсказка" id="216"/>
+					<ChildItems>
+						<Table name="НижегородскаяОбл_ДополнительныеПараметры" id="337">
+							<Representation>List</Representation>
+							<SelectionMode>SingleRow</SelectionMode>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.НижегородскаяОбл_ДополнительныеПараметры</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="НижегородскаяОбл_ДополнительныеПараметрыКонтекстноеМеню" id="338"/>
+							<AutoCommandBar name="НижегородскаяОбл_ДополнительныеПараметрыКоманднаяПанель" id="339"/>
+							<ExtendedTooltip name="НижегородскаяОбл_ДополнительныеПараметрыРасширеннаяПодсказка" id="340"/>
+							<SearchStringAddition name="НижегородскаяОбл_ДополнительныеПараметрыСтрокаПоиска" id="341">
+								<AdditionSource>
+									<Item>НижегородскаяОбл_ДополнительныеПараметры</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НижегородскаяОбл_ДополнительныеПараметрыСтрокаПоискаКонтекстноеМеню" id="342"/>
+								<ExtendedTooltip name="НижегородскаяОбл_ДополнительныеПараметрыСтрокаПоискаРасширеннаяПодсказка" id="343"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="НижегородскаяОбл_ДополнительныеПараметрыСостояниеПросмотра" id="344">
+								<AdditionSource>
+									<Item>НижегородскаяОбл_ДополнительныеПараметры</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НижегородскаяОбл_ДополнительныеПараметрыСостояниеПросмотраКонтекстноеМеню" id="345"/>
+								<ExtendedTooltip name="НижегородскаяОбл_ДополнительныеПараметрыСостояниеПросмотраРасширеннаяПодсказка" id="346"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="НижегородскаяОбл_ДополнительныеПараметрыУправлениеПоиском" id="347">
+								<AdditionSource>
+									<Item>НижегородскаяОбл_ДополнительныеПараметры</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="НижегородскаяОбл_ДополнительныеПараметрыУправлениеПоискомКонтекстноеМеню" id="348"/>
+								<ExtendedTooltip name="НижегородскаяОбл_ДополнительныеПараметрыУправлениеПоискомРасширеннаяПодсказка" id="349"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="НижегородскаяОбл_ДополнительныеПараметрыНомерСтроки" id="500">
+									<DataPath>Объект.НижегородскаяОбл_ДополнительныеПараметры.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_ДополнительныеПараметрыНомерСтрокиКонтекстноеМеню" id="501"/>
+									<ExtendedTooltip name="НижегородскаяОбл_ДополнительныеПараметрыНомерСтрокиРасширеннаяПодсказка" id="502"/>
+								</LabelField>
+								<InputField name="НижегородскаяОбл_ДополнительныеПараметрыN_lsch" id="503">
+									<DataPath>Объект.НижегородскаяОбл_ДополнительныеПараметры.N_lsch</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_ДополнительныеПараметрыN_lschКонтекстноеМеню" id="504"/>
+									<ExtendedTooltip name="НижегородскаяОбл_ДополнительныеПараметрыN_lschРасширеннаяПодсказка" id="505"/>
+								</InputField>
+								<InputField name="НижегородскаяОбл_ДополнительныеПараметрыK_usl" id="506">
+									<DataPath>Объект.НижегородскаяОбл_ДополнительныеПараметры.K_usl</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_ДополнительныеПараметрыK_uslКонтекстноеМеню" id="507"/>
+									<ExtendedTooltip name="НижегородскаяОбл_ДополнительныеПараметрыK_uslРасширеннаяПодсказка" id="508"/>
+								</InputField>
+								<InputField name="НижегородскаяОбл_ДополнительныеПараметрыTarif" id="509">
+									<DataPath>Объект.НижегородскаяОбл_ДополнительныеПараметры.Tarif</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_ДополнительныеПараметрыTarifКонтекстноеМеню" id="510"/>
+									<ExtendedTooltip name="НижегородскаяОбл_ДополнительныеПараметрыTarifРасширеннаяПодсказка" id="511"/>
+								</InputField>
+								<InputField name="НижегородскаяОбл_ДополнительныеПараметрыTarif2" id="512">
+									<DataPath>Объект.НижегородскаяОбл_ДополнительныеПараметры.Tarif2</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_ДополнительныеПараметрыTarif2КонтекстноеМеню" id="513"/>
+									<ExtendedTooltip name="НижегородскаяОбл_ДополнительныеПараметрыTarif2РасширеннаяПодсказка" id="514"/>
+								</InputField>
+								<InputField name="НижегородскаяОбл_ДополнительныеПараметрыId_unit" id="515">
+									<DataPath>Объект.НижегородскаяОбл_ДополнительныеПараметры.Id_unit</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_ДополнительныеПараметрыId_unitКонтекстноеМеню" id="516"/>
+									<ExtendedTooltip name="НижегородскаяОбл_ДополнительныеПараметрыId_unitРасширеннаяПодсказка" id="517"/>
+								</InputField>
+								<InputField name="НижегородскаяОбл_ДополнительныеПараметрыNorm" id="518">
+									<DataPath>Объект.НижегородскаяОбл_ДополнительныеПараметры.Norm</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_ДополнительныеПараметрыNormКонтекстноеМеню" id="519"/>
+									<ExtendedTooltip name="НижегородскаяОбл_ДополнительныеПараметрыNormРасширеннаяПодсказка" id="520"/>
+								</InputField>
+								<CheckBoxField name="НижегородскаяОбл_ДополнительныеПараметрыCnt" id="524">
+									<DataPath>Объект.НижегородскаяОбл_ДополнительныеПараметры.Cnt</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НижегородскаяОбл_ДополнительныеПараметрыCntКонтекстноеМеню" id="525"/>
+									<ExtendedTooltip name="НижегородскаяОбл_ДополнительныеПараметрыCntРасширеннаяПодсказка" id="526"/>
+								</CheckBoxField>
+								<InputField name="НижегородскаяОбл_ДополнительныеПараметрыDiff" id="527">
+									<DataPath>Объект.НижегородскаяОбл_ДополнительныеПараметры.Diff</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_ДополнительныеПараметрыDiffКонтекстноеМеню" id="528"/>
+									<ExtendedTooltip name="НижегородскаяОбл_ДополнительныеПараметрыDiffРасширеннаяПодсказка" id="529"/>
+								</InputField>
+								<InputField name="НижегородскаяОбл_ДополнительныеПараметрыD_begr" id="530">
+									<DataPath>Объект.НижегородскаяОбл_ДополнительныеПараметры.D_begr</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_ДополнительныеПараметрыD_begrКонтекстноеМеню" id="531"/>
+									<ExtendedTooltip name="НижегородскаяОбл_ДополнительныеПараметрыD_begrРасширеннаяПодсказка" id="532"/>
+								</InputField>
+								<InputField name="НижегородскаяОбл_ДополнительныеПараметрыD_endr" id="533">
+									<DataPath>Объект.НижегородскаяОбл_ДополнительныеПараметры.D_endr</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_ДополнительныеПараметрыD_endrКонтекстноеМеню" id="534"/>
+									<ExtendedTooltip name="НижегородскаяОбл_ДополнительныеПараметрыD_endrРасширеннаяПодсказка" id="535"/>
+								</InputField>
+								<InputField name="НижегородскаяОбл_ДополнительныеПараметрыPr_zd" id="536">
+									<DataPath>Объект.НижегородскаяОбл_ДополнительныеПараметры.Pr_zd</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_ДополнительныеПараметрыPr_zdКонтекстноеМеню" id="537"/>
+									<ExtendedTooltip name="НижегородскаяОбл_ДополнительныеПараметрыPr_zdРасширеннаяПодсказка" id="538"/>
+								</InputField>
+								<InputField name="НижегородскаяОбл_ДополнительныеПараметрыSumm_red" id="539">
+									<DataPath>Объект.НижегородскаяОбл_ДополнительныеПараметры.Summ_red</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_ДополнительныеПараметрыSumm_redКонтекстноеМеню" id="540"/>
+									<ExtendedTooltip name="НижегородскаяОбл_ДополнительныеПараметрыSumm_redРасширеннаяПодсказка" id="541"/>
+								</InputField>
+								<InputField name="НижегородскаяОбл_ДополнительныеПараметрыNorm_ex" id="521">
+									<DataPath>Объект.НижегородскаяОбл_ДополнительныеПараметры.Norm_ex</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НижегородскаяОбл_ДополнительныеПараметрыNorm_exКонтекстноеМеню" id="522"/>
+									<ExtendedTooltip name="НижегородскаяОбл_ДополнительныеПараметрыNorm_exРасширеннаяПодсказка" id="523"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.УПЖКХ_ВыгрузкиВОрганыСоцЗащиты</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ПериодСтрокой" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период строкой</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>15</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<View>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.ДобавлениеИзменениеДанныхФизическихЛицЗарплатаКадры">true</xr:Value>
+				<xr:Value name="Role.ПолныеПрава">true</xr:Value>
+				<xr:Value name="Role.ЧтениеДанныхФизическихЛицЗарплатаКадры">true</xr:Value>
+			</View>
+			<Edit>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.ДобавлениеИзменениеДанныхФизическихЛицЗарплатаКадры">true</xr:Value>
+				<xr:Value name="Role.ПолныеПрава">true</xr:Value>
+				<xr:Value name="Role.ЧтениеДанныхФизическихЛицЗарплатаКадры">true</xr:Value>
+			</Edit>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ИмяКаталогаЗагрузки" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Путь к файлам</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>512</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИмяКаталогаВыгрузки" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Каталог выгрузки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>512</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаНастройка" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Настройка</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаНастройка</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаЗаполнить" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ЗаполнитьФорму</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаЗаполнить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаВыгрузить" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ВыгрузитьФайлСертификата</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаВыгрузить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

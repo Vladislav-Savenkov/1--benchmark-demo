@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Организация" id="1">
+			<DataPath>Настр_Организация</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="19"/>
+		</InputField>
+		<InputField name="Настр_ФорматФайлаЗагрузки" id="5">
+			<DataPath>Настр_ФорматФайлаЗагрузки</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Формат файла загрузки</v8:content>
+				</v8:item>
+			</Title>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="Настр_ФорматФайлаЗагрузкиКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="Настр_ФорматФайлаЗагрузкиРасширеннаяПодсказка" id="20"/>
+			<Events>
+				<Event name="StartChoice">Настр_ФорматФайлаЗагрузкиНачалоВыбора</Event>
+			</Events>
+		</InputField>
+		<InputField name="Настр_ИмяФайлаЗагрузки" id="3">
+			<DataPath>Настр_ИмяФайлаЗагрузки</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Файл загрузки</v8:content>
+				</v8:item>
+			</Title>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ChoiceButton>true</ChoiceButton>
+			<ClearButton>false</ClearButton>
+			<OpenButton>true</OpenButton>
+			<ContextMenu name="Настр_ИмяФайлаЗагрузкиКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="Настр_ИмяФайлаЗагрузкиРасширеннаяПодсказка" id="21"/>
+			<Events>
+				<Event name="StartChoice">Настр_ИмяФайлаЗагрузкиНачалоВыбора</Event>
+			</Events>
+		</InputField>
+		<Table name="Настр_ТаблицаНастроекПриЗагрузке" id="7">
+			<Representation>List</Representation>
+			<TitleLocation>Top</TitleLocation>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Настр_ТаблицаНастроекПриЗагрузке</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виды создаваемых при загрузке документов</v8:content>
+				</v8:item>
+			</Title>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="Настр_ТаблицаНастроекПриЗагрузкеКонтекстноеМеню" id="8"/>
+			<AutoCommandBar name="Настр_ТаблицаНастроекПриЗагрузкеКоманднаяПанель" id="9">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="Настр_ТаблицаНастроекПриЗагрузкеРасширеннаяПодсказка" id="22"/>
+			<SearchStringAddition name="Настр_ТаблицаНастроекПриЗагрузкеСтрокаПоиска" id="23">
+				<AdditionSource>
+					<Item>Настр_ТаблицаНастроекПриЗагрузке</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="Настр_ТаблицаНастроекПриЗагрузкеСтрокаПоискаКонтекстноеМеню" id="24"/>
+				<ExtendedTooltip name="Настр_ТаблицаНастроекПриЗагрузкеСтрокаПоискаРасширеннаяПодсказка" id="25"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="Настр_ТаблицаНастроекПриЗагрузкеСостояниеПросмотра" id="26">
+				<AdditionSource>
+					<Item>Настр_ТаблицаНастроекПриЗагрузке</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="Настр_ТаблицаНастроекПриЗагрузкеСостояниеПросмотраКонтекстноеМеню" id="27"/>
+				<ExtendedTooltip name="Настр_ТаблицаНастроекПриЗагрузкеСостояниеПросмотраРасширеннаяПодсказка" id="28"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="Настр_ТаблицаНастроекПриЗагрузкеУправлениеПоиском" id="29">
+				<AdditionSource>
+					<Item>Настр_ТаблицаНастроекПриЗагрузке</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="Настр_ТаблицаНастроекПриЗагрузкеУправлениеПоискомКонтекстноеМеню" id="30"/>
+				<ExtendedTooltip name="Настр_ТаблицаНастроекПриЗагрузкеУправлениеПоискомРасширеннаяПодсказка" id="31"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<CheckBoxField name="Настр_ТаблицаНастроекПриЗагрузкеПометка" id="10">
+					<DataPath>Настр_ТаблицаНастроекПриЗагрузке.Пометка</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ShowInHeader>false</ShowInHeader>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="Настр_ТаблицаНастроекПриЗагрузкеПометкаКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="Настр_ТаблицаНастроекПриЗагрузкеПометкаРасширеннаяПодсказка" id="32"/>
+				</CheckBoxField>
+				<InputField name="Настр_ТаблицаНастроекПриЗагрузкеДокумент" id="12">
+					<DataPath>Настр_ТаблицаНастроекПриЗагрузке.Документ</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="Настр_ТаблицаНастроекПриЗагрузкеДокументКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="Настр_ТаблицаНастроекПриЗагрузкеДокументРасширеннаяПодсказка" id="33"/>
+				</InputField>
+				<InputField name="Настр_ТаблицаНастроекПриЗагрузкеСтатья" id="14">
+					<DataPath>Настр_ТаблицаНастроекПриЗагрузке.Статья</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="Настр_ТаблицаНастроекПриЗагрузкеСтатьяКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="Настр_ТаблицаНастроекПриЗагрузкеСтатьяРасширеннаяПодсказка" id="34"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<CommandBar name="ГруппаПанель" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа панель</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа панель</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalLocation>Right</HorizontalLocation>
+			<ExtendedTooltip name="ГруппаПанельРасширеннаяПодсказка" id="35"/>
+			<ChildItems>
+				<Button name="ФормаСохранитьНастройки" id="16">
+					<Type>CommandBarButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<CommandName>Form.Command.СохранитьНастройки</CommandName>
+					<ExtendedTooltip name="ФормаСохранитьНастройкиРасширеннаяПодсказка" id="36"/>
+				</Button>
+				<Button name="Кнопка1" id="18">
+					<Type>CommandBarButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Form.StandardCommand.Close</CommandName>
+					<ExtendedTooltip name="Кнопка1РасширеннаяПодсказка" id="37"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Настр_ФорматФайлаЗагрузки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настр формат файла загрузки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.КВП_НастройкиЗагрузкиВыгрузки</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Настр_ИмяФайлаЗагрузки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настр имя файла загрузки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Настр_ТаблицаНастроекПриЗагрузке" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настр таблица настроек при загрузке</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Пометка" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пометка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Документ" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Статья" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статья</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.КВП_ИсточникиОплат</v8:Type>
+						<v8:Type>cfg:CatalogRef.СтатьиДвиженияДенежныхСредств</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="Настр_Организация" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СохранитьНастройки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить настройки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СохранитьНастройки</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

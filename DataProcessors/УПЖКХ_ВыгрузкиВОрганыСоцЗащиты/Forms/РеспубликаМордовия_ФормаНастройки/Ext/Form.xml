@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Республика Мордовия: Настройка</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="ГруппаСтраницыФормы" id="309">
+			<ExtendedTooltip name="ГруппаСтраницыФормыРасширеннаяПодсказка" id="310"/>
+			<ChildItems>
+				<Page name="ГруппаТаблицыФормы" id="34">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройка соответствия услуг</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<ExtendedTooltip name="ГруппаТаблицыФормыРасширеннаяПодсказка" id="35"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаУслугиДляВыгрузки" id="296">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Услуги для выгрузки</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<ExtendedTooltip name="ГруппаУслугиДляВыгрузкиРасширеннаяПодсказка" id="297"/>
+							<ChildItems>
+								<Table name="РеспубликаМордовия_ЖКУ" id="277">
+									<Representation>List</Representation>
+									<ReadOnly>true</ReadOnly>
+									<ChangeRowSet>false</ChangeRowSet>
+									<ChangeRowOrder>false</ChangeRowOrder>
+									<SelectionMode>SingleRow</SelectionMode>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>Объект.РеспубликаМордовия_ТаблицаУслуг</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="РеспубликаМордовия_ЖКУКонтекстноеМеню" id="278"/>
+									<AutoCommandBar name="РеспубликаМордовия_ЖКУКоманднаяПанель" id="279"/>
+									<ExtendedTooltip name="РеспубликаМордовия_ЖКУРасширеннаяПодсказка" id="280"/>
+									<SearchStringAddition name="РеспубликаМордовия_ЖКУСтрокаПоиска" id="281">
+										<AdditionSource>
+											<Item>РеспубликаМордовия_ЖКУ</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="РеспубликаМордовия_ЖКУСтрокаПоискаКонтекстноеМеню" id="282"/>
+										<ExtendedTooltip name="РеспубликаМордовия_ЖКУСтрокаПоискаРасширеннаяПодсказка" id="283"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="РеспубликаМордовия_ЖКУСостояниеПросмотра" id="284">
+										<AdditionSource>
+											<Item>РеспубликаМордовия_ЖКУ</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="РеспубликаМордовия_ЖКУСостояниеПросмотраКонтекстноеМеню" id="285"/>
+										<ExtendedTooltip name="РеспубликаМордовия_ЖКУСостояниеПросмотраРасширеннаяПодсказка" id="286"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="РеспубликаМордовия_ЖКУУправлениеПоиском" id="287">
+										<AdditionSource>
+											<Item>РеспубликаМордовия_ЖКУ</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="РеспубликаМордовия_ЖКУУправлениеПоискомКонтекстноеМеню" id="288"/>
+										<ExtendedTooltip name="РеспубликаМордовия_ЖКУУправлениеПоискомРасширеннаяПодсказка" id="289"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="OnActivateRow">РеспубликаМордовия_ЖКУПриАктивизацииСтроки</Event>
+									</Events>
+									<ChildItems>
+										<InputField name="РеспубликаМордовия_ЖКУУслуга" id="306">
+											<DataPath>Объект.РеспубликаМордовия_ТаблицаУслуг.Услуга</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="РеспубликаМордовия_ЖКУУслугаКонтекстноеМеню" id="307"/>
+											<ExtendedTooltip name="РеспубликаМордовия_ЖКУУслугаРасширеннаяПодсказка" id="308"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаУслугиВБазе" id="298">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Услуги в Базе</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<ExtendedTooltip name="ГруппаУслугиВБазеРасширеннаяПодсказка" id="299"/>
+							<ChildItems>
+								<Table name="ТП_УслугаВБазе" id="66">
+									<Representation>List</Representation>
+									<SelectionMode>SingleRow</SelectionMode>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>ТП_УслугаВБазе</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ТП_УслугаВБазеКонтекстноеМеню" id="67"/>
+									<AutoCommandBar name="ТП_УслугаВБазеКоманднаяПанель" id="68"/>
+									<ExtendedTooltip name="ТП_УслугаВБазеРасширеннаяПодсказка" id="69"/>
+									<SearchStringAddition name="ТП_УслугаВБазеСтрокаПоиска" id="70">
+										<AdditionSource>
+											<Item>ТП_УслугаВБазе</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ТП_УслугаВБазеСтрокаПоискаКонтекстноеМеню" id="73"/>
+										<ExtendedTooltip name="ТП_УслугаВБазеСтрокаПоискаРасширеннаяПодсказка" id="74"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ТП_УслугаВБазеСостояниеПросмотра" id="75">
+										<AdditionSource>
+											<Item>ТП_УслугаВБазе</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ТП_УслугаВБазеСостояниеПросмотраКонтекстноеМеню" id="78"/>
+										<ExtendedTooltip name="ТП_УслугаВБазеСостояниеПросмотраРасширеннаяПодсказка" id="79"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ТП_УслугаВБазеУправлениеПоиском" id="80">
+										<AdditionSource>
+											<Item>ТП_УслугаВБазе</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ТП_УслугаВБазеУправлениеПоискомКонтекстноеМеню" id="83"/>
+										<ExtendedTooltip name="ТП_УслугаВБазеУправлениеПоискомРасширеннаяПодсказка" id="84"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="OnEditEnd">ТП_УслугаВБазеПриОкончанииРедактирования</Event>
+										<Event name="BeforeAddRow">ТП_УслугаВБазеПередНачаломДобавления</Event>
+										<Event name="BeforeDeleteRow">ТП_УслугаВБазеПередУдалением</Event>
+										<Event name="BeforeEditEnd">ТП_УслугаВБазеПередОкончаниемРедактирования</Event>
+										<Event name="OnStartEdit">ТП_УслугаВБазеПриНачалеРедактирования</Event>
+									</Events>
+									<ChildItems>
+										<InputField name="ТП_УслугаВБазеУслугаВБазе" id="91">
+											<DataPath>ТП_УслугаВБазе.УслугаВБазе</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТП_УслугаВБазеУслугаВБазеКонтекстноеМеню" id="92"/>
+											<ExtendedTooltip name="ТП_УслугаВБазеУслугаВБазеРасширеннаяПодсказка" id="93"/>
+											<Events>
+												<Event name="StartChoice">ТП_УслугаВБазеУслугаВБазеНачалоВыбора</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаДополнительныеНастройки" id="311">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дополнительные настройки</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаДополнительныеНастройкиРасширеннаяПодсказка" id="312"/>
+					<ChildItems>
+						<RadioButtonField name="ВыводРеквизитаЛицевогоСчета" id="313">
+							<DataPath>Объект.ВыводРеквизитаЛицевогоСчета</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>В колонку "Лицевой счет в организации ЖКХ" выводить</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Left</TitleLocation>
+							<RadioButtonType>Auto</RadioButtonType>
+							<ColumnsCount>1</ColumnsCount>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Код</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">0</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Наименование</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">1</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Идентификатор</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">2</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="ВыводРеквизитаЛицевогоСчетаКонтекстноеМеню" id="314"/>
+							<ExtendedTooltip name="ВыводРеквизитаЛицевогоСчетаРасширеннаяПодсказка" id="315"/>
+						</RadioButtonField>
+						<LabelDecoration name="НадписьПоясненияИдентификации" id="316">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<TextColor>style:УПЖКХ_ТекстСправочнойНадписи</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Если выбрано значение «Код», то при заполнении таблицы выгрузки в колонку "Лицевой счет в организации ЖКХ" будет попадать значение реквизита "Код" справочника "Лицевые счета. Если выбрано значение "Наименование" – значения реквизита "Наименование". Если выбрано значение "Идентификатор" – значения реквизита "Идентификатор".</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="НадписьПоясненияИдентификацииКонтекстноеМеню" id="317"/>
+							<ExtendedTooltip name="НадписьПоясненияИдентификацииРасширеннаяПодсказка" id="318"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<CommandBar name="ГруппаКоманднаяПанель" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа командная панель</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalLocation>Right</HorizontalLocation>
+			<ExtendedTooltip name="ГруппаКоманднаяПанельРасширеннаяПодсказка" id="29"/>
+			<ChildItems>
+				<Button name="ФормаКомандаСохранить" id="30">
+					<Type>CommandBarButton</Type>
+					<Representation>PictureAndText</Representation>
+					<DefaultButton>true</DefaultButton>
+					<CommandName>Form.Command.КомандаСохранить</CommandName>
+					<Picture>
+						<xr:Ref>StdPicture.SaveFile</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ФормаКомандаСохранитьРасширеннаяПодсказка" id="31"/>
+				</Button>
+				<Button name="Закрыть" id="32">
+					<Type>CommandBarButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Form.StandardCommand.Close</CommandName>
+					<ExtendedTooltip name="ЗакрытьРасширеннаяПодсказка" id="33"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.УПЖКХ_ВыгрузкиВОрганыСоцЗащиты</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ТП_УслугаВБазе" id="2">
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="УслугаВБазе" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Услуга в базе</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.КВП_Услуги</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ПризнакУдаления" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Признак удаления</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПредыдущаяУслуга" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предыдущая услуга</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.КВП_Услуги</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаСохранить" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда сохранить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаСохранить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

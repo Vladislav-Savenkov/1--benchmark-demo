@@ -1,0 +1,1002 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Краснояркий край: Выгрузка льготников (вариант 2)</v8:content>
+		</v8:item>
+	</Title>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаПанельКоманд" id="640">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПанельКомандРасширеннаяПодсказка" id="641"/>
+			<ChildItems>
+				<Button name="СправочнаяИнформация" id="646">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<DefaultItem>true</DefaultItem>
+					<Height>1</Height>
+					<CommandName>Form.Command.КомандаСправочнаяИнформация</CommandName>
+					<BackColor>#FFFF99</BackColor>
+					<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>1. Инструкция</v8:content>
+						</v8:item>
+					</Title>
+					<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+					<ExtendedTooltip name="СправочнаяИнформацияРасширеннаяПодсказка" id="647"/>
+				</Button>
+				<Button name="Настройка" id="642">
+					<Type>UsualButton</Type>
+					<Height>1</Height>
+					<CommandName>Form.Command.КомандаНастройка</CommandName>
+					<BackColor>#FFFF99</BackColor>
+					<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>2. Настройка</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="НастройкаРасширеннаяПодсказка" id="643"/>
+				</Button>
+				<Button name="ЗаполнитьВсе" id="644">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.КомандаЗаполнитьВсе</CommandName>
+					<BackColor>#FFFF99</BackColor>
+					<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>3. Заполнить все</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ЗаполнитьВсеРасширеннаяПодсказка" id="645"/>
+				</Button>
+				<Button name="ВыгрузитьВсе" id="374">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.КомандаВыгрузитьВсе</CommandName>
+					<BackColor>#FFFF99</BackColor>
+					<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>4. Выгрузить все</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ВыгрузитьВсеРасширеннаяПодсказка" id="375"/>
+				</Button>
+				<CommandBar name="ГруппаЕще" id="648">
+					<ExtendedTooltip name="ГруппаЕщеРасширеннаяПодсказка" id="649"/>
+					<ChildItems>
+						<Button name="ИзменитьФорму" id="650">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+							<ExtendedTooltip name="ИзменитьФормуРасширеннаяПодсказка" id="651"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаШапка" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаШапкаСлева" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шапка слева</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шапка слева</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаШапкаСлеваРасширеннаяПодсказка" id="4"/>
+					<ChildItems>
+						<InputField name="ПериодСтрокой" id="15">
+							<DataPath>ПериодСтрокой</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Период</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сведения об инвалидности действуют с</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ChoiceButton>true</ChoiceButton>
+							<SpinButton>true</SpinButton>
+							<ChoiceButtonPicture>
+								<xr:Ref>StdPicture.InputFieldCalendar</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</ChoiceButtonPicture>
+							<ContextMenu name="ПериодСтрокойКонтекстноеМеню" id="16"/>
+							<ExtendedTooltip name="ПериодСтрокойExtendedTooltip" id="17"/>
+							<Events>
+								<Event name="OnChange">ПериодСтрокойПриИзменении</Event>
+								<Event name="AutoComplete">ПериодСтрокойАвтоПодбор</Event>
+								<Event name="StartChoice">ПериодСтрокойНачалоВыбора</Event>
+								<Event name="Tuning">ПериодСтрокойРегулирование</Event>
+								<Event name="TextEditEnd">ПериодСтрокойОкончаниеВводаТекста</Event>
+							</Events>
+						</InputField>
+						<InputField name="Организация" id="9">
+							<DataPath>Объект.Организация</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="10"/>
+							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="11"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаШапкаСправа" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шапка справа</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шапка справа</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаШапкаСправаРасширеннаяПодсказка" id="6"/>
+					<ChildItems>
+						<InputField name="ЛицевыеСчета" id="12">
+							<DataPath>Объект.ЛицевыеСчета</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<ChoiceFoldersAndItems>Folders</ChoiceFoldersAndItems>
+							<ContextMenu name="ЛицевыеСчетаКонтекстноеМеню" id="13"/>
+							<ExtendedTooltip name="ЛицевыеСчетаРасширеннаяПодсказка" id="14"/>
+						</InputField>
+						<InputField name="ИмяКаталогаВыгрузки" id="185">
+							<DataPath>ИмяКаталогаВыгрузки</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Каталог выгрузки</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<ChoiceButton>true</ChoiceButton>
+							<OpenButton>true</OpenButton>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="ИмяКаталогаВыгрузкиКонтекстноеМеню" id="186"/>
+							<ExtendedTooltip name="ИмяКаталогаВыгрузкиРасширеннаяПодсказка" id="187"/>
+							<Events>
+								<Event name="StartChoice">ФайлКвартиросъемщикиНачалоВыбора</Event>
+								<Event name="Opening">ИмяКаталогаВыгрузкиОткрытие</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="ПанельВыгрузки" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Панель выгрузки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Панель выгрузки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ПанельВыгрузкиРасширеннаяПодсказка" id="23"/>
+			<ChildItems>
+				<Page name="Квартиросъемщики" id="26">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Квартиросъемщики</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Квартиросъемщики</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="КвартиросъемщикиРасширеннаяПодсказка" id="27"/>
+					<ChildItems>
+						<Table name="КрасноярскийКрай_КвартиросъемщикиДоработка" id="409">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.КрасноярскийКрай_КвартиросъемщикиДоработка</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="КрасноярскийКрай_КвартиросъемщикиДоработкаКонтекстноеМеню" id="410"/>
+							<AutoCommandBar name="КрасноярскийКрай_КвартиросъемщикиДоработкаКоманднаяПанель" id="411">
+								<ChildItems>
+									<Button name="КрасноярскийКрай_КвартиросъемщикиДоработкаКнопкаЗаполнить" id="497">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.КомандаКвартиросъемщикиЗаполнить</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Заполнить</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="КрасноярскийКрай_КвартиросъемщикиДоработкаКнопкаЗаполнитьРасширеннаяПодсказка" id="498"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="КрасноярскийКрай_КвартиросъемщикиДоработкаРасширеннаяПодсказка" id="412"/>
+							<SearchStringAddition name="КрасноярскийКрай_КвартиросъемщикиДоработкаСтрокаПоиска" id="413">
+								<AdditionSource>
+									<Item>КрасноярскийКрай_КвартиросъемщикиДоработка</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="КрасноярскийКрай_КвартиросъемщикиДоработкаСтрокаПоискаКонтекстноеМеню" id="416"/>
+								<ExtendedTooltip name="КрасноярскийКрай_КвартиросъемщикиДоработкаСтрокаПоискаРасширеннаяПодсказка" id="417"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="КрасноярскийКрай_КвартиросъемщикиДоработкаСостояниеПросмотра" id="418">
+								<AdditionSource>
+									<Item>КрасноярскийКрай_КвартиросъемщикиДоработка</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="КрасноярскийКрай_КвартиросъемщикиДоработкаСостояниеПросмотраКонтекстноеМеню" id="421"/>
+								<ExtendedTooltip name="КрасноярскийКрай_КвартиросъемщикиДоработкаСостояниеПросмотраРасширеннаяПодсказка" id="422"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="КрасноярскийКрай_КвартиросъемщикиДоработкаУправлениеПоиском" id="423">
+								<AdditionSource>
+									<Item>КрасноярскийКрай_КвартиросъемщикиДоработка</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="КрасноярскийКрай_КвартиросъемщикиДоработкаУправлениеПоискомКонтекстноеМеню" id="426"/>
+								<ExtendedTooltip name="КрасноярскийКрай_КвартиросъемщикиДоработкаУправлениеПоискомРасширеннаяПодсказка" id="427"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="КрасноярскийКрай_КвартиросъемщикиДоработкаНомерСтроки" id="428">
+									<DataPath>Объект.КрасноярскийКрай_КвартиросъемщикиДоработка.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FixingInTable>Left</FixingInTable>
+									<ContextMenu name="КрасноярскийКрай_КвартиросъемщикиДоработкаНомерСтрокиКонтекстноеМеню" id="429"/>
+									<ExtendedTooltip name="КрасноярскийКрай_КвартиросъемщикиДоработкаНомерСтрокиРасширеннаяПодсказка" id="430"/>
+								</LabelField>
+								<InputField name="КрасноярскийКрай_КвартиросъемщикиДоработкаЛицевойСчет" id="494">
+									<DataPath>Объект.КрасноярскийКрай_КвартиросъемщикиДоработка.ЛицевойСчет</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Лицевой счет в Базе</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<FixingInTable>Left</FixingInTable>
+									<ContextMenu name="КрасноярскийКрай_КвартиросъемщикиДоработкаЛицевойСчетКонтекстноеМеню" id="495"/>
+									<ExtendedTooltip name="КрасноярскийКрай_КвартиросъемщикиДоработкаЛицевойСчетРасширеннаяПодсказка" id="496"/>
+								</InputField>
+								<InputField name="КрасноярскийКрай_КвартиросъемщикиДоработкаОтветственныйСобственник" id="491">
+									<DataPath>Объект.КрасноярскийКрай_КвартиросъемщикиДоработка.ОтветственныйСобственник</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FixingInTable>Left</FixingInTable>
+									<ContextMenu name="КрасноярскийКрай_КвартиросъемщикиДоработкаОтветственныйСобственникКонтекстноеМеню" id="492"/>
+									<ExtendedTooltip name="КрасноярскийКрай_КвартиросъемщикиДоработкаОтветственныйСобственникРасширеннаяПодсказка" id="493"/>
+								</InputField>
+								<InputField name="КрасноярскийКрай_КвартиросъемщикиДоработкаID" id="431">
+									<DataPath>Объект.КрасноярскийКрай_КвартиросъемщикиДоработка.ID</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КрасноярскийКрай_КвартиросъемщикиДоработкаIDКонтекстноеМеню" id="432"/>
+									<ExtendedTooltip name="КрасноярскийКрай_КвартиросъемщикиДоработкаIDРасширеннаяПодсказка" id="433"/>
+								</InputField>
+								<InputField name="КрасноярскийКрай_КвартиросъемщикиДоработкаPUNKT" id="434">
+									<DataPath>Объект.КрасноярскийКрай_КвартиросъемщикиДоработка.PUNKT</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КрасноярскийКрай_КвартиросъемщикиДоработкаPUNKTКонтекстноеМеню" id="435"/>
+									<ExtendedTooltip name="КрасноярскийКрай_КвартиросъемщикиДоработкаPUNKTРасширеннаяПодсказка" id="436"/>
+								</InputField>
+								<InputField name="КрасноярскийКрай_КвартиросъемщикиДоработкаTIP" id="437">
+									<DataPath>Объект.КрасноярскийКрай_КвартиросъемщикиДоработка.TIP</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КрасноярскийКрай_КвартиросъемщикиДоработкаTIPКонтекстноеМеню" id="438"/>
+									<ExtendedTooltip name="КрасноярскийКрай_КвартиросъемщикиДоработкаTIPРасширеннаяПодсказка" id="439"/>
+								</InputField>
+								<InputField name="КрасноярскийКрай_КвартиросъемщикиДоработкаUL" id="440">
+									<DataPath>Объект.КрасноярскийКрай_КвартиросъемщикиДоработка.UL</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КрасноярскийКрай_КвартиросъемщикиДоработкаULКонтекстноеМеню" id="441"/>
+									<ExtendedTooltip name="КрасноярскийКрай_КвартиросъемщикиДоработкаULРасширеннаяПодсказка" id="442"/>
+								</InputField>
+								<InputField name="КрасноярскийКрай_КвартиросъемщикиДоработкаDOM" id="443">
+									<DataPath>Объект.КрасноярскийКрай_КвартиросъемщикиДоработка.DOM</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КрасноярскийКрай_КвартиросъемщикиДоработкаDOMКонтекстноеМеню" id="444"/>
+									<ExtendedTooltip name="КрасноярскийКрай_КвартиросъемщикиДоработкаDOMРасширеннаяПодсказка" id="445"/>
+								</InputField>
+								<InputField name="КрасноярскийКрай_КвартиросъемщикиДоработкаKOR" id="446">
+									<DataPath>Объект.КрасноярскийКрай_КвартиросъемщикиДоработка.KOR</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КрасноярскийКрай_КвартиросъемщикиДоработкаKORКонтекстноеМеню" id="447"/>
+									<ExtendedTooltip name="КрасноярскийКрай_КвартиросъемщикиДоработкаKORРасширеннаяПодсказка" id="448"/>
+								</InputField>
+								<InputField name="КрасноярскийКрай_КвартиросъемщикиДоработкаBDOM" id="449">
+									<DataPath>Объект.КрасноярскийКрай_КвартиросъемщикиДоработка.BDOM</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КрасноярскийКрай_КвартиросъемщикиДоработкаBDOMКонтекстноеМеню" id="450"/>
+									<ExtendedTooltip name="КрасноярскийКрай_КвартиросъемщикиДоработкаBDOMРасширеннаяПодсказка" id="451"/>
+								</InputField>
+								<InputField name="КрасноярскийКрай_КвартиросъемщикиДоработкаKV" id="452">
+									<DataPath>Объект.КрасноярскийКрай_КвартиросъемщикиДоработка.KV</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КрасноярскийКрай_КвартиросъемщикиДоработкаKVКонтекстноеМеню" id="453"/>
+									<ExtendedTooltip name="КрасноярскийКрай_КвартиросъемщикиДоработкаKVРасширеннаяПодсказка" id="454"/>
+								</InputField>
+								<InputField name="КрасноярскийКрай_КвартиросъемщикиДоработкаBKV" id="455">
+									<DataPath>Объект.КрасноярскийКрай_КвартиросъемщикиДоработка.BKV</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КрасноярскийКрай_КвартиросъемщикиДоработкаBKVКонтекстноеМеню" id="456"/>
+									<ExtendedTooltip name="КрасноярскийКрай_КвартиросъемщикиДоработкаBKVРасширеннаяПодсказка" id="457"/>
+								</InputField>
+								<InputField name="КрасноярскийКрай_КвартиросъемщикиДоработкаOTCH" id="458">
+									<DataPath>Объект.КрасноярскийКрай_КвартиросъемщикиДоработка.OTCH</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КрасноярскийКрай_КвартиросъемщикиДоработкаOTCHКонтекстноеМеню" id="459"/>
+									<ExtendedTooltip name="КрасноярскийКрай_КвартиросъемщикиДоработкаOTCHРасширеннаяПодсказка" id="460"/>
+								</InputField>
+								<InputField name="КрасноярскийКрай_КвартиросъемщикиДоработкаSEM" id="461">
+									<DataPath>Объект.КрасноярскийКрай_КвартиросъемщикиДоработка.SEM</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КрасноярскийКрай_КвартиросъемщикиДоработкаSEMКонтекстноеМеню" id="462"/>
+									<ExtendedTooltip name="КрасноярскийКрай_КвартиросъемщикиДоработкаSEMРасширеннаяПодсказка" id="463"/>
+								</InputField>
+								<InputField name="КрасноярскийКрай_КвартиросъемщикиДоработкаPL" id="464">
+									<DataPath>Объект.КрасноярскийКрай_КвартиросъемщикиДоработка.PL</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КрасноярскийКрай_КвартиросъемщикиДоработкаPLКонтекстноеМеню" id="465"/>
+									<ExtendedTooltip name="КрасноярскийКрай_КвартиросъемщикиДоработкаPLРасширеннаяПодсказка" id="466"/>
+								</InputField>
+								<CheckBoxField name="КрасноярскийКрай_КвартиросъемщикиДоработкаDOLG" id="467">
+									<DataPath>Объект.КрасноярскийКрай_КвартиросъемщикиДоработка.DOLG</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="КрасноярскийКрай_КвартиросъемщикиДоработкаDOLGКонтекстноеМеню" id="468"/>
+									<ExtendedTooltip name="КрасноярскийКрай_КвартиросъемщикиДоработкаDOLGРасширеннаяПодсказка" id="469"/>
+								</CheckBoxField>
+								<InputField name="КрасноярскийКрай_КвартиросъемщикиДоработкаZ" id="470">
+									<DataPath>Объект.КрасноярскийКрай_КвартиросъемщикиДоработка.Z</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КрасноярскийКрай_КвартиросъемщикиДоработкаZКонтекстноеМеню" id="471"/>
+									<ExtendedTooltip name="КрасноярскийКрай_КвартиросъемщикиДоработкаZРасширеннаяПодсказка" id="472"/>
+								</InputField>
+								<InputField name="КрасноярскийКрай_КвартиросъемщикиДоработкаKVSM" id="473">
+									<DataPath>Объект.КрасноярскийКрай_КвартиросъемщикиДоработка.KVSM</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoMarkIncomplete>true</AutoMarkIncomplete>
+									<ContextMenu name="КрасноярскийКрай_КвартиросъемщикиДоработкаKVSMКонтекстноеМеню" id="474"/>
+									<ExtendedTooltip name="КрасноярскийКрай_КвартиросъемщикиДоработкаKVSMРасширеннаяПодсказка" id="475"/>
+								</InputField>
+								<InputField name="КрасноярскийКрай_КвартиросъемщикиДоработкаSDOLG" id="476">
+									<DataPath>Объект.КрасноярскийКрай_КвартиросъемщикиДоработка.SDOLG</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КрасноярскийКрай_КвартиросъемщикиДоработкаSDOLGКонтекстноеМеню" id="477"/>
+									<ExtendedTooltip name="КрасноярскийКрай_КвартиросъемщикиДоработкаSDOLGРасширеннаяПодсказка" id="478"/>
+								</InputField>
+								<InputField name="КрасноярскийКрай_КвартиросъемщикиДоработкаPER_B" id="479">
+									<DataPath>Объект.КрасноярскийКрай_КвартиросъемщикиДоработка.PER_B</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КрасноярскийКрай_КвартиросъемщикиДоработкаPER_BКонтекстноеМеню" id="480"/>
+									<ExtendedTooltip name="КрасноярскийКрай_КвартиросъемщикиДоработкаPER_BРасширеннаяПодсказка" id="481"/>
+								</InputField>
+								<InputField name="КрасноярскийКрай_КвартиросъемщикиДоработкаPER_E" id="482">
+									<DataPath>Объект.КрасноярскийКрай_КвартиросъемщикиДоработка.PER_E</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КрасноярскийКрай_КвартиросъемщикиДоработкаPER_EКонтекстноеМеню" id="483"/>
+									<ExtendedTooltip name="КрасноярскийКрай_КвартиросъемщикиДоработкаPER_EРасширеннаяПодсказка" id="484"/>
+								</InputField>
+								<CheckBoxField name="КрасноярскийКрай_КвартиросъемщикиДоработкаSOG" id="485">
+									<DataPath>Объект.КрасноярскийКрай_КвартиросъемщикиДоработка.SOG</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="КрасноярскийКрай_КвартиросъемщикиДоработкаSOGКонтекстноеМеню" id="486"/>
+									<ExtendedTooltip name="КрасноярскийКрай_КвартиросъемщикиДоработкаSOGРасширеннаяПодсказка" id="487"/>
+								</CheckBoxField>
+								<CheckBoxField name="КрасноярскийКрай_КвартиросъемщикиДоработкаIUSOG" id="488">
+									<DataPath>Объект.КрасноярскийКрай_КвартиросъемщикиДоработка.IUSOG</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="КрасноярскийКрай_КвартиросъемщикиДоработкаIUSOGКонтекстноеМеню" id="489"/>
+									<ExtendedTooltip name="КрасноярскийКрай_КвартиросъемщикиДоработкаIUSOGРасширеннаяПодсказка" id="490"/>
+								</CheckBoxField>
+								<InputField name="КрасноярскийКрай_КвартиросъемщикиДоработкаPLODN" id="652">
+									<DataPath>Объект.КрасноярскийКрай_КвартиросъемщикиДоработка.PLODN</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КрасноярскийКрай_КвартиросъемщикиДоработкаPLODNКонтекстноеМеню" id="653"/>
+									<ExtendedTooltip name="КрасноярскийКрай_КвартиросъемщикиДоработкаPLODNРасширеннаяПодсказка" id="654"/>
+								</InputField>
+								<InputField name="КрасноярскийКрай_КвартиросъемщикиДоработкаPLODN_V" id="655">
+									<DataPath>Объект.КрасноярскийКрай_КвартиросъемщикиДоработка.PLODN_V</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КрасноярскийКрай_КвартиросъемщикиДоработкаPLODN_VКонтекстноеМеню" id="656"/>
+									<ExtendedTooltip name="КрасноярскийКрай_КвартиросъемщикиДоработкаPLODN_VРасширеннаяПодсказка" id="657"/>
+								</InputField>
+								<InputField name="КрасноярскийКрай_КвартиросъемщикиДоработкаFIAS_ID" id="658">
+									<DataPath>Объект.КрасноярскийКрай_КвартиросъемщикиДоработка.FIAS_ID</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КрасноярскийКрай_КвартиросъемщикиДоработкаFIAS_IDКонтекстноеМеню" id="659"/>
+									<ExtendedTooltip name="КрасноярскийКрай_КвартиросъемщикиДоработкаFIAS_IDРасширеннаяПодсказка" id="660"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СуммыОплатПоУслугам" id="28">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Суммы оплат по услугам</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Суммы оплат по услугам</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СуммыОплатПоУслугамРасширеннаяПодсказка" id="29"/>
+					<ChildItems>
+						<Table name="КрасноярскийКрай_СуммыОплатыУслугДоработка" id="499">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.КрасноярскийКрай_СуммыОплатыУслугДоработка</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="КрасноярскийКрай_СуммыОплатыУслугДоработкаКонтекстноеМеню" id="500"/>
+							<AutoCommandBar name="КрасноярскийКрай_СуммыОплатыУслугДоработкаКоманднаяПанель" id="501">
+								<ChildItems>
+									<Button name="КрасноярскийКрай_СуммыОплатыУслугДоработкаКнопкаЗаполнить" id="557">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.КомандаСуммыОплатыУслугЗаполнить</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Заполнить</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="КрасноярскийКрай_СуммыОплатыУслугДоработкаКнопкаЗаполнитьРасширеннаяПодсказка" id="558"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="КрасноярскийКрай_СуммыОплатыУслугДоработкаРасширеннаяПодсказка" id="502"/>
+							<SearchStringAddition name="КрасноярскийКрай_СуммыОплатыУслугДоработкаСтрокаПоиска" id="503">
+								<AdditionSource>
+									<Item>КрасноярскийКрай_СуммыОплатыУслугДоработка</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="КрасноярскийКрай_СуммыОплатыУслугДоработкаСтрокаПоискаКонтекстноеМеню" id="506"/>
+								<ExtendedTooltip name="КрасноярскийКрай_СуммыОплатыУслугДоработкаСтрокаПоискаРасширеннаяПодсказка" id="507"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="КрасноярскийКрай_СуммыОплатыУслугДоработкаСостояниеПросмотра" id="508">
+								<AdditionSource>
+									<Item>КрасноярскийКрай_СуммыОплатыУслугДоработка</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="КрасноярскийКрай_СуммыОплатыУслугДоработкаСостояниеПросмотраКонтекстноеМеню" id="511"/>
+								<ExtendedTooltip name="КрасноярскийКрай_СуммыОплатыУслугДоработкаСостояниеПросмотраРасширеннаяПодсказка" id="512"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="КрасноярскийКрай_СуммыОплатыУслугДоработкаУправлениеПоиском" id="513">
+								<AdditionSource>
+									<Item>КрасноярскийКрай_СуммыОплатыУслугДоработка</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="КрасноярскийКрай_СуммыОплатыУслугДоработкаУправлениеПоискомКонтекстноеМеню" id="516"/>
+								<ExtendedTooltip name="КрасноярскийКрай_СуммыОплатыУслугДоработкаУправлениеПоискомРасширеннаяПодсказка" id="517"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="КрасноярскийКрай_СуммыОплатыУслугДоработкаНомерСтроки" id="518">
+									<DataPath>Объект.КрасноярскийКрай_СуммыОплатыУслугДоработка.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FixingInTable>Left</FixingInTable>
+									<ContextMenu name="КрасноярскийКрай_СуммыОплатыУслугДоработкаНомерСтрокиКонтекстноеМеню" id="519"/>
+									<ExtendedTooltip name="КрасноярскийКрай_СуммыОплатыУслугДоработкаНомерСтрокиРасширеннаяПодсказка" id="520"/>
+								</LabelField>
+								<InputField name="КрасноярскийКрай_СуммыОплатыУслугДоработкаЛицевойСчет" id="637">
+									<DataPath>Объект.КрасноярскийКрай_СуммыОплатыУслугДоработка.ЛицевойСчет</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FixingInTable>Left</FixingInTable>
+									<ContextMenu name="КрасноярскийКрай_СуммыОплатыУслугДоработкаЛицевойСчетКонтекстноеМеню" id="638"/>
+									<ExtendedTooltip name="КрасноярскийКрай_СуммыОплатыУслугДоработкаЛицевойСчетРасширеннаяПодсказка" id="639"/>
+								</InputField>
+								<InputField name="КрасноярскийКрай_СуммыОплатыУслугДоработкаNN" id="521">
+									<DataPath>Объект.КрасноярскийКрай_СуммыОплатыУслугДоработка.NN</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КрасноярскийКрай_СуммыОплатыУслугДоработкаNNКонтекстноеМеню" id="522"/>
+									<ExtendedTooltip name="КрасноярскийКрай_СуммыОплатыУслугДоработкаNNРасширеннаяПодсказка" id="523"/>
+								</InputField>
+								<InputField name="КрасноярскийКрай_СуммыОплатыУслугДоработкаID" id="524">
+									<DataPath>Объект.КрасноярскийКрай_СуммыОплатыУслугДоработка.ID</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КрасноярскийКрай_СуммыОплатыУслугДоработкаIDКонтекстноеМеню" id="525"/>
+									<ExtendedTooltip name="КрасноярскийКрай_СуммыОплатыУслугДоработкаIDРасширеннаяПодсказка" id="526"/>
+								</InputField>
+								<InputField name="КрасноярскийКрай_СуммыОплатыУслугДоработкаUSL" id="527">
+									<DataPath>Объект.КрасноярскийКрай_СуммыОплатыУслугДоработка.USL</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КрасноярскийКрай_СуммыОплатыУслугДоработкаUSLКонтекстноеМеню" id="528"/>
+									<ExtendedTooltip name="КрасноярскийКрай_СуммыОплатыУслугДоработкаUSLРасширеннаяПодсказка" id="529"/>
+								</InputField>
+								<InputField name="КрасноярскийКрай_СуммыОплатыУслугДоработкаS1" id="530">
+									<DataPath>Объект.КрасноярскийКрай_СуммыОплатыУслугДоработка.S1</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КрасноярскийКрай_СуммыОплатыУслугДоработкаS1КонтекстноеМеню" id="531"/>
+									<ExtendedTooltip name="КрасноярскийКрай_СуммыОплатыУслугДоработкаS1РасширеннаяПодсказка" id="532"/>
+								</InputField>
+								<InputField name="КрасноярскийКрай_СуммыОплатыУслугДоработкаS2" id="533">
+									<DataPath>Объект.КрасноярскийКрай_СуммыОплатыУслугДоработка.S2</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КрасноярскийКрай_СуммыОплатыУслугДоработкаS2КонтекстноеМеню" id="534"/>
+									<ExtendedTooltip name="КрасноярскийКрай_СуммыОплатыУслугДоработкаS2РасширеннаяПодсказка" id="535"/>
+								</InputField>
+								<InputField name="КрасноярскийКрай_СуммыОплатыУслугДоработкаS3" id="536">
+									<DataPath>Объект.КрасноярскийКрай_СуммыОплатыУслугДоработка.S3</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КрасноярскийКрай_СуммыОплатыУслугДоработкаS3КонтекстноеМеню" id="537"/>
+									<ExtendedTooltip name="КрасноярскийКрай_СуммыОплатыУслугДоработкаS3РасширеннаяПодсказка" id="538"/>
+								</InputField>
+								<InputField name="КрасноярскийКрай_СуммыОплатыУслугДоработкаS4" id="539">
+									<DataPath>Объект.КрасноярскийКрай_СуммыОплатыУслугДоработка.S4</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КрасноярскийКрай_СуммыОплатыУслугДоработкаS4КонтекстноеМеню" id="540"/>
+									<ExtendedTooltip name="КрасноярскийКрай_СуммыОплатыУслугДоработкаS4РасширеннаяПодсказка" id="541"/>
+								</InputField>
+								<InputField name="КрасноярскийКрай_СуммыОплатыУслугДоработкаS5" id="542">
+									<DataPath>Объект.КрасноярскийКрай_СуммыОплатыУслугДоработка.S5</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КрасноярскийКрай_СуммыОплатыУслугДоработкаS5КонтекстноеМеню" id="543"/>
+									<ExtendedTooltip name="КрасноярскийКрай_СуммыОплатыУслугДоработкаS5РасширеннаяПодсказка" id="544"/>
+								</InputField>
+								<InputField name="КрасноярскийКрай_СуммыОплатыУслугДоработкаPER" id="545">
+									<DataPath>Объект.КрасноярскийКрай_СуммыОплатыУслугДоработка.PER</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КрасноярскийКрай_СуммыОплатыУслугДоработкаPERКонтекстноеМеню" id="546"/>
+									<ExtendedTooltip name="КрасноярскийКрай_СуммыОплатыУслугДоработкаPERРасширеннаяПодсказка" id="547"/>
+								</InputField>
+								<CheckBoxField name="КрасноярскийКрай_СуммыОплатыУслугДоработкаCHET" id="548">
+									<DataPath>Объект.КрасноярскийКрай_СуммыОплатыУслугДоработка.CHET</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="КрасноярскийКрай_СуммыОплатыУслугДоработкаCHETКонтекстноеМеню" id="549"/>
+									<ExtendedTooltip name="КрасноярскийКрай_СуммыОплатыУслугДоработкаCHETРасширеннаяПодсказка" id="550"/>
+								</CheckBoxField>
+								<InputField name="КрасноярскийКрай_СуммыОплатыУслугДоработкаOTCH" id="551">
+									<DataPath>Объект.КрасноярскийКрай_СуммыОплатыУслугДоработка.OTCH</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КрасноярскийКрай_СуммыОплатыУслугДоработкаOTCHКонтекстноеМеню" id="552"/>
+									<ExtendedTooltip name="КрасноярскийКрай_СуммыОплатыУслугДоработкаOTCHРасширеннаяПодсказка" id="553"/>
+								</InputField>
+								<CheckBoxField name="КрасноярскийКрай_СуммыОплатыУслугДоработкаITOG" id="554">
+									<DataPath>Объект.КрасноярскийКрай_СуммыОплатыУслугДоработка.ITOG</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="КрасноярскийКрай_СуммыОплатыУслугДоработкаITOGКонтекстноеМеню" id="555"/>
+									<ExtendedTooltip name="КрасноярскийКрай_СуммыОплатыУслугДоработкаITOGРасширеннаяПодсказка" id="556"/>
+								</CheckBoxField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СведенияОЧленахСемьи" id="24">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сведения о членах семьи</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сведения о членах семьи</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СведенияОЧленахСемьиРасширеннаяПодсказка" id="25"/>
+					<ChildItems>
+						<Table name="КрасноярскийКрай_ЧленыСемьиДоработка" id="559">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.КрасноярскийКрай_ЧленыСемьиДоработка</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="КрасноярскийКрай_ЧленыСемьиДоработкаКонтекстноеМеню" id="560"/>
+							<AutoCommandBar name="КрасноярскийКрай_ЧленыСемьиДоработкаКоманднаяПанель" id="561">
+								<ChildItems>
+									<Button name="КрасноярскийКрай_ЧленыСемьиДоработкаКнопкаЗаполнить" id="629">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.КомандаЧленыСемьиЗаполнить</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Заполнить</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="КрасноярскийКрай_ЧленыСемьиДоработкаКнопкаЗаполнитьРасширеннаяПодсказка" id="630"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="КрасноярскийКрай_ЧленыСемьиДоработкаРасширеннаяПодсказка" id="562"/>
+							<SearchStringAddition name="КрасноярскийКрай_ЧленыСемьиДоработкаСтрокаПоиска" id="563">
+								<AdditionSource>
+									<Item>КрасноярскийКрай_ЧленыСемьиДоработка</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="КрасноярскийКрай_ЧленыСемьиДоработкаСтрокаПоискаКонтекстноеМеню" id="566"/>
+								<ExtendedTooltip name="КрасноярскийКрай_ЧленыСемьиДоработкаСтрокаПоискаРасширеннаяПодсказка" id="567"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="КрасноярскийКрай_ЧленыСемьиДоработкаСостояниеПросмотра" id="568">
+								<AdditionSource>
+									<Item>КрасноярскийКрай_ЧленыСемьиДоработка</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="КрасноярскийКрай_ЧленыСемьиДоработкаСостояниеПросмотраКонтекстноеМеню" id="571"/>
+								<ExtendedTooltip name="КрасноярскийКрай_ЧленыСемьиДоработкаСостояниеПросмотраРасширеннаяПодсказка" id="572"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="КрасноярскийКрай_ЧленыСемьиДоработкаУправлениеПоиском" id="573">
+								<AdditionSource>
+									<Item>КрасноярскийКрай_ЧленыСемьиДоработка</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="КрасноярскийКрай_ЧленыСемьиДоработкаУправлениеПоискомКонтекстноеМеню" id="576"/>
+								<ExtendedTooltip name="КрасноярскийКрай_ЧленыСемьиДоработкаУправлениеПоискомРасширеннаяПодсказка" id="577"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="КрасноярскийКрай_ЧленыСемьиДоработкаНомерСтроки" id="578">
+									<DataPath>Объект.КрасноярскийКрай_ЧленыСемьиДоработка.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FixingInTable>Left</FixingInTable>
+									<ContextMenu name="КрасноярскийКрай_ЧленыСемьиДоработкаНомерСтрокиКонтекстноеМеню" id="579"/>
+									<ExtendedTooltip name="КрасноярскийКрай_ЧленыСемьиДоработкаНомерСтрокиРасширеннаяПодсказка" id="580"/>
+								</LabelField>
+								<InputField name="КрасноярскийКрай_ЧленыСемьиДоработкаЛицевойСчет" id="631">
+									<DataPath>Объект.КрасноярскийКрай_ЧленыСемьиДоработка.ЛицевойСчет</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FixingInTable>Left</FixingInTable>
+									<ContextMenu name="КрасноярскийКрай_ЧленыСемьиДоработкаЛицевойСчетКонтекстноеМеню" id="632"/>
+									<ExtendedTooltip name="КрасноярскийКрай_ЧленыСемьиДоработкаЛицевойСчетРасширеннаяПодсказка" id="633"/>
+								</InputField>
+								<InputField name="КрасноярскийКрай_ЧленыСемьиДоработкаЖилец" id="634">
+									<DataPath>Объект.КрасноярскийКрай_ЧленыСемьиДоработка.Жилец</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FixingInTable>Left</FixingInTable>
+									<ContextMenu name="КрасноярскийКрай_ЧленыСемьиДоработкаЖилецКонтекстноеМеню" id="635"/>
+									<ExtendedTooltip name="КрасноярскийКрай_ЧленыСемьиДоработкаЖилецРасширеннаяПодсказка" id="636"/>
+								</InputField>
+								<InputField name="КрасноярскийКрай_ЧленыСемьиДоработкаNN" id="581">
+									<DataPath>Объект.КрасноярскийКрай_ЧленыСемьиДоработка.NN</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КрасноярскийКрай_ЧленыСемьиДоработкаNNКонтекстноеМеню" id="582"/>
+									<ExtendedTooltip name="КрасноярскийКрай_ЧленыСемьиДоработкаNNРасширеннаяПодсказка" id="583"/>
+								</InputField>
+								<InputField name="КрасноярскийКрай_ЧленыСемьиДоработкаID" id="584">
+									<DataPath>Объект.КрасноярскийКрай_ЧленыСемьиДоработка.ID</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КрасноярскийКрай_ЧленыСемьиДоработкаIDКонтекстноеМеню" id="585"/>
+									<ExtendedTooltip name="КрасноярскийКрай_ЧленыСемьиДоработкаIDРасширеннаяПодсказка" id="586"/>
+								</InputField>
+								<InputField name="КрасноярскийКрай_ЧленыСемьиДоработкаFIO" id="587">
+									<DataPath>Объект.КрасноярскийКрай_ЧленыСемьиДоработка.FIO</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КрасноярскийКрай_ЧленыСемьиДоработкаFIOКонтекстноеМеню" id="588"/>
+									<ExtendedTooltip name="КрасноярскийКрай_ЧленыСемьиДоработкаFIOРасширеннаяПодсказка" id="589"/>
+								</InputField>
+								<InputField name="КрасноярскийКрай_ЧленыСемьиДоработкаDR" id="590">
+									<DataPath>Объект.КрасноярскийКрай_ЧленыСемьиДоработка.DR</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КрасноярскийКрай_ЧленыСемьиДоработкаDRКонтекстноеМеню" id="591"/>
+									<ExtendedTooltip name="КрасноярскийКрай_ЧленыСемьиДоработкаDRРасширеннаяПодсказка" id="592"/>
+								</InputField>
+								<InputField name="КрасноярскийКрай_ЧленыСемьиДоработкаSX" id="593">
+									<DataPath>Объект.КрасноярскийКрай_ЧленыСемьиДоработка.SX</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КрасноярскийКрай_ЧленыСемьиДоработкаSXКонтекстноеМеню" id="594"/>
+									<ExtendedTooltip name="КрасноярскийКрай_ЧленыСемьиДоработкаSXРасширеннаяПодсказка" id="595"/>
+								</InputField>
+								<InputField name="КрасноярскийКрай_ЧленыСемьиДоработкаVR" id="596">
+									<DataPath>Объект.КрасноярскийКрай_ЧленыСемьиДоработка.VR</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КрасноярскийКрай_ЧленыСемьиДоработкаVRКонтекстноеМеню" id="597"/>
+									<ExtendedTooltip name="КрасноярскийКрай_ЧленыСемьиДоработкаVRРасширеннаяПодсказка" id="598"/>
+								</InputField>
+								<InputField name="КрасноярскийКрай_ЧленыСемьиДоработкаUDT" id="599">
+									<DataPath>Объект.КрасноярскийКрай_ЧленыСемьиДоработка.UDT</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КрасноярскийКрай_ЧленыСемьиДоработкаUDTКонтекстноеМеню" id="600"/>
+									<ExtendedTooltip name="КрасноярскийКрай_ЧленыСемьиДоработкаUDTРасширеннаяПодсказка" id="601"/>
+								</InputField>
+								<InputField name="КрасноярскийКрай_ЧленыСемьиДоработкаUDS" id="602">
+									<DataPath>Объект.КрасноярскийКрай_ЧленыСемьиДоработка.UDS</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КрасноярскийКрай_ЧленыСемьиДоработкаUDSКонтекстноеМеню" id="603"/>
+									<ExtendedTooltip name="КрасноярскийКрай_ЧленыСемьиДоработкаUDSРасширеннаяПодсказка" id="604"/>
+								</InputField>
+								<InputField name="КрасноярскийКрай_ЧленыСемьиДоработкаUDN" id="605">
+									<DataPath>Объект.КрасноярскийКрай_ЧленыСемьиДоработка.UDN</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КрасноярскийКрай_ЧленыСемьиДоработкаUDNКонтекстноеМеню" id="606"/>
+									<ExtendedTooltip name="КрасноярскийКрай_ЧленыСемьиДоработкаUDNРасширеннаяПодсказка" id="607"/>
+								</InputField>
+								<InputField name="КрасноярскийКрай_ЧленыСемьиДоработкаUDD" id="608">
+									<DataPath>Объект.КрасноярскийКрай_ЧленыСемьиДоработка.UDD</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КрасноярскийКрай_ЧленыСемьиДоработкаUDDКонтекстноеМеню" id="609"/>
+									<ExtendedTooltip name="КрасноярскийКрай_ЧленыСемьиДоработкаUDDРасширеннаяПодсказка" id="610"/>
+								</InputField>
+								<InputField name="КрасноярскийКрай_ЧленыСемьиДоработкаORGAN" id="611">
+									<DataPath>Объект.КрасноярскийКрай_ЧленыСемьиДоработка.ORGAN</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КрасноярскийКрай_ЧленыСемьиДоработкаORGANКонтекстноеМеню" id="612"/>
+									<ExtendedTooltip name="КрасноярскийКрай_ЧленыСемьиДоработкаORGANРасширеннаяПодсказка" id="613"/>
+								</InputField>
+								<InputField name="КрасноярскийКрай_ЧленыСемьиДоработкаRO" id="614">
+									<DataPath>Объект.КрасноярскийКрай_ЧленыСемьиДоработка.RO</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КрасноярскийКрай_ЧленыСемьиДоработкаROКонтекстноеМеню" id="615"/>
+									<ExtendedTooltip name="КрасноярскийКрай_ЧленыСемьиДоработкаROРасширеннаяПодсказка" id="616"/>
+								</InputField>
+								<InputField name="КрасноярскийКрай_ЧленыСемьиДоработкаDD" id="617">
+									<DataPath>Объект.КрасноярскийКрай_ЧленыСемьиДоработка.DD</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КрасноярскийКрай_ЧленыСемьиДоработкаDDКонтекстноеМеню" id="618"/>
+									<ExtendedTooltip name="КрасноярскийКрай_ЧленыСемьиДоработкаDDРасширеннаяПодсказка" id="619"/>
+								</InputField>
+								<InputField name="КрасноярскийКрай_ЧленыСемьиДоработкаDREG" id="620">
+									<DataPath>Объект.КрасноярскийКрай_ЧленыСемьиДоработка.DREG</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КрасноярскийКрай_ЧленыСемьиДоработкаDREGКонтекстноеМеню" id="621"/>
+									<ExtendedTooltip name="КрасноярскийКрай_ЧленыСемьиДоработкаDREGРасширеннаяПодсказка" id="622"/>
+								</InputField>
+								<InputField name="КрасноярскийКрай_ЧленыСемьиДоработкаDVYB" id="623">
+									<DataPath>Объект.КрасноярскийКрай_ЧленыСемьиДоработка.DVYB</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КрасноярскийКрай_ЧленыСемьиДоработкаDVYBКонтекстноеМеню" id="624"/>
+									<ExtendedTooltip name="КрасноярскийКрай_ЧленыСемьиДоработкаDVYBРасширеннаяПодсказка" id="625"/>
+								</InputField>
+								<InputField name="КрасноярскийКрай_ЧленыСемьиДоработкаPOTS" id="626">
+									<DataPath>Объект.КрасноярскийКрай_ЧленыСемьиДоработка.POTS</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КрасноярскийКрай_ЧленыСемьиДоработкаPOTSКонтекстноеМеню" id="627"/>
+									<ExtendedTooltip name="КрасноярскийКрай_ЧленыСемьиДоработкаPOTSРасширеннаяПодсказка" id="628"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.УПЖКХ_ВыгрузкиВОрганыСоцЗащиты</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ПериодСтрокой" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период строкой</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>15</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<View>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.ДобавлениеИзменениеДанныхФизическихЛицЗарплатаКадры">true</xr:Value>
+				<xr:Value name="Role.ПолныеПрава">true</xr:Value>
+				<xr:Value name="Role.ЧтениеДанныхФизическихЛицЗарплатаКадры">true</xr:Value>
+			</View>
+			<Edit>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.ДобавлениеИзменениеДанныхФизическихЛицЗарплатаКадры">true</xr:Value>
+				<xr:Value name="Role.ПолныеПрава">true</xr:Value>
+				<xr:Value name="Role.ЧтениеДанныхФизическихЛицЗарплатаКадры">true</xr:Value>
+			</Edit>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ИмяКаталогаВыгрузки" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя каталога выгрузки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>512</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаНастройка" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда настройка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Настройка</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаНастройка</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаЗаполнитьВсе" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда заполнить все</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ЗаполнитьФорму</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаЗаполнитьВсе</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаВыгрузитьВсе" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда выгрузить все</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ВыгрузитьФайлСертификата</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаВыгрузитьВсе</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаКвартиросъемщикиЗаполнить" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда квартиросъемщики заполнить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда квартиросъемщики заполнить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаКвартиросъемщикиЗаполнить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаСуммыОплатыУслугЗаполнить" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда суммы оплаты услуг заполнить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда суммы оплаты услуг заполнить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаСуммыОплатыУслугЗаполнить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаЧленыСемьиЗаполнить" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда члены семьи заполнить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда члены семьи заполнить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаЧленыСемьиЗаполнить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаСправочнаяИнформация" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инструкция</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инструкция по настройке и эксплуатации выгрузки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.FormHelp</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаСправочнаяИнформация</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

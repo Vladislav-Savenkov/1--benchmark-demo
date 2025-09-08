@@ -1,0 +1,723 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Красноярский край: Настройка (вариант 2)</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockWholeInterface</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаПанельКоманд" id="119">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПанельКомандРасширеннаяПодсказка" id="120"/>
+			<ChildItems>
+				<Button name="СправочнаяИнформация" id="121">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<DefaultItem>true</DefaultItem>
+					<Height>1</Height>
+					<CommandName>Form.Command.КомандаСправочнаяИнформация</CommandName>
+					<BackColor>#FFFF99</BackColor>
+					<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+					<ExtendedTooltip name="СправочнаяИнформацияРасширеннаяПодсказка" id="122"/>
+				</Button>
+				<CommandBar name="ГруппаЕще" id="123">
+					<ExtendedTooltip name="ГруппаЕщеРасширеннаяПодсказка" id="124"/>
+					<ChildItems>
+						<Button name="ИзменитьФорму" id="125">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+							<ExtendedTooltip name="ИзменитьФормуРасширеннаяПодсказка" id="126"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="ПанельНастройки" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Панель настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Панель настройки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ПанельНастройкиРасширеннаяПодсказка" id="21"/>
+			<ChildItems>
+				<Page name="СоответствиеУслуг" id="22">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Соответствие услуг</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Соответствие услуг</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СоответствиеУслугРасширеннаяПодсказка" id="23"/>
+					<ChildItems>
+						<Table name="КрасноярскийКрай_ТаблицаУслуг" id="1">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.КрасноярскийКрай_ТаблицаУслуг</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="КрасноярскийКрай_ТаблицаУслугКонтекстноеМеню" id="2"/>
+							<AutoCommandBar name="КрасноярскийКрай_ТаблицаУслугКоманднаяПанель" id="3">
+								<ChildItems>
+									<Button name="КрасноярскийКрай_ТаблицаУслугКомандаЗаполнитьСоответствияУслуг" id="71">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.КомандаЗаполнитьСоответствияУслуг</CommandName>
+										<ExtendedTooltip name="КрасноярскийКрай_ТаблицаУслугКомандаЗаполнитьСоответствияУслугРасширеннаяПодсказка" id="72"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="КрасноярскийКрай_ТаблицаУслугРасширеннаяПодсказка" id="4"/>
+							<SearchStringAddition name="КрасноярскийКрай_ТаблицаУслугСтрокаПоиска" id="80">
+								<AdditionSource>
+									<Item>КрасноярскийКрай_ТаблицаУслуг</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="КрасноярскийКрай_ТаблицаУслугСтрокаПоискаКонтекстноеМеню" id="81"/>
+								<ExtendedTooltip name="КрасноярскийКрай_ТаблицаУслугСтрокаПоискаРасширеннаяПодсказка" id="82"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="КрасноярскийКрай_ТаблицаУслугСостояниеПросмотра" id="83">
+								<AdditionSource>
+									<Item>КрасноярскийКрай_ТаблицаУслуг</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="КрасноярскийКрай_ТаблицаУслугСостояниеПросмотраКонтекстноеМеню" id="84"/>
+								<ExtendedTooltip name="КрасноярскийКрай_ТаблицаУслугСостояниеПросмотраРасширеннаяПодсказка" id="85"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="КрасноярскийКрай_ТаблицаУслугУправлениеПоиском" id="86">
+								<AdditionSource>
+									<Item>КрасноярскийКрай_ТаблицаУслуг</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="КрасноярскийКрай_ТаблицаУслугУправлениеПоискомКонтекстноеМеню" id="87"/>
+								<ExtendedTooltip name="КрасноярскийКрай_ТаблицаУслугУправлениеПоискомРасширеннаяПодсказка" id="88"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<ColumnGroup name="КрасноярскийКрай_ТаблицаУслугГруппа1" id="144">
+									<ExtendedTooltip name="КрасноярскийКрай_ТаблицаУслугГруппа1РасширеннаяПодсказка" id="145"/>
+									<ChildItems>
+										<InputField name="КрасноярскийКрай_ТаблицаУслугКод" id="135">
+											<DataPath>Объект.КрасноярскийКрай_ТаблицаУслуг.Код</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="КрасноярскийКрай_ТаблицаУслугКодКонтекстноеМеню" id="136"/>
+											<ExtendedTooltip name="КрасноярскийКрай_ТаблицаУслугКодРасширеннаяПодсказка" id="137"/>
+										</InputField>
+										<InputField name="КрасноярскийКрай_ТаблицаУслугКодПерерасчета" id="138">
+											<DataPath>Объект.КрасноярскийКрай_ТаблицаУслуг.КодПерерасчета</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="КрасноярскийКрай_ТаблицаУслугКодПерерасчетаКонтекстноеМеню" id="139"/>
+											<ExtendedTooltip name="КрасноярскийКрай_ТаблицаУслугКодПерерасчетаРасширеннаяПодсказка" id="140"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="КрасноярскийКрай_ТаблицаУслугГруппа2" id="146">
+									<ExtendedTooltip name="КрасноярскийКрай_ТаблицаУслугГруппа2РасширеннаяПодсказка" id="147"/>
+									<ChildItems>
+										<InputField name="КрасноярскийКрай_ТаблицаУслугКодСОИ" id="148">
+											<DataPath>Объект.КрасноярскийКрай_ТаблицаУслуг.КодСОИ</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="КрасноярскийКрай_ТаблицаУслугКодСОИКонтекстноеМеню" id="149"/>
+											<ExtendedTooltip name="КрасноярскийКрай_ТаблицаУслугКодСОИРасширеннаяПодсказка" id="150"/>
+										</InputField>
+										<InputField name="КрасноярскийКрай_ТаблицаУслугКодПерерасчетаСОИ" id="151">
+											<DataPath>Объект.КрасноярскийКрай_ТаблицаУслуг.КодПерерасчетаСОИ</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="КрасноярскийКрай_ТаблицаУслугКодПерерасчетаСОИКонтекстноеМеню" id="152"/>
+											<ExtendedTooltip name="КрасноярскийКрай_ТаблицаУслугКодПерерасчетаСОИРасширеннаяПодсказка" id="153"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<InputField name="КрасноярскийКрай_ТаблицаУслугУслуга" id="141">
+									<DataPath>Объект.КрасноярскийКрай_ТаблицаУслуг.Услуга</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КрасноярскийКрай_ТаблицаУслугУслугаКонтекстноеМеню" id="142"/>
+									<ExtendedTooltip name="КрасноярскийКрай_ТаблицаУслугУслугаРасширеннаяПодсказка" id="143"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="УслугиЭлектроэнергии" id="24">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Услуги электроэнергии</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Услуги электроэнергии</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="УслугиЭлектроэнергииРасширеннаяПодсказка" id="25"/>
+					<ChildItems>
+						<Table name="КрасноярскийКрай_УслугиЭлектроэнергии" id="35">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.КрасноярскийКрай_УслугиЭлектроэнергии</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="КрасноярскийКрай_УслугиЭлектроэнергииКонтекстноеМеню" id="36"/>
+							<AutoCommandBar name="КрасноярскийКрай_УслугиЭлектроэнергииКоманднаяПанель" id="37"/>
+							<ExtendedTooltip name="КрасноярскийКрай_УслугиЭлектроэнергииРасширеннаяПодсказка" id="38"/>
+							<SearchStringAddition name="КрасноярскийКрай_УслугиЭлектроэнергииСтрокаПоиска" id="89">
+								<AdditionSource>
+									<Item>КрасноярскийКрай_УслугиЭлектроэнергии</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="КрасноярскийКрай_УслугиЭлектроэнергииСтрокаПоискаКонтекстноеМеню" id="90"/>
+								<ExtendedTooltip name="КрасноярскийКрай_УслугиЭлектроэнергииСтрокаПоискаРасширеннаяПодсказка" id="91"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="КрасноярскийКрай_УслугиЭлектроэнергииСостояниеПросмотра" id="92">
+								<AdditionSource>
+									<Item>КрасноярскийКрай_УслугиЭлектроэнергии</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="КрасноярскийКрай_УслугиЭлектроэнергииСостояниеПросмотраКонтекстноеМеню" id="93"/>
+								<ExtendedTooltip name="КрасноярскийКрай_УслугиЭлектроэнергииСостояниеПросмотраРасширеннаяПодсказка" id="94"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="КрасноярскийКрай_УслугиЭлектроэнергииУправлениеПоиском" id="95">
+								<AdditionSource>
+									<Item>КрасноярскийКрай_УслугиЭлектроэнергии</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="КрасноярскийКрай_УслугиЭлектроэнергииУправлениеПоискомКонтекстноеМеню" id="96"/>
+								<ExtendedTooltip name="КрасноярскийКрай_УслугиЭлектроэнергииУправлениеПоискомРасширеннаяПодсказка" id="97"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="КрасноярскийКрай_УслугиЭлектроэнергииУслуга" id="42">
+									<DataPath>Объект.КрасноярскийКрай_УслугиЭлектроэнергии.Услуга</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КрасноярскийКрай_УслугиЭлектроэнергииУслугаКонтекстноеМеню" id="43"/>
+									<ExtendedTooltip name="КрасноярскийКрай_УслугиЭлектроэнергииУслугаРасширеннаяПодсказка" id="44"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ТипыУлиц" id="26">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Типы улиц</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Типы улиц</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ТипыУлицРасширеннаяПодсказка" id="27"/>
+					<ChildItems>
+						<Table name="КрасноярскийКрай_ТипыУлиц" id="45">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.КрасноярскийКрай_ТипыУлиц</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="КрасноярскийКрай_ТипыУлицКонтекстноеМеню" id="46"/>
+							<AutoCommandBar name="КрасноярскийКрай_ТипыУлицКоманднаяПанель" id="47">
+								<ChildItems>
+									<Button name="КрасноярскийКрай_ТипыУлицКомандаЗаполнитьТипыУлиц" id="73">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.КомандаЗаполнитьТипыУлиц</CommandName>
+										<ExtendedTooltip name="КрасноярскийКрай_ТипыУлицКомандаЗаполнитьТипыУлицРасширеннаяПодсказка" id="74"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="КрасноярскийКрай_ТипыУлицРасширеннаяПодсказка" id="48"/>
+							<SearchStringAddition name="КрасноярскийКрай_ТипыУлицСтрокаПоиска" id="98">
+								<AdditionSource>
+									<Item>КрасноярскийКрай_ТипыУлиц</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="КрасноярскийКрай_ТипыУлицСтрокаПоискаКонтекстноеМеню" id="99"/>
+								<ExtendedTooltip name="КрасноярскийКрай_ТипыУлицСтрокаПоискаРасширеннаяПодсказка" id="100"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="КрасноярскийКрай_ТипыУлицСостояниеПросмотра" id="101">
+								<AdditionSource>
+									<Item>КрасноярскийКрай_ТипыУлиц</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="КрасноярскийКрай_ТипыУлицСостояниеПросмотраКонтекстноеМеню" id="102"/>
+								<ExtendedTooltip name="КрасноярскийКрай_ТипыУлицСостояниеПросмотраРасширеннаяПодсказка" id="103"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="КрасноярскийКрай_ТипыУлицУправлениеПоиском" id="104">
+								<AdditionSource>
+									<Item>КрасноярскийКрай_ТипыУлиц</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="КрасноярскийКрай_ТипыУлицУправлениеПоискомКонтекстноеМеню" id="105"/>
+								<ExtendedTooltip name="КрасноярскийКрай_ТипыУлицУправлениеПоискомРасширеннаяПодсказка" id="106"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="КрасноярскийКрай_ТипыУлицНаименованиеКраткоеИзБазы" id="52">
+									<DataPath>Объект.КрасноярскийКрай_ТипыУлиц.НаименованиеКраткоеИзБазы</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КрасноярскийКрай_ТипыУлицНаименованиеКраткоеИзБазыКонтекстноеМеню" id="53"/>
+									<ExtendedTooltip name="КрасноярскийКрай_ТипыУлицНаименованиеКраткоеИзБазыРасширеннаяПодсказка" id="54"/>
+								</InputField>
+								<InputField name="КрасноярскийКрай_ТипыУлицНаименованиеДляВыводаВФайлОтвета" id="55">
+									<DataPath>Объект.КрасноярскийКрай_ТипыУлиц.НаименованиеДляВыводаВФайлОтвета</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КрасноярскийКрай_ТипыУлицНаименованиеДляВыводаВФайлОтветаКонтекстноеМеню" id="56"/>
+									<ExtendedTooltip name="КрасноярскийКрай_ТипыУлицНаименованиеДляВыводаВФайлОтветаРасширеннаяПодсказка" id="57"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ВидыДокументовУдостоверяющихЛичность" id="28">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Виды документов удостоверяющих личность</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Виды документов удостоверяющих личность</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ВидыДокументовУдостоверяющихЛичностьРасширеннаяПодсказка" id="29"/>
+					<ChildItems>
+						<Table name="КрасноярскийКрай_УдостоверенияЛичности" id="58">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.КрасноярскийКрай_УдостоверенияЛичности</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="КрасноярскийКрай_УдостоверенияЛичностиКонтекстноеМеню" id="59"/>
+							<AutoCommandBar name="КрасноярскийКрай_УдостоверенияЛичностиКоманднаяПанель" id="60">
+								<ChildItems>
+									<Button name="КрасноярскийКрай_УдостоверенияЛичностиКомандаЗаполнитьВидыДокументов" id="75">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.КомандаЗаполнитьВидыДокументов</CommandName>
+										<ExtendedTooltip name="КрасноярскийКрай_УдостоверенияЛичностиКомандаЗаполнитьВидыДокументовРасширеннаяПодсказка" id="76"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="КрасноярскийКрай_УдостоверенияЛичностиРасширеннаяПодсказка" id="61"/>
+							<SearchStringAddition name="КрасноярскийКрай_УдостоверенияЛичностиСтрокаПоиска" id="107">
+								<AdditionSource>
+									<Item>КрасноярскийКрай_УдостоверенияЛичности</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="КрасноярскийКрай_УдостоверенияЛичностиСтрокаПоискаКонтекстноеМеню" id="108"/>
+								<ExtendedTooltip name="КрасноярскийКрай_УдостоверенияЛичностиСтрокаПоискаРасширеннаяПодсказка" id="109"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="КрасноярскийКрай_УдостоверенияЛичностиСостояниеПросмотра" id="110">
+								<AdditionSource>
+									<Item>КрасноярскийКрай_УдостоверенияЛичности</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="КрасноярскийКрай_УдостоверенияЛичностиСостояниеПросмотраКонтекстноеМеню" id="111"/>
+								<ExtendedTooltip name="КрасноярскийКрай_УдостоверенияЛичностиСостояниеПросмотраРасширеннаяПодсказка" id="112"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="КрасноярскийКрай_УдостоверенияЛичностиУправлениеПоиском" id="113">
+								<AdditionSource>
+									<Item>КрасноярскийКрай_УдостоверенияЛичности</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="КрасноярскийКрай_УдостоверенияЛичностиУправлениеПоискомКонтекстноеМеню" id="114"/>
+								<ExtendedTooltip name="КрасноярскийКрай_УдостоверенияЛичностиУправлениеПоискомРасширеннаяПодсказка" id="115"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="КрасноярскийКрай_УдостоверенияЛичностиКод" id="65">
+									<DataPath>Объект.КрасноярскийКрай_УдостоверенияЛичности.Код</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КрасноярскийКрай_УдостоверенияЛичностиКодКонтекстноеМеню" id="66"/>
+									<ExtendedTooltip name="КрасноярскийКрай_УдостоверенияЛичностиКодРасширеннаяПодсказка" id="67"/>
+								</InputField>
+								<InputField name="КрасноярскийКрай_УдостоверенияЛичностиВидДокументаУдостоверяющегоЛичность" id="68">
+									<DataPath>Объект.КрасноярскийКрай_УдостоверенияЛичности.ВидДокументаУдостоверяющегоЛичность</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КрасноярскийКрай_УдостоверенияЛичностиВидДокументаУдостоверяющегоЛичностьКонтекстноеМеню" id="69"/>
+									<ExtendedTooltip name="КрасноярскийКрай_УдостоверенияЛичностиВидДокументаУдостоверяющегоЛичностьРасширеннаяПодсказка" id="70"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ДополнительныеНастройки" id="30">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дополнительные настройки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дополнительные настройки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<ExtendedTooltip name="ДополнительныеНастройкиРасширеннаяПодсказка" id="31"/>
+					<ChildItems>
+						<RadioButtonField name="КатегорияЖильцов" id="77">
+							<DataPath>Объект.КатегорияЖильцов</DataPath>
+							<TitleLocation>Top</TitleLocation>
+							<RadioButtonType>Tumbler</RadioButtonType>
+							<ColumnsCount>1</ColumnsCount>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Проживающие</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">0</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Зарегистрированные</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">1</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Проживающие и зарегистрированные</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">2</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Проживающие или зарегистрированные</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">3</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Все</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">4</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="КатегорияЖильцовКонтекстноеМеню" id="78"/>
+							<ExtendedTooltip name="КатегорияЖильцовРасширеннаяПодсказка" id="79"/>
+						</RadioButtonField>
+						<UsualGroup name="ГруппаВыводЛицевыхСчетов" id="127">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Вывод лицевых счетов</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройка вывода лицевых счетов</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаВыводЛицевыхСчетовРасширеннаяПодсказка" id="128"/>
+							<ChildItems>
+								<InputField name="ВыводЛицевыхСчетов" id="116">
+									<DataPath>Объект.ВыводЛицевыхСчетов</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>В колонку «Лицевой счет» выводить</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Поле "ID" в файлах выгрузки.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<HorizontalStretch>true</HorizontalStretch>
+									<ListChoiceMode>true</ListChoiceMode>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>БЛ='цифры наименования (без лидирующих нулей)'; БИ='наименование полностью'</v8:content>
+										</v8:item>
+									</EditFormat>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>наименование</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">Наименование</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>только цифры наименования (без лидирующих нулей)</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">ЦифрыНаименования</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="ВыводЛицевыхСчетовКонтекстноеМеню" id="117"/>
+									<ExtendedTooltip name="ВыводЛицевыхСчетовРасширеннаяПодсказка" id="118"/>
+								</InputField>
+								<LabelDecoration name="ДекорацияВыводЛицевыхСчетовПояснение" id="129">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<TextColor>style:ТекстИнформационнойНадписи</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Если выбрано значение «наименование», то при заполнении таблиц выгрузки в колонку «Номер лицевого счета» будет попадать наименование лицевого счета.
+Если выбрано значение «только цифры наименования (без лидирующих нулей)» – цифровая часть наименования лицевого счета без лидирующих нулей.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияВыводЛицевыхСчетовПояснениеКонтекстноеМеню" id="130"/>
+									<ExtendedTooltip name="ДекорацияВыводЛицевыхСчетовПояснениеРасширеннаяПодсказка" id="131"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<CommandBar name="ГруппаКоманднаяПанель" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа командная панель</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа командная панель</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalLocation>Right</HorizontalLocation>
+			<ExtendedTooltip name="ГруппаКоманднаяПанельРасширеннаяПодсказка" id="17"/>
+			<ChildItems>
+				<Button name="ФормаКомандаСохранить" id="14">
+					<Type>CommandBarButton</Type>
+					<Representation>PictureAndText</Representation>
+					<DefaultButton>true</DefaultButton>
+					<CommandName>Form.Command.КомандаСохранить</CommandName>
+					<Picture>
+						<xr:Ref>StdPicture.SaveFile</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ФормаКомандаСохранитьРасширеннаяПодсказка" id="15"/>
+				</Button>
+				<Button name="Закрыть" id="18">
+					<Type>CommandBarButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Form.StandardCommand.Close</CommandName>
+					<ExtendedTooltip name="ЗакрытьРасширеннаяПодсказка" id="19"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.УПЖКХ_ВыгрузкиВОрганыСоцЗащиты</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>КрасноярскийКрай_ТаблицаУслуг</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.КрасноярскийКрай_ТаблицаУслуг.Код</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:Gainsboro</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаЗаполнитьСоответствияУслуг" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда заполнить соответствия услуг</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаЗаполнитьСоответствияУслуг</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаЗаполнитьТипыУлиц" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по умолчанию</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда заполнить типы улиц</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаЗаполнитьТипыУлиц</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаЗаполнитьВидыДокументов" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда заполнить виды документов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаЗаполнитьВидыДокументов</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаСправочнаяИнформация" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инструкция</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инструкция по настройке и эксплуатации выгрузки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.FormHelp</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаСправочнаяИнформация</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаСохранить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить и закрыть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить и закрыть</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.SaveReportSettings</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаСохранить</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

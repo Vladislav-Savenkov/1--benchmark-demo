@@ -1,0 +1,765 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Подбор объектов</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаОтбор" id="11">
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа отбор</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ChildItemsWidth>LeftNarrow</ChildItemsWidth>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОтборExtendedTooltip" id="77"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаКритерииОтбора" id="127">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>1. Критерии отбора объектов</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа критерии отбора</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаКритерииОтбораРасширеннаяПодсказка" id="128"/>
+					<ChildItems>
+						<Table name="ТаблицаОтбора" id="1">
+							<Representation>List</Representation>
+							<CommandBarLocation>Top</CommandBarLocation>
+							<ChangeRowSet>false</ChangeRowSet>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>ТаблицаОтбора</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ТаблицаОтбораКонтекстноеМеню" id="2"/>
+							<AutoCommandBar name="ТаблицаОтбораКоманднаяПанель" id="3">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="Добавить" id="10">
+										<Type>CommandBarButton</Type>
+										<Visible>false</Visible>
+										<CommandName>Form.Item.ТаблицаОтбора.StandardCommand.Add</CommandName>
+										<ExtendedTooltip name="ДобавитьExtendedTooltip" id="78"/>
+									</Button>
+									<Button name="Удалить" id="9">
+										<Type>CommandBarButton</Type>
+										<Visible>false</Visible>
+										<CommandName>Form.Item.ТаблицаОтбора.StandardCommand.Delete</CommandName>
+										<ExtendedTooltip name="УдалитьExtendedTooltip" id="79"/>
+									</Button>
+									<Button name="ТаблицаНайденныеОбъектыПодобратьОбъекты" id="73">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Command.ПодобратьОбъекты</CommandName>
+										<Picture>
+											<xr:Ref>StdPicture.Find</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<ExtendedTooltip name="ТаблицаНайденныеОбъектыПодобратьОбъектыExtendedTooltip" id="84"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ТаблицаОтбораExtendedTooltip" id="80"/>
+							<SearchStringAddition name="ТаблицаОтбораСтрокаПоиска" id="100">
+								<AdditionSource>
+									<Item>ТаблицаОтбора</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаОтбораСтрокаПоискаКонтекстноеМеню" id="101"/>
+								<ExtendedTooltip name="ТаблицаОтбораСтрокаПоискаРасширеннаяПодсказка" id="102"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТаблицаОтбораСостояниеПросмотра" id="103">
+								<AdditionSource>
+									<Item>ТаблицаОтбора</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаОтбораСостояниеПросмотраКонтекстноеМеню" id="104"/>
+								<ExtendedTooltip name="ТаблицаОтбораСостояниеПросмотраРасширеннаяПодсказка" id="105"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТаблицаОтбораУправлениеПоиском" id="106">
+								<AdditionSource>
+									<Item>ТаблицаОтбора</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаОтбораУправлениеПоискомКонтекстноеМеню" id="107"/>
+								<ExtendedTooltip name="ТаблицаОтбораУправлениеПоискомРасширеннаяПодсказка" id="108"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="ТаблицаОтбораКритерийОтбора" id="4">
+									<DataPath>ТаблицаОтбора.КритерийОтбора</DataPath>
+									<Enabled>false</Enabled>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Критерий</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ChoiceButton>false</ChoiceButton>
+									<ClearButton>false</ClearButton>
+									<SpinButton>false</SpinButton>
+									<OpenButton>false</OpenButton>
+									<TextEdit>false</TextEdit>
+									<ChoiceListButton>true</ChoiceListButton>
+									<ContextMenu name="ТаблицаОтбораКритерийОтбораКонтекстноеМеню" id="5"/>
+									<ExtendedTooltip name="ТаблицаОтбораКритерийОтбораExtendedTooltip" id="81"/>
+								</InputField>
+								<InputField name="ТаблицаОтбораЗначениеКритерия" id="6">
+									<DataPath>ТаблицаОтбора.ЗначениеКритерия</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Значение</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ClearButton>true</ClearButton>
+									<SpinButton>false</SpinButton>
+									<OpenButton>false</OpenButton>
+									<ChooseType>false</ChooseType>
+									<ContextMenu name="ТаблицаОтбораЗначениеКритерияКонтекстноеМеню" id="7"/>
+									<ExtendedTooltip name="ТаблицаОтбораЗначениеКритерияExtendedTooltip" id="82"/>
+									<Events>
+										<Event name="StartChoice">ТаблицаОтбораЗначениеКритерияНачалоВыбора</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаКартинкаСтрелка" id="139">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа картинка стрелка</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа картинка стрелка</v8:content>
+						</v8:item>
+					</ToolTip>
+					<VerticalStretch>true</VerticalStretch>
+					<VerticalAlign>Center</VerticalAlign>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаКартинкаСтрелкаРасширеннаяПодсказка" id="140"/>
+					<ChildItems>
+						<PictureDecoration name="Декорация1" id="136">
+							<Picture>
+								<xr:Ref>CommonPicture.ПереходВправоАктивный</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<FileDragMode>AsFile</FileDragMode>
+							<ContextMenu name="Декорация1КонтекстноеМеню" id="137"/>
+							<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="138"/>
+						</PictureDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаНайденныеОбъекты" id="57">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>2. Найденные объекты</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа найденные объекты</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<ExtendedTooltip name="ГруппаНайденныеОбъектыExtendedTooltip" id="83"/>
+					<ChildItems>
+						<Table name="ТаблицаНайденныеОбъекты" id="64">
+							<CommandBarLocation>Top</CommandBarLocation>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>НайденныеОбъекты</DataPath>
+							<RowPictureDataPath>НайденныеОбъекты.DefaultPicture</RowPictureDataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="ТаблицаНайденныеОбъектыКонтекстноеМеню" id="65"/>
+							<AutoCommandBar name="ТаблицаНайденныеОбъектыКоманднаяПанель" id="66">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="ТаблицаНайденныеОбъектыВыбратьВсе" id="74">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Command.ВыбратьВсеОбъекты</CommandName>
+										<Picture>
+											<xr:Ref>StdPicture.CheckAll</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<ExtendedTooltip name="ТаблицаНайденныеОбъектыВыбратьВсеExtendedTooltip" id="85"/>
+									</Button>
+									<Button name="ТаблицаНайденныеОбъектыВыбратьВыделенныеОбъекты" id="134">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Command.ВыбратьВыделенныеОбъекты</CommandName>
+										<Picture>
+											<xr:Ref>StdPicture.ChooseValue</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<ExtendedTooltip name="ТаблицаНайденныеОбъектыВыбратьВыделенныеОбъектыРасширеннаяПодсказка" id="135"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ТаблицаНайденныеОбъектыExtendedTooltip" id="86"/>
+							<SearchStringAddition name="ТаблицаНайденныеОбъектыСтрокаПоиска" id="109">
+								<AdditionSource>
+									<Item>ТаблицаНайденныеОбъекты</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаНайденныеОбъектыСтрокаПоискаКонтекстноеМеню" id="110"/>
+								<ExtendedTooltip name="ТаблицаНайденныеОбъектыСтрокаПоискаРасширеннаяПодсказка" id="111"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТаблицаНайденныеОбъектыСостояниеПросмотра" id="112">
+								<AdditionSource>
+									<Item>ТаблицаНайденныеОбъекты</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаНайденныеОбъектыСостояниеПросмотраКонтекстноеМеню" id="113"/>
+								<ExtendedTooltip name="ТаблицаНайденныеОбъектыСостояниеПросмотраРасширеннаяПодсказка" id="114"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТаблицаНайденныеОбъектыУправлениеПоиском" id="115">
+								<AdditionSource>
+									<Item>ТаблицаНайденныеОбъекты</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаНайденныеОбъектыУправлениеПоискомКонтекстноеМеню" id="116"/>
+								<ExtendedTooltip name="ТаблицаНайденныеОбъектыУправлениеПоискомРасширеннаяПодсказка" id="117"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ТаблицаНайденныеОбъектыВыбор</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="ТаблицаНайденныеОбъектыЛицевойСчет" id="67">
+									<DataPath>НайденныеОбъекты.Ref</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Лицевой счет</v8:content>
+										</v8:item>
+									</Title>
+									<Width>20</Width>
+									<ContextMenu name="ТаблицаНайденныеОбъектыЛицевойСчетКонтекстноеМеню" id="68"/>
+									<ExtendedTooltip name="ТаблицаНайденныеОбъектыЛицевойСчетExtendedTooltip" id="87"/>
+								</LabelField>
+								<LabelField name="ТаблицаНайденныеОбъектыПомещение" id="71">
+									<DataPath>НайденныеОбъекты.Адрес</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Помещение</v8:content>
+										</v8:item>
+									</Title>
+									<Width>3</Width>
+									<ContextMenu name="ТаблицаНайденныеОбъектыПомещениеКонтекстноеМеню" id="72"/>
+									<ExtendedTooltip name="ТаблицаНайденныеОбъектыПомещениеExtendedTooltip" id="88"/>
+								</LabelField>
+								<InputField name="ТаблицаНайденныеОбъектыПолеЗдание" id="75">
+									<DataPath>НайденныеОбъекты.Адрес.Owner</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Здание</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ТаблицаНайденныеОбъектыПолеЗданиеКонтекстноеМеню" id="76"/>
+									<ExtendedTooltip name="ТаблицаНайденныеОбъектыПолеЗданиеExtendedTooltip" id="89"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПодобранныеОбъекты" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>3. Подобранные объекты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа подобранные объекты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ExtendedTooltip name="ГруппаПодобранныеОбъектыExtendedTooltip" id="90"/>
+			<ChildItems>
+				<Table name="ПодобранныеОбъекты" id="46">
+					<Representation>List</Representation>
+					<CommandBarLocation>Bottom</CommandBarLocation>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>ПодобранныеОбъекты</DataPath>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ПодобранныеОбъектыКонтекстноеМеню" id="47"/>
+					<AutoCommandBar name="ПодобранныеОбъектыКоманднаяПанель" id="48">
+						<HorizontalAlign>Right</HorizontalAlign>
+						<Autofill>false</Autofill>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ПодобранныеОбъектыExtendedTooltip" id="96"/>
+					<SearchStringAddition name="ПодобранныеОбъектыСтрокаПоиска" id="118">
+						<AdditionSource>
+							<Item>ПодобранныеОбъекты</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ПодобранныеОбъектыСтрокаПоискаКонтекстноеМеню" id="119"/>
+						<ExtendedTooltip name="ПодобранныеОбъектыСтрокаПоискаРасширеннаяПодсказка" id="120"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ПодобранныеОбъектыСостояниеПросмотра" id="121">
+						<AdditionSource>
+							<Item>ПодобранныеОбъекты</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ПодобранныеОбъектыСостояниеПросмотраКонтекстноеМеню" id="122"/>
+						<ExtendedTooltip name="ПодобранныеОбъектыСостояниеПросмотраРасширеннаяПодсказка" id="123"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ПодобранныеОбъектыУправлениеПоиском" id="124">
+						<AdditionSource>
+							<Item>ПодобранныеОбъекты</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ПодобранныеОбъектыУправлениеПоискомКонтекстноеМеню" id="125"/>
+						<ExtendedTooltip name="ПодобранныеОбъектыУправлениеПоискомРасширеннаяПодсказка" id="126"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="BeforeAddRow">ПодобранныеОбъектыПередНачаломДобавления</Event>
+						<Event name="AfterDeleteRow">ПодобранныеОбъектыПослеУдаления</Event>
+					</Events>
+					<ChildItems>
+						<InputField name="ПодобранныеОбъектыЛицевойСчет" id="49">
+							<DataPath>ПодобранныеОбъекты.ЛицевойСчет</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПодобранныеОбъектыЛицевойСчетКонтекстноеМеню" id="50"/>
+							<ExtendedTooltip name="ПодобранныеОбъектыЛицевойСчетExtendedTooltip" id="97"/>
+						</InputField>
+						<InputField name="ПодобранныеОбъектыПомещение" id="51">
+							<DataPath>ПодобранныеОбъекты.Помещение</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПодобранныеОбъектыПомещениеКонтекстноеМеню" id="52"/>
+							<ExtendedTooltip name="ПодобранныеОбъектыПомещениеExtendedTooltip" id="98"/>
+						</InputField>
+						<InputField name="ПодобранныеОбъектыЗдание" id="53">
+							<DataPath>ПодобранныеОбъекты.Здание</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПодобранныеОбъектыЗданиеКонтекстноеМеню" id="54"/>
+							<ExtendedTooltip name="ПодобранныеОбъектыЗданиеExtendedTooltip" id="99"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+				<UsualGroup name="ГруппаСведенияОбОбъектах" id="24">
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа сведения об объектах</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСведенияОбОбъектахExtendedTooltip" id="91"/>
+					<ChildItems>
+						<LabelDecoration name="НадписьВсегоОбъектов" id="25">
+							<ContextMenu name="НадписьВсегоОбъектовКонтекстноеМеню" id="26"/>
+							<ExtendedTooltip name="НадписьВсегоОбъектовExtendedTooltip" id="92"/>
+						</LabelDecoration>
+						<LabelDecoration name="ДекорацияПустаяНадпись" id="131">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>true</HorizontalStretch>
+							<ContextMenu name="ДекорацияПустаяНадписьКонтекстноеМеню" id="132"/>
+							<ExtendedTooltip name="ДекорацияПустаяНадписьРасширеннаяПодсказка" id="133"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаКоманднаяПанель" id="129">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа командная панель</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа командная панель</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКоманднаяПанельРасширеннаяПодсказка" id="130"/>
+							<ChildItems>
+								<Button name="ОчиститьПодобранныеОбъекты" id="55">
+									<Type>UsualButton</Type>
+									<Representation>PictureAndText</Representation>
+									<CommandName>Form.Command.ОчиститьПодобранныеОбъекты</CommandName>
+									<Picture>
+										<xr:Ref>StdPicture.InputFieldClear</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Очистить</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ОчиститьПодобранныеОбъектыExtendedTooltip" id="94"/>
+								</Button>
+								<Button name="ВыбратьПодобранныеОбъекты" id="56">
+									<Type>UsualButton</Type>
+									<DefaultButton>true</DefaultButton>
+									<CommandName>Form.Command.ВыбратьПодобранныеОбъекты</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Выбрать и закрыть</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ВыбратьПодобранныеОбъектыExtendedTooltip" id="95"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ТаблицаОтбора" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица отбора</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="КритерийОтбора" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Критерий отбора</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>250</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЗначениеКритерия" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Значение критерия</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.КВП_Подъезды</v8:Type>
+						<v8:Type>xs:boolean</v8:Type>
+						<v8:Type>cfg:CatalogRef.КВП_ЛицевыеСчета</v8:Type>
+						<v8:Type>cfg:CatalogRef.КВП_Здания</v8:Type>
+						<v8:Type>cfg:CatalogRef.УПЖКХ_Помещения</v8:Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:Type>cfg:EnumRef.КВП_ТипыПомещений</v8:Type>
+						<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ПодобранныеОбъекты" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подобранные объекты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ЛицевойСчет" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Лицевой счет</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.КВП_ЛицевыеСчета</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Помещение" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Помещение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.УПЖКХ_Помещения</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Здание" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Здание</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.КВП_Здания</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="НадписьСкрытьПоказать" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Надпись скрыть показать</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="СписокДополнительныхСвойств" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список дополнительных свойств</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НайденныеОбъекты" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Найденные объекты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.КВП_ЛицевыеСчета</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ВсегоЛС" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Всего ЛС</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Организация" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПодобратьОбъекты" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подобрать объекты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подобрать объекты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПодобратьОбъекты</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВыбратьВсеОбъекты" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать все объекты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыбратьВсеОбъекты</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВыбратьПодобранныеОбъекты" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать подобранные объекты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать подобранные объекты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыбратьПодобранныеОбъекты</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОчиститьПодобранныеОбъекты" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить подобранные объекты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить подобранные объекты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОчиститьПодобранныеОбъекты</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВыбратьВыделенныеОбъекты" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать выделенные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать все объекты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыбратьВыделенныеОбъекты</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

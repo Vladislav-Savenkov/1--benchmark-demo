@@ -1,0 +1,2504 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаНастройка" id="103">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Настройка</CommandName>
+				<ExtendedTooltip name="ФормаНастройкаExtendedTooltip" id="166"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="32">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаExtendedTooltip" id="167"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаСлева" id="33">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа слева</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа слева</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСлеваExtendedTooltip" id="168"/>
+					<ChildItems>
+						<InputField name="Организация" id="1">
+							<DataPath>Объект.Организация</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="ОрганизацияExtendedTooltip" id="169"/>
+							<Events>
+								<Event name="OnChange">ОрганизацияПриИзменении</Event>
+							</Events>
+						</InputField>
+						<UsualGroup name="ГруппаПериод" id="35">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа период</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа период</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПериодExtendedTooltip" id="170"/>
+							<ChildItems>
+								<InputField name="НачалоПериода" id="3">
+									<DataPath>Объект.НачалоПериода</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Период с</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<SpinButton>true</SpinButton>
+									<ContextMenu name="НачалоПериодаКонтекстноеМеню" id="4"/>
+									<ExtendedTooltip name="НачалоПериодаExtendedTooltip" id="171"/>
+								</InputField>
+								<InputField name="КонецПериода" id="5">
+									<DataPath>Объект.КонецПериода</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>по</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<SpinButton>true</SpinButton>
+									<ContextMenu name="КонецПериодаКонтекстноеМеню" id="6"/>
+									<ExtendedTooltip name="КонецПериодаExtendedTooltip" id="172"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаУчитыватьВсеОплаты" id="270">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа учитывать все оплаты</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа учитывать все оплаты</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаУчитыватьВсеОплатыРасширеннаяПодсказка" id="271"/>
+							<ChildItems>
+								<RadioButtonField name="ПереключательУчитыватьВсеОплаты" id="278">
+									<DataPath>ПереключательУчитыватьВсеОплаты</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<VerticalAlign>Top</VerticalAlign>
+									<RadioButtonType>RadioButtons</RadioButtonType>
+									<ColumnsCount>1</ColumnsCount>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Учитывать все оплаты</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">1</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Учитывать оплаты только по привязанным к лицевым счетам договорам контрагентов</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">0</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="ПереключательУчитыватьВсеОплатыКонтекстноеМеню" id="279"/>
+									<ExtendedTooltip name="ПереключательУчитыватьВсеОплатыРасширеннаяПодсказка" id="280"/>
+									<Events>
+										<Event name="OnChange">ПереключательУчитыватьВсеОплатыПриИзменении</Event>
+									</Events>
+								</RadioButtonField>
+							</ChildItems>
+						</UsualGroup>
+						<Button name="КомандаЗаполнить" id="41">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.КомандаЗаполнить</CommandName>
+							<ExtendedTooltip name="КомандаЗаполнитьExtendedTooltip" id="173"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаСправа" id="34">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа справа</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа справа</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСправаExtendedTooltip" id="174"/>
+					<ChildItems>
+						<InputField name="ИсточникОплаты" id="7">
+							<DataPath>Объект.ИсточникОплаты</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<ContextMenu name="ИсточникОплатыКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="ИсточникОплатыExtendedTooltip" id="175"/>
+						</InputField>
+						<UsualGroup name="ГруппаИнформация" id="36">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа информация</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа информация</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаИнформацияExtendedTooltip" id="176"/>
+							<ChildItems>
+								<PictureDecoration name="Декорация1" id="37">
+									<Width>2</Width>
+									<Height>1</Height>
+									<Picture>
+										<xr:Ref>CommonPicture.Информация</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="Декорация1КонтекстноеМеню" id="38"/>
+									<ExtendedTooltip name="Декорация1ExtendedTooltip" id="177"/>
+								</PictureDecoration>
+								<LabelDecoration name="НадписьИнформации" id="39">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<TextColor>style:УПЖКХ_ТекстСправочнойНадписи</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Снимите отметки с тех лицевых счетов, по которым не нужно регистрировать оплату. 
+Проверьте, что лицевые счета и суммы по всем отмеченным документам введены корректно.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьИнформацииКонтекстноеМеню" id="40"/>
+									<ExtendedTooltip name="НадписьИнформацииExtendedTooltip" id="178"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаКоманднаяПанельОшибки" id="70">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа командная панель ошибки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа командная панель ошибки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКоманднаяПанельОшибкиExtendedTooltip" id="179"/>
+			<ChildItems>
+				<CommandBar name="ГруппаПанельОшибки" id="71">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа панель ошибки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа панель ошибки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ExtendedTooltip name="ГруппаПанельОшибкиExtendedTooltip" id="180"/>
+					<ChildItems>
+						<Button name="ДеревоПлатежныхДокументовСОшибкамиУстановитьФлажки" id="65">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.УстановитьФлажкиОшибки</CommandName>
+							<ExtendedTooltip name="ДеревоПлатежныхДокументовСОшибкамиУстановитьФлажкиExtendedTooltip" id="181"/>
+						</Button>
+						<Button name="ДеревоПлатежныхДокументовСОшибкамиСнятьФлажки" id="66">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.СнятьФлажкиОшибки</CommandName>
+							<ExtendedTooltip name="ДеревоПлатежныхДокументовСОшибкамиСнятьФлажкиExtendedTooltip" id="182"/>
+						</Button>
+						<Button name="ДеревоПлатежныхДокументовСОшибкамиСвернутьОшибки" id="67">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.СвернутьОшибки</CommandName>
+							<ExtendedTooltip name="ДеревоПлатежныхДокументовСОшибкамиСвернутьОшибкиExtendedTooltip" id="183"/>
+						</Button>
+						<Button name="ДеревоПлатежныхДокументовСОшибкамиРазвернутьОшибки" id="68">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.РазвернутьОшибки</CommandName>
+							<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+							<ExtendedTooltip name="ДеревоПлатежныхДокументовСОшибкамиРазвернутьОшибкиExtendedTooltip" id="184"/>
+						</Button>
+						<Button name="ДеревоПлатежныхДокументовСОшибкамиОтсортироватьПоВозрастанию" id="159">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Item.ДеревоПлатежныхДокументовСОшибками.StandardCommand.SortListAsc</CommandName>
+							<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+							<ExtendedTooltip name="ДеревоПлатежныхДокументовСОшибкамиОтсортироватьПоВозрастаниюExtendedTooltip" id="185"/>
+						</Button>
+						<Button name="ДеревоПлатежныхДокументовСОшибкамиОтсортироватьПоУбыванию" id="161">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Item.ДеревоПлатежныхДокументовСОшибками.StandardCommand.SortListDesc</CommandName>
+							<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+							<ExtendedTooltip name="ДеревоПлатежныхДокументовСОшибкамиОтсортироватьПоУбываниюExtendedTooltip" id="186"/>
+						</Button>
+						<Button name="ДеревоПлатежныхДокументовСОшибкамиПринятьИзменения" id="69">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.ПринятьИзменения</CommandName>
+							<ExtendedTooltip name="ДеревоПлатежныхДокументовСОшибкамиПринятьИзмененияExtendedTooltip" id="187"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+				<LabelDecoration name="СтатуснаяСтрока" id="287">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					<ContextMenu name="СтатуснаяСтрокаКонтекстноеМеню" id="288"/>
+					<ExtendedTooltip name="СтатуснаяСтрокаРасширеннаяПодсказка" id="289"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="ДеревоПлатежныхДокументовСОшибками" id="42">
+			<Representation>Tree</Representation>
+			<TitleLocation>Top</TitleLocation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<HorizontalLines>false</HorizontalLines>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>ДеревоПлатежныхДокументовСОшибками</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документы с ошибками</v8:content>
+				</v8:item>
+			</Title>
+			<TitleTextColor>style:ГруппаВариантовОтчетовЦвет82</TitleTextColor>
+			<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<ContextMenu name="ДеревоПлатежныхДокументовСОшибкамиКонтекстноеМеню" id="43"/>
+			<AutoCommandBar name="ДеревоПлатежныхДокументовСОшибкамиКоманднаяПанель" id="44"/>
+			<ExtendedTooltip name="ДеревоПлатежныхДокументовСОшибкамиExtendedTooltip" id="189"/>
+			<SearchStringAddition name="ДеревоПлатежныхДокументовСОшибкамиСтрокаПоиска" id="252">
+				<AdditionSource>
+					<Item>ДеревоПлатежныхДокументовСОшибками</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДеревоПлатежныхДокументовСОшибкамиСтрокаПоискаКонтекстноеМеню" id="253"/>
+				<ExtendedTooltip name="ДеревоПлатежныхДокументовСОшибкамиСтрокаПоискаРасширеннаяПодсказка" id="254"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ДеревоПлатежныхДокументовСОшибкамиСостояниеПросмотра" id="255">
+				<AdditionSource>
+					<Item>ДеревоПлатежныхДокументовСОшибками</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДеревоПлатежныхДокументовСОшибкамиСостояниеПросмотраКонтекстноеМеню" id="256"/>
+				<ExtendedTooltip name="ДеревоПлатежныхДокументовСОшибкамиСостояниеПросмотраРасширеннаяПодсказка" id="257"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ДеревоПлатежныхДокументовСОшибкамиУправлениеПоиском" id="258">
+				<AdditionSource>
+					<Item>ДеревоПлатежныхДокументовСОшибками</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ДеревоПлатежныхДокументовСОшибкамиУправлениеПоискомКонтекстноеМеню" id="259"/>
+				<ExtendedTooltip name="ДеревоПлатежныхДокументовСОшибкамиУправлениеПоискомРасширеннаяПодсказка" id="260"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="OnEditEnd">ДеревоПлатежныхДокументовСОшибкамиПриОкончанииРедактирования</Event>
+				<Event name="Selection">ДеревоПлатежныхДокументовСОшибкамиВыбор</Event>
+				<Event name="BeforeAddRow">ДеревоПлатежныхДокументовСОшибкамиПередНачаломДобавления</Event>
+				<Event name="BeforeDeleteRow">ДеревоПлатежныхДокументовСОшибкамиПередУдалением</Event>
+			</Events>
+			<ChildItems>
+				<CheckBoxField name="ДеревоПлатежныхДокументовСОшибкамиПометка" id="45">
+					<DataPath>ДеревоПлатежныхДокументовСОшибками.Пометка</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ДеревоПлатежныхДокументовСОшибкамиПометкаКонтекстноеМеню" id="46"/>
+					<ExtendedTooltip name="ДеревоПлатежныхДокументовСОшибкамиПометкаExtendedTooltip" id="190"/>
+				</CheckBoxField>
+				<InputField name="ДеревоПлатежныхДокументовСОшибкамиКонтрагент" id="47">
+					<DataPath>ДеревоПлатежныхДокументовСОшибками.Контрагент</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ChooseType>false</ChooseType>
+					<ContextMenu name="ДеревоПлатежныхДокументовСОшибкамиКонтрагентКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="ДеревоПлатежныхДокументовСОшибкамиКонтрагентExtendedTooltip" id="191"/>
+					<Events>
+						<Event name="OnChange">ДеревоПлатежныхДокументовСОшибкамиКонтрагентПриИзменении</Event>
+						<Event name="StartChoice">ДеревоПлатежныхДокументовСОшибкамиКонтрагентНачалоВыбора</Event>
+						<Event name="ChoiceProcessing">ДеревоПлатежныхДокументовСОшибкамиКонтрагентОбработкаВыбора</Event>
+					</Events>
+				</InputField>
+				<InputField name="ДеревоПлатежныхДокументовСОшибкамиДоговор" id="49">
+					<DataPath>ДеревоПлатежныхДокументовСОшибками.Договор</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ChoiceParameterLinks>
+						<xr:Link>
+							<xr:Name>Отбор.Владелец</xr:Name>
+							<xr:DataPath xsi:type="xs:string">Items.ДеревоПлатежныхДокументовСОшибками.CurrentData.Контрагент</xr:DataPath>
+							<xr:ValueChange>Clear</xr:ValueChange>
+						</xr:Link>
+					</ChoiceParameterLinks>
+					<ContextMenu name="ДеревоПлатежныхДокументовСОшибкамиДоговорКонтекстноеМеню" id="50"/>
+					<ExtendedTooltip name="ДеревоПлатежныхДокументовСОшибкамиДоговорExtendedTooltip" id="192"/>
+				</InputField>
+				<InputField name="ДеревоПлатежныхДокументовСОшибкамиСумма" id="51">
+					<DataPath>ДеревоПлатежныхДокументовСОшибками.Сумма</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДеревоПлатежныхДокументовСОшибкамиСуммаКонтекстноеМеню" id="52"/>
+					<ExtendedTooltip name="ДеревоПлатежныхДокументовСОшибкамиСуммаExtendedTooltip" id="193"/>
+					<Events>
+						<Event name="OnChange">ДеревоПлатежныхДокументовСОшибкамиСуммаПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ДеревоПлатежныхДокументовСОшибкамиДата" id="53">
+					<DataPath>ДеревоПлатежныхДокументовСОшибками.Дата</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДеревоПлатежныхДокументовСОшибкамиДатаКонтекстноеМеню" id="54"/>
+					<ExtendedTooltip name="ДеревоПлатежныхДокументовСОшибкамиДатаExtendedTooltip" id="194"/>
+				</InputField>
+				<InputField name="ДеревоПлатежныхДокументовСОшибкамиНомер" id="55">
+					<DataPath>ДеревоПлатежныхДокументовСОшибками.Номер</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДеревоПлатежныхДокументовСОшибкамиНомерКонтекстноеМеню" id="56"/>
+					<ExtendedTooltip name="ДеревоПлатежныхДокументовСОшибкамиНомерExtendedTooltip" id="195"/>
+				</InputField>
+				<InputField name="ДеревоПлатежныхДокументовСОшибкамиНазначениеПлатежа" id="57">
+					<DataPath>ДеревоПлатежныхДокументовСОшибками.НазначениеПлатежа</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДеревоПлатежныхДокументовСОшибкамиНазначениеПлатежаКонтекстноеМеню" id="58"/>
+					<ExtendedTooltip name="ДеревоПлатежныхДокументовСОшибкамиНазначениеПлатежаExtendedTooltip" id="196"/>
+				</InputField>
+				<InputField name="ДеревоПлатежныхДокументовСОшибкамиВариантРаспределенияОплатКапРемонт" id="284">
+					<DataPath>ДеревоПлатежныхДокументовСОшибками.ВариантРаспределенияОплатКапРемонт</DataPath>
+					<ListChoiceMode>true</ListChoiceMode>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Услуги, кроме кап. ремонта</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xr:DesignTimeRef">Enum.УПЖКХ_ВариантыРаспределенияОплатыПриРаздельномУчетеКР.EnumValue.УслугиНеКапРемонт</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Услуги капитального ремонта</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xr:DesignTimeRef">Enum.УПЖКХ_ВариантыРаспределенияОплатыПриРаздельномУчетеКР.EnumValue.УслугиКапРемонт</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="ДеревоПлатежныхДокументовСОшибкамиВариантРаспределенияОплатКапРемонтКонтекстноеМеню" id="285"/>
+					<ExtendedTooltip name="ДеревоПлатежныхДокументовСОшибкамиВариантРаспределенияОплатКапРемонтРасширеннаяПодсказка" id="286"/>
+					<Events>
+						<Event name="OnChange">ДеревоПлатежныхДокументовСОшибкамиВариантРаспределенияОплатКапРемонтПриИзменении</Event>
+					</Events>
+				</InputField>
+				<CheckBoxField name="ДеревоПлатежныхДокументовСОшибкамиНеРаспределятьОплатуНаДобровольноеСтрахование" id="290">
+					<DataPath>ДеревоПлатежныхДокументовСОшибками.НеРаспределятьОплатуНаДобровольноеСтрахование</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ДеревоПлатежныхДокументовСОшибкамиНеРаспределятьОплатуНаДобровольноеСтрахованиеКонтекстноеМеню" id="291"/>
+					<ExtendedTooltip name="ДеревоПлатежныхДокументовСОшибкамиНеРаспределятьОплатуНаДобровольноеСтрахованиеРасширеннаяПодсказка" id="292"/>
+					<Events>
+						<Event name="OnChange">ДеревоПлатежныхДокументовСОшибкамиНеРаспределятьОплатуНаДобровольноеСтрахованиеПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<InputField name="ДеревоПлатежныхДокументовСОшибкамиДокумент" id="59">
+					<DataPath>ДеревоПлатежныхДокументовСОшибками.Документ</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДеревоПлатежныхДокументовСОшибкамиДокументКонтекстноеМеню" id="60"/>
+					<ExtendedTooltip name="ДеревоПлатежныхДокументовСОшибкамиДокументExtendedTooltip" id="197"/>
+				</InputField>
+				<InputField name="ДеревоПлатежныхДокументовСОшибкамиОписаниеОшибок" id="61">
+					<DataPath>ДеревоПлатежныхДокументовСОшибками.ОписаниеОшибок</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДеревоПлатежныхДокументовСОшибкамиОписаниеОшибокКонтекстноеМеню" id="62"/>
+					<ExtendedTooltip name="ДеревоПлатежныхДокументовСОшибкамиОписаниеОшибокExtendedTooltip" id="198"/>
+				</InputField>
+				<InputField name="ДеревоПлатежныхДокументовСОшибкамиГотовность" id="63">
+					<DataPath>ДеревоПлатежныхДокументовСОшибками.Готовность</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДеревоПлатежныхДокументовСОшибкамиГотовностьКонтекстноеМеню" id="64"/>
+					<ExtendedTooltip name="ДеревоПлатежныхДокументовСОшибкамиГотовностьExtendedTooltip" id="199"/>
+				</InputField>
+				<CheckBoxField name="ДеревоПлатежныхДокументовСОшибкамиЕстьРО" id="222">
+					<DataPath>ДеревоПлатежныхДокументовСОшибками.ЕстьРО</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ДеревоПлатежныхДокументовСОшибкамиЕстьРОКонтекстноеМеню" id="223"/>
+					<ExtendedTooltip name="ДеревоПлатежныхДокументовСОшибкамиЕстьРОРасширеннаяПодсказка" id="224"/>
+				</CheckBoxField>
+				<CheckBoxField name="ДеревоПлатежныхДокументовСОшибкамиСуммыСовпадают" id="225">
+					<DataPath>ДеревоПлатежныхДокументовСОшибками.СуммыСовпадают</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ДеревоПлатежныхДокументовСОшибкамиСуммыСовпадаютКонтекстноеМеню" id="226"/>
+					<ExtendedTooltip name="ДеревоПлатежныхДокументовСОшибкамиСуммыСовпадаютРасширеннаяПодсказка" id="227"/>
+				</CheckBoxField>
+				<CheckBoxField name="ДеревоПлатежныхДокументовСОшибкамиКонтрагентСовпадает" id="234">
+					<DataPath>ДеревоПлатежныхДокументовСОшибками.КонтрагентСовпадает</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ДеревоПлатежныхДокументовСОшибкамиКонтрагентСовпадаетКонтекстноеМеню" id="235"/>
+					<ExtendedTooltip name="ДеревоПлатежныхДокументовСОшибкамиКонтрагентСовпадаетРасширеннаяПодсказка" id="236"/>
+				</CheckBoxField>
+				<CheckBoxField name="ДеревоПлатежныхДокументовСОшибкамиДоговорСовпадает" id="231">
+					<DataPath>ДеревоПлатежныхДокументовСОшибками.ДоговорСовпадает</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ДеревоПлатежныхДокументовСОшибкамиДоговорСовпадаетКонтекстноеМеню" id="232"/>
+					<ExtendedTooltip name="ДеревоПлатежныхДокументовСОшибкамиДоговорСовпадаетРасширеннаяПодсказка" id="233"/>
+				</CheckBoxField>
+				<InputField name="ДеревоПлатежныхДокументовСОшибкамиСуммаРО" id="228">
+					<DataPath>ДеревоПлатежныхДокументовСОшибками.СуммаРО</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДеревоПлатежныхДокументовСОшибкамиСуммаРОКонтекстноеМеню" id="229"/>
+					<ExtendedTooltip name="ДеревоПлатежныхДокументовСОшибкамиСуммаРОРасширеннаяПодсказка" id="230"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<CommandBar name="ГруппаПанельКЗагрузке" id="97">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа панель к загрузке</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа панель к загрузке</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ГруппаПанельКЗагрузкеExtendedTooltip" id="200"/>
+			<ChildItems>
+				<Button name="ДеревоПлатежныхДокументовБезОшибокУстановитьФлажкиОшибкиКЗагрузке" id="93">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.УстановитьФлажкиКЗагрузке</CommandName>
+					<ExtendedTooltip name="ДеревоПлатежныхДокументовБезОшибокУстановитьФлажкиОшибкиКЗагрузкеExtendedTooltip" id="201"/>
+				</Button>
+				<Button name="ДеревоПлатежныхДокументовБезОшибокСнятьФлажкиКЗагрузке" id="94">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.СнятьФлажкиКЗагрузке</CommandName>
+					<ExtendedTooltip name="ДеревоПлатежныхДокументовБезОшибокСнятьФлажкиКЗагрузкеРасширеннаяПодсказка" id="202"/>
+				</Button>
+				<Button name="ДеревоПлатежныхДокументовБезОшибокСвернутьКЗагрузке" id="95">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.СвернутьКЗагрузке</CommandName>
+					<ExtendedTooltip name="ДеревоПлатежныхДокументовБезОшибокСвернутьКЗагрузкеРасширеннаяПодсказка" id="203"/>
+				</Button>
+				<Button name="ДеревоПлатежныхДокументовБезОшибокРазвернутьКЗагрузке" id="96">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.РазвернутьКЗагрузке</CommandName>
+					<ExtendedTooltip name="ДеревоПлатежныхДокументовБезОшибокРазвернутьКЗагрузкеРасширеннаяПодсказка" id="204"/>
+				</Button>
+				<Button name="ДеревоПлатежныхДокументовБезОшибокОтсортироватьПоВозрастанию" id="163">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Item.ДеревоПлатежныхДокументовБезОшибок.StandardCommand.SortListAsc</CommandName>
+					<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+					<ExtendedTooltip name="ДеревоПлатежныхДокументовБезОшибокОтсортироватьПоВозрастаниюExtendedTooltip" id="205"/>
+				</Button>
+				<Button name="ДеревоПлатежныхДокументовБезОшибокОтсортироватьПоУбыванию" id="165">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Item.ДеревоПлатежныхДокументовБезОшибок.StandardCommand.SortListDesc</CommandName>
+					<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+					<ExtendedTooltip name="ДеревоПлатежныхДокументовБезОшибокОтсортироватьПоУбываниюExtendedTooltip" id="206"/>
+				</Button>
+				<Button name="НаКорректировку" id="98">
+					<Type>CommandBarButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Form.Command.НаКорректировку</CommandName>
+					<Picture>
+						<xr:Ref>CommonPicture.КрасныйКрест</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="НаКорректировкуExtendedTooltip" id="207"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+		<Table name="ДеревоПлатежныхДокументовБезОшибок" id="74">
+			<Representation>Tree</Representation>
+			<TitleLocation>Top</TitleLocation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<HorizontalLines>false</HorizontalLines>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>ДеревоПлатежныхДокументовБезОшибок</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документы к загрузке</v8:content>
+				</v8:item>
+			</Title>
+			<TitleTextColor>style:ГруппаВариантовОтчетовЦвет82</TitleTextColor>
+			<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+			<CommandSet>
+				<ExcludedCommand>Add</ExcludedCommand>
+				<ExcludedCommand>Change</ExcludedCommand>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>Delete</ExcludedCommand>
+				<ExcludedCommand>EndEdit</ExcludedCommand>
+			</CommandSet>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<ContextMenu name="ДеревоПлатежныхДокументовБезОшибокКонтекстноеМеню" id="75"/>
+			<AutoCommandBar name="ДеревоПлатежныхДокументовБезОшибокКоманднаяПанель" id="76"/>
+			<ExtendedTooltip name="ДеревоПлатежныхДокументовБезОшибокExtendedTooltip" id="208"/>
+			<SearchStringAddition name="ДеревоПлатежныхДокументовБезОшибокСтрокаПоиска" id="261">
+				<AdditionSource>
+					<Item>ДеревоПлатежныхДокументовБезОшибок</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДеревоПлатежныхДокументовБезОшибокСтрокаПоискаКонтекстноеМеню" id="262"/>
+				<ExtendedTooltip name="ДеревоПлатежныхДокументовБезОшибокСтрокаПоискаРасширеннаяПодсказка" id="263"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ДеревоПлатежныхДокументовБезОшибокСостояниеПросмотра" id="264">
+				<AdditionSource>
+					<Item>ДеревоПлатежныхДокументовБезОшибок</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДеревоПлатежныхДокументовБезОшибокСостояниеПросмотраКонтекстноеМеню" id="265"/>
+				<ExtendedTooltip name="ДеревоПлатежныхДокументовБезОшибокСостояниеПросмотраРасширеннаяПодсказка" id="266"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ДеревоПлатежныхДокументовБезОшибокУправлениеПоиском" id="267">
+				<AdditionSource>
+					<Item>ДеревоПлатежныхДокументовБезОшибок</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ДеревоПлатежныхДокументовБезОшибокУправлениеПоискомКонтекстноеМеню" id="268"/>
+				<ExtendedTooltip name="ДеревоПлатежныхДокументовБезОшибокУправлениеПоискомРасширеннаяПодсказка" id="269"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="OnEditEnd">ДеревоПлатежныхДокументовБезОшибокПриОкончанииРедактирования</Event>
+				<Event name="Selection">ДеревоПлатежныхДокументовБезОшибокВыбор</Event>
+				<Event name="BeforeAddRow">ДеревоПлатежныхДокументовБезОшибокПередНачаломДобавления</Event>
+				<Event name="BeforeDeleteRow">ДеревоПлатежныхДокументовБезОшибокПередУдалением</Event>
+			</Events>
+			<ChildItems>
+				<CheckBoxField name="ДеревоПлатежныхДокументовБезОшибокПометка" id="77">
+					<DataPath>ДеревоПлатежныхДокументовБезОшибок.Пометка</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ДеревоПлатежныхДокументовБезОшибокПометкаКонтекстноеМеню" id="78"/>
+					<ExtendedTooltip name="ДеревоПлатежныхДокументовБезОшибокПометкаExtendedTooltip" id="209"/>
+				</CheckBoxField>
+				<InputField name="ДеревоПлатежныхДокументовБезОшибокКонтрагент" id="79">
+					<DataPath>ДеревоПлатежныхДокументовБезОшибок.Контрагент</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДеревоПлатежныхДокументовБезОшибокКонтрагентКонтекстноеМеню" id="80"/>
+					<ExtendedTooltip name="ДеревоПлатежныхДокументовБезОшибокКонтрагентExtendedTooltip" id="210"/>
+					<Events>
+						<Event name="StartChoice">ДеревоПлатежныхДокументовБезОшибокКонтрагентНачалоВыбора</Event>
+					</Events>
+				</InputField>
+				<InputField name="ДеревоПлатежныхДокументовБезОшибокДоговор" id="81">
+					<DataPath>ДеревоПлатежныхДокументовБезОшибок.Договор</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ChoiceParameterLinks>
+						<xr:Link>
+							<xr:Name>Отбор.Владелец</xr:Name>
+							<xr:DataPath xsi:type="xs:string">Items.ДеревоПлатежныхДокументовБезОшибок.CurrentData.Контрагент</xr:DataPath>
+							<xr:ValueChange>Clear</xr:ValueChange>
+						</xr:Link>
+					</ChoiceParameterLinks>
+					<ContextMenu name="ДеревоПлатежныхДокументовБезОшибокДоговорКонтекстноеМеню" id="82"/>
+					<ExtendedTooltip name="ДеревоПлатежныхДокументовБезОшибокДоговорExtendedTooltip" id="211"/>
+				</InputField>
+				<InputField name="ДеревоПлатежныхДокументовБезОшибокСумма" id="83">
+					<DataPath>ДеревоПлатежныхДокументовБезОшибок.Сумма</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДеревоПлатежныхДокументовБезОшибокСуммаКонтекстноеМеню" id="84"/>
+					<ExtendedTooltip name="ДеревоПлатежныхДокументовБезОшибокСуммаExtendedTooltip" id="212"/>
+				</InputField>
+				<InputField name="ДеревоПлатежныхДокументовБезОшибокДата" id="85">
+					<DataPath>ДеревоПлатежныхДокументовБезОшибок.Дата</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДеревоПлатежныхДокументовБезОшибокДатаКонтекстноеМеню" id="86"/>
+					<ExtendedTooltip name="ДеревоПлатежныхДокументовБезОшибокДатаExtendedTooltip" id="213"/>
+				</InputField>
+				<InputField name="ДеревоПлатежныхДокументовБезОшибокНомер" id="87">
+					<DataPath>ДеревоПлатежныхДокументовБезОшибок.Номер</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<Wrap>false</Wrap>
+					<ContextMenu name="ДеревоПлатежныхДокументовБезОшибокНомерКонтекстноеМеню" id="88"/>
+					<ExtendedTooltip name="ДеревоПлатежныхДокументовБезОшибокНомерExtendedTooltip" id="214"/>
+				</InputField>
+				<InputField name="ДеревоПлатежныхДокументовБезОшибокНазначениеПлатежа" id="89">
+					<DataPath>ДеревоПлатежныхДокументовБезОшибок.НазначениеПлатежа</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДеревоПлатежныхДокументовБезОшибокНазначениеПлатежаКонтекстноеМеню" id="90"/>
+					<ExtendedTooltip name="ДеревоПлатежныхДокументовБезОшибокНазначениеПлатежаExtendedTooltip" id="215"/>
+				</InputField>
+				<InputField name="ДеревоПлатежныхДокументовБезОшибокВариантРаспределенияОплатКапРемонт" id="281">
+					<DataPath>ДеревоПлатежныхДокументовБезОшибок.ВариантРаспределенияОплатКапРемонт</DataPath>
+					<ListChoiceMode>true</ListChoiceMode>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Услуги, кроме кап. ремонта</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xr:DesignTimeRef">Enum.УПЖКХ_ВариантыРаспределенияОплатыПриРаздельномУчетеКР.EnumValue.УслугиНеКапРемонт</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Услуги капитального ремонта</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xr:DesignTimeRef">Enum.УПЖКХ_ВариантыРаспределенияОплатыПриРаздельномУчетеКР.EnumValue.УслугиКапРемонт</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="ДеревоПлатежныхДокументовБезОшибокВариантРаспределенияОплатКапРемонтКонтекстноеМеню" id="282"/>
+					<ExtendedTooltip name="ДеревоПлатежныхДокументовБезОшибокВариантРаспределенияОплатКапРемонтРасширеннаяПодсказка" id="283"/>
+				</InputField>
+				<CheckBoxField name="ДеревоПлатежныхДокументовБезОшибокНеРаспределятьОплатуНаДобровольноеСтрахование" id="293">
+					<DataPath>ДеревоПлатежныхДокументовБезОшибок.НеРаспределятьОплатуНаДобровольноеСтрахование</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ДеревоПлатежныхДокументовБезОшибокНеРаспределятьОплатуНаДобровольноеСтрахованиеКонтекстноеМеню" id="294"/>
+					<ExtendedTooltip name="ДеревоПлатежныхДокументовБезОшибокНеРаспределятьОплатуНаДобровольноеСтрахованиеРасширеннаяПодсказка" id="295"/>
+					<Events>
+						<Event name="OnChange">ДеревоПлатежныхДокументовБезОшибокНеРаспределятьОплатуНаДобровольноеСтрахованиеПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<InputField name="ДеревоПлатежныхДокументовБезОшибокДокумент" id="91">
+					<DataPath>ДеревоПлатежныхДокументовБезОшибок.Документ</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДеревоПлатежныхДокументовБезОшибокДокументКонтекстноеМеню" id="92"/>
+					<ExtendedTooltip name="ДеревоПлатежныхДокументовБезОшибокДокументExtendedTooltip" id="216"/>
+				</InputField>
+				<CheckBoxField name="ДеревоПлатежныхДокументовБезОшибокЕстьРО" id="237">
+					<DataPath>ДеревоПлатежныхДокументовБезОшибок.ЕстьРО</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ДеревоПлатежныхДокументовБезОшибокЕстьРОКонтекстноеМеню" id="238"/>
+					<ExtendedTooltip name="ДеревоПлатежныхДокументовБезОшибокЕстьРОРасширеннаяПодсказка" id="239"/>
+				</CheckBoxField>
+				<CheckBoxField name="ДеревоПлатежныхДокументовБезОшибокСуммыСовпадают" id="240">
+					<DataPath>ДеревоПлатежныхДокументовБезОшибок.СуммыСовпадают</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ДеревоПлатежныхДокументовБезОшибокСуммыСовпадаютКонтекстноеМеню" id="241"/>
+					<ExtendedTooltip name="ДеревоПлатежныхДокументовБезОшибокСуммыСовпадаютРасширеннаяПодсказка" id="242"/>
+				</CheckBoxField>
+				<CheckBoxField name="ДеревоПлатежныхДокументовБезОшибокКонтрагентСовпадает" id="243">
+					<DataPath>ДеревоПлатежныхДокументовБезОшибок.КонтрагентСовпадает</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ДеревоПлатежныхДокументовБезОшибокКонтрагентСовпадаетКонтекстноеМеню" id="244"/>
+					<ExtendedTooltip name="ДеревоПлатежныхДокументовБезОшибокКонтрагентСовпадаетРасширеннаяПодсказка" id="245"/>
+				</CheckBoxField>
+				<CheckBoxField name="ДеревоПлатежныхДокументовБезОшибокДоговорСовпадает" id="246">
+					<DataPath>ДеревоПлатежныхДокументовБезОшибок.ДоговорСовпадает</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ДеревоПлатежныхДокументовБезОшибокДоговорСовпадаетКонтекстноеМеню" id="247"/>
+					<ExtendedTooltip name="ДеревоПлатежныхДокументовБезОшибокДоговорСовпадаетРасширеннаяПодсказка" id="248"/>
+				</CheckBoxField>
+				<InputField name="ДеревоПлатежныхДокументовБезОшибокСуммаРО" id="249">
+					<DataPath>ДеревоПлатежныхДокументовБезОшибок.СуммаРО</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДеревоПлатежныхДокументовБезОшибокСуммаРОКонтекстноеМеню" id="250"/>
+					<ExtendedTooltip name="ДеревоПлатежныхДокументовБезОшибокСуммаРОРасширеннаяПодсказка" id="251"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<LabelField name="ИнформационнаяСтрока" id="99">
+			<DataPath>ИнформационнаяСтрока</DataPath>
+			<TitleLocation>None</TitleLocation>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+			<ContextMenu name="ИнформационнаяСтрокаКонтекстноеМеню" id="100"/>
+			<ExtendedTooltip name="ИнформационнаяСтрокаExtendedTooltip" id="217"/>
+		</LabelField>
+		<UsualGroup name="ГруппаОсновнойПанели" id="106">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа основной панели</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа основной панели</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОсновнойПанелиExtendedTooltip" id="218"/>
+			<ChildItems>
+				<LabelField name="ИнформационнаяСтрокаЗагрузки" id="101">
+					<DataPath>ИнформационнаяСтрокаЗагрузки</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<TextColor>style:УПЖКХ_ТекстСправочнойНадписи</TextColor>
+					<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					<ContextMenu name="ИнформационнаяСтрокаЗагрузкиКонтекстноеМеню" id="102"/>
+					<ExtendedTooltip name="ИнформационнаяСтрокаЗагрузкиExtendedTooltip" id="219"/>
+				</LabelField>
+				<CommandBar name="ГруппаПанельОсновная" id="105">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа панель основная</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа панель основная</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>false</HorizontalStretch>
+					<HorizontalLocation>Right</HorizontalLocation>
+					<ExtendedTooltip name="ГруппаПанельОсновнаяExtendedTooltip" id="220"/>
+					<ChildItems>
+						<Button name="ФормаСформировать" id="104">
+							<Type>CommandBarButton</Type>
+							<DefaultButton>true</DefaultButton>
+							<CommandName>Form.Command.Сформировать</CommandName>
+							<ExtendedTooltip name="ФормаСформироватьExtendedTooltip" id="221"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.КВП_ФормированиеОплатПоПлатежнымДокументам</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ДеревоПлатежныхДокументовСОшибками" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дерево платежных документов с ошибками</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Columns>
+				<Column name="Пометка" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пометка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Контрагент" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контрагент / Лицевой счет</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.КВП_ЛицевыеСчета</v8:Type>
+						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Договор" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Договор</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ДоговорыКонтрагентов</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Сумма" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поступило</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Дата" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="Номер" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>11</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="НазначениеПлатежа" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Назначение платежа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Документ" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:DocumentRef.ПоступлениеНаРасчетныйСчет</v8:Type>
+						<v8:Type>cfg:DocumentRef.КВП_РегистрацияОплаты</v8:Type>
+						<v8:Type>cfg:DocumentRef.ОплатаПлатежнойКартой</v8:Type>
+						<v8:Type>cfg:DocumentRef.ПриходныйКассовыйОрдер</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ОписаниеОшибок" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Описание ошибок</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Готовность" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Готовность</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>1</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Доп_ЧетнаяСтрока" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доп четная строка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Доп_РодительОпределен" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доп родитель определен</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ЕстьРО" id="13">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Есть РО</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="СуммыСовпадают" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Суммы совпадают</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="КонтрагентСовпадает" id="15">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контрагент совпадает</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ДоговорСовпадает" id="16">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Договор совпадает</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="СуммаРО" id="17">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма РО</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ВариантРаспределенияОплатКапРемонт" id="18">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Распределение на кап. ремонт</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.УПЖКХ_ВариантыРаспределенияОплатыПриРаздельномУчетеКР</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ВозможностьВыбораРаспределенияНаКапРемонт" id="19">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Возможность выбора распределения на кап. ремонт</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="НеРаспределятьОплатуНаДобровольноеСтрахование" id="20">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Не распределять оплату на добровольное страхование</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ДеревоПлатежныхДокументовБезОшибок" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дерево платежных документов без ошибок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Columns>
+				<Column name="Пометка" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пометка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Контрагент" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контрагент / Лицевой счет</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.КВП_ЛицевыеСчета</v8:Type>
+						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Договор" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Договор</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ДоговорыКонтрагентов</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Сумма" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поступило</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Дата" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="Номер" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>11</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="НазначениеПлатежа" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Назначение платежа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Документ" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:DocumentRef.ПоступлениеНаРасчетныйСчет</v8:Type>
+						<v8:Type>cfg:DocumentRef.КВП_РегистрацияОплаты</v8:Type>
+						<v8:Type>cfg:DocumentRef.ОплатаПлатежнойКартой</v8:Type>
+						<v8:Type>cfg:DocumentRef.ПриходныйКассовыйОрдер</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Доп_ЧетнаяСтрока" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доп четная строка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Доп_РодительОпределен" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доп родитель определен</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ЕстьРО" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Есть РО</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="СуммыСовпадают" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Суммы совпадают</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="КонтрагентСовпадает" id="13">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контрагент совпадает</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ДоговорСовпадает" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Договор совпадает</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="СуммаРО" id="15">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма РО</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ВариантРаспределенияОплатКапРемонт" id="16">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Распределение на кап. ремонт</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.УПЖКХ_ВариантыРаспределенияОплатыПриРаздельномУчетеКР</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ВозможностьВыбораРаспределенияНаКапРемонт" id="17">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Возможность выбора распределения на кап ремонт</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="НеРаспределятьОплатуНаДобровольноеСтрахование" id="18">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Не распределять оплату на добровольное страхование</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ИнформационнаяСтрока" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Информационная строка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИнформационнаяСтрокаЗагрузки" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Информационная строка загрузки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТаблицаЛС" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица ЛС</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Договор" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Договор</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ДоговорыКонтрагентов</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Контрагент" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контрагент / Лицевой счет</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.КВП_ЛицевыеСчета</v8:Type>
+						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ЛицевойСчет" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Лицевой счет</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.КВП_ЛицевыеСчета</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Период" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Период</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="мТаблицаПлатежныхДокументов" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>М таблица платежных документов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Документ" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИсточникВида" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Источник вида</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Пометка" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пометка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ПерезаполнитьЗаписиКУДиР" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перезаполнить записи КУДиР</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТаблицаПлатежей" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица платежей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Дата" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДатаРО" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата РО</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="Договор" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Договор</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ДоговорыКонтрагентов</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ДоговорСовпадает" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Договор совпадает</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Документ" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:DocumentRef.ПоступлениеНаРасчетныйСчет</v8:Type>
+						<v8:Type>cfg:DocumentRef.ОплатаПлатежнойКартой</v8:Type>
+						<v8:Type>cfg:DocumentRef.ПриходныйКассовыйОрдер</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ДокументРО" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ РО</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:DocumentRef.КВП_РегистрацияОплаты</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ЕстьРО" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Есть РО</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Контрагент" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контрагент</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+					</Type>
+				</Column>
+				<Column name="КонтрагентСовпадает" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контрагент совпадает</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ЛицевойСчет" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Лицевой счет</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.КВП_ЛицевыеСчета</v8:Type>
+					</Type>
+				</Column>
+				<Column name="НазначениеПлатежа" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Назначение платежа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Номер" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="СуммаДокумента" id="13">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма документа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>12</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="СуммаОплаты" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма оплаты</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>12</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="СуммаРО" id="15">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма РО</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>12</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="СуммыСовпадают" id="16">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Суммы совпадают</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ВариантРаспределенияОплатКапРемонт" id="17">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Распределение на кап. ремонт</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.УПЖКХ_ВариантыРаспределенияОплатыПриРаздельномУчетеКР</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ВозможностьВыбораРаспределенияНаКапРемонт" id="18">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Возможность выбора распределения на кап. ремонт</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="НеРаспределятьОплатуНаДобровольноеСтрахование" id="19">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Не распределять оплату на добровольное страхование</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ПереключательУчитыватьВсеОплаты" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переключатель учитывать все оплаты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="мСтруктураНастроекКапРемонта" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Структура настроек кап ремонта</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ВестиУчетНачисленийПоДобровольномуСтрахованию" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вести учет начислений по добровольному страхованию</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="УслугаДобровольногоСтрахования" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Услуга добровольного страхования</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.КВП_Услуги</v8:Type>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДеревоПлатежныхДокументовСОшибкамиПометка</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоПлатежныхДокументовСОшибкамиКонтрагент</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоПлатежныхДокументовСОшибкамиДоговор</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоПлатежныхДокументовСОшибкамиСумма</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоПлатежныхДокументовСОшибкамиДата</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоПлатежныхДокументовСОшибкамиНомер</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоПлатежныхДокументовСОшибкамиНазначениеПлатежа</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоПлатежныхДокументовСОшибкамиДокумент</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоПлатежныхДокументовСОшибкамиОписаниеОшибок</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоПлатежныхДокументовСОшибкамиВариантРаспределенияОплатКапРемонт</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоПлатежныхДокументовСОшибкамиНеРаспределятьОплатуНаДобровольноеСтрахование</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДеревоПлатежныхДокументовСОшибками.Доп_РодительОпределен</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#E6E6FA</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#E6E6FA</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДеревоПлатежныхДокументовСОшибкамиСумма</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДеревоПлатежныхДокументовСОшибками.Доп_РодительОпределен</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#E6E6FA</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДеревоПлатежныхДокументовСОшибкамиПометка</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоПлатежныхДокументовСОшибкамиНеРаспределятьОплатуНаДобровольноеСтрахование</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДеревоПлатежныхДокументовСОшибками.Доп_РодительОпределен</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Отображать</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДеревоПлатежныхДокументовСОшибкамиПометка</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоПлатежныхДокументовСОшибкамиКонтрагент</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоПлатежныхДокументовСОшибкамиДоговор</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоПлатежныхДокументовСОшибкамиСумма</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоПлатежныхДокументовСОшибкамиДата</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоПлатежныхДокументовСОшибкамиНомер</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоПлатежныхДокументовСОшибкамиНазначениеПлатежа</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоПлатежныхДокументовСОшибкамиДокумент</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоПлатежныхДокументовСОшибкамиОписаниеОшибок</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоПлатежныхДокументовСОшибкамиВариантРаспределенияОплатКапРемонт</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоПлатежныхДокументовСОшибкамиНеРаспределятьОплатуНаДобровольноеСтрахование</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДеревоПлатежныхДокументовСОшибками.Доп_РодительОпределен</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДеревоПлатежныхДокументовСОшибками.Доп_ЧетнаяСтрока</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#F8F9FF</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#E6E6FA</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДеревоПлатежныхДокументовСОшибкамиПометка</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоПлатежныхДокументовСОшибкамиКонтрагент</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоПлатежныхДокументовСОшибкамиДоговор</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоПлатежныхДокументовСОшибкамиСумма</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоПлатежныхДокументовСОшибкамиДата</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоПлатежныхДокументовСОшибкамиНомер</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоПлатежныхДокументовСОшибкамиНазначениеПлатежа</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоПлатежныхДокументовСОшибкамиДокумент</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоПлатежныхДокументовСОшибкамиОписаниеОшибок</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоПлатежныхДокументовСОшибкамиВариантРаспределенияОплатКапРемонт</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоПлатежныхДокументовСОшибкамиНеРаспределятьОплатуНаДобровольноеСтрахование</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДеревоПлатежныхДокументовСОшибками.Готовность</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДеревоПлатежныхДокументовСОшибками.Пометка</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДеревоПлатежныхДокументовСОшибками.Доп_РодительОпределен</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#F8F9FF</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:FormTextColor</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДеревоПлатежныхДокументовБезОшибокПометка</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоПлатежныхДокументовБезОшибокКонтрагент</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоПлатежныхДокументовБезОшибокДоговор</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоПлатежныхДокументовБезОшибокСумма</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоПлатежныхДокументовБезОшибокДата</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоПлатежныхДокументовБезОшибокНомер</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоПлатежныхДокументовБезОшибокНазначениеПлатежа</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоПлатежныхДокументовБезОшибокДокумент</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоПлатежныхДокументовБезОшибокВариантРаспределенияОплатКапРемонт</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоПлатежныхДокументовБезОшибокНеРаспределятьОплатуНаДобровольноеСтрахование</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДеревоПлатежныхДокументовБезОшибок.Доп_РодительОпределен</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#C9FBBF</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#E6E6FA</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДеревоПлатежныхДокументовБезОшибокПометка</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоПлатежныхДокументовБезОшибокНеРаспределятьОплатуНаДобровольноеСтрахование</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДеревоПлатежныхДокументовБезОшибок.Доп_РодительОпределен</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Отображать</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДеревоПлатежныхДокументовСОшибкамиВариантРаспределенияОплатКапРемонт</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДеревоПлатежныхДокументовСОшибками.Доп_РодительОпределен</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДеревоПлатежныхДокументовСОшибками.ВозможностьВыбораРаспределенияНаКапРемонт</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДеревоПлатежныхДокументовБезОшибокВариантРаспределенияОплатКапРемонт</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДеревоПлатежныхДокументовБезОшибок.Доп_РодительОпределен</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДеревоПлатежныхДокументовБезОшибок.ВозможностьВыбораРаспределенияНаКапРемонт</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаЗаполнить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда заполнить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ЗаполнитьФорму</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаЗаполнить</Action>
+			<Representation>TextPicture</Representation>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="УстановитьФлажкиОшибки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить флажки ошибки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить все пометки для документов с ошибками</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УстановитьФлажкиОшибки</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СнятьФлажкиОшибки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять флажки ошибки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять пометки со всех документов с ошибками</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СнятьФлажкиОшибки</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СвернутьОшибки" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Свернуть ошибки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Свернуть все документы с ошибками</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Свернуть</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+				<xr:TransparentPixel x="1" y="11"/>
+			</Picture>
+			<Action>СвернутьОшибки</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="РазвернутьОшибки" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Развернуть ошибки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Развернуть все документы с ошибками</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Развернуть</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+				<xr:TransparentPixel x="2" y="11"/>
+			</Picture>
+			<Action>РазвернутьОшибки</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПринятьИзменения" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Принять изменения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Принять изменения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ЗеленаяГалка</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ПринятьИзменения</Action>
+			<Representation>TextPicture</Representation>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="РазвернутьКЗагрузке" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Развернуть к загрузке</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Развернуть все документы к загрузке</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Развернуть</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+				<xr:TransparentPixel x="2" y="11"/>
+			</Picture>
+			<Action>РазвернутьКЗагрузке</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СвернутьКЗагрузке" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Свернуть к загрузке</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Свернуть все документы к загрузке</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Свернуть</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+				<xr:TransparentPixel x="1" y="11"/>
+			</Picture>
+			<Action>СвернутьКЗагрузке</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СнятьФлажкиКЗагрузке" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять флажки к загрузке</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять пометки со всех документов к загрузке</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СнятьФлажкиКЗагрузке</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="УстановитьФлажкиКЗагрузке" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить флажки к загрузке</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить все пометки для документов к загрузке</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УстановитьФлажкиКЗагрузке</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="НаКорректировку" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>На корректировку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>На корректировку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НаКорректировку</Action>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Сформировать" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Сформировать</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+				<xr:TransparentPixel x="13" y="2"/>
+			</Picture>
+			<Action>Сформировать</Action>
+			<Representation>TextPicture</Representation>
+			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Настройка" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Настройки</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+				<xr:TransparentPixel x="14" y="12"/>
+			</Picture>
+			<Action>Настройка</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

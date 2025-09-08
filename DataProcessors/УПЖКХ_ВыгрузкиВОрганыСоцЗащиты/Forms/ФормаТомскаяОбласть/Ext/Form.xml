@@ -1,0 +1,788 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Томская область: Выгрузка в ОСЗН</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаКомандаНастройка" id="1">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.КомандаНастройка</CommandName>
+				<Picture>
+					<xr:Ref>CommonPicture.Настройка</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Настройка</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаКомандаНастройкаРасширеннаяПодсказка" id="2"/>
+			</Button>
+			<Button name="ФормаКомандаЗаполнить" id="3">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.КомандаЗаполнить</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Заполнить</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаКомандаЗаполнитьРасширеннаяПодсказка" id="4"/>
+			</Button>
+			<Button name="ФормаКомандаВыгрузить" id="5">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.КомандаВыгрузить</CommandName>
+				<Picture>
+					<xr:Ref>CommonPicture.ВыгрузитьФайлСертификата</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Выгрузить</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаКомандаВыгрузитьРасширеннаяПодсказка" id="6"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="8"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаШапкаСлева" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шапка слева</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шапка слева</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаШапкаСлеваРасширеннаяПодсказка" id="10"/>
+					<ChildItems>
+						<InputField name="ПериодСтрокой" id="11">
+							<DataPath>ПериодСтрокой</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Период</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ChoiceButton>true</ChoiceButton>
+							<SpinButton>true</SpinButton>
+							<ChoiceButtonPicture>
+								<xr:Ref>StdPicture.InputFieldCalendar</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</ChoiceButtonPicture>
+							<ContextMenu name="ПериодСтрокойКонтекстноеМеню" id="12"/>
+							<ExtendedTooltip name="ПериодСтрокойExtendedTooltip" id="13"/>
+							<Events>
+								<Event name="OnChange">ПериодСтрокойПриИзменении</Event>
+								<Event name="AutoComplete">ПериодСтрокойАвтоПодбор</Event>
+								<Event name="StartChoice">ПериодСтрокойНачалоВыбора</Event>
+								<Event name="Tuning">ПериодСтрокойРегулирование</Event>
+								<Event name="TextEditEnd">ПериодСтрокойОкончаниеВводаТекста</Event>
+							</Events>
+						</InputField>
+						<InputField name="Организация" id="14">
+							<DataPath>Объект.Организация</DataPath>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="15"/>
+							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="16"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаШапкаСправа" id="17">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шапка справа</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шапка справа</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаШапкаСправаРасширеннаяПодсказка" id="18"/>
+					<ChildItems>
+						<InputField name="КодОрганизации" id="19">
+							<DataPath>КодОрганизации</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Код организации</v8:content>
+								</v8:item>
+							</Title>
+							<Wrap>false</Wrap>
+							<ChoiceFoldersAndItems>Folders</ChoiceFoldersAndItems>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="КодОрганизацииКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="КодОрганизацииРасширеннаяПодсказка" id="21"/>
+						</InputField>
+						<InputField name="КаталогВыгрузки" id="22">
+							<DataPath>КаталогВыгрузки</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Каталог выгрузки</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<ChoiceButton>true</ChoiceButton>
+							<OpenButton>true</OpenButton>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="КаталогВыгрузкиКонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="КаталогВыгрузкиРасширеннаяПодсказка" id="24"/>
+							<Events>
+								<Event name="StartChoice">ИмяКаталогаЗагрузкиНачалоВыбора</Event>
+								<Event name="Opening">ИмяКаталогаЗагрузкиОткрытие</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ПанельВыгрузки" id="25">
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ПанельВыгрузкиРасширеннаяПодсказка" id="26"/>
+			<ChildItems>
+				<Table name="ТомскаяОбласть_ТаблицаНачислений" id="27">
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>Объект.ТомскаяОбласть_ТаблицаНачислений</DataPath>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийКонтекстноеМеню" id="28"/>
+					<AutoCommandBar name="ТомскаяОбласть_ТаблицаНачисленийКоманднаяПанель" id="29"/>
+					<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийРасширеннаяПодсказка" id="30"/>
+					<SearchStringAddition name="ТомскаяОбласть_ТаблицаНачисленийСтрокаПоиска" id="31">
+						<AdditionSource>
+							<Item>ТомскаяОбласть_ТаблицаНачислений</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийСтрокаПоискаКонтекстноеМеню" id="32"/>
+						<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийСтрокаПоискаРасширеннаяПодсказка" id="33"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ТомскаяОбласть_ТаблицаНачисленийСостояниеПросмотра" id="34">
+						<AdditionSource>
+							<Item>ТомскаяОбласть_ТаблицаНачислений</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийСостояниеПросмотраКонтекстноеМеню" id="35"/>
+						<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийСостояниеПросмотраРасширеннаяПодсказка" id="36"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ТомскаяОбласть_ТаблицаНачисленийУправлениеПоиском" id="37">
+						<AdditionSource>
+							<Item>ТомскаяОбласть_ТаблицаНачислений</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийУправлениеПоискомКонтекстноеМеню" id="38"/>
+						<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийУправлениеПоискомРасширеннаяПодсказка" id="39"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<LabelField name="ТомскаяОбласть_ТаблицаНачисленийНомерСтроки" id="40">
+							<DataPath>Объект.ТомскаяОбласть_ТаблицаНачислений.LineNumber</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийНомерСтрокиКонтекстноеМеню" id="41"/>
+							<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийНомерСтрокиРасширеннаяПодсказка" id="42"/>
+						</LabelField>
+						<InputField name="ТомскаяОбласть_ТаблицаНачисленийtype_zap" id="43">
+							<DataPath>Объект.ТомскаяОбласть_ТаблицаНачислений.type_zap</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийtype_zapКонтекстноеМеню" id="44"/>
+							<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийtype_zapРасширеннаяПодсказка" id="45"/>
+						</InputField>
+						<InputField name="ТомскаяОбласть_ТаблицаНачисленийdate_form" id="46">
+							<DataPath>Объект.ТомскаяОбласть_ТаблицаНачислений.date_form</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийdate_formКонтекстноеМеню" id="47"/>
+							<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийdate_formРасширеннаяПодсказка" id="48"/>
+						</InputField>
+						<InputField name="ТомскаяОбласть_ТаблицаНачисленийls" id="49">
+							<DataPath>Объект.ТомскаяОбласть_ТаблицаНачислений.ls</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийlsКонтекстноеМеню" id="50"/>
+							<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийlsРасширеннаяПодсказка" id="51"/>
+						</InputField>
+						<InputField name="ТомскаяОбласть_ТаблицаНачисленийkod_o" id="52">
+							<DataPath>Объект.ТомскаяОбласть_ТаблицаНачислений.kod_o</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийkod_oКонтекстноеМеню" id="53"/>
+							<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийkod_oРасширеннаяПодсказка" id="54"/>
+						</InputField>
+						<InputField name="ТомскаяОбласть_ТаблицаНачисленийkod_zeu" id="55">
+							<DataPath>Объект.ТомскаяОбласть_ТаблицаНачислений.kod_zeu</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийkod_zeuКонтекстноеМеню" id="56"/>
+							<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийkod_zeuРасширеннаяПодсказка" id="57"/>
+						</InputField>
+						<InputField name="ТомскаяОбласть_ТаблицаНачисленийkod_r" id="58">
+							<DataPath>Объект.ТомскаяОбласть_ТаблицаНачислений.kod_r</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийkod_rКонтекстноеМеню" id="59"/>
+							<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийkod_rРасширеннаяПодсказка" id="60"/>
+						</InputField>
+						<InputField name="ТомскаяОбласть_ТаблицаНачисленийkod_pr" id="61">
+							<DataPath>Объект.ТомскаяОбласть_ТаблицаНачислений.kod_pr</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийkod_prКонтекстноеМеню" id="62"/>
+							<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийkod_prРасширеннаяПодсказка" id="63"/>
+						</InputField>
+						<InputField name="ТомскаяОбласть_ТаблицаНачисленийkod_np" id="64">
+							<DataPath>Объект.ТомскаяОбласть_ТаблицаНачислений.kod_np</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийkod_npКонтекстноеМеню" id="65"/>
+							<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийkod_npРасширеннаяПодсказка" id="66"/>
+						</InputField>
+						<InputField name="ТомскаяОбласть_ТаблицаНачисленийst" id="67">
+							<DataPath>Объект.ТомскаяОбласть_ТаблицаНачислений.st</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийstКонтекстноеМеню" id="68"/>
+							<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийstРасширеннаяПодсказка" id="69"/>
+						</InputField>
+						<InputField name="ТомскаяОбласть_ТаблицаНачисленийdom" id="70">
+							<DataPath>Объект.ТомскаяОбласть_ТаблицаНачислений.dom</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийdomКонтекстноеМеню" id="71"/>
+							<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийdomРасширеннаяПодсказка" id="72"/>
+						</InputField>
+						<InputField name="ТомскаяОбласть_ТаблицаНачисленийdoml" id="73">
+							<DataPath>Объект.ТомскаяОбласть_ТаблицаНачислений.doml</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийdomlКонтекстноеМеню" id="74"/>
+							<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийdomlРасширеннаяПодсказка" id="75"/>
+						</InputField>
+						<InputField name="ТомскаяОбласть_ТаблицаНачисленийdomkor" id="208">
+							<DataPath>Объект.ТомскаяОбласть_ТаблицаНачислений.domkor</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийdomkorКонтекстноеМеню" id="209"/>
+							<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийdomkorРасширеннаяПодсказка" id="210"/>
+						</InputField>
+						<InputField name="ТомскаяОбласть_ТаблицаНачисленийdomstr" id="211">
+							<DataPath>Объект.ТомскаяОбласть_ТаблицаНачислений.domstr</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийdomstrКонтекстноеМеню" id="212"/>
+							<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийdomstrРасширеннаяПодсказка" id="213"/>
+						</InputField>
+						<InputField name="ТомскаяОбласть_ТаблицаНачисленийkoddom" id="214">
+							<DataPath>Объект.ТомскаяОбласть_ТаблицаНачислений.koddom</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийkoddomКонтекстноеМеню" id="215"/>
+							<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийkoddomРасширеннаяПодсказка" id="216"/>
+						</InputField>
+						<InputField name="ТомскаяОбласть_ТаблицаНачисленийkv" id="76">
+							<DataPath>Объект.ТомскаяОбласть_ТаблицаНачислений.kv</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийkvКонтекстноеМеню" id="77"/>
+							<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийkvРасширеннаяПодсказка" id="78"/>
+						</InputField>
+						<InputField name="ТомскаяОбласть_ТаблицаНачисленийkvl" id="79">
+							<DataPath>Объект.ТомскаяОбласть_ТаблицаНачислений.kvl</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийkvlКонтекстноеМеню" id="80"/>
+							<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийkvlРасширеннаяПодсказка" id="81"/>
+						</InputField>
+						<InputField name="ТомскаяОбласть_ТаблицаНачисленийfm" id="82">
+							<DataPath>Объект.ТомскаяОбласть_ТаблицаНачислений.fm</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийfmКонтекстноеМеню" id="83"/>
+							<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийfmРасширеннаяПодсказка" id="84"/>
+						</InputField>
+						<InputField name="ТомскаяОбласть_ТаблицаНачисленийim" id="85">
+							<DataPath>Объект.ТомскаяОбласть_ТаблицаНачислений.im</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийimКонтекстноеМеню" id="86"/>
+							<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийimРасширеннаяПодсказка" id="87"/>
+						</InputField>
+						<InputField name="ТомскаяОбласть_ТаблицаНачисленийot" id="88">
+							<DataPath>Объект.ТомскаяОбласть_ТаблицаНачислений.ot</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийotКонтекстноеМеню" id="89"/>
+							<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийotРасширеннаяПодсказка" id="90"/>
+						</InputField>
+						<InputField name="ТомскаяОбласть_ТаблицаНачисленийdtr" id="91">
+							<DataPath>Объект.ТомскаяОбласть_ТаблицаНачислений.dtr</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийdtrКонтекстноеМеню" id="92"/>
+							<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийdtrРасширеннаяПодсказка" id="93"/>
+						</InputField>
+						<InputField name="ТомскаяОбласть_ТаблицаНачисленийkodl" id="94">
+							<DataPath>Объект.ТомскаяОбласть_ТаблицаНачислений.kodl</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийkodlКонтекстноеМеню" id="95"/>
+							<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийkodlРасширеннаяПодсказка" id="96"/>
+						</InputField>
+						<InputField name="ТомскаяОбласть_ТаблицаНачисленийdoc1" id="97">
+							<DataPath>Объект.ТомскаяОбласть_ТаблицаНачислений.doc1</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийdoc1КонтекстноеМеню" id="98"/>
+							<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийdoc1РасширеннаяПодсказка" id="99"/>
+						</InputField>
+						<InputField name="ТомскаяОбласть_ТаблицаНачисленийdoc2" id="100">
+							<DataPath>Объект.ТомскаяОбласть_ТаблицаНачислений.doc2</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийdoc2КонтекстноеМеню" id="101"/>
+							<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийdoc2РасширеннаяПодсказка" id="102"/>
+						</InputField>
+						<InputField name="ТомскаяОбласть_ТаблицаНачисленийdate_beg" id="103">
+							<DataPath>Объект.ТомскаяОбласть_ТаблицаНачислений.date_beg</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийdate_begКонтекстноеМеню" id="104"/>
+							<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийdate_begРасширеннаяПодсказка" id="105"/>
+						</InputField>
+						<InputField name="ТомскаяОбласть_ТаблицаНачисленийdate_end" id="106">
+							<DataPath>Объект.ТомскаяОбласть_ТаблицаНачислений.date_end</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийdate_endКонтекстноеМеню" id="107"/>
+							<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийdate_endРасширеннаяПодсказка" id="108"/>
+						</InputField>
+						<InputField name="ТомскаяОбласть_ТаблицаНачисленийTip_z" id="109">
+							<DataPath>Объект.ТомскаяОбласть_ТаблицаНачислений.Tip_z</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийTip_zКонтекстноеМеню" id="110"/>
+							<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийTip_zРасширеннаяПодсказка" id="111"/>
+						</InputField>
+						<InputField name="ТомскаяОбласть_ТаблицаНачисленийurblag" id="112">
+							<DataPath>Объект.ТомскаяОбласть_ТаблицаНачислений.urblag</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийurblagКонтекстноеМеню" id="113"/>
+							<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийurblagРасширеннаяПодсказка" id="114"/>
+						</InputField>
+						<InputField name="ТомскаяОбласть_ТаблицаНачисленийTip_dom" id="115">
+							<DataPath>Объект.ТомскаяОбласть_ТаблицаНачислений.Tip_dom</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийTip_domКонтекстноеМеню" id="116"/>
+							<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийTip_domРасширеннаяПодсказка" id="117"/>
+						</InputField>
+						<InputField name="ТомскаяОбласть_ТаблицаНачисленийetag_dom" id="118">
+							<DataPath>Объект.ТомскаяОбласть_ТаблицаНачислений.etag_dom</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийetag_domКонтекстноеМеню" id="119"/>
+							<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийetag_domРасширеннаяПодсказка" id="120"/>
+						</InputField>
+						<CheckBoxField name="ТомскаяОбласть_ТаблицаНачисленийlift" id="121">
+							<DataPath>Объект.ТомскаяОбласть_ТаблицаНачислений.lift</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийliftКонтекстноеМеню" id="122"/>
+							<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийliftРасширеннаяПодсказка" id="123"/>
+						</CheckBoxField>
+						<InputField name="ТомскаяОбласть_ТаблицаНачисленийso" id="124">
+							<DataPath>Объект.ТомскаяОбласть_ТаблицаНачислений.so</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийsoКонтекстноеМеню" id="125"/>
+							<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийsoРасширеннаяПодсказка" id="126"/>
+						</InputField>
+						<InputField name="ТомскаяОбласть_ТаблицаНачисленийssn" id="127">
+							<DataPath>Объект.ТомскаяОбласть_ТаблицаНачислений.ssn</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийssnКонтекстноеМеню" id="128"/>
+							<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийssnРасширеннаяПодсказка" id="129"/>
+						</InputField>
+						<CheckBoxField name="ТомскаяОбласть_ТаблицаНачисленийel_nagr" id="130">
+							<DataPath>Объект.ТомскаяОбласть_ТаблицаНачислений.el_nagr</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийel_nagrКонтекстноеМеню" id="131"/>
+							<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийel_nagrРасширеннаяПодсказка" id="132"/>
+						</CheckBoxField>
+						<InputField name="ТомскаяОбласть_ТаблицаНачисленийkol_kom" id="133">
+							<DataPath>Объект.ТомскаяОбласть_ТаблицаНачислений.kol_kom</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийkol_komКонтекстноеМеню" id="134"/>
+							<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийkol_komРасширеннаяПодсказка" id="135"/>
+						</InputField>
+						<InputField name="ТомскаяОбласть_ТаблицаНачисленийkol" id="136">
+							<DataPath>Объект.ТомскаяОбласть_ТаблицаНачислений.kol</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийkolКонтекстноеМеню" id="137"/>
+							<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийkolРасширеннаяПодсказка" id="138"/>
+						</InputField>
+						<InputField name="ТомскаяОбласть_ТаблицаНачисленийkoll" id="139">
+							<DataPath>Объект.ТомскаяОбласть_ТаблицаНачислений.koll</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийkollКонтекстноеМеню" id="140"/>
+							<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийkollРасширеннаяПодсказка" id="141"/>
+						</InputField>
+						<InputField name="ТомскаяОбласть_ТаблицаНачисленийplita" id="142">
+							<DataPath>Объект.ТомскаяОбласть_ТаблицаНачислений.plita</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийplitaКонтекстноеМеню" id="143"/>
+							<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийplitaРасширеннаяПодсказка" id="144"/>
+						</InputField>
+						<CheckBoxField name="ТомскаяОбласть_ТаблицаНачисленийgaz_nagr" id="145">
+							<DataPath>Объект.ТомскаяОбласть_ТаблицаНачислений.gaz_nagr</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийgaz_nagrКонтекстноеМеню" id="146"/>
+							<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийgaz_nagrРасширеннаяПодсказка" id="147"/>
+						</CheckBoxField>
+						<CheckBoxField name="ТомскаяОбласть_ТаблицаНачисленийgaz_kotel" id="148">
+							<DataPath>Объект.ТомскаяОбласть_ТаблицаНачислений.gaz_kotel</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийgaz_kotelКонтекстноеМеню" id="149"/>
+							<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийgaz_kotelРасширеннаяПодсказка" id="150"/>
+						</CheckBoxField>
+						<InputField name="ТомскаяОбласть_ТаблицаНачисленийusluga" id="151">
+							<DataPath>Объект.ТомскаяОбласть_ТаблицаНачислений.usluga</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийuslugaКонтекстноеМеню" id="152"/>
+							<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийuslugaРасширеннаяПодсказка" id="153"/>
+						</InputField>
+						<InputField name="ТомскаяОбласть_ТаблицаНачисленийkod_p" id="154">
+							<DataPath>Объект.ТомскаяОбласть_ТаблицаНачислений.kod_p</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийkod_pКонтекстноеМеню" id="155"/>
+							<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийkod_pРасширеннаяПодсказка" id="156"/>
+						</InputField>
+						<CheckBoxField name="ТомскаяОбласть_ТаблицаНачисленийpruch_ob" id="157">
+							<DataPath>Объект.ТомскаяОбласть_ТаблицаНачислений.pruch_ob</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийpruch_obКонтекстноеМеню" id="158"/>
+							<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийpruch_obРасширеннаяПодсказка" id="159"/>
+						</CheckBoxField>
+						<CheckBoxField name="ТомскаяОбласть_ТаблицаНачисленийpruch_ind" id="160">
+							<DataPath>Объект.ТомскаяОбласть_ТаблицаНачислений.pruch_ind</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийpruch_indКонтекстноеМеню" id="161"/>
+							<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийpruch_indРасширеннаяПодсказка" id="162"/>
+						</CheckBoxField>
+						<InputField name="ТомскаяОбласть_ТаблицаНачисленийdolgmes" id="163">
+							<DataPath>Объект.ТомскаяОбласть_ТаблицаНачислений.dolgmes</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийdolgmesКонтекстноеМеню" id="164"/>
+							<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийdolgmesРасширеннаяПодсказка" id="165"/>
+						</InputField>
+						<InputField name="ТомскаяОбласть_ТаблицаНачисленийdolgsum" id="166">
+							<DataPath>Объект.ТомскаяОбласть_ТаблицаНачислений.dolgsum</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийdolgsumКонтекстноеМеню" id="167"/>
+							<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийdolgsumРасширеннаяПодсказка" id="168"/>
+						</InputField>
+						<InputField name="ТомскаяОбласть_ТаблицаНачисленийdolgs" id="169">
+							<DataPath>Объект.ТомскаяОбласть_ТаблицаНачислений.dolgs</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийdolgsКонтекстноеМеню" id="170"/>
+							<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийdolgsРасширеннаяПодсказка" id="171"/>
+						</InputField>
+						<InputField name="ТомскаяОбласть_ТаблицаНачисленийstoeu_nd" id="172">
+							<DataPath>Объект.ТомскаяОбласть_ТаблицаНачислений.stoeu_nd</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийstoeu_ndКонтекстноеМеню" id="173"/>
+							<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийstoeu_ndРасширеннаяПодсказка" id="174"/>
+						</InputField>
+						<InputField name="ТомскаяОбласть_ТаблицаНачисленийstoeu_nf" id="175">
+							<DataPath>Объект.ТомскаяОбласть_ТаблицаНачислений.stoeu_nf</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийstoeu_nfКонтекстноеМеню" id="176"/>
+							<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийstoeu_nfРасширеннаяПодсказка" id="177"/>
+						</InputField>
+						<InputField name="ТомскаяОбласть_ТаблицаНачисленийtarif" id="178">
+							<DataPath>Объект.ТомскаяОбласть_ТаблицаНачислений.tarif</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийtarifКонтекстноеМеню" id="179"/>
+							<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийtarifРасширеннаяПодсказка" id="180"/>
+						</InputField>
+						<InputField name="ТомскаяОбласть_ТаблицаНачисленийkodei" id="181">
+							<DataPath>Объект.ТомскаяОбласть_ТаблицаНачислений.kodei</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийkodeiКонтекстноеМеню" id="182"/>
+							<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийkodeiРасширеннаяПодсказка" id="183"/>
+						</InputField>
+						<InputField name="ТомскаяОбласть_ТаблицаНачисленийnorm" id="184">
+							<DataPath>Объект.ТомскаяОбласть_ТаблицаНачислений.norm</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийnormКонтекстноеМеню" id="185"/>
+							<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийnormРасширеннаяПодсказка" id="186"/>
+						</InputField>
+						<InputField name="ТомскаяОбласть_ТаблицаНачисленийnorm_otop" id="187">
+							<DataPath>Объект.ТомскаяОбласть_ТаблицаНачислений.norm_otop</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийnorm_otopКонтекстноеМеню" id="188"/>
+							<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийnorm_otopРасширеннаяПодсказка" id="189"/>
+						</InputField>
+						<InputField name="ТомскаяОбласть_ТаблицаНачисленийfact" id="190">
+							<DataPath>Объект.ТомскаяОбласть_ТаблицаНачислений.fact</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийfactКонтекстноеМеню" id="191"/>
+							<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийfactРасширеннаяПодсказка" id="192"/>
+						</InputField>
+						<InputField name="ТомскаяОбласть_ТаблицаНачисленийsumvf" id="193">
+							<DataPath>Объект.ТомскаяОбласть_ТаблицаНачислений.sumvf</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийsumvfКонтекстноеМеню" id="194"/>
+							<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийsumvfРасширеннаяПодсказка" id="195"/>
+						</InputField>
+						<InputField name="ТомскаяОбласть_ТаблицаНачисленийsump" id="196">
+							<DataPath>Объект.ТомскаяОбласть_ТаблицаНачислений.sump</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийsumpКонтекстноеМеню" id="197"/>
+							<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийsumpРасширеннаяПодсказка" id="198"/>
+						</InputField>
+						<InputField name="ТомскаяОбласть_ТаблицаНачисленийsumn" id="199">
+							<DataPath>Объект.ТомскаяОбласть_ТаблицаНачислений.sumn</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийsumnКонтекстноеМеню" id="200"/>
+							<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийsumnРасширеннаяПодсказка" id="201"/>
+						</InputField>
+						<InputField name="ТомскаяОбласть_ТаблицаНачисленийsuml" id="202">
+							<DataPath>Объект.ТомскаяОбласть_ТаблицаНачислений.suml</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийsumlКонтекстноеМеню" id="203"/>
+							<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийsumlРасширеннаяПодсказка" id="204"/>
+						</InputField>
+						<InputField name="ТомскаяОбласть_ТаблицаНачисленийsumns" id="205">
+							<DataPath>Объект.ТомскаяОбласть_ТаблицаНачислений.sumns</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТомскаяОбласть_ТаблицаНачисленийsumnsКонтекстноеМеню" id="206"/>
+							<ExtendedTooltip name="ТомскаяОбласть_ТаблицаНачисленийsumnsРасширеннаяПодсказка" id="207"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.УПЖКХ_ВыгрузкиВОрганыСоцЗащиты</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ПериодСтрокой" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период строкой</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>15</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<View>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.ДобавлениеИзменениеДанныхФизическихЛицЗарплатаКадры">true</xr:Value>
+				<xr:Value name="Role.ПолныеПрава">true</xr:Value>
+				<xr:Value name="Role.ЧтениеДанныхФизическихЛицЗарплатаКадры">true</xr:Value>
+			</View>
+			<Edit>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.ДобавлениеИзменениеДанныхФизическихЛицЗарплатаКадры">true</xr:Value>
+				<xr:Value name="Role.ПолныеПрава">true</xr:Value>
+				<xr:Value name="Role.ЧтениеДанныхФизическихЛицЗарплатаКадры">true</xr:Value>
+			</Edit>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="КаталогЗагрузки" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Каталог загрузки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>512</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="КодОрганизации" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код организации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>6</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="КаталогВыгрузки" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Каталог выгрузки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>512</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ЭлектрическийНагреватель" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Электрический нагреватель</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.КВП_ВидыБлагоустройстваОбъектов</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ГазовыйКотел" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Газовый котел</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.КВП_ВидыБлагоустройстваОбъектов</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="КатегорияБлагоустройства" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Категория благоустройства</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ChartOfCharacteristicTypesRef.ДополнительныеРеквизитыИСведения</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="РасширениеПодключено" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расширение подключено</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаНастройка" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Настройка</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаНастройка</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаЗаполнить" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ЗаполнитьФорму</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаЗаполнить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаВыгрузить" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ВыгрузитьФайлСертификата</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаВыгрузить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

@@ -1,0 +1,1750 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<ReportFormType>Main</ReportFormType>
+	<AutoShowState>Auto</AutoShowState>
+	<ReportResultViewMode>Auto</ReportResultViewMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="ChoiceProcessing">ОбработкаВыбора</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnLoadUserSettingsAtServer">ПриЗагрузкеПользовательскихНастроекНаСервере</Event>
+		<Event name="OnSaveUserSettingsAtServer">ПриСохраненииПользовательскихНастроекНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаБыстрыеОтборы" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Быстрые отборы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа быстрые отборы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаБыстрыеОтборыExtendedTooltip" id="118"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаПериодОрганизация" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Период</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа период организация</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПериодОрганизацияРасширеннаяПодсказка" id="119"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаПериод" id="102">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа период</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа период</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПериодExtendedTooltip" id="120"/>
+							<ChildItems>
+								<InputField name="Дата" id="1">
+									<DataPath>Отчет.Дата</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Период</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДатаКонтекстноеМеню" id="2"/>
+									<ExtendedTooltip name="ДатаExtendedTooltip" id="121"/>
+									<Events>
+										<Event name="OnChange">ДатаПриИзменении</Event>
+									</Events>
+								</InputField>
+								<LabelDecoration name="ДекорацияТире" id="104">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>—</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияТиреКонтекстноеМеню" id="105"/>
+									<ExtendedTooltip name="ДекорацияТиреExtendedTooltip" id="122"/>
+								</LabelDecoration>
+								<InputField name="ДатаОкончанияПериода" id="107">
+									<DataPath>Отчет.ДатаОкончанияПериода</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="ДатаОкончанияПериодаКонтекстноеМеню" id="108"/>
+									<ExtendedTooltip name="ДатаОкончанияПериодаExtendedTooltip" id="123"/>
+									<Events>
+										<Event name="OnChange">ДатаОкончанияПериодаПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="Организация" id="3">
+							<DataPath>Отчет.Организация</DataPath>
+							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="4"/>
+							<ExtendedTooltip name="ОрганизацияExtendedTooltip" id="124"/>
+							<Events>
+								<Event name="OnChange">ОрганизацияПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПроживающийСобственник" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Организация</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа проживающий собственник</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПроживающийСобственникРасширеннаяПодсказка" id="125"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаПроживающий" id="179">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа проживающий</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа проживающий</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПроживающийРасширеннаяПодсказка" id="180"/>
+							<ChildItems>
+								<InputField name="ЛицевойСчет" id="47">
+									<DataPath>ЛицевойСчет</DataPath>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Для выбора лицевого счета начните ввод номера лицевого счета или ФИО ответственного собственника</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ClearButton>true</ClearButton>
+									<InputHint>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Начните вводить № счета или ФИО ответственного</v8:content>
+										</v8:item>
+									</InputHint>
+									<ContextMenu name="ЛицевойСчетКонтекстноеМеню" id="48"/>
+									<ExtendedTooltip name="ЛицевойСчетExtendedTooltip" id="126"/>
+									<Events>
+										<Event name="OnChange">ЛицевойСчетПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="Проживающий" id="49">
+									<DataPath>Проживающий</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Жилец</v8:content>
+										</v8:item>
+									</Title>
+									<ClearButton>true</ClearButton>
+									<ContextMenu name="ПроживающийКонтекстноеМеню" id="50"/>
+									<ExtendedTooltip name="ПроживающийExtendedTooltip" id="127"/>
+									<Events>
+										<Event name="OnChange">ПроживающийПриИзменении</Event>
+										<Event name="StartChoice">ПроживающийНачалоВыбора</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаСобственник" id="183">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа собственник</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Собственник</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСобственникРасширеннаяПодсказка" id="184"/>
+							<ChildItems>
+								<InputField name="Собственник" id="173">
+									<DataPath>Собственник</DataPath>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Лицо, предоставляющее жилое помещение</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+									<ContextMenu name="СобственникКонтекстноеМеню" id="174"/>
+									<ExtendedTooltip name="СобственникРасширеннаяПодсказка" id="175"/>
+									<Events>
+										<Event name="OnChange">СобственникПриИзменении</Event>
+										<Event name="StartChoice">СобственникНачалоВыбора</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="НомерФормы" id="5">
+			<DataPath>Отчет.НомерФормы</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<HorizontalStretch>true</HorizontalStretch>
+			<ListChoiceMode>true</ListChoiceMode>
+			<TextEdit>false</TextEdit>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Ф1 - Заявление о регистрации по месту пребывания</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">Ф1</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Ф1ПР - Заявление о регистрации по месту пребывания</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">Ф1ПР</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Ф1П - Заявление о выдаче или замене паспорта</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">Ф1П</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Ф2 - Адресный листок прибытия</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">Ф2</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Ф3 - Свидетельство о регистрации по месту пребывания</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">Ф3</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Ф5 - Анкета</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">Ф5</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Ф6 - Заявление о регистрации / о снятии с регистрационного учета по месту жительства</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">Ф6</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Ф6р - Заявление о регистрации по месту жительства</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">Ф6_Р</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Ф6с - Заявление о снятии с регистрационного учета по месту жительства</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">Ф6_С</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Ф7 - Адресный листок убытия</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">Ф7</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Ф8 - Свидетельство о регистрации по месту жительства</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">Ф8</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Ф9 - Карточка регистрации граждан</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">Ф9</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Ф10 - Поквартирная карточка</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">Ф10</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Ф11 - Домовая (поквартирная) книга</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">Ф11</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Ф12П - Листок статистического учета прибытия (к документам о регистрации по новому месту жительства)</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">Ф12_П</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Ф12В - Листок статистического учета выбытия (к документам о снятии с регистрационного учета)</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">Ф12_В</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Ф14 - Уведомление в орган регистрационного учета</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">Ф14</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Ф15 - Уведомление собственнику (нанимателю) жилого помещения</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">Ф15</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Ф16 - Справка о составе семьи</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">Ф16</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Ф17 - Выписка из домовой книги</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">Ф17</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Ф7_СПБ - Характеристика жилого помещения (СПБ)</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">Ф7_СПБ</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Ф9_СПБ - Справка о регистрации (СПБ)</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">Ф9_СПБ</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>С_С - Справка в суд</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">С_С</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>С_Р - Справка о регистрации по месту жительства</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">С_Р</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>С_ЗП - Справка об отсутствии паспорта в связи с заменой</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">С_ЗП</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>С_ПР - Справка об отсутствии паспорта (на регистрации)</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">С_ПР</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>З_С - Заявление собственников для регистрации</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">З_С</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>РФЛ1 - Сведения о регистрации гражданина РФ по месту жительства</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">РФЛ1</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>ППВУ - Список подлежащих первоначальной постановке на воинский учет</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">ППВУ</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Ф3_МСК - Сведения о зарегистрированных по месту жительства в связи с рождением (МСК)</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">Ф3_МСК</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="НомерФормыКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="НомерФормыExtendedTooltip" id="128"/>
+			<Events>
+				<Event name="OnChange">НомерФормыПриИзменении</Event>
+			</Events>
+		</InputField>
+		<UsualGroup name="ГруппаКоманднаяПанель" id="58">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа командная панель</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа командная панель</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКоманднаяПанельExtendedTooltip" id="129"/>
+			<ChildItems>
+				<CommandBar name="ГруппаОсновнаяКоманднаяПанель" id="59">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основная командная панель</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа основная командная панель</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ExtendedTooltip name="ГруппаОсновнаяКоманднаяПанельExtendedTooltip" id="130"/>
+					<ChildItems>
+						<Button name="СформироватьОтчет" id="46">
+							<Type>CommandBarButton</Type>
+							<Representation>PictureAndText</Representation>
+							<DefaultButton>true</DefaultButton>
+							<DefaultItem>true</DefaultItem>
+							<CommandName>Form.Command.СформироватьОтчет</CommandName>
+							<Picture>
+								<xr:Ref>CommonPicture.Сформировать</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+								<xr:TransparentPixel x="13" y="2"/>
+							</Picture>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сформировать</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="СформироватьОтчетExtendedTooltip" id="131"/>
+						</Button>
+						<Button name="НесколькоФорм" id="51">
+							<Type>CommandBarButton</Type>
+							<Representation>PictureAndText</Representation>
+							<CommandName>Form.Command.НесколькоФорм</CommandName>
+							<ExtendedTooltip name="НесколькоФормExtendedTooltip" id="132"/>
+						</Button>
+						<Button name="СравнитьМакетСТиповым" id="181">
+							<Type>CommandBarButton</Type>
+							<Representation>PictureAndText</Representation>
+							<CommandName>Form.Command.СравнитьМакетСТиповым</CommandName>
+							<Picture>
+								<xr:Ref>CommonPicture.ПоказатьОтличия</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+							<ExtendedTooltip name="СравнитьМакетСТиповымРасширеннаяПодсказка" id="182">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Используется доработанный пользователем макет. Нажмите, чтобы сравнить его с типовым.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+				<CommandBar name="ГруппаДополнительнаяКоманднаяПанель" id="60">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дополнительная командная панель</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа дополнительная командная панель</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalLocation>Right</HorizontalLocation>
+					<ExtendedTooltip name="ГруппаДополнительнаяКоманднаяПанельExtendedTooltip" id="133"/>
+					<ChildItems>
+						<Button name="Настройки" id="52">
+							<Type>CommandBarButton</Type>
+							<Representation>PictureAndText</Representation>
+							<CommandName>Form.Command.Настройки</CommandName>
+							<Picture>
+								<xr:Ref>CommonPicture.УПЖКХ_ПанельПользователя</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+								<xr:TransparentPixel x="4" y="1"/>
+							</Picture>
+							<ExtendedTooltip name="НастройкиExtendedTooltip" id="134"/>
+						</Button>
+						<ButtonGroup name="ГруппаЗагрузитьСохранить" id="54">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сохранить/Загрузить</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа загрузить сохранить</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ГруппаЗагрузитьСохранитьExtendedTooltip" id="135"/>
+							<ChildItems>
+								<Button name="ЗагрузитьНастройкиОтчета" id="55">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.StandardCommand.LoadReportSettings</CommandName>
+									<ExtendedTooltip name="ЗагрузитьНастройкиОтчетаExtendedTooltip" id="136"/>
+								</Button>
+								<Button name="СохранитьНастройкиОтчета" id="56">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.StandardCommand.SaveReportSettings</CommandName>
+									<ExtendedTooltip name="СохранитьНастройкиОтчетаExtendedTooltip" id="137"/>
+								</Button>
+							</ChildItems>
+						</ButtonGroup>
+						<ButtonGroup name="ГруппаИзменитьФормуСправка" id="61">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Изменить форму/Справка</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа изменить форму справка</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ГруппаИзменитьФормуСправкаExtendedTooltip" id="138"/>
+							<ChildItems>
+								<Button name="ИзменитьФорму" id="62">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+									<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+									<ExtendedTooltip name="ИзменитьФормуExtendedTooltip" id="139"/>
+								</Button>
+								<Button name="ФормаСправка" id="63">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.StandardCommand.Help</CommandName>
+									<ExtendedTooltip name="ФормаСправкаРасширеннаяПодсказка" id="140"/>
+								</Button>
+							</ChildItems>
+						</ButtonGroup>
+					</ChildItems>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаРезультатПанельНастроек" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результат отчета\ панель настроек</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результат отчета\ панель настроек</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ChildItemsWidth>LeftWidest</ChildItemsWidth>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаРезультатПанельНастроекExtendedTooltip" id="141"/>
+			<ChildItems>
+				<SpreadSheetDocumentField name="Результат" id="15">
+					<DataPath>Результат</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<VerticalScrollBar>true</VerticalScrollBar>
+					<HorizontalScrollBar>true</HorizontalScrollBar>
+					<ContextMenu name="РезультатКонтекстноеМеню" id="16"/>
+					<ExtendedTooltip name="РезультатExtendedTooltip" id="142"/>
+				</SpreadSheetDocumentField>
+				<Pages name="ГруппаПанельНастроек" id="17">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа панель настроек</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа панель настроек</v8:content>
+						</v8:item>
+					</ToolTip>
+					<VerticalStretch>true</VerticalStretch>
+					<ExtendedTooltip name="ГруппаПанельНастроекExtendedTooltip" id="143"/>
+					<ChildItems>
+						<Page name="ГруппаНастройки" id="18">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройки</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа настройки</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ГруппаНастройкиExtendedTooltip" id="144"/>
+							<ChildItems>
+								<InputField name="РазмерБумаги" id="19">
+									<DataPath>Отчет.РазмерБумаги</DataPath>
+									<ListChoiceMode>true</ListChoiceMode>
+									<ChoiceListButton>true</ChoiceListButton>
+									<ContextMenu name="РазмерБумагиКонтекстноеМеню" id="20"/>
+									<ExtendedTooltip name="РазмерБумагиExtendedTooltip" id="145"/>
+									<Events>
+										<Event name="OnChange">РазмерБумагиПриИзменении</Event>
+									</Events>
+								</InputField>
+								<LabelDecoration name="ПодсказкаРазмерБумаги" id="25">
+									<TextColor>style:УПЖКХ_ТекстСправочнойНадписи</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Доступно для форм: 2, 5, 7, 8, 9, 10, 15, С_Р, С_ЗП, С_ПР, З_С</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПодсказкаРазмерБумагиКонтекстноеМеню" id="26"/>
+									<ExtendedTooltip name="ПодсказкаРазмерБумагиExtendedTooltip" id="146"/>
+								</LabelDecoration>
+								<InputField name="ВыводРодственников" id="21">
+									<DataPath>Отчет.ВыводРодственников</DataPath>
+									<HorizontalStretch>true</HorizontalStretch>
+									<ListChoiceMode>true</ListChoiceMode>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>БЛ='Жильцов из лицевого счета'; БИ='Близких родственников'</v8:content>
+										</v8:item>
+									</EditFormat>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Жильцов из лицевого счета</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:boolean">false</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Близких родственников</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:boolean">true</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="ВыводРодственниковКонтекстноеМеню" id="22"/>
+									<ExtendedTooltip name="ВыводРодственниковExtendedTooltip" id="147"/>
+									<Events>
+										<Event name="OnChange">ВыводРодственниковПриИзменении</Event>
+									</Events>
+								</InputField>
+								<LabelDecoration name="ПодсказкаВывод" id="27">
+									<TextColor>style:УПЖКХ_ТекстСправочнойНадписи</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Доступно для форм: 10, 11, 15, 16, 9_СПБ</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПодсказкаВыводКонтекстноеМеню" id="28"/>
+									<ExtendedTooltip name="ПодсказкаВыводExtendedTooltip" id="148"/>
+								</LabelDecoration>
+								<CheckBoxField name="ВыводитьОборотнуюСторонуСправа" id="116">
+									<DataPath>Отчет.ВыводитьОборотнуюСторонуСправа</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ВыводитьОборотнуюСторонуСправаКонтекстноеМеню" id="117"/>
+									<ExtendedTooltip name="ВыводитьОборотнуюСторонуСправаExtendedTooltip" id="149"/>
+									<Events>
+										<Event name="OnChange">ВыводитьОборотнуюСторонуСправаПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<CheckBoxField name="ВыводитьДатуРегистрации" id="23">
+									<DataPath>Отчет.ВыводитьДатуРегистрации</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Выводить дату регистрации жильца по указанному адресу</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ВыводитьДатуРегистрацииКонтекстноеМеню" id="24"/>
+									<ExtendedTooltip name="ВыводитьДатуРегистрацииExtendedTooltip" id="150"/>
+									<Events>
+										<Event name="OnChange">ВыводитьДатуРегистрацииПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<LabelDecoration name="ПодсказкаДатаРегистрации" id="29">
+									<TextColor>style:УПЖКХ_ТекстСправочнойНадписи</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Доступно для форм: С_Р, С_ЗП, С_ПР</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПодсказкаДатаРегистрацииКонтекстноеМеню" id="30"/>
+									<ExtendedTooltip name="ПодсказкаДатаРегистрацииExtendedTooltip" id="151"/>
+								</LabelDecoration>
+								<CheckBoxField name="ВыводитьТолькоАктуальныхЖильцов" id="110">
+									<DataPath>Отчет.ВыводитьТолькоАктуальныхЖильцов</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Выводить только актуальных жильцов лицевого счета</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ВыводитьТолькоАктуальныхЖильцовКонтекстноеМеню" id="111"/>
+									<ExtendedTooltip name="ВыводитьТолькоАктуальныхЖильцовExtendedTooltip" id="152"/>
+									<Events>
+										<Event name="OnChange">ВыводитьТолькоАктуальныхЖильцовПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<CheckBoxField name="ВыводитьИсториюПоЖильцам" id="170">
+									<DataPath>Отчет.ВыводитьИсториюПоЖильцам</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Выводить историю по жильцам</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ВыводитьИсториюПоЖильцамКонтекстноеМеню" id="171"/>
+									<ExtendedTooltip name="ВыводитьИсториюПоЖильцамРасширеннаяПодсказка" id="172"/>
+									<Events>
+										<Event name="OnChange">ВыводитьИсториюПоЖильцамПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<LabelDecoration name="ПодсказкаВыводТолькоАктуальныхЖильцов" id="113">
+									<TextColor>style:УПЖКХ_ТекстСправочнойНадписи</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Доступно для форм: 17</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПодсказкаВыводТолькоАктуальныхЖильцовКонтекстноеМеню" id="114"/>
+									<ExtendedTooltip name="ПодсказкаВыводТолькоАктуальныхЖильцовExtendedTooltip" id="153"/>
+								</LabelDecoration>
+							</ChildItems>
+						</Page>
+						<Page name="ГруппаТаблицаДляПечати" id="31">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Таблица для печати</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа таблица для печати</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ГруппаТаблицаДляПечатиExtendedTooltip" id="154"/>
+							<ChildItems>
+								<Table name="ТаблицаДляПечати" id="32">
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>Отчет.ТаблицаДляПечати</DataPath>
+									<SearchStringLocation>None</SearchStringLocation>
+									<ViewStatusLocation>None</ViewStatusLocation>
+									<SearchControlLocation>None</SearchControlLocation>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ТаблицаДляПечатиКонтекстноеМеню" id="33"/>
+									<AutoCommandBar name="ТаблицаДляПечатиКоманднаяПанель" id="34">
+										<ChildItems>
+											<Button name="ТаблицаДляПечатиПодбор" id="64">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.Подбор</CommandName>
+												<ExtendedTooltip name="ТаблицаДляПечатиПодборExtendedTooltip" id="155"/>
+											</Button>
+										</ChildItems>
+									</AutoCommandBar>
+									<ExtendedTooltip name="ТаблицаДляПечатиExtendedTooltip" id="156"/>
+									<SearchStringAddition name="ТаблицаДляПечатиСтрокаПоиска" id="161">
+										<AdditionSource>
+											<Item>ТаблицаДляПечати</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ТаблицаДляПечатиСтрокаПоискаКонтекстноеМеню" id="162"/>
+										<ExtendedTooltip name="ТаблицаДляПечатиСтрокаПоискаРасширеннаяПодсказка" id="163"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ТаблицаДляПечатиСостояниеПросмотра" id="164">
+										<AdditionSource>
+											<Item>ТаблицаДляПечати</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ТаблицаДляПечатиСостояниеПросмотраКонтекстноеМеню" id="165"/>
+										<ExtendedTooltip name="ТаблицаДляПечатиСостояниеПросмотраРасширеннаяПодсказка" id="166"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ТаблицаДляПечатиУправлениеПоиском" id="167">
+										<AdditionSource>
+											<Item>ТаблицаДляПечати</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ТаблицаДляПечатиУправлениеПоискомКонтекстноеМеню" id="168"/>
+										<ExtendedTooltip name="ТаблицаДляПечатиУправлениеПоискомРасширеннаяПодсказка" id="169"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="OnChange">ТаблицаДляПечатиПриИзменении</Event>
+									</Events>
+									<ChildItems>
+										<LabelField name="ТаблицаДляПечатиНомерСтроки" id="35">
+											<DataPath>Отчет.ТаблицаДляПечати.LineNumber</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>1</Width>
+											<ContextMenu name="ТаблицаДляПечатиНомерСтрокиКонтекстноеМеню" id="36"/>
+											<ExtendedTooltip name="ТаблицаДляПечатиНомерСтрокиExtendedTooltip" id="157"/>
+										</LabelField>
+										<InputField name="ТаблицаДляПечатиПроживающий" id="37">
+											<DataPath>Отчет.ТаблицаДляПечати.Проживающий</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТаблицаДляПечатиПроживающийКонтекстноеМеню" id="38"/>
+											<ExtendedTooltip name="ТаблицаДляПечатиПроживающийExtendedTooltip" id="158"/>
+											<Events>
+												<Event name="OnChange">ТаблицаДляПечатиПроживающийПриИзменении</Event>
+												<Event name="StartChoice">ТаблицаДляПечатиПроживающийНачалоВыбора</Event>
+											</Events>
+										</InputField>
+										<InputField name="ТаблицаДляПечатиЛицевойСчет" id="43">
+											<DataPath>Отчет.ТаблицаДляПечати.ЛицевойСчет</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТаблицаДляПечатиЛицевойСчетКонтекстноеМеню" id="44"/>
+											<ExtendedTooltip name="ТаблицаДляПечатиЛицевойСчетExtendedTooltip" id="159"/>
+											<Events>
+												<Event name="OnChange">ТаблицаДляПечатиЛицевойСчетПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ТаблицаДляПечатиНомерФормы" id="39">
+											<DataPath>Отчет.ТаблицаДляПечати.НомерФормы</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ListChoiceMode>true</ListChoiceMode>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Ф1 - Заявление о регистрации по месту пребывания</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">Ф1</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Ф1ПР - Заявление о регистрации по месту пребывания</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">Ф1ПР</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Ф1П - Заявление о выдаче или замене паспорта</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">Ф1П</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Ф2 - Адресный листок прибытия</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">Ф2</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Ф3 - Свидетельство о регистрации по месту пребывания</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">Ф3</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Ф5 - Анкета</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">Ф5</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Ф6 - Заявление о регистрации / о снятии с регистрационного учета по месту жительства</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">Ф6</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Ф6р - Заявление о регистрации по месту жительства</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">Ф6_Р</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Ф6с - Заявление о снятии с регистрационного учета по месту жительства</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">Ф6_С</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Ф7 - Адресный листок убытия</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">Ф7</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Ф8 - Свидетельство о регистрации по месту жительства</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">Ф8</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Ф9 - Карточка регистрации граждан</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">Ф9</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Ф10 - Поквартирная карточка</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">Ф10</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Ф11 - Домовая (поквартирная) книга</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">Ф11</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Ф12П - Листок статистического учета прибытия (к документам о регистрации по новому месту жительства)</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">Ф12_П</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Ф12В - Листок статистического учета выбытия (к документам о снятии с регистрационного учета)</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">Ф12_В</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Ф14 - Уведомление в орган регистрационного учета</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">Ф14</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Ф15 - Уведомление собственнику (нанимателю) жилого помещения</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">Ф15</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Ф16 - Справка о составе семьи</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">Ф16</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Ф17 - Выписка из домовой книги</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">Ф17</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Ф7_СПБ - Характеристика жилого помещения (СПБ)</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">Ф7_СПБ</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Ф9_СПБ - Справка о регистрации (СПБ)</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">Ф9_СПБ</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>С_С - Справка в суд</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">С_С</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>С_Р - Справка о регистрации по месту жительства</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">С_Р</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>С_ЗП - Справка об отсутствии паспорта в связи с заменой</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">С_ЗП</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>С_ПР - Справка об отсутствии паспорта (на регистрации)</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">С_ПР</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>З_С - Заявление собственников для регистрации</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">З_С</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>РФЛ1 - Сведения о регистрации гражданина РФ по месту жительства</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">РФЛ1</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>ППВУ - Список подлежащих первоначальной постановке на воинский учет</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">ППВУ</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Ф3_МСК - Сведения о зарегистрированных по месту жительства в связи с рождением (МСК)</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">Ф3_МСК</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<ChoiceListButton>true</ChoiceListButton>
+											<ContextMenu name="ТаблицаДляПечатиНомерФормыКонтекстноеМеню" id="40"/>
+											<ExtendedTooltip name="ТаблицаДляПечатиНомерФормыExtendedTooltip" id="160"/>
+											<Events>
+												<Event name="OnChange">ТаблицаДляПечатиНомерФормыПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ТаблицаДляПечатиСобственник" id="176">
+											<DataPath>Отчет.ТаблицаДляПечати.Собственник</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТаблицаДляПечатиСобственникКонтекстноеМеню" id="177"/>
+											<ExtendedTooltip name="ТаблицаДляПечатиСобственникРасширеннаяПодсказка" id="178"/>
+											<Events>
+												<Event name="StartChoice">ТаблицаДляПечатиСобственникНачалоВыбора</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</Page>
+					</ChildItems>
+				</Pages>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Отчет" id="1">
+			<Type>
+				<v8:Type>cfg:ReportObject.КВП_ФормыРегистрационногоУчета</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ЛицевойСчет" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Лицевой счет</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.КВП_ЛицевыеСчета</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Проживающий" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проживающий</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.УПЖКХ_Жильцы</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Результат" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результат</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ФормаДляПодбора" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Форма для подбора</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СформироватьПриОткрытии" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать при открытии</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Собственник" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Собственник</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.УПЖКХ_Жильцы</v8:Type>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ТаблицаДляПечатиСобственник</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>AndGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Отчет.ТаблицаДляПечати.НомерФормы</dcsset:left>
+							<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:string">Ф6</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Отчет.ТаблицаДляПечати.НомерФормы</dcsset:left>
+							<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:string">Ф6_Р</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Отчет.ТаблицаДляПечати.НомерФормы</dcsset:left>
+							<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:string">Ф1</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Отчет.ТаблицаДляПечати.НомерФормы</dcsset:left>
+							<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:string">Ф1ПР</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:ВыборСтандартногоПериодаФонКнопокСНачалаГода</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Текст</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Доступно для форм: Ф1, Ф1ПР, Ф6, Ф6р</v8:content>
+							</v8:item>
+						</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>Доступность</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="СформироватьОтчет" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать отчет</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать отчет</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СформироватьОтчет</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="НесколькоФорм" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Несколько форм</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Несколько форм</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НесколькоФорм</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Настройки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Настройки</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Подбор" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Подбор</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СравнитьМакетСТиповым" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сравнить макет с типовым</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сравнить макет с типовым</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СравнитьМакетСТиповым</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

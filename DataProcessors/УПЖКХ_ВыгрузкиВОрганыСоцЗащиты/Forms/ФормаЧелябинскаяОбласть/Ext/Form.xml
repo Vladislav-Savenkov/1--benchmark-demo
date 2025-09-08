@@ -1,0 +1,829 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Челябинская область: Выгрузка в ОСЗН</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="Настройка" id="1">
+				<Type>CommandBarButton</Type>
+				<DefaultItem>true</DefaultItem>
+				<CommandName>Form.Command.КомандаНастройка</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>1. Настройка</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="НастройкаРасширеннаяПодсказка" id="2"/>
+			</Button>
+			<Button name="КнопкаЗагрузить" id="219">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.КомандаЗагрузить</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>2. Заполнить данные для выгрузки</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="КнопкаЗагрузитьРасширеннаяПодсказка" id="220"/>
+			</Button>
+			<Button name="Выгрузить" id="215">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.КомандаВыгрузить</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>3. Выгрузить данные в файл для ОСЗН</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ВыгрузитьРасширеннаяПодсказка" id="216"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="3">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="4"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаЛевая" id="5">
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаЛеваяРасширеннаяПодсказка" id="6"/>
+					<ChildItems>
+						<InputField name="ПериодСтрокой" id="7">
+							<DataPath>ПериодСтрокой</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Месяц выгрузки</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сведения об инвалидности действуют с</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ChoiceButton>true</ChoiceButton>
+							<SpinButton>true</SpinButton>
+							<ChoiceButtonPicture>
+								<xr:Ref>StdPicture.InputFieldCalendar</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</ChoiceButtonPicture>
+							<ContextMenu name="ПериодСтрокойКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="ПериодСтрокойExtendedTooltip" id="9"/>
+							<Events>
+								<Event name="OnChange">ПериодСтрокойПриИзменении</Event>
+								<Event name="AutoComplete">ПериодСтрокойАвтоПодбор</Event>
+								<Event name="StartChoice">ПериодСтрокойНачалоВыбора</Event>
+								<Event name="Tuning">ПериодСтрокойРегулирование</Event>
+								<Event name="TextEditEnd">ПериодСтрокойОкончаниеВводаТекста</Event>
+							</Events>
+						</InputField>
+						<InputField name="Организация" id="10">
+							<DataPath>Объект.Организация</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Организация</v8:content>
+								</v8:item>
+							</Title>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<AutoChoiceIncomplete>true</AutoChoiceIncomplete>
+							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="12"/>
+						</InputField>
+						<InputField name="ИмяКаталогаВыгрузки" id="24">
+							<DataPath>Объект.ИмяКаталогаВыгрузки</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Каталог сохранения файла для ОСЗН</v8:content>
+								</v8:item>
+							</Title>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<ChoiceButton>true</ChoiceButton>
+							<OpenButton>true</OpenButton>
+							<ContextMenu name="ИмяКаталогаВыгрузкиКонтекстноеМеню" id="25"/>
+							<ExtendedTooltip name="ИмяКаталогаВыгрузкиРасширеннаяПодсказка" id="26"/>
+							<Events>
+								<Event name="StartChoice">ИмяКаталогаВыгрузкиНачалоВыбора</Event>
+								<Event name="Opening">ИмяКаталогаВыгрузкиОткрытие</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПравая" id="13">
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПраваяРасширеннаяПодсказка" id="14"/>
+					<ChildItems>
+						<InputField name="КодРайона" id="221">
+							<DataPath>КодРайона</DataPath>
+							<ContextMenu name="КодРайонаКонтекстноеМеню" id="222"/>
+							<ExtendedTooltip name="КодРайонаРасширеннаяПодсказка" id="223"/>
+						</InputField>
+						<InputField name="FIAS_CITY" id="536">
+							<DataPath>FIAS_CITY</DataPath>
+							<ContextMenu name="FIAS_CITYКонтекстноеМеню" id="537"/>
+							<ExtendedTooltip name="FIAS_CITYРасширеннаяПодсказка" id="538"/>
+						</InputField>
+						<InputField name="Здание" id="539">
+							<DataPath>Здание</DataPath>
+							<Visible>false</Visible>
+							<ContextMenu name="ЗданиеКонтекстноеМеню" id="540"/>
+							<ExtendedTooltip name="ЗданиеРасширеннаяПодсказка" id="541"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаВРазрезеУслуг" id="27">
+			<Visible>false</Visible>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаВРазрезеУслугРасширеннаяПодсказка" id="28"/>
+			<ChildItems>
+				<CheckBoxField name="ВыгрузкаВРазрезеУслуг" id="29">
+					<TitleLocation>None</TitleLocation>
+					<CheckBoxType>Tumbler</CheckBoxType>
+					<EditFormat>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>БЛ='В разрезе видов услуг'; БИ='В разрезе услуг'</v8:content>
+						</v8:item>
+					</EditFormat>
+					<ContextMenu name="ВыгрузкаВРазрезеУслугКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ВыгрузкаВРазрезеУслугРасширеннаяПодсказка" id="31"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="ЧелябинскаяОбласть_ТаблицаВыгрузки" id="32">
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Объект.ЧелябинскаяОбласть_ТаблицаВыгрузки</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ЧелябинскаяОбласть_ТаблицаВыгрузкиКонтекстноеМеню" id="33"/>
+			<AutoCommandBar name="ЧелябинскаяОбласть_ТаблицаВыгрузкиКоманднаяПанель" id="34"/>
+			<ExtendedTooltip name="ЧелябинскаяОбласть_ТаблицаВыгрузкиРасширеннаяПодсказка" id="35"/>
+			<SearchStringAddition name="ЧелябинскаяОбласть_ТаблицаВыгрузкиСтрокаПоиска" id="36">
+				<AdditionSource>
+					<Item>ЧелябинскаяОбласть_ТаблицаВыгрузки</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЧелябинскаяОбласть_ТаблицаВыгрузкиСтрокаПоискаКонтекстноеМеню" id="37"/>
+				<ExtendedTooltip name="ЧелябинскаяОбласть_ТаблицаВыгрузкиСтрокаПоискаРасширеннаяПодсказка" id="38"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ЧелябинскаяОбласть_ТаблицаВыгрузкиСостояниеПросмотра" id="39">
+				<AdditionSource>
+					<Item>ЧелябинскаяОбласть_ТаблицаВыгрузки</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЧелябинскаяОбласть_ТаблицаВыгрузкиСостояниеПросмотраКонтекстноеМеню" id="40"/>
+				<ExtendedTooltip name="ЧелябинскаяОбласть_ТаблицаВыгрузкиСостояниеПросмотраРасширеннаяПодсказка" id="41"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ЧелябинскаяОбласть_ТаблицаВыгрузкиУправлениеПоиском" id="42">
+				<AdditionSource>
+					<Item>ЧелябинскаяОбласть_ТаблицаВыгрузки</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ЧелябинскаяОбласть_ТаблицаВыгрузкиУправлениеПоискомКонтекстноеМеню" id="43"/>
+				<ExtendedTooltip name="ЧелябинскаяОбласть_ТаблицаВыгрузкиУправлениеПоискомРасширеннаяПодсказка" id="44"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ЧелябинскаяОбласть_ТаблицаВыгрузкиНомерСтроки" id="224">
+					<DataPath>Объект.ЧелябинскаяОбласть_ТаблицаВыгрузки.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЧелябинскаяОбласть_ТаблицаВыгрузкиНомерСтрокиКонтекстноеМеню" id="225"/>
+					<ExtendedTooltip name="ЧелябинскаяОбласть_ТаблицаВыгрузкиНомерСтрокиРасширеннаяПодсказка" id="226"/>
+				</LabelField>
+				<InputField name="ЧелябинскаяОбласть_ТаблицаВыгрузкиЛицевойСчет" id="227">
+					<DataPath>Объект.ЧелябинскаяОбласть_ТаблицаВыгрузки.ЛицевойСчет</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЧелябинскаяОбласть_ТаблицаВыгрузкиЛицевойСчетКонтекстноеМеню" id="228"/>
+					<ExtendedTooltip name="ЧелябинскаяОбласть_ТаблицаВыгрузкиЛицевойСчетРасширеннаяПодсказка" id="229"/>
+				</InputField>
+				<InputField name="ЧелябинскаяОбласть_ТаблицаВыгрузкиNNN" id="230">
+					<DataPath>Объект.ЧелябинскаяОбласть_ТаблицаВыгрузки.NNN</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЧелябинскаяОбласть_ТаблицаВыгрузкиNNNКонтекстноеМеню" id="231"/>
+					<ExtendedTooltip name="ЧелябинскаяОбласть_ТаблицаВыгрузкиNNNРасширеннаяПодсказка" id="232"/>
+				</InputField>
+				<InputField name="ЧелябинскаяОбласть_ТаблицаВыгрузкиK_RAION" id="233">
+					<DataPath>Объект.ЧелябинскаяОбласть_ТаблицаВыгрузки.K_RAION</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЧелябинскаяОбласть_ТаблицаВыгрузкиK_RAIONКонтекстноеМеню" id="234"/>
+					<ExtendedTooltip name="ЧелябинскаяОбласть_ТаблицаВыгрузкиK_RAIONРасширеннаяПодсказка" id="235"/>
+				</InputField>
+				<InputField name="ЧелябинскаяОбласть_ТаблицаВыгрузкиPOSTAV" id="236">
+					<DataPath>Объект.ЧелябинскаяОбласть_ТаблицаВыгрузки.POSTAV</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЧелябинскаяОбласть_ТаблицаВыгрузкиPOSTAVКонтекстноеМеню" id="237"/>
+					<ExtendedTooltip name="ЧелябинскаяОбласть_ТаблицаВыгрузкиPOSTAVРасширеннаяПодсказка" id="238"/>
+				</InputField>
+				<InputField name="ЧелябинскаяОбласть_ТаблицаВыгрузкиLSHET" id="239">
+					<DataPath>Объект.ЧелябинскаяОбласть_ТаблицаВыгрузки.LSHET</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЧелябинскаяОбласть_ТаблицаВыгрузкиLSHETКонтекстноеМеню" id="240"/>
+					<ExtendedTooltip name="ЧелябинскаяОбласть_ТаблицаВыгрузкиLSHETРасширеннаяПодсказка" id="241"/>
+				</InputField>
+				<InputField name="ЧелябинскаяОбласть_ТаблицаВыгрузкиORG_RACH" id="242">
+					<DataPath>Объект.ЧелябинскаяОбласть_ТаблицаВыгрузки.ORG_RACH</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЧелябинскаяОбласть_ТаблицаВыгрузкиORG_RACHКонтекстноеМеню" id="243"/>
+					<ExtendedTooltip name="ЧелябинскаяОбласть_ТаблицаВыгрузкиORG_RACHРасширеннаяПодсказка" id="244"/>
+				</InputField>
+				<InputField name="ЧелябинскаяОбласть_ТаблицаВыгрузкиLSHET_R" id="245">
+					<DataPath>Объект.ЧелябинскаяОбласть_ТаблицаВыгрузки.LSHET_R</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЧелябинскаяОбласть_ТаблицаВыгрузкиLSHET_RКонтекстноеМеню" id="246"/>
+					<ExtendedTooltip name="ЧелябинскаяОбласть_ТаблицаВыгрузкиLSHET_RРасширеннаяПодсказка" id="247"/>
+				</InputField>
+				<InputField name="ЧелябинскаяОбласть_ТаблицаВыгрузкиPOST_IND" id="248">
+					<DataPath>Объект.ЧелябинскаяОбласть_ТаблицаВыгрузки.POST_IND</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЧелябинскаяОбласть_ТаблицаВыгрузкиPOST_INDКонтекстноеМеню" id="249"/>
+					<ExtendedTooltip name="ЧелябинскаяОбласть_ТаблицаВыгрузкиPOST_INDРасширеннаяПодсказка" id="250"/>
+				</InputField>
+				<InputField name="ЧелябинскаяОбласть_ТаблицаВыгрузкиCITY" id="251">
+					<DataPath>Объект.ЧелябинскаяОбласть_ТаблицаВыгрузки.CITY</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЧелябинскаяОбласть_ТаблицаВыгрузкиCITYКонтекстноеМеню" id="252"/>
+					<ExtendedTooltip name="ЧелябинскаяОбласть_ТаблицаВыгрузкиCITYРасширеннаяПодсказка" id="253"/>
+				</InputField>
+				<InputField name="ЧелябинскаяОбласть_ТаблицаВыгрузкиSOCR_CITY" id="254">
+					<DataPath>Объект.ЧелябинскаяОбласть_ТаблицаВыгрузки.SOCR_CITY</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЧелябинскаяОбласть_ТаблицаВыгрузкиSOCR_CITYКонтекстноеМеню" id="255"/>
+					<ExtendedTooltip name="ЧелябинскаяОбласть_ТаблицаВыгрузкиSOCR_CITYРасширеннаяПодсказка" id="256"/>
+				</InputField>
+				<InputField name="ЧелябинскаяОбласть_ТаблицаВыгрузкиSTREET" id="257">
+					<DataPath>Объект.ЧелябинскаяОбласть_ТаблицаВыгрузки.STREET</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЧелябинскаяОбласть_ТаблицаВыгрузкиSTREETКонтекстноеМеню" id="258"/>
+					<ExtendedTooltip name="ЧелябинскаяОбласть_ТаблицаВыгрузкиSTREETРасширеннаяПодсказка" id="259"/>
+				</InputField>
+				<InputField name="ЧелябинскаяОбласть_ТаблицаВыгрузкиSOCR_STR" id="260">
+					<DataPath>Объект.ЧелябинскаяОбласть_ТаблицаВыгрузки.SOCR_STR</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЧелябинскаяОбласть_ТаблицаВыгрузкиSOCR_STRКонтекстноеМеню" id="261"/>
+					<ExtendedTooltip name="ЧелябинскаяОбласть_ТаблицаВыгрузкиSOCR_STRРасширеннаяПодсказка" id="262"/>
+				</InputField>
+				<InputField name="ЧелябинскаяОбласть_ТаблицаВыгрузкиDOM" id="263">
+					<DataPath>Объект.ЧелябинскаяОбласть_ТаблицаВыгрузки.DOM</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЧелябинскаяОбласть_ТаблицаВыгрузкиDOMКонтекстноеМеню" id="264"/>
+					<ExtendedTooltip name="ЧелябинскаяОбласть_ТаблицаВыгрузкиDOMРасширеннаяПодсказка" id="265"/>
+				</InputField>
+				<InputField name="ЧелябинскаяОбласть_ТаблицаВыгрузкиKORP" id="266">
+					<DataPath>Объект.ЧелябинскаяОбласть_ТаблицаВыгрузки.KORP</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЧелябинскаяОбласть_ТаблицаВыгрузкиKORPКонтекстноеМеню" id="267"/>
+					<ExtendedTooltip name="ЧелябинскаяОбласть_ТаблицаВыгрузкиKORPРасширеннаяПодсказка" id="268"/>
+				</InputField>
+				<InputField name="ЧелябинскаяОбласть_ТаблицаВыгрузкиKV" id="269">
+					<DataPath>Объект.ЧелябинскаяОбласть_ТаблицаВыгрузки.KV</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЧелябинскаяОбласть_ТаблицаВыгрузкиKVКонтекстноеМеню" id="270"/>
+					<ExtendedTooltip name="ЧелябинскаяОбласть_ТаблицаВыгрузкиKVРасширеннаяПодсказка" id="271"/>
+				</InputField>
+				<InputField name="ЧелябинскаяОбласть_ТаблицаВыгрузкиFIAS_CITY" id="272">
+					<DataPath>Объект.ЧелябинскаяОбласть_ТаблицаВыгрузки.FIAS_CITY</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЧелябинскаяОбласть_ТаблицаВыгрузкиFIAS_CITYКонтекстноеМеню" id="273"/>
+					<ExtendedTooltip name="ЧелябинскаяОбласть_ТаблицаВыгрузкиFIAS_CITYРасширеннаяПодсказка" id="274"/>
+				</InputField>
+				<InputField name="ЧелябинскаяОбласть_ТаблицаВыгрузкиFIAS_STR" id="275">
+					<DataPath>Объект.ЧелябинскаяОбласть_ТаблицаВыгрузки.FIAS_STR</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЧелябинскаяОбласть_ТаблицаВыгрузкиFIAS_STRКонтекстноеМеню" id="276"/>
+					<ExtendedTooltip name="ЧелябинскаяОбласть_ТаблицаВыгрузкиFIAS_STRРасширеннаяПодсказка" id="277"/>
+				</InputField>
+				<InputField name="ЧелябинскаяОбласть_ТаблицаВыгрузкиFIAS_DOM" id="278">
+					<DataPath>Объект.ЧелябинскаяОбласть_ТаблицаВыгрузки.FIAS_DOM</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЧелябинскаяОбласть_ТаблицаВыгрузкиFIAS_DOMКонтекстноеМеню" id="279"/>
+					<ExtendedTooltip name="ЧелябинскаяОбласть_ТаблицаВыгрузкиFIAS_DOMРасширеннаяПодсказка" id="280"/>
+				</InputField>
+				<InputField name="ЧелябинскаяОбласть_ТаблицаВыгрузкиGF" id="281">
+					<DataPath>Объект.ЧелябинскаяОбласть_ТаблицаВыгрузки.GF</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЧелябинскаяОбласть_ТаблицаВыгрузкиGFКонтекстноеМеню" id="282"/>
+					<ExtendedTooltip name="ЧелябинскаяОбласть_ТаблицаВыгрузкиGFРасширеннаяПодсказка" id="283"/>
+				</InputField>
+				<InputField name="ЧелябинскаяОбласть_ТаблицаВыгрузкиOPS" id="284">
+					<DataPath>Объект.ЧелябинскаяОбласть_ТаблицаВыгрузки.OPS</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЧелябинскаяОбласть_ТаблицаВыгрузкиOPSКонтекстноеМеню" id="285"/>
+					<ExtendedTooltip name="ЧелябинскаяОбласть_ТаблицаВыгрузкиOPSРасширеннаяПодсказка" id="286"/>
+				</InputField>
+				<InputField name="ЧелябинскаяОбласть_ТаблицаВыгрузкиMOP" id="287">
+					<DataPath>Объект.ЧелябинскаяОбласть_ТаблицаВыгрузки.MOP</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЧелябинскаяОбласть_ТаблицаВыгрузкиMOPКонтекстноеМеню" id="288"/>
+					<ExtendedTooltip name="ЧелябинскаяОбласть_ТаблицаВыгрузкиMOPРасширеннаяПодсказка" id="289"/>
+				</InputField>
+				<InputField name="ЧелябинскаяОбласть_ТаблицаВыгрузкиLIFT" id="290">
+					<DataPath>Объект.ЧелябинскаяОбласть_ТаблицаВыгрузки.LIFT</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЧелябинскаяОбласть_ТаблицаВыгрузкиLIFTКонтекстноеМеню" id="291"/>
+					<ExtendedTooltip name="ЧелябинскаяОбласть_ТаблицаВыгрузкиLIFTРасширеннаяПодсказка" id="292"/>
+				</InputField>
+				<InputField name="ЧелябинскаяОбласть_ТаблицаВыгрузкиKOMN" id="293">
+					<DataPath>Объект.ЧелябинскаяОбласть_ТаблицаВыгрузки.KOMN</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЧелябинскаяОбласть_ТаблицаВыгрузкиKOMNКонтекстноеМеню" id="294"/>
+					<ExtendedTooltip name="ЧелябинскаяОбласть_ТаблицаВыгрузкиKOMNРасширеннаяПодсказка" id="295"/>
+				</InputField>
+				<InputField name="ЧелябинскаяОбласть_ТаблицаВыгрузкиETAG" id="296">
+					<DataPath>Объект.ЧелябинскаяОбласть_ТаблицаВыгрузки.ETAG</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЧелябинскаяОбласть_ТаблицаВыгрузкиETAGКонтекстноеМеню" id="297"/>
+					<ExtendedTooltip name="ЧелябинскаяОбласть_ТаблицаВыгрузкиETAGРасширеннаяПодсказка" id="298"/>
+				</InputField>
+				<InputField name="ЧелябинскаяОбласть_ТаблицаВыгрузкиETAGN" id="299">
+					<DataPath>Объект.ЧелябинскаяОбласть_ТаблицаВыгрузки.ETAGN</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЧелябинскаяОбласть_ТаблицаВыгрузкиETAGNКонтекстноеМеню" id="300"/>
+					<ExtendedTooltip name="ЧелябинскаяОбласть_ТаблицаВыгрузкиETAGNРасширеннаяПодсказка" id="301"/>
+				</InputField>
+				<InputField name="ЧелябинскаяОбласть_ТаблицаВыгрузкиDOLJA" id="302">
+					<DataPath>Объект.ЧелябинскаяОбласть_ТаблицаВыгрузки.DOLJA</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЧелябинскаяОбласть_ТаблицаВыгрузкиDOLJAКонтекстноеМеню" id="303"/>
+					<ExtendedTooltip name="ЧелябинскаяОбласть_ТаблицаВыгрузкиDOLJAРасширеннаяПодсказка" id="304"/>
+				</InputField>
+				<InputField name="ЧелябинскаяОбласть_ТаблицаВыгрузкиPL_OBSH" id="305">
+					<DataPath>Объект.ЧелябинскаяОбласть_ТаблицаВыгрузки.PL_OBSH</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЧелябинскаяОбласть_ТаблицаВыгрузкиPL_OBSHКонтекстноеМеню" id="306"/>
+					<ExtendedTooltip name="ЧелябинскаяОбласть_ТаблицаВыгрузкиPL_OBSHРасширеннаяПодсказка" id="307"/>
+				</InputField>
+				<InputField name="ЧелябинскаяОбласть_ТаблицаВыгрузкиPL_OTAP" id="308">
+					<DataPath>Объект.ЧелябинскаяОбласть_ТаблицаВыгрузки.PL_OTAP</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЧелябинскаяОбласть_ТаблицаВыгрузкиPL_OTAPКонтекстноеМеню" id="309"/>
+					<ExtendedTooltip name="ЧелябинскаяОбласть_ТаблицаВыгрузкиPL_OTAPРасширеннаяПодсказка" id="310"/>
+				</InputField>
+				<InputField name="ЧелябинскаяОбласть_ТаблицаВыгрузкиKOL_MANS" id="311">
+					<DataPath>Объект.ЧелябинскаяОбласть_ТаблицаВыгрузки.KOL_MANS</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЧелябинскаяОбласть_ТаблицаВыгрузкиKOL_MANSКонтекстноеМеню" id="312"/>
+					<ExtendedTooltip name="ЧелябинскаяОбласть_ТаблицаВыгрузкиKOL_MANSРасширеннаяПодсказка" id="313"/>
+				</InputField>
+				<InputField name="ЧелябинскаяОбласть_ТаблицаВыгрузкиKOL_MANV" id="314">
+					<DataPath>Объект.ЧелябинскаяОбласть_ТаблицаВыгрузки.KOL_MANV</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЧелябинскаяОбласть_ТаблицаВыгрузкиKOL_MANVКонтекстноеМеню" id="315"/>
+					<ExtendedTooltip name="ЧелябинскаяОбласть_ТаблицаВыгрузкиKOL_MANVРасширеннаяПодсказка" id="316"/>
+				</InputField>
+				<InputField name="ЧелябинскаяОбласть_ТаблицаВыгрузкиYEAR_S" id="317">
+					<DataPath>Объект.ЧелябинскаяОбласть_ТаблицаВыгрузки.YEAR_S</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЧелябинскаяОбласть_ТаблицаВыгрузкиYEAR_SКонтекстноеМеню" id="318"/>
+					<ExtendedTooltip name="ЧелябинскаяОбласть_ТаблицаВыгрузкиYEAR_SРасширеннаяПодсказка" id="319"/>
+				</InputField>
+				<InputField name="ЧелябинскаяОбласть_ТаблицаВыгрузкиMONTH_S" id="320">
+					<DataPath>Объект.ЧелябинскаяОбласть_ТаблицаВыгрузки.MONTH_S</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЧелябинскаяОбласть_ТаблицаВыгрузкиMONTH_SКонтекстноеМеню" id="321"/>
+					<ExtendedTooltip name="ЧелябинскаяОбласть_ТаблицаВыгрузкиMONTH_SРасширеннаяПодсказка" id="322"/>
+				</InputField>
+				<InputField name="ЧелябинскаяОбласть_ТаблицаВыгрузкиVID_USL" id="323">
+					<DataPath>Объект.ЧелябинскаяОбласть_ТаблицаВыгрузки.VID_USL</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЧелябинскаяОбласть_ТаблицаВыгрузкиVID_USLКонтекстноеМеню" id="324"/>
+					<ExtendedTooltip name="ЧелябинскаяОбласть_ТаблицаВыгрузкиVID_USLРасширеннаяПодсказка" id="325"/>
+				</InputField>
+				<InputField name="ЧелябинскаяОбласть_ТаблицаВыгрузкиNAME_USL" id="326">
+					<DataPath>Объект.ЧелябинскаяОбласть_ТаблицаВыгрузки.NAME_USL</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЧелябинскаяОбласть_ТаблицаВыгрузкиNAME_USLКонтекстноеМеню" id="327"/>
+					<ExtendedTooltip name="ЧелябинскаяОбласть_ТаблицаВыгрузкиNAME_USLРасширеннаяПодсказка" id="328"/>
+				</InputField>
+				<InputField name="ЧелябинскаяОбласть_ТаблицаВыгрузкиMEASURE" id="329">
+					<DataPath>Объект.ЧелябинскаяОбласть_ТаблицаВыгрузки.MEASURE</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЧелябинскаяОбласть_ТаблицаВыгрузкиMEASUREКонтекстноеМеню" id="330"/>
+					<ExtendedTooltip name="ЧелябинскаяОбласть_ТаблицаВыгрузкиMEASUREРасширеннаяПодсказка" id="331"/>
+				</InputField>
+				<InputField name="ЧелябинскаяОбласть_ТаблицаВыгрузкиNORM_USL" id="332">
+					<DataPath>Объект.ЧелябинскаяОбласть_ТаблицаВыгрузки.NORM_USL</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЧелябинскаяОбласть_ТаблицаВыгрузкиNORM_USLКонтекстноеМеню" id="333"/>
+					<ExtendedTooltip name="ЧелябинскаяОбласть_ТаблицаВыгрузкиNORM_USLРасширеннаяПодсказка" id="334"/>
+				</InputField>
+				<InputField name="ЧелябинскаяОбласть_ТаблицаВыгрузкиTARIF" id="335">
+					<DataPath>Объект.ЧелябинскаяОбласть_ТаблицаВыгрузки.TARIF</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЧелябинскаяОбласть_ТаблицаВыгрузкиTARIFКонтекстноеМеню" id="336"/>
+					<ExtendedTooltip name="ЧелябинскаяОбласть_ТаблицаВыгрузкиTARIFРасширеннаяПодсказка" id="337"/>
+				</InputField>
+				<InputField name="ЧелябинскаяОбласть_ТаблицаВыгрузкиTARIF_DEC" id="338">
+					<DataPath>Объект.ЧелябинскаяОбласть_ТаблицаВыгрузки.TARIF_DEC</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЧелябинскаяОбласть_ТаблицаВыгрузкиTARIF_DECКонтекстноеМеню" id="339"/>
+					<ExtendedTooltip name="ЧелябинскаяОбласть_ТаблицаВыгрузкиTARIF_DECРасширеннаяПодсказка" id="340"/>
+				</InputField>
+				<InputField name="ЧелябинскаяОбласть_ТаблицаВыгрузкиKOL_POTR" id="341">
+					<DataPath>Объект.ЧелябинскаяОбласть_ТаблицаВыгрузки.KOL_POTR</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЧелябинскаяОбласть_ТаблицаВыгрузкиKOL_POTRКонтекстноеМеню" id="342"/>
+					<ExtendedTooltip name="ЧелябинскаяОбласть_ТаблицаВыгрузкиKOL_POTRРасширеннаяПодсказка" id="343"/>
+				</InputField>
+				<InputField name="ЧелябинскаяОбласть_ТаблицаВыгрузкиPOTR6PRED" id="344">
+					<DataPath>Объект.ЧелябинскаяОбласть_ТаблицаВыгрузки.POTR6PRED</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЧелябинскаяОбласть_ТаблицаВыгрузкиPOTR6PREDКонтекстноеМеню" id="345"/>
+					<ExtendedTooltip name="ЧелябинскаяОбласть_ТаблицаВыгрузкиPOTR6PREDРасширеннаяПодсказка" id="346"/>
+				</InputField>
+				<InputField name="ЧелябинскаяОбласть_ТаблицаВыгрузкиRAS_ODN" id="347">
+					<DataPath>Объект.ЧелябинскаяОбласть_ТаблицаВыгрузки.RAS_ODN</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЧелябинскаяОбласть_ТаблицаВыгрузкиRAS_ODNКонтекстноеМеню" id="348"/>
+					<ExtendedTooltip name="ЧелябинскаяОбласть_ТаблицаВыгрузкиRAS_ODNРасширеннаяПодсказка" id="349"/>
+				</InputField>
+				<InputField name="ЧелябинскаяОбласть_ТаблицаВыгрузкиNACHISL" id="350">
+					<DataPath>Объект.ЧелябинскаяОбласть_ТаблицаВыгрузки.NACHISL</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЧелябинскаяОбласть_ТаблицаВыгрузкиNACHISLКонтекстноеМеню" id="351"/>
+					<ExtendedTooltip name="ЧелябинскаяОбласть_ТаблицаВыгрузкиNACHISLРасширеннаяПодсказка" id="352"/>
+				</InputField>
+				<InputField name="ЧелябинскаяОбласть_ТаблицаВыгрузкиNACH_PVK" id="353">
+					<DataPath>Объект.ЧелябинскаяОбласть_ТаблицаВыгрузки.NACH_PVK</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЧелябинскаяОбласть_ТаблицаВыгрузкиNACH_PVKКонтекстноеМеню" id="354"/>
+					<ExtendedTooltip name="ЧелябинскаяОбласть_ТаблицаВыгрузкиNACH_PVKРасширеннаяПодсказка" id="355"/>
+				</InputField>
+				<InputField name="ЧелябинскаяОбласть_ТаблицаВыгрузкиKOPLATE" id="506">
+					<DataPath>Объект.ЧелябинскаяОбласть_ТаблицаВыгрузки.KOPLATE</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЧелябинскаяОбласть_ТаблицаВыгрузкиKOPLATEКонтекстноеМеню" id="507"/>
+					<ExtendedTooltip name="ЧелябинскаяОбласть_ТаблицаВыгрузкиKOPLATEРасширеннаяПодсказка" id="508"/>
+				</InputField>
+				<InputField name="ЧелябинскаяОбласть_ТаблицаВыгрузкиNACH_PR" id="356">
+					<DataPath>Объект.ЧелябинскаяОбласть_ТаблицаВыгрузки.NACH_PR</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЧелябинскаяОбласть_ТаблицаВыгрузкиNACH_PRКонтекстноеМеню" id="357"/>
+					<ExtendedTooltip name="ЧелябинскаяОбласть_ТаблицаВыгрузкиNACH_PRРасширеннаяПодсказка" id="358"/>
+				</InputField>
+				<InputField name="ЧелябинскаяОбласть_ТаблицаВыгрузкиOPLATA" id="359">
+					<DataPath>Объект.ЧелябинскаяОбласть_ТаблицаВыгрузки.OPLATA</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЧелябинскаяОбласть_ТаблицаВыгрузкиOPLATAКонтекстноеМеню" id="360"/>
+					<ExtendedTooltip name="ЧелябинскаяОбласть_ТаблицаВыгрузкиOPLATAРасширеннаяПодсказка" id="361"/>
+				</InputField>
+				<InputField name="ЧелябинскаяОбласть_ТаблицаВыгрузкиPERERASCH" id="362">
+					<DataPath>Объект.ЧелябинскаяОбласть_ТаблицаВыгрузки.PERERASCH</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЧелябинскаяОбласть_ТаблицаВыгрузкиPERERASCHКонтекстноеМеню" id="363"/>
+					<ExtendedTooltip name="ЧелябинскаяОбласть_ТаблицаВыгрузкиPERERASCHРасширеннаяПодсказка" id="364"/>
+				</InputField>
+				<InputField name="ЧелябинскаяОбласть_ТаблицаВыгрузкиDOLG_SUM" id="365">
+					<DataPath>Объект.ЧелябинскаяОбласть_ТаблицаВыгрузки.DOLG_SUM</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЧелябинскаяОбласть_ТаблицаВыгрузкиDOLG_SUMКонтекстноеМеню" id="366"/>
+					<ExtendedTooltip name="ЧелябинскаяОбласть_ТаблицаВыгрузкиDOLG_SUMРасширеннаяПодсказка" id="367"/>
+				</InputField>
+				<InputField name="ЧелябинскаяОбласть_ТаблицаВыгрузкиDOLG_MONTH" id="368">
+					<DataPath>Объект.ЧелябинскаяОбласть_ТаблицаВыгрузки.DOLG_MONTH</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЧелябинскаяОбласть_ТаблицаВыгрузкиDOLG_MONTHКонтекстноеМеню" id="369"/>
+					<ExtendedTooltip name="ЧелябинскаяОбласть_ТаблицаВыгрузкиDOLG_MONTHРасширеннаяПодсказка" id="370"/>
+				</InputField>
+				<InputField name="ЧелябинскаяОбласть_ТаблицаВыгрузкиMKV" id="371">
+					<DataPath>Объект.ЧелябинскаяОбласть_ТаблицаВыгрузки.MKV</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЧелябинскаяОбласть_ТаблицаВыгрузкиMKVКонтекстноеМеню" id="372"/>
+					<ExtendedTooltip name="ЧелябинскаяОбласть_ТаблицаВыгрузкиMKVРасширеннаяПодсказка" id="373"/>
+				</InputField>
+				<InputField name="ЧелябинскаяОбласть_ТаблицаВыгрузкиGODPOSTR" id="527">
+					<DataPath>Объект.ЧелябинскаяОбласть_ТаблицаВыгрузки.GODPOSTR</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЧелябинскаяОбласть_ТаблицаВыгрузкиGODPOSTRКонтекстноеМеню" id="528"/>
+					<ExtendedTooltip name="ЧелябинскаяОбласть_ТаблицаВыгрузкиGODPOSTRРасширеннаяПодсказка" id="529"/>
+				</InputField>
+				<InputField name="ЧелябинскаяОбласть_ТаблицаВыгрузкиTIP_DOM" id="530">
+					<DataPath>Объект.ЧелябинскаяОбласть_ТаблицаВыгрузки.TIP_DOM</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЧелябинскаяОбласть_ТаблицаВыгрузкиTIP_DOMКонтекстноеМеню" id="531"/>
+					<ExtendedTooltip name="ЧелябинскаяОбласть_ТаблицаВыгрузкиTIP_DOMРасширеннаяПодсказка" id="532"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<CommandBar name="ГруппаФайлВыгрузки" id="217">
+			<HorizontalLocation>Right</HorizontalLocation>
+			<ExtendedTooltip name="ГруппаФайлВыгрузкиРасширеннаяПодсказка" id="218"/>
+		</CommandBar>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.УПЖКХ_ВыгрузкиВОрганыСоцЗащиты</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ПериодСтрокой" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>15</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВидОтапливаемойПлощади" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид отапливаемой площади</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.УПЖКХ_ВидыПлощадей</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТипВыгружаемогоНаименованияОрганизации" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип выгружаемого наименования организации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КодРайона" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код района</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>2</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="УчитыватьПени" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Учитывать начисленные пени при выгрузке</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Здание" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Здание</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.КВП_Здания</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="FIAS_CITY" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификатор кода города по ФИАС</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>36</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="СпособПолученияПлощадейМОП" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Способ получения площадей МОП</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="УчитыватьЗадолженностиЗаМесяцыНачисленияСПросрочкойБолее36Месяцев" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Учитывать задолженности за месяцы начисления, которые не были оплачены более 36 месяцев</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВКакомВидеВыгружатьСведенияОЕИ" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>В каком виде выгружать сведения о единицах измерения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="УчитыватьПерерасчетыЗаТекущийМесяцНачисления" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Учитывать перерасчеты за текущий месяц начисления</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ЧелябинскаяОбласть_ТаблицаВыгрузки</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>OrGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ЧелябинскаяОбласть_ТаблицаВыгрузки.ЛицевойСчет</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.КВП_ЛицевыеСчета.ПустаяСсылка</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ЧелябинскаяОбласть_ТаблицаВыгрузки.Проживающий</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.УПЖКХ_Жильцы.ПустаяСсылка</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:Gainsboro</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ЧелябинскаяОбласть_ТаблицаВыгрузки</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>AndGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.ЧелябинскаяОбласть_ТаблицаВыгрузки.ЕстьЛьготаПоУслуге</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemGroup">
+							<dcsset:groupType>OrGroup</dcsset:groupType>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">Объект.ЧелябинскаяОбласть_ТаблицаВыгрузки.Проживающий</dcsset:left>
+								<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+								<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.УПЖКХ_Жильцы.ПустаяСсылка</dcsset:right>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">Объект.ЧелябинскаяОбласть_ТаблицаВыгрузки.ЛицевойСчет</dcsset:left>
+								<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+								<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.КВП_ЛицевыеСчета.ПустаяСсылка</dcsset:right>
+							</dcsset:item>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:AntiqueWhite</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаНастройка" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка выгрузки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Настройка</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаНастройка</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаВыгрузить" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить в файл</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ВыгрузитьФайлСертификата</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаВыгрузить</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаЗагрузить" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполняет табличную часть данными из файла, производит идентификацию льготников и заполняет таблицу данными о начисленных льготах</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ЗагрузитьФайлСертификата</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаЗагрузить</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

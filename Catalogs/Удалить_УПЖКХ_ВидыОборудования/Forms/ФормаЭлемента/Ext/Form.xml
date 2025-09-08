@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="73">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="74"/>
+			<ChildItems>
+				<InputField name="Наименование" id="4">
+					<DataPath>Объект.Description</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+				</InputField>
+				<InputField name="Код" id="70">
+					<DataPath>Объект.Code</DataPath>
+					<ContextMenu name="КодКонтекстноеМеню" id="71"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="72"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="ПризнакиНеисправностей" id="7">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Объект.ПризнакиНеисправностей</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ПризнакиНеисправностейКонтекстноеМеню" id="8"/>
+			<AutoCommandBar name="ПризнакиНеисправностейКоманднаяПанель" id="9"/>
+			<ExtendedTooltip name="ПризнакиНеисправностейРасширеннаяПодсказка" id="10"/>
+			<SearchStringAddition name="ПризнакиНеисправностейСтрокаПоиска" id="11">
+				<AdditionSource>
+					<Item>ПризнакиНеисправностей</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПризнакиНеисправностейСтрокаПоискаКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="ПризнакиНеисправностейСтрокаПоискаРасширеннаяПодсказка" id="13"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ПризнакиНеисправностейСостояниеПросмотра" id="14">
+				<AdditionSource>
+					<Item>ПризнакиНеисправностей</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПризнакиНеисправностейСостояниеПросмотраКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="ПризнакиНеисправностейСостояниеПросмотраРасширеннаяПодсказка" id="16"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ПризнакиНеисправностейУправлениеПоиском" id="17">
+				<AdditionSource>
+					<Item>ПризнакиНеисправностей</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ПризнакиНеисправностейУправлениеПоискомКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="ПризнакиНеисправностейУправлениеПоискомРасширеннаяПодсказка" id="19"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ПризнакиНеисправностейНомерСтроки" id="75">
+					<DataPath>Объект.ПризнакиНеисправностей.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПризнакиНеисправностейНомерСтрокиКонтекстноеМеню" id="76"/>
+					<ExtendedTooltip name="ПризнакиНеисправностейНомерСтрокиРасширеннаяПодсказка" id="77"/>
+				</LabelField>
+				<InputField name="ПризнакиНеисправностейПризнакНеисправности" id="20">
+					<DataPath>Объект.ПризнакиНеисправностей.ПризнакНеисправности</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПризнакиНеисправностейПризнакНеисправностиКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ПризнакиНеисправностейПризнакНеисправностиРасширеннаяПодсказка" id="22"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.Удалить_УПЖКХ_ВидыОборудования</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ВидыВыполняемыхРаботПериодичность</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ВидыВыполняемыхРаботКоличествоПериодов</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ВидыВыполняемыхРабот.Плановый</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+</Form>

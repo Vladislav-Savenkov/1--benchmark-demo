@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Subsystem uuid="d0c1517b-a2cd-4962-9f01-e4416df986a8">
+		<Properties>
+			<Name>смсРассылка</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>СМС рассылка</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<Explanation/>
+			<Picture>
+				<xr:Ref>CommonPicture.смсПодсистемаСМСРассылка</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.УдалитьсмсВидСравнения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.смсПравилаОтбораПолучателей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.смсШаблоны</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.смсСообщение</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.смсНастройкиАккаунтов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.смсСостоянияСообщений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.смсНастройкаПереопределяемый</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.смсОбменССайтом</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.смсПравилаОтбораПолучателей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.смсРаботаССообщениями</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.смсРаботаСШаблонами</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.смсСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.смсРассылка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.смсВводPINкода</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.смсЛичныйКабинет</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.смсСтатусДокументаСообщение</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.смсСтопЛистДляРассылки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.смсРассылка16</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.смсРассылка48</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.смсЛичныйКабинет</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.смсСтоп32</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.смсОбщегоНазначения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.смсОбщегоНазначенияСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.смсСтатистикаОтправкиСообщений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.смсОбновлениеИнформационнойБазыСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.смсПриЗаписиДокументаОтправкиСообщений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.смсСтатистикаОтправкиСообщений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.смсТиповыеМетодыСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.смсИспользоватьАвторассылку</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.смсАвторассылкаСообщений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.смсНастройкиРассылкиСМС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.смсЗащищенныеФункцииПереопределяемый</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.смсИспользоватьАвторассылку</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.смсСостояниеДокумента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.смсУчетнаяЗаписьДляАвторассылки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonTemplate.УдалитьсмсСписокОтборов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonTemplate.УдалитьсмсСписокПараметров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.смсПодсистемаСМСРассылка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ОТР_ЧастоЗадаваемыеВопросы</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Лицевые счета с нечисловыми символами в номере</v8:content>
+		</v8:item>
+	</Title>
+	<Width>47</Width>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<LabelDecoration name="НадписьПояснениеПоЛССНечисловымиНомерами" id="17">
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<TextColor>style:УПЖКХ_ТекстСправочнойНадписи</TextColor>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>При работе с сервисом "ЖКХ: Автоматический прием показаний счетчиков" возможны проблемы с приемом показаний счетчиков, закрепленных за лицевыми счетами, содержащими нечисловые символы в номере. Рекомендуется исключить из номеров следующих лицевых счетов нечисловые символы:</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="НадписьПояснениеПоЛССНечисловымиНомерамиКонтекстноеМеню" id="18"/>
+			<ExtendedTooltip name="НадписьПояснениеПоЛССНечисловымиНомерамиРасширеннаяПодсказка" id="19"/>
+		</LabelDecoration>
+		<Table name="ТаблицаЛССНечисловымиСимволамиВНомере" id="1">
+			<Representation>List</Representation>
+			<SelectionMode>SingleRow</SelectionMode>
+			<AutoAddIncomplete>false</AutoAddIncomplete>
+			<AutoMarkIncomplete>false</AutoMarkIncomplete>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>ТаблицаЛССНечисловымиСимволамиВНомере</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ТаблицаЛССНечисловымиСимволамиВНомереКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="ТаблицаЛССНечисловымиСимволамиВНомереКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ТаблицаЛССНечисловымиСимволамиВНомереРасширеннаяПодсказка" id="4"/>
+			<SearchStringAddition name="ТаблицаЛССНечисловымиСимволамиВНомереСтрокаПоиска" id="5">
+				<AdditionSource>
+					<Item>ТаблицаЛССНечисловымиСимволамиВНомере</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаЛССНечисловымиСимволамиВНомереСтрокаПоискаКонтекстноеМеню" id="6"/>
+				<ExtendedTooltip name="ТаблицаЛССНечисловымиСимволамиВНомереСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ТаблицаЛССНечисловымиСимволамиВНомереСостояниеПросмотра" id="8">
+				<AdditionSource>
+					<Item>ТаблицаЛССНечисловымиСимволамиВНомере</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаЛССНечисловымиСимволамиВНомереСостояниеПросмотраКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="ТаблицаЛССНечисловымиСимволамиВНомереСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ТаблицаЛССНечисловымиСимволамиВНомереУправлениеПоиском" id="11">
+				<AdditionSource>
+					<Item>ТаблицаЛССНечисловымиСимволамиВНомере</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаЛССНечисловымиСимволамиВНомереУправлениеПоискомКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="ТаблицаЛССНечисловымиСимволамиВНомереУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="OnEditEnd">ТаблицаЛССНечисловымиСимволамиВНомереПриОкончанииРедактирования</Event>
+				<Event name="BeforeAddRow">ТаблицаЛССНечисловымиСимволамиВНомереПередНачаломДобавления</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="ТаблицаЛССНечисловымиСимволамиВНомереЛицевойСчет" id="14">
+					<DataPath>ТаблицаЛССНечисловымиСимволамиВНомере.ЛицевойСчет</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<DropListButton>false</DropListButton>
+					<ChoiceButton>false</ChoiceButton>
+					<ClearButton>false</ClearButton>
+					<SpinButton>false</SpinButton>
+					<OpenButton>true</OpenButton>
+					<CreateButton>false</CreateButton>
+					<ChooseType>false</ChooseType>
+					<TextEdit>false</TextEdit>
+					<ContextMenu name="ТаблицаЛССНечисловымиСимволамиВНомереЛицевойСчетКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ТаблицаЛССНечисловымиСимволамиВНомереЛицевойСчетРасширеннаяПодсказка" id="16"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.УПЖКХ_ИнтеграцияСГолосовымиСервисами</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ТаблицаЛССНечисловымиСимволамиВНомере" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица л/с с нечисловыми символами в номере</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ЛицевойСчет" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Лицевой счет</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.КВП_ЛицевыеСчета</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+</Form>

@@ -1,0 +1,985 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Иркутская область: Настройка</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="ГруппаСтраницыФормы" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы формы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы формы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ГруппаСтраницыФормыРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<Page name="ГруппаОбщиеНастройки" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Общие настройки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа общие настройки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаОбщиеНастройкиРасширеннаяПодсказка" id="6"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаВерхняя" id="65">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройки идентификации лицевых счетов из файла в базе:</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<ExtendedTooltip name="ГруппаВерхняяРасширеннаяПодсказка" id="66"/>
+							<ChildItems>
+								<RadioButtonField name="СпособИдентификацииЛСВБазе" id="48">
+									<DataPath>СпособИдентификацииЛС</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Способ идентификации лицевых счетов в базе</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Top</TitleLocation>
+									<RadioButtonType>Auto</RadioButtonType>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>По адресу помещения</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">0</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>По наименованию/идентификатору лицевого счета</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">1</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="СпособИдентификацииЛСВБазеКонтекстноеМеню" id="49"/>
+									<ExtendedTooltip name="СпособИдентификацииЛСВБазеРасширеннаяПодсказка" id="50"/>
+									<Events>
+										<Event name="OnChange">СпособИдентификацииЛСВБазеПриИзменении</Event>
+									</Events>
+								</RadioButtonField>
+								<RadioButtonField name="РеквизитЛСДляИдентификации" id="45">
+									<DataPath>РеквизитЛСДляИдентификации</DataPath>
+									<Enabled>false</Enabled>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Реквизит лицевого счета из базы для идентификации (доступно только для способа "по наименованию/идентификатору лицевого счета")</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Top</TitleLocation>
+									<RadioButtonType>Auto</RadioButtonType>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Наименование</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">Наименование</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Идентификатор</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">Идентификатор</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="РеквизитЛСДляИдентификацииКонтекстноеМеню" id="46"/>
+									<ExtendedTooltip name="РеквизитЛСДляИдентификацииРасширеннаяПодсказка" id="47"/>
+								</RadioButtonField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаНижняя" id="67">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройки форматов файлов с реестрами и их кодировок:</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа нижняя</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<ExtendedTooltip name="ГруппаНижняяРасширеннаяПодсказка" id="68"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаЖКУ" id="100">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>   по ЖКУ:</v8:content>
+										</v8:item>
+									</Title>
+									<TitleFont ref="style:NormalTextFont" height="11" kind="StyleItem"/>
+									<Group>Vertical</Group>
+									<ExtendedTooltip name="ГруппаЖКУРасширеннаяПодсказка" id="101"/>
+									<ChildItems>
+										<RadioButtonField name="ФорматЗагружаемогоФайла" id="51">
+											<DataPath>ФорматЗагружаемогоВыгружаемогоФайлаЖКУ</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>      Формат файла с реестром л/с по ЖКУ</v8:content>
+												</v8:item>
+											</Title>
+											<RadioButtonType>Auto</RadioButtonType>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>DBF</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">0</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>XLS</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">1</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<ContextMenu name="ФорматЗагружаемогоФайлаКонтекстноеМеню" id="52"/>
+											<ExtendedTooltip name="ФорматЗагружаемогоФайлаРасширеннаяПодсказка" id="53"/>
+											<Events>
+												<Event name="OnChange">ФорматЗагружаемогоФайлаПриИзменении</Event>
+											</Events>
+										</RadioButtonField>
+										<RadioButtonField name="КодировкаФайлаDBF" id="60">
+											<DataPath>КодировкаФайлаDBFЖКУ</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>      Кодировка файла (доступно только для формата *.DBF)</v8:content>
+												</v8:item>
+											</Title>
+											<RadioButtonType>Auto</RadioButtonType>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>DOS</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">0</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>WIN</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">1</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<ContextMenu name="КодировкаФайлаDBFКонтекстноеМеню" id="61"/>
+											<ExtendedTooltip name="КодировкаФайлаDBFРасширеннаяПодсказка" id="62"/>
+										</RadioButtonField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаКапремонт" id="102">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>   по капремонту:</v8:content>
+										</v8:item>
+									</Title>
+									<TitleFont ref="style:NormalTextFont" height="11" kind="StyleItem"/>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа капремонт</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<ExtendedTooltip name="ГруппаКапремонтРасширеннаяПодсказка" id="103"/>
+									<ChildItems>
+										<RadioButtonField name="ФорматЗагружаемогоВыгружаемогоФайлаКапремонт" id="104">
+											<DataPath>ФорматЗагружаемогоВыгружаемогоФайлаКапремонт</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>      Формат файла с реестром л/с по капремонту</v8:content>
+												</v8:item>
+											</Title>
+											<RadioButtonType>Auto</RadioButtonType>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>DBF</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">0</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>XLS</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">1</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<ContextMenu name="ФорматЗагружаемогоВыгружаемогоФайлаКапремонтКонтекстноеМеню" id="105"/>
+											<ExtendedTooltip name="ФорматЗагружаемогоВыгружаемогоФайлаКапремонтРасширеннаяПодсказка" id="106"/>
+										</RadioButtonField>
+										<RadioButtonField name="КодировкаФайлаDBFКапремонт" id="107">
+											<DataPath>КодировкаФайлаDBFКапремонт</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>      Кодировка файла (доступно только для формата *.DBF)</v8:content>
+												</v8:item>
+											</Title>
+											<RadioButtonType>Auto</RadioButtonType>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>DOS</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">0</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>WIN</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">1</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<ContextMenu name="КодировкаФайлаDBFКапремонтКонтекстноеМеню" id="108"/>
+											<ExtendedTooltip name="КодировкаФайлаDBFКапремонтРасширеннаяПодсказка" id="109"/>
+										</RadioButtonField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаТКО" id="126">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>   по обращению с твердыми коммунальными отходами:</v8:content>
+										</v8:item>
+									</Title>
+									<TitleFont ref="style:NormalTextFont" height="11" kind="StyleItem"/>
+									<Group>Vertical</Group>
+									<ExtendedTooltip name="ГруппаТКОРасширеннаяПодсказка" id="127"/>
+									<ChildItems>
+										<RadioButtonField name="КодировкаФайлаDBFТКО" id="128">
+											<DataPath>КодировкаФайлаDBFТКО</DataPath>
+											<RadioButtonType>Auto</RadioButtonType>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>DOS</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">0</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>WIN</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:decimal">1</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<ContextMenu name="КодировкаФайлаDBFТКОКонтекстноеМеню" id="129"/>
+											<ExtendedTooltip name="КодировкаФайлаDBFТКОРасширеннаяПодсказка" id="130"/>
+										</RadioButtonField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаНастройкиОплаты" id="116">
+							<Visible>false</Visible>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройки приема оплат</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа настройки оплаты</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ГруппаНастройкиОплатыРасширеннаяПодсказка" id="117"/>
+							<ChildItems>
+								<InputField name="КоличествоДнейСледующегоМесяцаВТеченииКоторыхМожноОплатитьНачисленияЗаМесяцВыгрузки" id="118">
+									<DataPath>КоличествоДнейСледующегоМесяцаВТеченииКоторыхМожноОплатитьНачисленияЗаМесяцВыгрузки</DataPath>
+									<ContextMenu name="КоличествоДнейСледующегоМесяцаВТеченииКоторыхМожноОплатитьНачисленияЗаМесяцВыгрузкиКонтекстноеМеню" id="119"/>
+									<ExtendedTooltip name="КоличествоДнейСледующегоМесяцаВТеченииКоторыхМожноОплатитьНачисленияЗаМесяцВыгрузкиРасширеннаяПодсказка" id="120"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаСоответствиеУслуг" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Соответствие услуг</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа соответствие услуг</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<ExtendedTooltip name="ГруппаСоответствиеУслугРасширеннаяПодсказка" id="4"/>
+					<ChildItems>
+						<Table name="ИркутскаяОбласть_ЖКУ_ОСЗН" id="7">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.ИркутскаяОбласть_ЖКУ_ОСЗН</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ИркутскаяОбласть_ЖКУ_ОСЗНКонтекстноеМеню" id="8"/>
+							<AutoCommandBar name="ИркутскаяОбласть_ЖКУ_ОСЗНКоманднаяПанель" id="9">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ИркутскаяОбласть_ЖКУ_ОСЗНРасширеннаяПодсказка" id="10"/>
+							<SearchStringAddition name="ИркутскаяОбласть_ЖКУ_ОСЗНСтрокаПоиска" id="11">
+								<AdditionSource>
+									<Item>ИркутскаяОбласть_ЖКУ_ОСЗН</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ИркутскаяОбласть_ЖКУ_ОСЗНСтрокаПоискаКонтекстноеМеню" id="12"/>
+								<ExtendedTooltip name="ИркутскаяОбласть_ЖКУ_ОСЗНСтрокаПоискаРасширеннаяПодсказка" id="13"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ИркутскаяОбласть_ЖКУ_ОСЗНСостояниеПросмотра" id="14">
+								<AdditionSource>
+									<Item>ИркутскаяОбласть_ЖКУ_ОСЗН</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ИркутскаяОбласть_ЖКУ_ОСЗНСостояниеПросмотраКонтекстноеМеню" id="15"/>
+								<ExtendedTooltip name="ИркутскаяОбласть_ЖКУ_ОСЗНСостояниеПросмотраРасширеннаяПодсказка" id="16"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ИркутскаяОбласть_ЖКУ_ОСЗНУправлениеПоиском" id="17">
+								<AdditionSource>
+									<Item>ИркутскаяОбласть_ЖКУ_ОСЗН</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ИркутскаяОбласть_ЖКУ_ОСЗНУправлениеПоискомКонтекстноеМеню" id="18"/>
+								<ExtendedTooltip name="ИркутскаяОбласть_ЖКУ_ОСЗНУправлениеПоискомРасширеннаяПодсказка" id="19"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="BeforeAddRow">ИркутскаяОбласть_ЖКУ_ОСЗНПередНачаломДобавления</Event>
+								<Event name="BeforeDeleteRow">ИркутскаяОбласть_ЖКУ_ОСЗНПередУдалением</Event>
+								<Event name="OnActivateRow">ИркутскаяОбласть_ЖКУ_ОСЗНПриАктивизацииСтроки</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="ИркутскаяОбласть_ЖКУ_ОСЗННомерСтроки" id="20">
+									<DataPath>Объект.ИркутскаяОбласть_ЖКУ_ОСЗН.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИркутскаяОбласть_ЖКУ_ОСЗННомерСтрокиКонтекстноеМеню" id="21"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_ЖКУ_ОСЗННомерСтрокиРасширеннаяПодсказка" id="22"/>
+								</LabelField>
+								<InputField name="ИркутскаяОбласть_ЖКУ_ОСЗНУникальноеНаименованиеУслуги" id="23">
+									<DataPath>Объект.ИркутскаяОбласть_ЖКУ_ОСЗН.УникальноеНаименованиеУслуги</DataPath>
+									<Visible>false</Visible>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИркутскаяОбласть_ЖКУ_ОСЗНУникальноеНаименованиеУслугиКонтекстноеМеню" id="24"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_ЖКУ_ОСЗНУникальноеНаименованиеУслугиРасширеннаяПодсказка" id="25"/>
+								</InputField>
+								<InputField name="ИркутскаяОбласть_ЖКУ_ОСЗННаименованиеУслугиДляПользователей" id="26">
+									<DataPath>Объект.ИркутскаяОбласть_ЖКУ_ОСЗН.НаименованиеУслугиДляПользователей</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Наименование услуги в ОСЗН</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<TextEdit>false</TextEdit>
+									<ContextMenu name="ИркутскаяОбласть_ЖКУ_ОСЗННаименованиеУслугиДляПользователейКонтекстноеМеню" id="27"/>
+									<ExtendedTooltip name="ИркутскаяОбласть_ЖКУ_ОСЗННаименованиеУслугиДляПользователейРасширеннаяПодсказка" id="28"/>
+									<Events>
+										<Event name="Clearing">ИркутскаяОбласть_ЖКУ_ОСЗННаименованиеУслугиДляПользователейОчистка</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<Table name="ТП_УслугаВБазе" id="29">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>ТП_УслугаВБазе</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ТП_УслугаВБазеКонтекстноеМеню" id="30"/>
+							<AutoCommandBar name="ТП_УслугаВБазеКоманднаяПанель" id="31"/>
+							<ExtendedTooltip name="ТП_УслугаВБазеРасширеннаяПодсказка" id="32"/>
+							<SearchStringAddition name="ТП_УслугаВБазеСтрокаПоиска" id="33">
+								<AdditionSource>
+									<Item>ТП_УслугаВБазе</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТП_УслугаВБазеСтрокаПоискаКонтекстноеМеню" id="34"/>
+								<ExtendedTooltip name="ТП_УслугаВБазеСтрокаПоискаРасширеннаяПодсказка" id="35"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТП_УслугаВБазеСостояниеПросмотра" id="36">
+								<AdditionSource>
+									<Item>ТП_УслугаВБазе</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТП_УслугаВБазеСостояниеПросмотраКонтекстноеМеню" id="37"/>
+								<ExtendedTooltip name="ТП_УслугаВБазеСостояниеПросмотраРасширеннаяПодсказка" id="38"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТП_УслугаВБазеУправлениеПоиском" id="39">
+								<AdditionSource>
+									<Item>ТП_УслугаВБазе</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТП_УслугаВБазеУправлениеПоискомКонтекстноеМеню" id="40"/>
+								<ExtendedTooltip name="ТП_УслугаВБазеУправлениеПоискомРасширеннаяПодсказка" id="41"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnEditEnd">ТП_УслугаВБазеПриОкончанииРедактирования</Event>
+								<Event name="BeforeAddRow">ТП_УслугаВБазеПередНачаломДобавления</Event>
+								<Event name="BeforeDeleteRow">ТП_УслугаВБазеПередУдалением</Event>
+								<Event name="BeforeEditEnd">ТП_УслугаВБазеПередОкончаниемРедактирования</Event>
+								<Event name="OnStartEdit">ТП_УслугаВБазеПриНачалеРедактирования</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="ТП_УслугаВБазеУслугаВБазе" id="42">
+									<DataPath>ТП_УслугаВБазе.УслугаВБазе</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТП_УслугаВБазеУслугаВБазеКонтекстноеМеню" id="43"/>
+									<ExtendedTooltip name="ТП_УслугаВБазеУслугаВБазеРасширеннаяПодсказка" id="44"/>
+								</InputField>
+								<ColumnGroup name="ТП_УслугаВБазеГруппаНастройкиУслуг" id="121">
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Т п услуга в базе группа настройки услуг</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ТП_УслугаВБазеГруппаНастройкиУслугРасширеннаяПодсказка" id="122"/>
+									<ChildItems>
+										<InputField name="ТП_УслугаВБазеТипУслуги" id="110">
+											<DataPath>ТП_УслугаВБазе.ТипУслуги</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<DropListButton>true</DropListButton>
+											<TextEdit>false</TextEdit>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Индивидуальная</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">Индивидуальная</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Общедомовая</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">Общедомовая</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Индивидуальная и общедомовая</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">Индивидуальная и общедомовая</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<ContextMenu name="ТП_УслугаВБазеТипУслугиКонтекстноеМеню" id="111"/>
+											<ExtendedTooltip name="ТП_УслугаВБазеТипУслугиРасширеннаяПодсказка" id="112"/>
+										</InputField>
+										<CheckBoxField name="ТП_УслугаВБазеПолеУчитыватьПриРасчетеНорматива" id="123">
+											<DataPath>ТП_УслугаВБазе.УчитыватьПриРасчетеНорматива</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ТП_УслугаВБазеПолеУчитыватьПриРасчетеНормативаКонтекстноеМеню" id="124"/>
+											<ExtendedTooltip name="ТП_УслугаВБазеПолеУчитыватьПриРасчетеНормативаРасширеннаяПодсказка" id="125"/>
+										</CheckBoxField>
+									</ChildItems>
+								</ColumnGroup>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<Table name="ИркутскаяОбласть_ЖКУ_В_Базе" id="75">
+			<Visible>false</Visible>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Объект.ИркутскаяОбласть_ЖКУ_В_Базе</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ИркутскаяОбласть_ЖКУ_В_БазеКонтекстноеМеню" id="76"/>
+			<AutoCommandBar name="ИркутскаяОбласть_ЖКУ_В_БазеКоманднаяПанель" id="77"/>
+			<ExtendedTooltip name="ИркутскаяОбласть_ЖКУ_В_БазеРасширеннаяПодсказка" id="78"/>
+			<SearchStringAddition name="ИркутскаяОбласть_ЖКУ_В_БазеСтрокаПоиска" id="79">
+				<AdditionSource>
+					<Item>ИркутскаяОбласть_ЖКУ_В_Базе</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ИркутскаяОбласть_ЖКУ_В_БазеСтрокаПоискаКонтекстноеМеню" id="80"/>
+				<ExtendedTooltip name="ИркутскаяОбласть_ЖКУ_В_БазеСтрокаПоискаРасширеннаяПодсказка" id="81"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ИркутскаяОбласть_ЖКУ_В_БазеСостояниеПросмотра" id="82">
+				<AdditionSource>
+					<Item>ИркутскаяОбласть_ЖКУ_В_Базе</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ИркутскаяОбласть_ЖКУ_В_БазеСостояниеПросмотраКонтекстноеМеню" id="83"/>
+				<ExtendedTooltip name="ИркутскаяОбласть_ЖКУ_В_БазеСостояниеПросмотраРасширеннаяПодсказка" id="84"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ИркутскаяОбласть_ЖКУ_В_БазеУправлениеПоиском" id="85">
+				<AdditionSource>
+					<Item>ИркутскаяОбласть_ЖКУ_В_Базе</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ИркутскаяОбласть_ЖКУ_В_БазеУправлениеПоискомКонтекстноеМеню" id="86"/>
+				<ExtendedTooltip name="ИркутскаяОбласть_ЖКУ_В_БазеУправлениеПоискомРасширеннаяПодсказка" id="87"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ИркутскаяОбласть_ЖКУ_В_БазеНомерСтроки" id="88">
+					<DataPath>Объект.ИркутскаяОбласть_ЖКУ_В_Базе.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ИркутскаяОбласть_ЖКУ_В_БазеНомерСтрокиКонтекстноеМеню" id="89"/>
+					<ExtendedTooltip name="ИркутскаяОбласть_ЖКУ_В_БазеНомерСтрокиРасширеннаяПодсказка" id="90"/>
+				</LabelField>
+				<InputField name="ИркутскаяОбласть_ЖКУ_В_БазеУникальноеНаименованиеУслуги" id="91">
+					<DataPath>Объект.ИркутскаяОбласть_ЖКУ_В_Базе.УникальноеНаименованиеУслуги</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ИркутскаяОбласть_ЖКУ_В_БазеУникальноеНаименованиеУслугиКонтекстноеМеню" id="92"/>
+					<ExtendedTooltip name="ИркутскаяОбласть_ЖКУ_В_БазеУникальноеНаименованиеУслугиРасширеннаяПодсказка" id="93"/>
+				</InputField>
+				<InputField name="ИркутскаяОбласть_ЖКУ_В_БазеНаименованиеУслугиДляПользователей" id="94">
+					<DataPath>Объект.ИркутскаяОбласть_ЖКУ_В_Базе.НаименованиеУслугиДляПользователей</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ИркутскаяОбласть_ЖКУ_В_БазеНаименованиеУслугиДляПользователейКонтекстноеМеню" id="95"/>
+					<ExtendedTooltip name="ИркутскаяОбласть_ЖКУ_В_БазеНаименованиеУслугиДляПользователейРасширеннаяПодсказка" id="96"/>
+				</InputField>
+				<InputField name="ИркутскаяОбласть_ЖКУ_В_БазеУслугаВБазе" id="97">
+					<DataPath>Объект.ИркутскаяОбласть_ЖКУ_В_Базе.УслугаВБазе</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ИркутскаяОбласть_ЖКУ_В_БазеУслугаВБазеКонтекстноеМеню" id="98"/>
+					<ExtendedTooltip name="ИркутскаяОбласть_ЖКУ_В_БазеУслугаВБазеРасширеннаяПодсказка" id="99"/>
+				</InputField>
+				<InputField name="ИркутскаяОбласть_ЖКУ_В_БазеТипУслуги" id="113">
+					<DataPath>Объект.ИркутскаяОбласть_ЖКУ_В_Базе.ТипУслуги</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ИркутскаяОбласть_ЖКУ_В_БазеТипУслугиКонтекстноеМеню" id="114"/>
+					<ExtendedTooltip name="ИркутскаяОбласть_ЖКУ_В_БазеТипУслугиРасширеннаяПодсказка" id="115"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<CommandBar name="ГруппаПодвал" id="71">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа подвал</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа подвал</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalLocation>Right</HorizontalLocation>
+			<ExtendedTooltip name="ГруппаПодвалРасширеннаяПодсказка" id="72"/>
+			<ChildItems>
+				<Button name="Сохранить" id="69">
+					<Type>CommandBarButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<CommandName>Form.Command.Сохранить</CommandName>
+					<ExtendedTooltip name="СохранитьРасширеннаяПодсказка" id="70"/>
+				</Button>
+				<Button name="Закрыть" id="73">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.StandardCommand.Close</CommandName>
+					<ExtendedTooltip name="ЗакрытьРасширеннаяПодсказка" id="74"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.УПЖКХ_ВыгрузкиВОрганыСоцЗащиты</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ТП_УслугаВБазе" id="2">
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="УслугаВБазе" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Услуга в базе</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.КВП_Услуги</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ТипУслуги" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип услуги</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>28</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="УчитыватьПриРасчетеНорматива" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Учитывать при расчете норматива</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="РеквизитЛСДляИдентификации" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реквизит ЛС для идентификации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>20</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СпособИдентификацииЛС" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Способ идентификации ЛС</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ФорматЗагружаемогоВыгружаемогоФайлаЖКУ" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Формат загружаемого/выгружаемого файла(ов)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КодировкаФайлаDBFЖКУ" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кодировка файла DBFЖКУ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПредыдущаяУслуга" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предыдущая услуга</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.КВП_Услуги</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПризнакУдаления" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Признак удаления</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ФорматЗагружаемогоВыгружаемогоФайлаКапремонт" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Формат загружаемого/выгружаемого файла(ов)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КодировкаФайлаDBFКапремонт" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кодировка файла DBF Капремент</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПредыдущийТипУслуги" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предыдущий тип услуги</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>28</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КоличествоДнейСледующегоМесяцаВТеченииКоторыхМожноОплатитьНачисленияЗаМесяцВыгрузки" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество дней следующего месяца в течении которых можно оплатить начисления за месяц выгрузки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>2</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПредыдущийПризнакУчетаУслугиПриРасчетеНорматива" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предыдущий признак учета услуги при расчете норматива</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КодировкаФайлаDBFТКО" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>      Кодировка файла</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Сохранить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Сохранить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

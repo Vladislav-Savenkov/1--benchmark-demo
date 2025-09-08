@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>Close</ExcludedCommand>
+		<ExcludedCommand>Copy</ExcludedCommand>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+		<ExcludedCommand>Delete</ExcludedCommand>
+		<ExcludedCommand>Help</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>Reread</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Write</ExcludedCommand>
+		<ExcludedCommand>WriteAndClose</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаКнопкаЗакрыть" id="21">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.КомандаЗакрытьФорму</CommandName>
+				<ExtendedTooltip name="ФормаКнопкаЗакрытьРасширеннаяПодсказка" id="22"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="НастройкаДоступа" id="1">
+			<DataPath>Запись.НастройкаДоступа</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<ContextMenu name="НастройкаДоступаКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НастройкаДоступаExtendedTooltip" id="13"/>
+		</InputField>
+		<InputField name="ВариантОбмена" id="3">
+			<DataPath>Запись.ВариантОбмена</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<ContextMenu name="ВариантОбменаКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="ВариантОбменаExtendedTooltip" id="14"/>
+		</InputField>
+		<InputField name="ВидОбмена" id="5">
+			<DataPath>Запись.ВидОбмена</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<ContextMenu name="ВидОбменаКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="ВидОбменаExtendedTooltip" id="15"/>
+		</InputField>
+		<InputField name="ВерсияФорматаОбмена" id="23">
+			<DataPath>Запись.ВерсияФорматаОбмена</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<ContextMenu name="ВерсияФорматаОбменаКонтекстноеМеню" id="24"/>
+			<ExtendedTooltip name="ВерсияФорматаОбменаРасширеннаяПодсказка" id="25"/>
+		</InputField>
+		<InputField name="НомерБилда" id="26">
+			<DataPath>Запись.НомерБилда</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<ContextMenu name="НомерБилдаКонтекстноеМеню" id="27"/>
+			<ExtendedTooltip name="НомерБилдаРасширеннаяПодсказка" id="28"/>
+		</InputField>
+		<InputField name="Дата" id="7">
+			<DataPath>Запись.Дата</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<ContextMenu name="ДатаКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ДатаExtendedTooltip" id="16"/>
+		</InputField>
+		<InputField name="УстановленныеМодули" id="29">
+			<DataPath>Запись.УстановленныеМодули</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<ContextMenu name="УстановленныеМодулиКонтекстноеМеню" id="30"/>
+			<ExtendedTooltip name="УстановленныеМодулиРасширеннаяПодсказка" id="31"/>
+		</InputField>
+		<CheckBoxField name="Статус" id="9">
+			<DataPath>Запись.Статус</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнено</v8:content>
+				</v8:item>
+			</Title>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="СтатусКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="СтатусExtendedTooltip" id="17"/>
+			<Events>
+				<Event name="OnChange">СтатусПриИзменении</Event>
+			</Events>
+		</CheckBoxField>
+		<InputField name="Ошибка" id="11">
+			<DataPath>Запись.Ошибка</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<ContextMenu name="ОшибкаКонтекстноеМеню" id="12"/>
+			<ExtendedTooltip name="ОшибкаExtendedTooltip" id="18"/>
+		</InputField>
+		<InputField name="ПодробныеСведенияОРезультатахОбмена" id="32">
+			<DataPath>Запись.СведенияОРезультатахОбмена</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<MultiLine>true</MultiLine>
+			<ContextMenu name="ПодробныеСведенияОРезультатахОбменаКонтекстноеМеню" id="33"/>
+			<ExtendedTooltip name="ПодробныеСведенияОРезультатахОбменаРасширеннаяПодсказка" id="34"/>
+		</InputField>
+		<UsualGroup name="ГруппаКнопок" id="37">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа кнопок</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа кнопок</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКнопокРасширеннаяПодсказка" id="38"/>
+			<ChildItems>
+				<Button name="КнопкаОткрытьФайлОбмена" id="19">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.КомандаОткрытьФайлОбмена</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Открыть файл обмена</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="КнопкаОткрытьФайлОбменаРасширеннаяПодсказка" id="20"/>
+				</Button>
+				<Button name="КнопкаСохранитьФайлОбмена" id="35">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.КомандаСохранитьФайлОбмена</CommandName>
+					<ExtendedTooltip name="КнопкаСохранитьФайлОбменаРасширеннаяПодсказка" id="36"/>
+				</Button>
+				<Button name="КнопкаПросмотретьСодержимоеФайлаОбмена" id="39">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.КомандаПросмотретьСодержимоеФайлаОбмена</CommandName>
+					<ExtendedTooltip name="КнопкаПросмотретьСодержимоеФайлаОбменаРасширеннаяПодсказка" id="40"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.УПЖКХ_ЖурналОбменаССайтом</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="РасширениеФайла" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расширение файла обмена</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>3</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаОткрытьФайлОбмена" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть файл обмена</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть файл обмена</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаОткрытьФайлОбмена</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаЗакрытьФорму" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрыть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда закрыть форму</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаЗакрытьФорму</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаСохранитьФайлОбмена" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить файл обмена</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить файл обмена</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаСохранитьФайлОбмена</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаПросмотретьСодержимоеФайлаОбмена" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Просмотреть содержимое файла обмена</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда просмотреть содержимое файла обмена</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаПросмотретьСодержимоеФайлаОбмена</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Subsystem uuid="c3a3eda6-b550-4cb1-a1dc-8ce3b63907d4">
+		<Properties>
+			<Name>УПЖКХ_АДС</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Аварийно-диспетчерская служба</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<Explanation/>
+			<Picture>
+				<xr:Ref>CommonPicture.УПЖКХ_ПодсистемаАДС</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.КВП_ЗаявкаНаВыполнениеРабот</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.КВП_ОтчетПоЗаявкам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.КВП_ОтчетПоРаботеСотрудников</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.КВП_ОтчетПоРасходуМатериалов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DocumentJournal.КВП_ЗаявкиНаВыполнениеРабот</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.КВП_ВидыРабот</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.УПЖКХ_СписокЗаконовЖКХ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.УПЖКХ_КатегорииРабот</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.УПЖКХ_ДополнительныеОбработкиАДС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.УПЖКХ_ДополнительныеОтчетыАДС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.КВП_ЗагрузкаЗаявокАДСлужбы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.УПЖКХ_ПризнакиНеисправностей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.УПЖКХ_ВидыМатериалов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.УПЖКХ_МастерОбеспеченияЗаявокАДС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.КВП_ПланФактныйАнализПоРасходуМатериалов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ОТР_ЧастоЗадаваемыеВопросы</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects>
+			<Subsystem>УПЖКХ_УчетОборудования</Subsystem>
+		</ChildObjects>
+	</Subsystem>
+</MetaDataObject>

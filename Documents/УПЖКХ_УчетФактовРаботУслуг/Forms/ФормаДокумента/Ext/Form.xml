@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаДатаНомер" id="47">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа дата номер</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа дата номер</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаДатаНомерРасширеннаяПодсказка" id="48"/>
+			<ChildItems>
+				<InputField name="Номер" id="1">
+					<DataPath>Объект.Number</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<InputField name="Дата" id="4">
+					<DataPath>Объект.Date</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПереченьОрганизация" id="49">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа перечень организация</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа перечень организация</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПереченьОрганизацияРасширеннаяПодсказка" id="50"/>
+			<ChildItems>
+				<InputField name="ПереченьРаботУслуг" id="7">
+					<DataPath>Объект.ПереченьРаботУслуг</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Перечень работ и услуг</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПереченьРаботУслугКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="ПереченьРаботУслугРасширеннаяПодсказка" id="9"/>
+					<Events>
+						<Event name="OnChange">ПереченьРаботУслугПриИзменении</Event>
+					</Events>
+				</InputField>
+				<LabelField name="Организация" id="51">
+					<DataPath>Объект.Организация</DataPath>
+					<Hiperlink>true</Hiperlink>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="52"/>
+					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="53"/>
+				</LabelField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="МесяцНачисления" id="10">
+			<DataPath>Объект.МесяцНачисления</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период</v8:content>
+				</v8:item>
+			</Title>
+			<EditMode>EnterOnInput</EditMode>
+			<Width>12</Width>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<HorizontalStretch>false</HorizontalStretch>
+			<ListChoiceMode>true</ListChoiceMode>
+			<ContextMenu name="МесяцНачисленияКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="МесяцНачисленияРасширеннаяПодсказка" id="12"/>
+			<Events>
+				<Event name="OnChange">МесяцНачисленияПриИзменении</Event>
+			</Events>
+		</InputField>
+		<Table name="РаботыУслуги" id="13">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Объект.РаботыУслуги</DataPath>
+			<CommandSet>
+				<ExcludedCommand>Add</ExcludedCommand>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>Delete</ExcludedCommand>
+			</CommandSet>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="РаботыУслугиКонтекстноеМеню" id="14"/>
+			<AutoCommandBar name="РаботыУслугиКоманднаяПанель" id="15">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="РаботыУслугиРасширеннаяПодсказка" id="16"/>
+			<SearchStringAddition name="РаботыУслугиСтрокаПоиска" id="17">
+				<AdditionSource>
+					<Item>РаботыУслуги</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="РаботыУслугиСтрокаПоискаКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="РаботыУслугиСтрокаПоискаРасширеннаяПодсказка" id="19"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="РаботыУслугиСостояниеПросмотра" id="20">
+				<AdditionSource>
+					<Item>РаботыУслуги</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="РаботыУслугиСостояниеПросмотраКонтекстноеМеню" id="21"/>
+				<ExtendedTooltip name="РаботыУслугиСостояниеПросмотраРасширеннаяПодсказка" id="22"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="РаботыУслугиУправлениеПоиском" id="23">
+				<AdditionSource>
+					<Item>РаботыУслуги</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="РаботыУслугиУправлениеПоискомКонтекстноеМеню" id="24"/>
+				<ExtendedTooltip name="РаботыУслугиУправлениеПоискомРасширеннаяПодсказка" id="25"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="BeforeAddRow">РаботыУслугиПередНачаломДобавления</Event>
+				<Event name="BeforeDeleteRow">РаботыУслугиПередУдалением</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="РаботыУслугиНомерСтроки" id="26">
+					<DataPath>Объект.РаботыУслуги.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РаботыУслугиНомерСтрокиКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="РаботыУслугиНомерСтрокиРасширеннаяПодсказка" id="28"/>
+				</LabelField>
+				<InputField name="РаботыУслугиРаботаУслуга" id="29">
+					<DataPath>Объект.РаботыУслуги.РаботаУслуга</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Работа/услуга</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РаботыУслугиРаботаУслугаКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="РаботыУслугиРаботаУслугаРасширеннаяПодсказка" id="31"/>
+				</InputField>
+				<InputField name="РаботыУслугиПлановоеКоличество" id="38">
+					<DataPath>Объект.РаботыУслуги.ПлановоеКоличество</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РаботыУслугиПлановоеКоличествоКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="РаботыУслугиПлановоеКоличествоРасширеннаяПодсказка" id="40"/>
+				</InputField>
+				<ColumnGroup name="РаботыУслугиГруппаФакт" id="54">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Фактические показатели</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Фактические показатели</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<ShowInHeader>true</ShowInHeader>
+					<HeaderHorizontalAlign>Center</HeaderHorizontalAlign>
+					<ExtendedTooltip name="РаботыУслугиГруппаФактРасширеннаяПодсказка" id="55"/>
+					<ChildItems>
+						<InputField name="РаботыУслугиЦена" id="32">
+							<DataPath>Объект.РаботыУслуги.Цена</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="РаботыУслугиЦенаКонтекстноеМеню" id="33"/>
+							<ExtendedTooltip name="РаботыУслугиЦенаРасширеннаяПодсказка" id="34"/>
+							<Events>
+								<Event name="OnChange">РаботыУслугиЦенаПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="РаботыУслугиОбъем" id="35">
+							<DataPath>Объект.РаботыУслуги.Объем</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="РаботыУслугиОбъемКонтекстноеМеню" id="36"/>
+							<ExtendedTooltip name="РаботыУслугиОбъемРасширеннаяПодсказка" id="37"/>
+							<Events>
+								<Event name="OnChange">РаботыУслугиЦенаПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="РаботыУслугиФактическоеКоличество" id="41">
+							<DataPath>Объект.РаботыУслуги.ФактическоеКоличество</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Количество</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="РаботыУслугиФактическоеКоличествоКонтекстноеМеню" id="42"/>
+							<ExtendedTooltip name="РаботыУслугиФактическоеКоличествоРасширеннаяПодсказка" id="43"/>
+						</InputField>
+						<InputField name="РаботыУслугиСтоимость" id="44">
+							<DataPath>Объект.РаботыУслуги.Стоимость</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="РаботыУслугиСтоимостьКонтекстноеМеню" id="45"/>
+							<ExtendedTooltip name="РаботыУслугиСтоимостьРасширеннаяПодсказка" id="46"/>
+							<Events>
+								<Event name="OnChange">РаботыУслугиЦенаПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.УПЖКХ_УчетФактовРаботУслуг</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>РаботыУслугиЦена</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>РаботыУслугиОбъем</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>РаботыУслугиФактическоеКоличество</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.РаботыУслуги.Стоимость</dcsset:left>
+						<dcsset:comparisonType>Greater</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ОтметкаНезаполненного</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>РаботыУслугиСтоимость</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>OrGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.РаботыУслуги.Цена</dcsset:left>
+							<dcsset:comparisonType>Greater</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.РаботыУслуги.Объем</dcsset:left>
+							<dcsset:comparisonType>Greater</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ОтметкаНезаполненного</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+</Form>

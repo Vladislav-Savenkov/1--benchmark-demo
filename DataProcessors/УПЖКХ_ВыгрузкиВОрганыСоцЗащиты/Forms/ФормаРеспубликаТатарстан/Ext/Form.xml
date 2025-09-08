@@ -1,0 +1,1078 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Республика Татарстан: Выгрузка в ОСЗН</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаПанельКоманд" id="358">
+			<Height>1</Height>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПанельКомандРасширеннаяПодсказка" id="359"/>
+			<ChildItems>
+				<Button name="Настройка" id="19">
+					<Type>UsualButton</Type>
+					<DefaultItem>true</DefaultItem>
+					<CommandName>Form.Command.КомандаНастройка</CommandName>
+					<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройка</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="НастройкаРасширеннаяПодсказка" id="30"/>
+				</Button>
+				<Button name="СправочнаяИнформация" id="360">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<DefaultItem>true</DefaultItem>
+					<Height>1</Height>
+					<CommandName>Form.Command.КомандаСправочнаяИнформация</CommandName>
+					<BackColor>#FFFF99</BackColor>
+					<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+					<ExtendedTooltip name="СправочнаяИнформацияРасширеннаяПодсказка" id="361"/>
+				</Button>
+				<CommandBar name="ГруппаЕще" id="362">
+					<ExtendedTooltip name="ГруппаЕщеРасширеннаяПодсказка" id="363"/>
+					<ChildItems>
+						<Button name="ИзменитьФорму" id="364">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+							<ExtendedTooltip name="ИзменитьФормуРасширеннаяПодсказка" id="365"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаШапка" id="75">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="76"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаЛевая" id="44">
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ChildItemsWidth>Equal</ChildItemsWidth>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаЛеваяРасширеннаяПодсказка" id="45"/>
+					<ChildItems>
+						<InputField name="ПериодСтрокой" id="339">
+							<DataPath>ПериодСтрокой</DataPath>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сведения об инвалидности действуют с</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ChoiceButton>true</ChoiceButton>
+							<SpinButton>true</SpinButton>
+							<ChoiceButtonPicture>
+								<xr:Ref>StdPicture.InputFieldCalendar</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</ChoiceButtonPicture>
+							<ContextMenu name="ПериодСтрокойКонтекстноеМеню" id="340"/>
+							<ExtendedTooltip name="ПериодСтрокойExtendedTooltip" id="341"/>
+							<Events>
+								<Event name="OnChange">ПериодСтрокойПриИзменении</Event>
+								<Event name="AutoComplete">ПериодСтрокойАвтоПодбор</Event>
+								<Event name="StartChoice">ПериодСтрокойНачалоВыбора</Event>
+								<Event name="Tuning">ПериодСтрокойРегулирование</Event>
+								<Event name="TextEditEnd">ПериодСтрокойОкончаниеВводаТекста</Event>
+							</Events>
+						</InputField>
+						<InputField name="Организация" id="1">
+							<DataPath>Объект.Организация</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Организация</v8:content>
+								</v8:item>
+							</Title>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<AutoChoiceIncomplete>true</AutoChoiceIncomplete>
+							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="33"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПравая" id="46">
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПраваяРасширеннаяПодсказка" id="47"/>
+					<ChildItems>
+						<InputField name="ПрефиксЛС" id="336">
+							<DataPath>ПрефиксЛС</DataPath>
+							<ContextMenu name="ПрефиксЛСКонтекстноеМеню" id="337"/>
+							<ExtendedTooltip name="ПрефиксЛСРасширеннаяПодсказка" id="338"/>
+						</InputField>
+						<InputField name="ГруппаЛицевыхСчетов" id="27">
+							<DataPath>ГруппаЛицевыхСчетов</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа лицевых счетов</v8:content>
+								</v8:item>
+							</Title>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<ChoiceButton>true</ChoiceButton>
+							<OpenButton>true</OpenButton>
+							<ChoiceFoldersAndItems>Folders</ChoiceFoldersAndItems>
+							<ContextMenu name="ГруппаЛицевыхСчетовКонтекстноеМеню" id="28"/>
+							<ExtendedTooltip name="ГруппаЛицевыхСчетовРасширеннаяПодсказка" id="35"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="ГруппаСтраницы" id="40">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="41"/>
+			<ChildItems>
+				<Page name="ГруппаВыгрузка" id="51">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выгрузка данных в ОСЗН
+</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаВыгрузкаРасширеннаяПодсказка" id="52"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаФайлОтветПоставщику" id="150">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа файл ответ поставщику</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаФайлОтветПоставщикуРасширеннаяПодсказка" id="151"/>
+							<ChildItems>
+								<InputField name="ФайлОтветПоставщику" id="77">
+									<DataPath>ФайлОтветПоставщику</DataPath>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Файл "Ответ поставщику" (справочник ПСС)</v8:content>
+										</v8:item>
+									</ToolTip>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<ChoiceButton>true</ChoiceButton>
+									<OpenButton>true</OpenButton>
+									<TextEdit>false</TextEdit>
+									<ContextMenu name="ФайлОтветПоставщикуКонтекстноеМеню" id="78"/>
+									<ExtendedTooltip name="ФайлОтветПоставщикуРасширеннаяПодсказка" id="79"/>
+									<Events>
+										<Event name="StartChoice">ФайлОтветПоставщикуНачалоВыбора</Event>
+										<Event name="Opening">ФайлОтветПоставщикуОткрытие</Event>
+									</Events>
+								</InputField>
+								<Button name="КомандаЗагрузитьОтветПоставщику" id="152">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.КомандаЗагрузитьОтветПоставщику</CommandName>
+									<ExtendedTooltip name="КомандаЗагрузитьОтветПоставщикуРасширеннаяПодсказка" id="153"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<Table name="ОтветПоставщику" id="154">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.РеспубликаТатарстан_ОтветПоставщику</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ОтветПоставщикуКонтекстноеМеню" id="155"/>
+							<AutoCommandBar name="ОтветПоставщикуКоманднаяПанель" id="156">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ОтветПоставщикуРасширеннаяПодсказка" id="157"/>
+							<SearchStringAddition name="ОтветПоставщикуСтрокаПоиска" id="158">
+								<AdditionSource>
+									<Item>ОтветПоставщику</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ОтветПоставщикуСтрокаПоискаКонтекстноеМеню" id="159"/>
+								<ExtendedTooltip name="ОтветПоставщикуСтрокаПоискаРасширеннаяПодсказка" id="160"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ОтветПоставщикуСостояниеПросмотра" id="161">
+								<AdditionSource>
+									<Item>ОтветПоставщику</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ОтветПоставщикуСостояниеПросмотраКонтекстноеМеню" id="162"/>
+								<ExtendedTooltip name="ОтветПоставщикуСостояниеПросмотраРасширеннаяПодсказка" id="163"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ОтветПоставщикуУправлениеПоиском" id="164">
+								<AdditionSource>
+									<Item>ОтветПоставщику</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ОтветПоставщикуУправлениеПоискомКонтекстноеМеню" id="165"/>
+								<ExtendedTooltip name="ОтветПоставщикуУправлениеПоискомРасширеннаяПодсказка" id="166"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ОтветПоставщикуНомерСтроки" id="167">
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОтветПоставщикуНомерСтрокиКонтекстноеМеню" id="168"/>
+									<ExtendedTooltip name="ОтветПоставщикуНомерСтрокиРасширеннаяПодсказка" id="169"/>
+								</LabelField>
+								<InputField name="ОтветПоставщикуЛицевойСчет" id="170">
+									<DataPath>Объект.РеспубликаТатарстан_ОтветПоставщику.ЛицевойСчет</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОтветПоставщикуЛицевойСчетКонтекстноеМеню" id="171"/>
+									<ExtendedTooltip name="ОтветПоставщикуЛицевойСчетРасширеннаяПодсказка" id="172"/>
+								</InputField>
+								<InputField name="ОтветПоставщикуПСС" id="173">
+									<DataPath>Объект.РеспубликаТатарстан_ОтветПоставщику.ПСС</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОтветПоставщикуПССКонтекстноеМеню" id="174"/>
+									<ExtendedTooltip name="ОтветПоставщикуПССРасширеннаяПодсказка" id="175"/>
+								</InputField>
+								<InputField name="ОтветПоставщикуЛицевойСчетНаименование" id="176">
+									<DataPath>Объект.РеспубликаТатарстан_ОтветПоставщику.ЛицевойСчетНаименование</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОтветПоставщикуЛицевойСчетНаименованиеКонтекстноеМеню" id="177"/>
+									<ExtendedTooltip name="ОтветПоставщикуЛицевойСчетНаименованиеРасширеннаяПодсказка" id="178"/>
+								</InputField>
+								<InputField name="ОтветПоставщикуДатаНачала" id="179">
+									<DataPath>Объект.РеспубликаТатарстан_ОтветПоставщику.ДатаНачала</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОтветПоставщикуДатаНачалаКонтекстноеМеню" id="180"/>
+									<ExtendedTooltip name="ОтветПоставщикуДатаНачалаРасширеннаяПодсказка" id="181"/>
+								</InputField>
+								<InputField name="ОтветПоставщикуДатаОкончания" id="182">
+									<DataPath>Объект.РеспубликаТатарстан_ОтветПоставщику.ДатаОкончания</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОтветПоставщикуДатаОкончанияКонтекстноеМеню" id="183"/>
+									<ExtendedTooltip name="ОтветПоставщикуДатаОкончанияРасширеннаяПодсказка" id="184"/>
+								</InputField>
+								<InputField name="ОтветПоставщикуФамилия" id="185">
+									<DataPath>Объект.РеспубликаТатарстан_ОтветПоставщику.Фамилия</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОтветПоставщикуФамилияКонтекстноеМеню" id="186"/>
+									<ExtendedTooltip name="ОтветПоставщикуФамилияРасширеннаяПодсказка" id="187"/>
+								</InputField>
+								<InputField name="ОтветПоставщикуИмя" id="188">
+									<DataPath>Объект.РеспубликаТатарстан_ОтветПоставщику.Имя</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОтветПоставщикуИмяКонтекстноеМеню" id="189"/>
+									<ExtendedTooltip name="ОтветПоставщикуИмяРасширеннаяПодсказка" id="190"/>
+								</InputField>
+								<InputField name="ОтветПоставщикуОтчество" id="191">
+									<DataPath>Объект.РеспубликаТатарстан_ОтветПоставщику.Отчество</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОтветПоставщикуОтчествоКонтекстноеМеню" id="192"/>
+									<ExtendedTooltip name="ОтветПоставщикуОтчествоРасширеннаяПодсказка" id="193"/>
+								</InputField>
+								<InputField name="ОтветПоставщикуДатаРождения" id="194">
+									<DataPath>Объект.РеспубликаТатарстан_ОтветПоставщику.ДатаРождения</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОтветПоставщикуДатаРожденияКонтекстноеМеню" id="195"/>
+									<ExtendedTooltip name="ОтветПоставщикуДатаРожденияРасширеннаяПодсказка" id="196"/>
+								</InputField>
+								<InputField name="ОтветПоставщикуГородРайон" id="197">
+									<DataPath>Объект.РеспубликаТатарстан_ОтветПоставщику.ГородРайон</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОтветПоставщикуГородРайонКонтекстноеМеню" id="198"/>
+									<ExtendedTooltip name="ОтветПоставщикуГородРайонРасширеннаяПодсказка" id="199"/>
+								</InputField>
+								<InputField name="ОтветПоставщикуСелоДеревня" id="200">
+									<DataPath>Объект.РеспубликаТатарстан_ОтветПоставщику.СелоДеревня</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОтветПоставщикуСелоДеревняКонтекстноеМеню" id="201"/>
+									<ExtendedTooltip name="ОтветПоставщикуСелоДеревняРасширеннаяПодсказка" id="202"/>
+								</InputField>
+								<InputField name="ОтветПоставщикуУлица" id="203">
+									<DataPath>Объект.РеспубликаТатарстан_ОтветПоставщику.Улица</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОтветПоставщикуУлицаКонтекстноеМеню" id="204"/>
+									<ExtendedTooltip name="ОтветПоставщикуУлицаРасширеннаяПодсказка" id="205"/>
+								</InputField>
+								<InputField name="ОтветПоставщикуДом" id="206">
+									<DataPath>Объект.РеспубликаТатарстан_ОтветПоставщику.Дом</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОтветПоставщикуДомКонтекстноеМеню" id="207"/>
+									<ExtendedTooltip name="ОтветПоставщикуДомРасширеннаяПодсказка" id="208"/>
+								</InputField>
+								<InputField name="ОтветПоставщикуКорпус" id="209">
+									<DataPath>Объект.РеспубликаТатарстан_ОтветПоставщику.Корпус</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОтветПоставщикуКорпусКонтекстноеМеню" id="210"/>
+									<ExtendedTooltip name="ОтветПоставщикуКорпусРасширеннаяПодсказка" id="211"/>
+								</InputField>
+								<InputField name="ОтветПоставщикуКвартира" id="212">
+									<DataPath>Объект.РеспубликаТатарстан_ОтветПоставщику.Квартира</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОтветПоставщикуКвартираКонтекстноеМеню" id="213"/>
+									<ExtendedTooltip name="ОтветПоставщикуКвартираРасширеннаяПодсказка" id="214"/>
+								</InputField>
+								<InputField name="ОтветПоставщикуКомната" id="215">
+									<DataPath>Объект.РеспубликаТатарстан_ОтветПоставщику.Комната</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОтветПоставщикуКомнатаКонтекстноеМеню" id="216"/>
+									<ExtendedTooltip name="ОтветПоставщикуКомнатаРасширеннаяПодсказка" id="217"/>
+								</InputField>
+								<InputField name="ОтветПоставщикуКодОтвета" id="218">
+									<DataPath>Объект.РеспубликаТатарстан_ОтветПоставщику.КодОтвета</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОтветПоставщикуКодОтветаКонтекстноеМеню" id="219"/>
+									<ExtendedTooltip name="ОтветПоставщикуКодОтветаРасширеннаяПодсказка" id="220"/>
+								</InputField>
+								<InputField name="ОтветПоставщикуТекстОтвета" id="221">
+									<DataPath>Объект.РеспубликаТатарстан_ОтветПоставщику.ТекстОтвета</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОтветПоставщикуТекстОтветаКонтекстноеМеню" id="222"/>
+									<ExtendedTooltip name="ОтветПоставщикуТекстОтветаРасширеннаяПодсказка" id="223"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<UsualGroup name="ГруппаФайлВыгрузки" id="342">
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаФайлВыгрузкиРасширеннаяПодсказка" id="343"/>
+							<ChildItems>
+								<InputField name="КаталогВыгрузки" id="7">
+									<DataPath>Объект.ИмяКаталогаВыгрузки</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Каталог выгрузки</v8:content>
+										</v8:item>
+									</Title>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<ChoiceButton>true</ChoiceButton>
+									<ClearButton>false</ClearButton>
+									<SpinButton>false</SpinButton>
+									<OpenButton>true</OpenButton>
+									<AutoMarkIncomplete>true</AutoMarkIncomplete>
+									<ContextMenu name="КаталогВыгрузкиКонтекстноеМеню" id="8"/>
+									<ExtendedTooltip name="КаталогВыгрузкиРасширеннаяПодсказка" id="36"/>
+									<Events>
+										<Event name="StartChoice">КаталогВыгрузкиНачалоВыбора</Event>
+										<Event name="Opening">КаталогВыгрузкиОткрытие</Event>
+									</Events>
+								</InputField>
+								<InputField name="ИмяФайлаВыгрузки" id="10">
+									<DataPath>Объект.ИмяФайлаВыгрузки</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Имя файла</v8:content>
+										</v8:item>
+									</Title>
+									<Width>1</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<ChoiceButton>false</ChoiceButton>
+									<ClearButton>false</ClearButton>
+									<SpinButton>false</SpinButton>
+									<OpenButton>false</OpenButton>
+									<ContextMenu name="ИмяФайлаВыгрузкиКонтекстноеМеню" id="11"/>
+									<ExtendedTooltip name="ИмяФайлаВыгрузкиРасширеннаяПодсказка" id="37"/>
+								</InputField>
+								<Button name="Выгрузить" id="25">
+									<Type>UsualButton</Type>
+									<DefaultButton>true</DefaultButton>
+									<CommandName>Form.Command.КомандаВыгрузить</CommandName>
+									<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+									<ExtendedTooltip name="ВыгрузитьРасширеннаяПодсказка" id="29"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаЗагрузка" id="224">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Загрузка начисленных сумм льгот в ОСЗН
+</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Начисленные суммы субсидий и льгот по жильцам</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаЗагрузкаРасширеннаяПодсказка" id="225"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаФайлСубсидииЛьготы" id="226">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа файл субсидии льготы</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаФайлСубсидииЛьготыРасширеннаяПодсказка" id="227"/>
+							<ChildItems>
+								<InputField name="ФайлСубсидииЛьготы" id="228">
+									<DataPath>ФайлСубсидииЛьготы</DataPath>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Файл "Начислено сумм по жильцам"</v8:content>
+										</v8:item>
+									</ToolTip>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<ChoiceButton>true</ChoiceButton>
+									<OpenButton>true</OpenButton>
+									<ContextMenu name="ФайлСубсидииЛьготыКонтекстноеМеню" id="229"/>
+									<ExtendedTooltip name="ФайлСубсидииЛьготыРасширеннаяПодсказка" id="230"/>
+									<Events>
+										<Event name="StartChoice">ФайлСубсидииЛьготыНачалоВыбора</Event>
+										<Event name="Opening">ФайлСубсидииЛьготыОткрытие</Event>
+									</Events>
+								</InputField>
+								<Button name="КомандаЗагрузитьСубсидииЛьготы" id="231">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.КомандаЗагрузитьСубсидииЛьготы</CommandName>
+									<ExtendedTooltip name="КомандаЗагрузитьСубсидииЛьготыРасширеннаяПодсказка" id="232"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<Table name="СубсидииЛьготы" id="233">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.РеспубликаТатарстан_СубсидииЛьготы</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="СубсидииЛьготыКонтекстноеМеню" id="234"/>
+							<AutoCommandBar name="СубсидииЛьготыКоманднаяПанель" id="235">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СубсидииЛьготыРасширеннаяПодсказка" id="236"/>
+							<SearchStringAddition name="СубсидииЛьготыСтрокаПоиска" id="237">
+								<AdditionSource>
+									<Item>СубсидииЛьготы</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СубсидииЛьготыСтрокаПоискаКонтекстноеМеню" id="240"/>
+								<ExtendedTooltip name="СубсидииЛьготыСтрокаПоискаРасширеннаяПодсказка" id="241"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СубсидииЛьготыСостояниеПросмотра" id="242">
+								<AdditionSource>
+									<Item>СубсидииЛьготы</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СубсидииЛьготыСостояниеПросмотраКонтекстноеМеню" id="245"/>
+								<ExtendedTooltip name="СубсидииЛьготыСостояниеПросмотраРасширеннаяПодсказка" id="246"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СубсидииЛьготыУправлениеПоиском" id="247">
+								<AdditionSource>
+									<Item>СубсидииЛьготы</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СубсидииЛьготыУправлениеПоискомКонтекстноеМеню" id="250"/>
+								<ExtendedTooltip name="СубсидииЛьготыУправлениеПоискомРасширеннаяПодсказка" id="251"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="СубсидииЛьготыНомерСтроки" id="252">
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СубсидииЛьготыНомерСтрокиКонтекстноеМеню" id="253"/>
+									<ExtendedTooltip name="СубсидииЛьготыНомерСтрокиРасширеннаяПодсказка" id="254"/>
+								</LabelField>
+								<InputField name="СубсидииЛьготыЛицевойСчет" id="255">
+									<DataPath>Объект.РеспубликаТатарстан_СубсидииЛьготы.ЛицевойСчет</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СубсидииЛьготыЛицевойСчетКонтекстноеМеню" id="256"/>
+									<ExtendedTooltip name="СубсидииЛьготыЛицевойСчетРасширеннаяПодсказка" id="257"/>
+								</InputField>
+								<InputField name="СубсидииЛьготыЛьготник" id="258">
+									<DataPath>Объект.РеспубликаТатарстан_СубсидииЛьготы.Льготник</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СубсидииЛьготыЛьготникКонтекстноеМеню" id="259"/>
+									<ExtendedTooltip name="СубсидииЛьготыЛьготникРасширеннаяПодсказка" id="260"/>
+								</InputField>
+								<InputField name="СубсидииЛьготыЛьготнаяКатегория" id="355">
+									<DataPath>Объект.РеспубликаТатарстан_СубсидииЛьготы.ЛьготнаяКатегория</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СубсидииЛьготыЛьготнаяКатегорияКонтекстноеМеню" id="356"/>
+									<ExtendedTooltip name="СубсидииЛьготыЛьготнаяКатегорияРасширеннаяПодсказка" id="357"/>
+								</InputField>
+								<InputField name="СубсидииЛьготыПСС" id="261">
+									<DataPath>Объект.РеспубликаТатарстан_СубсидииЛьготы.ПСС</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СубсидииЛьготыПССКонтекстноеМеню" id="262"/>
+									<ExtendedTooltip name="СубсидииЛьготыПССРасширеннаяПодсказка" id="263"/>
+								</InputField>
+								<InputField name="СубсидииЛьготыЛицевойСчетНаименование" id="264">
+									<DataPath>Объект.РеспубликаТатарстан_СубсидииЛьготы.ЛицевойСчетНаименование</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СубсидииЛьготыЛицевойСчетНаименованиеКонтекстноеМеню" id="265"/>
+									<ExtendedTooltip name="СубсидииЛьготыЛицевойСчетНаименованиеРасширеннаяПодсказка" id="266"/>
+								</InputField>
+								<InputField name="СубсидииЛьготыФамилия" id="267">
+									<DataPath>Объект.РеспубликаТатарстан_СубсидииЛьготы.Фамилия</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СубсидииЛьготыФамилияКонтекстноеМеню" id="268"/>
+									<ExtendedTooltip name="СубсидииЛьготыФамилияРасширеннаяПодсказка" id="269"/>
+								</InputField>
+								<InputField name="СубсидииЛьготыИмя" id="270">
+									<DataPath>Объект.РеспубликаТатарстан_СубсидииЛьготы.Имя</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СубсидииЛьготыИмяКонтекстноеМеню" id="271"/>
+									<ExtendedTooltip name="СубсидииЛьготыИмяРасширеннаяПодсказка" id="272"/>
+								</InputField>
+								<InputField name="СубсидииЛьготыОтчество" id="273">
+									<DataPath>Объект.РеспубликаТатарстан_СубсидииЛьготы.Отчество</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СубсидииЛьготыОтчествоКонтекстноеМеню" id="274"/>
+									<ExtendedTooltip name="СубсидииЛьготыОтчествоРасширеннаяПодсказка" id="275"/>
+								</InputField>
+								<InputField name="СубсидииЛьготыДатаРождения" id="276">
+									<DataPath>Объект.РеспубликаТатарстан_СубсидииЛьготы.ДатаРождения</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СубсидииЛьготыДатаРожденияКонтекстноеМеню" id="277"/>
+									<ExtendedTooltip name="СубсидииЛьготыДатаРожденияРасширеннаяПодсказка" id="278"/>
+								</InputField>
+								<InputField name="СубсидииЛьготыКодСтатьи" id="279">
+									<DataPath>Объект.РеспубликаТатарстан_СубсидииЛьготы.КодСтатьи</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СубсидииЛьготыКодСтатьиКонтекстноеМеню" id="280"/>
+									<ExtendedTooltip name="СубсидииЛьготыКодСтатьиРасширеннаяПодсказка" id="281"/>
+								</InputField>
+								<InputField name="СубсидииЛьготыКодУслуги" id="282">
+									<DataPath>Объект.РеспубликаТатарстан_СубсидииЛьготы.КодУслуги</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СубсидииЛьготыКодУслугиКонтекстноеМеню" id="283"/>
+									<ExtendedTooltip name="СубсидииЛьготыКодУслугиРасширеннаяПодсказка" id="284"/>
+								</InputField>
+								<InputField name="СубсидииЛьготыНаименованиеБанка" id="285">
+									<DataPath>Объект.РеспубликаТатарстан_СубсидииЛьготы.НаименованиеБанка</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СубсидииЛьготыНаименованиеБанкаКонтекстноеМеню" id="286"/>
+									<ExtendedTooltip name="СубсидииЛьготыНаименованиеБанкаРасширеннаяПодсказка" id="287"/>
+								</InputField>
+								<InputField name="СубсидииЛьготыДатаНачала" id="288">
+									<DataPath>Объект.РеспубликаТатарстан_СубсидииЛьготы.ДатаНачала</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СубсидииЛьготыДатаНачалаКонтекстноеМеню" id="289"/>
+									<ExtendedTooltip name="СубсидииЛьготыДатаНачалаРасширеннаяПодсказка" id="290"/>
+								</InputField>
+								<InputField name="СубсидииЛьготыСуммаВходящегоСальдо" id="291">
+									<DataPath>Объект.РеспубликаТатарстан_СубсидииЛьготы.СуммаВходящегоСальдо</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СубсидииЛьготыСуммаВходящегоСальдоКонтекстноеМеню" id="292"/>
+									<ExtendedTooltip name="СубсидииЛьготыСуммаВходящегоСальдоРасширеннаяПодсказка" id="293"/>
+								</InputField>
+								<InputField name="СубсидииЛьготыРЕЗЕРВ_1" id="294">
+									<DataPath>Объект.РеспубликаТатарстан_СубсидииЛьготы.РЕЗЕРВ_1</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СубсидииЛьготыРЕЗЕРВ_1КонтекстноеМеню" id="295"/>
+									<ExtendedTooltip name="СубсидииЛьготыРЕЗЕРВ_1РасширеннаяПодсказка" id="296"/>
+								</InputField>
+								<InputField name="СубсидииЛьготыНачисленнаяСумма" id="297">
+									<DataPath>Объект.РеспубликаТатарстан_СубсидииЛьготы.НачисленнаяСумма</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СубсидииЛьготыНачисленнаяСуммаКонтекстноеМеню" id="298"/>
+									<ExtendedTooltip name="СубсидииЛьготыНачисленнаяСуммаРасширеннаяПодсказка" id="299"/>
+								</InputField>
+								<InputField name="СубсидииЛьготыНачисленнаяПерерасчетомСумма" id="300">
+									<DataPath>Объект.РеспубликаТатарстан_СубсидииЛьготы.НачисленнаяПерерасчетомСумма</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СубсидииЛьготыНачисленнаяПерерасчетомСуммаКонтекстноеМеню" id="301"/>
+									<ExtendedTooltip name="СубсидииЛьготыНачисленнаяПерерасчетомСуммаРасширеннаяПодсказка" id="302"/>
+								</InputField>
+								<InputField name="СубсидииЛьготыРЕЗЕРВ_2" id="303">
+									<DataPath>Объект.РеспубликаТатарстан_СубсидииЛьготы.РЕЗЕРВ_2</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СубсидииЛьготыРЕЗЕРВ_2КонтекстноеМеню" id="304"/>
+									<ExtendedTooltip name="СубсидииЛьготыРЕЗЕРВ_2РасширеннаяПодсказка" id="305"/>
+								</InputField>
+								<InputField name="СубсидииЛьготыСуммаАвансовогоПлатежа" id="306">
+									<DataPath>Объект.РеспубликаТатарстан_СубсидииЛьготы.СуммаАвансовогоПлатежа</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СубсидииЛьготыСуммаАвансовогоПлатежаКонтекстноеМеню" id="307"/>
+									<ExtendedTooltip name="СубсидииЛьготыСуммаАвансовогоПлатежаРасширеннаяПодсказка" id="308"/>
+								</InputField>
+								<InputField name="СубсидииЛьготыСуммаКВыплате" id="309">
+									<DataPath>Объект.РеспубликаТатарстан_СубсидииЛьготы.СуммаКВыплате</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СубсидииЛьготыСуммаКВыплатеКонтекстноеМеню" id="310"/>
+									<ExtendedTooltip name="СубсидииЛьготыСуммаКВыплатеРасширеннаяПодсказка" id="311"/>
+								</InputField>
+								<InputField name="СубсидииЛьготыСуммаСубсидий_СМО_РФ" id="312">
+									<DataPath>Объект.РеспубликаТатарстан_СубсидииЛьготы.СуммаСубсидий_СМО_РФ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СубсидииЛьготыСуммаСубсидий_СМО_РФКонтекстноеМеню" id="313"/>
+									<ExtendedTooltip name="СубсидииЛьготыСуммаСубсидий_СМО_РФРасширеннаяПодсказка" id="314"/>
+								</InputField>
+								<InputField name="СубсидииЛьготыСуммаСубсидий_СМО_РТ" id="315">
+									<DataPath>Объект.РеспубликаТатарстан_СубсидииЛьготы.СуммаСубсидий_СМО_РТ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СубсидииЛьготыСуммаСубсидий_СМО_РТКонтекстноеМеню" id="316"/>
+									<ExtendedTooltip name="СубсидииЛьготыСуммаСубсидий_СМО_РТРасширеннаяПодсказка" id="317"/>
+								</InputField>
+								<InputField name="СубсидииЛьготыСуммаСубсидий_НаОтопление" id="318">
+									<DataPath>Объект.РеспубликаТатарстан_СубсидииЛьготы.СуммаСубсидий_НаОтопление</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СубсидииЛьготыСуммаСубсидий_НаОтоплениеКонтекстноеМеню" id="319"/>
+									<ExtendedTooltip name="СубсидииЛьготыСуммаСубсидий_НаОтоплениеРасширеннаяПодсказка" id="320"/>
+								</InputField>
+								<InputField name="СубсидииЛьготыСуммаПерерасчетовСубсидий_СМО_РФ" id="321">
+									<DataPath>Объект.РеспубликаТатарстан_СубсидииЛьготы.СуммаПерерасчетовСубсидий_СМО_РФ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СубсидииЛьготыСуммаПерерасчетовСубсидий_СМО_РФКонтекстноеМеню" id="322"/>
+									<ExtendedTooltip name="СубсидииЛьготыСуммаПерерасчетовСубсидий_СМО_РФРасширеннаяПодсказка" id="323"/>
+								</InputField>
+								<InputField name="СубсидииЛьготыСуммаПерерасчетовСубсидий_СМО_РТ" id="324">
+									<DataPath>Объект.РеспубликаТатарстан_СубсидииЛьготы.СуммаПерерасчетовСубсидий_СМО_РТ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СубсидииЛьготыСуммаПерерасчетовСубсидий_СМО_РТКонтекстноеМеню" id="325"/>
+									<ExtendedTooltip name="СубсидииЛьготыСуммаПерерасчетовСубсидий_СМО_РТРасширеннаяПодсказка" id="326"/>
+								</InputField>
+								<InputField name="СубсидииЛьготыСуммаПерерасчетовСубсидий_НаОтопление" id="327">
+									<DataPath>Объект.РеспубликаТатарстан_СубсидииЛьготы.СуммаПерерасчетовСубсидий_НаОтопление</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СубсидииЛьготыСуммаПерерасчетовСубсидий_НаОтоплениеКонтекстноеМеню" id="328"/>
+									<ExtendedTooltip name="СубсидииЛьготыСуммаПерерасчетовСубсидий_НаОтоплениеРасширеннаяПодсказка" id="329"/>
+								</InputField>
+								<InputField name="СубсидииЛьготыСуммаИзменений" id="330">
+									<DataPath>Объект.РеспубликаТатарстан_СубсидииЛьготы.СуммаИзменений</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СубсидииЛьготыСуммаИзмененийКонтекстноеМеню" id="331"/>
+									<ExtendedTooltip name="СубсидииЛьготыСуммаИзмененийРасширеннаяПодсказка" id="332"/>
+								</InputField>
+								<InputField name="СубсидииЛьготыДатаОкончания" id="333">
+									<DataPath>Объект.РеспубликаТатарстан_СубсидииЛьготы.ДатаОкончания</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СубсидииЛьготыДатаОкончанияКонтекстноеМеню" id="334"/>
+									<ExtendedTooltip name="СубсидииЛьготыДатаОкончанияРасширеннаяПодсказка" id="335"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<UsualGroup name="ГруппаДокументНачислениеУслугВСторонейПрограмме" id="348">
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаДокументНачислениеУслугВСторонейПрограммеРасширеннаяПодсказка" id="349"/>
+							<ChildItems>
+								<InputField name="ДокументНачислениеУслугВСторонейПрограмме" id="350">
+									<DataPath>ДокументНачислениеУслугВСторонейПрограмме</DataPath>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Документ "Начисление услуг в сторонней программе"</v8:content>
+										</v8:item>
+									</ToolTip>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<ContextMenu name="ДокументНачислениеУслугВСторонейПрограммеКонтекстноеМеню" id="351"/>
+									<ExtendedTooltip name="ДокументНачислениеУслугВСторонейПрограммеРасширеннаяПодсказка" id="352"/>
+									<Events>
+										<Event name="StartChoice">ДокументНачислениеУслугВСторонейПрограммеВыбора</Event>
+									</Events>
+								</InputField>
+								<Button name="КомандаЗаписатьВДокумент" id="353">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.КомандаЗаписатьВДокумент</CommandName>
+									<ExtendedTooltip name="КомандаЗаписатьВДокументРасширеннаяПодсказка" id="354"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.УПЖКХ_ВыгрузкиВОрганыСоцЗащиты</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ПериодСтрокой" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>15</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ГруппаЛицевыхСчетов" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа лицевых счетов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.КВП_ЛицевыеСчета</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ГР" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ГР</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СвойствоПСС" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Свойство ПСС</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ФайлОтветПоставщику" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Файл "Ответ поставщику"</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ФайлСубсидииЛьготы" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Файл "Начислено сумм по жильцам"</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПрефиксЛС" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Префикс лицевого счета</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>10</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДокументНачислениеУслугВСторонейПрограмме" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начисление услуг</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DocumentRef.УПЖКХ_НачислениеУслугВСтороннейПрограмме</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ФайлВыгрузки" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Файл выгрузки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/txtedt">d5p1:TextDocument</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВерсияФорматаВыгрузки" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Версия формата выгрузки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>3</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ОтветПоставщику</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.РеспубликаТатарстан_ОтветПоставщику.ЛицевойСчет</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.КВП_ЛицевыеСчета.ПустаяСсылка</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:Gainsboro</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>СубсидииЛьготы</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.РеспубликаТатарстан_СубсидииЛьготы.ЛицевойСчет</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.КВП_ЛицевыеСчета.ПустаяСсылка</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:Gainsboro</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>СубсидииЛьготы</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.РеспубликаТатарстан_СубсидииЛьготы.Льготник</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.УПЖКХ_Жильцы.ПустаяСсылка</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:Gainsboro</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>СубсидииЛьготы</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.РеспубликаТатарстан_СубсидииЛьготы.ЛьготнаяКатегория</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.КВП_ЛьготныеКатегории.ПустаяСсылка</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:Gainsboro</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаВыгрузить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить в файл</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ВыгрузитьФайлСертификата</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаВыгрузить</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаНастройка" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка выгрузки/загрузки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Настройка</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаНастройка</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаЗагрузитьОтветПоставщику" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить файл "Ответ поставщику"</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ЗагрузитьФайлСертификата</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаЗагрузитьОтветПоставщику</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаЗагрузитьСубсидииЛьготы" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить файл "Начисленные суммы субсидий и льгот по жильцам"</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ЗагрузитьФайлСертификата</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаЗагрузитьСубсидииЛьготы</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаЗаписатьВДокумент" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать данные в документ "Начисление услуг в сторонней программе"</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Post</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаЗаписатьВДокумент</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаСправочнаяИнформация" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инструкция</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инструкция по настройке и эксплуатации выгрузки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.FormHelp</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаСправочнаяИнформация</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

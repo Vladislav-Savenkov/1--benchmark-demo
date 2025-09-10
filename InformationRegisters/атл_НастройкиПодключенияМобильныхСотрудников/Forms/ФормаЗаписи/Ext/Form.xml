@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Пользователь" id="1">
+			<DataPath>Запись.Пользователь</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="ПользовательКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ПользовательРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<Pages name="ГруппаСтраниц" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страниц</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страниц</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ГруппаСтраницРасширеннаяПодсказка" id="30"/>
+			<ChildItems>
+				<Page name="ГруппаПараметрыПодключения" id="31">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Параметры подключения</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа параметры подключения</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаПараметрыПодключенияРасширеннаяПодсказка" id="32"/>
+					<ChildItems>
+						<CheckBoxField name="ЯвляетсяПользователемМК" id="10">
+							<DataPath>Запись.ЯвляетсяПользователемМК</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Мобильный сотрудник</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ЯвляетсяПользователемМККонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="ЯвляетсяПользователемМКРасширеннаяПодсказка" id="12"/>
+						</CheckBoxField>
+						<InputField name="ЛогинМК" id="4">
+							<DataPath>Запись.ЛогинМК</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Логин</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalStretch>true</HorizontalStretch>
+							<ContextMenu name="ЛогинМККонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="ЛогинМКРасширеннаяПодсказка" id="6"/>
+							<Events>
+								<Event name="OnChange">ЛогинМКПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ПарольМК" id="7">
+							<DataPath>Запись.ПарольМК</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Пароль</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalStretch>true</HorizontalStretch>
+							<ContextMenu name="ПарольМККонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="ПарольМКРасширеннаяПодсказка" id="9"/>
+							<Events>
+								<Event name="OnChange">ПарольМКПриИзменении</Event>
+							</Events>
+						</InputField>
+						<LabelDecoration name="Декорация2" id="66">
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<VerticalStretch>false</VerticalStretch>
+							<Font ref="style:NormalTextFont" height="4" kind="StyleItem"/>
+							<ContextMenu name="Декорация2КонтекстноеМеню" id="67"/>
+							<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="68"/>
+						</LabelDecoration>
+						<InputField name="КлючШифрования" id="16">
+							<DataPath>Запись.КлючШифрования</DataPath>
+							<ContextMenu name="КлючШифрованияКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="КлючШифрованияРасширеннаяПодсказка" id="18"/>
+						</InputField>
+						<UsualGroup name="ПодгруппаШифрование" id="27">
+							<Enabled>false</Enabled>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Подгруппа шифрование</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Подгруппа шифрование</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalStretch>true</HorizontalStretch>
+							<VerticalStretch>true</VerticalStretch>
+							<GroupVerticalAlign>Bottom</GroupVerticalAlign>
+							<Group>Horizontal</Group>
+							<VerticalAlign>Bottom</VerticalAlign>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ПодгруппаШифрованиеРасширеннаяПодсказка" id="28"/>
+							<ChildItems>
+								<CheckBoxField name="АвторизованНаСервере" id="22">
+									<DataPath>Запись.АвторизованНаСервере</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="АвторизованНаСервереКонтекстноеМеню" id="23"/>
+									<ExtendedTooltip name="АвторизованНаСервереРасширеннаяПодсказка" id="24"/>
+								</CheckBoxField>
+								<InputField name="ЧасовойПояс" id="19">
+									<DataPath>Запись.ЧасовойПояс</DataPath>
+									<Width>28</Width>
+									<ContextMenu name="ЧасовойПоясКонтекстноеМеню" id="20"/>
+									<ExtendedTooltip name="ЧасовойПоясРасширеннаяПодсказка" id="21"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаНастройки" id="33">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа настройки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаНастройкиРасширеннаяПодсказка" id="34"/>
+					<ChildItems>
+						<CheckBoxField name="ЗаписыватьТрекПоРасписанию" id="35">
+							<DataPath>Запись.ЗаписыватьТрекПоРасписанию</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ЗаписыватьТрекПоРасписаниюКонтекстноеМеню" id="36"/>
+							<ExtendedTooltip name="ЗаписыватьТрекПоРасписаниюРасширеннаяПодсказка" id="37"/>
+						</CheckBoxField>
+						<CheckBoxField name="ЗаписыватьКоординатыСобытийПоРасписанию" id="38">
+							<DataPath>Запись.ЗаписыватьКоординатыСобытийПоРасписанию</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ЗаписыватьКоординатыСобытийПоРасписаниюКонтекстноеМеню" id="39"/>
+							<ExtendedTooltip name="ЗаписыватьКоординатыСобытийПоРасписаниюРасширеннаяПодсказка" id="40"/>
+						</CheckBoxField>
+						<CheckBoxField name="ПолучатьИнформациюОТекущемМестонахождении" id="41">
+							<DataPath>Запись.ПолучатьИнформациюОТекущемМестонахождении</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПолучатьИнформациюОТекущемМестонахожденииКонтекстноеМеню" id="42"/>
+							<ExtendedTooltip name="ПолучатьИнформациюОТекущемМестонахожденииРасширеннаяПодсказка" id="43"/>
+						</CheckBoxField>
+						<CheckBoxField name="НапоминатьОЗадачеВМоментЗапланированогоНачалаРабот" id="44">
+							<DataPath>Запись.НапоминатьОЗадачеВМоментЗапланированогоНачалаРабот</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="НапоминатьОЗадачеВМоментЗапланированогоНачалаРаботКонтекстноеМеню" id="45"/>
+							<ExtendedTooltip name="НапоминатьОЗадачеВМоментЗапланированогоНачалаРаботРасширеннаяПодсказка" id="46"/>
+						</CheckBoxField>
+						<CheckBoxField name="НапоминатьОНеобходимостиИзмененияСтатусаВМоментПрибытияНаМестоВыполненияРабот" id="47">
+							<DataPath>Запись.НапоминатьОНеобходимостиИзмененияСтатусаВМоментПрибытияНаМестоВыполненияРабот</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="НапоминатьОНеобходимостиИзмененияСтатусаВМоментПрибытияНаМестоВыполненияРаботКонтекстноеМеню" id="48"/>
+							<ExtendedTooltip name="НапоминатьОНеобходимостиИзмененияСтатусаВМоментПрибытияНаМестоВыполненияРаботРасширеннаяПодсказка" id="49"/>
+						</CheckBoxField>
+						<CheckBoxField name="НапоминатьОНеобходимостиИзмененияСтатусаВМоментВыходаИзЗоныМестаВыполненияРабот" id="50">
+							<DataPath>Запись.НапоминатьОНеобходимостиИзмененияСтатусаВМоментВыходаИзЗоныМестаВыполненияРабот</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="НапоминатьОНеобходимостиИзмененияСтатусаВМоментВыходаИзЗоныМестаВыполненияРаботКонтекстноеМеню" id="51"/>
+							<ExtendedTooltip name="НапоминатьОНеобходимостиИзмененияСтатусаВМоментВыходаИзЗоныМестаВыполненияРаботРасширеннаяПодсказка" id="52"/>
+						</CheckBoxField>
+						<CheckBoxField name="ПовторятьНапоминаниеОНовойЗадаче" id="53">
+							<DataPath>Запись.ПовторятьНапоминаниеОНовойЗадаче</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПовторятьНапоминаниеОНовойЗадачеКонтекстноеМеню" id="54"/>
+							<ExtendedTooltip name="ПовторятьНапоминаниеОНовойЗадачеРасширеннаяПодсказка" id="55"/>
+						</CheckBoxField>
+						<UsualGroup name="ГруппаКоличествоМинут" id="59">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа количество минут</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа количество минут</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКоличествоМинутРасширеннаяПодсказка" id="60"/>
+							<ChildItems>
+								<InputField name="КоличествоМинутЗаКотороеНапоминатьОЗадачеДоЗапланированогоНачалаРабот" id="56">
+									<DataPath>Запись.КоличествоМинутЗаКотороеНапоминатьОЗадачеДоЗапланированогоНачалаРабот</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Напоминать о задаче за </v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="КоличествоМинутЗаКотороеНапоминатьОЗадачеДоЗапланированогоНачалаРаботКонтекстноеМеню" id="57"/>
+									<ExtendedTooltip name="КоличествоМинутЗаКотороеНапоминатьОЗадачеДоЗапланированогоНачалаРаботРасширеннаяПодсказка" id="58"/>
+								</InputField>
+								<LabelDecoration name="Декорация1" id="61">
+									<TextColor>style:FieldTextColor</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>минут до запланированного начала работ</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="Декорация1КонтекстноеМеню" id="62"/>
+									<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="63"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<Button name="ГрафикРаботыСотрудника" id="64">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ГрафикРаботыСотрудника</CommandName>
+							<ExtendedTooltip name="ГрафикРаботыСотрудникаРасширеннаяПодсказка" id="65"/>
+						</Button>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.атл_НастройкиПодключенияМобильныхСотрудников</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ГрафикРаботыСотрудника" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>График работы сотрудника</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>График работы сотрудника</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ГрафикРаботыСотрудника</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="Пользователь">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

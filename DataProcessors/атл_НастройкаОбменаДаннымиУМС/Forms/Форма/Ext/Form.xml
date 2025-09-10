@@ -1,0 +1,1857 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="ГруппаСтраниц" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страниц</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страниц</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<VerticalStretch>true</VerticalStretch>
+			<ExtendedTooltip name="ГруппаСтраницРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<Page name="НастройкиПодключенияКСерверу" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки подключения</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки подключения к серверу</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="НастройкиПодключенияКСерверуРасширеннаяПодсказка" id="4"/>
+					<ChildItems>
+						<InputField name="ЗаписьРегистраатл_НастройкиПодсистемыУМСЛогинОрганизации" id="11">
+							<DataPath>ЗаписьРегистраатл_НастройкиПодсистемыУМС.ЛогинОрганизации</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="ЗаписьРегистраатл_НастройкиПодсистемыУМСЛогинОрганизацииКонтекстноеМеню" id="12"/>
+							<ExtendedTooltip name="ЗаписьРегистраатл_НастройкиПодсистемыУМСЛогинОрганизацииРасширеннаяПодсказка" id="13"/>
+						</InputField>
+						<InputField name="ЗаписьРегистраатл_НастройкиПодсистемыУМСАдресСервера" id="14">
+							<DataPath>ЗаписьРегистраатл_НастройкиПодсистемыУМС.АдресСервера</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="ЗаписьРегистраатл_НастройкиПодсистемыУМСАдресСервераКонтекстноеМеню" id="15"/>
+							<ExtendedTooltip name="ЗаписьРегистраатл_НастройкиПодсистемыУМСАдресСервераРасширеннаяПодсказка" id="16"/>
+						</InputField>
+						<LabelField name="ЗаписьРегистраатл_НастройкиПодсистемыУМСИспользоватьШифрованноеСоединение" id="17">
+							<DataPath>ЗаписьРегистраатл_НастройкиПодсистемыУМС.ИспользоватьШифрованноеСоединение</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Использовать шифрованное соединение (HTTPS)</v8:content>
+								</v8:item>
+							</Title>
+							<Format>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>БЛ=Нет; БИ=Да</v8:content>
+								</v8:item>
+							</Format>
+							<ContextMenu name="ЗаписьРегистраатл_НастройкиПодсистемыУМСИспользоватьШифрованноеСоединениеКонтекстноеМеню" id="18"/>
+							<ExtendedTooltip name="ЗаписьРегистраатл_НастройкиПодсистемыУМСИспользоватьШифрованноеСоединениеРасширеннаяПодсказка" id="19"/>
+						</LabelField>
+						<InputField name="ЗаписьРегистраатл_НастройкиПодсистемыУМСПериодичностьСинхронизацииССервером" id="20">
+							<DataPath>ЗаписьРегистраатл_НастройкиПодсистемыУМС.ПериодичностьСинхронизацииССервером</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="ЗаписьРегистраатл_НастройкиПодсистемыУМСПериодичностьСинхронизацииССерверомКонтекстноеМеню" id="21"/>
+							<ExtendedTooltip name="ЗаписьРегистраатл_НастройкиПодсистемыУМСПериодичностьСинхронизацииССерверомРасширеннаяПодсказка" id="22"/>
+						</InputField>
+						<LabelDecoration name="НадписьПериодичностьЗапросаАктивностиПользователей" id="23">
+							<TextColor>style:FieldSelectionBackColor</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Информация об активности пользователей будет обновляться каждый четвертый обмен данными с сервером.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="НадписьПериодичностьЗапросаАктивностиПользователейКонтекстноеМеню" id="24"/>
+							<ExtendedTooltip name="НадписьПериодичностьЗапросаАктивностиПользователейРасширеннаяПодсказка" id="25"/>
+						</LabelDecoration>
+						<InputField name="ЗаписьРегистраатл_НастройкиПодсистемыУМСПользовательДляВыполненияОбменаДанными" id="26">
+							<DataPath>ЗаписьРегистраатл_НастройкиПодсистемыУМС.ПользовательДляВыполненияОбменаДанными</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="ЗаписьРегистраатл_НастройкиПодсистемыУМСПользовательДляВыполненияОбменаДаннымиКонтекстноеМеню" id="27"/>
+							<ExtendedTooltip name="ЗаписьРегистраатл_НастройкиПодсистемыУМСПользовательДляВыполненияОбменаДаннымиРасширеннаяПодсказка" id="28"/>
+						</InputField>
+						<LabelField name="ЗаписьРегистраатл_НастройкиПодсистемыУМСИспользоватьШифрованиеДанных" id="29">
+							<DataPath>ЗаписьРегистраатл_НастройкиПодсистемыУМС.ИспользоватьШифрованиеДанных</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Format>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>БЛ=Нет; БИ=Да</v8:content>
+								</v8:item>
+							</Format>
+							<ContextMenu name="ЗаписьРегистраатл_НастройкиПодсистемыУМСИспользоватьШифрованиеДанныхКонтекстноеМеню" id="30"/>
+							<ExtendedTooltip name="ЗаписьРегистраатл_НастройкиПодсистемыУМСИспользоватьШифрованиеДанныхРасширеннаяПодсказка" id="31"/>
+						</LabelField>
+						<UsualGroup name="ГруппаСохранятьПакеты" id="64">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сохранять пакеты</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа сохранять пакеты</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="ГруппаСохранятьПакетыРасширеннаяПодсказка" id="65"/>
+							<ChildItems>
+								<LabelField name="ЗаписьРегистраатл_НастройкиПодсистемыУМССохранятьВходящиеУдачноРазобранныеПакетыОтМС" id="32">
+									<DataPath>ЗаписьРегистраатл_НастройкиПодсистемыУМС.СохранятьВходящиеУдачноРазобранныеПакетыОтМС</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Входящие удачно разобранные от мобильных сотрудников</v8:content>
+										</v8:item>
+									</Title>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>БЛ=Нет; БИ=Да</v8:content>
+										</v8:item>
+									</Format>
+									<ContextMenu name="ЗаписьРегистраатл_НастройкиПодсистемыУМССохранятьВходящиеУдачноРазобранныеПакетыОтМСКонтекстноеМеню" id="33"/>
+									<ExtendedTooltip name="ЗаписьРегистраатл_НастройкиПодсистемыУМССохранятьВходящиеУдачноРазобранныеПакетыОтМСРасширеннаяПодсказка" id="34"/>
+								</LabelField>
+								<LabelField name="ЗаписьРегистраатл_НастройкиПодсистемыУМССохранятьВходящиеУдачноРазобранныеПакетыОтСервера" id="35">
+									<DataPath>ЗаписьРегистраатл_НастройкиПодсистемыУМС.СохранятьВходящиеУдачноРазобранныеПакетыОтСервера</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Входящие удачно разобранные от сервера</v8:content>
+										</v8:item>
+									</Title>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>БЛ=Нет; БИ=Да</v8:content>
+										</v8:item>
+									</Format>
+									<ContextMenu name="ЗаписьРегистраатл_НастройкиПодсистемыУМССохранятьВходящиеУдачноРазобранныеПакетыОтСервераКонтекстноеМеню" id="36"/>
+									<ExtendedTooltip name="ЗаписьРегистраатл_НастройкиПодсистемыУМССохранятьВходящиеУдачноРазобранныеПакетыОтСервераРасширеннаяПодсказка" id="37"/>
+								</LabelField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаСохранятьВЛогах" id="66">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сохранять в логах (хранятся один месяц)</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа сохранять в логах</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="ГруппаСохранятьВЛогахРасширеннаяПодсказка" id="67"/>
+							<ChildItems>
+								<LabelField name="ЗаписьРегистраатл_НастройкиПодсистемыУМССохранятьВЛогахИнформационныеСообщения" id="38">
+									<DataPath>ЗаписьРегистраатл_НастройкиПодсистемыУМС.СохранятьВЛогахИнформационныеСообщения</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Информационные сообщения</v8:content>
+										</v8:item>
+									</Title>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>БЛ=Нет; БИ=Да</v8:content>
+										</v8:item>
+									</Format>
+									<ContextMenu name="ЗаписьРегистраатл_НастройкиПодсистемыУМССохранятьВЛогахИнформационныеСообщенияКонтекстноеМеню" id="39"/>
+									<ExtendedTooltip name="ЗаписьРегистраатл_НастройкиПодсистемыУМССохранятьВЛогахИнформационныеСообщенияРасширеннаяПодсказка" id="40"/>
+								</LabelField>
+								<LabelField name="ЗаписьРегистраатл_НастройкиПодсистемыУМССохранятьВЛогахИнформационныеСообщенияОПакетахОтСервера" id="41">
+									<DataPath>ЗаписьРегистраатл_НастройкиПодсистемыУМС.СохранятьВЛогахИнформационныеСообщенияОПакетахОтСервера</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Информационные сообщения о пакетах от сервера</v8:content>
+										</v8:item>
+									</Title>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>БЛ=Нет; БИ=Да</v8:content>
+										</v8:item>
+									</Format>
+									<ContextMenu name="ЗаписьРегистраатл_НастройкиПодсистемыУМССохранятьВЛогахИнформационныеСообщенияОПакетахОтСервераКонтекстноеМеню" id="42"/>
+									<ExtendedTooltip name="ЗаписьРегистраатл_НастройкиПодсистемыУМССохранятьВЛогахИнформационныеСообщенияОПакетахОтСервераРасширеннаяПодсказка" id="43"/>
+								</LabelField>
+							</ChildItems>
+						</UsualGroup>
+						<LabelField name="ЗаписьРегистраатл_НастройкиПодсистемыУМСРежимОтладки" id="44">
+							<DataPath>ЗаписьРегистраатл_НастройкиПодсистемыУМС.РежимОтладки</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Режим отладки (все пакеты обмена сохраняются на диске)</v8:content>
+								</v8:item>
+							</Title>
+							<Format>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>БЛ=Нет; БИ=Да</v8:content>
+								</v8:item>
+							</Format>
+							<ContextMenu name="ЗаписьРегистраатл_НастройкиПодсистемыУМСРежимОтладкиКонтекстноеМеню" id="45"/>
+							<ExtendedTooltip name="ЗаписьРегистраатл_НастройкиПодсистемыУМСРежимОтладкиРасширеннаяПодсказка" id="46"/>
+						</LabelField>
+						<LabelField name="ЗаписьРегистраатл_НастройкиПодсистемыУМССохранятьСтатистикуОбменов" id="47">
+							<DataPath>ЗаписьРегистраатл_НастройкиПодсистемыУМС.СохранятьСтатистикуОбменов</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сохранять статистику обменов (за последние 7 дней)</v8:content>
+								</v8:item>
+							</Title>
+							<Format>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>БЛ=Нет; БИ=Да</v8:content>
+								</v8:item>
+							</Format>
+							<ContextMenu name="ЗаписьРегистраатл_НастройкиПодсистемыУМССохранятьСтатистикуОбменовКонтекстноеМеню" id="48"/>
+							<ExtendedTooltip name="ЗаписьРегистраатл_НастройкиПодсистемыУМССохранятьСтатистикуОбменовРасширеннаяПодсказка" id="49"/>
+						</LabelField>
+						<UsualGroup name="ГруппаКоманд" id="52">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа команд</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа команд</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКомандРасширеннаяПодсказка" id="53"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаКомандЛево" id="54">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа команд лево</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа команд лево</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаКомандЛевоРасширеннаяПодсказка" id="55"/>
+									<ChildItems>
+										<Button name="ИзменитьНастройки" id="50">
+											<Type>Hyperlink</Type>
+											<CommandName>Form.Command.ИзменитьНастройки</CommandName>
+											<ExtendedTooltip name="ИзменитьНастройкиРасширеннаяПодсказка" id="51"/>
+										</Button>
+										<Button name="ПолучитьИнформациюОСостоянииУчетнойЗаписи" id="60">
+											<Type>Hyperlink</Type>
+											<CommandName>Form.Command.ПолучитьИнформациюОСостоянииУчетнойЗаписи</CommandName>
+											<ExtendedTooltip name="ПолучитьИнформациюОСостоянииУчетнойЗаписиРасширеннаяПодсказка" id="61"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаКомандПраво" id="56">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа команд право</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа команд право</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаКомандПравоРасширеннаяПодсказка" id="57"/>
+									<ChildItems>
+										<Button name="ЗарегистрироватьИнформационнуюБазуНаСервере" id="58">
+											<Type>Hyperlink</Type>
+											<CommandName>Form.Command.ЗарегистрироватьИнформационнуюБазуНаСервере</CommandName>
+											<ExtendedTooltip name="ЗарегистрироватьИнформационнуюБазуНаСервереРасширеннаяПодсказка" id="59"/>
+										</Button>
+										<Button name="ЗапуститьОбменДанными" id="62">
+											<Type>Hyperlink</Type>
+											<CommandName>Form.Command.ЗапуститьОбменДанными</CommandName>
+											<ExtendedTooltip name="ЗапуститьОбменДаннымиРасширеннаяПодсказка" id="63"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="НастройкиПользователей" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки пользователей</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки пользователей</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="НастройкиПользователейРасширеннаяПодсказка" id="6"/>
+					<ChildItems>
+						<InputField name="КоличествоДоступныхЛогинов" id="142">
+							<DataPath>Объект.КоличествоДоступныхЛогинов</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+							<ContextMenu name="КоличествоДоступныхЛогиновКонтекстноеМеню" id="143"/>
+							<ExtendedTooltip name="КоличествоДоступныхЛогиновРасширеннаяПодсказка" id="144"/>
+						</InputField>
+						<Pages name="ГруппаСтраницПользователи" id="96">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа страниц пользователи</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа страниц пользователи</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ГруппаСтраницПользователиРасширеннаяПодсказка" id="97"/>
+							<ChildItems>
+								<Page name="ГруппаПользователи" id="98">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Пользователи</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа пользователи</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ГруппаПользователиРасширеннаяПодсказка" id="99"/>
+									<ChildItems>
+										<Table name="СписокПользователи" id="102">
+											<UseAlternationRowColor>true</UseAlternationRowColor>
+											<EnableStartDrag>true</EnableStartDrag>
+											<FileDragMode>AsFile</FileDragMode>
+											<DataPath>СписокПользователи</DataPath>
+											<RowPictureDataPath>СписокПользователи.DefaultPicture</RowPictureDataPath>
+											<AutoRefresh>false</AutoRefresh>
+											<AutoRefreshPeriod>60</AutoRefreshPeriod>
+											<Period>
+												<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+												<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+												<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+											</Period>
+											<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+											<RestoreCurrentRow>false</RestoreCurrentRow>
+											<TopLevelParent xsi:nil="true"/>
+											<ShowRoot>true</ShowRoot>
+											<AllowRootChoice>false</AllowRootChoice>
+											<UpdateOnDataChange>Auto</UpdateOnDataChange>
+											<ContextMenu name="СписокПользователиКонтекстноеМеню" id="103"/>
+											<AutoCommandBar name="СписокПользователиКоманднаяПанель" id="104">
+												<ChildItems>
+													<Button name="НастройкаПодключенияМК" id="145">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.НастройкаПодключенияМК</CommandName>
+														<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+														<ExtendedTooltip name="НастройкаПодключенияМКРасширеннаяПодсказка" id="146"/>
+													</Button>
+												</ChildItems>
+											</AutoCommandBar>
+											<ExtendedTooltip name="СписокПользователиРасширеннаяПодсказка" id="105"/>
+											<SearchStringAddition name="СписокПользователиСтрокаПоиска" id="106">
+												<AdditionSource>
+													<Item>СписокПользователи</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="СписокПользователиСтрокаПоискаКонтекстноеМеню" id="109"/>
+												<ExtendedTooltip name="СписокПользователиСтрокаПоискаРасширеннаяПодсказка" id="110"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="СписокПользователиСостояниеПросмотра" id="111">
+												<AdditionSource>
+													<Item>СписокПользователи</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="СписокПользователиСостояниеПросмотраКонтекстноеМеню" id="114"/>
+												<ExtendedTooltip name="СписокПользователиСостояниеПросмотраРасширеннаяПодсказка" id="115"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="СписокПользователиУправлениеПоиском" id="116">
+												<AdditionSource>
+													<Item>СписокПользователи</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="СписокПользователиУправлениеПоискомКонтекстноеМеню" id="119"/>
+												<ExtendedTooltip name="СписокПользователиУправлениеПоискомРасширеннаяПодсказка" id="120"/>
+											</SearchControlAddition>
+											<ChildItems>
+												<PictureField name="СписокПользователиИндексКартинки" id="139">
+													<DataPath>СписокПользователи.ИндексКартинки</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<Width>2</Width>
+													<ValuesPicture>
+														<xr:Ref>CommonPicture.атл_ВыездныеРаботы</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</ValuesPicture>
+													<FileDragMode>AsFile</FileDragMode>
+													<ContextMenu name="СписокПользователиИндексКартинкиКонтекстноеМеню" id="140"/>
+													<ExtendedTooltip name="СписокПользователиИндексКартинкиРасширеннаяПодсказка" id="141"/>
+												</PictureField>
+												<LabelField name="СписокПользователиКод" id="121">
+													<DataPath>СписокПользователи.Code</DataPath>
+													<ContextMenu name="СписокПользователиКодКонтекстноеМеню" id="122"/>
+													<ExtendedTooltip name="СписокПользователиКодРасширеннаяПодсказка" id="123"/>
+												</LabelField>
+												<LabelField name="СписокПользователиНаименование" id="124">
+													<DataPath>СписокПользователи.Description</DataPath>
+													<ContextMenu name="СписокПользователиНаименованиеКонтекстноеМеню" id="125"/>
+													<ExtendedTooltip name="СписокПользователиНаименованиеРасширеннаяПодсказка" id="126"/>
+												</LabelField>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</Page>
+								<Page name="ГруппаНастройкаПользователейМобильныхУстройств" id="100">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Настройка пользователей мобильных устройств</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа настройка пользователей мобильных устройств</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ГруппаНастройкаПользователейМобильныхУстройствРасширеннаяПодсказка" id="101"/>
+									<ChildItems>
+										<Table name="ТаблицаЛогинов" id="147">
+											<AutoInsertNewRow>true</AutoInsertNewRow>
+											<EnableStartDrag>true</EnableStartDrag>
+											<EnableDrag>true</EnableDrag>
+											<FileDragMode>AsFile</FileDragMode>
+											<DataPath>Объект.ТаблицаЛогинов</DataPath>
+											<CommandSet>
+												<ExcludedCommand>Change</ExcludedCommand>
+												<ExcludedCommand>Copy</ExcludedCommand>
+												<ExcludedCommand>EndEdit</ExcludedCommand>
+											</CommandSet>
+											<RowFilter xsi:nil="true"/>
+											<ContextMenu name="ТаблицаЛогиновКонтекстноеМеню" id="148"/>
+											<AutoCommandBar name="ТаблицаЛогиновКоманднаяПанель" id="149">
+												<Autofill>false</Autofill>
+												<ChildItems>
+													<Button name="ТаблицаЛогиновПереместитьВверх" id="223">
+														<Type>CommandBarButton</Type>
+														<Representation>Picture</Representation>
+														<CommandName>Form.Item.ТаблицаЛогинов.StandardCommand.MoveUp</CommandName>
+														<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+														<ExtendedTooltip name="ТаблицаЛогиновПереместитьВверхРасширеннаяПодсказка" id="224"/>
+													</Button>
+													<Button name="ТаблицаЛогиновПереместитьВниз" id="225">
+														<Type>CommandBarButton</Type>
+														<Representation>Picture</Representation>
+														<CommandName>Form.Item.ТаблицаЛогинов.StandardCommand.MoveDown</CommandName>
+														<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+														<ExtendedTooltip name="ТаблицаЛогиновПереместитьВнизРасширеннаяПодсказка" id="226"/>
+													</Button>
+													<Button name="ЗаполнитьСписокПользователейПодсистемыУМС" id="217">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.ЗаполнитьСписокПользователейПодсистемыУМС</CommandName>
+														<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+														<ExtendedTooltip name="ЗаполнитьСписокПользователейПодсистемыУМСРасширеннаяПодсказка" id="218"/>
+													</Button>
+													<Button name="СинхронизироватьДанныеССервером" id="227">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.СинхронизироватьДанныеССервером</CommandName>
+														<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+														<ExtendedTooltip name="СинхронизироватьДанныеССерверомРасширеннаяПодсказка" id="228"/>
+													</Button>
+													<Button name="РасширеннаяНастройка" id="229">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.РасширеннаяНастройка</CommandName>
+														<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+														<ExtendedTooltip name="РасширеннаяНастройкаРасширеннаяПодсказка" id="230"/>
+													</Button>
+													<Popup name="ТаблицаЛогиновИзменить" id="286">
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Изменить</v8:content>
+															</v8:item>
+														</Title>
+														<ToolTip>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Таблица логинов изменить</v8:content>
+															</v8:item>
+														</ToolTip>
+														<ExtendedTooltip name="ТаблицаЛогиновИзменитьРасширеннаяПодсказка" id="287"/>
+														<ChildItems>
+															<Button name="ТаблицаЛогиновОбновитьНастройкиУВсехПользователей" id="288">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.Command.ОбновитьНастройкиУВсехПользователей</CommandName>
+																<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+																<ExtendedTooltip name="ТаблицаЛогиновОбновитьНастройкиУВсехПользователейРасширеннаяПодсказка" id="289"/>
+															</Button>
+														</ChildItems>
+													</Popup>
+												</ChildItems>
+											</AutoCommandBar>
+											<ExtendedTooltip name="ТаблицаЛогиновРасширеннаяПодсказка" id="150"/>
+											<SearchStringAddition name="ТаблицаЛогиновСтрокаПоиска" id="151">
+												<AdditionSource>
+													<Item>ТаблицаЛогинов</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ТаблицаЛогиновСтрокаПоискаКонтекстноеМеню" id="154"/>
+												<ExtendedTooltip name="ТаблицаЛогиновСтрокаПоискаРасширеннаяПодсказка" id="155"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="ТаблицаЛогиновСостояниеПросмотра" id="156">
+												<AdditionSource>
+													<Item>ТаблицаЛогинов</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ТаблицаЛогиновСостояниеПросмотраКонтекстноеМеню" id="159"/>
+												<ExtendedTooltip name="ТаблицаЛогиновСостояниеПросмотраРасширеннаяПодсказка" id="160"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="ТаблицаЛогиновУправлениеПоиском" id="161">
+												<AdditionSource>
+													<Item>ТаблицаЛогинов</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="ТаблицаЛогиновУправлениеПоискомКонтекстноеМеню" id="164"/>
+												<ExtendedTooltip name="ТаблицаЛогиновУправлениеПоискомРасширеннаяПодсказка" id="165"/>
+											</SearchControlAddition>
+											<ChildItems>
+												<LabelField name="ТаблицаЛогиновНомерСтроки" id="166">
+													<DataPath>Объект.ТаблицаЛогинов.LineNumber</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ТаблицаЛогиновНомерСтрокиКонтекстноеМеню" id="167"/>
+													<ExtendedTooltip name="ТаблицаЛогиновНомерСтрокиРасширеннаяПодсказка" id="168"/>
+												</LabelField>
+												<InputField name="ТаблицаЛогиновПользовательВ1С" id="184">
+													<DataPath>Объект.ТаблицаЛогинов.ПользовательВ1С</DataPath>
+													<Enabled>false</Enabled>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Пользователь</v8:content>
+														</v8:item>
+													</Title>
+													<EditMode>EnterOnInput</EditMode>
+													<BackColor>web:LemonChiffon</BackColor>
+													<ContextMenu name="ТаблицаЛогиновПользовательВ1СКонтекстноеМеню" id="185"/>
+													<ExtendedTooltip name="ТаблицаЛогиновПользовательВ1СРасширеннаяПодсказка" id="186"/>
+												</InputField>
+												<InputField name="ТаблицаЛогиновВыполняемоеДействие" id="214">
+													<DataPath>Объект.ТаблицаЛогинов.ВыполняемоеДействие</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ТаблицаЛогиновВыполняемоеДействиеКонтекстноеМеню" id="215"/>
+													<ExtendedTooltip name="ТаблицаЛогиновВыполняемоеДействиеРасширеннаяПодсказка" id="216"/>
+													<Events>
+														<Event name="OnChange">ТаблицаЛогиновВыполняемоеДействиеПриИзменении</Event>
+														<Event name="StartChoice">ТаблицаЛогиновВыполняемоеДействиеНачалоВыбора</Event>
+													</Events>
+												</InputField>
+												<CheckBoxField name="ТаблицаЛогиновЕстьОшибка" id="172">
+													<DataPath>Объект.ТаблицаЛогинов.ЕстьОшибка</DataPath>
+													<Enabled>false</Enabled>
+													<EditMode>EnterOnInput</EditMode>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ТаблицаЛогиновЕстьОшибкаКонтекстноеМеню" id="173"/>
+													<ExtendedTooltip name="ТаблицаЛогиновЕстьОшибкаРасширеннаяПодсказка" id="174"/>
+												</CheckBoxField>
+												<CheckBoxField name="ТаблицаЛогиновЕстьИзменения" id="169">
+													<DataPath>Объект.ТаблицаЛогинов.ЕстьИзменения</DataPath>
+													<Enabled>false</Enabled>
+													<EditMode>EnterOnInput</EditMode>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ТаблицаЛогиновЕстьИзмененияКонтекстноеМеню" id="170"/>
+													<ExtendedTooltip name="ТаблицаЛогиновЕстьИзмененияРасширеннаяПодсказка" id="171"/>
+												</CheckBoxField>
+												<InputField name="ТаблицаЛогиновДополнительнаяИнформация" id="193">
+													<DataPath>Объект.ТаблицаЛогинов.ДополнительнаяИнформация</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<EditMode>EnterOnInput</EditMode>
+													<Width>30</Width>
+													<TextColor>style:SpecialTextColor</TextColor>
+													<ContextMenu name="ТаблицаЛогиновДополнительнаяИнформацияКонтекстноеМеню" id="194"/>
+													<ExtendedTooltip name="ТаблицаЛогиновДополнительнаяИнформацияРасширеннаяПодсказка" id="195"/>
+												</InputField>
+												<ColumnGroup name="ГруппаКолонокИнформацияНаСервере" id="231">
+													<Visible>false</Visible>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Информация на сервере</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Информация на сервере</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>Horizontal</Group>
+													<ShowInHeader>true</ShowInHeader>
+													<ExtendedTooltip name="ГруппаКолонокИнформацияНаСервереРасширеннаяПодсказка" id="232"/>
+													<ChildItems>
+														<InputField name="ТаблицаЛогиновЛогинНаСервере" id="175">
+															<DataPath>Объект.ТаблицаЛогинов.ЛогинНаСервере</DataPath>
+															<Enabled>false</Enabled>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Логин</v8:content>
+																</v8:item>
+															</Title>
+															<EditMode>EnterOnInput</EditMode>
+															<Width>25</Width>
+															<BackColor>web:SkyBlue</BackColor>
+															<ContextMenu name="ТаблицаЛогиновЛогинНаСервереКонтекстноеМеню" id="176"/>
+															<ExtendedTooltip name="ТаблицаЛогиновЛогинНаСервереРасширеннаяПодсказка" id="177"/>
+														</InputField>
+														<InputField name="ТаблицаЛогиновИдентификатор1СНаСервере" id="181">
+															<DataPath>Объект.ТаблицаЛогинов.Идентификатор1СНаСервере</DataPath>
+															<Enabled>false</Enabled>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Индентификатор</v8:content>
+																</v8:item>
+															</Title>
+															<EditMode>EnterOnInput</EditMode>
+															<Width>25</Width>
+															<BackColor>web:SkyBlue</BackColor>
+															<ContextMenu name="ТаблицаЛогиновИдентификатор1СНаСервереКонтекстноеМеню" id="182"/>
+															<ExtendedTooltip name="ТаблицаЛогиновИдентификатор1СНаСервереРасширеннаяПодсказка" id="183"/>
+														</InputField>
+														<InputField name="ТаблицаЛогиновПриоритетНаСервере" id="178">
+															<DataPath>Объект.ТаблицаЛогинов.ПриоритетНаСервере</DataPath>
+															<Enabled>false</Enabled>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Приоритет</v8:content>
+																</v8:item>
+															</Title>
+															<EditMode>EnterOnInput</EditMode>
+															<BackColor>web:SkyBlue</BackColor>
+															<ContextMenu name="ТаблицаЛогиновПриоритетНаСервереКонтекстноеМеню" id="179"/>
+															<ExtendedTooltip name="ТаблицаЛогиновПриоритетНаСервереРасширеннаяПодсказка" id="180"/>
+														</InputField>
+														<InputField name="ТаблицаЛогиновИдентификаторЛогинаНаСервере" id="199">
+															<DataPath>Объект.ТаблицаЛогинов.ИдентификаторЛогинаНаСервере</DataPath>
+															<Enabled>false</Enabled>
+															<EditMode>EnterOnInput</EditMode>
+															<BackColor>web:SkyBlue</BackColor>
+															<ContextMenu name="ТаблицаЛогиновИдентификаторЛогинаНаСервереКонтекстноеМеню" id="200"/>
+															<ExtendedTooltip name="ТаблицаЛогиновИдентификаторЛогинаНаСервереРасширеннаяПодсказка" id="201"/>
+														</InputField>
+														<CheckBoxField name="ТаблицаЛогиновУстройствоПодключеноНаСервере" id="196">
+															<DataPath>Объект.ТаблицаЛогинов.УстройствоПодключеноНаСервере</DataPath>
+															<Enabled>false</Enabled>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Устройство подключено</v8:content>
+																</v8:item>
+															</Title>
+															<EditMode>EnterOnInput</EditMode>
+															<CheckBoxType>Auto</CheckBoxType>
+															<BackColor>web:SkyBlue</BackColor>
+															<ContextMenu name="ТаблицаЛогиновУстройствоПодключеноНаСервереКонтекстноеМеню" id="197"/>
+															<ExtendedTooltip name="ТаблицаЛогиновУстройствоПодключеноНаСервереРасширеннаяПодсказка" id="198"/>
+														</CheckBoxField>
+														<InputField name="ТаблицаЛогиновИмяУстройства" id="205">
+															<DataPath>Объект.ТаблицаЛогинов.ИмяУстройства</DataPath>
+															<Enabled>false</Enabled>
+															<EditMode>EnterOnInput</EditMode>
+															<Width>25</Width>
+															<BackColor>web:SkyBlue</BackColor>
+															<ContextMenu name="ТаблицаЛогиновИмяУстройстваКонтекстноеМеню" id="206"/>
+															<ExtendedTooltip name="ТаблицаЛогиновИмяУстройстваРасширеннаяПодсказка" id="207"/>
+														</InputField>
+														<InputField name="ТаблицаЛогиновКодПродукта" id="211">
+															<DataPath>Объект.ТаблицаЛогинов.КодПродукта</DataPath>
+															<Enabled>false</Enabled>
+															<EditMode>EnterOnInput</EditMode>
+															<Width>25</Width>
+															<BackColor>web:SkyBlue</BackColor>
+															<ContextMenu name="ТаблицаЛогиновКодПродуктаКонтекстноеМеню" id="212"/>
+															<ExtendedTooltip name="ТаблицаЛогиновКодПродуктаРасширеннаяПодсказка" id="213"/>
+														</InputField>
+														<InputField name="ТаблицаЛогиновНомерВерсииПродукта" id="208">
+															<DataPath>Объект.ТаблицаЛогинов.НомерВерсииПродукта</DataPath>
+															<Enabled>false</Enabled>
+															<EditMode>EnterOnInput</EditMode>
+															<Width>25</Width>
+															<BackColor>web:SkyBlue</BackColor>
+															<ContextMenu name="ТаблицаЛогиновНомерВерсииПродуктаКонтекстноеМеню" id="209"/>
+															<ExtendedTooltip name="ТаблицаЛогиновНомерВерсииПродуктаРасширеннаяПодсказка" id="210"/>
+														</InputField>
+														<CheckBoxField name="ТаблицаЛогиновЗаписыватьТрекПоРасписаниюНаСервере" id="238">
+															<DataPath>Объект.ТаблицаЛогинов.ЗаписыватьТрекПоРасписаниюНаСервере</DataPath>
+															<Enabled>false</Enabled>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Записывать трек по расписанию</v8:content>
+																</v8:item>
+															</Title>
+															<EditMode>EnterOnInput</EditMode>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ТаблицаЛогиновЗаписыватьТрекПоРасписаниюНаСервереКонтекстноеМеню" id="239"/>
+															<ExtendedTooltip name="ТаблицаЛогиновЗаписыватьТрекПоРасписаниюНаСервереРасширеннаяПодсказка" id="240"/>
+														</CheckBoxField>
+														<CheckBoxField name="ТаблицаЛогиновЗаписыватьКоординатыСобытийПоРасписаниюНаСервере" id="241">
+															<DataPath>Объект.ТаблицаЛогинов.ЗаписыватьКоординатыСобытийПоРасписаниюНаСервере</DataPath>
+															<Enabled>false</Enabled>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Записывать координаты событий по расписанию</v8:content>
+																</v8:item>
+															</Title>
+															<EditMode>EnterOnInput</EditMode>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ТаблицаЛогиновЗаписыватьКоординатыСобытийПоРасписаниюНаСервереКонтекстноеМеню" id="242"/>
+															<ExtendedTooltip name="ТаблицаЛогиновЗаписыватьКоординатыСобытийПоРасписаниюНаСервереРасширеннаяПодсказка" id="243"/>
+														</CheckBoxField>
+														<CheckBoxField name="ТаблицаЛогиновПолучатьИнформациюОТекущемМестонахожденииНаСервере" id="244">
+															<DataPath>Объект.ТаблицаЛогинов.ПолучатьИнформациюОТекущемМестонахожденииНаСервере</DataPath>
+															<Enabled>false</Enabled>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Получать информацию о текущем местонахождение пользователя</v8:content>
+																</v8:item>
+															</Title>
+															<EditMode>EnterOnInput</EditMode>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ТаблицаЛогиновПолучатьИнформациюОТекущемМестонахожденииНаСервереКонтекстноеМеню" id="245"/>
+															<ExtendedTooltip name="ТаблицаЛогиновПолучатьИнформациюОТекущемМестонахожденииНаСервереРасширеннаяПодсказка" id="246"/>
+														</CheckBoxField>
+														<CheckBoxField name="ТаблицаЛогиновНапоминатьОЗадачеВМоментЗапланированогоНачалаРаботНаСервере" id="247">
+															<DataPath>Объект.ТаблицаЛогинов.НапоминатьОЗадачеВМоментЗапланированогоНачалаРаботНаСервере</DataPath>
+															<Enabled>false</Enabled>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Напоминать о задаче в момент запланированого начала работ</v8:content>
+																</v8:item>
+															</Title>
+															<EditMode>EnterOnInput</EditMode>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ТаблицаЛогиновНапоминатьОЗадачеВМоментЗапланированогоНачалаРаботНаСервереКонтекстноеМеню" id="248"/>
+															<ExtendedTooltip name="ТаблицаЛогиновНапоминатьОЗадачеВМоментЗапланированогоНачалаРаботНаСервереРасширеннаяПодсказка" id="249"/>
+														</CheckBoxField>
+														<InputField name="ТаблицаЛогиновКоличествоМинутЗаКотороеНапоминатьОЗадачеДоЗапланированогоНачалаРаботНаСервере" id="250">
+															<DataPath>Объект.ТаблицаЛогинов.КоличествоМинутЗаКотороеНапоминатьОЗадачеДоЗапланированогоНачалаРаботНаСервере</DataPath>
+															<Enabled>false</Enabled>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Количество минут, за которое напоминать о задаче до запланированого начала работ</v8:content>
+																</v8:item>
+															</Title>
+															<EditMode>EnterOnInput</EditMode>
+															<ContextMenu name="ТаблицаЛогиновКоличествоМинутЗаКотороеНапоминатьОЗадачеДоЗапланированогоНачалаРаботНаСервереКонтекстноеМеню" id="251"/>
+															<ExtendedTooltip name="ТаблицаЛогиновКоличествоМинутЗаКотороеНапоминатьОЗадачеДоЗапланированогоНачалаРаботНаСервереРасширеннаяПодсказка" id="252"/>
+														</InputField>
+														<CheckBoxField name="ТаблицаЛогиновНапоминатьОНеобходимостиИзмененияСтатусаВМоментПрибытияНаМестоВыполненияРаботНаСервере" id="253">
+															<DataPath>Объект.ТаблицаЛогинов.НапоминатьОНеобходимостиИзмененияСтатусаВМоментПрибытияНаМестоВыполненияРаботНаСервере</DataPath>
+															<Enabled>false</Enabled>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Напоминать о необходимости изменения статуса в момент прибытия на место выполнения работ</v8:content>
+																</v8:item>
+															</Title>
+															<EditMode>EnterOnInput</EditMode>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ТаблицаЛогиновНапоминатьОНеобходимостиИзмененияСтатусаВМоментПрибытияНаМестоВыполненияРаботНаСервереКонтекстноеМеню" id="254"/>
+															<ExtendedTooltip name="ТаблицаЛогиновНапоминатьОНеобходимостиИзмененияСтатусаВМоментПрибытияНаМестоВыполненияРаботНаСервереРасширеннаяПодсказка" id="255"/>
+														</CheckBoxField>
+														<CheckBoxField name="ТаблицаЛогиновНапоминатьОНеобходимостиИзмененияСтатусаВМоментВыходаИзЗоныМестаВыполненияРаботНаСервере" id="256">
+															<DataPath>Объект.ТаблицаЛогинов.НапоминатьОНеобходимостиИзмененияСтатусаВМоментВыходаИзЗоныМестаВыполненияРаботНаСервере</DataPath>
+															<Enabled>false</Enabled>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Напоминать о необходимости изменения статуса в момент выхода из зоны места выполнения работ</v8:content>
+																</v8:item>
+															</Title>
+															<EditMode>EnterOnInput</EditMode>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ТаблицаЛогиновНапоминатьОНеобходимостиИзмененияСтатусаВМоментВыходаИзЗоныМестаВыполненияРаботНаСервереКонтекстноеМеню" id="257"/>
+															<ExtendedTooltip name="ТаблицаЛогиновНапоминатьОНеобходимостиИзмененияСтатусаВМоментВыходаИзЗоныМестаВыполненияРаботНаСервереРасширеннаяПодсказка" id="258"/>
+														</CheckBoxField>
+														<CheckBoxField name="ТаблицаЛогиновПовторятьНапоминаниеОНовойЗадачеНаСервере" id="259">
+															<DataPath>Объект.ТаблицаЛогинов.ПовторятьНапоминаниеОНовойЗадачеНаСервере</DataPath>
+															<Enabled>false</Enabled>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Повторять напоминание о новой задаче</v8:content>
+																</v8:item>
+															</Title>
+															<EditMode>EnterOnInput</EditMode>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ТаблицаЛогиновПовторятьНапоминаниеОНовойЗадачеНаСервереКонтекстноеМеню" id="260"/>
+															<ExtendedTooltip name="ТаблицаЛогиновПовторятьНапоминаниеОНовойЗадачеНаСервереРасширеннаяПодсказка" id="261"/>
+														</CheckBoxField>
+													</ChildItems>
+												</ColumnGroup>
+												<ColumnGroup name="ГруппаКолонокИнформацияВ1С" id="233">
+													<Visible>false</Visible>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Информация в 1С</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Информация в 1С</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>Horizontal</Group>
+													<ShowInHeader>true</ShowInHeader>
+													<ExtendedTooltip name="ГруппаКолонокИнформацияВ1СРасширеннаяПодсказка" id="234"/>
+													<ChildItems>
+														<InputField name="ТаблицаЛогиновЛогинВ1С" id="187">
+															<DataPath>Объект.ТаблицаЛогинов.ЛогинВ1С</DataPath>
+															<Enabled>false</Enabled>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Логин</v8:content>
+																</v8:item>
+															</Title>
+															<EditMode>EnterOnInput</EditMode>
+															<BackColor>web:LemonChiffon</BackColor>
+															<ContextMenu name="ТаблицаЛогиновЛогинВ1СКонтекстноеМеню" id="188"/>
+															<ExtendedTooltip name="ТаблицаЛогиновЛогинВ1СРасширеннаяПодсказка" id="189"/>
+														</InputField>
+														<InputField name="ТаблицаЛогиновПарольВ1С" id="202">
+															<DataPath>Объект.ТаблицаЛогинов.ПарольВ1С</DataPath>
+															<Enabled>false</Enabled>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Пароль</v8:content>
+																</v8:item>
+															</Title>
+															<EditMode>EnterOnInput</EditMode>
+															<BackColor>web:LemonChiffon</BackColor>
+															<ContextMenu name="ТаблицаЛогиновПарольВ1СКонтекстноеМеню" id="203"/>
+															<ExtendedTooltip name="ТаблицаЛогиновПарольВ1СРасширеннаяПодсказка" id="204"/>
+														</InputField>
+														<InputField name="ТаблицаЛогиновПриоритетВ1С" id="190">
+															<DataPath>Объект.ТаблицаЛогинов.ПриоритетВ1С</DataPath>
+															<Enabled>false</Enabled>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Приоритет</v8:content>
+																</v8:item>
+															</Title>
+															<EditMode>EnterOnInput</EditMode>
+															<Width>10</Width>
+															<BackColor>web:LemonChiffon</BackColor>
+															<ContextMenu name="ТаблицаЛогиновПриоритетВ1СКонтекстноеМеню" id="191"/>
+															<ExtendedTooltip name="ТаблицаЛогиновПриоритетВ1СРасширеннаяПодсказка" id="192"/>
+														</InputField>
+														<CheckBoxField name="ТаблицаЛогиновЗаписыватьТрекПоРасписаниюВ1С" id="262">
+															<DataPath>Объект.ТаблицаЛогинов.ЗаписыватьТрекПоРасписаниюВ1С</DataPath>
+															<Enabled>false</Enabled>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Записывать трек по расписанию</v8:content>
+																</v8:item>
+															</Title>
+															<EditMode>EnterOnInput</EditMode>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ТаблицаЛогиновЗаписыватьТрекПоРасписаниюВ1СКонтекстноеМеню" id="263"/>
+															<ExtendedTooltip name="ТаблицаЛогиновЗаписыватьТрекПоРасписаниюВ1СРасширеннаяПодсказка" id="264"/>
+														</CheckBoxField>
+														<CheckBoxField name="ТаблицаЛогиновЗаписыватьКоординатыСобытийПоРасписаниюВ1С" id="265">
+															<DataPath>Объект.ТаблицаЛогинов.ЗаписыватьКоординатыСобытийПоРасписаниюВ1С</DataPath>
+															<Enabled>false</Enabled>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Записывать координаты событий по расписанию</v8:content>
+																</v8:item>
+															</Title>
+															<EditMode>EnterOnInput</EditMode>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ТаблицаЛогиновЗаписыватьКоординатыСобытийПоРасписаниюВ1СКонтекстноеМеню" id="266"/>
+															<ExtendedTooltip name="ТаблицаЛогиновЗаписыватьКоординатыСобытийПоРасписаниюВ1СРасширеннаяПодсказка" id="267"/>
+														</CheckBoxField>
+														<CheckBoxField name="ТаблицаЛогиновПолучатьИнформациюОТекущемМестонахожденииВ1С" id="268">
+															<DataPath>Объект.ТаблицаЛогинов.ПолучатьИнформациюОТекущемМестонахожденииВ1С</DataPath>
+															<Enabled>false</Enabled>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Получать информацию о текущем местонахождение пользователя</v8:content>
+																</v8:item>
+															</Title>
+															<EditMode>EnterOnInput</EditMode>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ТаблицаЛогиновПолучатьИнформациюОТекущемМестонахожденииВ1СКонтекстноеМеню" id="269"/>
+															<ExtendedTooltip name="ТаблицаЛогиновПолучатьИнформациюОТекущемМестонахожденииВ1СРасширеннаяПодсказка" id="270"/>
+														</CheckBoxField>
+														<CheckBoxField name="ТаблицаЛогиновНапоминатьОЗадачеВМоментЗапланированогоНачалаРаботВ1С" id="271">
+															<DataPath>Объект.ТаблицаЛогинов.НапоминатьОЗадачеВМоментЗапланированогоНачалаРаботВ1С</DataPath>
+															<Enabled>false</Enabled>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Напоминать о задаче в момент запланированого начала работ</v8:content>
+																</v8:item>
+															</Title>
+															<EditMode>EnterOnInput</EditMode>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ТаблицаЛогиновНапоминатьОЗадачеВМоментЗапланированогоНачалаРаботВ1СКонтекстноеМеню" id="272"/>
+															<ExtendedTooltip name="ТаблицаЛогиновНапоминатьОЗадачеВМоментЗапланированогоНачалаРаботВ1СРасширеннаяПодсказка" id="273"/>
+														</CheckBoxField>
+														<InputField name="ТаблицаЛогиновКоличествоМинутЗаКотороеНапоминатьОЗадачеДоЗапланированогоНачалаРаботВ1С" id="274">
+															<DataPath>Объект.ТаблицаЛогинов.КоличествоМинутЗаКотороеНапоминатьОЗадачеДоЗапланированогоНачалаРаботВ1С</DataPath>
+															<Enabled>false</Enabled>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Количество минут, за которое напоминать о задаче до запланированого начала работ</v8:content>
+																</v8:item>
+															</Title>
+															<EditMode>EnterOnInput</EditMode>
+															<ContextMenu name="ТаблицаЛогиновКоличествоМинутЗаКотороеНапоминатьОЗадачеДоЗапланированогоНачалаРаботВ1СКонтекстноеМеню" id="275"/>
+															<ExtendedTooltip name="ТаблицаЛогиновКоличествоМинутЗаКотороеНапоминатьОЗадачеДоЗапланированогоНачалаРаботВ1СРасширеннаяПодсказка" id="276"/>
+														</InputField>
+														<CheckBoxField name="ТаблицаЛогиновНапоминатьОНеобходимостиИзмененияСтатусаВМоментПрибытияНаМестоВыполненияРаботВ1С" id="277">
+															<DataPath>Объект.ТаблицаЛогинов.НапоминатьОНеобходимостиИзмененияСтатусаВМоментПрибытияНаМестоВыполненияРаботВ1С</DataPath>
+															<Enabled>false</Enabled>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Напоминать о необходимости изменения статуса в момент прибытия на место выполнения работ</v8:content>
+																</v8:item>
+															</Title>
+															<EditMode>EnterOnInput</EditMode>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ТаблицаЛогиновНапоминатьОНеобходимостиИзмененияСтатусаВМоментПрибытияНаМестоВыполненияРаботВ1СКонтекстноеМеню" id="278"/>
+															<ExtendedTooltip name="ТаблицаЛогиновНапоминатьОНеобходимостиИзмененияСтатусаВМоментПрибытияНаМестоВыполненияРаботВ1СРасширеннаяПодсказка" id="279"/>
+														</CheckBoxField>
+														<CheckBoxField name="ТаблицаЛогиновНапоминатьОНеобходимостиИзмененияСтатусаВМоментВыходаИзЗоныМестаВыполненияРаботВ1С" id="280">
+															<DataPath>Объект.ТаблицаЛогинов.НапоминатьОНеобходимостиИзмененияСтатусаВМоментВыходаИзЗоныМестаВыполненияРаботВ1С</DataPath>
+															<Enabled>false</Enabled>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Напоминать о необходимости изменения статуса в момент выхода из зоны места выполнения работ</v8:content>
+																</v8:item>
+															</Title>
+															<EditMode>EnterOnInput</EditMode>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ТаблицаЛогиновНапоминатьОНеобходимостиИзмененияСтатусаВМоментВыходаИзЗоныМестаВыполненияРаботВ1СКонтекстноеМеню" id="281"/>
+															<ExtendedTooltip name="ТаблицаЛогиновНапоминатьОНеобходимостиИзмененияСтатусаВМоментВыходаИзЗоныМестаВыполненияРаботВ1СРасширеннаяПодсказка" id="282"/>
+														</CheckBoxField>
+														<CheckBoxField name="ТаблицаЛогиновПовторятьНапоминаниеОНовойЗадачеВ1С" id="283">
+															<DataPath>Объект.ТаблицаЛогинов.ПовторятьНапоминаниеОНовойЗадачеВ1С</DataPath>
+															<Enabled>false</Enabled>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Повторять напоминание о новой задаче</v8:content>
+																</v8:item>
+															</Title>
+															<EditMode>EnterOnInput</EditMode>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ТаблицаЛогиновПовторятьНапоминаниеОНовойЗадачеВ1СКонтекстноеМеню" id="284"/>
+															<ExtendedTooltip name="ТаблицаЛогиновПовторятьНапоминаниеОНовойЗадачеВ1СРасширеннаяПодсказка" id="285"/>
+														</CheckBoxField>
+													</ChildItems>
+												</ColumnGroup>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+					</ChildItems>
+				</Page>
+				<Page name="Справочники" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Справочники</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Справочники</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СправочникиРасширеннаяПодсказка" id="8"/>
+					<ChildItems>
+						<Button name="ВыгрузитьПользователей" id="68">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ВыгрузитьПользователей</CommandName>
+							<ExtendedTooltip name="ВыгрузитьПользователейРасширеннаяПодсказка" id="69"/>
+						</Button>
+						<Button name="ВыгрузитьПричиныЗавершенияЗадачМобильнымСотрудникам" id="70">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ВыгрузитьПричиныЗавершенияЗадачМобильнымСотрудникам</CommandName>
+							<ExtendedTooltip name="ВыгрузитьПричиныЗавершенияЗадачМобильнымСотрудникамРасширеннаяПодсказка" id="71"/>
+						</Button>
+						<LabelDecoration name="Декорация1" id="235">
+							<ContextMenu name="Декорация1КонтекстноеМеню" id="236"/>
+							<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="237"/>
+						</LabelDecoration>
+						<Button name="ВыгрузитьВсеСправочники" id="72">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ВыгрузитьВсеСправочники</CommandName>
+							<ExtendedTooltip name="ВыгрузитьВсеСправочникиРасширеннаяПодсказка" id="73"/>
+						</Button>
+					</ChildItems>
+				</Page>
+				<Page name="Отладка" id="9">
+					<Visible>false</Visible>
+					<Enabled>false</Enabled>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отладка</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отладка</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ОтладкаРасширеннаяПодсказка" id="10"/>
+					<ChildItems>
+						<CheckBoxField name="ВключитьАвтоматическийОбмен" id="74">
+							<DataPath>Объект.ВключитьАвтоматическийОбмен</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ВключитьАвтоматическийОбменКонтекстноеМеню" id="75"/>
+							<ExtendedTooltip name="ВключитьАвтоматическийОбменРасширеннаяПодсказка" id="76"/>
+						</CheckBoxField>
+						<CheckBoxField name="ВыводитьОтладочныеСообщения" id="77">
+							<DataPath>Объект.ВыводитьОтладочныеСообщения</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ВыводитьОтладочныеСообщенияКонтекстноеМеню" id="78"/>
+							<ExtendedTooltip name="ВыводитьОтладочныеСообщенияРасширеннаяПодсказка" id="79"/>
+						</CheckBoxField>
+						<Button name="ОбщиеНастройкиПользователей" id="80">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ОбщиеНастройкиПользователей</CommandName>
+							<ExtendedTooltip name="ОбщиеНастройкиПользователейРасширеннаяПодсказка" id="81"/>
+						</Button>
+						<UsualGroup name="ГруппаКомандОтладки" id="94">
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа команд отладки</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="ГруппаКомандОтладкиРасширеннаяПодсказка" id="95"/>
+							<ChildItems>
+								<Button name="ОчиститьКуки" id="82">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ОчиститьКуки</CommandName>
+									<ExtendedTooltip name="ОчиститьКукиРасширеннаяПодсказка" id="83"/>
+								</Button>
+								<Button name="ПолучитьДанныеСервера" id="84">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ПолучитьДанныеСервера</CommandName>
+									<ExtendedTooltip name="ПолучитьДанныеСервераРасширеннаяПодсказка" id="85"/>
+								</Button>
+								<Button name="ОтправитьДанныеНаСервер" id="86">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ОтправитьДанныеНаСервер</CommandName>
+									<ExtendedTooltip name="ОтправитьДанныеНаСерверРасширеннаяПодсказка" id="87"/>
+								</Button>
+								<Button name="ОтправитьПолучитьДанные" id="88">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ОтправитьПолучитьДанные</CommandName>
+									<ExtendedTooltip name="ОтправитьПолучитьДанныеРасширеннаяПодсказка" id="89"/>
+								</Button>
+								<Button name="ПолучитьДанныеОбАктивностиМобильныхСотрудников" id="90">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ПолучитьДанныеОбАктивностиМобильныхСотрудников</CommandName>
+									<ExtendedTooltip name="ПолучитьДанныеОбАктивностиМобильныхСотрудниковРасширеннаяПодсказка" id="91"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<Button name="РедактироватьНастройки" id="92">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.РедактироватьНастройки</CommandName>
+							<ExtendedTooltip name="РедактироватьНастройкиРасширеннаяПодсказка" id="93"/>
+						</Button>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.атл_НастройкаОбменаДаннымиУМС</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ЗаписьРегистраатл_НастройкиПодсистемыУМС" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запись регистраатл настройки подсистемы УМС</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.атл_НастройкиПодсистемыУМС</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="СписокПользователи" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список пользователи</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>~СписокПользователи.IsFolder</Field>
+				<Field>СписокПользователи.Code</Field>
+				<Field>СписокПользователи.Description</Field>
+				<Field>СписокПользователи.Ref</Field>
+				<Field>СписокПользователи.ПользовательМК</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	Пользователи.Код,
+	Пользователи.Наименование,
+	Пользователи.Ссылка,
+	атл_НастройкиПодключенияМобильныхСотрудников.ЯвляетсяПользователемМК КАК ПользовательМК,
+	ВЫБОР
+		КОГДА атл_НастройкиПодключенияМобильныхСотрудников.ЯвляетсяПользователемМК
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК ИндексКартинки
+ИЗ
+	Справочник.Пользователи КАК Пользователи
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.атл_НастройкиПодключенияМобильныхСотрудников КАК атл_НастройкиПодключенияМобильныхСотрудников
+		ПО (атл_НастройкиПодключенияМобильныхСотрудников.Пользователь = Пользователи.Ссылка)</QueryText>
+				<MainTable>Catalog.Пользователи</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ЗарегистрироватьИнформационнуюБазуНаСервере" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зарегистрировать информационную базу на сервере</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЕстьПодключениеКСерверу" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Есть подключение к серверу</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТребуетсяПереподключение" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Требуется переподключение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ФоновыйОбмен" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Фоновый обмен</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="МаксимальноеКоличествоПопытокПодключения" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Максимальное количество попыток подключения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТаблицаКлючейШифрования" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица ключей шифрования</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ВерсияКлючаШифрования" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Версия ключа шифрования</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="КлючШифрования" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ключ шифрования</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЭлементКлючШифрования" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Элемент ключ шифрования</v8:content>
+						</v8:item>
+					</Title>
+					<Type/>
+				</Column>
+				<Column name="КлючМожетИспользоваться" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ключ может использоваться</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТаблицаКлючейШифрованияОЛЕ" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица ключей шифрования ОЛЕ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ВерсияКлючаШифрования" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Версия ключа шифрования</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="КлючШифрования" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ключ шифрования</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЭлементКлючШифрования" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Элемент ключ шифрования</v8:content>
+						</v8:item>
+					</Title>
+					<Type/>
+				</Column>
+				<Column name="КлючМожетИспользоваться" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ключ может использоваться</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="САКлюч" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>САКлюч</v8:content>
+						</v8:item>
+					</Title>
+					<Type/>
+				</Column>
+				<Column name="Ключ" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ключ</v8:content>
+						</v8:item>
+					</Title>
+					<Type/>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ЧасовойПояс" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Часовой пояс</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВремяЗапросаИндексногоПакета" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Время запроса индексного пакета</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОтправленЗапросОКоличествеДоступныхЛогинов" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправлен запрос о количестве доступных логинов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДатаПолученияПоследнегоПакета" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата получения последнего пакета</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИменаФайловПакетовПриОтладке" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имена файлов пакетов при отладке</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КоличествоЗарегистрированныхОшибок" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество зарегистрированных ошибок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КоличествоОтправленныхПакетов" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество отправленных пакетов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КоличествоПолученныхПакетов" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество полученных пакетов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ИзменитьНастройки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить настройки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИзменитьНастройки</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗарегистрироватьИнформационнуюБазуНаСервере" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зарегистрировать информационную базу на сервере</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зарегистрировать информационную базу на сервере</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗарегистрироватьИнформационнуюБазуНаСервере</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПолучитьИнформациюОСостоянииУчетнойЗаписи" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить информацию о состоянии учетной записи</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить информацию о состоянии учетной записи</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПолучитьИнформациюОСостоянииУчетнойЗаписиНаКлиенте</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗапуститьОбменДанными" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запустить обмен данными</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запустить обмен данными</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗапуститьОбменДанными</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВыгрузитьПользователей" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить пользователей</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить пользователей</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыгрузитьПользователей</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВыгрузитьПричиныЗавершенияЗадачМобильнымСотрудникам" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить причины завершения задач мобильным сотрудникам</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить причины завершения задач мобильным сотрудникам</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыгрузитьПричиныЗавершенияЗадачМобильнымСотрудникам</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВыгрузитьВсеСправочники" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить все справочники</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить все справочники</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыгрузитьВсеСправочники</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОбщиеНастройкиПользователей" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить общие настройки пользователей</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Общие настройки пользователей</v8:content>
+				</v8:item>
+			</ToolTip>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОчиститьКуки" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить куки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить куки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПолучитьДанныеСервера" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить данные сервера</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить данные сервера</v8:content>
+				</v8:item>
+			</ToolTip>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОтправитьДанныеНаСервер" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить данные на сервер</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить данные на сервер</v8:content>
+				</v8:item>
+			</ToolTip>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОтправитьПолучитьДанные" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить получить данные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить получить данные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПолучитьДанныеОбАктивностиМобильныхСотрудников" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить данные об активности мобильных сотрудников</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить данные об активности мобильных сотрудников</v8:content>
+				</v8:item>
+			</ToolTip>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="РедактироватьНастройки" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Редактировать настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Редактировать настройки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="НастройкаПодключенияМК" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки мобильного сотрудника</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки мобильного сотрудника</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НастройкаПодключенияМК</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗаполнитьСписокПользователейПодсистемыУМС" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить список</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить список пользователей подсистемы УМС</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьСписокПользователейПодсистемыУМС</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СинхронизироватьДанныеССервером" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Синхронизировать данные с сервером</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Синхронизировать данные с сервером</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ВыполнитьОбменДанными</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СинхронизироватьДанныеССервером</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="РасширеннаяНастройка" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расширенная настройка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расширенная настройка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>РасширеннаяНастройка</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОбновитьНастройкиУВсехПользователей" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить действие "Обновить настройки" у всех пользователей</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить настройки у всех пользователей</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОбновитьНастройкиУВсехПользователей</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

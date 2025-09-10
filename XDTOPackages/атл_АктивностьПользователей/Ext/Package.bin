@@ -1,0 +1,34 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="users_activities_mwms">
+	<objectType name="users_activities" ordered="false">
+		<property name="sync_id" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:int" variety="Atomic"/>
+		</property>
+		<property xmlns:d3p1="users_activities_mwms" name="user" type="d3p1:user" lowerBound="0" upperBound="-1" nillable="true"/>
+	</objectType>
+	<objectType name="user" ordered="false">
+		<property name="external_id" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="50"/>
+		</property>
+		<property xmlns:d3p1="users_activities_mwms" name="activity" type="d3p1:activity" lowerBound="0" upperBound="-1" nillable="true"/>
+	</objectType>
+	<objectType name="activity" ordered="false">
+		<property name="time" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:dateTime" variety="Atomic" itemType="xs:dateTime"/>
+		</property>
+		<property name="latitude" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic"/>
+		</property>
+		<property name="longitude" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic"/>
+		</property>
+		<property name="gps_location" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic"/>
+		</property>
+		<property name="accuracy" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic"/>
+		</property>
+		<property name="time_zone" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:int" variety="Atomic" totalDigits="2"/>
+		</property>
+	</objectType>
+</package>

@@ -1,0 +1,35 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="response_update_users_mwms">
+	<objectType name="error" ordered="false">
+		<property name="code" upperBound="1">
+			<typeDef xsi:type="ValueType" base="xs:int" variety="Atomic"/>
+		</property>
+		<property name="description">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="200"/>
+		</property>
+	</objectType>
+	<objectType name="response_update_users" ordered="false">
+		<property xmlns:d3p1="response_update_users_mwms" name="users" type="d3p1:users" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="response_update_users_mwms" name="error_update_users" type="d3p1:error" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="user" ordered="false">
+		<property name="uid1c">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="50"/>
+		</property>
+		<property name="action">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="20"/>
+		</property>
+		<property name="login_update" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:int" variety="Atomic"/>
+		</property>
+		<property name="pass_update" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:int" variety="Atomic"/>
+		</property>
+		<property name="finalize_update" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:int" variety="Atomic"/>
+		</property>
+		<property xmlns:d3p1="response_update_users_mwms" name="error" type="d3p1:error" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="users">
+		<property xmlns:d3p1="response_update_users_mwms" name="user" type="d3p1:user" lowerBound="0" upperBound="-1" nillable="true"/>
+	</objectType>
+</package>

@@ -1,0 +1,565 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="ДеревоПользователей" id="1">
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<EnableStartDrag>true</EnableStartDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>ДеревоПользователей</DataPath>
+			<RowPictureDataPath>ДеревоПользователей.DefaultPicture</RowPictureDataPath>
+			<CommandSet>
+				<ExcludedCommand>Refresh</ExcludedCommand>
+			</CommandSet>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<ContextMenu name="ДеревоПользователейКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="ДеревоПользователейКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<ButtonGroup name="ДеревоПользователейГруппа1" id="29">
+						<ExtendedTooltip name="ДеревоПользователейГруппа1РасширеннаяПодсказка" id="30"/>
+						<ChildItems>
+							<Button name="ТолькоАктивные" id="35">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ТолькоАктивные</CommandName>
+								<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+								<ExtendedTooltip name="ТолькоАктивныеРасширеннаяПодсказка" id="36"/>
+							</Button>
+							<Button name="ДатаПоследнейАктивности" id="33">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ДатаПоследнейАктивности</CommandName>
+								<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+								<ExtendedTooltip name="ДатаПоследнейАктивностиРасширеннаяПодсказка" id="34"/>
+							</Button>
+							<Button name="ДеревоПользователейОбновить" id="41">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.Обновить</CommandName>
+								<ExtendedTooltip name="ДеревоПользователейОбновитьРасширеннаяПодсказка" id="42"/>
+							</Button>
+							<Button name="ПоказатьНаКарте" id="37">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ПоказатьНаКарте</CommandName>
+								<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+								<ExtendedTooltip name="ПоказатьНаКартеРасширеннаяПодсказка" id="38"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ДеревоПользователейРасширеннаяПодсказка" id="4"/>
+			<SearchStringAddition name="ДеревоПользователейСтрокаПоиска" id="5">
+				<AdditionSource>
+					<Item>ДеревоПользователей</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДеревоПользователейСтрокаПоискаКонтекстноеМеню" id="8"/>
+				<ExtendedTooltip name="ДеревоПользователейСтрокаПоискаРасширеннаяПодсказка" id="9"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ДеревоПользователейСостояниеПросмотра" id="10">
+				<AdditionSource>
+					<Item>ДеревоПользователей</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДеревоПользователейСостояниеПросмотраКонтекстноеМеню" id="13"/>
+				<ExtendedTooltip name="ДеревоПользователейСостояниеПросмотраРасширеннаяПодсказка" id="14"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ДеревоПользователейУправлениеПоиском" id="15">
+				<AdditionSource>
+					<Item>ДеревоПользователей</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ДеревоПользователейУправлениеПоискомКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="ДеревоПользователейУправлениеПоискомРасширеннаяПодсказка" id="19"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">ДеревоПользователейВыбор</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="ДеревоПользователейПользователь" id="20">
+					<DataPath>ДеревоПользователей.Пользователь</DataPath>
+					<ContextMenu name="ДеревоПользователейПользовательКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ДеревоПользователейПользовательРасширеннаяПодсказка" id="22"/>
+				</LabelField>
+				<PictureField name="ДеревоПользователейПользовательАктивенМК" id="23">
+					<DataPath>ДеревоПользователей.ПользовательАктивенМКРезультат</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>МК</v8:content>
+						</v8:item>
+					</Title>
+					<ValuesPicture>
+						<xr:Ref>CommonPicture.атл_СтатусыАктивности</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</ValuesPicture>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="ДеревоПользователейПользовательАктивенМККонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ДеревоПользователейПользовательАктивенМКРасширеннаяПодсказка" id="25"/>
+				</PictureField>
+				<LabelField name="ДеревоПользователейДатаПоследнейАктивности" id="26">
+					<DataPath>ДеревоПользователей.ДатаПоследнейАктивности</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Активность</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДеревоПользователейДатаПоследнейАктивностиКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ДеревоПользователейДатаПоследнейАктивностиРасширеннаяПодсказка" id="28"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ДеревоПользователей" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дерево пользователей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>ДеревоПользователей.Пользователь</Field>
+				<Field>ДеревоПользователей.ПользовательАктивенМКРезультат</Field>
+				<Field>ДеревоПользователей.ЯвляетсяПользователемМК</Field>
+				<Field>ДеревоПользователей.ЯвляетсяПользователемУСС</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ВложенныйЗапрос.ЯвляетсяПользователемБД,
+	ВложенныйЗапрос.ЯвляетсяПользователемМК,
+	ВложенныйЗапрос.Ссылка КАК Пользователь,
+	0 КАК Флаг,
+	ВЫБОР
+		КОГДА ВложенныйЗапрос.ПользовательАктивенМК = ЛОЖЬ
+				И ВложенныйЗапрос.ЯвляетсяПользователемМК = ИСТИНА
+			ТОГДА 0
+		ИНАЧЕ ВЫБОР
+				КОГДА ВложенныйЗапрос.ПользовательАктивенМК = ИСТИНА
+					ТОГДА 1
+				ИНАЧЕ 2
+			КОНЕЦ
+	КОНЕЦ КАК ПользовательАктивенМКРезультат,
+	ВЫБОР
+		КОГДА ВложенныйЗапрос.ПользовательАктивен1С = ЛОЖЬ
+				И ВложенныйЗапрос.ЯвляетсяПользователемБД = ИСТИНА
+			ТОГДА 0
+		ИНАЧЕ ВЫБОР
+				КОГДА ВложенныйЗапрос.ПользовательАктивен1С = ИСТИНА
+					ТОГДА 1
+				ИНАЧЕ 2
+			КОНЕЦ
+	КОНЕЦ КАК ПользовательАктивен1СРезультат,
+	ВложенныйЗапрос.ПользовательАктивен,
+	ВложенныйЗапрос.ЯвляетсяПользователемУСС,
+	ВложенныйЗапрос.ДатаПоследнейАктивности,
+	СУММА(ЕСТЬNULL(ВложенныйЗапросКоличествоНепрочитанныхСообщений.Количество, 0)) КАК КоличествоНепрочитанныхСообщений
+ИЗ
+	(ВЫБРАТЬ
+		Пользователи.Ссылка КАК Ссылка,
+		ВЫБОР
+			КОГДА ВложенныйЗапросДатаПоследнейАктивности1С.ДатаПоследнейАктивности ЕСТЬ NULL 
+				ТОГДА ЛОЖЬ
+			ИНАЧЕ ИСТИНА
+		КОНЕЦ КАК ЯвляетсяПользователемБД,
+		ЕСТЬNULL(ВложенныйЗапросПользователиМК.ЯвляетсяПользователемМК, ЛОЖЬ) КАК ЯвляетсяПользователемМК,
+		ЕСТЬNULL(ВложенныйЗапросАктивныеПользователиМК.ПользовательМКАктивен, ЛОЖЬ) КАК ПользовательАктивенМК,
+		ЕСТЬNULL(ВложенныйЗапросАктивныеПользователи1С.Пользователь1САктивен, ЛОЖЬ) КАК ПользовательАктивен1С,
+		ВЫБОР
+			КОГДА ЕСТЬNULL(ВложенныйЗапросАктивныеПользователиМК.ПользовательМКАктивен, ЛОЖЬ)
+					ИЛИ ЕСТЬNULL(ВложенныйЗапросАктивныеПользователи1С.Пользователь1САктивен, ЛОЖЬ)
+				ТОГДА ИСТИНА
+			ИНАЧЕ ЛОЖЬ
+		КОНЕЦ КАК ПользовательАктивен,
+		ЕСТЬNULL(ВложенныйЗапросПользователиБД.ЯвляетсяПользователемУСС, ЛОЖЬ) КАК ЯвляетсяПользователемУСС,
+		ВЫБОР
+			КОГДА ЕСТЬNULL(ВложенныйЗапросДатаПоследнейАктивности1С.ДатаПоследнейАктивности, &amp;ПустаяДата) &gt; ЕСТЬNULL(ВложенныйЗапросДатаПоследнейАктивностиМК.ДатаПоследнейАктивности, &amp;ПустаяДата)
+				ТОГДА ЕСТЬNULL(ВложенныйЗапросДатаПоследнейАктивности1С.ДатаПоследнейАктивности, &amp;ПустаяДата)
+			ИНАЧЕ ЕСТЬNULL(ВложенныйЗапросДатаПоследнейАктивностиМК.ДатаПоследнейАктивности, &amp;ПустаяДата)
+		КОНЕЦ КАК ДатаПоследнейАктивности
+	ИЗ
+		Справочник.Пользователи КАК Пользователи
+			ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+				ПользователиИБ.Ссылка КАК Пользователь,
+				ИСТИНА КАК ЯвляетсяПользователемБД,
+				ИСТИНА КАК ЯвляетсяПользователемУСС
+			ИЗ
+				Справочник.Пользователи КАК ПользователиИБ) КАК ВложенныйЗапросПользователиБД
+			ПО Пользователи.Ссылка = ВложенныйЗапросПользователиБД.Пользователь
+			ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+				атл_НастройкиПодключенияМобильныхСотрудников.Пользователь КАК Пользователь,
+				атл_НастройкиПодключенияМобильныхСотрудников.ЯвляетсяПользователемМК КАК ЯвляетсяПользователемМК
+			ИЗ
+				РегистрСведений.атл_НастройкиПодключенияМобильныхСотрудников КАК атл_НастройкиПодключенияМобильныхСотрудников
+			ГДЕ
+				атл_НастройкиПодключенияМобильныхСотрудников.ЯвляетсяПользователемМК = ИСТИНА) КАК ВложенныйЗапросПользователиМК
+			ПО Пользователи.Ссылка = ВложенныйЗапросПользователиМК.Пользователь
+			ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ РАЗЛИЧНЫЕ
+				атл_АктивностьПользователей.Пользователь КАК Пользователь,
+				ИСТИНА КАК ПользовательМКАктивен,
+				атл_АктивностьПользователей.ДатаПоследнейАктивности КАК ДатаПоследнейАктивности
+			ИЗ
+				РегистрСведений.атл_АктивностьПользователей КАК атл_АктивностьПользователей
+			ГДЕ
+				атл_АктивностьПользователей.ДатаПоследнейАктивности &gt;= &amp;ДатаДопустимойПоследнейАктивности
+				И атл_АктивностьПользователей.МК = ИСТИНА) КАК ВложенныйЗапросАктивныеПользователиМК
+			ПО Пользователи.Ссылка = ВложенныйЗапросАктивныеПользователиМК.Пользователь
+			ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ РАЗЛИЧНЫЕ
+				атл_АктивностьПользователей.Пользователь КАК Пользователь,
+				атл_АктивностьПользователей.ДатаПоследнейАктивности КАК ДатаПоследнейАктивности
+			ИЗ
+				РегистрСведений.атл_АктивностьПользователей КАК атл_АктивностьПользователей
+			ГДЕ
+				атл_АктивностьПользователей.МК = ИСТИНА) КАК ВложенныйЗапросДатаПоследнейАктивностиМК
+			ПО Пользователи.Ссылка = ВложенныйЗапросДатаПоследнейАктивностиМК.Пользователь
+			ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+				атл_АктивностьПользователей.Пользователь КАК Пользователь,
+				ИСТИНА КАК Пользователь1САктивен,
+				атл_АктивностьПользователей.ДатаПоследнейАктивности КАК ДатаПоследнейАктивности
+			ИЗ
+				РегистрСведений.атл_АктивностьПользователей КАК атл_АктивностьПользователей
+			ГДЕ
+				атл_АктивностьПользователей.МК = ЛОЖЬ
+				И атл_АктивностьПользователей.ДатаПоследнейАктивности &gt;= &amp;ДатаДопустимойПоследнейАктивности) КАК ВложенныйЗапросАктивныеПользователи1С
+			ПО Пользователи.Ссылка = ВложенныйЗапросАктивныеПользователи1С.Пользователь
+			ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+				атл_АктивностьПользователей.Пользователь КАК Пользователь,
+				атл_АктивностьПользователей.ДатаПоследнейАктивности КАК ДатаПоследнейАктивности
+			ИЗ
+				РегистрСведений.атл_АктивностьПользователей КАК атл_АктивностьПользователей
+			ГДЕ
+				атл_АктивностьПользователей.МК = ЛОЖЬ) КАК ВложенныйЗапросДатаПоследнейАктивности1С
+			ПО Пользователи.Ссылка = ВложенныйЗапросДатаПоследнейАктивности1С.Пользователь
+	ГДЕ
+		Пользователи.Ссылка &lt;&gt; &amp;ТекущийПользователь) КАК ВложенныйЗапрос
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			атл_Сообщения.Отправитель КАК Отправитель,
+			СУММА(1) КАК Количество
+		ИЗ
+			РегистрСведений.атл_Сообщения КАК атл_Сообщения
+		ГДЕ
+			атл_Сообщения.ДатаПрочтения = &amp;ПустаяДата
+			И атл_Сообщения.Получатель = &amp;ТекущийПользователь
+			И НЕ атл_Сообщения.УдаленоПолучателем
+			И НЕ(атл_Сообщения.ПолучательМК
+						И атл_Сообщения.Получатель = &amp;ТекущийПользователь)
+			И НЕ атл_Сообщения.Получатель = атл_Сообщения.Отправитель
+		
+		СГРУППИРОВАТЬ ПО
+			атл_Сообщения.Отправитель) КАК ВложенныйЗапросКоличествоНепрочитанныхСообщений
+		ПО ВложенныйЗапрос.Ссылка = ВложенныйЗапросКоличествоНепрочитанныхСообщений.Отправитель
+ГДЕ
+	ВЫБОР
+			КОГДА &amp;ТолькоАктивные
+				ТОГДА ВложенныйЗапрос.ПользовательАктивен = ИСТИНА
+			ИНАЧЕ ВложенныйЗапрос.ПользовательАктивен = ЛОЖЬ
+					ИЛИ ВложенныйЗапрос.ПользовательАктивен = ИСТИНА
+		КОНЕЦ
+	И  ВложенныйЗапрос.ЯвляетсяПользователемМК = ИСТИНА
+		И НЕ ВложенныйЗапрос.ДатаПоследнейАктивности = &amp;ПустаяДата
+
+СГРУППИРОВАТЬ ПО
+	ВложенныйЗапрос.ЯвляетсяПользователемБД,
+	ВложенныйЗапрос.ЯвляетсяПользователемМК,
+	ВложенныйЗапрос.Ссылка,
+	ВложенныйЗапрос.ПользовательАктивен,
+	ВложенныйЗапрос.ЯвляетсяПользователемУСС,
+	ВложенныйЗапрос.ДатаПоследнейАктивности,
+	ВЫБОР
+		КОГДА ВложенныйЗапрос.ПользовательАктивенМК = ЛОЖЬ
+				И ВложенныйЗапрос.ЯвляетсяПользователемМК = ИСТИНА
+			ТОГДА 0
+		ИНАЧЕ ВЫБОР
+				КОГДА ВложенныйЗапрос.ПользовательАктивенМК = ИСТИНА
+					ТОГДА 1
+				ИНАЧЕ 2
+			КОНЕЦ
+	КОНЕЦ,
+	ВЫБОР
+		КОГДА ВложенныйЗапрос.ПользовательАктивен1С = ЛОЖЬ
+				И ВложенныйЗапрос.ЯвляетсяПользователемБД = ИСТИНА
+			ТОГДА 0
+		ИНАЧЕ ВЫБОР
+				КОГДА ВложенныйЗапрос.ПользовательАктивен1С = ИСТИНА
+					ТОГДА 1
+				ИНАЧЕ 2
+			КОНЕЦ
+	КОНЕЦ</QueryText>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Пользователь</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:item>
+							<dcsset:selection/>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ЯвляетсяПользователемМК</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ЯвляетсяПользователемУСС</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветФона</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">#C8C8C8</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ТекущийПользователь" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущий пользователь</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДатаПоследнейАктивности" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата последней активности</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Save>
+				<Field>ДатаПоследнейАктивности</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ОтборПоВидуАктивности" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отбор по виду активности</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТолькоАктивные" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Только активные</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Save>
+				<Field>ТолькоАктивные</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ШиротаАдреса" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Широта адреса</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>20</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДолготаАдреса" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Долгота адреса</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>20</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Контрагент" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагент</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ДатаПоследнейАктивности" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата последней активности</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата последней активности</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ИзменитьШрифт</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ДатаПоследнейАктивности</Action>
+			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ТолькоАктивные" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Только активные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Только активные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.атл_СтатусыАктивностиУжатые</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ТолькоАктивные</Action>
+			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПоказатьНаКарте" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать на карте</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать на карте</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.атл_Местонахождение</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПоказатьНаКарте</Action>
+			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Обновить" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Обновить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="Контрагент">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="ШиротаАдреса">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>20</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="ДолготаАдреса">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>20</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

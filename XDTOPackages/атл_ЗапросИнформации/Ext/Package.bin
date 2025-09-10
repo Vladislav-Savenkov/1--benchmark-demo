@@ -1,0 +1,13 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="request_data_mwms">
+	<objectType name="request_data" ordered="false">
+		<property name="external_id">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="50"/>
+		</property>
+		<property name="type">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="20"/>
+		</property>
+		<property name="create_datetime">
+			<typeDef xsi:type="ValueType" base="xs:dateTime" variety="Atomic"/>
+		</property>
+	</objectType>
+</package>

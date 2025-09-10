@@ -1,0 +1,239 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="task_mwms">
+	<valueType name="address" variety="Atomic">
+		<typeDef base="xs:string" variety="Atomic"/>
+	</valueType>
+	<valueType name="external_id" variety="Atomic">
+		<typeDef base="xs:string" variety="Atomic" maxLength="50"/>
+	</valueType>
+	<valueType name="рhone" variety="Atomic">
+		<typeDef base="xs:string" variety="Atomic" maxLength="50"/>
+	</valueType>
+	<objectType name="author">
+		<property xmlns:d3p1="task_mwms" name="external_id" type="d3p1:external_id"/>
+		<property name="name">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="100"/>
+		</property>
+	</objectType>
+	<objectType name="client" ordered="false">
+		<property xmlns:d3p1="task_mwms" name="external_id" type="d3p1:external_id"/>
+		<property name="name">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="100"/>
+		</property>
+		<property xmlns:d3p1="task_mwms" name="department" type="d3p1:department" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="comment" ordered="false">
+		<property name="id">
+			<typeDef xsi:type="ValueType" base="xs:int" variety="Atomic" totalDigits="10"/>
+		</property>
+		<property name="db_id">
+			<typeDef xsi:type="ValueType" base="xs:long" variety="Atomic" totalDigits="15"/>
+		</property>
+		<property name="text" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic"/>
+		</property>
+		<property xmlns:d3p1="task_mwms" name="author" type="d3p1:author" lowerBound="0"/>
+		<property xmlns:d3p1="task_mwms" name="creation" type="d3p1:date_coordinates" lowerBound="0"/>
+		<property xmlns:d3p1="task_mwms" name="read" type="d3p1:date_coordinates" lowerBound="0"/>
+		<property xmlns:d3p1="task_mwms" name="file" type="d3p1:file" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="coordinates" ordered="false">
+		<property xmlns:d3p1="task_mwms" name="address" type="d3p1:address" lowerBound="0" nillable="true"/>
+		<property name="latitude" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="20"/>
+		</property>
+		<property name="longitude" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="20"/>
+		</property>
+	</objectType>
+	<objectType name="date_coordinates" ordered="false">
+		<property name="datetime" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:dateTime" variety="Atomic"/>
+		</property>
+		<property name="latitude" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="20"/>
+		</property>
+		<property name="longitude" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="20"/>
+		</property>
+	</objectType>
+	<objectType name="department">
+		<property xmlns:d3p1="task_mwms" name="external_id" type="d3p1:external_id"/>
+		<property name="name">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="100"/>
+		</property>
+	</objectType>
+	<objectType name="task" ordered="false">
+		<property xmlns:d3p1="task_mwms" name="external_id" type="d3p1:external_id"/>
+		<property xmlns:d3p1="task_mwms" name="task_body" type="d3p1:task_body" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="task_mwms" name="comment" type="d3p1:comment" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="task_body" ordered="false">
+		<property name="number" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="20"/>
+		</property>
+		<property name="order_number" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="20"/>
+		</property>
+		<property name="verification_required" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:int" variety="Atomic" totalDigits="1"/>
+		</property>
+		<property xmlns:d3p1="task_mwms" name="client" type="d3p1:client" lowerBound="0"/>
+		<property name="contact_name" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="100"/>
+		</property>
+		<property xmlns:d3p1="task_mwms" name="contact_phone1" type="d3p1:рhone" lowerBound="0"/>
+		<property xmlns:d3p1="task_mwms" name="contact_phone2" type="d3p1:рhone" lowerBound="0"/>
+		<property xmlns:d3p1="task_mwms" name="contact_phone3" type="d3p1:рhone" lowerBound="0"/>
+		<property xmlns:d3p1="task_mwms" name="address" type="d3p1:coordinates" lowerBound="0" nillable="false"/>
+		<property name="description" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic"/>
+		</property>
+		<property name="planned_visit_datetime" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:dateTime" variety="Atomic"/>
+		</property>
+		<property name="end_vizit_interval_datetime" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:dateTime" variety="Atomic"/>
+		</property>
+		<property xmlns:d3p1="task_mwms" name="read" type="d3p1:date_coordinates" lowerBound="0"/>
+		<property xmlns:d3p1="task_mwms" name="task_acceptance_status" type="d3p1:task_acceptance_status" lowerBound="0"/>
+		<property xmlns:d3p1="task_mwms" name="departure" type="d3p1:date_coordinates" lowerBound="0"/>
+		<property xmlns:d3p1="task_mwms" name="arrival" type="d3p1:date_coordinates" lowerBound="0"/>
+		<property xmlns:d3p1="task_mwms" name="task_finished_status" type="d3p1:task_finished_status" lowerBound="0"/>
+		<property xmlns:d3p1="task_mwms" name="extra_fields" type="d3p1:extra_field" lowerBound="0" upperBound="-1" nillable="true"/>
+		<property xmlns:d3p1="task_mwms" name="task_verification" type="d3p1:task_verification" lowerBound="0"/>
+	</objectType>
+	<objectType name="task_finished_status" ordered="false">
+		<property xmlns:d3p1="task_mwms" name="external_id" type="d3p1:external_id" lowerBound="0" nillable="true"/>
+		<property name="name" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="100"/>
+		</property>
+		<property xmlns:d3p1="task_mwms" name="finish" type="d3p1:date_coordinates" lowerBound="0"/>
+		<property name="description" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic"/>
+		</property>
+		<property xmlns:d3p1="task_mwms" name="author" type="d3p1:author" lowerBound="0"/>
+		<property xmlns:d3p1="task_mwms" name="correction" type="d3p1:date_coordinates" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="task_verification" ordered="false">
+		<property name="status" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:int" variety="Atomic" totalDigits="1"/>
+		</property>
+		<property name="description" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic"/>
+		</property>
+		<property name="datetime" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:dateTime" variety="Atomic"/>
+		</property>
+		<property xmlns:d3p1="task_mwms" name="author" type="d3p1:author" lowerBound="0"/>
+	</objectType>
+	<objectType name="task_acceptance_status" ordered="false">
+		<property xmlns:d3p1="task_mwms" name="acceptance" type="d3p1:date_coordinates" lowerBound="0"/>
+		<property name="status" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:int" variety="Atomic" totalDigits="10"/>
+		</property>
+		<property xmlns:d3p1="task_mwms" name="rejection_reason" type="d3p1:rejection_reason" lowerBound="0"/>
+	</objectType>
+	<objectType name="rejection_reason" ordered="false">
+		<property xmlns:d3p1="task_mwms" name="external_id" type="d3p1:external_id" lowerBound="0" nillable="true"/>
+		<property name="name" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="100"/>
+		</property>
+		<property name="description" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic"/>
+		</property>
+	</objectType>
+	<objectType name="file" ordered="false">
+		<property name="id">
+			<typeDef xsi:type="ValueType" base="xs:int" variety="Atomic" totalDigits="10"/>
+		</property>
+		<property name="db_id">
+			<typeDef xsi:type="ValueType" base="xs:long" variety="Atomic" totalDigits="15"/>
+		</property>
+		<property name="caption" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="1000"/>
+		</property>
+	</objectType>
+	<objectType name="extra_field" ordered="false">
+		<property xmlns:d3p1="task_mwms" name="external_id" type="d3p1:external_id"/>
+		<property name="name" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="150"/>
+		</property>
+		<property name="input" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:int" variety="Atomic"/>
+		</property>
+		<property name="required" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:int" variety="Atomic"/>
+		</property>
+		<property name="type" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic"/>
+		</property>
+		<property xmlns:d3p1="task_mwms" name="number_properties" type="d3p1:number_properties" lowerBound="0"/>
+		<property xmlns:d3p1="task_mwms" name="string_properties" type="d3p1:string_properties" lowerBound="0"/>
+		<property xmlns:d3p1="task_mwms" name="bool_properties" type="d3p1:bool_properties" lowerBound="0"/>
+		<property xmlns:d3p1="task_mwms" name="geopoint_properties" type="d3p1:geopoint_properties" lowerBound="0"/>
+		<property xmlns:d3p1="task_mwms" name="hyperlink_properties" type="d3p1:hyperlink_properties" lowerBound="0"/>
+		<property xmlns:d3p1="task_mwms" name="picture_collection_properties" type="d3p1:picture_collection_properties" lowerBound="0"/>
+		<property xmlns:d3p1="task_mwms" name="date_properties" type="d3p1:date_properties" lowerBound="0"/>
+		<property xmlns:d3p1="task_mwms" name="list_properties" type="d3p1:list_properties" lowerBound="0"/>
+		<property xmlns:d3p1="task_mwms" name="group_begin_properties" type="d3p1:group_begin_properties" lowerBound="0"/>
+		<property xmlns:d3p1="task_mwms" name="group_end_properties" type="d3p1:group_end_properties" lowerBound="0"/>
+		<property name="value" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic"/>
+		</property>
+		<property xmlns:d3p1="task_mwms" name="file" type="d3p1:file" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="number_properties" ordered="false">
+		<property name="digits" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:int" variety="Atomic"/>
+		</property>
+		<property name="fraction_digits" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:int" variety="Atomic"/>
+		</property>
+		<property name="signed" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:int" variety="Atomic"/>
+		</property>
+	</objectType>
+	<objectType name="string_properties" ordered="false">
+		<property name="length" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:int" variety="Atomic"/>
+		</property>
+	</objectType>
+	<objectType name="date_properties" ordered="false">
+		<property name="date" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:int" variety="Atomic"/>
+		</property>
+		<property name="time" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:int" variety="Atomic"/>
+		</property>
+	</objectType>
+	<objectType name="list_properties" ordered="false">
+		<property name="type" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic"/>
+		</property>
+		<property xmlns:d3p1="task_mwms" name="items" type="d3p1:list_properties_item" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="list_properties_item" ordered="false">
+		<property xmlns:d3p1="task_mwms" name="external_id" type="d3p1:external_id"/>
+		<property name="name">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="100"/>
+		</property>
+	</objectType>
+	<objectType name="bool_properties" ordered="false"/>
+	<objectType name="hyperlink_properties" ordered="false">
+		<property name="length" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:int" variety="Atomic"/>
+		</property>
+	</objectType>
+	<objectType name="picture_collection_properties" ordered="false">
+		<property name="length" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:int" variety="Atomic"/>
+		</property>
+	</objectType>
+	<objectType name="group_begin_properties" ordered="false">
+		<property name="is_expand" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:int" variety="Atomic"/>
+		</property>
+	</objectType>
+	<objectType name="group_end_properties" ordered="false"/>
+	<objectType name="geopoint_properties" ordered="false"/>
+</package>

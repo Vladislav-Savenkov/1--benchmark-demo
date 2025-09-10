@@ -1,0 +1,25 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="monitoring_packets_mwms">
+	<objectType name="monitoring_packets" ordered="false">
+		<property name="sync_id" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:int" variety="Atomic"/>
+		</property>
+		<property name="more_data_available" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:int" variety="Atomic"/>
+		</property>
+		<property xmlns:d3p1="monitoring_packets_mwms" name="packets" type="d3p1:packet" lowerBound="0" upperBound="-1" nillable="true"/>
+	</objectType>
+	<objectType name="packet" ordered="false">
+		<property name="external_id" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="50"/>
+		</property>
+		<property name="data_type" lowerBound="0">
+			<typeDef xsi:type="ValueType" base="xs:int" variety="Atomic"/>
+		</property>
+		<property name="key_version" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:int" variety="Atomic" totalDigits="5"/>
+		</property>
+		<property name="data" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic"/>
+		</property>
+	</objectType>
+</package>

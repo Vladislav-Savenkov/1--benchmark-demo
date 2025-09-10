@@ -1,0 +1,578 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Настройки подсистемы УМС</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаЗаписатьИЗакрыть" id="85">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ЗаписатьИЗакрыть</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьИЗакрытьРасширеннаяПодсказка" id="86"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="ГруппаСтраниц" id="49">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страниц</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страниц</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ГруппаСтраницРасширеннаяПодсказка" id="50"/>
+			<ChildItems>
+				<Page name="ПодключениеКСерверу" id="51">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подключение к серверу</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подключение к серверу</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ПодключениеКСерверуРасширеннаяПодсказка" id="52"/>
+					<ChildItems>
+						<InputField name="ЛогинОрганизации" id="1">
+							<DataPath>Запись.ЛогинОрганизации</DataPath>
+							<ContextMenu name="ЛогинОрганизацииКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="ЛогинОрганизацииРасширеннаяПодсказка" id="3"/>
+						</InputField>
+						<InputField name="ПарольОрганизации" id="4">
+							<DataPath>Запись.ПарольОрганизации</DataPath>
+							<PasswordMode>true</PasswordMode>
+							<ContextMenu name="ПарольОрганизацииКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="ПарольОрганизацииРасширеннаяПодсказка" id="6"/>
+						</InputField>
+						<InputField name="АдресСервера" id="7">
+							<DataPath>Запись.АдресСервера</DataPath>
+							<ContextMenu name="АдресСервераКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="АдресСервераРасширеннаяПодсказка" id="9"/>
+						</InputField>
+						<CheckBoxField name="ИспользоватьШифрованноеСоединение" id="10">
+							<DataPath>Запись.ИспользоватьШифрованноеСоединение</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Использовать шифрованное соединение (https)</v8:content>
+								</v8:item>
+							</Title>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьШифрованноеСоединениеКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="ИспользоватьШифрованноеСоединениеРасширеннаяПодсказка" id="12"/>
+						</CheckBoxField>
+						<UsualGroup name="ГруппаПериодичностьСинхронизации" id="65">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа периодичность синхронизации</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа периодичность синхронизации</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПериодичностьСинхронизацииРасширеннаяПодсказка" id="66"/>
+							<ChildItems>
+								<InputField name="ПериодичностьСинхронизацииССервером" id="13">
+									<DataPath>Запись.ПериодичностьСинхронизацииССервером</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Периодичность синхронизации с сервером (сек.) (минимум 15 сек.)</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПериодичностьСинхронизацииССерверомКонтекстноеМеню" id="14"/>
+									<ExtendedTooltip name="ПериодичностьСинхронизацииССерверомРасширеннаяПодсказка" id="15"/>
+								</InputField>
+								<LabelDecoration name="НадписьПериодичностьЗапросаАктивностиПользователей" id="59">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<TextColor>style:FieldSelectionBackColor</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Информация об активности пользователей будет обновляться каждый четвертый обмен данными с сервером.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьПериодичностьЗапросаАктивностиПользователейКонтекстноеМеню" id="60"/>
+									<ExtendedTooltip name="НадписьПериодичностьЗапросаАктивностиПользователейРасширеннаяПодсказка" id="61"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаФоновыйРежим" id="67">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа фоновый режим</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа фоновый режим</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаФоновыйРежимРасширеннаяПодсказка" id="68"/>
+							<ChildItems>
+								<CheckBoxField name="ИспользоватьФоновыйРежимОбмена" id="25">
+									<DataPath>Запись.ИспользоватьФоновыйРежимОбмена</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ИспользоватьФоновыйРежимОбменаКонтекстноеМеню" id="26"/>
+									<ExtendedTooltip name="ИспользоватьФоновыйРежимОбменаРасширеннаяПодсказка" id="27"/>
+								</CheckBoxField>
+								<InputField name="ПользовательДляВыполненияОбменаДанными" id="16">
+									<DataPath>Запись.ПользовательДляВыполненияОбменаДанными</DataPath>
+									<ContextMenu name="ПользовательДляВыполненияОбменаДаннымиКонтекстноеМеню" id="17"/>
+									<ExtendedTooltip name="ПользовательДляВыполненияОбменаДаннымиРасширеннаяПодсказка" id="18"/>
+								</InputField>
+								<LabelDecoration name="НадписьИспользоватьФоновыйРежимОбмена" id="62">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<TextColor>style:FieldSelectionBackColor</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Фоновый режим обмена используется только для баз в клиент-серверном варианте работы и предполагает запуск фонового задания. Для файлового режима, либо при нежелании использовать фоновый режим в клиент-серверном варианте работы, необходимо указать пользователя для выполнения обмена данными. Обработка обмена данными будет автоматически запущена из под указанного пользователя при запуске программы.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьИспользоватьФоновыйРежимОбменаКонтекстноеМеню" id="63"/>
+									<ExtendedTooltip name="НадписьИспользоватьФоновыйРежимОбменаРасширеннаяПодсказка" id="64"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="Шифрование" id="53">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шифрование</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шифрование</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ШифрованиеРасширеннаяПодсказка" id="54"/>
+					<ChildItems>
+						<CheckBoxField name="ИспользоватьШифрованиеДанных" id="19">
+							<DataPath>Запись.ИспользоватьШифрованиеДанных</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьШифрованиеДанныхКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="ИспользоватьШифрованиеДанныхРасширеннаяПодсказка" id="21"/>
+						</CheckBoxField>
+						<LabelDecoration name="НадписьФлагШифрованияОписания" id="69">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<TextColor>style:FieldSelectionBackColor</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>При установке флага тело всех исходящих пакетов будет шифроваться. Незашифрованной останется только часть, необходимая серверу для распознавания адресата и типа пакета.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="НадписьФлагШифрованияОписанияКонтекстноеМеню" id="70"/>
+							<ExtendedTooltip name="НадписьФлагШифрованияОписанияРасширеннаяПодсказка" id="71"/>
+						</LabelDecoration>
+						<InputField name="ОбщийКлючШифрования" id="22">
+							<DataPath>Запись.ОбщийКлючШифрования</DataPath>
+							<ContextMenu name="ОбщийКлючШифрованияКонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="ОбщийКлючШифрованияРасширеннаяПодсказка" id="24"/>
+						</InputField>
+						<LabelDecoration name="НадписьОбщийКлючШифрованияОписание" id="72">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<TextColor>style:FieldSelectionBackColor</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Общий ключ шифрования будет использоваться для шифрования справочников для всех и персональных пакетов для пользователей МК (сообщения, задачи, комментарии и т.д.). В случае, если для пользователя МК в настройках указан другой ключ шифрования, то для шифрования персональных пакетов будет использован именно он.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="НадписьОбщийКлючШифрованияОписаниеКонтекстноеМеню" id="73"/>
+							<ExtendedTooltip name="НадписьОбщийКлючШифрованияОписаниеРасширеннаяПодсказка" id="74"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+				<Page name="ПрочиеНастройки" id="55">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Прочие настройки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Прочие настройки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ПрочиеНастройкиРасширеннаяПодсказка" id="56"/>
+					<ChildItems>
+						<InputField name="АдресКартыДляОтображенияТочек" id="28">
+							<DataPath>Запись.АдресКартыДляОтображенияТочек</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ContextMenu name="АдресКартыДляОтображенияТочекКонтекстноеМеню" id="29"/>
+							<ExtendedTooltip name="АдресКартыДляОтображенияТочекРасширеннаяПодсказка" id="30"/>
+						</InputField>
+						<CheckBoxField name="ЗаписьТребуетсяПроверкаДанныхОВыполненныхРаботахВЗадачеМобильномуСотруднику" id="87">
+							<DataPath>Запись.ТребуетсяПроверкаДанныхОВыполненныхРаботахВЗадачеМобильномуСотруднику</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ЗаписьТребуетсяПроверкаДанныхОВыполненныхРаботахВЗадачеМобильномуСотрудникуКонтекстноеМеню" id="88"/>
+							<ExtendedTooltip name="ЗаписьТребуетсяПроверкаДанныхОВыполненныхРаботахВЗадачеМобильномуСотрудникуРасширеннаяПодсказка" id="89"/>
+						</CheckBoxField>
+						<InputField name="ЗаписьОсновнойШаблонЗаполненияЗадачМобильнымСотрудникам" id="90">
+							<DataPath>Запись.ОсновнойШаблонЗаполненияЗадачМобильнымСотрудникам</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ContextMenu name="ЗаписьОсновнойШаблонЗаполненияЗадачМобильнымСотрудникамКонтекстноеМеню" id="91"/>
+							<ExtendedTooltip name="ЗаписьОсновнойШаблонЗаполненияЗадачМобильнымСотрудникамРасширеннаяПодсказка" id="92"/>
+						</InputField>
+						<InputField name="ЗаписьСпособУказанияДатыНазначенияПоУмолчанию" id="93">
+							<DataPath>Запись.СпособУказанияДатыНазначенияПоУмолчанию</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ContextMenu name="ЗаписьСпособУказанияДатыНазначенияПоУмолчаниюКонтекстноеМеню" id="94"/>
+							<ExtendedTooltip name="ЗаписьСпособУказанияДатыНазначенияПоУмолчаниюРасширеннаяПодсказка" id="95"/>
+						</InputField>
+						<UsualGroup name="ГруппаКоординатыАдресаОрганизации" id="104">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Координаты адреса организации</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа координаты адреса организации</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ГруппаКоординатыАдресаОрганизацииРасширеннаяПодсказка" id="105"/>
+							<ChildItems>
+								<InputField name="ЗаписьДолготаАдресОрганизации" id="109">
+									<DataPath>Запись.ДолготаАдресОрганизации</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Долгота</v8:content>
+										</v8:item>
+									</Title>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<ContextMenu name="ЗаписьДолготаАдресОрганизацииКонтекстноеМеню" id="110"/>
+									<ExtendedTooltip name="ЗаписьДолготаАдресОрганизацииРасширеннаяПодсказка" id="111"/>
+								</InputField>
+								<InputField name="ЗаписьШиротаАдресОрганизации" id="106">
+									<DataPath>Запись.ШиротаАдресОрганизации</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Широта</v8:content>
+										</v8:item>
+									</Title>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<ContextMenu name="ЗаписьШиротаАдресОрганизацииКонтекстноеМеню" id="107"/>
+									<ExtendedTooltip name="ЗаписьШиротаАдресОрганизацииРасширеннаяПодсказка" id="108"/>
+								</InputField>
+								<Button name="Местонахождение" id="112">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.Местонахождение</CommandName>
+									<ExtendedTooltip name="МестонахождениеРасширеннаяПодсказка" id="113"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ВебКлиент" id="114">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройки карты для работы в режиме веб-клиента</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Веб клиент</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ВебКлиентРасширеннаяПодсказка" id="115"/>
+							<ChildItems>
+								<InputField name="ЗаписьАдресКартыДляОтображенияТочекВебКлиент" id="116">
+									<DataPath>Запись.АдресКартыДляОтображенияТочекВебКлиент</DataPath>
+									<ContextMenu name="ЗаписьАдресКартыДляОтображенияТочекВебКлиентКонтекстноеМеню" id="117"/>
+									<ExtendedTooltip name="ЗаписьАдресКартыДляОтображенияТочекВебКлиентРасширеннаяПодсказка" id="118"/>
+								</InputField>
+								<InputField name="ЗаписьЗапускHTTPСервисаРаботаСКартойЛогин" id="119">
+									<DataPath>Запись.ЗапускHTTPСервисаРаботаСКартойЛогин</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Пользователь для запуска http-сервиса по работе с картой</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ЗаписьЗапускHTTPСервисаРаботаСКартойЛогинКонтекстноеМеню" id="120"/>
+									<ExtendedTooltip name="ЗаписьЗапускHTTPСервисаРаботаСКартойЛогинРасширеннаяПодсказка" id="121"/>
+								</InputField>
+								<InputField name="ЗаписьЗапускHTTPСервисаРаботаСКартойПароль" id="122">
+									<DataPath>Запись.ЗапускHTTPСервисаРаботаСКартойПароль</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Пароль пользователя для запуска http-сервиса по работе с картой</v8:content>
+										</v8:item>
+									</Title>
+									<PasswordMode>true</PasswordMode>
+									<ContextMenu name="ЗаписьЗапускHTTPСервисаРаботаСКартойПарольКонтекстноеМеню" id="123"/>
+									<ExtendedTooltip name="ЗаписьЗапускHTTPСервисаРаботаСКартойПарольРасширеннаяПодсказка" id="124"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="Отладка" id="57">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отладка</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отладка</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ОтладкаРасширеннаяПодсказка" id="58"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаСохранятьПакеты" id="75">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сохранять пакеты</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа сохранять пакеты</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="ГруппаСохранятьПакетыРасширеннаяПодсказка" id="76"/>
+							<ChildItems>
+								<LabelDecoration name="НадписьПериодичностьЗапросаАктивностиПользователей1" id="79">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<TextColor>style:FieldSelectionBackColor</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сохранение входящих удачно разобранных пакетов необходимо только для отладки. Хранение пакетов может приводить к разрастанию регистров хранения и обработки данных для обмена с сервером, а также может происходить снижение быстроты обмена. Неразобранные пакеты сохраняются независимо от настроек.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьПериодичностьЗапросаАктивностиПользователей1КонтекстноеМеню" id="80"/>
+									<ExtendedTooltip name="НадписьПериодичностьЗапросаАктивностиПользователей1РасширеннаяПодсказка" id="81"/>
+								</LabelDecoration>
+								<CheckBoxField name="СохранятьВходящиеУдачноРазобранныеПакетыОтМС" id="31">
+									<DataPath>Запись.СохранятьВходящиеУдачноРазобранныеПакетыОтМС</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Удачно разобранные пакеты от мобильных сотрудников</v8:content>
+										</v8:item>
+									</Title>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="СохранятьВходящиеУдачноРазобранныеПакетыОтМСКонтекстноеМеню" id="32"/>
+									<ExtendedTooltip name="СохранятьВходящиеУдачноРазобранныеПакетыОтМСРасширеннаяПодсказка" id="33"/>
+								</CheckBoxField>
+								<CheckBoxField name="СохранятьВходящиеУдачноРазобранныеПакетыОтСервера" id="34">
+									<DataPath>Запись.СохранятьВходящиеУдачноРазобранныеПакетыОтСервера</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Удачно разобранные пакеты от сервера</v8:content>
+										</v8:item>
+									</Title>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="СохранятьВходящиеУдачноРазобранныеПакетыОтСервераКонтекстноеМеню" id="35"/>
+									<ExtendedTooltip name="СохранятьВходящиеУдачноРазобранныеПакетыОтСервераРасширеннаяПодсказка" id="36"/>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаСохранятьВЛогах" id="77">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сохранять в логах</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа сохранять в логах</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="ГруппаСохранятьВЛогахРасширеннаяПодсказка" id="78"/>
+							<ChildItems>
+								<LabelDecoration name="НадписьИнформацияОСохраненииВЛогах" id="82">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<TextColor>style:FieldSelectionBackColor</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сохранение данных в логах требуется для отладки. Сообщения об ошибках сохраняются независимо от настроек. Установку флажков сохранения информационных сообщений необходимо делать только для отладки в случае необходимости.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьИнформацияОСохраненииВЛогахКонтекстноеМеню" id="83"/>
+									<ExtendedTooltip name="НадписьИнформацияОСохраненииВЛогахРасширеннаяПодсказка" id="84"/>
+								</LabelDecoration>
+								<CheckBoxField name="СохранятьВЛогахИнформационныеСообщения" id="37">
+									<DataPath>Запись.СохранятьВЛогахИнформационныеСообщения</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Информационные сообщения</v8:content>
+										</v8:item>
+									</Title>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="СохранятьВЛогахИнформационныеСообщенияКонтекстноеМеню" id="38"/>
+									<ExtendedTooltip name="СохранятьВЛогахИнформационныеСообщенияРасширеннаяПодсказка" id="39"/>
+								</CheckBoxField>
+								<CheckBoxField name="СохранятьВЛогахИнформационныеСообщенияОПакетахОтСервера" id="40">
+									<DataPath>Запись.СохранятьВЛогахИнформационныеСообщенияОПакетахОтСервера</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Информационные сообщения о пакетах от сервера</v8:content>
+										</v8:item>
+									</Title>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="СохранятьВЛогахИнформационныеСообщенияОПакетахОтСервераКонтекстноеМеню" id="41"/>
+									<ExtendedTooltip name="СохранятьВЛогахИнформационныеСообщенияОПакетахОтСервераРасширеннаяПодсказка" id="42"/>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<CheckBoxField name="РежимОтладки" id="43">
+							<DataPath>Запись.РежимОтладки</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Режим отладки (сохранение всех пакетов обмена на диске)</v8:content>
+								</v8:item>
+							</Title>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="РежимОтладкиКонтекстноеМеню" id="44"/>
+							<ExtendedTooltip name="РежимОтладкиРасширеннаяПодсказка" id="45"/>
+						</CheckBoxField>
+						<CheckBoxField name="СохранятьСтатистикуОбменов" id="46">
+							<DataPath>Запись.СохранятьСтатистикуОбменов</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сохранять статистику обменов (за последние 7 дней)</v8:content>
+								</v8:item>
+							</Title>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="СохранятьСтатистикуОбменовКонтекстноеМеню" id="47"/>
+							<ExtendedTooltip name="СохранятьСтатистикуОбменовРасширеннаяПодсказка" id="48"/>
+						</CheckBoxField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.атл_НастройкиПодсистемыУМС</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ПервыйЗапуск" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Первый запуск</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаписатьИЗакрыть" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать и закрыть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать и закрыть</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаписатьИЗакрыть</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Местонахождение" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Местонахождение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Местонахождение</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.атл_Местонахождение</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Местонахождение</Action>
+			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="ПервыйЗапуск">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

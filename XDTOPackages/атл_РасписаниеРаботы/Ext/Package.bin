@@ -1,0 +1,13 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="work_schedule_mwms">
+	<objectType name="work_schedule" ordered="false">
+		<property xmlns:d3p1="work_schedule_mwms" name="work_time" type="d3p1:work_time" lowerBound="0" upperBound="-1" nillable="true"/>
+	</objectType>
+	<objectType name="work_time" ordered="false">
+		<property name="start" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:dateTime" variety="Atomic"/>
+		</property>
+		<property name="finish" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:dateTime" variety="Atomic"/>
+		</property>
+	</objectType>
+</package>

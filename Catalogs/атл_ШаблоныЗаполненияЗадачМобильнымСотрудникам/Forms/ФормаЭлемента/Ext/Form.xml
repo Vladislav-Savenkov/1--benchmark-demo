@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<HorizontalStretch>true</HorizontalStretch>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<HorizontalStretch>true</HorizontalStretch>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<Table name="ДеревоДополнительныхРеквизитов" id="7">
+			<Representation>Tree</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<InitialTreeView>ExpandAllLevels</InitialTreeView>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>ДеревоДополнительныхРеквизитов</DataPath>
+			<ContextMenu name="ДеревоДополнительныхРеквизитовКонтекстноеМеню" id="8"/>
+			<AutoCommandBar name="ДеревоДополнительныхРеквизитовКоманднаяПанель" id="9"/>
+			<ExtendedTooltip name="ДеревоДополнительныхРеквизитовРасширеннаяПодсказка" id="10"/>
+			<SearchStringAddition name="ДеревоДополнительныхРеквизитовСтрокаПоиска" id="11">
+				<AdditionSource>
+					<Item>ДеревоДополнительныхРеквизитов</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДеревоДополнительныхРеквизитовСтрокаПоискаКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="ДеревоДополнительныхРеквизитовСтрокаПоискаРасширеннаяПодсказка" id="13"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ДеревоДополнительныхРеквизитовСостояниеПросмотра" id="14">
+				<AdditionSource>
+					<Item>ДеревоДополнительныхРеквизитов</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДеревоДополнительныхРеквизитовСостояниеПросмотраКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="ДеревоДополнительныхРеквизитовСостояниеПросмотраРасширеннаяПодсказка" id="16"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ДеревоДополнительныхРеквизитовУправлениеПоиском" id="17">
+				<AdditionSource>
+					<Item>ДеревоДополнительныхРеквизитов</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ДеревоДополнительныхРеквизитовУправлениеПоискомКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="ДеревоДополнительныхРеквизитовУправлениеПоискомРасширеннаяПодсказка" id="19"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="BeforeAddRow">ДеревоДополнительныхРеквизитовПередНачаломДобавления</Event>
+				<Event name="BeforeDeleteRow">ДеревоДополнительныхРеквизитовПередУдалением</Event>
+				<Event name="OnStartEdit">ДеревоДополнительныхРеквизитовПриНачалеРедактирования</Event>
+				<Event name="OnChange">ДеревоДополнительныхРеквизитовПриИзменении</Event>
+			</Events>
+			<ChildItems>
+				<PictureField name="ДеревоДополнительныхРеквизитовКартинка" id="20">
+					<DataPath>ДеревоДополнительныхРеквизитов.Картинка</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>1</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ValuesPicture>
+						<xr:Ref>CommonPicture.ПиктограммыЭлементов</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</ValuesPicture>
+					<FileDragMode>AsFile</FileDragMode>
+					<ContextMenu name="ДеревоДополнительныхРеквизитовКартинкаКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ДеревоДополнительныхРеквизитовКартинкаРасширеннаяПодсказка" id="22"/>
+				</PictureField>
+				<InputField name="ДеревоДополнительныхРеквизитовДополнительныйРеквизит" id="23">
+					<DataPath>ДеревоДополнительныхРеквизитов.ДополнительныйРеквизит</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДеревоДополнительныхРеквизитовДополнительныйРеквизитКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ДеревоДополнительныхРеквизитовДополнительныйРеквизитРасширеннаяПодсказка" id="25"/>
+					<Events>
+						<Event name="OnChange">ДеревоДополнительныхРеквизитовДополнительныйРеквизитПриИзменении</Event>
+					</Events>
+				</InputField>
+				<CheckBoxField name="ДеревоДополнительныхРеквизитовЗаполняетсяНаМК" id="26">
+					<DataPath>ДеревоДополнительныхРеквизитов.ЗаполняетсяНаМК</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ДеревоДополнительныхРеквизитовЗаполняетсяНаМККонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ДеревоДополнительныхРеквизитовЗаполняетсяНаМКРасширеннаяПодсказка" id="28"/>
+					<Events>
+						<Event name="OnChange">ДеревоДополнительныхРеквизитовЗаполняетсяНаМКПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<CheckBoxField name="ДеревоДополнительныхРеквизитовОбязателен" id="29">
+					<DataPath>ДеревоДополнительныхРеквизитов.Обязателен</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ДеревоДополнительныхРеквизитовОбязателенКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ДеревоДополнительныхРеквизитовОбязателенРасширеннаяПодсказка" id="31"/>
+				</CheckBoxField>
+				<ColumnGroup name="ГруппаЗначений" id="41">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа значений</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа значений</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаЗначенийРасширеннаяПодсказка" id="42"/>
+					<ChildItems>
+						<InputField name="ДеревоДополнительныхРеквизитовЗначениеРеквизита" id="32">
+							<DataPath>ДеревоДополнительныхРеквизитов.ЗначениеРеквизита</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ДеревоДополнительныхРеквизитовЗначениеРеквизитаКонтекстноеМеню" id="33"/>
+							<ExtendedTooltip name="ДеревоДополнительныхРеквизитовЗначениеРеквизитаРасширеннаяПодсказка" id="34"/>
+						</InputField>
+						<ColumnGroup name="ГруппаШаблон" id="43">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа шаблон</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа шаблон</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<ExtendedTooltip name="ГруппаШаблонРасширеннаяПодсказка" id="44"/>
+							<ChildItems>
+								<CheckBoxField name="ДеревоДополнительныхРеквизитовЗаполнятьПоШаблону" id="35">
+									<DataPath>ДеревоДополнительныхРеквизитов.ЗаполнятьПоШаблону</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ДеревоДополнительныхРеквизитовЗаполнятьПоШаблонуКонтекстноеМеню" id="36"/>
+									<ExtendedTooltip name="ДеревоДополнительныхРеквизитовЗаполнятьПоШаблонуРасширеннаяПодсказка" id="37"/>
+								</CheckBoxField>
+								<InputField name="ДеревоДополнительныхРеквизитовШаблонЗаполненияДополнительныхРеквизитов" id="38">
+									<DataPath>ДеревоДополнительныхРеквизитов.ШаблонЗаполненияДополнительныхРеквизитов</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоДополнительныхРеквизитовШаблонЗаполненияДополнительныхРеквизитовКонтекстноеМеню" id="39"/>
+									<ExtendedTooltip name="ДеревоДополнительныхРеквизитовШаблонЗаполненияДополнительныхРеквизитовРасширеннаяПодсказка" id="40"/>
+								</InputField>
+							</ChildItems>
+						</ColumnGroup>
+					</ChildItems>
+				</ColumnGroup>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.атл_ШаблоныЗаполненияЗадачМобильнымСотрудникам</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ДеревоДополнительныхРеквизитов" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дерево дополнительных реквизитов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Картинка" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Картинка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>1</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДополнительныйРеквизит" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дополнительный реквизит</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:ChartOfCharacteristicTypesRef.атл_ДополнительныеРеквизитыЗадачиМобильномуСотруднику</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ЗаполняетсяНаМК" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Заполняется на МК</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Обязателен" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Обязателен</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ЗначениеРеквизита" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Значение реквизита</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:Characteristic.атл_ДополнительныеРеквизитыЗадачиМобильномуСотруднику</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="ЗаполнятьПоШаблону" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Заполнять по шаблону</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ШаблонЗаполненияДополнительныхРеквизитов" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шаблон заполнения дополнительных реквизитов</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.атл_ШаблоныЗаполненияДополнительныхРеквизитов</v8:Type>
+					</Type>
+				</Column>
+				<Column name="СтрокаВерхнегоУровня" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Строка верхнего уровня</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ГруппаРеквизитов" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа реквизитов</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ОсобыйВидДополнительногоРеквизита" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Особый вид дополнительного реквизита</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.атл_ОсобыеВидыДополнительныхРеквизитов</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ИдентификаторыРодителей" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификаторы родителей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ДополнительныйРеквизит" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дополнительный реквизит</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:ChartOfCharacteristicTypesRef.атл_ДополнительныеРеквизитыЗадачиМобильномуСотруднику</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Идентификатор" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идентификатор</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+</Form>

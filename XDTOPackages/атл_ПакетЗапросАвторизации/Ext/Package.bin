@@ -1,0 +1,22 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="authorization_request_mwms">
+	<objectType name="authorization_request" ordered="false">
+		<property name="company" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic"/>
+		</property>
+		<property name="name" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic"/>
+		</property>
+		<property name="pass" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic"/>
+		</property>
+		<property name="master_version" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic"/>
+		</property>
+		<property name="uid" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic"/>
+		</property>
+		<property name="update_uid" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:int" variety="Atomic"/>
+		</property>
+	</objectType>
+</package>

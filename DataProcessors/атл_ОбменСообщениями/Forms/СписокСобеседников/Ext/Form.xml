@@ -1,0 +1,1276 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаФормы" id="73">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа формы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа формы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаФормыРасширеннаяПодсказка" id="74"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаСообщений" id="93">
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа сообщений</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа сообщений</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСообщенийРасширеннаяПодсказка" id="94"/>
+					<ChildItems>
+						<Pages name="ГруппаСтраницСообщений" id="61">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа страниц сообщений</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа страниц сообщений</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ГруппаСтраницСообщенийРасширеннаяПодсказка" id="62"/>
+							<Events>
+								<Event name="OnCurrentPageChange">ГруппаСтраницСообщенийПриСменеСтраницы</Event>
+							</Events>
+						</Pages>
+						<CommandBar name="КоманднаяПанельГруппыСообщений" id="99">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Командная панель группы сообщений</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Командная панель группы сообщений</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalStretch>true</HorizontalStretch>
+							<VerticalStretch>false</VerticalStretch>
+							<ExtendedTooltip name="КоманднаяПанельГруппыСообщенийРасширеннаяПодсказка" id="100"/>
+							<ChildItems>
+								<Button name="Отправить" id="117">
+									<Type>CommandBarButton</Type>
+									<DefaultButton>true</DefaultButton>
+									<CommandName>Form.Command.Отправить</CommandName>
+									<ExtendedTooltip name="ОтправитьРасширеннаяПодсказка" id="118"/>
+								</Button>
+								<Popup name="ПодменюОтправить" id="101">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content> </v8:content>
+										</v8:item>
+									</Title>
+									<ToolTipRepresentation>None</ToolTipRepresentation>
+									<Representation>Picture</Representation>
+									<ExtendedTooltip name="ПодменюОтправитьРасширеннаяПодсказка" id="102"/>
+								</Popup>
+							</ChildItems>
+						</CommandBar>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаСписокСобеседников" id="75">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа список собеседников</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа список собеседников</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСписокСобеседниковРасширеннаяПодсказка" id="76"/>
+					<ChildItems>
+						<Table name="ДеревоПользователей" id="1">
+							<Representation>Tree</Representation>
+							<ChangeRowSet>false</ChangeRowSet>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>ДеревоПользователей</DataPath>
+							<RowPictureDataPath>ДеревоПользователей.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="ДеревоПользователейКонтекстноеМеню" id="2">
+								<ChildItems>
+									<ButtonGroup name="ДеревоПользователейКонтекстноеМенюГруппа1" id="54">
+										<ExtendedTooltip name="ДеревоПользователейКонтекстноеМенюГруппа1РасширеннаяПодсказка" id="55"/>
+										<ChildItems>
+											<Button name="ДеревоПользователейКонтекстноеМенюСообщение" id="50">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.Сообщение</CommandName>
+												<ExtendedTooltip name="ДеревоПользователейКонтекстноеМенюСообщениеРасширеннаяПодсказка" id="51"/>
+											</Button>
+											<Button name="ДеревоПользователейКонтекстноеМенюСообщениеДляНескольких" id="143">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.СообщениеДляНескольких</CommandName>
+												<ExtendedTooltip name="ДеревоПользователейКонтекстноеМенюСообщениеДляНесколькихРасширеннаяПодсказка" id="144"/>
+											</Button>
+											<Button name="ДеревоПользователейКонтекстноеМенюИстория" id="46">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.История</CommandName>
+												<ExtendedTooltip name="ДеревоПользователейКонтекстноеМенюИсторияРасширеннаяПодсказка" id="47"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+								</ChildItems>
+							</ContextMenu>
+							<AutoCommandBar name="ДеревоПользователейКоманднаяПанель" id="3">
+								<ChildItems>
+									<ButtonGroup name="ДеревоПользователейГруппаКнопок" id="48">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Дерево пользователей группа кнопок</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Дерево пользователей группа кнопок</v8:content>
+											</v8:item>
+										</ToolTip>
+										<ExtendedTooltip name="ДеревоПользователейГруппаКнопокРасширеннаяПодсказка" id="49"/>
+										<ChildItems>
+											<Button name="ТолькоАктивные" id="38">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ТолькоАктивные</CommandName>
+												<ExtendedTooltip name="ТолькоАктивныеРасширеннаяПодсказка" id="39"/>
+											</Button>
+											<Button name="Настройки" id="131">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.Настройки</CommandName>
+												<ExtendedTooltip name="НастройкиРасширеннаяПодсказка" id="132"/>
+											</Button>
+											<Button name="ПоказатьНаКарте" id="59">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ПоказатьНаКарте</CommandName>
+												<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+												<ExtendedTooltip name="ПоказатьНаКартеРасширеннаяПодсказка" id="60"/>
+											</Button>
+											<Button name="История" id="42">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.История</CommandName>
+												<ExtendedTooltip name="ИсторияРасширеннаяПодсказка" id="43"/>
+											</Button>
+											<Button name="ОтборПользователяПоВиду" id="129">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ОтборПользователяПоВидуАктивности</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Все</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="ОтборПользователяПоВидуРасширеннаяПодсказка" id="130"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<ButtonGroup name="ДеревоПользователейГруппаИзменитьФорму" id="141">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Дерево пользователей группа изменить форму</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Дерево пользователей группа изменить форму</v8:content>
+											</v8:item>
+										</ToolTip>
+										<ExtendedTooltip name="ДеревоПользователейГруппаИзменитьФормуРасширеннаяПодсказка" id="142"/>
+										<ChildItems>
+											<Button name="ДеревоПользователейИзменитьФорму" id="139">
+												<Type>CommandBarButton</Type>
+												<Representation>Picture</Representation>
+												<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+												<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+												<ExtendedTooltip name="ДеревоПользователейИзменитьФормуРасширеннаяПодсказка" id="140"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ДеревоПользователейРасширеннаяПодсказка" id="4"/>
+							<SearchStringAddition name="ДеревоПользователейСтрокаПоиска" id="5">
+								<AdditionSource>
+									<Item>ДеревоПользователей</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДеревоПользователейСтрокаПоискаКонтекстноеМеню" id="8"/>
+								<ExtendedTooltip name="ДеревоПользователейСтрокаПоискаРасширеннаяПодсказка" id="9"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ДеревоПользователейСостояниеПросмотра" id="10">
+								<AdditionSource>
+									<Item>ДеревоПользователей</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДеревоПользователейСостояниеПросмотраКонтекстноеМеню" id="13"/>
+								<ExtendedTooltip name="ДеревоПользователейСостояниеПросмотраРасширеннаяПодсказка" id="14"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ДеревоПользователейУправлениеПоиском" id="15">
+								<AdditionSource>
+									<Item>ДеревоПользователей</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ДеревоПользователейУправлениеПоискомКонтекстноеМеню" id="18"/>
+								<ExtendedTooltip name="ДеревоПользователейУправлениеПоискомРасширеннаяПодсказка" id="19"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ДеревоПользователейВыбор</Event>
+								<Event name="OnActivateCell">ДеревоПользователейПриАктивизацииЯчейки</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="ДеревоПользователейПользователь" id="26">
+									<DataPath>ДеревоПользователей.Пользователь</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Пользователь</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДеревоПользователейПользовательКонтекстноеМеню" id="27"/>
+									<ExtendedTooltip name="ДеревоПользователейПользовательРасширеннаяПодсказка" id="28"/>
+								</LabelField>
+								<PictureField name="ДеревоПользователейПользовательАктивен1СРезультат" id="32">
+									<DataPath>ДеревоПользователей.ПользовательАктивен1СРезультат</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>1С</v8:content>
+										</v8:item>
+									</Title>
+									<Width>1</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>5</MaxWidth>
+									<ValuesPicture>
+										<xr:Ref>CommonPicture.атл_СтатусыАктивности</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</ValuesPicture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="ДеревоПользователейПользовательАктивен1СРезультатКонтекстноеМеню" id="33"/>
+									<ExtendedTooltip name="ДеревоПользователейПользовательАктивен1СРезультатРасширеннаяПодсказка" id="34"/>
+								</PictureField>
+								<PictureField name="ДеревоПользователейПользовательАктивенМКРезультат" id="35">
+									<DataPath>ДеревоПользователей.ПользовательАктивенМКРезультат</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>М</v8:content>
+										</v8:item>
+									</Title>
+									<Width>1</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>5</MaxWidth>
+									<ValuesPicture>
+										<xr:Ref>CommonPicture.атл_СтатусыАктивности</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</ValuesPicture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="ДеревоПользователейПользовательАктивенМКРезультатКонтекстноеМеню" id="36"/>
+									<ExtendedTooltip name="ДеревоПользователейПользовательАктивенМКРезультатРасширеннаяПодсказка" id="37"/>
+								</PictureField>
+								<PictureField name="ДеревоПользователейКоординаты" id="133">
+									<DataPath>ДеревоПользователей.Координаты</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>К</v8:content>
+										</v8:item>
+									</Title>
+									<Width>1</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>5</MaxWidth>
+									<ValuesPicture>
+										<xr:Ref>CommonPicture.атл_КоллекцияСпутников</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</ValuesPicture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="ДеревоПользователейКоординатыКонтекстноеМеню" id="134"/>
+									<ExtendedTooltip name="ДеревоПользователейКоординатыРасширеннаяПодсказка" id="135"/>
+								</PictureField>
+								<LabelField name="ДеревоПользователейЗарядБатареиРезультат" id="136">
+									<DataPath>ДеревоПользователей.ЗарядБатареиРезультат</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Б</v8:content>
+										</v8:item>
+									</Title>
+									<Width>3</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>5</MaxWidth>
+									<ContextMenu name="ДеревоПользователейЗарядБатареиРезультатКонтекстноеМеню" id="137"/>
+									<ExtendedTooltip name="ДеревоПользователейЗарядБатареиРезультатРасширеннаяПодсказка" id="138"/>
+								</LabelField>
+								<LabelField name="ДеревоПользователейДатаПоследнейАктивности" id="20">
+									<DataPath>ДеревоПользователей.ДатаПоследнейАктивности</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Активность</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДеревоПользователейДатаПоследнейАктивностиКонтекстноеМеню" id="21"/>
+									<ExtendedTooltip name="ДеревоПользователейДатаПоследнейАктивностиРасширеннаяПодсказка" id="22"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+						<UsualGroup name="ГруппаИстория" id="77">
+							<Visible>false</Visible>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа история</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаИсторияРасширеннаяПодсказка" id="78"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаЗаголовокИстории" id="87">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа заголовок истории</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа заголовок истории</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаЗаголовокИсторииРасширеннаяПодсказка" id="88"/>
+									<ChildItems>
+										<LabelDecoration name="ЗаголовокИсториии" id="82">
+											<HorizontalStretch>true</HorizontalStretch>
+											<TextColor>web:ForestGreen</TextColor>
+											<Font bold="true" kind="AutoFont"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>История сообщений: Иванов И.И.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ЗаголовокИсториииКонтекстноеМеню" id="83"/>
+											<ExtendedTooltip name="ЗаголовокИсториииРасширеннаяПодсказка" id="84"/>
+										</LabelDecoration>
+										<Button name="ЗакрытьГруппуИстории" id="85">
+											<Type>UsualButton</Type>
+											<Representation>Picture</Representation>
+											<CommandName>Form.Command.ЗакрытьГруппуИстории</CommandName>
+											<Picture>
+												<xr:Ref>StdPicture.Close</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<ExtendedTooltip name="ЗакрытьГруппуИсторииРасширеннаяПодсказка" id="86"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаПериодИстории" id="127">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа период истории</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа период истории</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПериодИсторииРасширеннаяПодсказка" id="128"/>
+									<ChildItems>
+										<InputField name="НачалоПериодаИстория" id="119">
+											<DataPath>НачалоПериодаИстория</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Период с</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="НачалоПериодаИсторияКонтекстноеМеню" id="120"/>
+											<ExtendedTooltip name="НачалоПериодаИсторияРасширеннаяПодсказка" id="121"/>
+										</InputField>
+										<InputField name="КонецПериодаИстория" id="122">
+											<DataPath>КонецПериодаИстория</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>по</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="КонецПериодаИсторияКонтекстноеМеню" id="123"/>
+											<ExtendedTooltip name="КонецПериодаИсторияРасширеннаяПодсказка" id="124"/>
+										</InputField>
+										<Button name="ОбновитьИсторию" id="125">
+											<Type>UsualButton</Type>
+											<Representation>PictureAndText</Representation>
+											<CommandName>Form.Command.ОбновитьИсторию</CommandName>
+											<Picture>
+												<xr:Ref>StdPicture.Refresh</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Обновить</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ОбновитьИсториюРасширеннаяПодсказка" id="126"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+								<HTMLDocumentField name="ПолеHTMLИстория" id="114">
+									<DataPath>ПолеHTMLИстория</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<Height>8</Height>
+									<ContextMenu name="ПолеHTMLИсторияКонтекстноеМеню" id="115"/>
+									<ExtendedTooltip name="ПолеHTMLИсторияРасширеннаяПодсказка" id="116"/>
+								</HTMLDocumentField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.атл_ОбменСообщениями</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ДеревоПользователей" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дерево пользователей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>~ДеревоПользователей.ЗарядБатареи</Field>
+				<Field>~ДеревоПользователей.ПользовательАктивен1С</Field>
+				<Field>~ДеревоПользователей.ПользовательАктивенМК</Field>
+				<Field>ДеревоПользователей.ДатаПолученияИнформацииОбУстройстве</Field>
+				<Field>ДеревоПользователей.ДатаПоследнейАктивности</Field>
+				<Field>ДеревоПользователей.ДатаПоследнейАктивностиСКоординатами</Field>
+				<Field>ДеревоПользователей.ЗарядБатареиРезультат</Field>
+				<Field>ДеревоПользователей.ЗарядБатареиУстарел</Field>
+				<Field>ДеревоПользователей.КоличествоНепрочитанныхСообщений</Field>
+				<Field>ДеревоПользователей.Координаты</Field>
+				<Field>ДеревоПользователей.Пользователь</Field>
+				<Field>ДеревоПользователей.ПользовательАктивен</Field>
+				<Field>ДеревоПользователей.ПользовательАктивен1СРезультат</Field>
+				<Field>ДеревоПользователей.ПользовательАктивенМКРезультат</Field>
+				<Field>ДеревоПользователей.Флаг</Field>
+				<Field>ДеревоПользователей.ЯвляетсяПользователемБД</Field>
+				<Field>ДеревоПользователей.ЯвляетсяПользователемМК</Field>
+				<Field>ДеревоПользователей.ЯвляетсяПользователемУСС</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ВложенныйЗапрос.ЯвляетсяПользователемБД,
+	ВложенныйЗапрос.ЯвляетсяПользователемМК,
+	ВложенныйЗапрос.Ссылка КАК Пользователь,
+	0 КАК Флаг,
+	ВЫБОР
+		КОГДА ВложенныйЗапрос.ПользовательАктивенМК = ЛОЖЬ
+				И ВложенныйЗапрос.ЯвляетсяПользователемМК = ИСТИНА
+			ТОГДА 0
+		ИНАЧЕ ВЫБОР
+				КОГДА ВложенныйЗапрос.ПользовательАктивенМК = ИСТИНА
+					ТОГДА 1
+				ИНАЧЕ 2
+			КОНЕЦ
+	КОНЕЦ КАК ПользовательАктивенМКРезультат,
+	ВЫБОР
+		КОГДА ВложенныйЗапрос.ПользовательАктивен1С = ЛОЖЬ
+				И ВложенныйЗапрос.ЯвляетсяПользователемБД = ИСТИНА
+			ТОГДА 0
+		ИНАЧЕ ВЫБОР
+				КОГДА ВложенныйЗапрос.ПользовательАктивен1С = ИСТИНА
+					ТОГДА 1
+				ИНАЧЕ 2
+			КОНЕЦ
+	КОНЕЦ КАК ПользовательАктивен1СРезультат,
+	ВложенныйЗапрос.ПользовательАктивен,
+	ВложенныйЗапрос.ЯвляетсяПользователемУСС,
+	ВложенныйЗапрос.ДатаПоследнейАктивности,
+	ВЫБОР
+		КОГДА ВложенныйЗапрос.ДатаПолученияИнформацииОбУстройстве = &amp;ПустаяДата
+			ТОГДА 0
+		ИНАЧЕ ВЫБОР
+				КОГДА ВложенныйЗапрос.ЗарядБатареи &lt; 0
+					ТОГДА 0 - ВложенныйЗапрос.ЗарядБатареи
+				ИНАЧЕ ВложенныйЗапрос.ЗарядБатареи
+			КОНЕЦ
+	КОНЕЦ КАК ЗарядБатареиРезультат,
+	ВЫБОР
+		КОГДА ВложенныйЗапрос.ЗарядБатареи &lt; 0
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК ЗарядБатареиУстарел,
+	ВложенныйЗапрос.Координаты,
+	ВложенныйЗапрос.ДатаПолученияИнформацииОбУстройстве,
+	ВложенныйЗапрос.ДатаПоследнейАктивностиСКоординатами,
+	СУММА(ЕСТЬNULL(ВложенныйЗапросКоличествоНепрочитанныхСообщений.Количество, 0)) КАК КоличествоНепрочитанныхСообщений
+ИЗ
+	(ВЫБРАТЬ
+		Пользователи.Ссылка КАК Ссылка,
+		ВЫБОР
+			КОГДА ВложенныйЗапросДатаПоследнейАктивности1С.ДатаПоследнейАктивности ЕСТЬ NULL 
+				ТОГДА ЛОЖЬ
+			ИНАЧЕ ИСТИНА
+		КОНЕЦ КАК ЯвляетсяПользователемБД,
+		ЕСТЬNULL(ВложенныйЗапросПользователиМК.ЯвляетсяПользователемМК, ЛОЖЬ) КАК ЯвляетсяПользователемМК,
+		ЕСТЬNULL(ВложенныйЗапросАктивныеПользователиМК.ПользовательМКАктивен, ЛОЖЬ) КАК ПользовательАктивенМК,
+		ЕСТЬNULL(ВложенныйЗапросАктивныеПользователи1С.Пользователь1САктивен, ЛОЖЬ) КАК ПользовательАктивен1С,
+		ВЫБОР
+			КОГДА ВложенныйЗапросДополнительнаяИнформацияМК.ЗарядБатареи &lt; 0
+				ТОГДА 0
+			ИНАЧЕ ВЫБОР
+					КОГДА ЕСТЬNULL(ВложенныйЗапросДополнительнаяИнформацияМК.ДатаПолученияИнформацииОбУстройстве, &amp;ПустаяДата) &gt; &amp;ДатаДопустимойИнформацииОбУстройстве
+						ТОГДА ЕСТЬNULL(ВложенныйЗапросДополнительнаяИнформацияМК.ЗарядБатареи, 0)
+					ИНАЧЕ ЕСТЬNULL(-ВложенныйЗапросДополнительнаяИнформацияМК.ЗарядБатареи, 0)
+				КОНЕЦ
+		КОНЕЦ КАК ЗарядБатареи,
+		ВЫБОР
+			КОГДА ВложенныйЗапросДополнительнаяИнформацияМК.ДатаПоследнейАктивностиСКоординатами ЕСТЬ NULL 
+					ИЛИ ВложенныйЗапросДополнительнаяИнформацияМК.ИсточникКоординат ЕСТЬ NULL 
+				ТОГДА ВЫБОР
+						КОГДА НЕ ЕСТЬNULL(ВложенныйЗапросПользователиМК.ЯвляетсяПользователемМК, ЛОЖЬ)
+							ТОГДА 0
+						ИНАЧЕ 1
+					КОНЕЦ
+			ИНАЧЕ ВЫБОР
+					КОГДА ВложенныйЗапросДополнительнаяИнформацияМК.ДатаПоследнейАктивностиСКоординатами &gt; &amp;ДатаДопустимойПоследнейАктивностиСКоординатами
+						ТОГДА ВЫБОР
+								КОГДА ВложенныйЗапросДополнительнаяИнформацияМК.ИсточникКоординат = ЗНАЧЕНИЕ(Перечисление.атл_ВидыИсточниковКоординат.Сеть)
+									ТОГДА 4
+								ИНАЧЕ ВЫБОР
+										КОГДА ВложенныйЗапросДополнительнаяИнформацияМК.ИсточникКоординат = ЗНАЧЕНИЕ(Перечисление.атл_ВидыИсточниковКоординат.GPS)
+											ТОГДА 5
+									КОНЕЦ
+							КОНЕЦ
+					ИНАЧЕ ВЫБОР
+							КОГДА ВложенныйЗапросДополнительнаяИнформацияМК.ИсточникКоординат = ЗНАЧЕНИЕ(Перечисление.атл_ВидыИсточниковКоординат.Сеть)
+								ТОГДА 2
+							ИНАЧЕ ВЫБОР
+									КОГДА ВложенныйЗапросДополнительнаяИнформацияМК.ИсточникКоординат = ЗНАЧЕНИЕ(Перечисление.атл_ВидыИсточниковКоординат.GPS)
+										ТОГДА 3
+								КОНЕЦ
+						КОНЕЦ
+				КОНЕЦ
+		КОНЕЦ КАК Координаты,
+		ВЫБОР
+			КОГДА ЕСТЬNULL(ВложенныйЗапросАктивныеПользователиМК.ПользовательМКАктивен, ЛОЖЬ)
+					ИЛИ ЕСТЬNULL(ВложенныйЗапросАктивныеПользователи1С.Пользователь1САктивен, ЛОЖЬ)
+				ТОГДА ИСТИНА
+			ИНАЧЕ ЛОЖЬ
+		КОНЕЦ КАК ПользовательАктивен,
+		ЕСТЬNULL(ВложенныйЗапросПользователиБД.ЯвляетсяПользователемУСС, ЛОЖЬ) КАК ЯвляетсяПользователемУСС,
+		ВЫБОР
+			КОГДА ЕСТЬNULL(ВложенныйЗапросДатаПоследнейАктивности1С.ДатаПоследнейАктивности, &amp;ПустаяДата) &gt; ЕСТЬNULL(ВложенныйЗапросДатаПоследнейАктивностиМК.ДатаПоследнейАктивности, &amp;ПустаяДата)
+				ТОГДА ЕСТЬNULL(ВложенныйЗапросДатаПоследнейАктивности1С.ДатаПоследнейАктивности, &amp;ПустаяДата)
+			ИНАЧЕ ЕСТЬNULL(ВложенныйЗапросДатаПоследнейАктивностиМК.ДатаПоследнейАктивности, &amp;ПустаяДата)
+		КОНЕЦ КАК ДатаПоследнейАктивности,
+		ЕСТЬNULL(ВложенныйЗапросДополнительнаяИнформацияМК.ДатаПолученияИнформацииОбУстройстве, &amp;ПустаяДата) КАК ДатаПолученияИнформацииОбУстройстве,
+		ЕСТЬNULL(ВложенныйЗапросДополнительнаяИнформацияМК.ДатаПоследнейАктивностиСКоординатами, &amp;ПустаяДата) КАК ДатаПоследнейАктивностиСКоординатами
+	ИЗ
+		Справочник.Пользователи КАК Пользователи
+			ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+				ПользователиИБ.Ссылка КАК Пользователь,
+				ИСТИНА КАК ЯвляетсяПользователемБД,
+				ИСТИНА КАК ЯвляетсяПользователемУСС
+			ИЗ
+				Справочник.Пользователи КАК ПользователиИБ) КАК ВложенныйЗапросПользователиБД
+			ПО Пользователи.Ссылка = ВложенныйЗапросПользователиБД.Пользователь
+			ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+				атл_НастройкиПодключенияМобильныхСотрудников.Пользователь КАК Пользователь,
+				атл_НастройкиПодключенияМобильныхСотрудников.ЯвляетсяПользователемМК КАК ЯвляетсяПользователемМК
+			ИЗ
+				РегистрСведений.атл_НастройкиПодключенияМобильныхСотрудников КАК атл_НастройкиПодключенияМобильныхСотрудников
+			ГДЕ
+				атл_НастройкиПодключенияМобильныхСотрудников.ЯвляетсяПользователемМК = ИСТИНА) КАК ВложенныйЗапросПользователиМК
+			ПО Пользователи.Ссылка = ВложенныйЗапросПользователиМК.Пользователь
+			ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ РАЗЛИЧНЫЕ
+				атл_АктивностьПользователей.Пользователь КАК Пользователь,
+				ИСТИНА КАК ПользовательМКАктивен,
+				атл_АктивностьПользователей.ДатаПоследнейАктивности КАК ДатаПоследнейАктивности
+			ИЗ
+				РегистрСведений.атл_АктивностьПользователей КАК атл_АктивностьПользователей
+			ГДЕ
+				атл_АктивностьПользователей.ДатаПоследнейАктивности &gt;= &amp;ДатаДопустимойПоследнейАктивности
+				И атл_АктивностьПользователей.МК = ИСТИНА) КАК ВложенныйЗапросАктивныеПользователиМК
+			ПО Пользователи.Ссылка = ВложенныйЗапросАктивныеПользователиМК.Пользователь
+			ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ РАЗЛИЧНЫЕ
+				атл_АктивностьПользователей.Пользователь КАК Пользователь,
+				атл_АктивностьПользователей.ДатаПоследнейАктивности КАК ДатаПоследнейАктивности
+			ИЗ
+				РегистрСведений.атл_АктивностьПользователей КАК атл_АктивностьПользователей
+			ГДЕ
+				атл_АктивностьПользователей.МК = ИСТИНА) КАК ВложенныйЗапросДатаПоследнейАктивностиМК
+			ПО Пользователи.Ссылка = ВложенныйЗапросДатаПоследнейАктивностиМК.Пользователь
+			ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+				атл_АктивностьПользователей.Пользователь КАК Пользователь,
+				ИСТИНА КАК Пользователь1САктивен,
+				атл_АктивностьПользователей.ДатаПоследнейАктивности КАК ДатаПоследнейАктивности
+			ИЗ
+				РегистрСведений.атл_АктивностьПользователей КАК атл_АктивностьПользователей
+			ГДЕ
+				атл_АктивностьПользователей.МК = ЛОЖЬ
+				И атл_АктивностьПользователей.ДатаПоследнейАктивности &gt;= &amp;ДатаДопустимойПоследнейАктивности) КАК ВложенныйЗапросАктивныеПользователи1С
+			ПО Пользователи.Ссылка = ВложенныйЗапросАктивныеПользователи1С.Пользователь
+			ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+				атл_АктивностьПользователей.Пользователь КАК Пользователь,
+				атл_АктивностьПользователей.ДатаПоследнейАктивности КАК ДатаПоследнейАктивности
+			ИЗ
+				РегистрСведений.атл_АктивностьПользователей КАК атл_АктивностьПользователей
+			ГДЕ
+				атл_АктивностьПользователей.МК = ЛОЖЬ) КАК ВложенныйЗапросДатаПоследнейАктивности1С
+			ПО Пользователи.Ссылка = ВложенныйЗапросДатаПоследнейАктивности1С.Пользователь
+			ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+				атл_АктивностьПользователей.Пользователь КАК Пользователь,
+				атл_АктивностьПользователей.ЗарядБатареи КАК ЗарядБатареи,
+				атл_АктивностьПользователей.ИсточникКоординат КАК ИсточникКоординат,
+				атл_АктивностьПользователей.ДатаПолученияИнформацииОбУстройстве КАК ДатаПолученияИнформацииОбУстройстве,
+				атл_АктивностьПользователей.ДатаПоследнейАктивностиСКоординатами КАК ДатаПоследнейАктивностиСКоординатами
+			ИЗ
+				РегистрСведений.атл_АктивностьПользователей КАК атл_АктивностьПользователей
+			ГДЕ
+				атл_АктивностьПользователей.МК = ИСТИНА) КАК ВложенныйЗапросДополнительнаяИнформацияМК
+			ПО Пользователи.Ссылка = ВложенныйЗапросДополнительнаяИнформацияМК.Пользователь
+	ГДЕ
+		Пользователи.Ссылка &lt;&gt; &amp;ТекущийПользователь) КАК ВложенныйЗапрос
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			атл_Сообщения.Отправитель КАК Отправитель,
+			СУММА(1) КАК Количество
+		ИЗ
+			РегистрСведений.атл_Сообщения КАК атл_Сообщения
+		ГДЕ
+			атл_Сообщения.ДатаПрочтения = &amp;ПустаяДата
+			И атл_Сообщения.Получатель = &amp;ТекущийПользователь
+			И НЕ атл_Сообщения.УдаленоПолучателем
+			И НЕ(атл_Сообщения.ПолучательМК
+						И атл_Сообщения.Получатель = &amp;ТекущийПользователь)
+			И НЕ атл_Сообщения.Получатель = атл_Сообщения.Отправитель
+		
+		СГРУППИРОВАТЬ ПО
+			атл_Сообщения.Отправитель) КАК ВложенныйЗапросКоличествоНепрочитанныхСообщений
+		ПО ВложенныйЗапрос.Ссылка = ВложенныйЗапросКоличествоНепрочитанныхСообщений.Отправитель
+ГДЕ
+	ВЫБОР
+			КОГДА &amp;ТолькоАктивные
+				ТОГДА ВложенныйЗапрос.ПользовательАктивен = ИСТИНА
+			ИНАЧЕ ВложенныйЗапрос.ПользовательАктивен = ЛОЖЬ
+					ИЛИ ВложенныйЗапрос.ПользовательАктивен = ИСТИНА
+		КОНЕЦ
+	И ВЫБОР
+			КОГДА &amp;ОтборПоВидуАктивности = 1
+				ТОГДА ВложенныйЗапрос.ПользовательАктивен1С = ИСТИНА
+			ИНАЧЕ ВЫБОР
+					КОГДА &amp;ОтборПоВидуАктивности = 2
+						ТОГДА ВложенныйЗапрос.ПользовательАктивенМК = ИСТИНА
+					ИНАЧЕ ВложенныйЗапрос.ПользовательАктивен1С = ЛОЖЬ
+							ИЛИ ВложенныйЗапрос.ПользовательАктивен1С = ИСТИНА
+				КОНЕЦ
+		КОНЕЦ
+	И НЕ ВложенныйЗапрос.ДатаПоследнейАктивности = &amp;ПустаяДата
+
+СГРУППИРОВАТЬ ПО
+	ВложенныйЗапрос.ЯвляетсяПользователемБД,
+	ВложенныйЗапрос.ЯвляетсяПользователемМК,
+	ВложенныйЗапрос.Ссылка,
+	ВложенныйЗапрос.ПользовательАктивен,
+	ВложенныйЗапрос.ЯвляетсяПользователемУСС,
+	ВложенныйЗапрос.ДатаПоследнейАктивности,
+	ВЫБОР
+		КОГДА ВложенныйЗапрос.ДатаПолученияИнформацииОбУстройстве = &amp;ПустаяДата
+			ТОГДА 0
+		ИНАЧЕ ВЫБОР
+				КОГДА ВложенныйЗапрос.ЗарядБатареи &lt; 0
+					ТОГДА 0 - ВложенныйЗапрос.ЗарядБатареи
+				ИНАЧЕ ВложенныйЗапрос.ЗарядБатареи
+			КОНЕЦ
+	КОНЕЦ,
+	ВЫБОР
+		КОГДА ВложенныйЗапрос.ЗарядБатареи &lt; 0
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ,
+	ВложенныйЗапрос.Координаты,
+	ВложенныйЗапрос.ДатаПолученияИнформацииОбУстройстве,
+	ВложенныйЗапрос.ДатаПоследнейАктивностиСКоординатами,
+	ВЫБОР
+		КОГДА ВложенныйЗапрос.ПользовательАктивенМК = ЛОЖЬ
+				И ВложенныйЗапрос.ЯвляетсяПользователемМК = ИСТИНА
+			ТОГДА 0
+		ИНАЧЕ ВЫБОР
+				КОГДА ВложенныйЗапрос.ПользовательАктивенМК = ИСТИНА
+					ТОГДА 1
+				ИНАЧЕ 2
+			КОНЕЦ
+	КОНЕЦ,
+	ВЫБОР
+		КОГДА ВложенныйЗапрос.ПользовательАктивен1С = ЛОЖЬ
+				И ВложенныйЗапрос.ЯвляетсяПользователемБД = ИСТИНА
+			ТОГДА 0
+		ИНАЧЕ ВЫБОР
+				КОГДА ВложенныйЗапрос.ПользовательАктивен1С = ИСТИНА
+					ТОГДА 1
+				ИНАЧЕ 2
+			КОНЕЦ
+	КОНЕЦ</QueryText>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Пользователь</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:item>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>ЗарядБатареиРезультат</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ЗарядБатареиУстарел</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>Шрифт</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="false" italic="false" underline="false" strikeout="true" kind="WindowsFont"/>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ТолькоАктивные" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Только активные</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Save>
+				<Field>ТолькоАктивные</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ДатаПоследнейАктивности" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата последней активности</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Save>
+				<Field>ДатаПоследнейАктивности</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="КоличествоСтраницаСообщений" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество страница сообщений</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СоответствияСтраницИПользователей" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Соответствия страниц и пользователей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ИмяСтраницы" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя страницы</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Пользователь" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пользователь</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+					</Type>
+				</Column>
+				<Column name="КоличествоНепрочитанныхСообщений" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Количество непрочитанных сообщений</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Изменено" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Изменено</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ПолеHTMLИстория" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поле HTMLИстория</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекущийПользователь" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущий пользователь</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НачалоПериодаИстория" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начало периода история</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КонецПериодаИстория" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Конец периода история</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОтборПоВидуАктивности" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отбор по виду активности</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗарядБатареи" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заряд батареи</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ЗарядБатареи</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="Координаты" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Координаты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>Координаты</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ВремяВТечениеКоторогоПользовательОнлайн" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Время в течение которого пользователь онлайн</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ТолькоАктивные" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Только активные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Только активные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.атл_СтатусыАктивностиУжатые</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ТолькоАктивные</Action>
+			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="История" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>История</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>История</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.атл_Чат</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>История</Action>
+			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Сообщение" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сообщение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сообщение</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Сообщение</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СообщениеДляНескольких" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сообщение для нескольких</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сообщение для нескольких</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СообщениеДляНескольких</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПоказатьНаКарте" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать на карте</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать на карте</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.атл_Местонахождение</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПоказатьНаКарте</Action>
+			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗакрытьГруппуИстории" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрыть группу истории</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрыть группу истории</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗакрытьГруппуИстории</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗакрытьГруппуСообщений" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрыть группу сообщений</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрыть группу сообщений</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗакрытьГруппуСообщений</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗакрытьСтраницуСообщений" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрыть страницу сообщений</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрыть страницу сообщений</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗакрытьСтраницуСообщений</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Отправить" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Отправить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОбновитьИсторию" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить историю</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить историю</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОбновитьИсторию</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОтборПользователяПоВидуАктивности" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отбор пользователя по виду активности</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтборПользователяПоВидуАктивности</Action>
+			<Representation>Text</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Настройки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.атл_Настройки</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Настройки</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

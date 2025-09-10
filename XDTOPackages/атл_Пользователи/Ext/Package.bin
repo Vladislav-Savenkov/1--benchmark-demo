@@ -1,0 +1,13 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="users_mwms">
+	<objectType name="user">
+		<property name="external_id">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="50"/>
+		</property>
+		<property name="name">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="50"/>
+		</property>
+	</objectType>
+	<objectType name="users">
+		<property xmlns:d3p1="users_mwms" name="user" type="d3p1:user" lowerBound="0" upperBound="-1"/>
+	</objectType>
+</package>

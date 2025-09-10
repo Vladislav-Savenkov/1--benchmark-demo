@@ -1,0 +1,34 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="file_mwms">
+	<objectType name="date_coordinates" ordered="false">
+		<property name="datetime" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:dateTime" variety="Atomic"/>
+		</property>
+		<property name="latitude" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="20"/>
+		</property>
+		<property name="longitude" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="20"/>
+		</property>
+	</objectType>
+	<objectType name="packet" ordered="false">
+		<property name="packet_id" lowerBound="0" upperBound="-1" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:int" variety="Atomic" totalDigits="10"/>
+		</property>
+	</objectType>
+	<objectType name="file" ordered="false">
+		<property name="id">
+			<typeDef xsi:type="ValueType" base="xs:int" variety="Atomic" totalDigits="10"/>
+		</property>
+		<property name="db_id">
+			<typeDef xsi:type="ValueType" base="xs:long" variety="Atomic" totalDigits="15"/>
+		</property>
+		<property name="name" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic"/>
+		</property>
+		<property name="control_hash" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic"/>
+		</property>
+		<property xmlns:d3p1="file_mwms" name="creation" type="d3p1:date_coordinates" lowerBound="0"/>
+		<property xmlns:d3p1="file_mwms" name="packets" type="d3p1:packet" lowerBound="0" nillable="false"/>
+	</objectType>
+</package>

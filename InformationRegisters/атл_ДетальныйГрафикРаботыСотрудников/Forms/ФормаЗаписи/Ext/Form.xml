@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Сотрудник" id="1">
+			<DataPath>Запись.Сотрудник</DataPath>
+			<ContextMenu name="СотрудникКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="СотрудникРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="ВремяНачала" id="4">
+			<DataPath>Запись.ВремяНачала</DataPath>
+			<HorizontalStretch>true</HorizontalStretch>
+			<ContextMenu name="ВремяНачалаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ВремяНачалаРасширеннаяПодсказка" id="6"/>
+			<Events>
+				<Event name="OnChange">ВремяНачалаПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="ВремяОкончания" id="7">
+			<DataPath>Запись.ВремяОкончания</DataPath>
+			<HorizontalStretch>true</HorizontalStretch>
+			<ContextMenu name="ВремяОкончанияКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ВремяОкончанияРасширеннаяПодсказка" id="9"/>
+			<Events>
+				<Event name="OnChange">ВремяОкончанияПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="ДатаЗаписи" id="10">
+			<DataPath>Запись.ДатаЗаписи</DataPath>
+			<HorizontalStretch>true</HorizontalStretch>
+			<ContextMenu name="ДатаЗаписиКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ДатаЗаписиРасширеннаяПодсказка" id="12"/>
+			<Events>
+				<Event name="OnChange">ДатаЗаписиПриИзменении</Event>
+			</Events>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.атл_ДетальныйГрафикРаботыСотрудников</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

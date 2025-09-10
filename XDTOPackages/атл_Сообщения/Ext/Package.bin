@@ -1,0 +1,38 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="message_mwms">
+	<objectType name="user" ordered="false">
+		<property name="external_id">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="50"/>
+		</property>
+		<property name="name">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="100"/>
+		</property>
+	</objectType>
+	<objectType name="message" ordered="false">
+		<property name="id">
+			<typeDef xsi:type="ValueType" base="xs:int" variety="Atomic" totalDigits="10"/>
+		</property>
+		<property name="db_id">
+			<typeDef xsi:type="ValueType" base="xs:long" variety="Atomic" totalDigits="15"/>
+		</property>
+		<property name="text" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic"/>
+		</property>
+		<property name="create_datetime" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:dateTime" variety="Atomic"/>
+		</property>
+		<property xmlns:d3p1="message_mwms" name="from" type="d3p1:user" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="message_mwms" name="to" type="d3p1:user" lowerBound="0" nillable="true"/>
+		<property name="read_datetime" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:dateTime" variety="Atomic"/>
+		</property>
+		<property name="delivered_datetime" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:dateTime" variety="Atomic"/>
+		</property>
+		<property name="latitude" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="20"/>
+		</property>
+		<property name="longitude" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="20"/>
+		</property>
+	</objectType>
+</package>

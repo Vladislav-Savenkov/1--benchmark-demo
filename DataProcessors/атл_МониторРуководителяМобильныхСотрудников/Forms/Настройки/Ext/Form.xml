@@ -1,0 +1,418 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Настройки Монитора руководителя мобильных сотрудников</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="НастройкиОтчета" id="1">
+			<Representation>Tree</Representation>
+			<Width>60</Width>
+			<Height>14</Height>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<InitialTreeView>ExpandAllLevels</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>НастройкиОтчета</DataPath>
+			<RowPictureDataPath>НастройкиОтчета.ИндексКартинки</RowPictureDataPath>
+			<RowsPicture>
+				<xr:Ref>CommonPicture.ПиктограммыЭлементов</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</RowsPicture>
+			<CommandSet>
+				<ExcludedCommand>Add</ExcludedCommand>
+				<ExcludedCommand>Change</ExcludedCommand>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>Delete</ExcludedCommand>
+				<ExcludedCommand>HierarchicalList</ExcludedCommand>
+				<ExcludedCommand>List</ExcludedCommand>
+			</CommandSet>
+			<ContextMenu name="НастройкиОтчетаКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="НастройкиОтчетаКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="ФормаДобавитьГруппу" id="26">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ДобавитьГруппу</CommandName>
+						<ExtendedTooltip name="ФормаДобавитьГруппуРасширеннаяПодсказка" id="27"/>
+					</Button>
+					<Button name="НастройкиОтчетаУдалитьГруппу" id="96">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.УдалитьГруппу</CommandName>
+						<ExtendedTooltip name="НастройкиОтчетаУдалитьГруппуРасширеннаяПодсказка" id="97"/>
+					</Button>
+					<Button name="НастройкиОтчетаПереместитьВверх" id="28">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.НастройкиОтчета.StandardCommand.MoveUp</CommandName>
+						<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="НастройкиОтчетаПереместитьВверхРасширеннаяПодсказка" id="29"/>
+					</Button>
+					<Button name="НастройкиОтчетаПереместитьВниз" id="30">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.НастройкиОтчета.StandardCommand.MoveDown</CommandName>
+						<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="НастройкиОтчетаПереместитьВнизРасширеннаяПодсказка" id="31"/>
+					</Button>
+					<Button name="НастройкиОтчетаСортироватьСписокПоВозрастанию" id="32">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.НастройкиОтчета.StandardCommand.SortListAsc</CommandName>
+						<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="НастройкиОтчетаСортироватьСписокПоВозрастаниюРасширеннаяПодсказка" id="33"/>
+					</Button>
+					<Button name="НастройкиОтчетаСортироватьСписокПоУбыванию" id="34">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.НастройкиОтчета.StandardCommand.SortListDesc</CommandName>
+						<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="НастройкиОтчетаСортироватьСписокПоУбываниюРасширеннаяПодсказка" id="35"/>
+					</Button>
+					<Button name="НастройкиОтчетаНастройкиПоУмолчанию" id="94">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.НастройкиПоУмолчанию</CommandName>
+						<ExtendedTooltip name="НастройкиОтчетаНастройкиПоУмолчаниюРасширеннаяПодсказка" id="95"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="НастройкиОтчетаРасширеннаяПодсказка" id="4"/>
+			<SearchStringAddition name="НастройкиОтчетаСтрокаПоиска" id="5">
+				<AdditionSource>
+					<Item>НастройкиОтчета</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="НастройкиОтчетаСтрокаПоискаКонтекстноеМеню" id="8"/>
+				<ExtendedTooltip name="НастройкиОтчетаСтрокаПоискаРасширеннаяПодсказка" id="9"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="НастройкиОтчетаСостояниеПросмотра" id="10">
+				<AdditionSource>
+					<Item>НастройкиОтчета</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="НастройкиОтчетаСостояниеПросмотраКонтекстноеМеню" id="13"/>
+				<ExtendedTooltip name="НастройкиОтчетаСостояниеПросмотраРасширеннаяПодсказка" id="14"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="НастройкиОтчетаУправлениеПоиском" id="15">
+				<AdditionSource>
+					<Item>НастройкиОтчета</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="НастройкиОтчетаУправлениеПоискомКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="НастройкиОтчетаУправлениеПоискомРасширеннаяПодсказка" id="19"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="BeforeDeleteRow">НастройкиОтчетаПередУдалением</Event>
+				<Event name="Drag">НастройкиОтчетаПеретаскивание</Event>
+				<Event name="BeforeRowChange">НастройкиОтчетаПередНачаломИзменения</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="НастройкиОтчетаНаименование" id="20">
+					<DataPath>НастройкиОтчета.Наименование</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ContextMenu name="НастройкиОтчетаНаименованиеКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="НастройкиОтчетаНаименованиеРасширеннаяПодсказка" id="22"/>
+				</InputField>
+				<CheckBoxField name="НастройкиОтчетаВыводить" id="23">
+					<DataPath>НастройкиОтчета.Выводить</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="НастройкиОтчетаВыводитьКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="НастройкиОтчетаВыводитьРасширеннаяПодсказка" id="25"/>
+					<Events>
+						<Event name="OnChange">НастройкиОтчетаВыводитьПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+			</ChildItems>
+		</Table>
+		<InputField name="ГруппаИнтерваловВремениПоЗадачамУМС" id="42">
+			<DataPath>Объект.ГруппаИнтерваловВремениПоЗадачамУМС</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группы интервалов времени по задачам</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ГруппаИнтерваловВремениПоЗадачамУМСКонтекстноеМеню" id="43"/>
+			<ExtendedTooltip name="ГруппаИнтерваловВремениПоЗадачамУМСРасширеннаяПодсказка" id="44"/>
+		</InputField>
+		<InputField name="ИнтервалВремениВыполненияЗаявки" id="39">
+			<DataPath>Объект.ИнтервалВремениВыполненияЗаявки</DataPath>
+			<ContextMenu name="ИнтервалВремениВыполненияЗаявкиКонтекстноеМеню" id="40"/>
+			<ExtendedTooltip name="ИнтервалВремениВыполненияЗаявкиРасширеннаяПодсказка" id="41"/>
+		</InputField>
+		<InputField name="ИнтервалВремениРеакцииНаЗаявку" id="36">
+			<DataPath>Объект.ИнтервалВремениРеакцииНаЗаявку</DataPath>
+			<ContextMenu name="ИнтервалВремениРеакцииНаЗаявкуКонтекстноеМеню" id="37"/>
+			<ExtendedTooltip name="ИнтервалВремениРеакцииНаЗаявкуРасширеннаяПодсказка" id="38"/>
+		</InputField>
+		<UsualGroup name="ГруппаПодвал" id="92">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа подвал</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа подвал</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПодвалРасширеннаяПодсказка" id="93"/>
+			<ChildItems>
+				<Button name="Сохранить" id="88">
+					<Type>UsualButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<CommandName>Form.Command.Сохранить</CommandName>
+					<Font bold="true" kind="AutoFont"/>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Закрыть и сохранить</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СохранитьРасширеннаяПодсказка" id="89"/>
+				</Button>
+				<Button name="Закрыть" id="90">
+					<Type>UsualButton</Type>
+					<Width>10</Width>
+					<CommandName>Form.StandardCommand.Close</CommandName>
+					<ExtendedTooltip name="ЗакрытьРасширеннаяПодсказка" id="91"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.атл_МониторРуководителяМобильныхСотрудников</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Columns>
+				<AdditionalColumns table="Объект.ВыводимыеОтчеты"/>
+			</Columns>
+		</Attribute>
+		<Attribute name="НастройкиОтчета" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки отчета</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Save>
+				<Field>НастройкиОтчета</Field>
+			</Save>
+			<Columns>
+				<Column name="Наименование" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Выводить" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выводить</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИдентификаторОтчета" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идентификатор отчета</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЗапретУдаления" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Запрет удаления</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИндексКартинки" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Индекс картинки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>1</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Группировка" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группировка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИмяРодителя" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя родителя</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ДобавитьГруппу" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить страницу панели</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить группу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CreateFolder</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ДобавитьГруппу</Action>
+			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Сохранить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Сохранить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="НастройкиПоУмолчанию" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки по умолчанию</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки по умолчанию</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.DataCompositionStandardSettings</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>НастройкиПоУмолчанию</Action>
+			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="УдалитьГруппу" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить группу</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить группу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Delete</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УдалитьГруппу</Action>
+			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="ГруппаИнтерваловВремениПоЗадачамУМС">
+			<Type>
+				<v8:Type>cfg:CatalogRef.атл_ГруппыИнтерваловВремениПоЗадачамМобильнымСотрудникам</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="ИнтервалВремениРеакцииНаЗаявку">
+			<Type>
+				<v8:Type>cfg:CatalogRef.атл_ИнтервалыВремениПоЗадачамМобильнымСотрудникам</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="ИнтервалВремениВыполненияЗаявки">
+			<Type>
+				<v8:Type>cfg:CatalogRef.атл_ИнтервалыВремениПоЗадачамМобильнымСотрудникам</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

@@ -1,0 +1,22 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="completion_reasons_mwms">
+	<objectType name="reason">
+		<property name="external_id">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="50"/>
+		</property>
+		<property name="name">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="50"/>
+		</property>
+		<property name="accessable_when_rejection" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:int" variety="Atomic" totalDigits="10"/>
+		</property>
+		<property name="accessible_when_forced_completion" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:int" variety="Atomic" totalDigits="10"/>
+		</property>
+		<property name="accessible_when_normal_completion" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:int" variety="Atomic" totalDigits="10"/>
+		</property>
+	</objectType>
+	<objectType name="reasons">
+		<property xmlns:d3p1="completion_reasons_mwms" name="reason" type="d3p1:reason" lowerBound="0" upperBound="-1"/>
+	</objectType>
+</package>

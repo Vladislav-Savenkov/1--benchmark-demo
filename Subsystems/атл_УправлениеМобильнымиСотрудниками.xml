@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Subsystem uuid="78cc6ac8-aac2-4e5b-9e2d-55f245978be8">
+		<Properties>
+			<Name>атл_УправлениеМобильнымиСотрудниками</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Управление мобильными сотрудниками</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<Explanation/>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.атл_УправлениеМобильнымиСотрудниками</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.атл_ДополнительныйМодульСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.атл_ТипыКомментариевКОбъектамУМС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.атл_СтатусыЗадачМобильнымСотрудникам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.атл_ВидыУведомлений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.атл_РаботающиеМобильныеСотрудники</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.атл_ТекущийСтатусМобильныхСотрудников</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.атл_ДоступностьМобильныхСотрудников</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.атл_ТекущийСтатусЗадачМобильнымСотрудникам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.атл_ОпозданияПоЗадачамМобильныхСотрудников</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.атл_ПричиныЗавершенияЗадачМобильнымСотрудникам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.атл_ЗатратыВремениНаВыполнениеЗаявок</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.атл_ПересчетВремениПереходаВСтатусПоЗадачамМобильнымСотрудникам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.атл_МониторРуководителяМобильныхСотрудников</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.атл_ПросмотрУведомлений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.атл_ОбменДаннымиУМС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.атл_ОтображениеТочекНаКарте</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.атл_НастройкаОбменаДаннымиУМС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.атл_КомментарииКОбъектамУМС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.атл_ПеременныеСинхронизацииССерверомУМС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.атл_ЗатраченноеВремяПоИнтерваламПоЗадачамМобильнымСотрудникам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.атл_Уведомления</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.атл_НастройкиУведомленийПользователей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.атл_ПрочитанныеУведомленияПользователей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.атл_ДетальныйГрафикРаботыСотрудников</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.атл_СоставныеЧастиФайловУМС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.атл_КлючиШифрования</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.атл_ПричиныЗавершенияЗадачМобильнымСотрудникам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.атл_ИнтервалыВремениПоЗадачамМобильнымСотрудникам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.атл_ГруппыИнтерваловВремениПоЗадачамМобильнымСотрудникам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.атл_ЗадачаМобильномуСотруднику</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.атл_НастройкиПодключенияМобильныхСотрудников</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.атл_АктивностьПользователей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.атл_НастройкиПодсистемыУМС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.атл_ВремяВТечениеКоторогоПользовательОнлайн</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.атл_ОсновнойГрафикОбслуживания</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">XDTOPackage.атл_ПакетЗапрос</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">XDTOPackage.атл_ПакетОтвет</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">XDTOPackage.атл_ПакетСИндексами</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">XDTOPackage.атл_ПакетПодтверждение</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">XDTOPackage.атл_ЗапросИнформации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">XDTOPackage.атл_ПакетОтветСписокПользователей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">XDTOPackage.атл_ПакетЗапросОбновленияПользователей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">XDTOPackage.атл_НастройкиПользователя</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">XDTOPackage.атл_Пользователи</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">XDTOPackage.атл_АктивностьПользователей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">XDTOPackage.атл_ИнформацияОСостоянииУчетнойЗаписи</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">XDTOPackage.атл_ПакетЗапросАвторизации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">XDTOPackage.атл_ПакетСКоординатами</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">XDTOPackage.атл_ПричиныЗавершения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">XDTOPackage.атл_Задача</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">XDTOPackage.атл_Файл</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.атл_ВыездныеРаботы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.атл_СтатусыАктивностиУжатые</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.атл_СтатусыАктивностиАктивен</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.атл_ФайлыУМС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.атл_ДиспетчерУМС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.атл_РуководительДиспетчеровУМС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.атл_ОбменДаннымиУМС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.атл_ФоновыйОбменДаннымиУМС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.атл_ПериодичностьОбновленияОкнаСообщений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.атл_ГрафикиОбслуживания</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.атл_ЗначенияДополнительныхРеквизитов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.атл_ВидыВыполняемыхСПользователямиДействий</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.атл_ВидыЛогов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.атл_ВидыПричинЗавершенияЗадачМобильнымСотрудникам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.атл_ИнформацияОХодеОбменаДаннымиУМС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.атл_ОбменСообщениями</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ChartOfCharacteristicTypes.атл_ДополнительныеРеквизитыЗадачиМобильномуСотруднику</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.атл_ВремяПоГрафикамОбслуживания</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.атл_ЛогиОбменаУМС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.атл_ПакетыНаОтправку</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.атл_ПолученныеПакетыСДаннымиУМС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.атл_Сообщения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.атл_СтатистикаОбменовДаннымиССерверомУМС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.атл_НомерВерсииКонфигурации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.атл_ПричиныОтклоненияРезультатовВыполненияЗадачМобильнымСотрудникам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.атл_ФормаКонстант</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.атл_МестоположениеСотрудниковНаКарте</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.атл_ЗаполнениеДетальногоГрафикаРаботыСотрудников</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.атл_ОтображениеТочекСТрекомНаКарте</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.атл_СводныйОтчетПоКоординатамТрека</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.атл_ШаблоныЗаполненияЗадачМобильнымСотрудникам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.атл_ШаблоныЗаполненияДополнительныхРеквизитов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.атл_ИнтервалыВремениВТечениеДня</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.атл_ПодразделенияКонтрагента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.атл_ВидыСобытийСогласованияВыполненияРабот</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.атл_ОсобыеВидыДополнительныхРеквизитов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.атл_СпособУказанияДатыНазначения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.атл_КоординатыТрека</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.атл_ИнформацияОбУстройстве</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.атл_ИнформацияОбУстройстве</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">HTTPService.атл_РаботаСКартой</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.атл_ДвиженияИОстановкиМобильныхСотрудников</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

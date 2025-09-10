@@ -1,0 +1,19 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="packets_indexes_mwms">
+	<objectType name="packet">
+		<property name="packet_id" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:int" variety="Atomic" totalDigits="10"/>
+		</property>
+		<property name="data_name" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="20"/>
+		</property>
+		<property name="priority" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:int" variety="Atomic"/>
+		</property>
+		<property name="key_version" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:int" variety="Atomic"/>
+		</property>
+	</objectType>
+	<objectType name="packets">
+		<property xmlns:d3p1="packets_indexes_mwms" name="packet" type="d3p1:packet" lowerBound="0" upperBound="-1"/>
+	</objectType>
+</package>

@@ -1,0 +1,55 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="request_update_users_mwms">
+	<objectType name="user" ordered="false">
+		<property name="action">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="20"/>
+		</property>
+		<property name="uid1c">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="50"/>
+		</property>
+		<property name="login" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="20"/>
+		</property>
+		<property name="pass" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="32"/>
+		</property>
+		<property name="blocked" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:int" variety="Atomic"/>
+		</property>
+		<property name="finalize" lowerBound="0" nillable="true">
+			<typeDef xsi:type="ValueType" base="xs:int" variety="Atomic"/>
+		</property>
+		<property xmlns:d3p1="request_update_users_mwms" name="settings" type="d3p1:settings" lowerBound="0" nillable="true" fixed="false"/>
+	</objectType>
+	<objectType name="request_update_users">
+		<property xmlns:d3p1="request_update_users_mwms" name="users" type="d3p1:users" lowerBound="0" nillable="true"/>
+		<property xmlns:d3p1="request_update_users_mwms" name="ordering" type="d3p1:order" lowerBound="0" upperBound="-1" nillable="true"/>
+	</objectType>
+	<objectType name="order" ordered="false">
+		<property name="uid1c" lowerBound="0" upperBound="-1">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="50"/>
+		</property>
+	</objectType>
+	<objectType name="users" ordered="false">
+		<property xmlns:d3p1="request_update_users_mwms" name="user" type="d3p1:user" lowerBound="0" upperBound="-1" nillable="true"/>
+	</objectType>
+	<objectType name="settings">
+		<property xmlns:d3p1="request_update_users_mwms" name="setting" type="d3p1:setting" lowerBound="0" upperBound="-1"/>
+	</objectType>
+	<objectType name="setting" ordered="false">
+		<property name="name">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="50"/>
+		</property>
+		<property name="value_type">
+			<typeDef xsi:type="ValueType" base="xs:int" variety="Atomic"/>
+		</property>
+		<property name="value">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="50"/>
+		</property>
+		<property name="client_change">
+			<typeDef xsi:type="ValueType" base="xs:int" variety="Atomic"/>
+		</property>
+		<property name="description">
+			<typeDef xsi:type="ValueType" base="xs:string" variety="Atomic" maxLength="50"/>
+		</property>
+	</objectType>
+</package>

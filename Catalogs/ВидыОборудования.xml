@@ -1,21 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Catalog>
-    <Name>ВидыОборудования</Name>
-    <Properties>
-        <Property>
-            <Name>Код</Name>
-            <Type>String</Type>
-            <Length>10</Length>
-        </Property>
-        <Property>
-            <Name>Наименование</Name>
-            <Type>String</Type>
-            <Length>100</Length>
-        </Property>
-        <Property>
-            <Name>Описание</Name>
-            <Type>String</Type>
-            <Length>255</Length>
-        </Property>
-    </Properties>
-</Catalog>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" version="2.11">
+	<Catalog uuid="a1b2c3d4-e5f6-7890-abcd-ef1234567890">
+		<InternalInfo>
+			<xr:GeneratedType name="CatalogObject.ВидыОборудования" category="Object"/>
+			<xr:GeneratedType name="CatalogRef.ВидыОборудования" category="Ref"/>
+			<xr:GeneratedType name="CatalogSelection.ВидыОборудования" category="Selection"/>
+			<xr:GeneratedType name="CatalogList.ВидыОборудования" category="List"/>
+			<xr:GeneratedType name="CatalogManager.ВидыОборудования" category="Manager"/>
+		</InternalInfo>
+		<Properties>
+			<Name>ВидыОборудования</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виды оборудования</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment>Справочник для хранения видов оборудования</Comment>
+			<Hierarchical>false</Hierarchical>
+			<CodeLength>10</CodeLength>
+			<DescriptionLength>100</DescriptionLength>
+			<CodeType>String</CodeType>
+			<CodeAllowedLength>Variable</CodeAllowedLength>
+			<CheckUnique>true</CheckUnique>
+			<Autonumbering>false</Autonumbering>
+			<DefaultPresentation>AsDescription</DefaultPresentation>
+			<StandardAttributes>
+				<xr:StandardAttribute name="Code"/>
+				<xr:StandardAttribute name="Description"/>
+			</StandardAttributes>
+		</Properties>
+		<ChildObjects>
+			<Attribute uuid="11111111-1111-1111-1111-111111111111">
+				<Properties>
+					<Name>Описание</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Описание</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Описание вида оборудования</Comment>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>255</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Properties>
+			</Attribute>
+			<Form>ФормаЭлемента</Form>
+			<Form>ФормаВыбора</Form>
+		</ChildObjects>
+	</Catalog>
+</MetaDataObject>

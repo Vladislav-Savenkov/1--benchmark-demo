@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<DataProcessor>
-    <Name>ЗагрузкаВидовОборудования</Name>
-    <Module>ЗагрузкаВидовОборудования.bsl</Module>
-    <Description>Импорт видов оборудования из внешнего файла</Description>
-</DataProcessor>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" version="2.11">
+	<DataProcessor uuid="b1c2d3e4-f5a6-7890-bcde-ef9876543210">
+		<Properties>
+			<Name>ЗагрузкаВидовОборудования</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузка видов оборудования</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment>Обработка для загрузки данных в справочник "ВидыОборудования" из внешнего файла</Comment>
+			<Module>ЗагрузкаВидовОборудования.bsl</Module>
+		</Properties>
+		<ChildObjects>
+			<Form>ФормаОбработки</Form>
+		</ChildObjects>
+	</DataProcessor>
+</MetaDataObject>
